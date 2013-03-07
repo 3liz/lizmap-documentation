@@ -75,8 +75,6 @@ Lizmap Web Client - une carte par projet QGIS
 * *Information* : une page avec les informations sur le projet QGIS
 
 
-Lizmap Web Client - une carte par projet QGIS
----------------------------------------------  
 .. image:: media/lizmap_carte_montpellier.png
    :align: center
    :scale: 80%
@@ -95,4 +93,4 @@ Lizmap - les fonctionnalités principales
 * Impression
 * Annotations
 * Zoom par localisation
-* Recherche d'adresse
+* Recherche d'adresse : Nominatime (moteur d'OpenStreetMap)
