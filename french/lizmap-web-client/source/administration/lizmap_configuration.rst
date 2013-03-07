@@ -25,17 +25,17 @@ Pour configurer les services, cliquer sur le bouton *Modifier* situé sous le r�
 * *URL du serveur WMS* : QGIS Server doit être installé sur le même ordinateur que Lizmap Web Client
 * *Type de stockage pour le cache*
 
- * *file*: Les tuiles mises en cache sont stockées dans un répertoire du serveur par couche
- * *sqlite*: Les tuiles sont enregistrées dans une base de données sqlite par couche
+ - *file*: Les tuiles mises en cache sont stockées dans un répertoire du serveur par couche
+ - *sqlite*: Les tuiles sont enregistrées dans une base de données sqlite par couche
  
 * *Répertoire racine du cache* : le dossier dans lequel est stocké le cache. Il doit être accessible en écriture par le serveur Apache
 
 
 * *Durée de vie du cache* : le temps en seconde pendant lequel chaque tuile est conservée. C'est une valeur par défaut pour les couches dont le temps n'a pas été configuré via le plugin
 
- * Les tuiles du cache plus vieilles que ce temps sont automatiquement raffraîchies.
- * La valeur 0 signigie que les tuiles n'expirent jamais
- * Le temps d'expiration doit être adapté à l'évolution des données
+ - Les tuiles du cache plus vieilles que ce temps sont automatiquement raffraîchies.
+ - La valeur 0 signigie que les tuiles n'expirent jamais
+ - Le temps d'expiration doit être adapté à l'évolution des données
  
 * *Envoi des requêtes à QGIS Server avec* : 2 méthodes. *Php ou Curl* . Utiliser la première si curl n'est pas installé sur le serveur
 * *Mode de débogage* : enregistre certaines requêtes dans un fichier de log : *lizmap/var/log/messages.log*

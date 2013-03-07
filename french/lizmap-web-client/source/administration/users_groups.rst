@@ -62,10 +62,10 @@ Mettre les utilisateurs dans des groupes
 * On peut filtrer les utilisateurs visibles via la liste déroulante
 * Pour mettre les utilisateurs, utiliser le bouton *Droits*
 
- * La page affiche un tableau avec *les droits en ligne et les groupes en colonne*
- * La dernière colonne affiche *les droits résultants*
- * Dans la *ligne d'entête*, des boutons + et - permettent de mettre/enlever l'utilisateur dans un groupe
- * *CONSEIL* : ne pas utiliser la colonne *Droits personnels*
+ - La page affiche un tableau avec *les droits en ligne et les groupes en colonne*
+ - La dernière colonne affiche *les droits résultants*
+ - Dans la *ligne d'entête*, des boutons + et - permettent de mettre/enlever l'utilisateur dans un groupe
+ - *CONSEIL* : ne pas utiliser la colonne *Droits personnels*
 
 
 Assigner des groupes pour chacun des utilisateurs créés

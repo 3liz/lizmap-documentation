@@ -8,4 +8,3 @@ Installation de Lizmap
   linux
   windows 
 
-
