@@ -15,7 +15,7 @@ Il est conseillé d'utiliser
 * des couches vectorielles légères et simplifiées si nécessaire
 * d'utiliser une sémiologie adaptée : traits fins et étiquettes cachées ou petites
 
-.. image:: media/overview.png
+.. image:: ../MEDIA/features-overview.png
    :align: center
    :width: 60%
 

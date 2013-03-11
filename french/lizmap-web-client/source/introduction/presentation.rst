@@ -1,12 +1,3 @@
 ===============================================================
-Zoom sur quelques fonctionnalités
+Présentation de l'outil Lizmap
 ===============================================================
-
-.. toctree::
-  :maxdepth: 2
-	
-  medias
-  popups
-  carte_miniature
-  gestion_cache
-

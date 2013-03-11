@@ -17,7 +17,7 @@ Identifiants temporaires
 Application
   *Se connecter à votre interface*
 
-.. image:: media/lwc_accueil_admin.png
+.. image:: ../MEDIA/administration-admin-home.png
    :align: center
   
 Modifier son mot de passe

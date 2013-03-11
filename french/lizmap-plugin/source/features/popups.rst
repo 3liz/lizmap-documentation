@@ -1,3 +1,5 @@
+.. _popups_in_lizmap:
+
 ===============================================================
 Configurer les popups dans Lizmap
 ===============================================================
@@ -28,7 +30,7 @@ Si on utilise des chemins vers les documents du répertoire media, on peut
 
 On peut aussi utiliser dans les colonnes des liens WEB complets vers une page ou une image
 
-.. image:: media/popup_col_champs.png
+.. image:: ../MEDIA/features-popup-fields.png
    :align: center
    :width: 70%
 
@@ -48,7 +50,7 @@ On peut écrire du texte simple, mais il est conseillé d'écrire au format HTML
 * une zone de texte en lecture seule qui montre un aperçu de la mise en forme
 
 
-.. image:: media/popup_configurer.png
+.. image:: ../MEDIA/features-popup-configure.png
    :align: center
    :width: 70%
 

@@ -6,6 +6,6 @@ Administration de Lizmap
   :maxdepth: 2
 	
   presentation
-  users_groups
-  lizmap_configuration
+  users-groups
+  lizmap-configuration
   cache

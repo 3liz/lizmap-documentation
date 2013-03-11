@@ -1,10 +1,13 @@
 ===============================================================
-Installation de Lizmap
+Fonctionnalités avancées de Lizmap
 ===============================================================
 
 .. toctree::
   :maxdepth: 2
 	
-  linux
-  windows
+  medias
+  popups
+  overview-map
+  cache
+  hide-layers
 

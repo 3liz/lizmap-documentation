@@ -5,6 +5,5 @@ Utilisation de Lizmap Web Client
 .. toctree::
   :maxdepth: 2
 	
-  projets
-  carte
+
 

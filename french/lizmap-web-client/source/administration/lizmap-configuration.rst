@@ -12,7 +12,7 @@ Le menu *Configuration Lizmap* est divisée en 2 parties
 * Les *Répertoires* : créer et configurer les répertoires Lizmap
 
 
-.. image:: media/lwc_configuration_lizmap.png
+.. image:: ../MEDIA/administration-lizmap-configuration.png
    :align: center
 
 
@@ -41,7 +41,7 @@ Pour configurer les services, cliquer sur le bouton *Modifier* situé sous le r�
 * *Mode de débogage* : enregistre certaines requêtes dans un fichier de log : *lizmap/var/log/messages.log*
 
 
-.. image:: media/lwc_modifier_services.png
+.. image:: ../MEDIA/administration-modify-services.png
    :align: center
    
    
@@ -62,7 +62,7 @@ Pour chaque répertoire Lizmap sont listés
   
 On peut créer un nouveau répertoire avec le bouton *Ajouter un répertoire* situé tout en bas de la page
 
-.. image:: media/lwc_infos_repertoire.png
+.. image:: ../MEDIA/administration-repository-detail.png
    :align: center
 
 
@@ -85,7 +85,7 @@ Définir les droits pour chaque groupe
   - le groupe *anonymous* représente les utilisateurs non enregistrés et permet de rendre les cartes publiques
 
 
-.. image:: media/lwc_ajouter_repertoire.png
+.. image:: ../MEDIA/administration-add-repository.png
    :align: center
 
 
@@ -93,7 +93,7 @@ Définir les droits pour chaque groupe
 Modifier un répertoire
 ---------------------------------------------
 
-.. image:: media/lwc_modifier_repertoire.png
+.. image:: ../MEDIA/administration-modify-repository.png
    :align: center
 
 

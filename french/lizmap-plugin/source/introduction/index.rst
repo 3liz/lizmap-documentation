@@ -6,6 +6,6 @@ Introduction
   :maxdepth: 2
 	
   presentation
-  bonnes_pratiques
+  good-pratice
   installation
-  configurer_projet
+  configuration

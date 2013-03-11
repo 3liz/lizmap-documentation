@@ -22,14 +22,14 @@ QGIS Server, un serveur cartographique
 Visualisation de l'architecture client-serveur
 ----------------------------------------------
 
-.. image:: media/schema_1.png
+.. image:: ../MEDIA/all-schema-client-server.png
    :align: center
 
 
 Un rendu équivalent entre QGIS et le Web
 -------------------------------------------------
 
-.. image:: media/lizmap_qgis_web.png
+.. image:: ../MEDIA/introduction-comparison-qgis-web.png
    :align: center
    :width: 90%
 
@@ -37,12 +37,32 @@ Un rendu équivalent entre QGIS et le Web
 Lizmap : publier facilement ses cartes QGIS sur internet
 ===============================================================
 
-.. image:: media/lizmap_etapes.png
-   :align: center
+Créez
+---------------------------------------------------------------
+
+*Préparation des données*
+
+Le travail de construction de la carte se mène sur son propre ordinateur avec le logiciel QGIS dans sa version bureautique : chargement des couches, création de la carte, organisation et mise en forme des données.
+
+Publiez
+---------------------------------------------------------------
+
+*Configuration & publication de la carte*
+
+Pour pouvoir mettre en ligne sa carte, l'utilisateur configure les options de publication (échelles, fonds de carte, metadonnées) du plugin LizMap dans son application QGIS. Il réalise ensuite une synchronisation sécurisée de son dossier de travail avec son serveur en intra- ou extranet.
+
+Partagez
+---------------------------------------------------------------
+
+*Visualisation des données*
+
+Lorsque la synchronisation est terminée, la carte QGIS est alors accessible sur Internet à l'identique. Elle est consultable sur l'application LizMap Web Client au travers des navigateurs majeurs (Firefox, Safari, Chrome, Internet Explorer).
+
+
 
 
 Lizmap plugin - le plugin QGIS
----------------------------------
+===============================================================
 
 Pour configurer sa carte et la publier
 
@@ -59,7 +79,7 @@ Pour configurer sa carte et la publier
  
 
 Lizmap Web Client - une carte par projet QGIS
----------------------------------------------
+===============================================================
 
 * *Légende*
 
@@ -75,7 +95,7 @@ Lizmap Web Client - une carte par projet QGIS
 * *Information* : une page avec les informations sur le projet QGIS
 
 
-.. image:: media/lizmap_carte_montpellier.png
+.. image:: ../MEDIA/introduction-montpellier-map.png
    :align: center
    :scale: 80%
    :target: http://demo.3liz.com/lizmap/index.php/view/map?repository=montpellier&project=montpellier

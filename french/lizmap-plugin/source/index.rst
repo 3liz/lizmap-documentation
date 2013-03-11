@@ -17,7 +17,7 @@ Plugin Lizmap pour QGIS - Documentation utilisateur
 	
   introduction/index
   interface/index
-  zoom/index
+  features/index
 
 
 Indices and tables

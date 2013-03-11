@@ -20,7 +20,7 @@ Pour l'installer :
 Installation du plugin Lizmap
 ----------------------------------------------------
 
-.. image:: media/installer_lizmap.png
+.. image:: ../MEDIA/introduction-install-lizmap.png
    :align: center
    :width: 90%
    
@@ -35,4 +35,8 @@ Organisé en 4 onglets
 * *FTP* : configurer la connexion FTP et ajouter le client pour Windows
 * *Log* : affiche les informations des actions effectuées
 
-... Et des boutons d'actions : aide, sauvegarder, sauvegarder et synchroniser, etc.
+Et des boutons d'actions : 
+* aide, 
+* sauvegarder, 
+* sauvegarder et synchroniser
+* fermer

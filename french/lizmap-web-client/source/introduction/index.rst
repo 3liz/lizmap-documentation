@@ -5,6 +5,5 @@ Introduction
 .. toctree::
   :maxdepth: 2
 	
-  principes
-  fonctionnalités
+  presentation
 

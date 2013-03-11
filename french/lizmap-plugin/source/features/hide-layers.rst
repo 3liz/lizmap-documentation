@@ -1,5 +1,7 @@
+.. _hide_layers:
+
 ===============================================================
-Outils - Configurer les outils à afficher dans le client WEB
+Masquer des couches du projet dans l'application Web
 ===============================================================
- 
+
 

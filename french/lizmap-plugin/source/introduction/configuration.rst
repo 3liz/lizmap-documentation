@@ -22,7 +22,7 @@ Configuration des propriétés du projet
 Système de Coordonnées de Référence
 ----------------------------------------------------
 
-.. image:: media/lizmap_projet_scr.png
+.. ../MEDIA/introduction-projet-scr.png
    :align: center
    :width: 90%
 
@@ -35,7 +35,7 @@ A faire
 Serveur OWS
 -------------------------------------------------------
 
-.. image:: media/lizmap_projet_ows.png
+.. ../MEDIA/introduction-projet-ows.png
    :align: center
    :width: 90%
 
@@ -76,7 +76,7 @@ Organiser et manipuler les couches dans la légende
 *Lizmap sait gérer les 2 types de rendu*
 
 
-.. image:: media/projet_qgis_legende.png
+.. ../MEDIA/introduction-projet-qgis-legend.png
    :align: center
    :width: 90%
    

@@ -1,5 +1,5 @@
 ===============================================================
-LINUX - Installation de Lizmap
+Installation de Lizmap sous Linux Debian ou Ubuntu
 ===============================================================
 
 
@@ -36,7 +36,7 @@ Récupérer et installer LizMap Web Client
    MYAPP=lizmap-web-client
    VERSION=2.4.1
    # récupération de l'archive via wget
-   wget http://demo.3liz.com/download/$MYAPP-$VERSION.zip
+   wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
    # on dézippze l'archive
    unzip $MYAPP-$VERSION.zip
 
@@ -46,7 +46,7 @@ Donner les droits adéquats aux répertoires et fichiers
 
 .. code-block:: bash
 
-   cd $MYAPP/$VERSION
+   cd $MYAPP-$VERSION
    chown :www-data temp/ lizmap/var/ lizmap/www -R
    chmod 775 temp/ lizmap/var/ -R
 
@@ -54,8 +54,16 @@ Donner les droits adéquats aux répertoires et fichiers
 Premier test
 --------------------------------------------------------------
 
-Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client/2.4.1/lizmap/www/
+Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.4.1/lizmap/www/
 
+
+Ajouter le support spatiatlite au PHP
+==============================================================
+
+Pour pouvoir utiliser les annotations sur des couches spatiatlite, il faut ajouter l'extension spatialite dans PHP. Vous pouvez suivre les instructions suivantes pour le faire :
+http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html
+
+Lizmap Web Client teste si le support du spatialite est bien activé dans le php. S'il ne l'est pas, alors les couches spatialites ne seront pas utilisables dans l'outil d'annotation. Vous pouvez toujours utiliser des données PostGreSQL pour les annotations.
 
 
 Montée de version
@@ -73,26 +81,26 @@ Avant de mettre à jour, faites une sauvegarde des données de configuration : l
    OLDVERSION=2.4.0
    # if you installation is 2.1.0 or less, use an empty OLDVERSION instead : 
    # OLDVERSION=
-   cp /var/www/$MYAPP/$OLDVERSION/lizmap/var/jauth.db /tmp/jauth.db # database containing groups and users
-   cp /var/www/$MYAPP/$OLDVERSION/lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php # text configuration file with services and repositories
+   cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/jauth.db /tmp/jauth.db # database containing groups and users
+   cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php # text configuration file with services and repositories
 
 Puis faites une installation classique de la nouvelle version, ce qui crééra un nouveau dossier dans le répertoire /var/www/lizmap-web-client
 
 
 Copier les fichiers sauvegardés dans le dossier de la nouvelle version
---------------------------------------------------------------
+-----------------------------------------------------------------------
 
 .. code-block:: bash
 
    $VERSION=2.4.1
-   cp /tmp/jauth.db /var/www/$MYAPP/$VERSION/lizmap/var/jauth.db
-   cp /tmp/lizmapConfig.ini.php /var/www/$MYAPP/$VERSION/lizmap/var/config/lizmapConfig.ini.php
+   cp /tmp/jauth.db /var/www/$MYAPP-$VERSION/lizmap/var/jauth.db
+   cp /tmp/lizmapConfig.ini.php /var/www/$MYAPP-$VERSION/lizmap/var/config/lizmapConfig.ini.php
 
 **IMPORTANT** Si vous montez de version depuis LizMap 2.3.0 ou inférieure jusqu'à la 2.4.0 ou supérieur, il faut aussi modifier la base de données sqlite de gestion des droits
 
 .. code-block:: bash
 
-   cd /var/www/$MYAPP/$VERSION/
+   cd /var/www/$MYAPP-$VERSION/
    sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_1.3_1.4.sql
 
 
@@ -101,7 +109,6 @@ Supprimer les fichiers temporaires de Jelix
 
 .. code-block:: bash
 
-   rm -rf /var/www/$MYAPP/$VERSION/temp/lizmap/*
+   rm -rf /var/www/$MYAPP-$VERSION/temp/lizmap/*
 
-Modifiez la configuration de votre hôte virtuel Apache pour que l'alias lizmap pointe vers le nouveau dossier (si vous aviez configuré un alias)
 

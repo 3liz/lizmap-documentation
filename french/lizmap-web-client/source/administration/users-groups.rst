@@ -32,7 +32,7 @@ Application
   2. *Créer un groupe "prive" qui contiendra les utilisateurs ayant accès aux cartes privées*
 
 
-.. image:: media/lwc_creer_groupe.png
+.. image:: ../MEDIA/administration-create-group.png
    :align: center
 
 
@@ -50,7 +50,7 @@ Lizmap
   *Une fois les utitilisateurs créés, il faut les mettre dans des groupes pour leur assigner les droits liés*
 
 
-.. image:: media/lwc_liste_utilisateur.png
+.. image:: ../MEDIA/administration-user-list.png
    :align: center
 
 
@@ -71,8 +71,8 @@ Mettre les utilisateurs dans des groupes
 Assigner des groupes pour chacun des utilisateurs créés
 -----------------------------------------------------------
 
-.. image:: media/lwc_liste_droits_utilisateurs.png
+.. image:: ../MEDIA/administration-users-rights-list.png
    :align: center
 
-.. image:: media/lwc_groupes_utilisateur.png
+.. image:: ../MEDIA/administration-users-groups.png
    :align: center
