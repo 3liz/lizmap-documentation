@@ -8,6 +8,6 @@ Fonctionnalités avancées de Lizmap
   medias
   popups
   overview-map
-  cache
+  optimization
   hide-layers
 

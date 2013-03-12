@@ -1,3 +1,5 @@
+.. _layers_tab:
+
 ===============================================================
 Couches - Configurer les couches avec le plugin
 ===============================================================
@@ -44,6 +46,10 @@ Dans notre exemple, on obtiendrai alors la légende suivante dans la légende de
    [x] une couche
    etc.
 
+
+.. _layers_tab_metadata:
+
+
 Les métadonnées
 ===============================================================
 
@@ -72,6 +78,9 @@ un lien html, comme par exemple "http://qgis.org" ou un document du répertoire 
 
 Options liées à la carte
 ===============================================================
+
+.. _layers_tab_popups:
+
 
 Activer les popups
 ---------------------------------------------------------------
