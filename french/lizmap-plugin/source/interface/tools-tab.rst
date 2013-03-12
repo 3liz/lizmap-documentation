@@ -52,6 +52,7 @@ Pour supprimer une des couches déjà configurée:
 .. note:: Au maximum 3 couches du projet peuvent être ajoutées à l'outil Localiser par couches
 
 
+.. _lizmap_annotation:
 
 Couches d'annotation
 ===============================================================

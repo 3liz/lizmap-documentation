@@ -13,7 +13,7 @@ Plugin Lizmap pour QGIS - Documentation utilisateur
   :keywords: Lizmap, QGIS, webmapping, publication, plugin
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 3
 	
   introduction/index
   interface/index

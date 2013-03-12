@@ -12,28 +12,35 @@ Depuis les débuts du Webmapping, les connexions internet sont meilleures et les
 
 Nous avons intégré dans Lizmap la possibilité d'utiliser les options classiques d'optimisation mises en oeuvre dans les application cartographiques web. Nous les listons ci-dessous et détaillons comment les mettre en oeuvre.
 
-limiter le nombre d'information à afficher
+Limiter le nombre d'information à afficher
 ===========================================
 
+*a compléter*
 
 Mode tuilé ou image unique ?
 ==============================
 
+*a compléter*
 
 Cache Serveur
 =============
 
+*a compléter*
 
 Cache Client
 ==============
 
+*a compléter*
 
 Utilisation de couches WMS externe
 =====================================
 
+*a compléter*
 
 Optimiser les données
 ======================
+
+*a compléter*
 
 Vecteurs
 ----------

@@ -13,7 +13,7 @@ Lizmap Web Client - Documentation utilisateur
   :keywords: Lizmap, QGIS, webmapping, publication, web, client
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 3
 	
   introduction/index
   installation/index
