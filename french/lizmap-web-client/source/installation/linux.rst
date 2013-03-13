@@ -34,11 +34,13 @@ Récupérer et installer LizMap Web Client
 
    # options
    MYAPP=lizmap-web-client
-   VERSION=2.4.1
+   VERSION=2.7.0
    # récupération de l'archive via wget
    wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
    # on dézippze l'archive
-   unzip $MYAPP-$VERSION.zip
+   unzip $VERSION.zip
+   # on supprime le zip
+   rm $VERSION.zip
 
 
 Donner les droits adéquats aux répertoires et fichiers
@@ -46,15 +48,15 @@ Donner les droits adéquats aux répertoires et fichiers
 
 .. code-block:: bash
 
-   cd $MYAPP-$VERSION
-   chown :www-data temp/ lizmap/var/ lizmap/www -R
-   chmod 775 temp/ lizmap/var/ -R
+   cd /var/www/$MYAPP-$VERSION
+   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
+   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
 
 
 Premier test
 --------------------------------------------------------------
 
-Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.4.1/lizmap/www/
+Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.7.0/lizmap/www/
 
 
 Ajouter le support spatiatlite au PHP
@@ -78,7 +80,7 @@ Avant de mettre à jour, faites une sauvegarde des données de configuration : l
 .. code-block:: bash
 
    MYAPP=lizmap-web-client
-   OLDVERSION=2.4.0
+   OLDVERSION=2.4.1
    # if you installation is 2.1.0 or less, use an empty OLDVERSION instead : 
    # OLDVERSION=
    cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/jauth.db /tmp/jauth.db # database containing groups and users
@@ -92,7 +94,7 @@ Copier les fichiers sauvegardés dans le dossier de la nouvelle version
 
 .. code-block:: bash
 
-   $VERSION=2.4.1
+   $VERSION=2.7.0
    cp /tmp/jauth.db /var/www/$MYAPP-$VERSION/lizmap/var/jauth.db
    cp /tmp/lizmapConfig.ini.php /var/www/$MYAPP-$VERSION/lizmap/var/config/lizmapConfig.ini.php
 
@@ -110,5 +112,12 @@ Supprimer les fichiers temporaires de Jelix
 .. code-block:: bash
 
    rm -rf /var/www/$MYAPP-$VERSION/temp/lizmap/*
+   
+Redéfinir les droits sur les fichiers de l'application
+-------------------------------------------------------
 
+.. code-block:: bash
 
+   cd /var/www/$MYAPP-$VERSION
+   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
+   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
