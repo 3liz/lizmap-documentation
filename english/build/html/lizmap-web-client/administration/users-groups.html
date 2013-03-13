@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gérer les groupes et les utilisateurs dans Lizmap &mdash; Lizmap 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Administration de Lizmap" href="index.html" />
+    <link rel="next" title="Configuration de Lizmap" href="lizmap-configuration.html" />
+    <link rel="prev" title="Présentation générale de l’interface d’administration" href="presentation.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="lizmap-configuration.html" title="Configuration de Lizmap"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="presentation.html" title="Présentation générale de l’interface d’administration"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >L&#8217;application Lizmap Web Client</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Administration de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gérer les groupes et les utilisateurs dans Lizmap</a><ul>
+<li><a class="reference internal" href="#les-groupes-et-les-utilisateurs-principes">Les groupes et les utilisateurs : principes</a></li>
+<li><a class="reference internal" href="#gerer-les-groupes-creer-renommer-supprimer">Gérer les groupes : créer, renommer, supprimer</a></li>
+<li><a class="reference internal" href="#gerer-les-utilisateurs">Gérer les utilisateurs</a></li>
+<li><a class="reference internal" href="#mettre-les-utilisateurs-dans-des-groupes">Mettre les utilisateurs dans des groupes</a><ul>
+<li><a class="reference internal" href="#assigner-des-groupes-pour-chacun-des-utilisateurs-crees">Assigner des groupes pour chacun des utilisateurs créés</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="presentation.html"
+                        title="previous chapter">Présentation générale de l&#8217;interface d&#8217;administration</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lizmap-configuration.html"
+                        title="next chapter">Configuration de Lizmap</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/lizmap-web-client/administration/users-groups.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="gerer-les-groupes-et-les-utilisateurs-dans-lizmap">
+<h1>Gérer les groupes et les utilisateurs dans Lizmap<a class="headerlink" href="#gerer-les-groupes-et-les-utilisateurs-dans-lizmap" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="les-groupes-et-les-utilisateurs-principes">
+<h2>Les groupes et les utilisateurs : principes<a class="headerlink" href="#les-groupes-et-les-utilisateurs-principes" title="Permalink to this headline">¶</a></h2>
+<p>En tant qu&#8217;administrateur, vous pouvez</p>
+<ul class="simple">
+<li>créer, renommer, supprimer des groupes d&#8217;utilisateurs</li>
+<li>créer, modifier, supprimer des utilisateurs</li>
+<li>rattacher un utilisateur à un ou plusieurs groupes</li>
+</ul>
+<dl class="docutils">
+<dt>Lizmap</dt>
+<dd><em>Les droits sur les répertoires Lizmap sont gérés au niveau des groupes d&#8217;utilisateurs, pas au niveau des utilisateurs</em></dd>
+</dl>
+</div>
+<div class="section" id="gerer-les-groupes-creer-renommer-supprimer">
+<h2>Gérer les groupes : créer, renommer, supprimer<a class="headerlink" href="#gerer-les-groupes-creer-renommer-supprimer" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><em>Créer un groupe</em> : Menu <em>Groupes d&#8217;utilisateurs</em> et descendre jusqu&#8217;au formulaire <em>Créer un groupe</em></li>
+<li><em>Donné un libellé</em> : il est possible d&#8217;utiliser des espaces et des accents</li>
+<li>Donner un identifiant : un seul mot sans caractères spéciaux</li>
+</ul>
+<p>Via cette page, on peut aussi <em>renommer ou supprimer un groupe</em></p>
+<dl class="docutils">
+<dt>Application</dt>
+<dd><ol class="first last arabic simple">
+<li><em>Supprimer le groupe &#8220;lizadmins&#8221; et &#8220;Intranet demo group&#8221;</em></li>
+<li><em>Créer un groupe &#8220;prive&#8221; qui contiendra les utilisateurs ayant accès aux cartes privées</em></li>
+</ol>
+</dd>
+</dl>
+<img alt="../../_images/administration-create-group.png" class="align-center" src="../../_images/administration-create-group.png" />
+</div>
+<div class="section" id="gerer-les-utilisateurs">
+<h2>Gérer les utilisateurs<a class="headerlink" href="#gerer-les-utilisateurs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><em>Créer</em> : Menu <em>Utilisateurs &gt; Créer un nouvel utilisateur</em>: donner un identifiant, un email et un mot de passe</li>
+<li>On peut aussi <em>modifier un utilisateur existant</em></li>
+</ul>
+<dl class="docutils">
+<dt>Application</dt>
+<dd><em>Créer un ou plusieurs utilisateurs</em></dd>
+<dt>Lizmap</dt>
+<dd><em>Une fois les utitilisateurs créés, il faut les mettre dans des groupes pour leur assigner les droits liés</em></dd>
+</dl>
+<img alt="../../_images/administration-user-list.png" class="align-center" src="../../_images/administration-user-list.png" />
+</div>
+<div class="section" id="mettre-les-utilisateurs-dans-des-groupes">
+<h2>Mettre les utilisateurs dans des groupes<a class="headerlink" href="#mettre-les-utilisateurs-dans-des-groupes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Menu <em>Droits des utilisateurs</em></li>
+<li>On peut filtrer les utilisateurs visibles via la liste déroulante</li>
+<li>Pour mettre les utilisateurs, utiliser le bouton <em>Droits</em></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>La page affiche un tableau avec <em>les droits en ligne et les groupes en colonne</em></li>
+<li>La dernière colonne affiche <em>les droits résultants</em></li>
+<li>Dans la <em>ligne d&#8217;entête</em>, des boutons + et - permettent de mettre/enlever l&#8217;utilisateur dans un groupe</li>
+<li><em>CONSEIL</em> : ne pas utiliser la colonne <em>Droits personnels</em></li>
+</ul>
+</div></blockquote>
+<div class="section" id="assigner-des-groupes-pour-chacun-des-utilisateurs-crees">
+<h3>Assigner des groupes pour chacun des utilisateurs créés<a class="headerlink" href="#assigner-des-groupes-pour-chacun-des-utilisateurs-crees" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/administration-users-rights-list.png" class="align-center" src="../../_images/administration-users-rights-list.png" />
+<img alt="../../_images/administration-users-groups.png" class="align-center" src="../../_images/administration-users-groups.png" />
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="lizmap-configuration.html" title="Configuration de Lizmap"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="presentation.html" title="Présentation générale de l’interface d’administration"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >L&#8217;application Lizmap Web Client</a> &raquo;</li>
+          <li><a href="index.html" >Administration de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 3liz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

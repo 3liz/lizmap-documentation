@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configurer les popups dans Lizmap &mdash; Lizmap 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Fonctionnalités avancées de Lizmap" href="index.html" />
+    <link rel="next" title="Ajouter une carte miniature" href="overview-map.html" />
+    <link rel="prev" title="Les médias dans Lizmap" href="medias.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="overview-map.html" title="Ajouter une carte miniature"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="medias.html" title="Les médias dans Lizmap"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Fonctionnalités avancées de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configurer les popups dans Lizmap</a><ul>
+<li><a class="reference internal" href="#activer-les-popups-dans-lizmap">Activer les popups dans Lizmap</a><ul>
+<li><a class="reference internal" href="#informations-affichees-dans-la-popup">Informations affichées dans la popup</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration-simple-des-popups">Configuration simple des popups</a><ul>
+<li><a class="reference internal" href="#masquer-une-colonne-ou-modifier-son-nom">Masquer une colonne ou modifier son nom</a></li>
+<li><a class="reference internal" href="#utilisation-de-medias-images-documents-etc">Utilisation de médias : images, documents, etc.</a></li>
+<li><a class="reference internal" href="#utilisation-de-liens-externes">Utilisation de liens externes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration-avancee-des-popups-au-format-html">Configuration avancée des popups au format HTML</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#mise-en-oeuvre">Mise en oeuvre</a></li>
+<li><a class="reference internal" href="#utilisation-des-medias-et-des-liens-externes">Utilisation des médias et des liens externes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="medias.html"
+                        title="previous chapter">Les médias dans Lizmap</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="overview-map.html"
+                        title="next chapter">Ajouter une carte miniature</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/lizmap-plugin/features/popups.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="configurer-les-popups-dans-lizmap">
+<span id="popups-in-lizmap"></span><h1>Configurer les popups dans Lizmap<a class="headerlink" href="#configurer-les-popups-dans-lizmap" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="activer-les-popups-dans-lizmap">
+<h2>Activer les popups dans Lizmap<a class="headerlink" href="#activer-les-popups-dans-lizmap" title="Permalink to this headline">¶</a></h2>
+<p>Via le plugin, on peut activer les popups <strong>pour une couche</strong> ou pour <strong>un groupe qui a été configuré comme &#8220;Groupe comme une couche&#8221;</strong></p>
+<p>Pour cela il suffit de cocher sur la case à cocher <strong>Activer les popups</strong> de l&#8217;onglet <em>Couches</em> du plugin Lizmap. Pour les <em>groupes comme une couche</em>, il faut activer l&#8217;option pour le groupe et pour toutes les couches filles qu&#8217;on souhaite voir dans la popup. Dans ce cas, seules les couches filles qui ont aussi l&#8217;option <em>Popup</em> activée seront visibles.</p>
+<p>Dans l&#8217;application <em>Lizmap Web Client</em>, un clic sur un objet de la carte lancera l&#8217;ouverture de la popup si et seulement si :</p>
+<ul class="simple">
+<li>la couche est <strong>cochée dans la légende</strong>, et donc visible</li>
+<li>la popup a bien <strong>été activée</strong> via le plugin pour la couche ou le groupe</li>
+<li>l&#8217;utilisateur a bien <strong>cliqué sur un endroit de la carte</strong> où on voit de la donnée pour l&#8217;une des couches avec les popups actives.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Pour les couches de type Point, il faut bien cliquer pile au milieu du point pour que la popup apparaisse.</p>
+</div>
+<div class="section" id="informations-affichees-dans-la-popup">
+<h3>Informations affichées dans la popup<a class="headerlink" href="#informations-affichees-dans-la-popup" title="Permalink to this headline">¶</a></h3>
+<p>Par défaut, la popup de <em>Lizmap Web Client</em> affiche un tableau de ce type, qui présente les colonnes de la table attributaire en ligne dans 2 colonnes <em>Champ</em> et <em>Valeur</em>:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Champ</th>
+<th class="head">Valeur</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>nom</td>
+<td>Un nom</td>
+</tr>
+<tr class="row-even"><td>description</td>
+<td>Cet objet ...</td>
+</tr>
+<tr class="row-odd"><td>photo</td>
+<td>:-)</td>
+</tr>
+</tbody>
+</table>
+<p>C&#8217;est ce qu&#8217;on appelle le <strong>mode simple</strong>. On peut modifier un peu les informations affichées via QGIS, et aussi afficher des images ou des liens.</p>
+<p>Si on souhaite modifier complètement l&#8217;affichage des données dans la popup, alors on peut utiliser le <strong>mode avancé</strong> et utiliser des modèles.</p>
+</div>
+</div>
+<div class="section" id="configuration-simple-des-popups">
+<h2>Configuration simple des popups<a class="headerlink" href="#configuration-simple-des-popups" title="Permalink to this headline">¶</a></h2>
+<p>Via le plugin, si on clique seulement sur la case à cocher <em>Activer les popups</em> sans modifier le contenu via le bouton <em>Contenu</em>, alors c&#8217;est l&#8217;affichage par défaut ou <em>mode simple</em> qui est utilisé.</p>
+<p>On peut néanmoins jouer sur plusieurs choses dans QGIS et via le plugin Lizmap pour <strong>paramétrer les champs qu&#8217;on veut afficher</strong>, <strong>renommer les champs</strong>, et même <strong>afficher des images, des photos ou des liens vers des documents internes ou externes</strong>.</p>
+<div class="section" id="masquer-une-colonne-ou-modifier-son-nom">
+<h3>Masquer une colonne ou modifier son nom<a class="headerlink" href="#masquer-une-colonne-ou-modifier-son-nom" title="Permalink to this headline">¶</a></h3>
+<p>On peut utiliser les outils de <strong>l&#8217;onglet Champs</strong> des <strong>propriétés de la couche</strong>:</p>
+<ul class="simple">
+<li>Pour <strong>ne pas afficher</strong> une colonne dans la popup: <em>Outil d&#8217;édition : Cachée</em></li>
+<li>Pour <strong>modifier le nom</strong> qui sera affiché pour la colonne : <em>colonne Alias</em></li>
+</ul>
+<img alt="../../_images/features-popup-fields.png" class="align-center" src="../../_images/features-popup-fields.png" style="width: 70%;" />
+</div>
+<div class="section" id="utilisation-de-medias-images-documents-etc">
+<h3>Utilisation de médias : images, documents, etc.<a class="headerlink" href="#utilisation-de-medias-images-documents-etc" title="Permalink to this headline">¶</a></h3>
+<p>Si on utilise des <strong>chemins vers les documents du répertoire media</strong>, on peut</p>
+<ul class="simple">
+<li><em>afficher l&#8217;image</em> correspondante</li>
+<li><em>afficher le contenu texte ou HTML</em> du fichier correspondant</li>
+<li><em>afficher un lien</em> vers le document</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Voir le chapitre <a class="reference internal" href="medias.html#media-in-lizmap"><em>Les médias dans Lizmap</em></a> pour plus de détail sur l&#8217;utilisation de documents du répertoire media dans les popups.</p>
+</div>
+</div>
+<div class="section" id="utilisation-de-liens-externes">
+<h3>Utilisation de liens externes<a class="headerlink" href="#utilisation-de-liens-externes" title="Permalink to this headline">¶</a></h3>
+<p>Enfin on peut aussi utiliser dans les colonnes <strong>des liens WEB complets vers une page ou une image</strong>:</p>
+<ul class="simple">
+<li>l&#8217;image pointée par le lien sera affichée à la place du lien</li>
+<li>le lien web sera affiché et cliquable</li>
+</ul>
+</div>
+</div>
+<div class="section" id="configuration-avancee-des-popups-au-format-html">
+<h2>Configuration avancée des popups au format HTML<a class="headerlink" href="#configuration-avancee-des-popups-au-format-html" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
+<p>Si l&#8217;affichage tabulaire par défaut des popups ne vous convient pas, vous pouvez écrire <strong>un modèle de popup</strong>. Pour cela, il faut bien connaître le format HTML. Voir par exemple: <a class="reference external" href="http://fr.html.net/tutorials/html/">http://fr.html.net/tutorials/html/</a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">ATTENTION: lorsque vous utilisez le mode avancé, la configuration précédente ne fonctionne plus pour masquer ou renommer un champ: c&#8217;est vous qui contrôlez via le modèle les affichages. La gestion des médias est encore possible, mais c&#8217;est à vous de bien la prévoir.</p>
+</div>
+</div>
+<div class="section" id="mise-en-oeuvre">
+<h3>Mise en oeuvre<a class="headerlink" href="#mise-en-oeuvre" title="Permalink to this headline">¶</a></h3>
+<p>Via le <strong>bouton Configurer</strong> du plugin Lizmap, on peut modifier le modèle de la popup. En cliquant sur ce bouton, une fenêtre s&#8217;affiche avec 2 zones de texte :</p>
+<ul class="simple">
+<li>une <strong>zone de texte éditable</strong> qui permet d&#8217;écrire le contenu</li>
+<li>une <strong>zone de texte en lecture seule</strong> qui montre un aperçu de la mise en forme</li>
+</ul>
+<img alt="../../_images/features-popup-configure.png" class="align-center" src="../../_images/features-popup-configure.png" style="width: 70%;" />
+<p>On peut écrire du texte simple, mais il est conseillé d&#8217;écrire au format HTML pour le mettre en forme. On peut par exemple utiliser les paragraphes, les titres, etc</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;h3&gt;</span>Un titre<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>Un exemple de paragraphe<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p>Le comportement est le suivant:</p>
+<ul class="simple">
+<li>Si le contenu des 2 champs texte est vide, un tableau sera présenté dans la popup (modèle par défaut)</li>
+<li>Si le contenu n&#8217;est pas vide, le modèle écrit dans le contenu sera utilisé à la place pour l&#8217;affichage de la popup</li>
+</ul>
+<p><em>Lizmap Web Client</em> sait remplacer automatiquement une variable représentant le nom d&#8217;un champ de la table attributaire par son contenu. Pour ajouter le contenu d&#8217;une colonne dans la popup, on utilise <strong>le nom de la colonne précédé d&#8217;un dollard, le tout encadré d&#8217;accolades</strong>. Par exemple:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;h3&gt;</span>Un titre<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>Un exemple de paragraphe<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Le nom : <span class="nt">&lt;b&gt;</span>{$nom}<span class="nt">&lt;/b&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Description: {$description}<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Si vous avez configuré un alias pour un champ, il faut utiliser l&#8217;alias au lieu du nom entre accolade</p>
+</div>
+<p>On peut aussi utiliser les valeurs des colonnes comme paramètres pour styliser le texte. Par exemple ici pour mettre le fond dans la couleur de la ligne de bus:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">&quot;background-color:{$color}&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;b&gt;</span>LINE<span class="nt">&lt;/b&gt;</span> : {$ref} - {$name}
+<span class="nt">&lt;p/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="utilisation-des-medias-et-des-liens-externes">
+<h3>Utilisation des médias et des liens externes<a class="headerlink" href="#utilisation-des-medias-et-des-liens-externes" title="Permalink to this headline">¶</a></h3>
+<p>On peut <strong>utiliser les médias</strong> référencés dans le contenu des champs de la table attributaire, même si on configure un <em>modèle de template</em>. Pour cela, il faut utiliser les colonnes de média en anticipant le fait que Lizmap Web Client remplace automatiquement le chemin relatif de type <em>/media/monfichier.jpg</em> par l&#8217;URL complète avec laquelle on peut y accéder depuis l&#8217;interface WEB.</p>
+<p>On peut aussi utiliser des URL complètes pointant vers les liens ou des images hébergées sur un autre serveur.</p>
+<p>Voici un exemple de contenu d&#8217;un modèle gérant les médias et utilisant un lien externe: :</p>
+<div class="highlight-html"><div class="highlight"><pre> <span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">&quot;font-size:0.8em;&quot;</span><span class="nt">&gt;</span>Un titre<span class="nt">&lt;/p&gt;</span>
+ <span class="nt">&lt;p&gt;</span>Le nom est {$name}<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+   Une petite illustration<span class="nt">&lt;br/&gt;</span>
+   <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;{$image_column}&quot;</span> <span class="na">style=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;/p&gt;</span>
+
+ <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{$website}&quot;</span> <span class="na">target=</span><span class="s">&quot;_blank&quot;</span><span class="nt">&gt;</span>Lien web<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+
+ <span class="nt">&lt;p&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://www.3liz.com/assets/img/logo.png&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Voir le chapitre <a class="reference internal" href="medias.html#media-in-lizmap"><em>Les médias dans Lizmap</em></a> pour plus de détail sur l&#8217;utilisation de documents du répertoire media.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="overview-map.html" title="Ajouter une carte miniature"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="medias.html" title="Les médias dans Lizmap"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>
+          <li><a href="index.html" >Fonctionnalités avancées de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 3liz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

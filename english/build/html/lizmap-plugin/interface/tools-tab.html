@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Outils - Configurer les outils à afficher dans le client WEB &mdash; Lizmap 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Interface - Les onglets" href="index.html" />
+    <link rel="next" title="FTP - Publier la carte par FTP" href="ftp-tab.html" />
+    <link rel="prev" title="Carte - Configurer la carte web avec le plugin" href="map-tab.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ftp-tab.html" title="FTP - Publier la carte par FTP"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="map-tab.html" title="Carte - Configurer la carte web avec le plugin"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Interface - Les onglets</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Outils - Configurer les outils à afficher dans le client WEB</a><ul>
+<li><a class="reference internal" href="#l-onglet-outils">L&#8217;onglet Outils</a><ul>
+<li><a class="reference internal" href="#presentation">Présentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localiser-par-couche">Localiser par couche</a><ul>
+<li><a class="reference internal" href="#cas-d-utilisation">Cas d&#8217;utilisation</a></li>
+<li><a class="reference internal" href="#pre-requis">Pré-requis</a></li>
+<li><a class="reference internal" href="#fonctionnement">Fonctionnement</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#couches-d-annotation">Couches d&#8217;annotation</a><ul>
+<li><a class="reference internal" href="#principe">Principe</a></li>
+<li><a class="reference internal" href="#deroulement-dans-lizmap-web-client">Déroulement dans Lizmap Web Client</a></li>
+<li><a class="reference internal" href="#exemples-d-utilisation">Exemples d&#8217;utilisation</a></li>
+<li><a class="reference internal" href="#configurer-les-annotations">Configurer les annotations</a></li>
+<li><a class="reference internal" href="#reutiliser-les-donnees-des-couches-d-annotation">Réutiliser les données des couches d&#8217;annotation</a></li>
+<li><a class="reference internal" href="#utilisation-du-cache">Utilisation du cache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="map-tab.html"
+                        title="previous chapter">Carte - Configurer la carte web avec le plugin</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ftp-tab.html"
+                        title="next chapter">FTP - Publier la carte par FTP</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/lizmap-plugin/interface/tools-tab.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="outils-configurer-les-outils-a-afficher-dans-le-client-web">
+<h1>Outils - Configurer les outils à afficher dans le client WEB<a class="headerlink" href="#outils-configurer-les-outils-a-afficher-dans-le-client-web" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="l-onglet-outils">
+<h2>L&#8217;onglet Outils<a class="headerlink" href="#l-onglet-outils" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="presentation">
+<h3>Présentation<a class="headerlink" href="#presentation" title="Permalink to this headline">¶</a></h3>
+<p>Cet onglet permet de configurer des outils avancés de Lizmap</p>
+<img alt="../../_images/interface-tools-tab.png" class="align-center" src="../../_images/interface-tools-tab.png" style="width: 80%;" />
+</div>
+</div>
+<div class="section" id="localiser-par-couche">
+<h2>Localiser par couche<a class="headerlink" href="#localiser-par-couche" title="Permalink to this headline">¶</a></h2>
+<p>L&#8217;idée de cet outil est de présenter à l&#8217;utilisateur de Lizmap Web Client une liste déroulante qui permet de zoomer automatiquement sur un ou plusieurs objets spatiaux de la couche.</p>
+<div class="section" id="cas-d-utilisation">
+<h3>Cas d&#8217;utilisation<a class="headerlink" href="#cas-d-utilisation" title="Permalink to this headline">¶</a></h3>
+<p>Prenons comme exemple une couche vectorielle spatiale <strong>Communes</strong> contenue dans le projet QGIS. On choisit d&#8217;ajouter ces communes dans l&#8217;outil <em>Localiser par couche</em>, pour permettre aux utilisateurs de Lizmap Web Client de se positionner rapidement sur une des communes.</p>
+<p>Une fois cette couche ajoutée dans l&#8217;outil <em>Localiser par couche</em>, une liste déroulante contenant les communes s&#8217;affiche sur l&#8217;interface web de Lizmap. Le responsable de la publication du projet Lizmap a choisi d&#8217;afficher le nom de la commune dans cette liste. Lorsque l&#8217;utilisateur de la carte web sélectionne un nom dans cette liste, la carte se recentre automatiquement sur la commune sélectionnée, et la géométrie de la commune s&#8217;affiche. L&#8217;utilisateur peut masquer la géométrie en cliquant sur un petit bouton représentant un pinceau.</p>
+</div>
+<div class="section" id="pre-requis">
+<h3>Pré-requis<a class="headerlink" href="#pre-requis" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">La ou les couches qu&#8217;on souhaite utiliser doivent être <strong>publiée(s) comme couche WFS</strong> : cocher la case correspondante dans l&#8217;onglet <em>Serveur OWS</em> de la partie <em>Capacités WFS</em> des propriétés du projet QGIS.</p>
+</div>
+</div>
+<div class="section" id="fonctionnement">
+<h3>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Permalink to this headline">¶</a></h3>
+<p>Pour ajouter une couche à cet outil:</p>
+<ul class="simple">
+<li>on choisit la couche via la première liste déroulante parmi les couches vectorielles du projet,</li>
+<li>puis la colonne qui contient le libellé qu&#8217;on souhaite afficher dans la liste déroulante.</li>
+<li>Si on souhaite que la géométrie liée aux objets soit aussi affichée sur la carte lorsque l&#8217;utilisateur sélectionne un élément de la liste, alors on coche l&#8217;option <em>Afficher la géométrie</em>.</li>
+<li>Enfin on clique sur le bouton <em>Ajouter la couche</em> pour l&#8217;ajouter dans la liste</li>
+</ul>
+<p>Pour supprimer une des couches déjà configurée:</p>
+<ul class="simple">
+<li>on sélectionne la ligne en cliquant sur l&#8217;une des cases de la couche à supprimer</li>
+<li>on clique sur le bouton <em>Enlever la couche</em></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Au maximum 3 couches du projet peuvent être ajoutées à l&#8217;outil Localiser par couches</p>
+</div>
+</div>
+</div>
+<div class="section" id="couches-d-annotation">
+<span id="lizmap-annotation"></span><h2>Couches d&#8217;annotation<a class="headerlink" href="#couches-d-annotation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="principe">
+<h3>Principe<a class="headerlink" href="#principe" title="Permalink to this headline">¶</a></h3>
+<p>Lizmap permet aux utilisateurs en ligne <strong>d&#8217;ajouter du contenu</strong> à des couches <strong>Spatialite ou PostGreSQL</strong> du projet QGIS. Pour les couches d&#8217;annotations, l&#8217;utilisateur de l&#8217;application Web peut utiliser l&#8217;outil <strong>Annotation</strong> du menu pour numériser une géométrie et remplir les données attributaires liées.</p>
+<p>Le <strong>formulaire</strong> présenté à l&#8217;utilisateur pour renseigner la <strong>table attributaire</strong> prend en charge les <strong>Outils d&#8217;éditions</strong> proposés dans l&#8217;onglet <em>Champs</em> des <em>propriétés de la couche</em> vectorielle QGIS. On peut donc configurer une liste déroulante, masquer une colonne, la rendre non-éditable, utiliser une case à cocher, un champ texte, etc.</p>
+<p>De plus, Lizmap Web Client détecte automatiquement le type de colonne (entier, réel, chaîne de caractère, etc.) et ajoute les vérifications et les contrôles nécessaires sur les champs.</p>
+</div>
+<div class="section" id="deroulement-dans-lizmap-web-client">
+<h3>Déroulement dans Lizmap Web Client<a class="headerlink" href="#deroulement-dans-lizmap-web-client" title="Permalink to this headline">¶</a></h3>
+<p>Voici le déroulement d&#8217;un ajout d&#8217;élément à une couche d&#8217;annotation dans l&#8217;interface Web</p>
+<ul class="simple">
+<li>L&#8217;utilisateur sélectionne la couches dans laquelle ajouter un élément via le menu <em>Annotation</em>.</li>
+<li>Il dessine sur la carte pour numériser l&#8217;élement à ajouter.</li>
+<li>Il double-clique le dernier point pour finaliser la numérisation de la géométrie.</li>
+<li>Un formulaire est automatiquement affiché: l&#8217;utilisateur peut remplir les données attributaires via les champs texte, les listes déroulantes, etc.</li>
+<li>Il valide le formulaire.</li>
+<li>Lizmap contrôle les champs du formulaire. Si aucun problème n&#8217;est survenu, la géométrie et les données liées sont automatiquement ajoutée dans la table correspondant à la couche dans la base de données. Sinon le formulaire est affiché et les erreurs à corriger mises en valeur.</li>
+<li>La carte se raffraîchit pour montrer les nouvelles données.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">On peut configurer jusqu&#8217;à 3 couches d&#8217;annotations: une par type de géométrie (point, ligne, polygone)</p>
+</div>
+</div>
+<div class="section" id="exemples-d-utilisation">
+<h3>Exemples d&#8217;utilisation<a class="headerlink" href="#exemples-d-utilisation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Une commune</strong> souhaite permettre aux citoyens de recenser les problèmes visibles sur la voirie: poubelles non ramassées, lampadaires en panne, épaves à enlever. L&#8217;administrateur du projet QGIS crée une couche dédiée à ce recueil de données et affiche à tous la donnée.</li>
+<li><strong>Un bureau d&#8217;étude</strong> souhaite permettre aux partenaires d&#8217;un projet de remonter des remarques sur des zones du projet, mais ne veut pas que les utilisateurs voient les remarques des autres. Il crée une couche de type polygone dans sa base de données PostGreSQL, qu&#8217;il met dans un groupe caché ( voir <a class="reference internal" href="../features/hide-layers.html#hide-layers"><em>Masquer des couches du projet dans l&#8217;application Web</em></a> ).</li>
+</ul>
+</div>
+<div class="section" id="configurer-les-annotations">
+<h3>Configurer les annotations<a class="headerlink" href="#configurer-les-annotations" title="Permalink to this headline">¶</a></h3>
+<p>Pour pouvoir ajouter l&#8217;outil d&#8217;annotations dans Lizmap Web Client, il faut</p>
+<ul class="simple">
+<li><em>Au moins une couche vectorielle de type PostGis ou Spatialite</em> dans le projet QGIS</li>
+<li><em>Configurer les outils d&#8217;éditions pour cette couche.</em> Ce n&#8217;est pas obligatoire mais recommandé pour contrôler les données saisies par les utilisateurs.</li>
+<li><em>Ajouter la couche dans l&#8217;outil via le plugin</em></li>
+</ul>
+<p>Voici le détail des étapes:</p>
+<ol class="arabic simple">
+<li>Si nécessaire, <strong>créer une couche</strong> dans votre base de données, du type de géométrie souhaité (point, ligne, polygone, etc.)</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><em>pensez à ajouter une clé primaire</em> : c&#8217;est indispensable</li>
+<li><em>pensez à ajouter un index spatial</em> : c&#8217;est important pour les performances</li>
+<li><em>créer autant de champs dont vous avez besoin pour les attributs</em> : utiliser des noms de champ simples !</li>
+</ul>
+<p>Veuillez vous référer à la documentation de QGIS pour voir comment créer une couche spatiale dans une base de données PostGIS ou Spatialite: <a class="reference external" href="http://docs.qgis.org/html/fr/docs/user_manual/index.html">http://docs.qgis.org/html/fr/docs/user_manual/index.html</a></p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><strong>Configurer les outils d&#8217;édition</strong> pour les champs de votre couche</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><em>Ouvrir les propriétés de la couche</em> en double-cliquant sur le nom de la couche dans la légende</li>
+<li>Aller à l&#8217;onglet <em>Champs</em></li>
+<li>Choisir l&#8217;<em>Outil d&#8217;édition</em> via la liste déroulante pour chacun des champs de la couche<ul>
+<li>Pour masquer un champ, choisir <em>Cachée</em>. L&#8217;utilisateur ne verra pas ce champ dans le formulaire. Aucun contenu n&#8217;y sera écrit</li>
+<li>Pour afficher un champ en lecture seule, choisir <em>Immuable</em></li>
+<li>etc.</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><strong>Activer l&#8217;outil d&#8217;annotation</strong> via la case à cocher du plugin Lizmap</li>
+<li><strong>Sélectionner la couche via une des 3 listes déroulantes du plugin</strong>. Vous pouvez donc utiliser jusqu&#8217;à 3 couches: une de type Point, une de type Ligne, une de type Polygone</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Tous les outils d&#8217;édition ne sont pas encore gérés par Lizmap Web Client. Seuls les outils suivants le sont: Edition de ligne, Classification, Plage, Liste de valeurs, Immuable, Cachée, Boite à cocher, Edition de texte, Calendrier. Si l&#8217;outil n&#8217;est pas géré, le formulaire web affichera un champ texte libre.</p>
+</div>
+</div>
+<div class="section" id="reutiliser-les-donnees-des-couches-d-annotation">
+<h3>Réutiliser les données des couches d&#8217;annotation<a class="headerlink" href="#reutiliser-les-donnees-des-couches-d-annotation" title="Permalink to this headline">¶</a></h3>
+<p>Les couches que vous avez sélectionnées pour l&#8217;outil d&#8217;annotation sont des couches comme les autres, ce qui implique:</p>
+<ul class="simple">
+<li><strong>Les styles et les étiquettes de QGIS s&#8217;appliquent sur ces couches.</strong> On peut donc créer des styles qui et des étiquettes qui dépendent d&#8217;une valeur d&#8217;une des colonnes de la couche.</li>
+<li>Si on souhaite proposer l&#8217;outil d&#8217;annotation, mais ne pas permettre aux utilisateurs de voir les données de la couche en ligne ( et donc les ajouts des autres utilisateurs) : <strong>on peut simplement masquer la ou les couches d&#8217;annotation</strong> en les mettant dans un répertoire <em>hidden</em>. Voir <a class="reference internal" href="../features/hide-layers.html#hide-layers"><em>Masquer des couches du projet dans l&#8217;application Web</em></a></li>
+<li><strong>Les couches sont imprimables</strong> si elles ne sont pas masquées.</li>
+<li><strong>Les données sont enregistrées dans une couche du projet</strong>. L&#8217;administrateur peut donc récupérer ces données et les utiliser par la suite.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Pour bien centraliser les choses, nous conseillons d&#8217;utiliser une base de données PostGis pour stocker les données. Pour les couches Spatialite, il faut faire attention à ne pas écraser le fichier Spatialite stocké dans le répertoire Lizmap sur le serveur par celui que vous avez en local: pensez à toujours faire une sauvegarde du fichier du serveur avant une nouvelle synchronisation de votre répertoire local.</p>
+</div>
+</div>
+<div class="section" id="utilisation-du-cache">
+<h3>Utilisation du cache<a class="headerlink" href="#utilisation-du-cache" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Si vous souhaitez utiliser le cache serveur ou client pour les couches d&#8217;annotation, faites-le en toute connaissance de cause : les données ne seront pas visibles par les utilisateurs tant que le cache ne sera pas expiré. Nous conseillons de ne pas activer le cache pour les couches d&#8217;annotation</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ftp-tab.html" title="FTP - Publier la carte par FTP"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="map-tab.html" title="Carte - Configurer la carte web avec le plugin"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>
+          <li><a href="index.html" >Interface - Les onglets</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 3liz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
