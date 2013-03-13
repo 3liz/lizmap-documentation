@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>FTP - Publier la carte par FTP &mdash; Lizmap 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Interface - Les onglets" href="index.html" />
+    <link rel="next" title="Fonctionnalités avancées de Lizmap" href="../features/index.html" />
+    <link rel="prev" title="Outils - Configurer les outils à afficher dans le client WEB" href="tools-tab.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../features/index.html" title="Fonctionnalités avancées de Lizmap"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tools-tab.html" title="Outils - Configurer les outils à afficher dans le client WEB"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Interface - Les onglets</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">FTP - Publier la carte par FTP</a><ul>
+<li><a class="reference internal" href="#l-onglet-ftp">L&#8217;onglet FTP</a></li>
+<li><a class="reference internal" href="#rappel-de-l-architecture-de-lizmap">Rappel de l&#8217;architecture de Lizmap</a><ul>
+<li><a class="reference internal" href="#rappels-sur-les-repertoires-lizmap">Rappels sur les répertoires Lizmap</a></li>
+<li><a class="reference internal" href="#outils-utilises">Outils utilisés</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#preambule-installer-le-client-ftp">Préambule : installer le client FTP</a><ul>
+<li><a class="reference internal" href="#sous-windows-winscp">Sous Windows : WinSCP</a></li>
+<li><a class="reference internal" href="#sous-linux-lftp">Sous linux : LFTP</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#onglet-ftp-les-informations-de-connexion">Onglet FTP : Les informations de connexion</a></li>
+<li><a class="reference internal" href="#onglet-ftp-utilisation-sous-windows">Onglet FTP : utilisation sous Windows</a><ul>
+<li><a class="reference internal" href="#prealable">Préalable</a></li>
+<li><a class="reference internal" href="#winscp-exe-parametres-de-connexion">WinSCP.exe : paramètres de connexion</a></li>
+<li><a class="reference internal" href="#winscp-exe-accepter-le-certificat">WinSCP.exe : accepter le certificat</a></li>
+<li><a class="reference internal" href="#options-windows-liees-a-winscp">Options Windows liées à WinSCP</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#onglet-ftp-lancer-la-synchronisation">Onglet FTP : lancer la synchronisation</a></li>
+<li><a class="reference internal" href="#onglet-log-suivi-de-la-synchronisation">Onglet Log : suivi de la synchronisation</a><ul>
+<li><a class="reference internal" href="#contenu-du-log">Contenu du log</a></li>
+<li><a class="reference internal" href="#les-boutons-d-action">Les boutons d&#8217;action</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#utilisation-de-clients-ftp-externes">Utilisation de clients FTP externes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tools-tab.html"
+                        title="previous chapter">Outils - Configurer les outils à afficher dans le client WEB</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../features/index.html"
+                        title="next chapter">Fonctionnalités avancées de Lizmap</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/lizmap-plugin/interface/ftp-tab.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ftp-publier-la-carte-par-ftp">
+<h1>FTP - Publier la carte par FTP<a class="headerlink" href="#ftp-publier-la-carte-par-ftp" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="l-onglet-ftp">
+<h2>L&#8217;onglet FTP<a class="headerlink" href="#l-onglet-ftp" title="Permalink to this headline">¶</a></h2>
+<p>Voici comment se présente l&#8217;onglet FTP du plugin Lizmap:</p>
+<img alt="../../_images/interface-ftp-tab.png" class="align-center" src="../../_images/interface-ftp-tab.png" style="width: 80%;" />
+</div>
+<div class="section" id="rappel-de-l-architecture-de-lizmap">
+<h2>Rappel de l&#8217;architecture de Lizmap<a class="headerlink" href="#rappel-de-l-architecture-de-lizmap" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/all-schema-client-server.png" class="align-center" src="../../_images/all-schema-client-server.png" />
+<div class="section" id="rappels-sur-les-repertoires-lizmap">
+<h3>Rappels sur les répertoires Lizmap<a class="headerlink" href="#rappels-sur-les-repertoires-lizmap" title="Permalink to this headline">¶</a></h3>
+<p><strong>Lizmap repose sur le système de répertoires</strong>. Pour publier une carte dans Lizmap, il suffit de s&#8217;assurer que le contenu du répertoire local contenant les données et les projets QGIS soit <strong>reproduit exactement à l&#8217;identique</strong> dans le répertoire du serveur correspondant.</p>
+<p>Pour cela, il faut donc <strong>synchroniser le répertoire local avec celui du serveur</strong> à chaque fois qu&#8217;on a mis à jour le projet QGIS, modifié la configuration Lizmap via le plugin, ou encore ajouté des fichiers dans le répertoire local.</p>
+</div>
+<div class="section" id="outils-utilises">
+<h3>Outils utilisés<a class="headerlink" href="#outils-utilises" title="Permalink to this headline">¶</a></h3>
+<p><strong>Pour réaliser cette synchronisation</strong> dite <em>en mode mirroir</em>, on pourrait utiliser n&#8217;importe lequel des sytèmes de synchronisation existant et tous les protocoles existants : FTP, FTPS, SFTP, rsync, unison, etc. Par souci de facilité, nous avons choisir d&#8217;utiliser le FTP dans Lizmap (optionnellement sécurisé par SSL).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Les utilisateurs qui maîtrisent bien les technologies client-serveur, les outils de synchronisation, et qui ont accès au serveur sur lequel Lizmap Web Client est installé, peuvent très bien utiliser l&#8217;outil qu&#8217;ils préfèrent.</p>
+</div>
+<p>Dans Lizmap, pour intégrer la synchronisation FTP directement dans le plugin, nous nous sommes appuyés sur 2 outils libres qui ont fait leur preuve :</p>
+<ul class="simple">
+<li><strong>WinSCP</strong> pour Windows: <a class="reference external" href="http://winscp.net/">http://winscp.net/</a></li>
+<li><strong>lftp</strong> pour Linux: <a class="reference external" href="http://lftp.yar.ru/">http://lftp.yar.ru/</a> (anglais) et <a class="reference external" href="http://fr.wikipedia.org/wiki/Lftp">http://fr.wikipedia.org/wiki/Lftp</a></li>
+<li>Nous n&#8217;avons pas encore trouvé d&#8217;équivalent pour Mac OS (contributions bienvenues)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="preambule-installer-le-client-ftp">
+<h2>Préambule : installer le client FTP<a class="headerlink" href="#preambule-installer-le-client-ftp" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sous-windows-winscp">
+<h3>Sous Windows : WinSCP<a class="headerlink" href="#sous-windows-winscp" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Télécharger la <strong>version portable</strong>: <a class="reference external" href="http://winscp.net/eng/download.php">http://winscp.net/eng/download.php</a></li>
+<li><strong>Décompresser dans un répertoire</strong>: par exemple &#8220;C:\winscp\&#8221;</li>
+<li><strong>Onglet FTP du plugin</strong> : indiquer le répertoire dans lequel vous avez décompressé le ZIP via le bouton &#8221;...&#8221;</li>
+</ul>
+</div>
+<div class="section" id="sous-linux-lftp">
+<h3>Sous linux : LFTP<a class="headerlink" href="#sous-linux-lftp" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Installer lftp:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install lftp <span class="c"># sous debian ou ubuntu. Remplacer par l&#39;équivalent</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="onglet-ftp-les-informations-de-connexion">
+<h2>Onglet FTP : Les informations de connexion<a class="headerlink" href="#onglet-ftp-les-informations-de-connexion" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Hôte</strong> : l&#8217;hôte FTP, correspondant au serveur sur lequel Qgis server et Lizmap Web sont installés (adresse IP ou nom de domaine)</li>
+<li><strong>Port</strong> : le port FTP, 21 par défaut</li>
+<li><strong>Utilisateur</strong> = l&#8217;utilisateur FTP</li>
+<li><strong>Mot de passe</strong> = le mot de passe FTP</li>
+<li><strong>Répertoire distant</strong> = chemin du répertoire dans lequel les projets Qgis sont stockés sur le serveur, relativement à la racine de votre accès FTP. Par exemple : /qgis/public/</li>
+<li><strong>Répertoire local</strong> : rappel du chemin complet vers le projet QGIS</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Attention à bien vérifier avec l&#8217;administrateur du serveur sur lequel est installé Lizmap avant de faire vos tests !</p>
+</div>
+</div>
+<div class="section" id="onglet-ftp-utilisation-sous-windows">
+<h2>Onglet FTP : utilisation sous Windows<a class="headerlink" href="#onglet-ftp-utilisation-sous-windows" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="prealable">
+<h3>Préalable<a class="headerlink" href="#prealable" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Le logiciel Winscp doit être installé et son chemin ajouté dans le plugin.</li>
+<li><strong>Connexion FTP sécurisée</strong> : WinSCP doit être lancé une première fois pour se connecter au serveur</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Lancer WinSCP.exe et entrer les informations de connexion. Choisir <em>TLS Explicit Encryption</em></li>
+<li>Accepter le certificat via la fenêtre suivante en cliquant sur &#8220;YES&#8221; (ou &#8220;OUI)</li>
+<li>Vérifier qu&#8217;un fichier WinSCP.ini a bien été créé dans le répertoire d&#8217;installation de WinSCP</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>Lancer le plugin Lizmap</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Voir avec l&#8217;administrateur du serveur Lizmap pour savoir s&#8217;il faut utiliser une connexion sécurisée ou non pour se connecter à l&#8217;espace FTP qui vous a été aloué sur le serveur.</p>
+</div>
+</div>
+<div class="section" id="winscp-exe-parametres-de-connexion">
+<h3>WinSCP.exe : paramètres de connexion<a class="headerlink" href="#winscp-exe-parametres-de-connexion" title="Permalink to this headline">¶</a></h3>
+<p>Voici la fenêtre de configuration de la connexion à un serveur FTP</p>
+<img alt="../../_images/interface-winscp-exe.png" class="align-center" src="../../_images/interface-winscp-exe.png" />
+</div>
+<div class="section" id="winscp-exe-accepter-le-certificat">
+<h3>WinSCP.exe : accepter le certificat<a class="headerlink" href="#winscp-exe-accepter-le-certificat" title="Permalink to this headline">¶</a></h3>
+<p>Voici le message qui apparaît lorsqu&#8217;on se connecte la première fois à un serveur sécurisé via SSL. Il faut accepter en cliquant sur Yes</p>
+<img alt="../../_images/interface-winscp-ssl.png" class="align-center" src="../../_images/interface-winscp-ssl.png" />
+</div>
+<div class="section" id="options-windows-liees-a-winscp">
+<h3>Options Windows liées à WinSCP<a class="headerlink" href="#options-windows-liees-a-winscp" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Session WinSCP</strong> Si vous avez ouvert l&#8217;outil WinSCP.exe et enregistré une configuration avec un nom de session, vous pouvez utiliser ici directement le nom de session. Dans ce cas, vous n&#8217;avez pas besoin de rentrer les informations : <em>hôte, port, utilisateur et mot de passe</em>. Par contre il faut toujours renseigner le <em>répertoire distant</em></li>
+<li><strong>Critère de synchronisation</strong> WinSCP peut utiliser soit la date d&#8217;enregistrement des fichiers, soit leur taille pour savoir quels fichiers doivent être synchronisés sur le serveur. Vous pouvez choisir entre:<ul>
+<li><em>size</em> : les fichiers sont comparés par rapport à leur taille. Si la taille a changé entre 2 synchronisations, alors le fichier sur le serveur sera écrasé.</li>
+<li><em>time</em> : si le fichier est plus récent en local que sur le serveur, alors le fichier du serveur sera écrasé par la version locale.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="onglet-ftp-lancer-la-synchronisation">
+<h2>Onglet FTP : lancer la synchronisation<a class="headerlink" href="#onglet-ftp-lancer-la-synchronisation" title="Permalink to this headline">¶</a></h2>
+<p>Principe : <strong>la synchronisation se faire en mode mirroir pour que le serveur soit une copie exacte du répertoire local</strong>:</p>
+<ul class="simple">
+<li>les fichiers qui n&#8217;existent pas sur le serveur sont <strong>créés</strong></li>
+<li>les fichiers qui ont été supprimés en local sont <strong>supprimés sur le serveur</strong></li>
+<li>les fichiers qui ont une date plus récente en local sont <strong>ré-envoyés sur le serveur</strong></li>
+</ul>
+<p><strong>BIEN VÉRIFIER LES INFORMATIONS !!!</strong>, puis cliquer sur <strong>Sauvegarder et Synchroniser</strong>. Une fenêtre rappelle les répertoires concernés.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">ATTENTION : Si vous changez de projet et voulez changer de répertoire Lizmap sur le serveur, pensez à modifier le répertoire distant</p>
+</div>
+</div>
+<div class="section" id="onglet-log-suivi-de-la-synchronisation">
+<h2>Onglet Log : suivi de la synchronisation<a class="headerlink" href="#onglet-log-suivi-de-la-synchronisation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="contenu-du-log">
+<h3>Contenu du log<a class="headerlink" href="#contenu-du-log" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>un <em>rappel des informations principales</em> entrées via le plugin Lizmap</li>
+<li>la <em>liste des étapes</em> de synchronisation en temps réel</li>
+<li>les <em>erreurs éventuelles</em> lors du lancement ou du déroulement de la synchronisation</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Il peut être intéressant d&#8217;envoyer le contenu du log à l&#8217;administrateur du serveur Lizmap si vous en cas de problème. Cela peut aider au débogage.</p>
+</div>
+</div>
+<div class="section" id="les-boutons-d-action">
+<h3>Les boutons d&#8217;action<a class="headerlink" href="#les-boutons-d-action" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Annuler la synchro</strong> : Il est possible d&#8217;arrêter une synchronisation en cours de travail en cliquant sur ce bouton</li>
+<li><strong>Effacer le log</strong> Ce bouton permet de supprimer le contenu du log</li>
+</ul>
+</div>
+</div>
+<div class="section" id="utilisation-de-clients-ftp-externes">
+<h2>Utilisation de clients FTP externes<a class="headerlink" href="#utilisation-de-clients-ftp-externes" title="Permalink to this headline">¶</a></h2>
+<p>Il est tout à fait possible d&#8217;utiliser d&#8217;autres clients FTP pour synchroniser le répertoire de travail avec le répertoire Lizmap du serveur.</p>
+<ul class="simple">
+<li><em>Filezilla</em> : mode Chiffrement = Connexion FTP explicite sur TLS</li>
+<li><em>FireFTP</em> : onglet Connexion, Sécurité = Auth TLS (Best)</li>
+</ul>
+<p>Vous pouvez aussi utiliser ces outils pour faire des modifications manuelles sur le répertoire distant:</p>
+<ul class="simple">
+<li><strong>faire un backup</strong></li>
+<li><strong>supprimer du contenu</strong></li>
+<li><strong>écraser les fichiers manuellement</strong> : projet QGIS (.qgs) et configuration Lizmap (.qgs.cfg)</li>
+</ul>
+<p>Enfin, comme expliqué au début de ce chapitre, n&#8217;importe quel outil de synchronisation peut être utilisé, mais il faut alors bien maîtriser les choses et avoir un accès à la configuration du serveur Lizmap</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../features/index.html" title="Fonctionnalités avancées de Lizmap"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tools-tab.html" title="Outils - Configurer les outils à afficher dans le client WEB"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>
+          <li><a href="index.html" >Interface - Les onglets</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 3liz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

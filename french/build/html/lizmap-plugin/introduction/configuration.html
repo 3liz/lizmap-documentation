@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configurer un projet QGIS pour Lizmap &mdash; Lizmap 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Introduction" href="index.html" />
+    <link rel="next" title="Interface - Les onglets" href="../interface/index.html" />
+    <link rel="prev" title="Installation du plugin Lizmap" href="installation.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../interface/index.html" title="Interface - Les onglets"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="Installation du plugin Lizmap"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Introduction</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configurer un projet QGIS pour Lizmap</a><ul>
+<li><a class="reference internal" href="#creer-un-projet-qgis-vierge">Créer un projet QGIS vierge</a></li>
+<li><a class="reference internal" href="#configuration-des-proprietes-du-projet">Configuration des propriétés du projet</a><ul>
+<li><a class="reference internal" href="#systeme-de-coordonnees-de-reference">Système de Coordonnées de Référence</a></li>
+<li><a class="reference internal" href="#serveur-ows">Serveur OWS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ajouter-des-couches-vecteur-et-raster-au-projet">Ajouter des couches vecteur et raster au projet</a></li>
+<li><a class="reference internal" href="#organiser-et-manipuler-les-couches-dans-la-legende">Organiser et manipuler les couches dans la légende</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="installation.html"
+                        title="previous chapter">Installation du plugin Lizmap</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../interface/index.html"
+                        title="next chapter">Interface - Les onglets</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/lizmap-plugin/introduction/configuration.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="configurer-un-projet-qgis-pour-lizmap">
+<h1>Configurer un projet QGIS pour Lizmap<a class="headerlink" href="#configurer-un-projet-qgis-pour-lizmap" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="creer-un-projet-qgis-vierge">
+<h2>Créer un projet QGIS vierge<a class="headerlink" href="#creer-un-projet-qgis-vierge" title="Permalink to this headline">¶</a></h2>
+<p>Ouvrir le logiciel QGIS, puis créer un projet vierge</p>
+<ul class="simple">
+<li>C&#8217;est simple, <em>il suffit d&#8217;enregistrer</em></li>
+<li>Enregistrer le projet dans votre répertoire de travail</li>
+<li>1ère étape avant toute chose : <em>configurer le projet</em></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Menu <em>Préférences &gt; Propriétés du projet</em> OU CTRL+MAJ+P</li>
+<li>Vérifier que le projet est bien en relatif</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="configuration-des-proprietes-du-projet">
+<h2>Configuration des propriétés du projet<a class="headerlink" href="#configuration-des-proprietes-du-projet" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="systeme-de-coordonnees-de-reference">
+<h3>Système de Coordonnées de Référence<a class="headerlink" href="#systeme-de-coordonnees-de-reference" title="Permalink to this headline">¶</a></h3>
+<p>A faire</p>
+<ul class="simple">
+<li>Définir le SCR du projet : par exemple le CC43</li>
+<li>Activer <em>la reprojection à la volée</em>. QGIS sait reprojeter les raster et les vecteurs</li>
+</ul>
+</div>
+<div class="section" id="serveur-ows">
+<h3>Serveur OWS<a class="headerlink" href="#serveur-ows" title="Permalink to this headline">¶</a></h3>
+<p>A faire</p>
+<ul class="simple">
+<li>Remplir les métadonnées textuelles: titre,</li>
+<li>Configurer l&#8217;emprise de la carte :</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>il faudra y revenir une fois qu&#8217;on aura ajouter les couches</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>Ajouter des restrictions de projections si besoin pour les fonds externes</li>
+</ul>
+</div>
+</div>
+<div class="section" id="ajouter-des-couches-vecteur-et-raster-au-projet">
+<h2>Ajouter des couches vecteur et raster au projet<a class="headerlink" href="#ajouter-des-couches-vecteur-et-raster-au-projet" title="Permalink to this headline">¶</a></h2>
+<p>Plusieurs méthodes :</p>
+<ul class="simple">
+<li>Par le menu : <em>Couche &gt; Ajouter une couche...</em></li>
+<li>Par la fenêtre <em>Parcourir</em></li>
+<li>Par glisser/déposer depuis l&#8217;explorateur de fichiers</li>
+<li>En ouvrant un fichier depuis l&#8217;explorateur</li>
+</ul>
+<dl class="docutils">
+<dt>Info</dt>
+<dd>La fenêtre parcourir offre un accès immédiat et permet d&#8217;ouvrir plusieurs couches en une seule fois.</dd>
+</dl>
+</div>
+<div class="section" id="organiser-et-manipuler-les-couches-dans-la-legende">
+<h2>Organiser et manipuler les couches dans la légende<a class="headerlink" href="#organiser-et-manipuler-les-couches-dans-la-legende" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Les <em>groupes</em> : un clic droit dans la zone blanche de la légende: <em>Ajouter un nouveau groupe</em></li>
+<li>On peut <em>déplacer</em> les couches et les groupes via <em>glisser-déplacer</em>, renommer avec F2</li>
+<li><em>Ordre de rendu</em> - 2 modes proposés<ul>
+<li><em>l&#8217;ordre de la légende</em> : les couches du dessus sont rendues au dessus des autres.</li>
+<li>en spécifiant <em>un ordre des couches</em> : Menu <em>Vue &gt; Panneaux &gt; Ordre des couches</em></li>
+</ul>
+</li>
+</ul>
+<p><em>Lizmap sait gérer les 2 types de rendu</em></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../interface/index.html" title="Interface - Les onglets"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="Installation du plugin Lizmap"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>
+          <li><a href="index.html" >Introduction</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 3liz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

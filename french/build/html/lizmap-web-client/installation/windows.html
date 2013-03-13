@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation de Lizmap sous Windows &mdash; Lizmap 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Installation de Lizmap" href="index.html" />
+    <link rel="next" title="Administration de Lizmap" href="../administration/index.html" />
+    <link rel="prev" title="Installation de Lizmap sous Linux Debian ou Ubuntu" href="linux.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../administration/index.html" title="Administration de Lizmap"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="linux.html" title="Installation de Lizmap sous Linux Debian ou Ubuntu"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Lizmap Web Client</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Installation de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installation de Lizmap sous Windows</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#ajouter-le-support-spatiatlite-au-php">Ajouter le support spatiatlite au PHP</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="linux.html"
+                        title="previous chapter">Installation de Lizmap sous Linux Debian ou Ubuntu</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../administration/index.html"
+                        title="next chapter">Administration de Lizmap</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/lizmap-web-client/installation/windows.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="installation-de-lizmap-sous-windows">
+<h1>Installation de Lizmap sous Windows<a class="headerlink" href="#installation-de-lizmap-sous-windows" title="Permalink to this headline">¶</a></h1>
+<p>Cette documentation présente le déroulement de l&#8217;installation de Lizmap Web Client sur un environnement  Windows 7. Les autres versions de Windows ne devraient pas poser de problème. Afin de faciliter l&#8217;installation, nous utilisons le logiciel OSGeo4W, qui permet d&#8217;installer l&#8217;ensemble des composants nécessaires de manière centralisée.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Dans ce document, nous utilisons la version 2.7.0 de Lizmap. Veuillez à adapter en fonction de la version que vous souhaitez installer (la dernière est recommandée)</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Télécharger OSGeo4W sur la page de téléchargement de QGIS</li>
+</ol>
+<p><a class="reference external" href="http://hub.qgis.org/projects/quantum-gis/wiki/DownloadFr#Installateur-R%C3%A9seau-OSGeo4W">http://hub.qgis.org/projects/quantum-gis/wiki/DownloadFr#Installateur-R%C3%A9seau-OSGeo4W</a></p>
+<ol class="arabic simple" start="2">
+<li>Lancer l&#8217;installateur OSGeo4W et choisir l&#8217;installation avancée</li>
+</ol>
+<img alt="../../_images/installation-osgeo4w-01.jpg" class="align-center" src="../../_images/installation-osgeo4w-01.jpg" />
+<ol class="arabic simple" start="3">
+<li>Utiliser l&#8217;installation par internet</li>
+</ol>
+<img alt="../../_images/installation-osgeo4w-02.jpg" class="align-center" src="../../_images/installation-osgeo4w-02.jpg" />
+<ol class="arabic simple" start="4">
+<li>Sélectionner la racine pour l&#8217;installation des éléments d&#8217;OSGeo4W et préférer l&#8217;option d&#8217;accessibilité à tous les utilisateurs</li>
+</ol>
+<img alt="../../_images/installation-osgeo4w-03.jpg" class="align-center" src="../../_images/installation-osgeo4w-03.jpg" />
+<ol class="arabic simple" start="5">
+<li>Sélectionner la racine des paquets locaux</li>
+</ol>
+<img alt="../../_images/installation-osgeo4w-04.jpg" class="align-center" src="../../_images/installation-osgeo4w-04.jpg" />
+<ol class="arabic simple" start="6">
+<li>Préciser le type de connexion internet (via un proxy ou non)</li>
+</ol>
+<img alt="../../_images/installation-osgeo4w-05.jpg" class="align-center" src="../../_images/installation-osgeo4w-05.jpg" />
+<ol class="arabic simple" start="7">
+<li>Sélectionner dans &#8216;Desktop&#8217; le paquet &#8216;QGIS-full&#8217;</li>
+</ol>
+<img alt="../../_images/installation-osgeo4w-06.jpg" class="align-center" src="../../_images/installation-osgeo4w-06.jpg" />
+<ol class="arabic simple" start="8">
+<li>Sélectionner dans &#8216;Web&#8217; le paquet &#8216;QGIS-server&#8217;</li>
+</ol>
+<img alt="../../_images/installation-osgeo4w-07.jpg" class="align-center" src="../../_images/installation-osgeo4w-07.jpg" />
+<ol class="arabic simple" start="9">
+<li>Sélectioner dans &#8216;Lib&#8217; le paquet &#8216;fcgi&#8217;</li>
+</ol>
+<img alt="../../_images/installation-osgeo4w-08.jpg" class="align-center" src="../../_images/installation-osgeo4w-08.jpg" />
+<ol class="arabic simple" start="10">
+<li>Lancer et terminer l&#8217;installation</li>
+</ol>
+<p>A cette étape tout ce qui est nécessaire à LizMap est installé sur votre machine.
+Les étapes suivantes consistent à configurer le serveur, installer LizMap et de configurer LizMap.</p>
+<ol class="arabic simple" start="11">
+<li>Vérification d&#8217;Apache</li>
+</ol>
+<p>Afin de vérifier que le serveur est bien installé ouvrir dans le navigateur l&#8217;adresse <a class="reference external" href="http://localhost">http://localhost</a></p>
+<p>Si rien ne s&#8217;affiche c&#8217;est que l&#8217;installation n&#8217;a pas réussi.</p>
+<ol class="arabic simple" start="12">
+<li>Vérification de PHP</li>
+</ol>
+<p>Cliquer sur le lien &#8216;phpinfo&#8217; de la page d&#8217;accueil du serveur apache d&#8217;OSGeo4W. Cette page permet de vérifier la configuration de votre serveur. Vous devriez y trouver des informations sur cgi-fcgi, PDO et PDO_sqlite mais pas sur CURL ni GD dont dépend LizMap.</p>
+<img alt="../../_images/installation-osgeo4w-09.jpg" class="align-center" src="../../_images/installation-osgeo4w-09.jpg" />
+<img alt="../../_images/installation-osgeo4w-10.jpg" class="align-center" src="../../_images/installation-osgeo4w-10.jpg" />
+<ol class="arabic simple" start="13">
+<li>Activer CURL et GD2</li>
+</ol>
+<p>Ouvrir le fichier C:OSGeo4WbinPHP.ini et dé-commenter l&#8217;extension curl et gd2</p>
+<img alt="../../_images/installation-osgeo4w-11.jpg" class="align-center" src="../../_images/installation-osgeo4w-11.jpg" />
+<ol class="arabic simple" start="14">
+<li>Rédémarrer Apache</li>
+</ol>
+<p>La modification du fichier C:OSGeo4WbinPHP.ini afin d&#8217;activer CURL et GD dans PHP, oblige à redémarrer le serveur apache. Pour ce faire,</p>
+<ul>
+<li><p class="first">cliquer dans le menu principal de windows sur le moniteur apache &#8216;Tous les programmes &gt; OSGeo4W &gt; Apache &gt; OSGeo4W-Apache-Monitor&#8217;.</p>
+<img alt="../../_images/installation-osgeo4w-12.png" class="align-center" src="../../_images/installation-osgeo4w-12.png" />
+</li>
+<li><p class="first">Cliquer sur le moniteur apache qui se trouve parmi les icônes cachées de la barre des tâches (en bas à droite) et sur &#8216;Restart&#8217;.</p>
+<img alt="../../_images/installation-osgeo4w-13.png" class="align-center" src="../../_images/installation-osgeo4w-13.png" />
+</li>
+</ul>
+<ol class="arabic simple" start="16">
+<li>Vérfier CURL et GD</li>
+</ol>
+<p>Dans le navigateur web, recharger la page &#8216;phpinfo&#8217;. Vous devriez y trouver une section CURL et GD.</p>
+<img alt="../../_images/installation-osgeo4w-14.jpg" class="align-center" src="../../_images/installation-osgeo4w-14.jpg" />
+<ol class="arabic simple" start="17">
+<li>Télécharger LizMap</li>
+</ol>
+<p>Le code de Lizmap Web Client est libre et téléchargeable sur github. Pour télécharger la dernière version:</p>
+<ul class="simple">
+<li>allez sur <a class="reference external" href="https://github.com/3liz/lizmap-web-client/tags">https://github.com/3liz/lizmap-web-client/tags</a></li>
+<li>Cliquez sur le petit lien <em>zip</em> de la dernière version. Par exemple le lien suivant pour la 2.7.0 : <a class="reference external" href="https://github.com/3liz/lizmap-web-client/archive/2.7.0.zip">https://github.com/3liz/lizmap-web-client/archive/2.7.0.zip</a></li>
+</ul>
+<ol class="arabic simple" start="18">
+<li>Décompresser LizMap dans &#8216;C:OSGeo4Wapachehtdocslizmap&#8217;</li>
+</ol>
+<p>Vous devez maintenant avoir un dossier &#8216;C:OSGeo4Wapachehtdocslizmaplizmap-web-client-2.7.0&#8217;</p>
+<ol class="arabic simple" start="19">
+<li>Test l&#8217;installation de Lizmap</li>
+</ol>
+<p>Tester si LizMap est bien installé en ouvrant dans le navigateur l&#8217;adresse <a class="reference external" href="http://localhost/lizmap/lizmap-web-client-2.7.0/lizmap/www">http://localhost/lizmap/lizmap-web-client-2.7.0/lizmap/www</a>. Vous devriez y voir s&#8217;afficher le projet &#8220;Montpellier&#8221; fourni avec LizMap et configurer pour être visible par tous. Pour pouvoir consulter les cartes, il va falloir configurer LizMap.</p>
+<ol class="arabic simple" start="20">
+<li>Interface d&#8217;administration</li>
+</ol>
+<p>Aller à l&#8217;adresse <a class="reference external" href="http://localhost/lizmap/lizmap-web-client-2.7.0/lizmap/www/admin.php">http://localhost/lizmap/lizmap-web-client-2.7.0/lizmap/www/admin.php</a> et se connecter avec le login / mot de passe : &#8216;admin/admin&#8217;.</p>
+<ol class="arabic simple" start="21">
+<li>Modifier l&#8217;URL de QGIS Server</li>
+</ol>
+<ul class="simple">
+<li>Cliquer sur &#8216;Configuration LizMap&#8217; puis sur modifier dans la section Services afin de préciser l&#8217;url de votre QGIS-Server.</li>
+<li>Remplacer l&#8217;url du serveur WMS par <a class="reference external" href="http://127.0.0.1/qgis/qgis_mapserv.fcgi.exe">http://127.0.0.1/qgis/qgis_mapserv.fcgi.exe</a> et enregistrer :</li>
+</ul>
+<img alt="../../_images/installation-osgeo4w-17.jpg" class="align-center" src="../../_images/installation-osgeo4w-17.jpg" />
+<ol class="arabic simple" start="23">
+<li>Vérification</li>
+</ol>
+<p>Afin de s&#8217;assurer que la configuration a bien réussi, cliquer sur &#8216;Liste des projets&#8217; en haut. Vous devriez avoir accès à deux cartes puisque vous êtes authentifié comme administrateur. Cliquer sur l&#8217;une des cartes. Si la configuration est bonne vous devriez visualiser la carte, et donc être en possession d&#8217;une version de LizMap prête pour vos cartes.</p>
+</div>
+<div class="section" id="ajouter-le-support-spatiatlite-au-php">
+<h2>Ajouter le support spatiatlite au PHP<a class="headerlink" href="#ajouter-le-support-spatiatlite-au-php" title="Permalink to this headline">¶</a></h2>
+<p>Pour pouvoir utiliser les annotations sur des couches spatiatlite, il faut ajouter l&#8217;extension spatialite dans PHP. Malheureusement, il faut une version de PHP au moins égale à la 5.3 pour le faire, et pour l&#8217;instant, l&#8217;installateur OSGeo4W ne propose que la 5.2.</p>
+<p><em>Il n&#8217;est donc pas possible pour l&#8217;instant sous Windows d&#8217;utiliser des couches Spatialite pour l&#8217;annotation.</em></p>
+<p>Lizmap Web Client teste si le support du spatialite est bien activé dans le PHP. S&#8217;il ne l&#8217;est pas, alors les couches Spatialite ne seront pas utilisables dans l&#8217;outil d&#8217;annotation. Vous pouvez toujours utiliser des données PostGreSQL à la place.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../administration/index.html" title="Administration de Lizmap"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="linux.html" title="Installation de Lizmap sous Linux Debian ou Ubuntu"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Lizmap Web Client</a> &raquo;</li>
+          <li><a href="index.html" >Installation de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 3liz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

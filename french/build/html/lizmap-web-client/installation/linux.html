@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation de Lizmap sous Linux Debian ou Ubuntu &mdash; Lizmap 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Installation de Lizmap" href="index.html" />
+    <link rel="next" title="Installation de Lizmap sous Windows" href="windows.html" />
+    <link rel="prev" title="Installation de Lizmap" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="windows.html" title="Installation de Lizmap sous Windows"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Installation de Lizmap"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Lizmap Web Client</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Installation de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installation de Lizmap sous Linux Debian ou Ubuntu</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#recuperer-les-librairies">Récupérer les librairies</a></li>
+<li><a class="reference internal" href="#recuperer-et-installer-lizmap-web-client">Récupérer et installer LizMap Web Client</a></li>
+<li><a class="reference internal" href="#donner-les-droits-adequats-aux-repertoires-et-fichiers">Donner les droits adéquats aux répertoires et fichiers</a></li>
+<li><a class="reference internal" href="#premier-test">Premier test</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configurer-le-serveur-avec-le-support-de-spatialite-dans-php">Configurer le serveur avec le support de Spatialite dans PHP</a><ul>
+<li><a class="reference internal" href="#activer-l-extension-spatialite">Activer l&#8217;extension Spatialite</a></li>
+<li><a class="reference internal" href="#donner-les-droits-adequats-au-repertoire-contenant-les-bases-de-donnees">Donner les droits adéquats au répertoire contenant les bases de données</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#montee-de-version">Montée de version</a><ul>
+<li><a class="reference internal" href="#sauvegarde-prealable">Sauvegarde préalable</a></li>
+<li><a class="reference internal" href="#copier-les-fichiers-sauvegardes-dans-le-dossier-de-la-nouvelle-version">Copier les fichiers sauvegardés dans le dossier de la nouvelle version</a></li>
+<li><a class="reference internal" href="#supprimer-les-fichiers-temporaires-de-jelix">Supprimer les fichiers temporaires de Jelix</a></li>
+<li><a class="reference internal" href="#redefinir-les-droits-sur-les-fichiers-de-l-application">Redéfinir les droits sur les fichiers de l&#8217;application</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Installation de Lizmap</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="windows.html"
+                        title="next chapter">Installation de Lizmap sous Windows</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/lizmap-web-client/installation/linux.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="installation-de-lizmap-sous-linux-debian-ou-ubuntu">
+<h1>Installation de Lizmap sous Linux Debian ou Ubuntu<a class="headerlink" href="#installation-de-lizmap-sous-linux-debian-ou-ubuntu" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Au préalable, vous devez avoir un serveur tournant avec Apache. Dans ce document, nous considérons que QGIS Server a aussi été installé correctement : <a class="reference external" href="http://hub.qgis.org/wiki/quantum-gis/QGIS_Server_Tutorial">http://hub.qgis.org/wiki/quantum-gis/QGIS_Server_Tutorial</a></p>
+<p>Cette page ne décrit pas comment sécuriser votre serveur Apache.</p>
+<div class="section" id="recuperer-les-librairies">
+<h3>Récupérer les librairies<a class="headerlink" href="#recuperer-les-librairies" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>sudo su <span class="c"># utile seulement si vous n&#39;êtes pas connecté en tant que root</span>
+apt-get update <span class="c"># mise à jour des paquets</span>
+apt-get install apache2 php5 curl php5-curl php5-sqlite php5-gd <span class="c"># installation de apache2, php, curl, gd et sqlite</span>
+service apache2 restart <span class="c"># redémarrage du serveur Apache</span>
+</pre></div>
+</div>
+<p>Aller au répertoire www par défaut d&#8217;Apache (à modifier selon vos besoins)</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/
+</pre></div>
+</div>
+</div>
+<div class="section" id="recuperer-et-installer-lizmap-web-client">
+<h3>Récupérer et installer LizMap Web Client<a class="headerlink" href="#recuperer-et-installer-lizmap-web-client" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># options</span>
+<span class="nv">MYAPP</span><span class="o">=</span>lizmap-web-client
+<span class="nv">VERSION</span><span class="o">=</span>2.7.0
+<span class="c"># récupération de l&#39;archive via wget</span>
+wget https://github.com/3liz/lizmap-web-client/archive/<span class="nv">$VERSION</span>.zip
+<span class="c"># on dézippze l&#39;archive</span>
+unzip <span class="nv">$VERSION</span>.zip
+<span class="c"># on supprime le zip</span>
+rm <span class="nv">$VERSION</span>.zip
+</pre></div>
+</div>
+</div>
+<div class="section" id="donner-les-droits-adequats-aux-repertoires-et-fichiers">
+<h3>Donner les droits adéquats aux répertoires et fichiers<a class="headerlink" href="#donner-les-droits-adequats-aux-repertoires-et-fichiers" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>
+chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
+chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
+</pre></div>
+</div>
+</div>
+<div class="section" id="premier-test">
+<h3>Premier test<a class="headerlink" href="#premier-test" title="Permalink to this headline">¶</a></h3>
+<p>Aller à l&#8217;accueil de Lizmap pour voir si l&#8217;installation a été correctement réalisée : <a class="reference external" href="http://localhost/lizmap-web-client-2.7.0/lizmap/www/">http://localhost/lizmap-web-client-2.7.0/lizmap/www/</a></p>
+</div>
+</div>
+<div class="section" id="configurer-le-serveur-avec-le-support-de-spatialite-dans-php">
+<h2>Configurer le serveur avec le support de Spatialite dans PHP<a class="headerlink" href="#configurer-le-serveur-avec-le-support-de-spatialite-dans-php" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="activer-l-extension-spatialite">
+<h3>Activer l&#8217;extension Spatialite<a class="headerlink" href="#activer-l-extension-spatialite" title="Permalink to this headline">¶</a></h3>
+<p>Pour pouvoir utiliser les annotations sur des couches spatiatlite, il faut ajouter l&#8217;extension spatialite dans PHP. Vous pouvez suivre les instructions suivantes pour le faire :
+<a class="reference external" href="http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html">http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html</a></p>
+<p>Lizmap Web Client teste si le support du spatialite est bien activé dans le php. S&#8217;il ne l&#8217;est pas, alors les couches spatialites ne seront pas utilisables dans l&#8217;outil d&#8217;annotation. Vous pouvez toujours utiliser des données PostGreSQL pour les annotations.</p>
+</div>
+<div class="section" id="donner-les-droits-adequats-au-repertoire-contenant-les-bases-de-donnees">
+<h3>Donner les droits adéquats au répertoire contenant les bases de données<a class="headerlink" href="#donner-les-droits-adequats-au-repertoire-contenant-les-bases-de-donnees" title="Permalink to this headline">¶</a></h3>
+<p>Pour que l&#8217;application Lizmap Web Client puisse modifier les données contenues dans les bases Spatialite, il faut s&#8217;assurer que <strong>l&#8217;utilisateur Apache (www-data) ait bien les droits en écriture sur le répertoire contenant chaque fichier spatialite</strong>.</p>
+<p>Par exemple, si un répertoire contient un projet QGIS, qui utilise une base de données Spatialite placée dans un répertoire <strong>bdd</strong> au même niveau que le projet QGIS:</p>
+<div class="highlight-bash"><div class="highlight"><pre>/un/chemin/vers/un_repertoire_lizmap
+|--- mon_projet.qgs
+|--- bdd
+   |--- mon_fichier_spatialite.sqlite
+</pre></div>
+</div>
+<p>Alors il faut donner les droits de cette manière:</p>
+<div class="highlight-bash"><div class="highlight"><pre>chown :www-data /un/chemin/vers/un_repertoire_lizmap/ -R
+chmod 775 /un/chemin/vers/un_repertoire_lizmap/ -R
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">c&#8217;est pourquoi, si vous souhaitez installer Lizmap pour offrir un accès à plusieurs utilisateurs, nous vous conseillons de leur dire de toujours créer un répertoire bdd au même niveau que les projets QGIS dans le répertoire Lizmap. Cela facilitera le travail de l&#8217;administrateur qui pourra modifier les droits de cet unique répertoire.</p>
+</div>
+</div>
+</div>
+<div class="section" id="montee-de-version">
+<h2>Montée de version<a class="headerlink" href="#montee-de-version" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sauvegarde-prealable">
+<h3>Sauvegarde préalable<a class="headerlink" href="#sauvegarde-prealable" title="Permalink to this headline">¶</a></h3>
+<p>Avant de mettre à jour, faites une sauvegarde des données de configuration : lizmap/var/jauth.db and lizmap/var/config/lizmapConfig.ini.php</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">MYAPP</span><span class="o">=</span>lizmap-web-client
+<span class="nv">OLDVERSION</span><span class="o">=</span>2.4.1
+<span class="c"># if you installation is 2.1.0 or less, use an empty OLDVERSION instead :</span>
+<span class="c"># OLDVERSION=</span>
+cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/lizmap/var/jauth.db /tmp/jauth.db <span class="c"># database containing groups and users</span>
+cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php <span class="c"># text configuration file with services and repositories</span>
+</pre></div>
+</div>
+<p>Puis faites une installation classique de la nouvelle version, ce qui crééra un nouveau dossier dans le répertoire /var/www/lizmap-web-client</p>
+</div>
+<div class="section" id="copier-les-fichiers-sauvegardes-dans-le-dossier-de-la-nouvelle-version">
+<h3>Copier les fichiers sauvegardés dans le dossier de la nouvelle version<a class="headerlink" href="#copier-les-fichiers-sauvegardes-dans-le-dossier-de-la-nouvelle-version" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$VERSION</span><span class="o">=</span>2.7.0
+cp /tmp/jauth.db /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/lizmap/var/jauth.db
+cp /tmp/lizmapConfig.ini.php /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/lizmap/var/config/lizmapConfig.ini.php
+</pre></div>
+</div>
+<p><strong>IMPORTANT</strong> Si vous montez de version depuis LizMap 2.3.0 ou inférieure jusqu&#8217;à la 2.4.0 ou supérieur, il faut aussi modifier la base de données sqlite de gestion des droits</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/
+sqlite3 lizmap/var/jauth.db &lt; lizmap/install/sql/upgrade_jacl2db_1.3_1.4.sql
+</pre></div>
+</div>
+</div>
+<div class="section" id="supprimer-les-fichiers-temporaires-de-jelix">
+<h3>Supprimer les fichiers temporaires de Jelix<a class="headerlink" href="#supprimer-les-fichiers-temporaires-de-jelix" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>rm -rf /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/temp/lizmap/*
+</pre></div>
+</div>
+</div>
+<div class="section" id="redefinir-les-droits-sur-les-fichiers-de-l-application">
+<h3>Redéfinir les droits sur les fichiers de l&#8217;application<a class="headerlink" href="#redefinir-les-droits-sur-les-fichiers-de-l-application" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>
+chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
+chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="windows.html" title="Installation de Lizmap sous Windows"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Installation de Lizmap"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Lizmap Web Client</a> &raquo;</li>
+          <li><a href="index.html" >Installation de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 3liz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

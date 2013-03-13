@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuration de Lizmap &mdash; Lizmap 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Administration de Lizmap" href="index.html" />
+    <link rel="next" title="Gestion du cache en tant qu’administrateur" href="cache.html" />
+    <link rel="prev" title="Gérer les groupes et les utilisateurs dans Lizmap" href="users-groups.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="cache.html" title="Gestion du cache en tant qu’administrateur"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="users-groups.html" title="Gérer les groupes et les utilisateurs dans Lizmap"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Lizmap Web Client</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Administration de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuration de Lizmap</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#les-services">Les services</a></li>
+<li><a class="reference internal" href="#les-repertoires">Les répertoires</a><ul>
+<li><a class="reference internal" href="#ajouter-un-repertoire">Ajouter un répertoire</a></li>
+<li><a class="reference internal" href="#definir-les-droits-pour-chaque-groupe">Définir les droits pour chaque groupe</a></li>
+<li><a class="reference internal" href="#modifier-un-repertoire">Modifier un répertoire</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="users-groups.html"
+                        title="previous chapter">Gérer les groupes et les utilisateurs dans Lizmap</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="cache.html"
+                        title="next chapter">Gestion du cache en tant qu&#8217;administrateur</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/lizmap-web-client/administration/lizmap-configuration.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="configuration-de-lizmap">
+<h1>Configuration de Lizmap<a class="headerlink" href="#configuration-de-lizmap" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Le menu <em>Configuration Lizmap</em> est divisée en 2 parties</p>
+<ul class="simple">
+<li>Les <em>Services</em> : la configuration générale de Lizmap Web Client - serveur, cache, etc.</li>
+<li>Les <em>Répertoires</em> : créer et configurer les répertoires Lizmap</li>
+</ul>
+<img alt="../../_images/administration-lizmap-configuration.png" class="align-center" src="../../_images/administration-lizmap-configuration.png" />
+</div>
+<div class="section" id="les-services">
+<h2>Les services<a class="headerlink" href="#les-services" title="Permalink to this headline">¶</a></h2>
+<p>Pour configurer les services, cliquer sur le bouton <em>Modifier</em> situé sous le récapitulatif</p>
+<ul class="simple">
+<li><em>URL du serveur WMS</em> : QGIS Server doit être installé sur le même ordinateur que Lizmap Web Client</li>
+<li><em>Type de stockage pour le cache</em></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><em>file</em>: Les tuiles mises en cache sont stockées dans un répertoire du serveur par couche</li>
+<li><em>sqlite</em>: Les tuiles sont enregistrées dans une base de données sqlite par couche</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><em>Répertoire racine du cache</em> : le dossier dans lequel est stocké le cache. Il doit être accessible en écriture par le serveur Apache</li>
+<li><em>Durée de vie du cache</em> : le temps en seconde pendant lequel chaque tuile est conservée. C&#8217;est une valeur par défaut pour les couches dont le temps n&#8217;a pas été configuré via le plugin</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Les tuiles du cache plus vieilles que ce temps sont automatiquement raffraîchies.</li>
+<li>La valeur 0 signigie que les tuiles n&#8217;expirent jamais</li>
+<li>Le temps d&#8217;expiration doit être adapté à l&#8217;évolution des données</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><em>Envoi des requêtes à QGIS Server avec</em> : 2 méthodes. <em>Php ou Curl</em> . Utiliser la première si curl n&#8217;est pas installé sur le serveur</li>
+<li><em>Mode de débogage</em> : enregistre certaines requêtes dans un fichier de log : <em>lizmap/var/log/messages.log</em></li>
+</ul>
+<img alt="../../_images/administration-modify-services.png" class="align-center" src="../../_images/administration-modify-services.png" />
+</div>
+<div class="section" id="les-repertoires">
+<h2>Les répertoires<a class="headerlink" href="#les-repertoires" title="Permalink to this headline">¶</a></h2>
+<p>Pour chaque répertoire Lizmap sont listés</p>
+<ul class="simple">
+<li><em>Les informations principales</em> : nom (label) et chemin (path)</li>
+<li><em>La liste des droits</em> avec les groupes concernés</li>
+<li><em>Des boutons d&#8217;action</em> :<ul>
+<li><em>voir</em> : affiche la page qui liste les cartes de ce répertoire</li>
+<li><em>Modifier</em>: affiche le formulaire de modification du répertoire</li>
+<li><em>Supprimer</em> : permet de supprimer le répertoire</li>
+<li><em>Vider le cache</em> : permet de supprimer tout le cache de toutes les couches des projets de ce répertoire</li>
+</ul>
+</li>
+</ul>
+<p>On peut créer un nouveau répertoire avec le bouton <em>Ajouter un répertoire</em> situé tout en bas de la page</p>
+<img alt="../../_images/administration-repository-detail.png" class="align-center" src="../../_images/administration-repository-detail.png" />
+<div class="section" id="ajouter-un-repertoire">
+<h3>Ajouter un répertoire<a class="headerlink" href="#ajouter-un-repertoire" title="Permalink to this headline">¶</a></h3>
+<p>Pour créer un répertoire, il faut donner</p>
+<ul class="simple">
+<li><em>un identifiant</em>: un mot sans espaces, accents ni caractères spéciaux</li>
+<li><em>un label</em> : le nom qui sera affiché pour ce répertoire, accents et espaces autorisés</li>
+<li><em>un chemin (path)</em> : le chemin complet vers le dossier qui contient les projets QGIS et les données</li>
+</ul>
+</div>
+<div class="section" id="definir-les-droits-pour-chaque-groupe">
+<h3>Définir les droits pour chaque groupe<a class="headerlink" href="#definir-les-droits-pour-chaque-groupe" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><em>Voir les répertoires</em> :<ul>
+<li>tous les utilisateurs des groupes cochés pourront accéder aux cartes de ce répertoire</li>
+<li>le groupe <em>anonymous</em> représente les utilisateurs non enregistrés et permet de rendre les cartes publiques</li>
+</ul>
+</li>
+</ul>
+<img alt="../../_images/administration-add-repository.png" class="align-center" src="../../_images/administration-add-repository.png" />
+</div>
+<div class="section" id="modifier-un-repertoire">
+<h3>Modifier un répertoire<a class="headerlink" href="#modifier-un-repertoire" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/administration-modify-repository.png" class="align-center" src="../../_images/administration-modify-repository.png" />
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="cache.html" title="Gestion du cache en tant qu’administrateur"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="users-groups.html" title="Gérer les groupes et les utilisateurs dans Lizmap"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Lizmap Web Client</a> &raquo;</li>
+          <li><a href="index.html" >Administration de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 3liz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
