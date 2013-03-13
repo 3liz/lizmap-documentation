@@ -1,5 +1,5 @@
 ===============================================================
-Lizmap Web Client - Documentation utilisateur
+Le plugin Lizmap pour QGIS
 ===============================================================
 
 :Author: Michaël DOUCHIN - 3liz
@@ -7,18 +7,17 @@ Lizmap Web Client - Documentation utilisateur
 :Copyright: CC-BY-SA
 :Contact: info@3liz.com
 :organization: 3liz
-:abstract: Ce document a pour but d'aider l'utilisateur à apréhender et utiliser l'application Lizmap Web Client pour publier des cartes QGIS sur internet.
+:abstract: Ce document a pour but d'aider l'utilisateur à apréhender et utiliser le plugin Lizmap pour publier ses cartes QGIS vers l'application Lizmap Web Client
 
 .. meta::
-  :keywords: Lizmap, QGIS, webmapping, publication, web, client
+  :keywords: Lizmap, QGIS, webmapping, publication, plugin
 
 .. toctree::
   :maxdepth: 3
 	
   introduction/index
-  installation/index
-  administration/index
-  usage/index
+  interface/index
+  features/index
 
 
 Indices and tables
