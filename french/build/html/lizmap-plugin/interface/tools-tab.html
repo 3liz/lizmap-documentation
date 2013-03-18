@@ -199,8 +199,9 @@
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li><em>pensez à ajouter une clé primaire</em> : c&#8217;est indispensable</li>
-<li><em>pensez à ajouter un index spatial</em> : c&#8217;est important pour les performances</li>
+<li>pensez à ajouter une <strong>clé primaire</strong> : c&#8217;est indispensable</li>
+<li>cette colonne de clé primaire doit être de type <strong>&#8220;auto-incrémenté&#8221;</strong>. Par exemple <em>serial</em> pour PostGresql.</li>
+<li>pensez à ajouter un <strong>index spatial</strong> : c&#8217;est important pour les performances</li>
 <li><em>créer autant de champs dont vous avez besoin pour les attributs</em> : utiliser des noms de champ simples !</li>
 </ul>
 <p>Veuillez vous référer à la documentation de QGIS pour voir comment créer une couche spatiale dans une base de données PostGIS ou Spatialite: <a class="reference external" href="http://docs.qgis.org/html/fr/docs/user_manual/index.html">http://docs.qgis.org/html/fr/docs/user_manual/index.html</a></p>
@@ -213,7 +214,7 @@
 <li><em>Ouvrir les propriétés de la couche</em> en double-cliquant sur le nom de la couche dans la légende</li>
 <li>Aller à l&#8217;onglet <em>Champs</em></li>
 <li>Choisir l&#8217;<em>Outil d&#8217;édition</em> via la liste déroulante pour chacun des champs de la couche<ul>
-<li>Pour masquer un champ, choisir <em>Cachée</em>. L&#8217;utilisateur ne verra pas ce champ dans le formulaire. Aucun contenu n&#8217;y sera écrit</li>
+<li>Pour masquer un champ, choisir <em>Cachée</em>. L&#8217;utilisateur ne verra pas ce champ dans le formulaire. Aucun contenu n&#8217;y sera écrit. <em>Utilisez-le pour la clé primaire</em></li>
 <li>Pour afficher un champ en lecture seule, choisir <em>Immuable</em></li>
 <li>etc.</li>
 </ul>

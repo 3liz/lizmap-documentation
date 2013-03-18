@@ -1,5 +1,5 @@
 ===============================================================
-L'application Lizmap Web Client
+Lizmap Web Client application
 ===============================================================
 
 :Author: Michaël DOUCHIN - 3liz
@@ -7,7 +7,7 @@ L'application Lizmap Web Client
 :Copyright: CC-BY-SA
 :Contact: info@3liz.com
 :organization: 3liz
-:abstract: Ce document a pour but d'aider l'utilisateur à apréhender et utiliser l'application Lizmap Web Client pour publier des cartes QGIS sur internet.
+:abstract: This document is intended to help the user to understand and use the application Lizmap Web Client to publish QGIS maps on the internet.
 
 .. meta::
   :keywords: Lizmap, QGIS, webmapping, publication, web, client

@@ -102,8 +102,9 @@ Voici le détail des étapes:
 
 1. Si nécessaire, **créer une couche** dans votre base de données, du type de géométrie souhaité (point, ligne, polygone, etc.)
 
-  - *pensez à ajouter une clé primaire* : c'est indispensable
-  - *pensez à ajouter un index spatial* : c'est important pour les performances
+  - pensez à ajouter une **clé primaire** : c'est indispensable
+  - cette colonne de clé primaire doit être de type **"auto-incrémenté"**. Par exemple *serial* pour PostGresql.
+  - pensez à ajouter un **index spatial** : c'est important pour les performances
   - *créer autant de champs dont vous avez besoin pour les attributs* : utiliser des noms de champ simples !
 
   Veuillez vous référer à la documentation de QGIS pour voir comment créer une couche spatiale dans une base de données PostGIS ou Spatialite: http://docs.qgis.org/html/fr/docs/user_manual/index.html
@@ -114,7 +115,7 @@ Voici le détail des étapes:
   - Aller à l'onglet *Champs*
   - Choisir l'*Outil d'édition* via la liste déroulante pour chacun des champs de la couche
 
-    + Pour masquer un champ, choisir *Cachée*. L'utilisateur ne verra pas ce champ dans le formulaire. Aucun contenu n'y sera écrit
+    + Pour masquer un champ, choisir *Cachée*. L'utilisateur ne verra pas ce champ dans le formulaire. Aucun contenu n'y sera écrit. *Utilisez-le pour la clé primaire*
     + Pour afficher un champ en lecture seule, choisir *Immuable*
     + etc.
     
