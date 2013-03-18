@@ -44,7 +44,7 @@
           <a href="index.html" title="Installation de Lizmap"
              accesskey="P">previous</a> |</li>
         <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >Lizmap Web Client</a> &raquo;</li>
+          <li><a href="../index.html" >L&#8217;application Lizmap Web Client</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">Installation de Lizmap</a> &raquo;</li> 
       </ul>
     </div>
@@ -60,9 +60,13 @@
 <li><a class="reference internal" href="#premier-test">Premier test</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configurer-le-serveur-avec-le-support-de-spatialite-dans-php">Configurer le serveur avec le support de Spatialite dans PHP</a><ul>
+<li><a class="reference internal" href="#annotations-configurer-le-serveur-avec-le-support-des-bases-de-donnees">Annotations : Configurer le serveur avec le support des bases de données</a><ul>
+<li><a class="reference internal" href="#postgresql">PostGreSQL</a></li>
+<li><a class="reference internal" href="#spatialite">Spatialite</a><ul>
 <li><a class="reference internal" href="#activer-l-extension-spatialite">Activer l&#8217;extension Spatialite</a></li>
-<li><a class="reference internal" href="#donner-les-droits-adequats-au-repertoire-contenant-les-bases-de-donnees">Donner les droits adéquats au répertoire contenant les bases de données</a></li>
+<li><a class="reference internal" href="#donner-les-droits-adequats-au-repertoire-contenant-les-bases-de-donnees-spatialite">Donner les droits adéquats au répertoire contenant les bases de données Spatialite</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#montee-de-version">Montée de version</a><ul>
@@ -154,16 +158,30 @@ chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
 <p>Aller à l&#8217;accueil de Lizmap pour voir si l&#8217;installation a été correctement réalisée : <a class="reference external" href="http://localhost/lizmap-web-client-2.7.0/lizmap/www/">http://localhost/lizmap-web-client-2.7.0/lizmap/www/</a></p>
 </div>
 </div>
-<div class="section" id="configurer-le-serveur-avec-le-support-de-spatialite-dans-php">
-<h2>Configurer le serveur avec le support de Spatialite dans PHP<a class="headerlink" href="#configurer-le-serveur-avec-le-support-de-spatialite-dans-php" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="annotations-configurer-le-serveur-avec-le-support-des-bases-de-donnees">
+<h2>Annotations : Configurer le serveur avec le support des bases de données<a class="headerlink" href="#annotations-configurer-le-serveur-avec-le-support-des-bases-de-donnees" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="postgresql">
+<h3>PostGreSQL<a class="headerlink" href="#postgresql" title="Permalink to this headline">¶</a></h3>
+<p>Pour que les annotations de couches PostGIS dans Lizmap Web Client fonctionnent, il faut installer le support de PostGreSQL pour PHP.</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install php5-pgsql
+sudo service apache2 restart
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Pour les annotations, nous conseillons fortement d&#8217;utiliser une base de données PostGreSQL. Cela simplifie fortement l&#8217;installation et la récupération des données saisies par les utilisateurs.</p>
+</div>
+</div>
+<div class="section" id="spatialite">
+<h3>Spatialite<a class="headerlink" href="#spatialite" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="activer-l-extension-spatialite">
-<h3>Activer l&#8217;extension Spatialite<a class="headerlink" href="#activer-l-extension-spatialite" title="Permalink to this headline">¶</a></h3>
+<h4>Activer l&#8217;extension Spatialite<a class="headerlink" href="#activer-l-extension-spatialite" title="Permalink to this headline">¶</a></h4>
 <p>Pour pouvoir utiliser les annotations sur des couches spatiatlite, il faut ajouter l&#8217;extension spatialite dans PHP. Vous pouvez suivre les instructions suivantes pour le faire :
 <a class="reference external" href="http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html">http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html</a></p>
 <p>Lizmap Web Client teste si le support du spatialite est bien activé dans le php. S&#8217;il ne l&#8217;est pas, alors les couches spatialites ne seront pas utilisables dans l&#8217;outil d&#8217;annotation. Vous pouvez toujours utiliser des données PostGreSQL pour les annotations.</p>
 </div>
-<div class="section" id="donner-les-droits-adequats-au-repertoire-contenant-les-bases-de-donnees">
-<h3>Donner les droits adéquats au répertoire contenant les bases de données<a class="headerlink" href="#donner-les-droits-adequats-au-repertoire-contenant-les-bases-de-donnees" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="donner-les-droits-adequats-au-repertoire-contenant-les-bases-de-donnees-spatialite">
+<h4>Donner les droits adéquats au répertoire contenant les bases de données Spatialite<a class="headerlink" href="#donner-les-droits-adequats-au-repertoire-contenant-les-bases-de-donnees-spatialite" title="Permalink to this headline">¶</a></h4>
 <p>Pour que l&#8217;application Lizmap Web Client puisse modifier les données contenues dans les bases Spatialite, il faut s&#8217;assurer que <strong>l&#8217;utilisateur Apache (www-data) ait bien les droits en écriture sur le répertoire contenant chaque fichier spatialite</strong>.</p>
 <p>Par exemple, si un répertoire contient un projet QGIS, qui utilise une base de données Spatialite placée dans un répertoire <strong>bdd</strong> au même niveau que le projet QGIS:</p>
 <div class="highlight-bash"><div class="highlight"><pre>/un/chemin/vers/un_repertoire_lizmap
@@ -180,6 +198,7 @@ chmod 775 /un/chemin/vers/un_repertoire_lizmap/ -R
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">c&#8217;est pourquoi, si vous souhaitez installer Lizmap pour offrir un accès à plusieurs utilisateurs, nous vous conseillons de leur dire de toujours créer un répertoire bdd au même niveau que les projets QGIS dans le répertoire Lizmap. Cela facilitera le travail de l&#8217;administrateur qui pourra modifier les droits de cet unique répertoire.</p>
+</div>
 </div>
 </div>
 </div>
@@ -247,7 +266,7 @@ chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
           <a href="index.html" title="Installation de Lizmap"
              >previous</a> |</li>
         <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >Lizmap Web Client</a> &raquo;</li>
+          <li><a href="../index.html" >L&#8217;application Lizmap Web Client</a> &raquo;</li>
           <li><a href="index.html" >Installation de Lizmap</a> &raquo;</li> 
       </ul>
     </div>

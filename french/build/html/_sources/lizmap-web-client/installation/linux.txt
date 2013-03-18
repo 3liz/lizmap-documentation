@@ -59,19 +59,35 @@ Premier test
 Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.7.0/lizmap/www/
 
 
-Configurer le serveur avec le support de Spatialite dans PHP
-==============================================================
+Annotations : Configurer le serveur avec le support des bases de données
+=========================================================================
+
+PostGreSQL
+------------------------------
+
+Pour que les annotations de couches PostGIS dans Lizmap Web Client fonctionnent, il faut installer le support de PostGreSQL pour PHP.
+
+.. code-block:: bash
+
+   sudo apt-get install php5-pgsql
+   sudo service apache2 restart
+   
+.. note:: Pour les annotations, nous conseillons fortement d'utiliser une base de données PostGreSQL. Cela simplifie fortement l'installation et la récupération des données saisies par les utilisateurs.
+  
+
+Spatialite
+------------------------------
 
 Activer l'extension Spatialite
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Pour pouvoir utiliser les annotations sur des couches spatiatlite, il faut ajouter l'extension spatialite dans PHP. Vous pouvez suivre les instructions suivantes pour le faire :
 http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html
 
 Lizmap Web Client teste si le support du spatialite est bien activé dans le php. S'il ne l'est pas, alors les couches spatialites ne seront pas utilisables dans l'outil d'annotation. Vous pouvez toujours utiliser des données PostGreSQL pour les annotations.
 
-Donner les droits adéquats au répertoire contenant les bases de données
------------------------------------------------------------------------
+Donner les droits adéquats au répertoire contenant les bases de données Spatialite
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Pour que l'application Lizmap Web Client puisse modifier les données contenues dans les bases Spatialite, il faut s'assurer que **l'utilisateur Apache (www-data) ait bien les droits en écriture sur le répertoire contenant chaque fichier spatialite**.
 
