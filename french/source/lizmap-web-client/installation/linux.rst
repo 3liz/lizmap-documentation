@@ -34,7 +34,7 @@ Récupérer et installer LizMap Web Client
 
    # options
    MYAPP=lizmap-web-client
-   VERSION=2.7.0
+   VERSION=2.7.1
    # récupération de l'archive via wget
    wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
    # on dézippze l'archive
@@ -56,7 +56,7 @@ Donner les droits adéquats aux répertoires et fichiers
 Premier test
 --------------------------------------------------------------
 
-Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.7.0/lizmap/www/
+Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.7.1/lizmap/www/
 
 
 Annotations : Configurer le serveur avec le support des bases de données
@@ -135,7 +135,7 @@ Copier les fichiers sauvegardés dans le dossier de la nouvelle version
 
 .. code-block:: bash
 
-   $VERSION=2.7.0
+   $VERSION=2.7.1
    cp /tmp/jauth.db /var/www/$MYAPP-$VERSION/lizmap/var/jauth.db
    cp /tmp/lizmapConfig.ini.php /var/www/$MYAPP-$VERSION/lizmap/var/config/lizmapConfig.ini.php
 
