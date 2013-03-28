@@ -30,8 +30,12 @@ Aller au répertoire www par défaut d'Apache (à modifier selon vos besoins)
 Récupérer et installer LizMap Web Client
 --------------------------------------------------------------
 
+Depuis le fichier ZIP
+~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. code-block:: bash
 
+   cd /var/www/
    # options
    MYAPP=lizmap-web-client
    VERSION=2.7.0
@@ -41,6 +45,54 @@ Récupérer et installer LizMap Web Client
    unzip $VERSION.zip
    # on supprime le zip
    rm $VERSION.zip
+   
+Version de développement avec Github
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. note:: Attention, la version de développement est en constante évolution, et des bugs peuvent survenir. Ne pas utiliser en production
+
+* Pour installer
+
+.. code-block:: bash
+
+   cd /var/www/
+   MYAPP=lizmap-web-client
+   VERSION=master
+   # cloner la branche master
+   git clone https://github.com/3liz/lizmap-web-client.git $MYAPP-$VERSION
+   # aller dans le dépôt git
+   cd $MYAPP-$VERSION
+   # créer une branche personnelle pour les éventuelles modifications
+   git checkout -b mybranch
+   # Arrêter de suivre les fichiers de configuration
+   git update-index --assume-unchanged lizmap/var/jauth.db
+   git update-index --assume-unchanged lizmap/var/logs.db 
+   git update-index --assume-unchanged lizmap/var/config/lizmapConfig.ini.php 
+   git update-index --assume-unchanged lizmap/var/config/lizmapLogConfig.ini.php    
+
+   
+* Pour mettre à jour votre branche depuis le dépôt master
+
+.. code-block:: bash
+
+   
+   cd /var/www/$MYAPP-$VERSION
+   # vérifier que vous êtes bien sur la branche mybranch
+   git checkout mybranch
+   # Si vous avez des modifications, faire un commit
+   git status
+   git commit -am "Votre message de commit"
+   # Mettre à jour votre branche master
+   git checkout master && git fetch origin && git merge origin/master
+   # Appliquer sur votre branche, et gérer les éventuels conflits de merge
+   git checkout mybranch && git rebase master
+   # réappliquer les droits
+   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
+   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R   
+   
+.. note:: Il est toujours bon de faire une sauvegarde avant toute mise à jour.
+   
 
 
 Donner les droits adéquats aux répertoires et fichiers

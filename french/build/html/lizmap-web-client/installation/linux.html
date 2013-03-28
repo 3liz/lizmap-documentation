@@ -55,7 +55,11 @@
 <li><a class="reference internal" href="#">Installation de Lizmap sous Linux Debian ou Ubuntu</a><ul>
 <li><a class="reference internal" href="#installation">Installation</a><ul>
 <li><a class="reference internal" href="#recuperer-les-librairies">Récupérer les librairies</a></li>
-<li><a class="reference internal" href="#recuperer-et-installer-lizmap-web-client">Récupérer et installer LizMap Web Client</a></li>
+<li><a class="reference internal" href="#recuperer-et-installer-lizmap-web-client">Récupérer et installer LizMap Web Client</a><ul>
+<li><a class="reference internal" href="#depuis-le-fichier-zip">Depuis le fichier ZIP</a></li>
+<li><a class="reference internal" href="#version-de-developpement-avec-github">Version de développement avec Github</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#donner-les-droits-adequats-aux-repertoires-et-fichiers">Donner les droits adéquats aux répertoires et fichiers</a></li>
 <li><a class="reference internal" href="#premier-test">Premier test</a></li>
 </ul>
@@ -133,7 +137,10 @@ service apache2 restart <span class="c"># redémarrage du serveur Apache</span>
 </div>
 <div class="section" id="recuperer-et-installer-lizmap-web-client">
 <h3>Récupérer et installer LizMap Web Client<a class="headerlink" href="#recuperer-et-installer-lizmap-web-client" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># options</span>
+<div class="section" id="depuis-le-fichier-zip">
+<h4>Depuis le fichier ZIP<a class="headerlink" href="#depuis-le-fichier-zip" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/
+<span class="c"># options</span>
 <span class="nv">MYAPP</span><span class="o">=</span>lizmap-web-client
 <span class="nv">VERSION</span><span class="o">=</span>2.7.0
 <span class="c"># récupération de l&#39;archive via wget</span>
@@ -143,6 +150,55 @@ unzip <span class="nv">$VERSION</span>.zip
 <span class="c"># on supprime le zip</span>
 rm <span class="nv">$VERSION</span>.zip
 </pre></div>
+</div>
+</div>
+<div class="section" id="version-de-developpement-avec-github">
+<h4>Version de développement avec Github<a class="headerlink" href="#version-de-developpement-avec-github" title="Permalink to this headline">¶</a></h4>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Attention, la version de développement est en constante évolution, et des bugs peuvent survenir. Ne pas utiliser en production</p>
+</div>
+<ul class="simple">
+<li>Pour installer</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/
+<span class="nv">MYAPP</span><span class="o">=</span>lizmap-web-client
+<span class="nv">VERSION</span><span class="o">=</span>master
+<span class="c"># cloner la branche master</span>
+git clone https://github.com/3liz/lizmap-web-client.git <span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>
+<span class="c"># aller dans le dépôt git</span>
+<span class="nb">cd</span> <span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>
+<span class="c"># créer une branche personnelle pour les éventuelles modifications</span>
+git checkout -b mybranch
+<span class="c"># Arrêter de suivre les fichiers de configuration</span>
+git update-index --assume-unchanged lizmap/var/jauth.db
+git update-index --assume-unchanged lizmap/var/logs.db
+git update-index --assume-unchanged lizmap/var/config/lizmapConfig.ini.php
+git update-index --assume-unchanged lizmap/var/config/lizmapLogConfig.ini.php
+</pre></div>
+</div>
+<ul class="simple">
+<li>Pour mettre à jour votre branche depuis le dépôt master</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>
+<span class="c"># vérifier que vous êtes bien sur la branche mybranch</span>
+git checkout mybranch
+<span class="c"># Si vous avez des modifications, faire un commit</span>
+git status
+git commit -am <span class="s2">&quot;Votre message de commit&quot;</span>
+<span class="c"># Mettre à jour votre branche master</span>
+git checkout master <span class="o">&amp;&amp;</span> git fetch origin <span class="o">&amp;&amp;</span> git merge origin/master
+<span class="c"># Appliquer sur votre branche, et gérer les éventuels conflits de merge</span>
+git checkout mybranch <span class="o">&amp;&amp;</span> git rebase master
+<span class="c"># réappliquer les droits</span>
+chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
+chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Il est toujours bon de faire une sauvegarde avant toute mise à jour.</p>
+</div>
 </div>
 </div>
 <div class="section" id="donner-les-droits-adequats-aux-repertoires-et-fichiers">
