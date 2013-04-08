@@ -4,7 +4,7 @@ Installation de Lizmap sous Windows
 
 Cette documentation présente le déroulement de l'installation de Lizmap Web Client sur un environnement  Windows 7. Les autres versions de Windows ne devraient pas poser de problème. Afin de faciliter l'installation, nous utilisons le logiciel OSGeo4W, qui permet d'installer l'ensemble des composants nécessaires de manière centralisée.
 
-.. note:: Dans ce document, nous utilisons la version 2.7.1 de Lizmap. Veuillez à adapter en fonction de la version que vous souhaitez installer (la dernière est recommandée)
+.. note:: Dans ce document, nous utilisons la version 2.8.0 de Lizmap. Veuillez à adapter en fonction de la version que vous souhaitez installer (la dernière est recommandée)
 
 Installation
 ===============================================================
@@ -110,20 +110,20 @@ Dans le navigateur web, recharger la page 'phpinfo'. Vous devriez y trouver une 
 Le code de Lizmap Web Client est libre et téléchargeable sur github. Pour télécharger la dernière version:
 
 * allez sur https://github.com/3liz/lizmap-web-client/tags 
-* Cliquez sur le petit lien *zip* de la dernière version. Par exemple le lien suivant pour la 2.7.1 : https://github.com/3liz/lizmap-web-client/archive/2.7.1.zip
+* Cliquez sur le petit lien *zip* de la dernière version. Par exemple le lien suivant pour la 2.8.0 : https://github.com/3liz/lizmap-web-client/archive/2.8.0.zip
 
 
 18. Décompresser LizMap dans 'C:\OSGeo4W\apache\htdocs\lizmap'
 
-Vous devez maintenant avoir un dossier 'C:\OSGeo4W\apache\htdocs\lizmap\lizmap-web-client-2.7.1\' 
+Vous devez maintenant avoir un dossier 'C:\OSGeo4W\apache\htdocs\lizmap\lizmap-web-client-2.8.0\' 
 
 19. Test l'installation de Lizmap
 
-Tester si LizMap est bien installé en ouvrant dans le navigateur l'adresse http://localhost/lizmap/lizmap-web-client-2.7.1/lizmap/www. Vous devriez y voir s'afficher le projet "Montpellier" fourni avec LizMap et configurer pour être visible par tous. Pour pouvoir consulter les cartes, il va falloir configurer LizMap.
+Tester si LizMap est bien installé en ouvrant dans le navigateur l'adresse http://localhost/lizmap/lizmap-web-client-2.8.0/lizmap/www. Vous devriez y voir s'afficher le projet "Montpellier" fourni avec LizMap et configurer pour être visible par tous. Pour pouvoir consulter les cartes, il va falloir configurer LizMap.
 
 20. Interface d'administration
 
-Aller à l'adresse http://localhost/lizmap/lizmap-web-client-2.7.1/lizmap/www/admin.php et se connecter avec le login / mot de passe : 'admin/admin'.
+Aller à l'adresse http://localhost/lizmap/lizmap-web-client-2.8.0/lizmap/www/admin.php et se connecter avec le login / mot de passe : 'admin/admin'.
 
 21. Modifier l'URL de QGIS Server
 

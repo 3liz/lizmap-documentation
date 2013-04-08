@@ -27,7 +27,7 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
     <link rel="up" title="Administration de Lizmap" href="index.html" />
-    <link rel="next" title="Utilisation de Lizmap Web Client" href="../usage/index.html" />
+    <link rel="next" title="Gestion des logs dans Lizmap" href="logs.html" />
     <link rel="prev" title="Configuration de Lizmap" href="lizmap-configuration.html" /> 
   </head>
   <body>
@@ -38,7 +38,7 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../usage/index.html" title="Utilisation de Lizmap Web Client"
+          <a href="logs.html" title="Gestion des logs dans Lizmap"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="lizmap-configuration.html" title="Configuration de Lizmap"
@@ -50,12 +50,21 @@
     </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gestion du cache en tant qu&#8217;administrateur</a><ul>
+<li><a class="reference internal" href="#suppression-de-tout-le-cache-par-repertoire-lizmap">Suppression de tout le cache par répertoire Lizmap</a></li>
+<li><a class="reference internal" href="#supprimer-le-cache-couche-par-couche-pour-chaque-projet-lizmap">Supprimer le cache couche par couche pour chaque projet Lizmap</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="lizmap-configuration.html"
                         title="previous chapter">Configuration de Lizmap</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../usage/index.html"
-                        title="next chapter">Utilisation de Lizmap Web Client</a></p>
+  <p class="topless"><a href="logs.html"
+                        title="next chapter">Gestion des logs dans Lizmap</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../../_sources/lizmap-web-client/administration/cache.txt"
@@ -84,6 +93,15 @@
             
   <div class="section" id="gestion-du-cache-en-tant-qu-administrateur">
 <h1>Gestion du cache en tant qu&#8217;administrateur<a class="headerlink" href="#gestion-du-cache-en-tant-qu-administrateur" title="Permalink to this headline">¶</a></h1>
+<p>Lizmap Web Client permet de générer automatique un cache des tuiles par le serveur au fur et à mesure que les utilisateurs accèdent aux cartes. Dans certains cas, il est souhaitable de pouvoir supprimer le cache serveur, par exemple lorsque des modifications de style ont été faites pour certaines couches spatialies publiées par Lizmap Web Client. Pour cela, 2 solutions sont possibles</p>
+<div class="section" id="suppression-de-tout-le-cache-par-repertoire-lizmap">
+<h2>Suppression de tout le cache par répertoire Lizmap<a class="headerlink" href="#suppression-de-tout-le-cache-par-repertoire-lizmap" title="Permalink to this headline">¶</a></h2>
+<p>Dans l&#8217;interface d&#8217;administration, le menu <strong>Configuration Lizmap</strong> montre la liste des <em>répertoires Lizmap</em> configurés. Pour chacun des répertoire, l&#8217;administrateur peut supprimer le cache pour toutes les couches de tous les projets du répertoire en cliquant sur le bouton <strong>Vider le cache</strong>.</p>
+</div>
+<div class="section" id="supprimer-le-cache-couche-par-couche-pour-chaque-projet-lizmap">
+<h2>Supprimer le cache couche par couche pour chaque projet Lizmap<a class="headerlink" href="#supprimer-le-cache-couche-par-couche-pour-chaque-projet-lizmap" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque l&#8217;administrateur est connecté et qu&#8217;il consulte une carte Lizmap, une <strong>petite croix rouge</strong> est affichée à droite du nom de chaque couche qui est configurée pour être mise en cache serveur. Un clic sur cette croix permet, après validation, de supprimer le cache serveur uniquement pour cette couche de ce projet QGIS. Seul l&#8217;administrateur connecté voit ces croix rouges et a le droit de lancer la suppression.</p>
+</div>
 </div>
 
 
@@ -99,7 +117,7 @@
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../usage/index.html" title="Utilisation de Lizmap Web Client"
+          <a href="logs.html" title="Gestion des logs dans Lizmap"
              >next</a> |</li>
         <li class="right" >
           <a href="lizmap-configuration.html" title="Configuration de Lizmap"

@@ -75,7 +75,12 @@
 </li>
 <li><a class="reference internal" href="#montee-de-version">Montée de version</a><ul>
 <li><a class="reference internal" href="#sauvegarde-prealable">Sauvegarde préalable</a></li>
-<li><a class="reference internal" href="#copier-les-fichiers-sauvegardes-dans-le-dossier-de-la-nouvelle-version">Copier les fichiers sauvegardés dans le dossier de la nouvelle version</a></li>
+<li><a class="reference internal" href="#copier-les-fichiers-sauvegardes-dans-le-dossier-de-la-nouvelle-version">Copier les fichiers sauvegardés dans le dossier de la nouvelle version</a><ul>
+<li><a class="reference internal" href="#de-la-version-2-3-0-ou-inferieure-a-la-2-4-0-ou-superieure">De la version 2.3.0 ou inférieure à la 2.4.0 ou supérieure</a></li>
+<li><a class="reference internal" href="#de-la-version-2-6-ou-inferieure-a-la-version-2-7">De la version 2.6 ou inférieure à la version 2.7</a></li>
+<li><a class="reference internal" href="#de-la-version-2-7-a-la-version-2-8">De la version 2.7.*  à la version 2.8</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#supprimer-les-fichiers-temporaires-de-jelix">Supprimer les fichiers temporaires de Jelix</a></li>
 <li><a class="reference internal" href="#redefinir-les-droits-sur-les-fichiers-de-l-application">Redéfinir les droits sur les fichiers de l&#8217;application</a></li>
 </ul>
@@ -142,7 +147,7 @@ service apache2 restart <span class="c"># redémarrage du serveur Apache</span>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/
 <span class="c"># options</span>
 <span class="nv">MYAPP</span><span class="o">=</span>lizmap-web-client
-<span class="nv">VERSION</span><span class="o">=</span>2.7.1
+<span class="nv">VERSION</span><span class="o">=</span>2.8.0
 <span class="c"># récupération de l&#39;archive via wget</span>
 wget https://github.com/3liz/lizmap-web-client/archive/<span class="nv">$VERSION</span>.zip
 <span class="c"># on dézippze l&#39;archive</span>
@@ -170,11 +175,6 @@ git clone https://github.com/3liz/lizmap-web-client.git <span class="nv">$MYAPP<
 <span class="nb">cd</span> <span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>
 <span class="c"># créer une branche personnelle pour les éventuelles modifications</span>
 git checkout -b mybranch
-<span class="c"># Arrêter de suivre les fichiers de configuration</span>
-git update-index --assume-unchanged lizmap/var/jauth.db
-git update-index --assume-unchanged lizmap/var/logs.db
-git update-index --assume-unchanged lizmap/var/config/lizmapConfig.ini.php
-git update-index --assume-unchanged lizmap/var/config/lizmapLogConfig.ini.php
 </pre></div>
 </div>
 <ul class="simple">
@@ -211,7 +211,7 @@ chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
 </div>
 <div class="section" id="premier-test">
 <h3>Premier test<a class="headerlink" href="#premier-test" title="Permalink to this headline">¶</a></h3>
-<p>Aller à l&#8217;accueil de Lizmap pour voir si l&#8217;installation a été correctement réalisée : <a class="reference external" href="http://localhost/lizmap-web-client-2.7.1/lizmap/www/">http://localhost/lizmap-web-client-2.7.1/lizmap/www/</a></p>
+<p>Aller à l&#8217;accueil de Lizmap pour voir si l&#8217;installation a été correctement réalisée : <a class="reference external" href="http://localhost/lizmap-web-client-2.8.0/lizmap/www/">http://localhost/lizmap-web-client-2.8.0/lizmap/www/</a></p>
 </div>
 </div>
 <div class="section" id="annotations-configurer-le-serveur-avec-le-support-des-bases-de-donnees">
@@ -262,28 +262,53 @@ chmod 775 /un/chemin/vers/un_repertoire_lizmap/ -R
 <h2>Montée de version<a class="headerlink" href="#montee-de-version" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="sauvegarde-prealable">
 <h3>Sauvegarde préalable<a class="headerlink" href="#sauvegarde-prealable" title="Permalink to this headline">¶</a></h3>
-<p>Avant de mettre à jour, faites une sauvegarde des données de configuration : lizmap/var/jauth.db and lizmap/var/config/lizmapConfig.ini.php</p>
+<p>Avant de mettre à jour, faites une sauvegarde des données de configuration : lizmap/var/jauth.db and lizmap/var/config/lizmapConfig.ini.php et du fichier de log (à partir de la 2.8) lizmap/var/logs.db</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">MYAPP</span><span class="o">=</span>lizmap-web-client
-<span class="nv">OLDVERSION</span><span class="o">=</span>2.4.1
+<span class="nv">OLDVERSION</span><span class="o">=</span>2.7.2 <span class="c"># replace by the version number of your current lizmap installation</span>
 <span class="c"># if you installation is 2.1.0 or less, use an empty OLDVERSION instead :</span>
 <span class="c"># OLDVERSION=</span>
 cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/lizmap/var/jauth.db /tmp/jauth.db <span class="c"># database containing groups and users</span>
 cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php <span class="c"># text configuration file with services and repositories</span>
+cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/lizmap/var/logs.db /tmp/logs.db
 </pre></div>
 </div>
-<p>Puis faites une installation classique de la nouvelle version, ce qui crééra un nouveau dossier dans le répertoire /var/www/lizmap-web-client</p>
+<p>Puis faites une installation classique de la nouvelle version (voir ci-dessus), ce qui crééra un nouveau dossier dans le répertoire /var/www/</p>
 </div>
 <div class="section" id="copier-les-fichiers-sauvegardes-dans-le-dossier-de-la-nouvelle-version">
 <h3>Copier les fichiers sauvegardés dans le dossier de la nouvelle version<a class="headerlink" href="#copier-les-fichiers-sauvegardes-dans-le-dossier-de-la-nouvelle-version" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$VERSION</span><span class="o">=</span>2.7.1
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$VERSION</span><span class="o">=</span>2.8.0
 cp /tmp/jauth.db /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/lizmap/var/jauth.db
 cp /tmp/lizmapConfig.ini.php /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/lizmap/var/config/lizmapConfig.ini.php
+cp /tmp/logs.db /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/lizmap/var/logs.db
 </pre></div>
 </div>
-<p><strong>IMPORTANT</strong> Si vous montez de version depuis LizMap 2.3.0 ou inférieure jusqu&#8217;à la 2.4.0 ou supérieur, il faut aussi modifier la base de données sqlite de gestion des droits</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Pour certaines versions, il est aussi nécessaire de mettre à jour la base de données qui stocke les droits. Voir les points suivants pour plus de détail.</p>
+</div>
+<div class="section" id="de-la-version-2-3-0-ou-inferieure-a-la-2-4-0-ou-superieure">
+<h4>De la version 2.3.0 ou inférieure à la 2.4.0 ou supérieure<a class="headerlink" href="#de-la-version-2-3-0-ou-inferieure-a-la-2-4-0-ou-superieure" title="Permalink to this headline">¶</a></h4>
+<p>Les librairies Jelix (outil avec lequel est construit Lizmap Web Client) a été mis à jour. Il faut modifier la base de données sqlite de gestion des droits :</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/
 sqlite3 lizmap/var/jauth.db &lt; lizmap/install/sql/upgrade_jacl2db_1.3_1.4.sql
 </pre></div>
+</div>
+</div>
+<div class="section" id="de-la-version-2-6-ou-inferieure-a-la-version-2-7">
+<h4>De la version 2.6 ou inférieure à la version 2.7<a class="headerlink" href="#de-la-version-2-6-ou-inferieure-a-la-version-2-7" title="Permalink to this headline">¶</a></h4>
+<p>Le support des annotations a été ajouté à Lizmap, ainsi que la gestion des droits liée. Il faut donc modifier la base de données des droits pour mettre à niveau :</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/
+sqlite3 lizmap/var/jauth.db &lt; lizmap/install/sql/upgrade_jacl2db_lizmap_from_2.0_and_above_to_2.5.sql
+</pre></div>
+</div>
+</div>
+<div class="section" id="de-la-version-2-7-a-la-version-2-8">
+<h4>De la version 2.7.*  à la version 2.8<a class="headerlink" href="#de-la-version-2-7-a-la-version-2-8" title="Permalink to this headline">¶</a></h4>
+<p>L&#8217;outil d&#8217;édition a remplacé l&#8217;outil d&#8217;annotation et nous avons ajouté des champs pour décrire chaque utilisateur Lizmap. Il faut mettre à jour la base de donnée de gestion des droits:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/
+sqlite3 lizmap/var/jauth.db &lt; lizmap/install/sql/upgrade_jacl2db_2.7_2.8.sql
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="supprimer-les-fichiers-temporaires-de-jelix">

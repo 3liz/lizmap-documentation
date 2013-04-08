@@ -38,7 +38,7 @@ Depuis le fichier ZIP
    cd /var/www/
    # options
    MYAPP=lizmap-web-client
-   VERSION=2.7.1
+   VERSION=2.8.0
    # récupération de l'archive via wget
    wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
    # on dézippze l'archive
@@ -65,11 +65,6 @@ Version de développement avec Github
    cd $MYAPP-$VERSION
    # créer une branche personnelle pour les éventuelles modifications
    git checkout -b mybranch
-   # Arrêter de suivre les fichiers de configuration
-   git update-index --assume-unchanged lizmap/var/jauth.db
-   git update-index --assume-unchanged lizmap/var/logs.db 
-   git update-index --assume-unchanged lizmap/var/config/lizmapConfig.ini.php 
-   git update-index --assume-unchanged lizmap/var/config/lizmapLogConfig.ini.php    
 
    
 * Pour mettre à jour votre branche depuis le dépôt master
@@ -108,7 +103,7 @@ Donner les droits adéquats aux répertoires et fichiers
 Premier test
 --------------------------------------------------------------
 
-Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.7.1/lizmap/www/
+Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.8.0/lizmap/www/
 
 
 Annotations : Configurer le serveur avec le support des bases de données
@@ -167,19 +162,20 @@ Montée de version
 Sauvegarde préalable
 --------------------------------------------------------------
 
-Avant de mettre à jour, faites une sauvegarde des données de configuration : lizmap/var/jauth.db and lizmap/var/config/lizmapConfig.ini.php
+Avant de mettre à jour, faites une sauvegarde des données de configuration : lizmap/var/jauth.db and lizmap/var/config/lizmapConfig.ini.php et du fichier de log (à partir de la 2.8) lizmap/var/logs.db
 
 
 .. code-block:: bash
 
    MYAPP=lizmap-web-client
-   OLDVERSION=2.4.1
+   OLDVERSION=2.7.2 # replace by the version number of your current lizmap installation
    # if you installation is 2.1.0 or less, use an empty OLDVERSION instead : 
    # OLDVERSION=
    cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/jauth.db /tmp/jauth.db # database containing groups and users
    cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php # text configuration file with services and repositories
+   cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/logs.db /tmp/logs.db
 
-Puis faites une installation classique de la nouvelle version, ce qui crééra un nouveau dossier dans le répertoire /var/www/lizmap-web-client
+Puis faites une installation classique de la nouvelle version (voir ci-dessus), ce qui crééra un nouveau dossier dans le répertoire /var/www/
 
 
 Copier les fichiers sauvegardés dans le dossier de la nouvelle version
@@ -187,16 +183,43 @@ Copier les fichiers sauvegardés dans le dossier de la nouvelle version
 
 .. code-block:: bash
 
-   $VERSION=2.7.1
+   $VERSION=2.8.0
    cp /tmp/jauth.db /var/www/$MYAPP-$VERSION/lizmap/var/jauth.db
    cp /tmp/lizmapConfig.ini.php /var/www/$MYAPP-$VERSION/lizmap/var/config/lizmapConfig.ini.php
+   cp /tmp/logs.db /var/www/$MYAPP-$VERSION/lizmap/var/logs.db
+   
+.. note:: Pour certaines versions, il est aussi nécessaire de mettre à jour la base de données qui stocke les droits. Voir les points suivants pour plus de détail.
 
-**IMPORTANT** Si vous montez de version depuis LizMap 2.3.0 ou inférieure jusqu'à la 2.4.0 ou supérieur, il faut aussi modifier la base de données sqlite de gestion des droits
+De la version 2.3.0 ou inférieure à la 2.4.0 ou supérieure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Les librairies Jelix (outil avec lequel est construit Lizmap Web Client) a été mis à jour. Il faut modifier la base de données sqlite de gestion des droits :
 
 .. code-block:: bash
 
    cd /var/www/$MYAPP-$VERSION/
    sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_1.3_1.4.sql
+   
+De la version 2.6 ou inférieure à la version 2.7
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Le support des annotations a été ajouté à Lizmap, ainsi que la gestion des droits liée. Il faut donc modifier la base de données des droits pour mettre à niveau :
+
+.. code-block:: bash
+
+   cd /var/www/$MYAPP-$VERSION/
+   sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_lizmap_from_2.0_and_above_to_2.5.sql
+
+   
+De la version 2.7.*  à la version 2.8
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+L'outil d'édition a remplacé l'outil d'annotation et nous avons ajouté des champs pour décrire chaque utilisateur Lizmap. Il faut mettre à jour la base de donnée de gestion des droits:
+
+.. code-block:: bash
+
+   cd /var/www/$MYAPP-$VERSION/
+   sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_2.7_2.8.sql
 
 
 Supprimer les fichiers temporaires de Jelix

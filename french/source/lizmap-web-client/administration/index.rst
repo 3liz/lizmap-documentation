@@ -9,3 +9,4 @@ Administration de Lizmap
   users-groups
   lizmap-configuration
   cache
+  logs
