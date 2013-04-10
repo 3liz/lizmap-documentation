@@ -14,8 +14,8 @@ Pour ne pas afficher une ou plusieurs couches du projet QGIS dans la légende de
 Cas d'utilisation
 ===================
 
-Annotations
+Edition
 --------------
 
-.. note:: On peut utiliser cette possibilité pour rendre invisibles les couches utilisées dans l'outil d'annotation de Lizmap. Voir :ref:`lizmap_annotation`
+.. note:: On peut utiliser cette possibilité pour rendre invisibles les couches utilisées dans l'outil d'édition de Lizmap. Voir :ref:`lizmap_edition`
 

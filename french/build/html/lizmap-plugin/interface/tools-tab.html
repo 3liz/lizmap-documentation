@@ -63,15 +63,7 @@
 <li><a class="reference internal" href="#fonctionnement">Fonctionnement</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#couches-d-annotation">Couches d&#8217;annotation</a><ul>
-<li><a class="reference internal" href="#principe">Principe</a></li>
-<li><a class="reference internal" href="#deroulement-dans-lizmap-web-client">Déroulement dans Lizmap Web Client</a></li>
-<li><a class="reference internal" href="#exemples-d-utilisation">Exemples d&#8217;utilisation</a></li>
-<li><a class="reference internal" href="#configurer-les-annotations">Configurer les annotations</a></li>
-<li><a class="reference internal" href="#reutiliser-les-donnees-des-couches-d-annotation">Réutiliser les données des couches d&#8217;annotation</a></li>
-<li><a class="reference internal" href="#utilisation-du-cache">Utilisation du cache</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#edition-de-couches">Édition de couches</a></li>
 </ul>
 </li>
 </ul>
@@ -153,104 +145,9 @@
 </div>
 </div>
 </div>
-<div class="section" id="couches-d-annotation">
-<span id="lizmap-annotation"></span><h2>Couches d&#8217;annotation<a class="headerlink" href="#couches-d-annotation" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="principe">
-<h3>Principe<a class="headerlink" href="#principe" title="Permalink to this headline">¶</a></h3>
-<p>Lizmap permet aux utilisateurs en ligne <strong>d&#8217;ajouter du contenu</strong> à des couches <strong>Spatialite ou PostGreSQL</strong> du projet QGIS. Pour les couches d&#8217;annotations, l&#8217;utilisateur de l&#8217;application Web peut utiliser l&#8217;outil <strong>Annotation</strong> du menu pour numériser une géométrie et remplir les données attributaires liées.</p>
-<p>Le <strong>formulaire</strong> présenté à l&#8217;utilisateur pour renseigner la <strong>table attributaire</strong> prend en charge les <strong>Outils d&#8217;éditions</strong> proposés dans l&#8217;onglet <em>Champs</em> des <em>propriétés de la couche</em> vectorielle QGIS. On peut donc configurer une liste déroulante, masquer une colonne, la rendre non-éditable, utiliser une case à cocher, un champ texte, etc.</p>
-<p>De plus, Lizmap Web Client détecte automatiquement le type de colonne (entier, réel, chaîne de caractère, etc.) et ajoute les vérifications et les contrôles nécessaires sur les champs.</p>
-</div>
-<div class="section" id="deroulement-dans-lizmap-web-client">
-<h3>Déroulement dans Lizmap Web Client<a class="headerlink" href="#deroulement-dans-lizmap-web-client" title="Permalink to this headline">¶</a></h3>
-<p>Voici le déroulement d&#8217;un ajout d&#8217;élément à une couche d&#8217;annotation dans l&#8217;interface Web</p>
-<ul class="simple">
-<li>L&#8217;utilisateur sélectionne la couches dans laquelle ajouter un élément via le menu <em>Annotation</em>.</li>
-<li>Il dessine sur la carte pour numériser l&#8217;élement à ajouter.</li>
-<li>Il double-clique le dernier point pour finaliser la numérisation de la géométrie.</li>
-<li>Un formulaire est automatiquement affiché: l&#8217;utilisateur peut remplir les données attributaires via les champs texte, les listes déroulantes, etc.</li>
-<li>Il valide le formulaire.</li>
-<li>Lizmap contrôle les champs du formulaire. Si aucun problème n&#8217;est survenu, la géométrie et les données liées sont automatiquement ajoutée dans la table correspondant à la couche dans la base de données. Sinon le formulaire est affiché et les erreurs à corriger mises en valeur.</li>
-<li>La carte se raffraîchit pour montrer les nouvelles données.</li>
-</ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">On peut configurer jusqu&#8217;à 3 couches d&#8217;annotations: une par type de géométrie (point, ligne, polygone)</p>
-</div>
-</div>
-<div class="section" id="exemples-d-utilisation">
-<h3>Exemples d&#8217;utilisation<a class="headerlink" href="#exemples-d-utilisation" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><strong>Une commune</strong> souhaite permettre aux citoyens de recenser les problèmes visibles sur la voirie: poubelles non ramassées, lampadaires en panne, épaves à enlever. L&#8217;administrateur du projet QGIS crée une couche dédiée à ce recueil de données et affiche à tous la donnée.</li>
-<li><strong>Un bureau d&#8217;étude</strong> souhaite permettre aux partenaires d&#8217;un projet de remonter des remarques sur des zones du projet, mais ne veut pas que les utilisateurs voient les remarques des autres. Il crée une couche de type polygone dans sa base de données PostGreSQL, qu&#8217;il met dans un groupe caché ( voir <a class="reference internal" href="../features/hide-layers.html#hide-layers"><em>Masquer des couches du projet dans l&#8217;application Web</em></a> ).</li>
-</ul>
-</div>
-<div class="section" id="configurer-les-annotations">
-<h3>Configurer les annotations<a class="headerlink" href="#configurer-les-annotations" title="Permalink to this headline">¶</a></h3>
-<p>Pour pouvoir ajouter l&#8217;outil d&#8217;annotations dans Lizmap Web Client, il faut</p>
-<ul class="simple">
-<li><em>Au moins une couche vectorielle de type PostGis ou Spatialite</em> dans le projet QGIS</li>
-<li><em>Configurer les outils d&#8217;éditions pour cette couche.</em> Ce n&#8217;est pas obligatoire mais recommandé pour contrôler les données saisies par les utilisateurs.</li>
-<li><em>Ajouter la couche dans l&#8217;outil via le plugin</em></li>
-</ul>
-<p>Voici le détail des étapes:</p>
-<ol class="arabic simple">
-<li>Si nécessaire, <strong>créer une couche</strong> dans votre base de données, du type de géométrie souhaité (point, ligne, polygone, etc.)</li>
-</ol>
-<blockquote>
-<div><ul class="simple">
-<li>pensez à ajouter une <strong>clé primaire</strong> : c&#8217;est indispensable</li>
-<li>cette colonne de clé primaire doit être de type <strong>&#8220;auto-incrémenté&#8221;</strong>. Par exemple <em>serial</em> pour PostGresql.</li>
-<li>pensez à ajouter un <strong>index spatial</strong> : c&#8217;est important pour les performances</li>
-<li><em>créer autant de champs dont vous avez besoin pour les attributs</em> : utiliser des noms de champ simples !</li>
-</ul>
-<p>Veuillez vous référer à la documentation de QGIS pour voir comment créer une couche spatiale dans une base de données PostGIS ou Spatialite: <a class="reference external" href="http://docs.qgis.org/html/fr/docs/user_manual/index.html">http://docs.qgis.org/html/fr/docs/user_manual/index.html</a></p>
-</div></blockquote>
-<ol class="arabic simple" start="2">
-<li><strong>Configurer les outils d&#8217;édition</strong> pour les champs de votre couche</li>
-</ol>
-<blockquote>
-<div><ul class="simple">
-<li><em>Ouvrir les propriétés de la couche</em> en double-cliquant sur le nom de la couche dans la légende</li>
-<li>Aller à l&#8217;onglet <em>Champs</em></li>
-<li>Choisir l&#8217;<em>Outil d&#8217;édition</em> via la liste déroulante pour chacun des champs de la couche<ul>
-<li>Pour masquer un champ, choisir <em>Cachée</em>. L&#8217;utilisateur ne verra pas ce champ dans le formulaire. Aucun contenu n&#8217;y sera écrit. <em>Utilisez-le pour la clé primaire</em></li>
-<li>Pour afficher un champ en lecture seule, choisir <em>Immuable</em></li>
-<li>etc.</li>
-</ul>
-</li>
-</ul>
-</div></blockquote>
-<ol class="arabic simple" start="3">
-<li><strong>Activer l&#8217;outil d&#8217;annotation</strong> via la case à cocher du plugin Lizmap</li>
-<li><strong>Sélectionner la couche via une des 3 listes déroulantes du plugin</strong>. Vous pouvez donc utiliser jusqu&#8217;à 3 couches: une de type Point, une de type Ligne, une de type Polygone</li>
-</ol>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Tous les outils d&#8217;édition ne sont pas encore gérés par Lizmap Web Client. Seuls les outils suivants le sont: Edition de ligne, Classification, Plage, Liste de valeurs, Immuable, Cachée, Boite à cocher, Edition de texte, Calendrier. Si l&#8217;outil n&#8217;est pas géré, le formulaire web affichera un champ texte libre.</p>
-</div>
-</div>
-<div class="section" id="reutiliser-les-donnees-des-couches-d-annotation">
-<h3>Réutiliser les données des couches d&#8217;annotation<a class="headerlink" href="#reutiliser-les-donnees-des-couches-d-annotation" title="Permalink to this headline">¶</a></h3>
-<p>Les couches que vous avez sélectionnées pour l&#8217;outil d&#8217;annotation sont des couches comme les autres, ce qui implique:</p>
-<ul class="simple">
-<li><strong>Les styles et les étiquettes de QGIS s&#8217;appliquent sur ces couches.</strong> On peut donc créer des styles qui et des étiquettes qui dépendent d&#8217;une valeur d&#8217;une des colonnes de la couche.</li>
-<li>Si on souhaite proposer l&#8217;outil d&#8217;annotation, mais ne pas permettre aux utilisateurs de voir les données de la couche en ligne ( et donc les ajouts des autres utilisateurs) : <strong>on peut simplement masquer la ou les couches d&#8217;annotation</strong> en les mettant dans un répertoire <em>hidden</em>. Voir <a class="reference internal" href="../features/hide-layers.html#hide-layers"><em>Masquer des couches du projet dans l&#8217;application Web</em></a></li>
-<li><strong>Les couches sont imprimables</strong> si elles ne sont pas masquées.</li>
-<li><strong>Les données sont enregistrées dans une couche du projet</strong>. L&#8217;administrateur peut donc récupérer ces données et les utiliser par la suite.</li>
-</ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Pour bien centraliser les choses, nous conseillons d&#8217;utiliser une base de données PostGis pour stocker les données. Pour les couches Spatialite, il faut faire attention à ne pas écraser le fichier Spatialite stocké dans le répertoire Lizmap sur le serveur par celui que vous avez en local: pensez à toujours faire une sauvegarde du fichier du serveur avant une nouvelle synchronisation de votre répertoire local.</p>
-</div>
-</div>
-<div class="section" id="utilisation-du-cache">
-<h3>Utilisation du cache<a class="headerlink" href="#utilisation-du-cache" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Si vous souhaitez utiliser le cache serveur ou client pour les couches d&#8217;annotation, faites-le en toute connaissance de cause : les données ne seront pas visibles par les utilisateurs tant que le cache ne sera pas expiré. Nous conseillons de ne pas activer le cache pour les couches d&#8217;annotation</p>
-</div>
-</div>
+<div class="section" id="edition-de-couches">
+<span id="lizmap-edition"></span><h2>Édition de couches<a class="headerlink" href="#edition-de-couches" title="Permalink to this headline">¶</a></h2>
+<p>Cette fonctionnalité offre la possibilité aux utilisateurs en ligne d&#8217;éditer des données spatiales pour des couches PostGIS ou Spatialite. Voir <a class="reference internal" href="../features/edition.html#edition-in-lizmap"><em>L&#8217;édition de données dans Lizmap</em></a> pour le détail de cette fonctionnalité.</p>
 </div>
 </div>
 

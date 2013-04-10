@@ -64,7 +64,7 @@
 <li><a class="reference internal" href="#premier-test">Premier test</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#annotations-configurer-le-serveur-avec-le-support-des-bases-de-donnees">Annotations : Configurer le serveur avec le support des bases de données</a><ul>
+<li><a class="reference internal" href="#outil-d-edition-configurer-le-serveur-avec-le-support-des-bases-de-donnees">Outil d&#8217;édition : Configurer le serveur avec le support des bases de données</a><ul>
 <li><a class="reference internal" href="#postgresql">PostGreSQL</a></li>
 <li><a class="reference internal" href="#spatialite">Spatialite</a><ul>
 <li><a class="reference internal" href="#activer-l-extension-spatialite">Activer l&#8217;extension Spatialite</a></li>
@@ -191,8 +191,8 @@ git checkout master <span class="o">&amp;&amp;</span> git fetch origin <span cla
 <span class="c"># Appliquer sur votre branche, et gérer les éventuels conflits de merge</span>
 git checkout mybranch <span class="o">&amp;&amp;</span> git rebase master
 <span class="c"># réappliquer les droits</span>
-chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
-chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
+chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
 </pre></div>
 </div>
 <div class="admonition note">
@@ -204,8 +204,8 @@ chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
 <div class="section" id="donner-les-droits-adequats-aux-repertoires-et-fichiers">
 <h3>Donner les droits adéquats aux répertoires et fichiers<a class="headerlink" href="#donner-les-droits-adequats-aux-repertoires-et-fichiers" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>
-chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
-chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
+chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
 </pre></div>
 </div>
 </div>
@@ -214,27 +214,27 @@ chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
 <p>Aller à l&#8217;accueil de Lizmap pour voir si l&#8217;installation a été correctement réalisée : <a class="reference external" href="http://localhost/lizmap-web-client-2.8.0/lizmap/www/">http://localhost/lizmap-web-client-2.8.0/lizmap/www/</a></p>
 </div>
 </div>
-<div class="section" id="annotations-configurer-le-serveur-avec-le-support-des-bases-de-donnees">
-<h2>Annotations : Configurer le serveur avec le support des bases de données<a class="headerlink" href="#annotations-configurer-le-serveur-avec-le-support-des-bases-de-donnees" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="outil-d-edition-configurer-le-serveur-avec-le-support-des-bases-de-donnees">
+<h2>Outil d&#8217;édition : Configurer le serveur avec le support des bases de données<a class="headerlink" href="#outil-d-edition-configurer-le-serveur-avec-le-support-des-bases-de-donnees" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="postgresql">
 <h3>PostGreSQL<a class="headerlink" href="#postgresql" title="Permalink to this headline">¶</a></h3>
-<p>Pour que les annotations de couches PostGIS dans Lizmap Web Client fonctionnent, il faut installer le support de PostGreSQL pour PHP.</p>
+<p>Pour que l&#8217;édition de couches PostGIS dans Lizmap Web Client fonctionnent, il faut installer le support de PostGreSQL pour PHP.</p>
 <div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install php5-pgsql
 sudo service apache2 restart
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Pour les annotations, nous conseillons fortement d&#8217;utiliser une base de données PostGreSQL. Cela simplifie fortement l&#8217;installation et la récupération des données saisies par les utilisateurs.</p>
+<p class="last">Pour l&#8217;édition, nous conseillons fortement d&#8217;utiliser une base de données PostGreSQL. Cela simplifie fortement l&#8217;installation et la récupération des données saisies par les utilisateurs.</p>
 </div>
 </div>
 <div class="section" id="spatialite">
 <h3>Spatialite<a class="headerlink" href="#spatialite" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="activer-l-extension-spatialite">
 <h4>Activer l&#8217;extension Spatialite<a class="headerlink" href="#activer-l-extension-spatialite" title="Permalink to this headline">¶</a></h4>
-<p>Pour pouvoir utiliser les annotations sur des couches spatiatlite, il faut ajouter l&#8217;extension spatialite dans PHP. Vous pouvez suivre les instructions suivantes pour le faire :
+<p>Pour pouvoir utiliser l&#8217;édition sur des couches spatiatlite, il faut ajouter l&#8217;extension spatialite dans PHP. Vous pouvez suivre les instructions suivantes pour le faire :
 <a class="reference external" href="http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html">http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html</a></p>
-<p>Lizmap Web Client teste si le support du spatialite est bien activé dans le php. S&#8217;il ne l&#8217;est pas, alors les couches spatialites ne seront pas utilisables dans l&#8217;outil d&#8217;annotation. Vous pouvez toujours utiliser des données PostGreSQL pour les annotations.</p>
+<p>Lizmap Web Client teste si le support du spatialite est bien activé dans le php. S&#8217;il ne l&#8217;est pas, alors les couches spatialites ne seront pas utilisables dans l&#8217;outil d&#8217;édition. Vous pouvez toujours utiliser des données PostGreSQL pour l&#8217;édition.</p>
 </div>
 <div class="section" id="donner-les-droits-adequats-au-repertoire-contenant-les-bases-de-donnees-spatialite">
 <h4>Donner les droits adéquats au répertoire contenant les bases de données Spatialite<a class="headerlink" href="#donner-les-droits-adequats-au-repertoire-contenant-les-bases-de-donnees-spatialite" title="Permalink to this headline">¶</a></h4>
@@ -320,8 +320,8 @@ sqlite3 lizmap/var/jauth.db &lt; lizmap/install/sql/upgrade_jacl2db_2.7_2.8.sql
 <div class="section" id="redefinir-les-droits-sur-les-fichiers-de-l-application">
 <h3>Redéfinir les droits sur les fichiers de l&#8217;application<a class="headerlink" href="#redefinir-les-droits-sur-les-fichiers-de-l-application" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>
-chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
-chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
+chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
 </pre></div>
 </div>
 </div>

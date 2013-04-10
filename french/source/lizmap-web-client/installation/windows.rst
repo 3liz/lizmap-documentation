@@ -142,8 +142,8 @@ Afin de s'assurer que la configuration a bien réussi, cliquer sur 'Liste des pr
 Ajouter le support spatiatlite au PHP
 ==============================================================
 
-Pour pouvoir utiliser les annotations sur des couches spatiatlite, il faut ajouter l'extension spatialite dans PHP. Malheureusement, il faut une version de PHP au moins égale à la 5.3 pour le faire, et pour l'instant, l'installateur OSGeo4W ne propose que la 5.2. 
+Pour pouvoir utiliser l'outil d'édition sur des couches spatiatlite, il faut ajouter l'extension spatialite dans PHP. Malheureusement, il faut une version de PHP au moins égale à la 5.3 pour le faire, et pour l'instant, l'installateur OSGeo4W ne propose que la 5.2. 
 
-*Il n'est donc pas possible pour l'instant sous Windows d'utiliser des couches Spatialite pour l'annotation.*
+*Il n'est donc pas possible pour l'instant sous Windows d'utiliser des couches Spatialite pour l'édition.*
 
-Lizmap Web Client teste si le support du spatialite est bien activé dans le PHP. S'il ne l'est pas, alors les couches Spatialite ne seront pas utilisables dans l'outil d'annotation. Vous pouvez toujours utiliser des données PostGreSQL à la place.
+Lizmap Web Client teste si le support du spatialite est bien activé dans le PHP. S'il ne l'est pas, alors les couches Spatialite ne seront pas utilisables dans l'outil d'édition. Vous pouvez toujours utiliser des données PostGreSQL à la place.

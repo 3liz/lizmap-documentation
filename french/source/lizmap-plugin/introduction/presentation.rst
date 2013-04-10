@@ -111,6 +111,8 @@ Lizmap - les fonctionnalités principales
 * Interface multilingue : anglais, français, italien
 * Utilisation de fonds référentiels externes : OSM, Google
 * Impression
-* Annotations
+* Édition en ligne : ajout, modification spatiale et attributaire, suppression
 * Zoom par localisation
-* Recherche d'adresse : Nominatime (moteur d'OpenStreetMap)
+* Recherche d'adresse : Nominatim (moteur d'OpenStreetMap)
+* Logs
+

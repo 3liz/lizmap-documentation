@@ -83,8 +83,8 @@ Version de développement avec Github
    # Appliquer sur votre branche, et gérer les éventuels conflits de merge
    git checkout mybranch && git rebase master
    # réappliquer les droits
-   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R   
+   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R   
    
 .. note:: Il est toujours bon de faire une sauvegarde avant toute mise à jour.
    
@@ -96,8 +96,8 @@ Donner les droits adéquats aux répertoires et fichiers
 .. code-block:: bash
 
    cd /var/www/$MYAPP-$VERSION
-   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
+   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
 
 
 Premier test
@@ -106,20 +106,20 @@ Premier test
 Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.8.0/lizmap/www/
 
 
-Annotations : Configurer le serveur avec le support des bases de données
-=========================================================================
+Outil d'édition : Configurer le serveur avec le support des bases de données
+=============================================================================
 
 PostGreSQL
 ------------------------------
 
-Pour que les annotations de couches PostGIS dans Lizmap Web Client fonctionnent, il faut installer le support de PostGreSQL pour PHP.
+Pour que l'édition de couches PostGIS dans Lizmap Web Client fonctionnent, il faut installer le support de PostGreSQL pour PHP.
 
 .. code-block:: bash
 
    sudo apt-get install php5-pgsql
    sudo service apache2 restart
    
-.. note:: Pour les annotations, nous conseillons fortement d'utiliser une base de données PostGreSQL. Cela simplifie fortement l'installation et la récupération des données saisies par les utilisateurs.
+.. note:: Pour l'édition, nous conseillons fortement d'utiliser une base de données PostGreSQL. Cela simplifie fortement l'installation et la récupération des données saisies par les utilisateurs.
   
 
 Spatialite
@@ -128,10 +128,10 @@ Spatialite
 Activer l'extension Spatialite
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Pour pouvoir utiliser les annotations sur des couches spatiatlite, il faut ajouter l'extension spatialite dans PHP. Vous pouvez suivre les instructions suivantes pour le faire :
+Pour pouvoir utiliser l'édition sur des couches spatiatlite, il faut ajouter l'extension spatialite dans PHP. Vous pouvez suivre les instructions suivantes pour le faire :
 http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html
 
-Lizmap Web Client teste si le support du spatialite est bien activé dans le php. S'il ne l'est pas, alors les couches spatialites ne seront pas utilisables dans l'outil d'annotation. Vous pouvez toujours utiliser des données PostGreSQL pour les annotations.
+Lizmap Web Client teste si le support du spatialite est bien activé dans le php. S'il ne l'est pas, alors les couches spatialites ne seront pas utilisables dans l'outil d'édition. Vous pouvez toujours utiliser des données PostGreSQL pour l'édition.
 
 Donner les droits adéquats au répertoire contenant les bases de données Spatialite
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -235,5 +235,5 @@ Redéfinir les droits sur les fichiers de l'application
 .. code-block:: bash
 
    cd /var/www/$MYAPP-$VERSION
-   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/annotations/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/annotations/ -R
+   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
