@@ -48,8 +48,8 @@ La base de données des logs est située ici par rapport au répertoire d'instal
 
 .. code-block:: bash
 
-   # si Lizmap Web Client est installé ici : /var/www/lizmap-web-client-2.8.0/, le fichier est:
-   /var/www/lizmap-web-client-2.8.0/lizmap/var/logs.db   
+   # si Lizmap Web Client est installé ici : /var/www/lizmap-web-client-2.8.1/, le fichier est:
+   /var/www/lizmap-web-client-2.8.1/lizmap/var/logs.db   
 
 
 Cette base de données peut être consultée via un outil de lecture de base de données Sqlite, par exemple *SQLite Browser* ou l'extension Firefox *SQlite Manager*. Si vous connaissez le langage SQL, vous pourrez ainsi faire des requêtes pour extraire des informations à partir des logs détaillés.
