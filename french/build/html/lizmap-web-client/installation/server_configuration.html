@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuration du serveur cartographique Lizmap &mdash; Lizmap 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Installation de Lizmap" href="index.html" />
+    <link rel="next" title="Installation de Lizmap sous Linux Debian ou Ubuntu" href="linux.html" />
+    <link rel="prev" title="Installation de Lizmap" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="linux.html" title="Installation de Lizmap sous Linux Debian ou Ubuntu"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Installation de Lizmap"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >L&#8217;application Lizmap Web Client</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Installation de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuration du serveur cartographique Lizmap</a><ul>
+<li><a class="reference internal" href="#configuration-generique-du-serveur">Configuration générique du serveur</a><ul>
+<li><a class="reference internal" href="#configurer-les-locales">Configurer les locales</a></li>
+<li><a class="reference internal" href="#installation-de-quelques-librairies-utiles">Installation de quelques librairies utiles</a></li>
+<li><a class="reference internal" href="#creation-des-repertoires-pour-les-donnees">Création des répertoires pour les données</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#serveur-web-apache">Serveur Web : Apache</a><ul>
+<li><a class="reference internal" href="#installation-des-paquets-necessaires">Installation des paquets nécessaires</a></li>
+<li><a class="reference internal" href="#configuration-de-php5">Configuration de php5</a></li>
+<li><a class="reference internal" href="#configuration-du-mpm-worker">Configuration du mpm-worker</a></li>
+<li><a class="reference internal" href="#redemarrer-apache">Redémarrer Apache</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sgbd-spatial-postgresql">SGBD Spatial : PostGreSQL</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#adapatation-de-la-configuration-de-postgresql">Adapatation de la configuration de PostGreSQL</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#serveur-ftp-pure-ftpd">Serveur FTP: pure-ftpd</a><ul>
+<li><a class="reference internal" href="#id1">Installation</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#creation-d-un-compte-utilisateur">Création d&#8217;un compte utilisateur</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#serveur-cartographique-qgis-server">Serveur cartographique: QGIS Server</a><ul>
+<li><a class="reference internal" href="#id2">Installation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Installation de Lizmap</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="linux.html"
+                        title="next chapter">Installation de Lizmap sous Linux Debian ou Ubuntu</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/lizmap-web-client/installation/server_configuration.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="configuration-du-serveur-cartographique-lizmap">
+<h1>Configuration du serveur cartographique Lizmap<a class="headerlink" href="#configuration-du-serveur-cartographique-lizmap" title="Permalink to this headline">¶</a></h1>
+<p>Cette documentation présente un exemple de configuration d&#8217;un serveur sous la distribution Ubuntu Server 12.04 LTS.</p>
+<div class="section" id="configuration-generique-du-serveur">
+<h2>Configuration générique du serveur<a class="headerlink" href="#configuration-generique-du-serveur" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="configurer-les-locales">
+<h3>Configurer les locales<a class="headerlink" href="#configurer-les-locales" title="Permalink to this headline">¶</a></h3>
+<p>Pour simplifier les choses, il est intéressant de configurer le serveur avec l&#8217;encodage par défaut UTF-8</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># locales</span>
+locale-gen fr_FR.UTF-8
+dpkg-reconfigure locales
+dpkg-reconfigure tzdata
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Il faudra aussi configurer les autres logiciels pour qu&#8217;ils utilisent cet encodage par défaut si ce n&#8217;est pas le cas.</p>
+</div>
+</div>
+<div class="section" id="installation-de-quelques-librairies-utiles">
+<h3>Installation de quelques librairies utiles<a class="headerlink" href="#installation-de-quelques-librairies-utiles" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>On met à jour les paquets</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># Mise à jour des paquets</span>
+apt-get update
+apt-get upgrade
+</pre></div>
+</div>
+<ul class="simple">
+<li>On installe l&#8217;ensemble des paquets qu&#8217;on utilisera pour ce serveur cartographique</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>apt-get install python-simplejson xauth htop nano curl ntp ntpdate python-software-properties git
+</pre></div>
+</div>
+</div>
+<div class="section" id="creation-des-repertoires-pour-les-donnees">
+<h3>Création des répertoires pour les données<a class="headerlink" href="#creation-des-repertoires-pour-les-donnees" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>mkdir /home/data
+mkdir /home/data/cache/
+mkdir /home/data/ftp
+mkdir /home/data/ftp/template/
+mkdir /home/data/ftp/template/qgis
+mkdir /home/data/postgresql
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="serveur-web-apache">
+<h2>Serveur Web : Apache<a class="headerlink" href="#serveur-web-apache" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation-des-paquets-necessaires">
+<h3>Installation des paquets nécessaires<a class="headerlink" href="#installation-des-paquets-necessaires" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>apt-get install apache2 apache2-mpm-worker libapache2-mod-fcgid php5-cgi php5-curl php5-cli php5-sqlite php5-gd
+a2dismod php5
+a2enmod actions
+a2enmod fcgid
+a2enmod ssl
+a2enmod rewrite
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration-de-php5">
+<h3>Configuration de php5<a class="headerlink" href="#configuration-de-php5" title="Permalink to this headline">¶</a></h3>
+<p>On utilise dans cet exemple le mpm-worker d&#8217;Apache. On doit donc configurer manuellement l&#8217;activation de php5.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cat &gt; /etc/apache2/conf.d/php.conf <span class="s">&lt;&lt; EOF</span>
+<span class="s">&lt;Directory /usr/share&gt;</span>
+<span class="s">  AddHandler fcgid-script .php</span>
+<span class="s">  FCGIWrapper /usr/lib/cgi-bin/php5 .php</span>
+<span class="s">  Options ExecCGI FollowSymlinks Indexes</span>
+<span class="s">&lt;/Directory&gt;</span>
+
+<span class="s">&lt;Files ~ (\.php)&gt;</span>
+<span class="s">  AddHandler fcgid-script .php</span>
+<span class="s">  FCGIWrapper /usr/lib/cgi-bin/php5 .php</span>
+<span class="s">  Options +ExecCGI</span>
+<span class="s">  allow from all</span>
+<span class="s">&lt;/Files&gt;</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration-du-mpm-worker">
+<h3>Configuration du mpm-worker<a class="headerlink" href="#configuration-du-mpm-worker" title="Permalink to this headline">¶</a></h3>
+<p>On modifie le fichier de configuration d&#8217;Apache pour adapter les options du mpm_worker à la configuration du serveur</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># configuration worker</span>
+nano /etc/apache2/apache2.conf <span class="c"># aller au worker et mettre par exemple</span>
+&lt;IfModule mpm_worker_module&gt;
+  StartServers       4
+  MinSpareThreads    25
+  MaxSpareThreads    100
+  ThreadLimit          64
+  ThreadsPerChild      25
+  MaxClients        150
+  MaxRequestsPerChild   0
+&lt;/IfModule&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="redemarrer-apache">
+<h3>Redémarrer Apache<a class="headerlink" href="#redemarrer-apache" title="Permalink to this headline">¶</a></h3>
+<p>Il faut redémarrer le serveur Apache pour valider la configuration</p>
+<div class="highlight-bash"><div class="highlight"><pre>service apache2 restart
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="sgbd-spatial-postgresql">
+<h2>SGBD Spatial : PostGreSQL<a class="headerlink" href="#sgbd-spatial-postgresql" title="Permalink to this headline">¶</a></h2>
+<p>Il peut être très intéressant d&#8217;utiliser PostGreSQL et PostGIS pour gérer les données spatiales de manière centralisée sur le serveur.</p>
+<div class="section" id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># Installation des paquets</span>
+apt-get install postgresql postgresql-contrib postgis pgtune php5-pgsql
+
+<span class="c"># On recrée un cluster pour pouvoir spécifier le répertoire de stockage</span>
+mkdir /home/data
+mkdir /home/data/postgresql
+service postgresql stop
+pg_dropcluster --stop 9.1 main
+chown postgres:postgres /home/data/postgresql
+pg_createcluster 9.1 main -d /home/data/postgresql --locale fr_FR.UTF8 -p 5678 --start
+
+<span class="c"># On crée un utilisateur &quot;superuser&quot;</span>
+su - postgres
+createuser myuser --superuser
+<span class="c"># On modifie les mots de passe</span>
+psql
+ALTER USER postgres WITH ENCRYPTED PASSWORD <span class="s1">&#39;************&#39;</span>;
+ALTER USER myuser WITH ENCRYPTED PASSWORD <span class="s1">&#39;************&#39;</span>;
+<span class="se">\q</span>
+<span class="nb">exit</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adapatation-de-la-configuration-de-postgresql">
+<h3>Adapatation de la configuration de PostGreSQL<a class="headerlink" href="#adapatation-de-la-configuration-de-postgresql" title="Permalink to this headline">¶</a></h3>
+<p>Nous allons utiliser pgtune, un utilitaire qui permet de générer automatiquement un fichier de configuration de PostGreSQL adapté aux propriétés du serveur (mémoire vive, processeurs, etc.)</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># PostgreSQL Tuning avevc pgtune</span>
+pgtune -i /etc/postgresql/9.1/main/postgresql.conf -o /etc/postgresql/9.1/main/postgresql.conf.pgtune --type Web
+cp /etc/postgresql/9.1/main/postgresql.conf /etc/postgresql/9.1/main/postgresql.conf.backup
+cp /etc/postgresql/9.1/main/postgresql.conf.pgtune /etc/postgresql/9.1/main/postgresql.conf
+nano /etc/postgresql/9.1/main/postgresql.conf
+<span class="c"># On redémarre pour voir si pas de problèmes</span>
+service postgresql restart
+<span class="c"># Si message d&#39;erreur, il faut augmenter les variables de configuration du noyau linux</span>
+<span class="nb">echo</span> <span class="s2">&quot;kernel.shmall = 4294967296&quot;</span> &gt;&gt; /etc/sysctl.conf <span class="c"># pour shared_buffers à 3000Mo</span>
+<span class="nb">echo</span> <span class="s2">&quot;kernel.shmmax = 4294967296&quot;</span> &gt;&gt; /etc/sysctl.conf
+<span class="nb">echo </span>4294967296 &gt; /proc/sys/kernel/shmall
+<span class="nb">echo </span>4294967296 &gt; /proc/sys/kernel/shmmax
+sysctl -a | sort | grep shm
+<span class="c"># On redémarre PostGreSQL</span>
+service postgresql restart
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="serveur-ftp-pure-ftpd">
+<h2>Serveur FTP: pure-ftpd<a class="headerlink" href="#serveur-ftp-pure-ftpd" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>apt-get install pure-ftpd pure-ftpd-common
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># création d&#39;un shell vide pour les utilisateurs</span>
+ln /bin/false /bin/ftponly
+<span class="c"># On configure le serveur FTP</span>
+<span class="nb">echo</span> <span class="s2">&quot;/bin/ftponly&quot;</span> &gt;&gt; /etc/shells
+<span class="c"># On bloque chaque utilisateur dans son home</span>
+<span class="nb">echo</span> <span class="s2">&quot;yes&quot;</span> &gt; /etc/pure-ftpd/conf/ChrootEveryone
+<span class="c"># On permet d&#39;utiliser le FTP sécurisé via SSL</span>
+<span class="nb">echo</span> <span class="s2">&quot;1&quot;</span> &gt; /etc/pure-ftpd/conf/TLS
+<span class="c"># On configure les propriétés des répertoires et fichiers créés par les utilisateurs</span>
+<span class="nb">echo</span> <span class="s2">&quot;133 022&quot;</span> &gt; /etc/pure-ftpd/conf/Umask
+<span class="c"># La plage de ports pour le mode passif (à ouvrir vers l&#39;extérieur)</span>
+<span class="nb">echo</span> <span class="s2">&quot;5500 5700&quot;</span> &gt; /etc/pure-ftpd/conf/PassivePortRange
+<span class="c"># On crée un certificat SSL pour le FTP</span>
+openssl req -x509 -nodes -newkey rsa:1024 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
+chmod 400 /etc/ssl/private/pure-ftpd.pem
+<span class="c"># On redémarre le serveur FTP</span>
+service pure-ftpd restart
+</pre></div>
+</div>
+</div>
+<div class="section" id="creation-d-un-compte-utilisateur">
+<h3>Création d&#8217;un compte utilisateur<a class="headerlink" href="#creation-d-un-compte-utilisateur" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># créer un compte utilisateur</span>
+<span class="nv">MYUSER</span><span class="o">=</span>demo
+useradd -g client -d /home/data/ftp/<span class="nv">$MYUSER</span> -s /bin/ftponly -m <span class="nv">$MYUSER</span> -k /home/data/ftp/template/
+passwd <span class="nv">$MYUSER</span>
+<span class="c"># on ne permet pas de modifier la racine du ftp</span>
+chmod a-w /home/data/ftp/<span class="nv">$MYUSER</span>
+<span class="c"># On crée des répertoires vides qui seront les futurs répertoires lizmap</span>
+mkdir /home/data/ftp/<span class="nv">$MYUSER</span>/qgis/rep1 <span class="o">&amp;&amp;</span> chown <span class="nv">$MYUSER</span>:client /home/data/ftp/<span class="nv">$MYUSER</span>/qgis/rep1
+mkdir /home/data/ftp/<span class="nv">$MYUSER</span>/qgis/rep2 <span class="o">&amp;&amp;</span> chown <span class="nv">$MYUSER</span>:client /home/data/ftp/<span class="nv">$MYUSER</span>/qgis/rep2
+mkdir /home/data/ftp/<span class="nv">$MYUSER</span>/qgis/rep3 <span class="o">&amp;&amp;</span> chown <span class="nv">$MYUSER</span>:client /home/data/ftp/<span class="nv">$MYUSER</span>/qgis/rep3
+mkdir /home/data/ftp/<span class="nv">$MYUSER</span>/qgis/rep4 <span class="o">&amp;&amp;</span> chown <span class="nv">$MYUSER</span>:client /home/data/ftp/<span class="nv">$MYUSER</span>/qgis/rep4
+mkdir /home/data/ftp/<span class="nv">$MYUSER</span>/qgis/rep5 <span class="o">&amp;&amp;</span> chown <span class="nv">$MYUSER</span>:client /home/data/ftp/<span class="nv">$MYUSER</span>/qgis/rep5
+<span class="c"># On crée un répertoire pour stocker le cache serveur de Lizmap</span>
+mkdir /home/data/cache/<span class="nv">$MYUSER</span>
+chmod 700 /home/data/cache/<span class="nv">$MYUSER</span> -R
+chown www-data:www-data /home/data/cache/<span class="nv">$MYUSER</span> -R
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="serveur-cartographique-qgis-server">
+<h2>Serveur cartographique: QGIS Server<a class="headerlink" href="#serveur-cartographique-qgis-server" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Installation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># Ajout du dépôt UbuntuGis</span>
+add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+apt-get update
+<span class="c"># Installation de QGIS Server</span>
+apt-get install qgis-mapserver
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="linux.html" title="Installation de Lizmap sous Linux Debian ou Ubuntu"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Installation de Lizmap"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >L&#8217;application Lizmap Web Client</a> &raquo;</li>
+          <li><a href="index.html" >Installation de Lizmap</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 3liz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

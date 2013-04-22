@@ -111,7 +111,6 @@
 </div>
 <div class="section" id="les-repertoires-lizmap">
 <h2>Les répertoires Lizmap<a class="headerlink" href="#les-repertoires-lizmap" title="Permalink to this headline">¶</a></h2>
-<p><strong>Ne pas utiliser d&#8217;espace ni accents dans le chemin</strong>. Par exemple : &#8220;C:\un\chemin\vers\le\repertoire\mon_repertoire\&#8221;</p>
 <p>Nous conseillons d&#8217;organiser un répertoire Lizmap toujours de la même manière, par exemple, dans notre répertoire <strong>mon_repertoire</strong>, il est conseillé d&#8217;avoir:</p>
 <ul class="simple">
 <li>un ou plusieurs <strong>projets QGIS</strong> (.qgs) et les fichiers de configuration Lizmap créés avec le plugin  (.qgs.cfg)</li>
@@ -127,15 +126,19 @@
 <li>un répertoire <strong>svg</strong> qui contient par exemple les fichiers SVG utilisés pour les styles des couches</li>
 <li>un répertoire <strong>media</strong> qui contient les documents qu&#8217;on souhaite utiliser dans Lizmap : pdf, images, fichiers textes, etc.</li>
 </ul>
-<dl class="docutils">
-<dt>NB</dt>
-<dd><p class="first">Le répertoire de données <strong>data</strong> peut être placé au même niveau que le répertoire Lizmap. On peut donc avoir par exemple dans &#8220;C:\un\chemin\vers\le\repertoire\mon_repertoire\&#8221;</p>
-<ul class="last simple">
-<li><em>mon_repertoire</em> : le répertoire Lizmap, c&#8217;est-à-dire le dossier contenant les projets, les images et les médias</li>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Il est conseilé de ne pas utiliser d&#8217;espace ni accents dans le chemin. Par exemple : &#8220;C:\un\chemin\vers\le\repertoire\mon_repertoire\&#8221;</p>
+</div>
+<p>Le répertoire de données <strong>data</strong> peut être placé au même niveau que les répertoires Lizmap. On peut donc avoir par exemple dans &#8220;C:\un\chemin\vers\le\repertoire\lizmap\&#8221;</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>mon_repertoire_1</em> : un répertoire Lizmap, c&#8217;est-à-dire le dossier contenant les projets, les images et les médias</li>
+<li><em>mon_repertoire_2</em> : un autre répertoire Lizmap, contenant d&#8217;autres projets QGIS</li>
 <li><em>data</em> : un dossier qui contient les fichiers de données spatiaux, par exemple organisés en 2 sous-répertoires <em>vector</em> et <em>raster</em></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
+<p>Cela permet de partager des données, comme par exemple des orthophoto lourdes, dans un répertoire commun.</p>
 </div>
 <div class="section" id="les-donnees-vectorielles">
 <h2>Les données vectorielles<a class="headerlink" href="#les-donnees-vectorielles" title="Permalink to this headline">¶</a></h2>
@@ -160,8 +163,14 @@
 </ul>
 </div></blockquote>
 <ul class="simple">
-<li><strong>Encodage</strong> : connaître l&#8217;encodage des couches et toujours utiliser le même. Au mieux utiliser l&#8217; <strong>UTF-8</strong></li>
+<li><strong>Encodage</strong> :</li>
 </ul>
+<blockquote>
+<div><ul class="simple">
+<li>connaître l&#8217;encodage des couches et toujours utiliser le même. Au mieux utiliser l&#8217; <strong>UTF-8</strong></li>
+<li>éviter d&#8217;utiliser l&#8217;encodage appelé &#8220;système&#8221; dans QGIS, car l&#8217;encodage du serveur peut être différent de celui de votre système d&#8217;exploitation.</li>
+</ul>
+</div></blockquote>
 </div>
 <div class="section" id="configuration-des-proprietes-du-projet">
 <h2>Configuration des propriétés du projet<a class="headerlink" href="#configuration-des-proprietes-du-projet" title="Permalink to this headline">¶</a></h2>
@@ -169,10 +178,6 @@
 <h3>Onglet Général<a class="headerlink" href="#onglet-general" title="Permalink to this headline">¶</a></h3>
 <p>Menu <em>Préférences &gt; Propriétés du projet</em> OU CTRL+MAJ+P</p>
 <ul>
-<li><p class="first"><strong>Couleur de la sélection</strong> : laisser jaune</p>
-</li>
-<li><p class="first"><strong>Couleur de fond d&#8217;écran</strong> : laisser blanc, c&#8217;est standard</p>
-</li>
 <li><p class="first"><strong>Enregistrer les chemins</strong> : Toujours travailler en relatif !</p>
 <p>Cela permet de copier/coller un projet et des données dans un autre répertoire ou un autre ordinateur. <strong>C&#8217;est indispensable pour que la carte fonctionne sur le serveur Lizmap</strong></p>
 </li>

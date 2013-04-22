@@ -50,7 +50,7 @@ Version de développement avec Github
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. note:: Attention, la version de développement est en constante évolution, et des bugs peuvent survenir. Ne pas utiliser en production
+.. note:: Attention, la version de développement est en constante évolution, et des bugs peuvent survenir. Ne pas l'utiliser en production
 
 * Pour installer
 

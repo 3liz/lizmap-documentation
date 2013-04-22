@@ -15,8 +15,6 @@ Lizmap Web Client peut utiliser les cartes QGIS enregistrées dans différents r
 Les répertoires Lizmap
 ===============================================================
 
-**Ne pas utiliser d'espace ni accents dans le chemin**. Par exemple : "C:\\un\\chemin\\vers\\le\\repertoire\\mon_repertoire\\"
-
 Nous conseillons d'organiser un répertoire Lizmap toujours de la même manière, par exemple, dans notre répertoire **mon_repertoire**, il est conseillé d'avoir:
 
 * un ou plusieurs **projets QGIS** (.qgs) et les fichiers de configuration Lizmap créés avec le plugin  (.qgs.cfg)
@@ -28,14 +26,17 @@ Nous conseillons d'organiser un répertoire Lizmap toujours de la même manière
 * un répertoire **svg** qui contient par exemple les fichiers SVG utilisés pour les styles des couches
 * un répertoire **media** qui contient les documents qu'on souhaite utiliser dans Lizmap : pdf, images, fichiers textes, etc.
 
-NB
-  Le répertoire de données **data** peut être placé au même niveau que le répertoire Lizmap. On peut donc avoir par exemple dans "C:\\un\\chemin\\vers\\le\\repertoire\\mon_repertoire\\"
+.. note:: Il est conseilé de ne pas utiliser d'espace ni accents dans le chemin. Par exemple : "C:\\un\\chemin\\vers\\le\\repertoire\\mon_repertoire\\"
 
+
+Le répertoire de données **data** peut être placé au même niveau que les répertoires Lizmap. On peut donc avoir par exemple dans "C:\\un\\chemin\\vers\\le\\repertoire\\lizmap\\"
   
-  * *mon_repertoire* : le répertoire Lizmap, c'est-à-dire le dossier contenant les projets, les images et les médias
+  * *mon_repertoire_1* : un répertoire Lizmap, c'est-à-dire le dossier contenant les projets, les images et les médias
+  * *mon_repertoire_2* : un autre répertoire Lizmap, contenant d'autres projets QGIS
   * *data* : un dossier qui contient les fichiers de données spatiaux, par exemple organisés en 2 sous-répertoires *vector* et *raster*
   
- 
+Cela permet de partager des données, comme par exemple des orthophoto lourdes, dans un répertoire commun.
+
 
 Les données vectorielles
 ===============================================================
@@ -53,7 +54,10 @@ Quelques bonnes pratiques:
  - pas d'accents ni caractères spéciaux
  - des noms courts et simples
  
-* **Encodage** : connaître l'encodage des couches et toujours utiliser le même. Au mieux utiliser l' **UTF-8**
+* **Encodage** : 
+
+ - connaître l'encodage des couches et toujours utiliser le même. Au mieux utiliser l' **UTF-8**
+ - éviter d'utiliser l'encodage appelé "système" dans QGIS, car l'encodage du serveur peut être différent de celui de votre système d'exploitation.
 
 
 Configuration des propriétés du projet
@@ -64,8 +68,6 @@ Onglet Général
 
 Menu *Préférences > Propriétés du projet* OU CTRL+MAJ+P
 
-* **Couleur de la sélection** : laisser jaune
-* **Couleur de fond d'écran** : laisser blanc, c'est standard
 * **Enregistrer les chemins** : Toujours travailler en relatif !
 
   Cela permet de copier/coller un projet et des données dans un autre répertoire ou un autre ordinateur. **C'est indispensable pour que la carte fonctionne sur le serveur Lizmap**
