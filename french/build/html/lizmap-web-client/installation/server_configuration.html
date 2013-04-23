@@ -63,6 +63,7 @@
 <li><a class="reference internal" href="#installation-des-paquets-necessaires">Installation des paquets nécessaires</a></li>
 <li><a class="reference internal" href="#configuration-de-php5">Configuration de php5</a></li>
 <li><a class="reference internal" href="#configuration-du-mpm-worker">Configuration du mpm-worker</a></li>
+<li><a class="reference internal" href="#configuration-de-mod-fcgid">Configuration de mod_fcgid</a></li>
 <li><a class="reference internal" href="#redemarrer-apache">Redémarrer Apache</a></li>
 </ul>
 </li>
@@ -211,6 +212,25 @@ nano /etc/apache2/apache2.conf <span class="c"># aller au worker et mettre par e
   ThreadsPerChild      25
   MaxClients        150
   MaxRequestsPerChild   0
+&lt;/IfModule&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration-de-mod-fcgid">
+<h3>Configuration de mod_fcgid<a class="headerlink" href="#configuration-de-mod-fcgid" title="Permalink to this headline">¶</a></h3>
+<p>QGIS Server fonctionne en mode fcgi. Il faut donc configurer le mod_fcgid d&#8217;Apache pour l&#8217;adapter aux capacités du serveur.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># Ouvrir le fichier de configuration de mod_fcgid</span>
+nano /etc/apache2/mods-enabled/fcgid.conf
+<span class="c"># Coller le contenu suivant en l&#39;adaptant</span>
+&lt;IfModule mod_fcgid.c&gt;
+  AddHandler    fcgid-script .fcgi
+  FcgidConnectTimeout 300
+  FcgidIOTimeout 300
+  FcgidMaxProcessesPerClass 50
+  FcgidMinProcessesPerClass 20
+  FcgidMaxRequestsPerProcess 500
+  IdleTimeout   300
+  BusyTimeout   300
 &lt;/IfModule&gt;
 </pre></div>
 </div>

@@ -110,6 +110,27 @@ On modifie le fichier de configuration d'Apache pour adapter les options du mpm_
      MaxRequestsPerChild   0
    </IfModule>
 
+Configuration de mod_fcgid
+---------------------------
+
+QGIS Server fonctionne en mode fcgi. Il faut donc configurer le mod_fcgid d'Apache pour l'adapter aux capacités du serveur.
+
+.. code-block:: bash
+
+   # Ouvrir le fichier de configuration de mod_fcgid
+   nano /etc/apache2/mods-enabled/fcgid.conf
+   # Coller le contenu suivant en l'adaptant
+   <IfModule mod_fcgid.c> 
+     AddHandler    fcgid-script .fcgi
+     FcgidConnectTimeout 300
+     FcgidIOTimeout 300
+     FcgidMaxProcessesPerClass 50
+     FcgidMinProcessesPerClass 20
+     FcgidMaxRequestsPerProcess 500
+     IdleTimeout   300
+     BusyTimeout   300
+   </IfModule>
+
 
 Redémarrer Apache
 ------------------
