@@ -11,4 +11,5 @@ Fonctionnalités avancées de Lizmap
   overview-map
   optimization
   hide-layers
+  filtered-layers
 
