@@ -27,7 +27,7 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
     <link rel="up" title="Interface - Les onglets" href="index.html" />
-    <link rel="next" title="Outils - Configurer les outils à afficher dans le client WEB" href="tools-tab.html" />
+    <link rel="next" title="Fonds - configurer les fonds cartographiques" href="baselayer-tab.html" />
     <link rel="prev" title="Couches - Configurer les couches avec le plugin" href="layers-tab.html" /> 
   </head>
   <body>
@@ -38,7 +38,7 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="tools-tab.html" title="Outils - Configurer les outils à afficher dans le client WEB"
+          <a href="baselayer-tab.html" title="Fonds - configurer les fonds cartographiques"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="layers-tab.html" title="Couches - Configurer les couches avec le plugin"
@@ -54,6 +54,10 @@
   <ul>
 <li><a class="reference internal" href="#">Carte - Configurer la carte web avec le plugin</a><ul>
 <li><a class="reference internal" href="#l-onglet-carte">L&#8217;onglet Carte</a></li>
+<li><a class="reference internal" href="#options-generales">Options générales</a><ul>
+<li><a class="reference internal" href="#masquer-le-projet-dans-lizmap-web-client">Masquer le projet dans Lizmap Web Client</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#outils-de-la-carte">Outils de la carte</a><ul>
 <li><a class="reference internal" href="#impression-simple">Impression simple</a></li>
 <li><a class="reference internal" href="#outils-de-mesure">Outils de mesure</a></li>
@@ -63,7 +67,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#echelles">Échelles</a></li>
-<li><a class="reference internal" href="#fonds-externes">Fonds externes</a></li>
+<li><a class="reference internal" href="#emprise-initiale">Emprise initiale</a></li>
 </ul>
 </li>
 </ul>
@@ -72,8 +76,8 @@
   <p class="topless"><a href="layers-tab.html"
                         title="previous chapter">Couches - Configurer les couches avec le plugin</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="tools-tab.html"
-                        title="next chapter">Outils - Configurer les outils à afficher dans le client WEB</a></p>
+  <p class="topless"><a href="baselayer-tab.html"
+                        title="next chapter">Fonds - configurer les fonds cartographiques</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../../_sources/lizmap-plugin/interface/map-tab.txt"
@@ -101,20 +105,40 @@
           <div class="body">
             
   <div class="section" id="carte-configurer-la-carte-web-avec-le-plugin">
-<h1>Carte - Configurer la carte web avec le plugin<a class="headerlink" href="#carte-configurer-la-carte-web-avec-le-plugin" title="Permalink to this headline">¶</a></h1>
+<span id="map-tab"></span><h1>Carte - Configurer la carte web avec le plugin<a class="headerlink" href="#carte-configurer-la-carte-web-avec-le-plugin" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="l-onglet-carte">
 <h2>L&#8217;onglet Carte<a class="headerlink" href="#l-onglet-carte" title="Permalink to this headline">¶</a></h2>
-<p>Cet onglet vous permet d&#8217;activer ou désactiver des outils, de choisir les échelles et les fonds externes.</p>
+<p>Cet onglet vous permet d&#8217;activer ou désactiver des outils élémentaires de Lizmap, de choisir les échelles et l&#8217;emprise initiale.</p>
 <img alt="../../_images/interface-map-tab.png" class="align-center" src="../../_images/interface-map-tab.png" style="width: 80%;" />
+</div>
+<div class="section" id="options-generales">
+<h2>Options générales<a class="headerlink" href="#options-generales" title="Permalink to this headline">¶</a></h2>
+<p>Une seule option est pour l&#8217;instant disponible ici.</p>
+<div class="section" id="masquer-le-projet-dans-lizmap-web-client">
+<h3>Masquer le projet dans Lizmap Web Client<a class="headerlink" href="#masquer-le-projet-dans-lizmap-web-client" title="Permalink to this headline">¶</a></h3>
+<p>Si cette case est cochée, le projet ne sera pas visible dans la page d&#8217;accueil de Lizmap qui montre les vignettes pour tous les répertoires et projets de l&#8217;application. Vous pouvez donc utiliser cette option pour masquer le projet.</p>
+<p>Par contre, le projet sera toujours accessible pour les clients WMS ou WFS : ce n&#8217;est pas une protection totale du projet (pour cela, utiliser les droits par répertoire)</p>
+<p>Cette fonctionnalité est intéressante dans le cas où on utilise des couches d&#8217;un autre projet Lizmap comme fonds de carte. Voir <a class="reference internal" href="baselayer-tab.html#lizmap-external-baselayers"><em>Couches Lizmap externes</em></a> On peut ainsi masquer le projet source.</p>
+</div>
 </div>
 <div class="section" id="outils-de-la-carte">
 <h2>Outils de la carte<a class="headerlink" href="#outils-de-la-carte" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="impression-simple">
 <h3>Impression simple<a class="headerlink" href="#impression-simple" title="Permalink to this headline">¶</a></h3>
-<p>Pour proposer l&#8217;impression sur la carte en ligne, il faut que le projet QGIS ait au moins un composeur d&#8217;impression.</p>
-<p>Si cette case est cochée, Lizmap Web Client utilisera le premier composeur d&#8217;impression trouvé dans la liste des composeurs du projet QGIS.</p>
-<p>Lorsque l&#8217;impression simple est activée, et que l&#8217;utilisateur clique sur l&#8217;outil dans Lizmap Web Client, un rectangle est dessiné sur la carte en ligne. Ce rectangle représente le premier cadre de carte du composeur d&#8217;impression. Les proportions sont équivalentes, ce qui permet d&#8217;assurer que la zone imprimée dans le pdf correspond exactement à ce que l&#8217;utilisateur choisit.</p>
-<p>L&#8217;utilisateur peut déplacer ce rectangle puis cliquer sur le bouton imprimer.</p>
+<p>Pour proposer l&#8217;impression sur la carte en ligne, il faut que le projet QGIS ait au moins un composeur d&#8217;impression configuré.</p>
+<p>L&#8217;application Lizmap Web Client montrera un menu avec une icône d&#8217;imprimante. Ce menu liste les composeurs d&#8217;impression du projet QGIS.</p>
+<p>Lorsque l&#8217;utilisateur clique sur l&#8217;outil dans Lizmap Web Client, un rectangle est dessiné sur la carte en ligne. Ce rectangle représente le cadre de la carte du composeur d&#8217;impression. Les proportions sont équivalentes, ce qui permet d&#8217;assurer que la zone imprimée dans le pdf correspond exactement à ce que l&#8217;utilisateur choisit.</p>
+<p>L&#8217;utilisateur peut alors :</p>
+<ul class="simple">
+<li>Choisir l&#8217;échelle d&#8217;impression, ce qui redimensionne le rectangle</li>
+<li>Zoomer</li>
+<li>Déplacer le rectangle</li>
+</ul>
+<p>Une fois que le rectangle correspond à la zone souhaité, il suffit de cliquer sur le bouton <strong>Imprimer</strong> pour voir le PDF imprimé.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Il est possible d&#8217;exclure des composeurs d&#8217;impression de la publication Web. Par exemple, si le projet QGIs contient 4 composeurs, l&#8217;administrateur du projet peut en exclure 2 via les <em>propriétés du projet QGIS</em>, onglet <em>Serveur OWS</em>. Alors ne seront présentés dans Lizmap que les composeurs publiés.</p>
+</div>
 </div>
 <div class="section" id="outils-de-mesure">
 <h3>Outils de mesure<a class="headerlink" href="#outils-de-mesure" title="Permalink to this headline">¶</a></h3>
@@ -140,7 +164,7 @@
 <li>soit utiliser l&#8217;api de géolocalisation</li>
 <li>soit les données du GPS s&#8217;il existe et est activé.</li>
 </ul>
-<p><em>La carte est automatiquement re-centrée sur la localisation récupérée par le navigateur.</em></p>
+<p>Deux boutons sont alors présentés à l&#8217;utilisateur, pour centrer une fois sur la position ou pour maintenir un recentrage régulier.</p>
 <p>Cet outil peut donc être intéressant si on souhaite consulter la carte Lizmap en ligne depuis son matériel mobile (smartphone, tablette durcie, etc.). Il faut une connection internet active et activer le GPS de l&#8217;appareil.</p>
 </div>
 <div class="section" id="recherche-d-adresse">
@@ -161,52 +185,14 @@
 <p>Lizmap utilise aussi ces échelles pour restreindre l&#8217;affichage entre les échelles minimum et maximum données. C&#8217;est pourquoi <strong>il est obligatoire de renseigner au moins 2 échelles</strong> dans la liste</p>
 <p>Les 2 échelles minimum et maximum sont automatiquement extraites et affichées pour rappel dans les champs situés sous le champ texte.</p>
 </div>
-<div class="section" id="fonds-externes">
-<h2>Fonds externes<a class="headerlink" href="#fonds-externes" title="Permalink to this headline">¶</a></h2>
-<p>Lizmap permet d&#8217;ajouter des fonds externes à la liste des fonds de carte</p>
+<div class="section" id="emprise-initiale">
+<h2>Emprise initiale<a class="headerlink" href="#emprise-initiale" title="Permalink to this headline">¶</a></h2>
+<p>L&#8217;emprise globale du projet QGIS est configurée dans l&#8217;onglet <strong>Serveur OWS</strong> des <strong>propriétés du projet QGIS</strong>. Lizmap utilise cette emprise globale comme emprise maximale de la carte : les données ne pourront pas être affichées si elles sont en dehors.</p>
+<p>L&#8217;administrateur du projet peut choisir quel est l&#8217;emprise initiale de la carte lorsque les utilisateurs arrivent sur la carte. Par défaut, c&#8217;est l&#8217;emprise globale du projet.</p>
+<p>Deux boutons permettent de modifier manuellement l&#8217;emprise de départ de la carte:</p>
 <ul class="simple">
-<li><em>OpenStreetMap</em> : fond officiel et fond Mapquest</li>
-<li><em>Google</em> : Rues, Satellite, Hybride, Relief</li>
-</ul>
-<p>L&#8217;ajout d&#8217;un ou de plusieurs fond(s) externe(s) à votre carte Lizmap a plusieurs conséquences, qu&#8217;il faut bien connaître pour anticiper le rendu :</p>
-<ul>
-<li><p class="first"><strong>c&#8217;est ce fond externe qui imposera les échelles de la carte</strong>. Les échelles configurées ci-dessus ne seront donc pas utilisées, sauf les échelles min et max pour restreindre la carte entre ces 2 échelles.</p>
-<p>Il faut donc faire attention dans le projet QGIS à adapter les seuils de visibilités des couches en fonction des échelles du fond externe. Voici les échelles entières approximatives des fonds externes courants:</p>
-<div class="highlight-python"><pre>0   591659008
-1   295829504
-2   147914752
-3   73957376
-4   36978688
-5   18489344
-6   9244672
-7   4622336
-8   2311168
-9   1155584
-10  577792
-11  288896
-12  144448
-13  72224
-14  36112
-15  18056
-16  9028
-17  4514
-18  2257</pre>
-</div>
-</li>
-<li><p class="first">L&#8217;affichage des données du projet QGIS se faisant sur un fond externe, <strong>QGIS doit donc reprojeter à la volée les données dans le système spatial de référence du fond</strong> Il faut donc ajouter cette projection dans l&#8217;onglet OWS des propriétés du projet. Pour l&#8217;instant, l&#8217;ensemble des fonds proposés utilise la projection:</p>
-<div class="highlight-python"><pre>EPSG:3857 ; Pseudo Mercator</pre>
-</div>
-</li>
-<li><p class="first"><strong>Les fonds externes ne peuvent pas être imprimés par QGIS</strong></p>
-<p>En effet, ils ne sont pas dans le projet QGIS, et sont ajoutés dynamiquement par Lizmap Web Client.</p>
-</li>
-<li><p class="first"><strong>Respecter la licence des données et les conditions d&#8217;utilisation</strong></p>
-<ul class="simple">
-<li><em>Google</em>: <a class="reference external" href="https://developers.google.com/maps/terms">https://developers.google.com/maps/terms</a></li>
-<li><em>OpenStreetMap</em>: <a class="reference external" href="http://wiki.openstreetmap.org/wiki/FR:Tile_usage_policy">http://wiki.openstreetmap.org/wiki/FR:Tile_usage_policy</a></li>
-<li><em>Mapquest</em>: <a class="reference external" href="http://developer.mapquest.com/web/products/open/map#terms">http://developer.mapquest.com/web/products/open/map#terms</a></li>
-</ul>
-</li>
+<li><strong>Définir à partir des propriétés du projet</strong> : les valeurs sont recopiées depuis la configuration du projet, l&#8217;emprise globale est utilisée.</li>
+<li><strong>Définir à partir de la vue courante</strong> : l&#8217;emprise actuelle de la carte dans QGIS est utilisée.</li>
 </ul>
 </div>
 </div>
@@ -224,7 +210,7 @@
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="tools-tab.html" title="Outils - Configurer les outils à afficher dans le client WEB"
+          <a href="baselayer-tab.html" title="Fonds - configurer les fonds cartographiques"
              >next</a> |</li>
         <li class="right" >
           <a href="layers-tab.html" title="Couches - Configurer les couches avec le plugin"

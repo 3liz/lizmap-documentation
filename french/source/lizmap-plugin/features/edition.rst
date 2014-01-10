@@ -72,7 +72,7 @@ Voici le détail des étapes:
   - *créer autant de champs dont vous avez besoin pour les attributs* : utiliser si possible des noms de champ simples !
 
   Veuillez vous référer à la documentation de QGIS pour voir comment créer une couche spatiale dans une base de données PostGIS ou Spatialite: http://docs.qgis.org/html/fr/docs/user_manual/index.html
-  
+
 2. **Configurer les outils d'édition** pour les champs de votre couche
 
   - *Ouvrir les propriétés de la couche* en double-cliquant sur le nom de la couche dans la légende
@@ -83,13 +83,13 @@ Voici le détail des étapes:
     + Pour afficher un champ en lecture seule, choisir *Immuable*
     + Cas particulier de l'option *Valeur relationnelle*. Vous pouvez utiliser cette option pour une carte Lizmap. Pour que les utilisateurs aient accès aux informations de la couche externe qui contient les données, il faut activer la publication de la couche en WFS dans l'onglet *Serveur OWS* de la boîte de dialogue *Propriétés du projet* dans QGIS.
     + etc.
-    
-  - **Evolutions de QGIS 2** : 
-  
+
+  - **Evolutions de QGIS 2** :
+
     + Pour masquer des colonnes dans la popup de Lizmap, il faut maintenant décocher la case dans la colonne *WMS* pour chaque champs à cacher (cette colonne est juste après *Alias* )
     + Lizmap Web Client ne sait pas encore utiliser le mode *Conception par glisser/déposer* pour la génération des formulaires. Il faut donc seulement utiliser le mode *Autogénérer* pour les couches d'édition.
 
-.. note:: Tous les outils d'édition ne sont pas encore gérés par Lizmap Web Client. Seuls les outils suivants le sont: Edition de ligne, Classification, Plage, Liste de valeurs, Immuable, Cachée, Boite à cocher, Edition de texte, Calendrier, Valeur relationnelle. Si l'outil n'est pas gérée, le formulaire web affichera un champ texte libre.    
+.. note:: Tous les outils d'édition ne sont pas encore gérés par Lizmap Web Client. Seuls les outils suivants le sont: Edition de ligne, Classification, Plage, Liste de valeurs, Immuable, Cachée, Boite à cocher, Edition de texte, Calendrier, Valeur relationnelle. Si l'outil n'est pas gérée, le formulaire web affichera un champ texte libre.
 
 4. Ajouter la couche dans le tableau **Édition de couches** situé dans l'onglet *Outils* du plugin Lizmap:
 
@@ -100,7 +100,7 @@ Voici le détail des étapes:
 .. image:: ../MEDIA/features-edition-table.png
    :align: center
    :width: 80%
-  
+
 
 
 
@@ -115,7 +115,7 @@ Les couches que vous avez sélectionnées pour l'outil d'édition sont des **cou
 
 * **Les couches sont imprimables** si elles ne sont pas masquées.
 
-* **Les données sont enregistrées dans une couche du projet**. L'administrateur peut donc récupérer ces données et les utiliser par la suite. 
+* **Les données sont enregistrées dans une couche du projet**. L'administrateur peut donc récupérer ces données et les utiliser par la suite.
 
 .. note:: Pour bien centraliser les choses, nous conseillons d'utiliser une base de données PostGis pour stocker les données. Pour les couches Spatialite, il faut faire attention à ne pas écraser le fichier Spatialite stocké dans le répertoire Lizmap sur le serveur par celui que vous avez en local: pensez à toujours faire une sauvegarde du fichier du serveur avant une nouvelle synchronisation de votre répertoire local.
 

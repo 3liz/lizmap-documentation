@@ -79,6 +79,7 @@
 <li><a class="reference internal" href="#de-la-version-2-3-0-ou-inferieure-a-la-2-4-0-ou-superieure">De la version 2.3.0 ou inférieure à la 2.4.0 ou supérieure</a></li>
 <li><a class="reference internal" href="#de-la-version-2-6-ou-inferieure-a-la-version-2-7">De la version 2.6 ou inférieure à la version 2.7</a></li>
 <li><a class="reference internal" href="#de-la-version-2-7-a-la-version-2-8">De la version 2.7.*  à la version 2.8</a></li>
+<li><a class="reference internal" href="#de-la-version-2-8-a-la-version-2-9">De la version 2.8.*  à la version 2.9</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#supprimer-les-fichiers-temporaires-de-jelix">Supprimer les fichiers temporaires de Jelix</a></li>
@@ -161,7 +162,7 @@ rm <span class="nv">$VERSION</span>.zip
 <h4>Version de développement avec Github<a class="headerlink" href="#version-de-developpement-avec-github" title="Permalink to this headline">¶</a></h4>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Attention, la version de développement est en constante évolution, et des bugs peuvent survenir. Ne pas l&#8217;utiliser en production</p>
+<p class="last">Attention, la version de développement est en constante évolution, et des bugs peuvent survenir. Ne pas l&#8217;utiliser en production.</p>
 </div>
 <ul class="simple">
 <li>Pour installer</li>
@@ -186,6 +187,8 @@ git checkout mybranch
 <span class="c"># Si vous avez des modifications, faire un commit</span>
 git status
 git commit -am <span class="s2">&quot;Votre message de commit&quot;</span>
+<span class="c"># sauvegarder vos fichiers de configuration !</span>
+cp lizmap/var/jauth.db /tmp/jauth.db <span class="o">&amp;&amp;</span> cp lizmap/var/logs.db /tmp/logs.db <span class="o">&amp;&amp;</span> cp lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php
 <span class="c"># Mettre à jour votre branche master</span>
 git checkout master <span class="o">&amp;&amp;</span> git fetch origin <span class="o">&amp;&amp;</span> git merge origin/master
 <span class="c"># Appliquer sur votre branche, et gérer les éventuels conflits de merge</span>
@@ -267,9 +270,9 @@ chmod 775 /un/chemin/vers/un_repertoire_lizmap/ -R
 <span class="nv">OLDVERSION</span><span class="o">=</span>2.7.2 <span class="c"># replace by the version number of your current lizmap installation</span>
 <span class="c"># if you installation is 2.1.0 or less, use an empty OLDVERSION instead :</span>
 <span class="c"># OLDVERSION=</span>
-cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/lizmap/var/jauth.db /tmp/jauth.db <span class="c"># database containing groups and users</span>
+cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/lizmap/var/jauth.db /tmp/jauth.db <span class="c"># base de données utilisateur</span>
 cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php <span class="c"># text configuration file with services and repositories</span>
-cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/lizmap/var/logs.db /tmp/logs.db
+cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/lizmap/var/logs.db /tmp/logs.db <span class="c"># lizmap logs</span>
 </pre></div>
 </div>
 <p>Puis faites une installation classique de la nouvelle version (voir ci-dessus), ce qui crééra un nouveau dossier dans le répertoire /var/www/</p>
@@ -307,6 +310,14 @@ sqlite3 lizmap/var/jauth.db &lt; lizmap/install/sql/upgrade_jacl2db_lizmap_from_
 <p>L&#8217;outil d&#8217;édition a remplacé l&#8217;outil d&#8217;annotation et nous avons ajouté des champs pour décrire chaque utilisateur Lizmap. Il faut mettre à jour la base de donnée de gestion des droits:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/
 sqlite3 lizmap/var/jauth.db &lt; lizmap/install/sql/upgrade_jacl2db_2.7_2.8.sql
+</pre></div>
+</div>
+</div>
+<div class="section" id="de-la-version-2-8-a-la-version-2-9">
+<h4>De la version 2.8.*  à la version 2.9<a class="headerlink" href="#de-la-version-2-8-a-la-version-2-9" title="Permalink to this headline">¶</a></h4>
+<p>La fonctionnalité de filtrage des données des couches en fonction de l&#8217;utilisateur connecté nécessite l&#8217;ajout des droits liés dans la base de données des utilisateurs:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/
+sqlite3 lizmap/var/jauth.db &lt; lizmap/install/sql/upgrade_jacl2db_2.8_2.9.sql
 </pre></div>
 </div>
 </div>

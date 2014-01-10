@@ -27,7 +27,7 @@ Pour configurer les services, cliquer sur le bouton *Modifier* situé sous le r�
 
  - *file*: Les tuiles mises en cache sont stockées dans un répertoire du serveur par couche
  - *sqlite*: Les tuiles sont enregistrées dans une base de données sqlite par couche
- 
+
 * **Répertoire racine du cache** : le dossier dans lequel est stocké le cache. Il doit être accessible en écriture par le serveur Apache
 
 
@@ -36,7 +36,7 @@ Pour configurer les services, cliquer sur le bouton *Modifier* situé sous le r�
  - Les tuiles du cache plus vieilles que ce temps sont automatiquement raffraîchies.
  - La valeur 0 signigie que les tuiles n'expirent jamais
  - Le temps d'expiration doit être adapté à l'évolution des données
- 
+
 * **Envoi des requêtes à QGIS Server avec** : 2 méthodes. *Php ou Curl* . Utiliser la première si curl n'est pas installé sur le serveur
 * *Mode de débogage* : enregistre certaines requêtes dans un fichier de log : *lizmap/var/log/messages.log*
 
@@ -46,8 +46,8 @@ Pour configurer les services, cliquer sur le bouton *Modifier* situé sous le r�
 
 .. image:: ../MEDIA/administration-modify-services.png
    :align: center
-   
-   
+
+
 
 Les répertoires
 ===============================================================
@@ -56,8 +56,8 @@ Pour chaque répertoire Lizmap sont listés
 
 * **Les informations principales** : nom (label) et chemin (path)
 * **La liste des droits** avec les groupes concernés
-* **Des boutons d'action** : 
- 
+* **Des boutons d'action** :
+
   - *voir* : affiche la page qui liste les cartes de ce répertoire
   - *Modifier*: affiche le formulaire de modification du répertoire
   - *Supprimer* : permet de supprimer le répertoire
@@ -77,13 +77,14 @@ Pour créer un répertoire, il faut donner
 * **un label** : le nom qui sera affiché pour ce répertoire, accents et espaces autorisés
 * **un chemin (path)** : le chemin complet vers le dossier qui contient les projets QGIS et les données
 
+.. _define_group_rights:
 
 Définir les droits pour chaque groupe
 ---------------------------------------------
 
 Une fois le répertoire créé, le formulaire de modification du répertoire est automatiquement affiché et permet de définir les droits suivants pour chacun des groupes:
 
-* **Voir les répertoires** : 
+* **Voir les répertoires** :
 
   - tous les utilisateurs des groupes cochés pourront accéder aux cartes de ce répertoire
   - le groupe *anonymous* représente les utilisateurs non enregistrés et permet de rendre les cartes publiques
@@ -92,6 +93,10 @@ Une fois le répertoire créé, le formulaire de modification du répertoire est
 
   Lorsque cette option est cochée, les utilisateurs du groupe ont accès à l'outil d'édition pour l'ensemble des cartes du répertoire Lizmap pour lesquelles l'édition a été configurée.
 
+
+* **Afficher toutes les données, mêmes si filtrées par login**
+
+  Cette option est en lien avec la fonctionnalité de filtrage des données des couches par groupe. Voir :ref:`filter_layer_data_by_group`. Cocher la case permet de décider quels groupes pourront voir tout le temps toutes les données, même lorsqu'un filtre est actif sur certaines couches.
 
 .. image:: ../MEDIA/administration-modify-repository.png
    :align: center

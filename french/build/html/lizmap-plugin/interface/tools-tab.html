@@ -28,7 +28,7 @@
     <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
     <link rel="up" title="Interface - Les onglets" href="index.html" />
     <link rel="next" title="FTP - Publier la carte par FTP" href="ftp-tab.html" />
-    <link rel="prev" title="Carte - Configurer la carte web avec le plugin" href="map-tab.html" /> 
+    <link rel="prev" title="Fonds - configurer les fonds cartographiques" href="baselayer-tab.html" /> 
   </head>
   <body>
     <div class="related">
@@ -41,7 +41,7 @@
           <a href="ftp-tab.html" title="FTP - Publier la carte par FTP"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="map-tab.html" title="Carte - Configurer la carte web avec le plugin"
+          <a href="baselayer-tab.html" title="Fonds - configurer les fonds cartographiques"
              accesskey="P">previous</a> |</li>
         <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
           <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>
@@ -61,16 +61,19 @@
 <li><a class="reference internal" href="#cas-d-utilisation">Cas d&#8217;utilisation</a></li>
 <li><a class="reference internal" href="#pre-requis">Pré-requis</a></li>
 <li><a class="reference internal" href="#fonctionnement">Fonctionnement</a></li>
+<li><a class="reference internal" href="#listes-hierarchiques">Listes hiérarchiques</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#edition-de-couches">Édition de couches</a></li>
+<li><a class="reference internal" href="#couches-filtrees-filtrer-les-donnees-en-fonction-des-utilisateurs">Couches filtrées - Filtrer les données en fonction des utilisateurs</a></li>
+<li><a class="reference internal" href="#time-manager-animer-des-couches-vectorielles-temporelles">Time Manager - Animer des couches vectorielles temporelles</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="map-tab.html"
-                        title="previous chapter">Carte - Configurer la carte web avec le plugin</a></p>
+  <p class="topless"><a href="baselayer-tab.html"
+                        title="previous chapter">Fonds - configurer les fonds cartographiques</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="ftp-tab.html"
                         title="next chapter">FTP - Publier la carte par FTP</a></p>
@@ -106,17 +109,24 @@
 <h2>L&#8217;onglet Outils<a class="headerlink" href="#l-onglet-outils" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="presentation">
 <h3>Présentation<a class="headerlink" href="#presentation" title="Permalink to this headline">¶</a></h3>
-<p>Cet onglet permet de configurer des outils avancés de Lizmap</p>
-<img alt="../../_images/interface-tools-tab.png" class="align-center" src="../../_images/interface-tools-tab.png" style="width: 80%;" />
+<p>Cet onglet permet de configurer des outils avancés de Lizmap :</p>
+<ul class="simple">
+<li><strong>Localiser par couche</strong></li>
+<li><strong>Édition de couches</strong></li>
+<li><strong>Filtrer les données par utilisateur</strong></li>
+<li><strong>Time manager</strong></li>
+</ul>
 </div>
 </div>
 <div class="section" id="localiser-par-couche">
-<h2>Localiser par couche<a class="headerlink" href="#localiser-par-couche" title="Permalink to this headline">¶</a></h2>
+<span id="locate-by-layer"></span><h2>Localiser par couche<a class="headerlink" href="#localiser-par-couche" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/interface-tools-tab-locate.png" class="align-center" src="../../_images/interface-tools-tab-locate.png" style="width: 80%;" />
 <p>L&#8217;idée de cet outil est de présenter à l&#8217;utilisateur de Lizmap Web Client une liste déroulante qui permet de zoomer automatiquement sur un ou plusieurs objets spatiaux de la couche.</p>
 <div class="section" id="cas-d-utilisation">
 <h3>Cas d&#8217;utilisation<a class="headerlink" href="#cas-d-utilisation" title="Permalink to this headline">¶</a></h3>
-<p>Prenons comme exemple une couche vectorielle spatiale <strong>Communes</strong> contenue dans le projet QGIS. On choisit d&#8217;ajouter ces communes dans l&#8217;outil <em>Localiser par couche</em>, pour permettre aux utilisateurs de Lizmap Web Client de se positionner rapidement sur une des communes.</p>
-<p>Une fois cette couche ajoutée dans l&#8217;outil <em>Localiser par couche</em>, une liste déroulante contenant les communes s&#8217;affiche sur l&#8217;interface web de Lizmap. Le responsable de la publication du projet Lizmap a choisi d&#8217;afficher le nom de la commune dans cette liste. Lorsque l&#8217;utilisateur de la carte web sélectionne un nom dans cette liste, la carte se recentre automatiquement sur la commune sélectionnée, et la géométrie de la commune s&#8217;affiche. L&#8217;utilisateur peut masquer la géométrie en cliquant sur un petit bouton représentant un pinceau.</p>
+<p>Prenons comme exemple une couche vectorielle spatiale <strong>Quartiers</strong> contenue dans le projet QGIS. On choisit d&#8217;ajouter ces quartiers dans l&#8217;outil <em>Localiser par couche</em>, pour permettre aux utilisateurs de Lizmap Web Client de se positionner rapidement sur un des quartiers.</p>
+<p>Une fois cette couche ajoutée dans l&#8217;outil <em>Localiser par couche</em>, une liste déroulante contenant les quartiers s&#8217;affiche sur l&#8217;interface web de Lizmap.</p>
+<p>Lorsque l&#8217;utilisateur de la carte web sélectionne un nom dans cette liste, la carte se recentre automatiquement sur le quartier sélectionné, et la géométrie du quartier s&#8217;affiche (en option).</p>
 </div>
 <div class="section" id="pre-requis">
 <h3>Pré-requis<a class="headerlink" href="#pre-requis" title="Permalink to this headline">¶</a></h3>
@@ -129,15 +139,24 @@
 <h3>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Permalink to this headline">¶</a></h3>
 <p>Pour ajouter une couche à cet outil:</p>
 <ul class="simple">
-<li>on choisit la couche via la première liste déroulante parmi les couches vectorielles du projet,</li>
-<li>puis la colonne qui contient le libellé qu&#8217;on souhaite afficher dans la liste déroulante.</li>
-<li>Si on souhaite que la géométrie liée aux objets soit aussi affichée sur la carte lorsque l&#8217;utilisateur sélectionne un élément de la liste, alors on coche l&#8217;option <em>Afficher la géométrie</em>.</li>
-<li>Enfin on clique sur le bouton <em>Ajouter la couche</em> pour l&#8217;ajouter dans la liste</li>
+<li>on <strong>choisit la couche</strong> via la première liste déroulante parmi les couches vectorielles du projet,</li>
+<li>puis <strong>la colonne qui contient le libellé</strong> qu&#8217;on souhaite afficher dans la liste déroulante.</li>
+<li>Si on souhaite que <strong>la géométrie</strong> liée aux objets soit aussi affichée sur la carte lorsque l&#8217;utilisateur sélectionne un élément de la liste, alors on coche l&#8217;option <em>Afficher la géométrie</em>.</li>
+<li>Enfin on clique sur le bouton <strong>Ajouter la couche</strong> pour l&#8217;ajouter dans la liste</li>
 </ul>
 <p>Pour supprimer une des couches déjà configurée:</p>
 <ul class="simple">
 <li>on sélectionne la ligne en cliquant sur l&#8217;une des cases de la couche à supprimer</li>
-<li>on clique sur le bouton <em>Enlever la couche</em></li>
+<li>on clique sur le bouton <strong>Enlever la couche</strong></li>
+</ul>
+</div>
+<div class="section" id="listes-hierarchiques">
+<h3>Listes hiérarchiques<a class="headerlink" href="#listes-hierarchiques" title="Permalink to this headline">¶</a></h3>
+<p>Si on reprend l&#8217;exemple des quartiers, il peut être intéressant de proposer aussi à l&#8217;utilisateur une liste déroulante des <em>sous-quartiers</em>. On souhaite que lorsque l&#8217;utilisateur choisit un quartier, alors la liste déroulante des sous-quartiers soit automatiquement filtrée pour n&#8217;afficher que les sous-quartiers du quartier choisi.</p>
+<p>Pour cela, il existe 2 méthodes :</p>
+<ul class="simple">
+<li>soit on a <strong>2 couches vectorielles distinctes</strong> : une pour les quartiers, et une pour les sous-quartiers. Alors il faut utiliser une <strong>jointure attributaire</strong> entre les 2 couches pour activer le filtrage automatique des listes dans Lizmap.</li>
+<li>soit on n&#8217;a qu&#8217;<strong>1 seule couche des sous-quartiers</strong>, et alors on peut spécifier via le plugin l&#8217;<strong>attribut de regroupement</strong>. Deux listes déroulantes seront créées au lieu d&#8217;une seule dans l&#8217;application Web.</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -148,6 +167,14 @@
 <div class="section" id="edition-de-couches">
 <span id="lizmap-edition"></span><h2>Édition de couches<a class="headerlink" href="#edition-de-couches" title="Permalink to this headline">¶</a></h2>
 <p>Cette fonctionnalité offre la possibilité aux utilisateurs en ligne d&#8217;éditer des données spatiales pour des couches PostGIS ou Spatialite. Voir <a class="reference internal" href="../features/edition.html#edition-in-lizmap"><em>L&#8217;édition de données dans Lizmap</em></a> pour le détail de cette fonctionnalité.</p>
+</div>
+<div class="section" id="couches-filtrees-filtrer-les-donnees-en-fonction-des-utilisateurs">
+<h2>Couches filtrées - Filtrer les données en fonction des utilisateurs<a class="headerlink" href="#couches-filtrees-filtrer-les-donnees-en-fonction-des-utilisateurs" title="Permalink to this headline">¶</a></h2>
+<p>Ce tableau permet de configuré les couches dont le contenu sera filtré sur l&#8217;interface Web en fonction de l&#8217;utilisateur connecté. Voir <a class="reference internal" href="../features/filtered-layers.html#filter-layer-data-by-group"><em>Couches filtrées - Filtrer les données en fonction des utilisateurs</em></a></p>
+</div>
+<div class="section" id="time-manager-animer-des-couches-vectorielles-temporelles">
+<h2>Time Manager - Animer des couches vectorielles temporelles<a class="headerlink" href="#time-manager-animer-des-couches-vectorielles-temporelles" title="Permalink to this headline">¶</a></h2>
+<p>Dans l&#8217;application <em>Lizmap Web Client</em>, il est possible de lancer des animation sur des données vectorielles temporelles. Voir <a class="reference internal" href="../features/timemanager.html#time-manager"><em>Time Manager - Animer des couches vectorielles temporelles</em></a></p>
 </div>
 </div>
 
@@ -167,7 +194,7 @@
           <a href="ftp-tab.html" title="FTP - Publier la carte par FTP"
              >next</a> |</li>
         <li class="right" >
-          <a href="map-tab.html" title="Carte - Configurer la carte web avec le plugin"
+          <a href="baselayer-tab.html" title="Fonds - configurer les fonds cartographiques"
              >previous</a> |</li>
         <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
           <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>

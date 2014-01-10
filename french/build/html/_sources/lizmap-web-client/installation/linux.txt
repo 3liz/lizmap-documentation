@@ -50,7 +50,7 @@ Version de développement avec Github
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. note:: Attention, la version de développement est en constante évolution, et des bugs peuvent survenir. Ne pas l'utiliser en production
+.. note:: Attention, la version de développement est en constante évolution, et des bugs peuvent survenir. Ne pas l'utiliser en production.
 
 * Pour installer
 
@@ -78,6 +78,8 @@ Version de développement avec Github
    # Si vous avez des modifications, faire un commit
    git status
    git commit -am "Votre message de commit"
+   # sauvegarder vos fichiers de configuration !
+   cp lizmap/var/jauth.db /tmp/jauth.db && cp lizmap/var/logs.db /tmp/logs.db && cp lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php
    # Mettre à jour votre branche master
    git checkout master && git fetch origin && git merge origin/master
    # Appliquer sur votre branche, et gérer les éventuels conflits de merge
@@ -171,9 +173,9 @@ Avant de mettre à jour, faites une sauvegarde des données de configuration : l
    OLDVERSION=2.7.2 # replace by the version number of your current lizmap installation
    # if you installation is 2.1.0 or less, use an empty OLDVERSION instead : 
    # OLDVERSION=
-   cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/jauth.db /tmp/jauth.db # database containing groups and users
+   cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/jauth.db /tmp/jauth.db # base de données utilisateur
    cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php # text configuration file with services and repositories
-   cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/logs.db /tmp/logs.db
+   cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/logs.db /tmp/logs.db # lizmap logs
 
 Puis faites une installation classique de la nouvelle version (voir ci-dessus), ce qui crééra un nouveau dossier dans le répertoire /var/www/
 
@@ -221,6 +223,15 @@ L'outil d'édition a remplacé l'outil d'annotation et nous avons ajouté des ch
    cd /var/www/$MYAPP-$VERSION/
    sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_2.7_2.8.sql
 
+De la version 2.8.*  à la version 2.9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+La fonctionnalité de filtrage des données des couches en fonction de l'utilisateur connecté nécessite l'ajout des droits liés dans la base de données des utilisateurs:
+
+.. code-block:: bash
+
+   cd /var/www/$MYAPP-$VERSION/
+   sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_2.8_2.9.sql
 
 Supprimer les fichiers temporaires de Jelix
 --------------------------------------------------------------
