@@ -1,0 +1,228 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Fonds - configurer les fonds cartographiques &mdash; Lizmap 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Lizmap 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Interface - Les onglets" href="index.html" />
+    <link rel="next" title="Outils - Configurer les outils à afficher dans le client WEB" href="tools-tab.html" />
+    <link rel="prev" title="Carte - Configurer la carte web avec le plugin" href="map-tab.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tools-tab.html" title="Outils - Configurer les outils à afficher dans le client WEB"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="map-tab.html" title="Carte - Configurer la carte web avec le plugin"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Interface - Les onglets</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Fonds - configurer les fonds cartographiques</a><ul>
+<li><a class="reference internal" href="#principe">Principe</a></li>
+<li><a class="reference internal" href="#fonds-externes">Fonds externes</a></li>
+<li><a class="reference internal" href="#couches-lizmap-externes">Couches Lizmap externes</a><ul>
+<li><a class="reference internal" href="#presentation">Présentation</a></li>
+<li><a class="reference internal" href="#mise-en-oeuvre">Mise en oeuvre</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="map-tab.html"
+                        title="previous chapter">Carte - Configurer la carte web avec le plugin</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tools-tab.html"
+                        title="next chapter">Outils - Configurer les outils à afficher dans le client WEB</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/lizmap-plugin/interface/baselayer-tab.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="fonds-configurer-les-fonds-cartographiques">
+<h1>Fonds - configurer les fonds cartographiques<a class="headerlink" href="#fonds-configurer-les-fonds-cartographiques" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="principe">
+<h2>Principe<a class="headerlink" href="#principe" title="Permalink to this headline">¶</a></h2>
+<p>Il est souvent intéressant de séparer dans une carte publiée sur internet les couches de fonds référentiels et les couches thématiques. Dans Lizmap, on peut utiliser des groupes ou des couches du projet comme fond référentiel. Ces couches seront présentées à part des autres couches, dans une fenêtre <em>Fonds de carte</em>. La configuration se fait via l&#8217;<em>onglet Carte</em>. Voir <a class="reference internal" href="layers-tab.html#layers-tab"><em>Couches - Configurer les couches avec le plugin</em></a></p>
+<p>En plus de cette possibilité, l&#8217;administrateur du projet QGIS peut aussi :</p>
+<ul class="simple">
+<li>ajouter des fonds externes (OpenStreetMap, Google, IGN, Bing)</li>
+<li>ajouter des couches provenant d&#8217;autres projets Lizmap</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Si une seule couche de fond est configurée (couche du projet, couche web externe ou couche d&#8217;un autre projet Lizmap), alors l&#8217;interface Lizmap Web Client ne montrera pas la boîte <em>Fonds de carte</em>, mais la couche sera néanmoins visible sous les autres couches.</p>
+</div>
+</div>
+<div class="section" id="fonds-externes">
+<h2>Fonds externes<a class="headerlink" href="#fonds-externes" title="Permalink to this headline">¶</a></h2>
+<p>Lizmap permet d&#8217;ajouter des fonds externes à la liste des fonds de carte. Ces fonds proviennent des services WEB de plusieurs prestataires :</p>
+<ul class="simple">
+<li><strong>OpenStreetMap</strong> : fond officiel, fond Mapquest, fond cyclable (OpenCycleMap)</li>
+<li><strong>Google</strong> : Rues, Satellite, Hybride, Relief</li>
+<li><strong>Bing Map</strong> : Rues, Satellite, Hybride</li>
+<li><strong>IGN</strong> (Institut National de l&#8217;Information Géographique et Forestière) : Plan, Orthophotos, Scans</li>
+</ul>
+<img alt="../../_images/interface-baselayers-tab-external.png" class="align-center" src="../../_images/interface-baselayers-tab-external.png" style="width: 80%;" />
+<p>Pour certains des fonds, vous devez donner votre <strong>clé d&#8217;identification</strong> pour pouvoir visualiser les couches dans l&#8217;application web.</p>
+<p>L&#8217;ajout d&#8217;un ou de plusieurs fond(s) externe(s) à votre carte Lizmap a plusieurs conséquences, qu&#8217;il faut bien connaître pour anticiper le rendu :</p>
+<ul>
+<li><p class="first"><strong>c&#8217;est ce fond externe qui imposera les échelles de la carte</strong>. Les échelles configurées dans l&#8217;onglet Carte ne seront donc pas utilisées, sauf les échelles min et max pour restreindre la carte entre ces 2 échelles.</p>
+<p>Il faut donc faire attention dans le projet QGIS à adapter les seuils de visibilités des couches en fonction des échelles du fond externe. Voici les échelles entières approximatives des fonds externes courants:</p>
+<div class="highlight-python"><pre>0   591659008
+1   295829504
+2   147914752
+3   73957376
+4   36978688
+5   18489344
+6   9244672
+7   4622336
+8   2311168
+9   1155584
+10  577792
+11  288896
+12  144448
+13  72224
+14  36112
+15  18056
+16  9028
+17  4514
+18  2257</pre>
+</div>
+</li>
+<li><p class="first">L&#8217;affichage des données du projet QGIS se faisant sur un fond externe, <strong>QGIS doit donc reprojeter à la volée les données dans le système spatial de référence du fond</strong> Il faut donc ajouter cette projection dans l&#8217;onglet OWS des propriétés du projet. Pour l&#8217;instant, l&#8217;ensemble des fonds proposés utilise la projection:</p>
+<div class="highlight-python"><pre>EPSG:3857 ; Pseudo Mercator</pre>
+</div>
+</li>
+<li><p class="first"><strong>Les fonds externes ne peuvent pas être imprimés par QGIS</strong></p>
+<p>En effet, ils ne sont pas dans le projet QGIS, et sont ajoutés dynamiquement par Lizmap Web Client. Ils ne sont donc pas accessibles aux composeurs de QGIS</p>
+</li>
+<li><p class="first"><strong>Respecter la licence des données et les conditions d&#8217;utilisation</strong></p>
+<ul class="simple">
+<li><em>Google</em>: <a class="reference external" href="https://developers.google.com/maps/terms">https://developers.google.com/maps/terms</a></li>
+<li><em>OpenStreetMap</em>: <a class="reference external" href="http://wiki.openstreetmap.org/wiki/FR:Tile_usage_policy">http://wiki.openstreetmap.org/wiki/FR:Tile_usage_policy</a></li>
+<li><em>Mapquest</em>: <a class="reference external" href="http://developer.mapquest.com/web/products/open/map#terms">http://developer.mapquest.com/web/products/open/map#terms</a></li>
+<li><em>IGN</em>: <a class="reference external" href="http://api.ign.fr/services#web">http://api.ign.fr/services#web</a></li>
+<li><em>Bing</em>: <a class="reference external" href="https://www.microsoft.com/maps/product/terms.html">https://www.microsoft.com/maps/product/terms.html</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="couches-lizmap-externes">
+<span id="lizmap-external-baselayers"></span><h2>Couches Lizmap externes<a class="headerlink" href="#couches-lizmap-externes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="presentation">
+<h3>Présentation<a class="headerlink" href="#presentation" title="Permalink to this headline">¶</a></h3>
+<p>Lorsque plusieurs projets QGIS utlisent les mêmes fonds, comme par exemple les orthophotographies, il peut être intéressant de centraliser toutes les configurations liées aux couches de données de ces fonds référentiels dans un seul projet QGIS. De cette manière, le cache serveur de Lizmap est centralisé et non répété pour chaque projet.</p>
+<p>L&#8217;idée est d&#8217;avoir un projet <strong>source</strong> qui contient les couches que d&#8217;autres projets utiliseront comme couches de fond. Dans ces autres projets, les couches du projet source ne seront pas ajoutées via QGIS, mais configurée avec le plugin Lizmap comme fond de carte.</p>
+</div>
+<div class="section" id="mise-en-oeuvre">
+<h3>Mise en oeuvre<a class="headerlink" href="#mise-en-oeuvre" title="Permalink to this headline">¶</a></h3>
+<p>L&#8217;administrateur des projets QGIS:</p>
+<ul class="simple">
+<li>crée un projet <strong>source</strong> qui contiendra toutes les couches de fonds à partager avec d&#8217;autres projets</li>
+<li>Il ajouter les couches, et leur donne un nom simple dans QGIS, sans espace, accents, parenthèses, etc.</li>
+<li>il publie ce projet source via Lizmap</li>
+<li>Il créé d&#8217;autres projets, et ajoute via le plugin Lizmap une référence aux couches du projet source.</li>
+</ul>
+<p>Cette configuration des couches externes pour chacun des projets se fait via l&#8217;onglet <strong>Fonds</strong>, dans le groupe <strong>Couches Lizmap externes</strong></p>
+<img alt="../../_images/interface-baselayers-tab-external.png" class="align-center" src="../../_images/interface-baselayers-tab-external.png" style="width: 80%;" />
+<p>L&#8217;administrateur du projet doit renseigner pour chaque couche externe les paramètres&nbsp;suivants :</p>
+<ul class="simple">
+<li><strong>Répertoire Lizmap</strong> : l&#8217;identifiant (et nom le titre) du répertoire Lizmap</li>
+<li><strong>Projet</strong> : le nom du fichier QGIS du projet source (sans le point et l&#8217;extention). Par exemple &#8220;monprojet&#8221; si le fichier QGIS est &#8220;monprojet.qgs&#8221;</li>
+<li><strong>Couche QGIS</strong> : le nom de la couche (ou du groupe de couche) tel qu&#8217;affiché dans la légende de QGIS du projet source. <strong>Pas d&#8217;espace ni de caractères complexes dans ce nom</strong></li>
+<li><strong>Titre</strong> : le titre qui sera affiché dans la liste déroulante des fonds de carte.</li>
+</ul>
+<p>Dans l&#8217;application Web Lizmap, les couches (ou groupes de couches) ainsi définies sont appelées et ajoutées à la carte comme des couches de fonds.</p>
+<p>Parfois, on ne souhaite pas que les utilisateur puissent voir la carte du projet source dans Lizmap. On peut alors utiliser la fonctionnalité de masquage du projet Lizmap. Voir <a class="reference internal" href="map-tab.html#map-tab"><em>Carte - Configurer la carte web avec le plugin</em></a></p>
+<p>La vidéo suivante montre un exemple d&#8217;utilisation : <a class="reference external" href="https://vimeo.com/83768906">https://vimeo.com/83768906</a></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tools-tab.html" title="Outils - Configurer les outils à afficher dans le client WEB"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="map-tab.html" title="Carte - Configurer la carte web avec le plugin"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Lizmap 1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Le plugin Lizmap pour QGIS</a> &raquo;</li>
+          <li><a href="index.html" >Interface - Les onglets</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 3liz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
