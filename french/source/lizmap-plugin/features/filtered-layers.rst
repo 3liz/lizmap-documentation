@@ -19,6 +19,7 @@ Le filtrage se base sur l'identifiant du groupe de l'utilisateur actuellement co
 * les listes déroulantes des *formulaires d'édition* issues de *Valeur relationnelle*. Voir :ref:`edition_in_lizmap`
 * les fonctionnalités à venir (affichage de la table attributaire, fonctions de recherche, etc.)
 
+Un tutoriel vidéo est disponible à cette adresse : https://vimeo.com/83966790
 
 
 Configurer l'outil de filtrage des données
