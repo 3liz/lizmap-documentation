@@ -22,7 +22,8 @@ Les services
 
 Pour configurer les services, cliquer sur le bouton *Modifier* situé sous le récapitulatif
 
-* **URL du serveur WMS** : QGIS Server doit être installé sur le même ordinateur que Lizmap Web Client
+* **URL du serveur WMS** : L'url complète du serveur QGIS, par exemple http://localhost/cgi-bin/qgis_mapserv.fcgi . **Attention** QGIS Server doit être installé sur le même ordinateur que Lizmap Web Client
+* **Liste d'URLs WMS de sous-domaine (optionnel)** L'utilisation de plusieurs noms de domaines est une des optimisations classiques lorsqu'on utilise OpenLayers (comme Lizmap Web Client). Vous pouvez entrer ici une liste des sous-domaine séparés par virgule. Voir :ref:`wms_multi_domain` pour plus de détail.
 * **Type de stockage pour le cache**
 
  - *file*: Les tuiles mises en cache sont stockées dans un répertoire du serveur par couche
