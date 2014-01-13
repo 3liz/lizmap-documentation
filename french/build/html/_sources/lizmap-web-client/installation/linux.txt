@@ -38,14 +38,14 @@ Depuis le fichier ZIP
    cd /var/www/
    # options
    MYAPP=lizmap-web-client
-   VERSION=2.8.1
+   VERSION=2.9.0
    # récupération de l'archive via wget
    wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
    # on dézippze l'archive
    unzip $VERSION.zip
    # on supprime le zip
    rm $VERSION.zip
-   
+
 Version de développement avec Github
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -66,12 +66,12 @@ Version de développement avec Github
    # créer une branche personnelle pour les éventuelles modifications
    git checkout -b mybranch
 
-   
+
 * Pour mettre à jour votre branche depuis le dépôt master
 
 .. code-block:: bash
 
-   
+
    cd /var/www/$MYAPP-$VERSION
    # vérifier que vous êtes bien sur la branche mybranch
    git checkout mybranch
@@ -86,10 +86,10 @@ Version de développement avec Github
    git checkout mybranch && git rebase master
    # réappliquer les droits
    chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R   
-   
+   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
+
 .. note:: Il est toujours bon de faire une sauvegarde avant toute mise à jour.
-   
+
 
 
 Donner les droits adéquats aux répertoires et fichiers
@@ -105,7 +105,7 @@ Donner les droits adéquats aux répertoires et fichiers
 Premier test
 --------------------------------------------------------------
 
-Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.8.1/lizmap/www/
+Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.9.0/lizmap/www/
 
 
 Outil d'édition : Configurer le serveur avec le support des bases de données
@@ -120,9 +120,9 @@ Pour que l'édition de couches PostGIS dans Lizmap Web Client fonctionnent, il f
 
    sudo apt-get install php5-pgsql
    sudo service apache2 restart
-   
+
 .. note:: Pour l'édition, nous conseillons fortement d'utiliser une base de données PostGreSQL. Cela simplifie fortement l'installation et la récupération des données saisies par les utilisateurs.
-  
+
 
 Spatialite
 ------------------------------
@@ -148,7 +148,7 @@ Par exemple, si un répertoire contient un projet QGIS, qui utilise une base de 
    |--- mon_projet.qgs
    |--- bdd
       |--- mon_fichier_spatialite.sqlite
-      
+
 Alors il faut donner les droits de cette manière:
 
 .. code-block:: bash
@@ -170,8 +170,8 @@ Avant de mettre à jour, faites une sauvegarde des données de configuration : l
 .. code-block:: bash
 
    MYAPP=lizmap-web-client
-   OLDVERSION=2.7.2 # replace by the version number of your current lizmap installation
-   # if you installation is 2.1.0 or less, use an empty OLDVERSION instead : 
+   OLDVERSION=2.8.1 # replace by the version number of your current lizmap installation
+   # if you installation is 2.1.0 or less, use an empty OLDVERSION instead :
    # OLDVERSION=
    cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/jauth.db /tmp/jauth.db # base de données utilisateur
    cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php # text configuration file with services and repositories
@@ -185,11 +185,11 @@ Copier les fichiers sauvegardés dans le dossier de la nouvelle version
 
 .. code-block:: bash
 
-   $VERSION=2.8.1
+   $VERSION=2.9.0
    cp /tmp/jauth.db /var/www/$MYAPP-$VERSION/lizmap/var/jauth.db
    cp /tmp/lizmapConfig.ini.php /var/www/$MYAPP-$VERSION/lizmap/var/config/lizmapConfig.ini.php
    cp /tmp/logs.db /var/www/$MYAPP-$VERSION/lizmap/var/logs.db
-   
+
 .. note:: Pour certaines versions, il est aussi nécessaire de mettre à jour la base de données qui stocke les droits. Voir les points suivants pour plus de détail.
 
 De la version 2.3.0 ou inférieure à la 2.4.0 ou supérieure
@@ -201,7 +201,7 @@ Les librairies Jelix (outil avec lequel est construit Lizmap Web Client) a été
 
    cd /var/www/$MYAPP-$VERSION/
    sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_1.3_1.4.sql
-   
+
 De la version 2.6 ou inférieure à la version 2.7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -212,7 +212,7 @@ Le support des annotations a été ajouté à Lizmap, ainsi que la gestion des d
    cd /var/www/$MYAPP-$VERSION/
    sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_lizmap_from_2.0_and_above_to_2.5.sql
 
-   
+
 De la version 2.7.*  à la version 2.8
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -239,7 +239,7 @@ Supprimer les fichiers temporaires de Jelix
 .. code-block:: bash
 
    rm -rf /var/www/$MYAPP-$VERSION/temp/lizmap/*
-   
+
 Redéfinir les droits sur les fichiers de l'application
 -------------------------------------------------------
 

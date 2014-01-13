@@ -148,7 +148,7 @@ service apache2 restart <span class="c"># redémarrage du serveur Apache</span>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/
 <span class="c"># options</span>
 <span class="nv">MYAPP</span><span class="o">=</span>lizmap-web-client
-<span class="nv">VERSION</span><span class="o">=</span>2.8.1
+<span class="nv">VERSION</span><span class="o">=</span>2.9.0
 <span class="c"># récupération de l&#39;archive via wget</span>
 wget https://github.com/3liz/lizmap-web-client/archive/<span class="nv">$VERSION</span>.zip
 <span class="c"># on dézippze l&#39;archive</span>
@@ -214,7 +214,7 @@ chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
 </div>
 <div class="section" id="premier-test">
 <h3>Premier test<a class="headerlink" href="#premier-test" title="Permalink to this headline">¶</a></h3>
-<p>Aller à l&#8217;accueil de Lizmap pour voir si l&#8217;installation a été correctement réalisée : <a class="reference external" href="http://localhost/lizmap-web-client-2.8.1/lizmap/www/">http://localhost/lizmap-web-client-2.8.1/lizmap/www/</a></p>
+<p>Aller à l&#8217;accueil de Lizmap pour voir si l&#8217;installation a été correctement réalisée : <a class="reference external" href="http://localhost/lizmap-web-client-2.9.0/lizmap/www/">http://localhost/lizmap-web-client-2.9.0/lizmap/www/</a></p>
 </div>
 </div>
 <div class="section" id="outil-d-edition-configurer-le-serveur-avec-le-support-des-bases-de-donnees">
@@ -267,7 +267,7 @@ chmod 775 /un/chemin/vers/un_repertoire_lizmap/ -R
 <h3>Sauvegarde préalable<a class="headerlink" href="#sauvegarde-prealable" title="Permalink to this headline">¶</a></h3>
 <p>Avant de mettre à jour, faites une sauvegarde des données de configuration : lizmap/var/jauth.db and lizmap/var/config/lizmapConfig.ini.php et du fichier de log (à partir de la 2.8) lizmap/var/logs.db</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">MYAPP</span><span class="o">=</span>lizmap-web-client
-<span class="nv">OLDVERSION</span><span class="o">=</span>2.7.2 <span class="c"># replace by the version number of your current lizmap installation</span>
+<span class="nv">OLDVERSION</span><span class="o">=</span>2.8.1 <span class="c"># replace by the version number of your current lizmap installation</span>
 <span class="c"># if you installation is 2.1.0 or less, use an empty OLDVERSION instead :</span>
 <span class="c"># OLDVERSION=</span>
 cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/lizmap/var/jauth.db /tmp/jauth.db <span class="c"># base de données utilisateur</span>
@@ -279,7 +279,7 @@ cp /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$OLDVERSION</span>/l
 </div>
 <div class="section" id="copier-les-fichiers-sauvegardes-dans-le-dossier-de-la-nouvelle-version">
 <h3>Copier les fichiers sauvegardés dans le dossier de la nouvelle version<a class="headerlink" href="#copier-les-fichiers-sauvegardes-dans-le-dossier-de-la-nouvelle-version" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$VERSION</span><span class="o">=</span>2.8.1
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$VERSION</span><span class="o">=</span>2.9.0
 cp /tmp/jauth.db /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/lizmap/var/jauth.db
 cp /tmp/lizmapConfig.ini.php /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/lizmap/var/config/lizmapConfig.ini.php
 cp /tmp/logs.db /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>/lizmap/var/logs.db

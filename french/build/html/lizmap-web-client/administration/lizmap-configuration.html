@@ -110,9 +110,21 @@
 <div class="section" id="les-services">
 <h2>Les services<a class="headerlink" href="#les-services" title="Permalink to this headline">¶</a></h2>
 <p>Pour configurer les services, cliquer sur le bouton <em>Modifier</em> situé sous le récapitulatif</p>
-<ul class="simple">
-<li><strong>URL du serveur WMS</strong> : QGIS Server doit être installé sur le même ordinateur que Lizmap Web Client</li>
-<li><strong>Type de stockage pour le cache</strong></li>
+<ul>
+<li><p class="first"><strong>URL du serveur WMS</strong> : L&#8217;url complète du serveur QGIS, par exemple <a class="reference external" href="http://localhost/cgi-bin/qgis_mapserv.fcgi">http://localhost/cgi-bin/qgis_mapserv.fcgi</a> . <strong>Attention</strong> QGIS Server doit être installé sur le même ordinateur que Lizmap Web Client</p>
+</li>
+<li><p class="first"><strong>Liste d&#8217;URLs WMS de sous-domaine (optionnel)</strong> L&#8217;utilisation de plusieurs noms de domaines est une des optimisations classiques lorsqu&#8217;une application web utilise OpenLayers (comme Lizmap Web Client). Vous pouvez entrer ici une liste des sous-domaine séparés par virgule.</p>
+<ul>
+<li><p class="first">Vous devez utiliser une <strong>liste de sous-domaines</strong> par rapport au domaine avec lequel est utilisé Lizmap Web Client. Par exemple, si votre nom de domaine principal est <strong>cartes.exemple.com</strong>, alors vous pouvez utiliser <strong>a.cartes.exemple.com, b.cartes.exemple.com, c.cartes.exemple.com, d.cartes.exemple.com</strong>.</p>
+</li>
+<li><p class="first">Vous devez bien sûr avoir configuré l&#8217;<em>hôte virtuel</em> du serveur Apache pour prendre en compte ces sous-domaines, par exemple avec la variable</p>
+<div class="code bash highlight-python"><pre>ServerAlias \*.cartes.exemple.com</pre>
+</div>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Type de stockage pour le cache</strong></p>
+</li>
 </ul>
 <blockquote>
 <div><ul class="simple">
