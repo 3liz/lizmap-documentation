@@ -86,7 +86,7 @@ Version de développement avec Github
    git checkout mybranch && git rebase master
    # réappliquer les droits
    chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
+   chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
 
 .. note:: Il est toujours bon de faire une sauvegarde avant toute mise à jour.
 
@@ -99,7 +99,7 @@ Donner les droits adéquats aux répertoires et fichiers
 
    cd /var/www/$MYAPP-$VERSION
    chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
+   chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
 
 
 Premier test
@@ -247,4 +247,4 @@ Redéfinir les droits sur les fichiers de l'application
 
    cd /var/www/$MYAPP-$VERSION
    chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
+   chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R

@@ -195,7 +195,7 @@ git checkout master <span class="o">&amp;&amp;</span> git fetch origin <span cla
 git checkout mybranch <span class="o">&amp;&amp;</span> git rebase master
 <span class="c"># réappliquer les droits</span>
 chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
+chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
 </pre></div>
 </div>
 <div class="admonition note">
@@ -208,7 +208,7 @@ chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
 <h3>Donner les droits adéquats aux répertoires et fichiers<a class="headerlink" href="#donner-les-droits-adequats-aux-repertoires-et-fichiers" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>
 chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
+chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
 </pre></div>
 </div>
 </div>
@@ -332,7 +332,7 @@ sqlite3 lizmap/var/jauth.db &lt; lizmap/install/sql/upgrade_jacl2db_2.8_2.9.sql
 <h3>Redéfinir les droits sur les fichiers de l&#8217;application<a class="headerlink" href="#redefinir-les-droits-sur-les-fichiers-de-l-application" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> /var/www/<span class="nv">$MYAPP</span>-<span class="nv">$VERSION</span>
 chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-chmod 775 temp/ lizmap/var/ lizmap/install/qgis/edition/ -R
+chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
 </pre></div>
 </div>
 </div>
