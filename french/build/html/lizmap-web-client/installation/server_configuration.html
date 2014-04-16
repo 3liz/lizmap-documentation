@@ -61,6 +61,7 @@
 </li>
 <li><a class="reference internal" href="#serveur-web-apache">Serveur Web : Apache</a><ul>
 <li><a class="reference internal" href="#installation-des-paquets-necessaires">Installation des paquets nécessaires</a></li>
+<li><a class="reference internal" href="#configuration-de-la-compression">Configuration de la compression</a></li>
 <li><a class="reference internal" href="#configuration-de-php5">Configuration de php5</a></li>
 <li><a class="reference internal" href="#configuration-du-mpm-worker">Configuration du mpm-worker</a></li>
 <li><a class="reference internal" href="#configuration-de-mod-fcgid">Configuration de mod_fcgid</a></li>
@@ -176,6 +177,28 @@ a2enmod actions
 a2enmod fcgid
 a2enmod ssl
 a2enmod rewrite
+a2enmod headers
+a2enmod deflate
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration-de-la-compression">
+<h3>Configuration de la compression<a class="headerlink" href="#configuration-de-la-compression" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>nano /etc/apache2/conf.d/mod_deflate.conf <span class="c"># y ajouter</span>
+&lt;Location /&gt;
+        <span class="c"># Insérer le filtre</span>
+        SetOutputFilter DEFLATE
+        <span class="c"># Netscape 4.x rencontre quelques problèmes...</span>
+        BrowserMatch ^Mozilla/4 gzip-only-text/html
+        <span class="c"># Netscape 4.06-4.08 rencontre encore plus de problèmes</span>
+        BrowserMatch ^Mozilla/4<span class="se">\.</span>0<span class="o">[</span>678<span class="o">]</span> no-gzip
+        <span class="c"># MSIE se fait passer pour Netscape, mais tout va bien</span>
+        BrowserMatch <span class="se">\b</span>MSIE !no-gzip !gzip-only-text/html
+        <span class="c"># Ne pas compresser les images</span>
+        SetEnvIfNoCase Request_URI <span class="se">\.</span><span class="o">(</span>?:gif|jpe?g|png<span class="o">)</span><span class="nv">$ </span>no-gzip dont-vary
+        <span class="c"># S&#39;assurer que les serveurs mandataires délivrent le bon contenu</span>
+        Header append Vary User-Agent <span class="nv">env</span><span class="o">=</span>!dont-vary
+&lt;/Location&gt;
 </pre></div>
 </div>
 </div>
@@ -314,7 +337,7 @@ ln /bin/false /bin/ftponly
 <span class="c"># On configure les propriétés des répertoires et fichiers créés par les utilisateurs</span>
 <span class="nb">echo</span> <span class="s2">&quot;133 022&quot;</span> &gt; /etc/pure-ftpd/conf/Umask
 <span class="c"># La plage de ports pour le mode passif (à ouvrir vers l&#39;extérieur)</span>
-<span class="nb">echo</span> <span class="s2">&quot;5500 5700&quot;</span> &gt; /etc/pure-ftpd/conf/PassivePortRange
+<span class="nb">echo</span> <span class="s2">&quot;5400 5600&quot;</span> &gt; /etc/pure-ftpd/conf/PassivePortRange
 <span class="c"># On crée un certificat SSL pour le FTP</span>
 openssl req -x509 -nodes -newkey rsa:1024 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
 chmod 400 /etc/ssl/private/pure-ftpd.pem

@@ -80,39 +80,4 @@ L'ajout d'un ou de plusieurs fond(s) externe(s) à votre carte Lizmap a plusieur
 Couches Lizmap externes
 ========================
 
-Présentation
---------------
-
-Lorsque plusieurs projets QGIS utlisent les mêmes fonds, comme par exemple les orthophotographies, il peut être intéressant de centraliser toutes les configurations liées aux couches de données de ces fonds référentiels dans un seul projet QGIS. De cette manière, le cache serveur de Lizmap est centralisé et non répété pour chaque projet.
-
-L'idée est d'avoir un projet **source** qui contient les couches que d'autres projets utiliseront comme couches de fond. Dans ces autres projets, les couches du projet source ne seront pas ajoutées via QGIS, mais configurée avec le plugin Lizmap comme fond de carte.
-
-
-Mise en oeuvre
-----------------
-
-L'administrateur des projets QGIS:
-
-* crée un projet **source** qui contiendra toutes les couches de fonds à partager avec d'autres projets
-* Il ajouter les couches, et leur donne un nom simple dans QGIS, sans espace, accents, parenthèses, etc.
-* il publie ce projet source via Lizmap
-* Il créé d'autres projets, et ajoute via le plugin Lizmap une référence aux couches du projet source.
-
-Cette configuration des couches externes pour chacun des projets se fait via l'onglet **Fonds**, dans le groupe **Couches Lizmap externes**
-
-.. image:: ../MEDIA/interface-baselayers-tab-external.png
-   :align: center
-   :width: 80%
-
-L'administrateur du projet doit renseigner pour chaque couche externe les paramètres suivants :
-
-* **Répertoire Lizmap** : l'identifiant (et nom le titre) du répertoire Lizmap
-* **Projet** : le nom du fichier QGIS du projet source (sans le point et l'extention). Par exemple "monprojet" si le fichier QGIS est "monprojet.qgs"
-* **Couche QGIS** : le nom de la couche (ou du groupe de couche) tel qu'affiché dans la légende de QGIS du projet source. **Pas d'espace ni de caractères complexes dans ce nom**
-* **Titre** : le titre qui sera affiché dans la liste déroulante des fonds de carte.
-
-Dans l'application Web Lizmap, les couches (ou groupes de couches) ainsi définies sont appelées et ajoutées à la carte comme des couches de fonds.
-
-Parfois, on ne souhaite pas que les utilisateur puissent voir la carte du projet source dans Lizmap. On peut alors utiliser la fonctionnalité de masquage du projet Lizmap. Voir :ref:`map_tab`
-
-La vidéo suivante montre un exemple d'utilisation : https://vimeo.com/83768906
+Cette fonctionnalité a été supprimée. Elle est remplacée par la possibilité d'utiliser le menu  **Couches > Intégrer des couches et des groupess**, et de déclarer dans l'onglet *Couches* du plugin le projet parent et le répertoire Lizmap pour ces couches ou groupes intégrés. Voir :ref:`layers_tab_embedded:`

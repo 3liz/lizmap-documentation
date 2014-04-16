@@ -66,6 +66,28 @@ Installation des paquets nécessaires
    a2enmod fcgid
    a2enmod ssl
    a2enmod rewrite
+   a2enmod headers
+   a2enmod deflate
+
+Configuration de la compression
+-------------------------------
+.. code-block:: bash
+
+   nano /etc/apache2/conf.d/mod_deflate.conf # y ajouter
+   <Location />
+           # Insérer le filtre
+           SetOutputFilter DEFLATE
+           # Netscape 4.x rencontre quelques problèmes...
+           BrowserMatch ^Mozilla/4 gzip-only-text/html
+           # Netscape 4.06-4.08 rencontre encore plus de problèmes
+           BrowserMatch ^Mozilla/4\.0[678] no-gzip
+           # MSIE se fait passer pour Netscape, mais tout va bien
+           BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+           # Ne pas compresser les images
+           SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+           # S'assurer que les serveurs mandataires délivrent le bon contenu
+           Header append Vary User-Agent env=!dont-vary
+   </Location>
 
 
 Configuration de php5
@@ -223,7 +245,7 @@ Configuration
    # On configure les propriétés des répertoires et fichiers créés par les utilisateurs
    echo "133 022" > /etc/pure-ftpd/conf/Umask
    # La plage de ports pour le mode passif (à ouvrir vers l'extérieur)
-   echo "5500 5700" > /etc/pure-ftpd/conf/PassivePortRange
+   echo "5400 5600" > /etc/pure-ftpd/conf/PassivePortRange
    # On crée un certificat SSL pour le FTP
    openssl req -x509 -nodes -newkey rsa:1024 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem 
    chmod 400 /etc/ssl/private/pure-ftpd.pem

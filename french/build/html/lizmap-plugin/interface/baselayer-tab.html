@@ -55,11 +55,7 @@
 <li><a class="reference internal" href="#">Fonds - configurer les fonds cartographiques</a><ul>
 <li><a class="reference internal" href="#principe">Principe</a></li>
 <li><a class="reference internal" href="#fonds-externes">Fonds externes</a></li>
-<li><a class="reference internal" href="#couches-lizmap-externes">Couches Lizmap externes</a><ul>
-<li><a class="reference internal" href="#presentation">Présentation</a></li>
-<li><a class="reference internal" href="#mise-en-oeuvre">Mise en oeuvre</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#couches-lizmap-externes">Couches Lizmap externes</a></li>
 </ul>
 </li>
 </ul>
@@ -167,33 +163,7 @@
 </div>
 <div class="section" id="couches-lizmap-externes">
 <span id="lizmap-external-baselayers"></span><h2>Couches Lizmap externes<a class="headerlink" href="#couches-lizmap-externes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="presentation">
-<h3>Présentation<a class="headerlink" href="#presentation" title="Permalink to this headline">¶</a></h3>
-<p>Lorsque plusieurs projets QGIS utlisent les mêmes fonds, comme par exemple les orthophotographies, il peut être intéressant de centraliser toutes les configurations liées aux couches de données de ces fonds référentiels dans un seul projet QGIS. De cette manière, le cache serveur de Lizmap est centralisé et non répété pour chaque projet.</p>
-<p>L&#8217;idée est d&#8217;avoir un projet <strong>source</strong> qui contient les couches que d&#8217;autres projets utiliseront comme couches de fond. Dans ces autres projets, les couches du projet source ne seront pas ajoutées via QGIS, mais configurée avec le plugin Lizmap comme fond de carte.</p>
-</div>
-<div class="section" id="mise-en-oeuvre">
-<h3>Mise en oeuvre<a class="headerlink" href="#mise-en-oeuvre" title="Permalink to this headline">¶</a></h3>
-<p>L&#8217;administrateur des projets QGIS:</p>
-<ul class="simple">
-<li>crée un projet <strong>source</strong> qui contiendra toutes les couches de fonds à partager avec d&#8217;autres projets</li>
-<li>Il ajouter les couches, et leur donne un nom simple dans QGIS, sans espace, accents, parenthèses, etc.</li>
-<li>il publie ce projet source via Lizmap</li>
-<li>Il créé d&#8217;autres projets, et ajoute via le plugin Lizmap une référence aux couches du projet source.</li>
-</ul>
-<p>Cette configuration des couches externes pour chacun des projets se fait via l&#8217;onglet <strong>Fonds</strong>, dans le groupe <strong>Couches Lizmap externes</strong></p>
-<img alt="../../_images/interface-baselayers-tab-external.png" class="align-center" src="../../_images/interface-baselayers-tab-external.png" style="width: 80%;" />
-<p>L&#8217;administrateur du projet doit renseigner pour chaque couche externe les paramètres&nbsp;suivants :</p>
-<ul class="simple">
-<li><strong>Répertoire Lizmap</strong> : l&#8217;identifiant (et nom le titre) du répertoire Lizmap</li>
-<li><strong>Projet</strong> : le nom du fichier QGIS du projet source (sans le point et l&#8217;extention). Par exemple &#8220;monprojet&#8221; si le fichier QGIS est &#8220;monprojet.qgs&#8221;</li>
-<li><strong>Couche QGIS</strong> : le nom de la couche (ou du groupe de couche) tel qu&#8217;affiché dans la légende de QGIS du projet source. <strong>Pas d&#8217;espace ni de caractères complexes dans ce nom</strong></li>
-<li><strong>Titre</strong> : le titre qui sera affiché dans la liste déroulante des fonds de carte.</li>
-</ul>
-<p>Dans l&#8217;application Web Lizmap, les couches (ou groupes de couches) ainsi définies sont appelées et ajoutées à la carte comme des couches de fonds.</p>
-<p>Parfois, on ne souhaite pas que les utilisateur puissent voir la carte du projet source dans Lizmap. On peut alors utiliser la fonctionnalité de masquage du projet Lizmap. Voir <a class="reference internal" href="map-tab.html#map-tab"><em>Carte - Configurer la carte web avec le plugin</em></a></p>
-<p>La vidéo suivante montre un exemple d&#8217;utilisation : <a class="reference external" href="https://vimeo.com/83768906">https://vimeo.com/83768906</a></p>
-</div>
+<p>Cette fonctionnalité a été supprimée. Elle est remplacée par la possibilité d&#8217;utiliser le menu  <strong>Couches &gt; Intégrer des couches et des groupess</strong>, et de déclarer dans l&#8217;onglet <em>Couches</em> du plugin le projet parent et le répertoire Lizmap pour ces couches ou groupes intégrés. Voir <em class="xref std std-ref">layers_tab_embedded:</em></p>
 </div>
 </div>
 

@@ -80,6 +80,7 @@
 <li><a class="reference internal" href="#remarques">Remarques</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#centraliser-le-cache-via-l-integration-de-groupes-et-couches-d-un-projet-parent">Centraliser le cache via l&#8217;intégration de groupes et couches d&#8217;un projet parent</a></li>
 </ul>
 </li>
 </ul>
@@ -243,6 +244,28 @@ etc.
 <li><strong>Les 2 modes de cache Serveur et Client sont complètement indépendants</strong> l&#8217;un de l&#8217;autre. Mais bien sûr, il est intéressant d&#8217;utiliser les 2 en même temps pour optimiser l&#8217;application et libérer les ressources du serveur.</li>
 </ul>
 </div>
+</div>
+<div class="section" id="centraliser-le-cache-via-l-integration-de-groupes-et-couches-d-un-projet-parent">
+<span id="layers-tab-embedded"></span><h2>Centraliser le cache via l&#8217;intégration de groupes et couches d&#8217;un projet parent<a class="headerlink" href="#centraliser-le-cache-via-l-integration-de-groupes-et-couches-d-un-projet-parent" title="Permalink to this headline">¶</a></h2>
+<p>Dans QGIS, il est possible d&#8217;intégrer dans un projet des groupes ou des couches depuis un autre projet (qu&#8217;on appellera &#8220;parent&#8221;). Cette technique est intéressante, car elle permet de définir les propriétés des couches une seule fois dans un projet, par exemple pour les fonds de carte (Dans les projets &#8220;fils&#8221; qui intègrent ces couches, il n&#8217;est pas possible de modifier les propriétés)</p>
+<p>Lizmap utilise cette fonctionnalité pour centraliser le cache des tuiles. Pour tous les projets fils qui utilisent des couches intégrées du projet parent, Lizmap demandera à QGIS Server les tuiles du projet parent, et non des projets fils. Le cache sera donc centralisé au niveau du projet parent, et tous les projets fils qui utilisent les couches bénéficieront du cache mis en commun.</p>
+<p>Pour pouvoir utiliser cette fonctionnalité, il faut</p>
+<ul class="simple">
+<li><strong>publier le projet QGIS parent avec Lizmap</strong>.<ul>
+<li>il faut bien <strong>choisir l&#8217;emprise annoncée</strong> dans l&#8217;onglet <em>Serveur Ows</em> des propriétés du projet, car cette <strong>emprise devra être réutilisée à l&#8217;identique dans les projets fils.</strong></li>
+<li>il faut <strong>configurer le cache</strong> pour les couches à intégrer. De même, bien noter les options choisies ici (format d&#8217;image, metatile, expiration) pour les utiliser telles quelles dans les projets fils.</li>
+<li>Il est possible de <strong>masquer le projet</strong> dans la page d&#8217;acceuil de Lizmap via la case à cocher <em>Masquer le projet dans Lizmap Web Client</em> de l&#8217;onglet <em>Carte</em> du plugin.</li>
+</ul>
+</li>
+<li><strong>Ouvrir le projet fils</strong>, et <em>intégrer des couches ou des groupes dans ce projet</em>, par exemple une orthophotographie. Ensuite il faut :<ul>
+<li>vérifier que l&#8217;<strong>emprise annonceé</strong> dans les propriétés du projet QGIS / Serveur OwS est <strong>exactement la même que celle du projet parent</strong></li>
+<li>il faut <strong>configurer le cache</strong> pour la couche intégrée <strong>avec exactement les mêmes options que celles choisies dans le projet parent</strong> : format d&#8217;image, expiration, metatile</li>
+<li>il faut renseigner l&#8217;identifiant Lizmap du <strong>Répertoire source</strong> du projet parent (celui configuré dans l&#8217;interface d&#8217;administration de Lizmap Web Client)</li>
+<li>le code du <strong>Projet source</strong> (le nom du projet QGIS parent sans l&#8217;extension .qgs) est renseigné automatiquement pour les couches et les groupes intégrés.</li>
+</ul>
+</li>
+<li><strong>Publier le projet fils</strong> vers l&#8217;application Lizmap Web Client, comme d&#8217;habitude.</li>
+</ul>
 </div>
 </div>
 
