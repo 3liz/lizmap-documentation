@@ -51,6 +51,9 @@ Masquer une colonne ou modifier son nom
 On peut utiliser les outils de **l'onglet Champs** des **propriétés de la couche**:
 
 * Pour **ne pas afficher** une colonne dans la popup: *Outil d'édition : Cachée*
+
+..note:: Attention, depuis QGIS 2.0, pour **masquer une colonne** dans la popup, il faut maintenant **décocher la case WMS pour les champs à masquer**. Cette colonne se trouve dans l'onglet champ, tout à droite
+
 * Pour **modifier le nom** qui sera affiché pour la colonne : *colonne Alias*
 
 .. image:: ../MEDIA/features-popup-fields.png
