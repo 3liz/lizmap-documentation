@@ -101,7 +101,7 @@ Ensuite dans Lizmap Web Client, on peut offrir un accès à ces documents pour 2
 * les **popups** : le contenu d'une ou plusieurs colonne pour chaque géométrie peut préciser le chemin vers le média. Par exemple une colonne *photo*, ou bien une colonne *pdf*
 * le **lien** indiqué pour chaque groupe ou couche via l'onglet *Couches* du plugin Lizmap
 
-Le détail de ces utilisation est précisé ci-dessous
+Le détail de ces utilisation est précisé ci-dessous.
 
 
 Utilisation pour les liens
@@ -135,7 +135,7 @@ Par exemple, si on souhaite que les popups liées à une couche affichent une ph
 Exemple
 ________
 
-Voici pour l'exemple la table attributaire d'une couche *paysage* configurée pour afficher des photos dans la popup. L'utilisateur a créé une colonne *photo* dans laquelle il place le chemin vers les photos, et une colonne *pdf* dans laquelle il met les chemins vers un fichier pdf décrivant l'objet correspondant à chaque ligne
+Voici pour l'exemple la table attributaire d'une couche *paysage* configurée pour afficher des photos dans la popup. L'utilisateur a créé une colonne *photo* dans laquelle il place le chemin vers les photos, et une colonne *pdf* dans laquelle il met les chemins vers un fichier pdf décrivant l'objet correspondant à chaque ligne.
 
 ======  ======  ===========  ========================  ========================
 id      nom     description  photo                     pdf
