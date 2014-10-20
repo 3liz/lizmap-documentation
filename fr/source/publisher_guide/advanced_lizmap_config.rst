@@ -366,7 +366,7 @@ Une fois que vous avez récupéré le contenu du thème par défaut, vous pouvez
 * remplacer les images
 * modifier les fichiers CSS
 
-Une fois que votre thème est prêt, il vous suffit de le publier avce le dossier media et les projets.
+Une fois que votre thème est prêt, il vous suffit de le publier avec le dossier media et les projets.
 
 .. _print_lizmap:
 
@@ -462,7 +462,7 @@ Remarques
 Centraliser le cache via l'intégration de groupes et couches d'un projet parent
 ================================================================================
 
-Dans QGIS, il est possible d'intégrer dans un projet des groupes ou des couches depuis un autre projet (qu'on appellera "parent"). Cette technique est intéressante, car elle permet de définir les propriétés des couches une seule fois dans un projet, par exemple pour les fonds de carte (Dans les projets "fils" qui intègrent ces couches, il n'est pas possible de modifier les propriétés)
+Dans QGIS, il est possible d'intégrer dans un projet des groupes ou des couches depuis un autre projet (qu'on appellera "parent"). Cette technique est intéressante, car elle permet de définir les propriétés des couches une seule fois dans un projet, par exemple pour les fonds de carte (Dans les projets "fils" qui intègrent ces couches, il n'est pas possible de modifier les propriétés).
 
 Lizmap utilise cette fonctionnalité pour centraliser le cache des tuiles. Pour tous les projets fils qui utilisent des couches intégrées du projet parent, Lizmap demandera à QGIS Server les tuiles du projet parent, et non des projets fils. Le cache sera donc centralisé au niveau du projet parent, et tous les projets fils qui utilisent les couches bénéficieront du cache mis en commun.
 
@@ -516,7 +516,7 @@ Depuis la version 2.8, il est possible de permettre aux utilisateurs d'**éditer
 * création d'élements
 * modification des attributs
 * modification de la géométrie
-* suppresion d'éléments
+* suppression d'éléments
 
 Le **formulaire web** présenté à l'utilisateur pour renseigner la **table attributaire** prend en charge les **Outils d'éditions** proposés dans l'onglet *Champs* des *propriétés de la couche* vectorielle QGIS. On peut donc configurer une liste déroulante, masquer une colonne, la rendre non-éditable, utiliser une case à cocher, un champ texte, etc. Toute la configuration se fait à la souris, dans QGIS et dans le plugin Lizmap.
 
@@ -572,7 +572,7 @@ Voici le détail des étapes:
 
   - *Sélectionner la couche* dans la liste déroulante
   - Cocher les actions que vous souhaitez activer parmi: *Créer, Modifier les attributs, Modifier la géométrie, Supprimer*
-  - Ajouter la couche dans la liste via le bouton *Ajouter la couche*
+  - Ajouter la couche dans la liste via le bouton *Ajouter la couche*.
 
 .. image:: ../MEDIA/features-edition-table.png
    :align: center
