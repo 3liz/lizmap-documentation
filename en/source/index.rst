@@ -17,6 +17,7 @@ Lizmap - Documentation
   :maxdepth: 3
 	
   introduction
+  user_guide
 
 
 Indices and tables

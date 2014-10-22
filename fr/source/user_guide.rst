@@ -17,12 +17,12 @@ Il est possible de consulter directement la fiche d'information d'une carte. Ces
    :align: center
    :scale: 80%
 
-L'accès au carte se fait soit en cliquant sur une des botons **Accéder à la carte** ou sur l'image qui accompagne le projet.
+L'accès au carte se fait soit en cliquant sur le bouton **Accéder à la carte** ou sur l'image qui accompagne le projet.
 
 Une carte simple
 ===============================================================
 
-LizMap propose par défaut des cartes web ayant les fonctionnalités suivantes :
+Lizmap propose par défaut des cartes web ayant les fonctionnalités suivantes :
 
 * déplacement
 * zoom sur une zone dessinée par l'utilisateur
@@ -101,7 +101,7 @@ L'éditeur de la carte peut ajouter certaines fonctionnalités en fonction de l'
 La sélection d'un fond de plan
 -------------------------------
 
-A l'aide du plugin LizMap, l'éditeur peut avoir ajouter à la carte des fonds de plan externe ou un fond de plan vide. Ces fonds de plan sont accessibles dans le panneau de gestion des couches sous forme d'une liste.
+A l'aide du plugin Lizmap, l'éditeur peut avoir ajouter à la carte des fonds de plan externe ou un fond de plan vide. Ces fonds de plan sont accessibles dans le panneau de gestion des couches sous forme d'une liste.
 
 .. image:: MEDIA/user-guide-08-baselayers.png
    :align: center
@@ -114,7 +114,7 @@ La localisation par couche
 
 Cette fonction est affiché par défaut si elle a été activé par l'éditeur de la carte.
 
-Elle se trouve au dessus du panneau de gestion des couches et se présentent sous forme de liste. Certaines listes nécessitent de saisir quelques caractères avant de proposer des localisations.
+Elle se trouve au dessus du panneau de gestion des couches et se présente sous forme de listes. Certaines listes nécessitent de saisir quelques caractères avant de proposer des localisations.
 
 .. image:: MEDIA/user-guide-09-locate-by-layer.png
    :align: center
@@ -155,9 +155,9 @@ La mesure s'affiche dans la barre de message.
    :align: center
    :scale: 80%
 
-En double-cliquant sur la carte, la mesure se fixe. Pour recommencer vous pouvez cliquer sur la carte et ainsi relancer le calcul de la mesure.
+En double-cliquant sur la carte, la mesure se fixe. Pour recommencer, vous pouvez cliquer sur la carte et ainsi relancer le calcul de la mesure.
 
-Le bouton de droite de la barre de fonction permet d'arrêter l'utilisation de la fonctionnalité.
+Dans la barre de fonctions, le bouton sur la droite  permet d'arrêter l'utilisation de celle-ci.
 
 .. image:: MEDIA/user-guide-13-measure-stop.png
    :align: center
@@ -169,13 +169,13 @@ Il est aussi possible de changer de fonctionnalité de mesure sans avoir à arr�
 L'impression
 ------------
 
-la fonction d'impression est accessible dans la barre de menu de Lizmap. Elle dépend du nombre de composition d'impression publier par l'éditeur de la carte.
+La fonction d'impression est accessible dans la barre de menu de Lizmap. Elle dépend du nombre de compositions d'impression publiés par l'éditeur de la carte.
 
 .. image:: MEDIA/user-guide-14-print-menu.png
    :align: center
    :scale: 80%
 
-Une fois la fonctionnalité activée, une zone d'impression de la forme de celle de la composition apparait en sur impression de la carte. Cette zone permet de définir la zone à imprimer. Vous pouvez la déplacer.
+Une fois la fonctionnalité activée, une zone d'impression de la forme de celle de la composition apparaît en sur impression de la carte. Cette zone permet de définir la zone à imprimer. Vous pouvez la déplacer.
 
 .. image:: MEDIA/user-guide-15-print-zone.png
    :align: center
@@ -203,7 +203,7 @@ Pour lancer la génération de l'impression, vous pouvez cliquer sur *Imprimer*.
 L'édition de données géographiques
 -----------------------------------
 
-L'éditeur de la carte peut permettre à des utilisateurs l'édition de certaines données. Il a aussi la possibilité de limité les modifications possibles :
+L'auteur de la carte peut permettre à des utilisateurs l'édition de certaines données. Il a aussi la possibilité de limiter les modifications possibles :
 
 * ajout d'objet
 * modification géométrique
@@ -216,17 +216,17 @@ La fonction est accessible dans la barre de menu de Lizmap. Le menu d'édition, 
    :align: center
    :scale: 80%
 
-Une fois la couche sélectionné, le menu d'édition apparait. Celui-ci varie en fonction de la configuration souhaité par l'éditeur de la carte. Si toutes les modifications sont accessibles vous devez choisir entre *ajouter* un nouvelle objet ou en *sélectionner* un.
+Une fois la couche sélectionné, le panneau d'édition apparait. Celui-ci varie en fonction de la configuration souhaité par l'éditeur de la carte. Si toutes les modifications sont accessibles vous devez choisir entre *ajouter* un nouvelle objet ou en *sélectionner* un.
 
 .. image:: MEDIA/user-guide-20-edition-add.png
    :align: center
    :scale: 80%
 
-Si vous avez sélectionner *ajouter*, vous serez inviter un dessin une forme simple qui dépende de la couche de données sélectionnée :
+Si vous avez sélectionné *ajouter*, vous serez invité à dessiner une forme simple qui dépende de la couche de données sélectionnée :
 
 * point
 * ligne
-* polygon
+* polygone
 
 Dans le cas de la ligne et du polygone, vous devrez cliquer plusieurs fois afin de dessiner la forme voulu.
 
@@ -262,7 +262,7 @@ La liste des objets éditables en dessous de l'endroit du clique apparaîtra. Vo
    :align: center
    :scale: 80%
 
-L'objet sélectionné apparait sur la carte et est directement modifiable.
+L'objet sélectionné apparait sur la carte et sa géométrie est directement modifiable.
 
 .. image:: MEDIA/user-guide-26-edition-select-draw.png
    :align: center
@@ -288,7 +288,7 @@ Un boîte de dialogue contenant le formulaire de saisie des attributs de l'objet
 
 Le bouton *Valider* permet d'enregistrer les modifications de géométrie et d'attributs.
 
-Si vous souhaitez supprimer l'objet que vous avez sélectionner, vous devez cliquer sur *Sup*.
+Si vous souhaitez supprimer l'objet que vous avez sélectionné, vous devez cliquer sur *Sup*.
 
 Enfin pour désactiver l'outil édition, il vous suffit de cliquer sur *Arrêter*.
 
