@@ -86,7 +86,7 @@ You can log out and edit your user information.
 Advanced features
 ===============================================================
 
-The map editor can add some features depending on the desired user experience:
+The map publisher can add some features depending on the desired user experience:
 
 * selecting a basemap
 * locate by layer
@@ -110,7 +110,7 @@ Using the Lizmap plugin, the editor may have added external base maps or an empt
 Locate by layer
 ---------------------------
 
-This feature is displayed by default if it has been activated by the map editor.
+This feature is displayed by default if it has been activated by the map publisher.
 
 It is located above the layer management panel and is in the form of lists. Some lists need to enter a few characters before proposing locations.
 
@@ -166,7 +166,7 @@ It is also possible to change the measurement functionality without having to st
 Printing
 ------------
 
-The print feature is available in the Lizmap menu bar. It depends on the number of print compositions published by the map editor.
+The print feature is available in the Lizmap menu bar. It depends on the number of print compositions published by the map publisher.
 
 .. image:: MEDIA/user-guide-14-print-menu.png
    :align: center
@@ -190,7 +190,7 @@ Depending on the configuration of the printing composition, you can have the pos
    :align: center
    :scale: 80%
 
-To begin building the print file, you can click on *Print*. You will get a PDF file with the layout defined by the map editor.
+To begin building the print file, you can click on *Print*. You will get a PDF file with the layout defined by the map publisher.
 
 .. image:: MEDIA/user-guide-18-print-result.png
    :align: center
@@ -200,7 +200,7 @@ To begin building the print file, you can click on *Print*. You will get a PDF f
 Editing spatial data
 -----------------------------------
 
-The map editor can allow users to edit certain data. It also has the ability to limit possible changes:
+The map publisher can allow users to edit certain data. It also has the ability to limit possible changes:
 
 * adding spatial object
 * geometric modification
@@ -213,7 +213,7 @@ The feature is available in the Lizmap menu bar. The edit menu allows you to sel
    :align: center
    :scale: 80%
 
-Once the layer selected, the edit pannel appears. This varies depending on the configuration desired by the map editor. If any changes are available you have to choose between *add* a new object or *select* one.
+Once the layer selected, the edit pannel appears. This varies depending on the configuration desired by the map publisher. If any changes are available you have to choose between *add* a new object or *select* one.
 
 .. image:: MEDIA/user-guide-20-edition-add.png
    :align: center
