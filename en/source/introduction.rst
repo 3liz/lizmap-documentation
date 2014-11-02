@@ -68,7 +68,7 @@ By default, Lizmap offers web maps with the following features:
 * zoom less
 * displaying the scale as a scale bar and digitally
 
-The displayed legend respects the order and organization defined in QGIS..
+The displayed legend respects the order and organization defined in QGIS.
 
 The interface allows the user to hide the legend and take advantage of the map in the entire width of the screen. It also lets you view the information on the map (description, extent, contact).
 
@@ -83,9 +83,9 @@ Configuration with QGIS
 
 Map's configuration is done in QGIS.
 
-One part comes directly from the QGIS project:
+One part comes directly from the **QGIS project**:
 
-* order and structure of the legend
+* legend order and structure
 * layer symbology
 * location map with a group Overview in the legend
 * configure print templates via composers
@@ -105,7 +105,7 @@ The rest is done with the **Lizmap plugin**. This plugin allows to:
 
   * printing
   * measuring length, area and perimeter
-  * using geolocation of the user (GPS)
+  * using user geolocation (GPS)
   * address search in OpenStreetMap or Google
 
 * set external baselayers:
@@ -113,12 +113,13 @@ The rest is done with the **Lizmap plugin**. This plugin allows to:
   * Google Maps
   * Bing Maps
   * OpenStreetMap
+  * Géoportail IGN
 
 * set layers for navigation shortcut:
 
   * search in a layer field
   * zoom to the selected item
-  * cascaded search within the 2 same layer fields or attachment between layers
+  * cascaded search within 2 fields of the same layer or between joined layers
 
 .. image:: MEDIA/introduction-montpellier-map.png
    :align: center

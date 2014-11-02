@@ -107,8 +107,6 @@ A l'aide du plugin Lizmap, l'éditeur peut avoir ajouter à la carte des fonds d
    :align: center
    :scale: 80%
 
-
-
 La localisation par couche
 ---------------------------
 
@@ -126,7 +124,6 @@ Il suffit de sélectionner dans la liste une localisation pour zoomer sur l'él�
 .. image:: MEDIA/user-guide-09-locate-by-layer-zoom.png
    :align: center
    :scale: 80%
-
 
 La mesure
 ----------
