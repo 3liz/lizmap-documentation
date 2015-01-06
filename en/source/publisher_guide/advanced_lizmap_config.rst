@@ -1,25 +1,25 @@
 ===============================================================
-Configuration avancée
+Advanced Configuration
 ===============================================================
 
 .. _overview_map:
 
-Créer une carte de localisation
+Create an overview map
 ===============================================================
 
-Pour ajouter une **carte de localisation**, ou carte miniature, dans la carte Lizmap, il suffit de :
+To add an **overview map**, or location map, in the Lizmap's map, you must:
 
-* créer un groupe indépendant dans le projet QGIS qui s'appelle **Overview** (avec la majuscule à la 1ère lettre)
-* **Y ajouter des couches**, par exemple une couche de communes, un fond relief allégé, etc.
+* Create an independent group in the QGIS project called **Overview** (with the 1st letter capitalized)
+* **Add layers**, for example a layer of municipalities, a lighter terrain base layer, etc.
 
-L'ensemble des couches et groupes du groupe *Overview* ne sera **pas affiché dans la légende** de la carte Lizmap. Ils seront seulement utilisés pour la carte de localisation.
+All layers and groups in the *Overview* group will **not be shown in the lizmap's map legend**. They only be drawn in the Overview map.
 
-Il est conseillé d'utiliser :
+It is advisable to use:
 
-* des couches vectorielles **légères et simplifiées** si nécessaire
-* d'utiliser une **sémiologie adaptée** : traits fins et étiquettes cachées ou petites
+* **light and simplified** (if necessary) vector layers
+* use a **suitable symbology**: small strokes and purposes or hidden labels
 
-Voici un exemple d'utilisation :
+Here is an example of use:
 
 .. image:: ../MEDIA/features-overview.png
    :align: center
@@ -27,136 +27,136 @@ Voici un exemple d'utilisation :
 
 .. _locate_by_layer:
 
-Ajouter la fonction de localisation
+Add the localization function
 ===============================================================
 
 .. image:: ../MEDIA/interface-tools-tab-locate.png
    :align: center
    :width: 80%
 
-L'idée de cet outil est de présenter à l'utilisateur de Lizmap-Web-Client une liste déroulante qui permet de zoomer automatiquement sur un ou plusieurs objets spatiaux de la couche.
+The idea of this tool is to present to the Lizmap-Web-Client user a drop down list that gives the ability to zoom on one or more spatial objects of the layer.
 
-Cas d'utilisation
+Use case
 ------------------
 
-Prenons comme exemple une couche vectorielle spatiale **Quartiers** contenue dans le projet QGIS. On choisit d'ajouter ces quartiers dans l'outil *Localiser par couche*, pour permettre aux utilisateurs de Lizmap-Web-Client de se positionner rapidement sur un des quartiers.
+Consider a spatial vector layer **districts** contained in the QGIS project. We choose to add these districts in the tool *Locate by layer*, to allow Lizmap-Web-Client users to quickly position on one of the districts.
 
-Une fois cette couche ajoutée dans l'outil *Localiser par couche*, une liste déroulante contenant les quartiers s'affiche sur l'interface web de Lizmap.
+Once this layer added in the tool *Locate by layer*, a drop down list of the districts appears on the Lizmap Web interface.
 
-Lorsque l'utilisateur de la carte web sélectionne un nom dans cette liste, la carte se recentre automatiquement sur le quartier sélectionné, et la géométrie du quartier s'affiche (en option).
+When the Web map user selects one name in this list, the map will automatically refocuses on the selected district and the district's geometry is displayed (optional).
 
-Pré-requis
-------------
+Prerequisites
+--------------
 
-.. note:: La ou les couches qu'on souhaite utiliser doivent être **publiée(s) comme couche WFS** : cocher la case correspondante dans l'onglet *Serveur OWS* de la partie *Capacités WFS* des propriétés du projet QGIS.
+.. note:: The layer(s) you want to use must be **published as WFS layer**: check the corresponding box of the *WFS capabilities* in the *OWS Server* tab of the *Project Properties* window.
 
-Fonctionnement
+Working
 ---------------
 
-Pour ajouter une couche à cet outil :
+To add a layer to this tool:
 
-* vous **choisissez la couche** via la première liste déroulante parmi les couches vectorielles du projet,
-* puis **la colonne qui contient le libellé** que vous souhaitez afficher dans la liste déroulante.
-* Si vous souhaitez que **la géométrie** liée aux objets soit aussi affichée sur la carte lorsque l'utilisateur sélectionne un élément de la liste, alors on coche l'option *Afficher la géométrie*.
-* Enfin cliquer sur le bouton **Ajouter la couche** pour l'ajouter dans la liste.
+* you **choose the layer** with the first dropdown from the list of the project vector layers,
+* then **the column that contains the label** you want to display in the dropdown list.
+* If you want the geometry of the related objects is also displayed on the map when the user selects an item from the list, then check the option *Display the geometry*.
+* Finally click the button **Add layer** to add it to the list.
 
-Pour supprimer une des couches déjà configurée :
+To remove a layer already configured:
 
-* sélectionner la ligne en cliquant sur l'une des cases de la couche à supprimer
-* cliquer sur le bouton **Enlever la couche**
+* select the line of the layer you want to remote by clicking on it
+* click on the button **Remove layer**
 
-Listes hiérarchiques
+Hierarchical Lists
 -----------------------
 
-Si on reprend l'exemple des quartiers, il peut être intéressant de proposer aussi à l'utilisateur une liste déroulante des *sous-quartiers*. On souhaite que lorsque l'utilisateur choisit un quartier, alors la liste déroulante des sous-quartiers soit automatiquement filtrée pour n'afficher que les sous-quartiers du quartier choisi.
+If we take the example of districts, it may be interesting to also provide to the user a *sub-districts* dropdown. We hope that when the user chooses a district, then the dropdown of sub-districts is automatically filtered to display only the sub-districts of the chosen district.
 
-Pour cela, il existe 2 méthodes :
+For this, there are 2 methods:
 
-* soit on a **2 couches vectorielles distinctes** : une pour les quartiers, et une pour les sous-quartiers. Alors il faut utiliser une **jointure attributaire** entre les 2 couches pour activer le filtrage automatique des listes dans Lizmap.
-* soit on n'a qu'**1 seule couche des sous-quartiers**, et alors on peut spécifier via le plugin l'**attribut de regroupement**. Deux listes déroulantes seront créées au lieu d'une seule dans l'application Web.
+* you either have **2 separate vector layers**: one for districts and for sub-districts. So you have to use a **field join** between the two layers to enable automatic filtering lists in Lizmap.
+* either we have **only 1 layer for sub-districts**, and then you can specify with the plugin a **group field**. Two dropdowns will be created instead of one in the Web application.
 
-.. note:: Au maximum 3 couches du projet peuvent être ajoutées à l'outil Localiser par couches.
+.. note:: Up to 3 project layers cn be added to the Locate by layer tool.
 
 .. _media_in_lizmap:
 
-Les médias dans Lizmap
+Medias in Lizmap
 ===============================================================
 
-Principe d'utilisation
+Use principle
 -----------------------
 
-Il est possible de mettre à disposition des documents à travers Lizmap. Pour cela il faut simplement :
+It is possible to provide documents through Lizmap. To do this you simply:
 
-* créer un répertoire intitulé **media** (en minuscule et sans accents) *au même niveau que le projet QGIS*
-* **y mettre des documents** : des images, des rapports, des pdfs, des vidéos, des fichiers HTML ou texte.
-* Les documents contenus dans ce répertoire **media** sont donc **synchronisés comme les autres données** via la synchronisation FTP du plugin.
-* On peut utiliser des sous-répertoires par couche ou par thème : l'organisation du contenu du répertoire **media** est libre
+* create a directory called **media** (in lower case and without accents) *at the same level as the QGIS project*
+* **place documents in it**: pictures, reports, pdfs, videos, HTML or text files.
+* The documents contained in this **media** directory are **synchronized as other data** with the plugin FTP synchronisation.
+* You can use subdirectories per layer or theme: the organization of **media** directory content is free.
 
-Ensuite dans Lizmap-Web-Client, on peut offrir un accès à ces documents pour 2 choses :
+Then in Lizmap-Web-Client you can provide access to these documents for 2 things:
 
-* les **popups** : le contenu d'une ou plusieurs colonne pour chaque géométrie peut préciser le chemin vers le média. Par exemple une colonne *photo*, ou bien une colonne *pdf*
-* le **lien** indiqué pour chaque groupe ou couche via l'onglet *Couches* du plugin Lizmap
+* the **popups**: the content of one or more field for each geometry can specify the path to the media. For example a *photo* or *pdf* field
+* the **link** provided for each group or layer in the Lizmap plugin *Layers* tab
 
-Le détail de ces utilisations est précisé ci-dessous.
+Details of these uses is specified below.
 
-Utilisation pour les liens
+Use for links
 ---------------------------
 
-Il est possible d'utiliser un chemin relatif vers un document pour les liens des couches ou des groupes. 
+It is possible to use a relative path to a document for layers or groups link.
 
-.. note:: les liens peuvent être renseigné via l'onglet **Couches** du plugin Lizmap, après avoir sélectionné la couche ou le groupe qu'on souhaite renseigner. Voir :ref:`layers_tab_metadata`
+.. note:: Links can be filled with the Lizmap plugin **Layers** tab after selecting the layer or group. See :ref:`layers_tab_metadata`
 
-Le chemin doit être écrit :
+The path should be written:
 
-* en commençant par **media/**
-* avec des slashs **/** et non des anti-slashs
+* starting with **media/**
+* with slashes **/** and not backslashes
 
-Quelques exemples :
+Some examples:
 
-* *media/ma_couche/metadonnees_couche.pdf*
-* *media/rapports/mon_rapport_sur_la_couche.doc*
-* *media/une_image.png*
+* *media/my_layer/metadata_layer.pdf*
+* *media/reports/my_report_on_the_layer.doc*
+* *media/a_picture.png*
 
-Sur la carte de Lizmap-Web-Client, si un lien a été configuré de cette manière pour une des couches, alors une icone (i) sera placée à droite de la couche. Un clic sur cet icône permet d'ouvrir le document lié dans un nouvel onglet du navigateur.
+On the Lizmap-Web-Client map, if a link has been set up this way for one of the layers, then an icon (i) will be placed to the right of the layer. Clicking this icon opens the linked document in a new browser tab.
   
-Utilisation dans les popups
+Use in popups
 ----------------------------
 
-Principe
+Principle
 _________
 
-Comme décrit dans l'introduction ci-dessus, on peut utiliser **un chemin de media** dans les données de la couche spatiale.
+As described in the introduction above, you can use **a media path** in the spatial data layer.
 
-Par exemple, si on souhaite que les popups liées à une couche affichent une photo qui dépende de chaque objet, il suffit de créer une nouvelle colonne qui contiendra le chemin de media vers la photo pour chaque ligne de la table attributaire de la couche. Et ensuite d'activer les popups pour cette couche.
+For example, if you want that the popups associated with a layer displayed a picture that depends on each object, just create a new field that will contain the media path to the picture to each row of the layer attribute table. And then activate popups for this layer.
 
-Exemple
+Example
 ________
 
-Voici pour l'exemple la table attributaire d'une couche *paysage* configurée pour afficher des photos dans la popup. L'utilisateur a créé une colonne *photo* dans laquelle il place le chemin vers les photos, et une colonne *pdf* dans laquelle il met les chemins vers un fichier pdf décrivant l'objet correspondant à chaque ligne.
+Here for example the attribute table of a layer * landscape * configured to display pictures in the popup. The user has created a *picture* field in which he places the path to the pictures, and a *pdf* field in which he puts the paths to a pdf file describing the object corresponding to each line.
 
 ======  ======  ===========  ========================  ========================
-id      nom     description  photo                     pdf
+id      name    description  picture                   pdf
 ======  ======  ===========  ========================  ========================
-1       Marais  blabla       media/photos/photo_1.png  media/docs/paysage-1.pdf
-2       Plage   blibli       media/photos/photo_2.png  media/docs/paysage-2.pdf
-3       Lande   bloblo       media/photos/photo_3.png  media/docs/paysage-3.pdf
+1       Marsh   blabla       media/photos/photo_1.png  media/docs/paysage-1.pdf
+2       Beach   blibli       media/photos/photo_2.png  media/docs/paysage-2.pdf
+3       Moor    bloblo       media/photos/photo_3.png  media/docs/paysage-3.pdf
 ======  ======  ===========  ========================  ========================
 
-.. note:: Dans cet exemple, on voit que les noms des fichiers des photos et des PDF sont normés. Nous conseillons de suivre cet exemple, car cela permet d'utiliser la calculatrice de QGIS pour créer ou mettre à jour les données des colonnes de média pour l'ensemble de la couche de manière automatisée.
+.. note:: In this example, we see that the pictures and pdf file names are normalized. Please follow this example because it allows using the QGIS Field Calculator to create or update  automatically the media column data for the entire layer.
 
-Résultat
+Result
 _________
 
-Voici les règles d'affichage dans la popup
+Here are the display rules in the popup
 
-* Si le chemin pointe **vers une image, l'image sera affichée** dans la popup. Un clic sur l'image affichera l'image originale dans un nouvel onglet. 
-* Si le chemin pointe **vers un fichier texte ou un fichier HTML, le contenu du fichier sera affiché** dans la popup.
-* Pour les **autres types de fichiers, la popup affichera un lien vers le document**, que les utilisateurs pourront télécharger en cliquant sur le lien.
+* If the path points **to a picture, the image will be displayed** in the popup. Clicking on the picture will display the original image in a new tab.
+* If the path points **to a text file or HTML file, the file contents will be displayed** in the popup.
+* For **other file types, the popup will display a link to the document** that users can download by clicking on the link.
 
 Illustration
 _____________
 
-Ci-dessous, une illustration d'une popup Lizmap affichant une photo, un texte et un lien dans la popup :
+Below is an illustration of a Lizmap popup displaying a picture, a text and a link in the popup:
 
 .. image:: ../MEDIA/features-popup-photo-example.png
    :align: center

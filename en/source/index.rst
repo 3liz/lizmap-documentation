@@ -18,6 +18,7 @@ Lizmap - Documentation
 	
   introduction
   user_guide
+  publisher_guide/index
 
 
 Indices and tables

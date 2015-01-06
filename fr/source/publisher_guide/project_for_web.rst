@@ -1,27 +1,27 @@
 ===============================================================
-Prepare a QGIS project for Web
+Préparer un projet QGIS pour le Web
 ===============================================================
 
-Create your project
+Créer votre projet
 ===============================================================
 
-Add your data :
+Ajouter vos données :
 
-* Vector geographic data files
+* fichiers de données géographiques vectorielles
 
   * ESRI Shapefile
-  * MapInfo TAB and MIF/MID
+  * MapInfo TAB et MIF/MID
   * GeoJSON
   * etc
 
-* RASTER geographic data files
+* fichiers de données géographiqes RASTER
 
   * GeoTIFF
   * Arc/Info ASCII Grid
   * netCDF
   * etc
 
-* Geographic data base
+* base de données géographiques
 
   * PostgreSQL / PostGIS
   * MSSQL spatial
@@ -31,44 +31,44 @@ Add your data :
    :align: center
    :width: 60%
 
-Organize and manipulate the layes in the legend:
+Organiser et manipuler les couches dans la légende :
 
-* *Add groups* with a right click in the empty part of the legend: *Add a new group*
-* *Move* layers and groups with *drag-and-drop*
-* *Rename* layers and groups with the F2 key or the layer properties window
-* Manipulate the rendering order:
+* *Ajouter des groupes* à l'aide d'un clic droit dans la zone blanche de la légende: *Ajouter un nouveau groupe*
+* *Déplacer* les couches et les groupes via *glisser-déplacer*
+* *Renommer* couches et groupes avec la touche F2 ou la fenêtre de propriétés de la couche
+* Manipuler l'ordre de rendu :
 
-  * with the *legend layer order*: the upper layers are rendered above the others.
-  * by specifying *layer order* with the menu *View > Panels > Layer order*
+  * via *l'ordre de la légende* : les couches du dessus sont rendues au dessus des autres
+  * en spécifiant *un ordre des couches* à l'aide du menu *Vue > Panneaux > Ordre des couches*
 
-Add a title to your project and save it in your working directory.
+Ajouter un titre à votre projet et enregistrer le projet dans votre répertoire de travail.
 
-Configure your project for Web
+Configurer votre projet pour le Web
 ===============================================================
 
-Configure the coordinates reference system, CRS, of your project:
+Configurer le système de coordonnées de référence, SCR, de votre projet :
 
-* Select the CRS of your Web map: Sélectionner de préférence le SCR de votre carte Web :
+* Sélectionner de préférence le SCR de votre carte Web :
 
-  * EPSG:3857 for Google Mercator
-  * EPSG:2154 for Lambert 93
+  * EPSG:3857 pour Google Mercator
+  * EPSG:2154 pour Lambert 93
   * etc
 
-* Enable *on the fly CRS transformation*. QGIS can transform rasters and vectors data.
+* Activer *la reprojection à la volée*. QGIS sait reprojeter les raster et les vecteurs.
 
 .. image:: ../MEDIA/qgis-montpellier-project-crs.png
    :align: center
    :width: 60%
 
-Configure the Web Geographics Services parameters with the *OWS Server* tab:
+Configurer les paramètres des Services Géographiques Web grâce à l'onglet *Serveur OWS* :
 
-* Set the title of your Web Geographics Services
-* Add informations like your organization, the owner of the publication owner, the abstract as the description, etc
-* Set the maximum extent of your WMS service
-* Restrict the CRSs list of your WMS service:
+* Donner un titre à vos Services Géographiques Web
+* Ajouter des informations comme votre organisation, le responsable de la publication, une description via le champs résumé, etc
+* Définisser l'emprise maximale de votre service WMS
+* Restreindre la liste des SCRs de votre service WMS :
 
-  * at least select the map one
-  * you can use the button *Used* to get all the layer CRS and the map one
+  * sélectionner au moins celui de votre carte
+  * vous pouvez utiliser le bouton utilisé pour récupérer tous les SCR de vos couches ainsi que celui de la carte
 
 * Exclure des compositions et des couches si certaines données ne doivent pas être publiées en WMS
 * Activer les couches que vous souhaitez publier en WFS et WCS
