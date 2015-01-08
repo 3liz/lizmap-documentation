@@ -198,57 +198,59 @@ Field         Value
 
 This is called **simple mode**. You can somewhat modify the info displayed through QGIS, and also display pictures or links.
 
-Configuration simple des popups
+Simple popup configuration
 --------------------------------
 
-Via le plugin, si on clique seulement sur la case à cocher *Activer les popups* sans modifier le contenu via le bouton *Contenu*, alors c'est l'affichage par défaut ou *mode simple* qui est utilisé. 
+With the plugin, if you click on the checkbox **Activate popups** without modifying its content through the button *Configure* the default table is shown.
 
-On peut néanmoins jouer sur plusieurs choses dans QGIS et via le plugin Lizmap pour **paramétrer les champs qu'on veut afficher**, **renommer les champs**, et même **afficher des images, des photos ou des liens vers des documents internes ou externes**.
+Nevertheless, you can tune several things in QGIS and with the help of Lizmap plugin to **parametrize the fields displayed**, **rename fields**, and even **display images, photos, or links to internal or external documents**.
 
-Masquer une colonne ou modifier son nom
+Mask or rename a column
 ________________________________________
-On peut utiliser les outils de **l'onglet Champs** des **propriétés de la couche**:
 
-* Pour **ne pas afficher** une colonne dans la popup: il faut **décocher la case WMS pour les champs à masquer**. Cette colonne se trouve tout à droite
+You can use the tools available in the **Fields** tab of the **Layer properties**, in QGIS:
 
-* Pour **modifier le nom** qui sera affiché pour la colonne : *colonne Alias*
+* to **avoid displaying** a column in the popup, **uncheck the relative WMS checkbox**. The WMS column is on the right
+
+* to **change the name** displayed for that column, type a different name in the *Alias column*
 
 .. image:: ../MEDIA/features-popup-fields.png
    :align: center
    :width: 70%
    
-Utilisation de médias : images, documents, etc.
+Usage of media: images, documents, etc.
 ________________________________________________
 
-Si on utilise des **chemins vers les documents du répertoire media**, on peut
+If you use **paths to documents of the media directory**, you can:
 
-* *afficher l'image* correspondante
-* *afficher le contenu texte ou HTML* du fichier correspondant
-* *afficher un lien* vers le document
+* *display the image* found at that link
+* *display the content (text or HTML)* of the file
+* *display a link* to a document
 
-.. note:: Voir le chapitre :ref:`media_in_lizmap` pour plus de détail sur l'utilisation de documents du répertoire media dans les popups.
+.. seealso:: Chapter :ref:`media_in_lizmap` for more details on the usage of documents of the directory media in the popups.
 
-Utilisation de liens externes
+Usage of external links
 ______________________________
 
-Enfin on peut aussi utiliser dans les colonnes **des liens Web complets vers une page ou une image**:
+You can also use, in a fiels, **full web links to a specific page or image**:
 
-* l'image pointée par le lien sera affichée à la place du lien
-* le lien web sera affiché et cliquable
+* the image referred to will be displayed, instead of the links
+* the web link will be displayed and clickable
 
-
-Configuration avancée des popups au format HTML
+Advanced popup configuration - HTML format
 ------------------------------------------------
 
 Introduction
 _____________
 
-Si l'affichage tabulaire par défaut des popups ne vous convient pas, vous pouvez écrire **un modèle de popup**. Pour cela, il faut bien connaître le **format HTML**. Voir par exemple: http://fr.html.net/tutorials/html/
+If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know well the **HTML format**. See e.g.: http://html.net/tutorials/html/
 
-.. note:: ATTENTION: lorsque vous utilisez le mode avancé, la configuration précédente ne fonctionne plus pour renommer un champ: c'est vous qui contrôlez via le modèle les affichages. La gestion des médias est encore possible, mais c'est à vous de bien la prévoir.
+.. warning:: When you use the advanced mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the temlate. Managin media is also possible, but you have to configure it a well.
 
-Mise en oeuvre
+Deploying
 _______________
+
+You can edit the popup template with the **button Configure** in the Lizmap plugin.
 
 Via le **bouton Configurer** du plugin Lizmap, on peut modifier le modèle de la popup. En cliquant sur ce bouton, une fenêtre s'affiche avec 2 zones de texte :
 
@@ -314,7 +316,6 @@ Voici un exemple de contenu d'un modèle gérant les médias et utilisant un lie
    <p><img src="http://www.3liz.com/assets/img/logo.png"/></p> 
 
 .. note:: Voir le chapitre :ref:`media_in_lizmap` pour plus de détail sur l'utilisation de documents du répertoire media.
-
 
 .. _lizmap_simples_themes:
 
@@ -478,9 +479,6 @@ Pour pouvoir utiliser cette fonctionnalité, il faut
   - le code du **Projet source** (le nom du projet QGIS parent sans l'extension .qgs) est renseigné automatiquement pour les couches et les groupes intégrés.
 
 * **Publier le projet fils** vers l'application Lizmap-Web-Client, comme d'habitude.
-
-
-
 
 .. _hide_layers:
 
@@ -659,4 +657,3 @@ Documentation à venir...
 Un tutoriel vidéo est disponible ici : https://vimeo.com/83845949 . Il présente l'ensemble des étapes pour utiliser la fonctionalité.
 
 Site de démonstration : http://demo.lizmap.3liz.com/index.php/view/?repository=rep6
-
