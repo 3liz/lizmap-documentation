@@ -164,40 +164,39 @@ Below is an illustration of a Lizmap popup displaying a picture, a text and a li
    
 .. _popups_in_lizmap:
 
-Configurer les popups dans Lizmap
+How to configure popups in Lizmap
 ===============================================================
  
-Activer les popups dans Lizmap
+Activate popups in Lizmap
 -------------------------------
 
-Via le plugin, on peut activer les popups **pour une couche** ou pour **un groupe qui a été configuré comme "Groupe comme une couche"**
+With the plugin, you can activate popups **for a single layer** or for **a group configured with the "Group as layer" option**.
 
-Pour cela il suffit de cliquer sur la case à cocher **Activer les popups** de l'onglet *Couches* du plugin Lizmap. Pour les *groupes comme une couche*, il faut activer l'option pour le groupe et pour toutes les couches filles qu'on souhaite voir dans la popup. Dans ce cas, seules les couches filles qui ont aussi l'option *Popup* activée seront visibles.
+Just click on the checkbox **Activate popups** of the tab *Layers* on the Lizmap plugin interface. For the *group as layer* option you must select the option for the group and for all the layers included you want to show in the popup: In this case, only the layers with the option *Popup* checked will be shown.
 
-Dans l'application *Lizmap-Web-Client*, un clic sur un objet de la carte lancera l'ouverture de la popup si et seulement si :
+In the web application *Lizmap-Web-Client*, a click on a map object will trigger the popup if (and only if):
 
-* la couche est **cochée dans la légende**, et donc visible
-* la popup a bien **été activée** via le plugin pour la couche ou le groupe
-* l'utilisateur a bien **cliqué sur un endroit de la carte** où on voit de la donnée pour l'une des couches avec les popups actives.
+* the layer is **active in the legend**, so that it is shown on the canvas
+* the popup **has been activated** through the plugin for the layer or the group
+* the user has clicked on an **area of the canvas** where data for the layer with active popups are displayed.
 
-.. note:: Pour les couches de type Point, il faut bien cliquer pile au milieu du point pour que la popup apparaisse.
+.. note:: For Point layers you need to click in the middle of the point to display the popup.
 
-
-Informations affichées dans la popup
+Informations displayed in the popup
 _____________________________________
 
-Par défaut, la popup de *Lizmap-Web-Client* affiche un tableau de ce type, qui présente les colonnes de la table attributaire en ligne dans 2 colonnes *Champ* et *Valeur*:
+By default the *Lizmap-Web-Client* popup displays a table showing the columns of the attribute table in two columns *Field* et *Value*, as shown below:
 
 ============  ==============
-Champ         Valeur
+Field         Value
 ============  ==============
           id  1
-         nom  Un nom
- description  Cet objet ...
+        name  A name
+ description  This object ...
        photo  :-)
 ============  ==============
 
-C'est ce qu'on appelle le **mode simple**. On peut modifier un peu les informations affichées via QGIS, et aussi afficher des images ou des liens.
+This is called **simple mode**. You can somewhat modify the info displayed through QGIS, and also display pictures or links.
 
 Configuration simple des popups
 --------------------------------
