@@ -2,8 +2,6 @@
 Advanced Configuration
 ===============================================================
 
-.. _overview_map:
-
 Create an overview map
 ===============================================================
 
@@ -24,8 +22,6 @@ Here is an example of use:
 .. image:: ../MEDIA/features-overview.png
    :align: center
    :width: 60%
-
-.. _locate_by_layer:
 
 Add the localization function
 ===============================================================
@@ -76,8 +72,6 @@ For this, there are 2 methods:
 * either we have **only 1 layer for sub-districts**, and then you can specify with the plugin a **group field**. Two dropdowns will be created instead of one in the Web application.
 
 .. note:: Up to 3 project layers cn be added to the Locate by layer tool.
-
-.. _media_in_lizmap:
 
 Medias in Lizmap
 ===============================================================
@@ -161,8 +155,6 @@ Below is an illustration of a Lizmap popup displaying a picture, a text and a li
 .. image:: ../MEDIA/features-popup-photo-example.png
    :align: center
    :width: 90%
-   
-.. _popups_in_lizmap:
 
 How to configure popups in Lizmap
 ===============================================================
@@ -250,41 +242,39 @@ If the simple table display does not suit your needs, you can write a **popup te
 Deploying
 _______________
 
-You can edit the popup template with the **button Configure** in the Lizmap plugin.
+You can edit the popup template with the **button Configure** in the Lizmap plugin. Clicking on it you'll get a window with two text areas:
 
-Via le **bouton Configurer** du plugin Lizmap, on peut modifier le modèle de la popup. En cliquant sur ce bouton, une fenêtre s'affiche avec 2 zones de texte :
-
-* une **zone de texte éditable** qui permet d'écrire le contenu
-* une **zone de texte en lecture seule** qui montre un aperçu de la mise en forme
+* an **area where you can type your text**
+* a **read-only area**, showing a preview of your template
 
 .. image:: ../MEDIA/features-popup-configure.png
    :align: center
    :width: 70%
 
-On peut écrire du texte simple, mais il est conseillé d'écrire au format HTML pour le mettre en forme. On peut par exemple utiliser les paragraphes, les titres, etc
+You can type simple text, but we suggest to write in HTML format to give proper formatting. For instance, you can add paragraphs, headings, etc.:
 
 .. code-block:: html
 
-   <h3>Un titre</h3>
-   <p>Un exemple de paragraphe</p>
+   <h3>A Title</h3>
+   <p>An example of paragraph</p>
 
-Le comportement est le suivant:
+The behaviour is as follows:
 
-* Si le contenu des 2 champs texte est vide, un tableau sera présenté dans la popup (modèle par défaut)
-* Si le contenu n'est pas vide, le modèle écrit dans le contenu sera utilisé à la place pour l'affichage de la popup
+* if the content of the two areas is empty, a simple table will be shown in the popup (default template)
+* if the content is not empty, its content will be used as a template for the popup
 
-*Lizmap-Web-Client* sait remplacer automatiquement une variable représentant le nom d'un champ de la table attributaire par son contenu. Pour ajouter le contenu d'une colonne dans la popup, on utilise **le nom de la colonne précédé d'un dollard, le tout encadré d'accolades**. Par exemple:
+*Lizmap-Web-Client* will replace automatically a variable, identified by the name of a field, with its content. To add the content of a column to a popup, you should use the name of the column precede by a dollar sign (`$`), all surrounded by curly brackets (`{}`). For instance:
 
 .. code-block:: html
 
-   <h3>Un titre</h3>
-   <p>Un exemple de paragraphe</p>
-   <p>Le nom : <b>{$nom}</b></p>
+   <h3>A Title</h3>
+   <p>An example of paragraph</p>
+   <p>A name: <b>{$name}</b></p>
    <p>Description: {$description}</p>
 
-.. note:: Si vous avez configuré un alias pour un champ, il faut utiliser l'alias au lieu du nom entre accolade
-  
-On peut aussi utiliser les valeurs des colonnes comme paramètres pour styliser le texte. Par exemple ici pour mettre le fond dans la couleur de la ligne de bus:
+.. note:: If you have configured an alias for a field, you have to use the alias instead of the name, between the brackets
+
+You can also use the values of the columns as parameters to give styling to the text. An example here, to use the colour of a bus line as a background colour:
 
 .. code-block:: html
 
@@ -292,35 +282,36 @@ On peut aussi utiliser les valeurs des colonnes comme paramètres pour styliser 
    <b>LINE</b> : {$ref} - {$name}
    <p/>
 
-  
-Utilisation des médias et des liens externes
+Usage of media and external links
 _____________________________________________
 
-On peut **utiliser les médias** référencés dans le contenu des champs de la table attributaire, même si on configure un *modèle de template*. Pour cela, il faut utiliser les colonnes de média en anticipant le fait que Lizmap-Web-Client remplace automatiquement le chemin relatif de type */media/monfichier.jpg* par l'URL complète avec laquelle on peut y accéder depuis l'interface WEB.
+You can **use the media** referred to in the table content, even if you use a *template model*. To do this, you should use the media column, taking into account the fact that *Lizmap-Web-Client*
+
+, il faut utiliser les colonnes de média en anticipant le fait que Lizmap-Web-Client remplace automatiquement le chemin relatif de type */media/monfichier.jpg* par l'URL complète avec laquelle on peut y accéder depuis l'interface WEB.
 
 On peut aussi utiliser des URL complètes pointant vers les liens ou des images hébergées sur un autre serveur.
 
-Voici un exemple de contenu d'un modèle gérant les médias et utilisant un lien externe: :
+Here an example of a template handling media and an external link:
 
 .. code-block:: html
 
-   <p style="font-size:0.8em;">Un titre</p>
-   <p>Le nom est {$name}</p>
+   <p style="font-size:0.8em;">A Title</p>
+   <p>The name is {$name}</p>
   <p>
-     Une petite illustration<br/>
+     A sample image<br/>
      <img src="{$image_column}" style="">
    </p>
 
-   <p><a href="{$website}" target="_blank">Lien web</a></p>
+   <p><a href="{$website}" target="_blank">Web link</a></p>
 
    <p><img src="http://www.3liz.com/assets/img/logo.png"/></p> 
 
-.. note:: Voir le chapitre :ref:`media_in_lizmap` pour plus de détail sur l'utilisation de documents du répertoire media.
+.. seealso:: Chapter :ref:`media_in_lizmap` for more details on the use of documents in the directory media.
 
-.. _lizmap_simples_themes:
-
-Créer des thèmes simples
+Create simple themes
 ===============================================================
+
+Starting from Lizmap-Web-Client version 2.10, it is possible to create themes for all maps of a repository or for a single map. This function needs to be activated
 
 Depuis la version 2.10 de Lizmap-Web-Client, il possible de créer des thèmes pour toutes les cartes d'un répertoire ou pour chaque carte. Cette fonctionnalité doit être activée par l'administrateur et s'appuie sur le dossier média :ref:`media_in_lizmap`.
 
@@ -365,8 +356,6 @@ Une fois que vous avez récupéré le contenu du thème par défaut, vous pouvez
 
 Une fois que votre thème est prêt, il vous suffit de le publier avec le dossier media et les projets.
 
-.. _print_lizmap:
-
 Configurer l'impression
 ===============================================================
 
@@ -389,9 +378,7 @@ Enfin la fonction d'impression s'appuiera sur les échelles de la carte que vous
 
 .. note:: Il est possible d'exclure des composeurs d'impression de la publication Web. Par exemple, si le projet QGIS contient 4 composeurs, l'administrateur du projet peut en exclure 2 via les *propriétés du projet QGIS*, onglet *Serveur OWS*. Alors ne seront présentés dans Lizmap que les composeurs publiés.
 
-.. _print_external_baselayer:
-
-Permettre l'impression de fond externe
+Permettre l'impression de fond externe print_external_baselayer
 ===============================================================
 
 L'onglet *Fonds* du plugin Lizmap permet de sélectionner et d'ajouter des fonds externes (:ref:`lizmap_config_baselayers`). Ces fonds externes ne faisant pas partie du projet QGIS, par défaut la fonction d'impression ne les intègrera pas.
@@ -420,8 +407,6 @@ Pour les fonds OpenStreetMap, il est possible d'utiliser un fichier XML pour GDA
 
 Par contre si cette couche doit remplacer un fond externe, celle-ci doit-être accessible à QGIS-Server mais ne doit pas être accessible à l'utilisateur dans Lizmap-Web-Client. Elle doit donc être masquée. Voir le chapitre :ref:`hide_layers`.
 
-.. _lizmap_cache:
-
 Optimiser Lizmap grâce au cache
 ===============================================================
 
@@ -439,7 +424,6 @@ Pour l'activer il faut :
 
 L'option **Metatile** permet de préciser la taille de l'image en plus servant à générer une tuile. Le principe du **Metatile** est de demander au serveur une image plus grande que celle souhaiter, de la découper à la taille de la requête et de la retourner au client Web. Cette méthode évite les étiquettes tronquées au bords et les discontinuités entre tuiles, mais est plus gourmand en ressources. La valeur par défaut est *5,5* soit une image dont la largeur et la hauteur sont égale à 5 fois la largeur et la hauteur demander.
 
-
 Activer le cache côté client
 -----------------------------
 
@@ -452,9 +436,6 @@ Remarques
 
 * **Le cache doit être activé seulement une fois le rendu bien maîtrisé**, lorsqu'on souhaite passer le projet en production.
 * **Les 2 modes de cache Serveur et Client sont complètement indépendants** l'un de l'autre. Mais bien sûr, il est intéressant d'utiliser les 2 en même temps pour optimiser l'application et libérer les ressources du serveur.
-
-
-.. _lizmap_cache_centralized:
 
 Centraliser le cache via l'intégration de groupes et couches d'un projet parent
 ================================================================================
@@ -480,8 +461,6 @@ Pour pouvoir utiliser cette fonctionnalité, il faut
 
 * **Publier le projet fils** vers l'application Lizmap-Web-Client, comme d'habitude.
 
-.. _hide_layers:
-
 Masquer certaines couches
 ===============================================================
 
@@ -496,8 +475,6 @@ Cette fonctionnalité peut servir pour :
 * masquer une couche utiliser dans la localisation (:ref:`locate_by_layer`)
 * masquer une couche simple d'ajout de données rendu à l'aide d'une vue
 * masquer une couche pour l'impression de plan (:ref:`print_external_baselayer`)
-
-.. _lizmap_config_edition:
 
 L'édition de données dans Lizmap
 ===============================================================
@@ -522,7 +499,6 @@ Exemples d'utilisation
 * **Une commune** souhaite permettre aux citoyens de recenser les problèmes visibles sur la voirie: poubelles non ramassées, lampadaires en panne, épaves à enlever. L'administrateur du projet QGIS crée une couche dédiée à ce recueil de données et affiche à tous la donnée.
 
 * **Un bureau d'étude** souhaite permettre aux partenaires d'un projet de remonter des remarques sur des zones du projet. Il permet l'ajout de polygones dans une couche dédiée.
-
 
 Configurer l'outil d'édition
 -----------------------------
@@ -592,8 +568,6 @@ Utilisation du cache
 
 .. note:: Si vous souhaitez utiliser le cache serveur ou client pour les couches d'édition, faites-le en toute connaissance de cause : les données ne seront pas visibles par les utilisateurs tant que le cache ne sera pas expiré. Nous conseillons de ne pas activer le cache pour les couches d'édition
 
-.. _lizmap_config_filtered_layer:
-
 Couches filtrées - Filtrer les données en fonction des utilisateurs
 ===================================================================
 
@@ -613,7 +587,6 @@ Le filtrage se base sur l'identifiant du groupe de l'utilisateur actuellement co
 * les fonctionnalités à venir (affichage de la table attributaire, fonctions de recherche, etc.)
 
 Un tutoriel vidéo est disponible à cette adresse : https://vimeo.com/83966790
-
 
 Configurer l'outil de filtrage des données
 -------------------------------------------
@@ -646,8 +619,6 @@ Débrider le filtrage pour certains groupes d'utilisateurs
 ----------------------------------------------------------
 
 Voir :ref:`define_group_rights`
-
-.. _lizmap_config_timemanager:
 
 Time Manager - Animer des couches vectorielles temporelles
 ===========================================================
