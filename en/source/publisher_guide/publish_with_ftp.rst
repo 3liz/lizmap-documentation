@@ -14,7 +14,7 @@ For this, it is necessary **to synchronize the local directory with that of the 
 
 .. note:: If you are working locally, as Lizmap-Web-Client is installed on the same machine you use for QGIS, you do not need to *synchronize* your files with FTP. This configuration should only exist for testing.
 
-.. note:: You can use any tool and synchronization protocol (FTP, FTPS, SFTP, rsync, unison, etc), but you must then master the things and have access to the Lizmap server configuration.
+.. note:: You can use any tool and synchronization protocol (FTP, FTPS, SFTP, rsync, unison, etc), if you can master the tool and have access to the Lizmap server configuration.
 
 
 Use an FTP client
@@ -24,22 +24,21 @@ FTP allows you to access files from a server, retrieve it and add documents and/
 
 You can use the following client or one you usually use:
 
-* *FireFTP* : Firefox add-on
-* *Filezilla* : Free cross-platform software (Windows, MacOS, Linux)
-* *WinSCP* : Free software for Windows
+* *FireFTP*: Firefox add-on
+* *Filezilla*: Free cross-platform software (Windows, MacOS, Linux)
+* *WinSCP*: Free software for Windows
 
 You can use these tools to make manual changes to the remote directory:
 
 * **made a backup**
 * **remove contents**
-* **overwrite files manually**: QGIS project (.qgs) and Lizmap configuration (.qgs.cfg)
+* **overwrite files manually**: QGIS project (``.qgs``) and Lizmap configuration (``.qgs.cfg``).
 
 
 Using FTP tab in Lizmap plugin
 ===============================================================
 
-The FTP tab in Lizmap plugin allows you to configure the use of the FTP protocol directly into QGIS. In order to make a mirrored synchronization directly from the plugin. To integrate FTP synchronization in the plugin, we relied on two free tools that have proven:
-L'onglet FTP de Lizmap permet de configurer l'utilisation du protocole FTP directement dans QGIS. Afin de pouvoir faire une synchronisation en mode mirroir directement depuis le plugin. Pour intégrer la synchronisation FTP directement dans le plugin, nous nous sommes appuyés sur 2 outils libres qui ont fait leur preuve :
+The FTP tab in Lizmap plugin allows you to configure the use of the FTP protocol directly into QGIS. In order to make a mirrored synchronization directly from the plugin. To integrate FTP synchronization in the plugin, we relied on two free tools that have proven reliable:
 
 * **WinSCP** on Windows: http://winscp.net/
 * **lftp** on Linux: http://lftp.yar.ru/
@@ -47,11 +46,11 @@ L'onglet FTP de Lizmap permet de configurer l'utilisation du protocole FTP direc
 
 To use FTP synchronization from the Lizmap plugin, install an FTP client above.
 
-* On Windows : WinSCP
+* On Windows: WinSCP
 
- * Download **portable version**: http://winscp.net/eng/download.php
- * **Unzip to a directory**: for example "C:\\winscp\\"
- * **FTP tab in the plugin**: specify the directory where you unzipped WinSCP with the button "..."
+  * Download **portable version**: http://winscp.net/eng/download.php
+  * **Unzip to a directory**: for example "C:\\winscp\\"
+  * **FTP tab in the plugin**: specify the directory where you unzipped WinSCP with the button "..."
  
 * On Linux : LFTP
 
