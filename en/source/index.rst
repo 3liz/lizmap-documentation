@@ -10,16 +10,15 @@ Lizmap - Documentation
 :Abstract: This document contains the complete documentation of Lizmap the application to publish online maps: the QGIS plugin and Lizmap Web Client application
 
 .. meta::
-  :description lang=en:This document contains the complete documentation of Lizmap the application to publish online maps: the QGIS plugin and Lizmap Web Client application
-  :keywords: Lizmap, QGIS, Server, webmapping, publication, plugin, 3liz
+   :description lang=en: This document contains the complete documentation of Lizmap the application to publish online maps: the QGIS plugin and Lizmap Web Client application
+   :keywords: Lizmap, QGIS, Server, webmapping, publication, plugin, 3liz
 
 .. toctree::
-  :maxdepth: 3
+   :maxdepth: 3
 	
-  introduction
-  user_guide
-  publisher_guide/index
-
+   introduction
+   user_guide
+   publisher_guide/index
 
 Indices and tables
 ==================
