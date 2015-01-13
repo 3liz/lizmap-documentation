@@ -308,7 +308,7 @@ Here an example of a template handling media and an external link:
 
 .. seealso:: Chapter :ref:`media_in_lizmap` for more details on the use of documents in the directory media.
 
-Create simple themes
+Creating simple themes
 ===============================================================
 
 Starting from Lizmap-Web-Client version 2.10, it is possible to create themes for all maps of a repository or for a single map. This function needs to be activated
@@ -356,7 +356,7 @@ Une fois que vous avez récupéré le contenu du thème par défaut, vous pouvez
 
 Une fois que votre thème est prêt, il vous suffit de le publier avec le dossier media et les projets.
 
-Configurer l'impression
+Printing configuration
 ===============================================================
 
 Pour proposer l’impression sur la carte en ligne, il faut avoir activer l'outil d'impression dans l'onglet *Carte* du plugin (:ref:`lizmap_config_map`) et que le projet QGIS possède au moins un composeur d'impression.
@@ -378,7 +378,7 @@ Enfin la fonction d'impression s'appuiera sur les échelles de la carte que vous
 
 .. note:: Il est possible d'exclure des composeurs d'impression de la publication Web. Par exemple, si le projet QGIS contient 4 composeurs, l'administrateur du projet peut en exclure 2 via les *propriétés du projet QGIS*, onglet *Serveur OWS*. Alors ne seront présentés dans Lizmap que les composeurs publiés.
 
-Permettre l'impression de fond externe print_external_baselayer
+Allow printing of external baselayers
 ===============================================================
 
 L'onglet *Fonds* du plugin Lizmap permet de sélectionner et d'ajouter des fonds externes (:ref:`lizmap_config_baselayers`). Ces fonds externes ne faisant pas partie du projet QGIS, par défaut la fonction d'impression ne les intègrera pas.
@@ -407,13 +407,13 @@ Pour les fonds OpenStreetMap, il est possible d'utiliser un fichier XML pour GDA
 
 Par contre si cette couche doit remplacer un fond externe, celle-ci doit-être accessible à QGIS-Server mais ne doit pas être accessible à l'utilisateur dans Lizmap-Web-Client. Elle doit donc être masquée. Voir le chapitre :ref:`hide_layers`.
 
-Optimiser Lizmap grâce au cache
+Optimizing Lizmap with the cache
 ===============================================================
 
 L'onglet *Couches* du plugin Lizmap permet d'activer pour chaque couche ou groupe en tant que couche la mise en cache des images générées. Cette fonctionnalité n'est pas compatible avec l'option *image non tuilée*.
 
-Activer le cache côté serveur
-------------------------------
+Activating the cache server side
+---------------------------------
 
 Lizmap-Web-Client sait créer dynamiquement un cache des tuiles sur le serveur. Ce cache représente le stokage sur le serveur des images déjà générées par QGIS-Server. L'application Lizmap-Web-Client génère automatiquement le cache au fur et à mesure que les tuiles sont demandées. Activer le cache permet d'alléger fortement la charge sur le serveur, puisqu'on ne redemande pas à QGIS-Server les tuiles qui ont déjà été rendues. 
 
@@ -424,21 +424,21 @@ Pour l'activer il faut :
 
 L'option **Metatile** permet de préciser la taille de l'image en plus servant à générer une tuile. Le principe du **Metatile** est de demander au serveur une image plus grande que celle souhaiter, de la découper à la taille de la requête et de la retourner au client Web. Cette méthode évite les étiquettes tronquées au bords et les discontinuités entre tuiles, mais est plus gourmand en ressources. La valeur par défaut est *5,5* soit une image dont la largeur et la hauteur sont égale à 5 fois la largeur et la hauteur demander.
 
-Activer le cache côté client
------------------------------
+Activating the cache client side
+---------------------------------
 
 L'option **Cache client navigateur** permet de spécifier un temps d'expiration pour les tuiles dans le cache du navigateur Web (Mozilla Firefox, Chrome, Internet Exploreur, Opera, etc) en seconde. Lorsqu'on parcours la carte Lizmap avec le navigateur, celui-ci stocke les tuiles qu'il affiche dans son cache. Activer le cache client permet d'optimiser fortement Lizmap, car le navigateur ne re-demande pas au serveur les tuiles qu'il a déjà en cache et qui ne sont pas expirées. 
   
 Nous conseillons de mettre la valeur maximale (1 mois soit 24 x 3600 x 30 = 2592000 secondes), sauf bien sûr pour les couches dont la donnée change souvent.
 
-Remarques
+Notes
 -------------
 
 * **Le cache doit être activé seulement une fois le rendu bien maîtrisé**, lorsqu'on souhaite passer le projet en production.
 * **Les 2 modes de cache Serveur et Client sont complètement indépendants** l'un de l'autre. Mais bien sûr, il est intéressant d'utiliser les 2 en même temps pour optimiser l'application et libérer les ressources du serveur.
 
-Centraliser le cache via l'intégration de groupes et couches d'un projet parent
-================================================================================
+Centralizing the cache with the integration of groups and layers from a master project
+=======================================================================================
 
 Dans QGIS, il est possible d'intégrer dans un projet des groupes ou des couches depuis un autre projet (qu'on appellera "parent"). Cette technique est intéressante, car elle permet de définir les propriétés des couches une seule fois dans un projet, par exemple pour les fonds de carte (Dans les projets "fils" qui intègrent ces couches, il n'est pas possible de modifier les propriétés).
 
@@ -461,7 +461,7 @@ Pour pouvoir utiliser cette fonctionnalité, il faut
 
 * **Publier le projet fils** vers l'application Lizmap-Web-Client, comme d'habitude.
 
-Masquer certaines couches
+Masking individual layers
 ===============================================================
 
 Vous pouvez exclure des couches de votre publication via l'onglet *Serveur OWS* des *propriétés du projet QGIS*. Dans ce cas là les couches ne seront plus accessible dans Lizmap. Avec cette méthode vous ne pouvez pas utiliser une couche dans la fonction de localisation et ne pas l'afficher dans la carte.
@@ -476,11 +476,11 @@ Cette fonctionnalité peut servir pour :
 * masquer une couche simple d'ajout de données rendu à l'aide d'une vue
 * masquer une couche pour l'impression de plan (:ref:`print_external_baselayer`)
 
-L'édition de données dans Lizmap
+Editing data in Lizmap
 ===============================================================
 
-Principe
----------
+Principle
+----------
 
 Depuis la version 2.8, il est possible de permettre aux utilisateurs d'**éditer des données spatiales et attributaires** depuis l'interface Lizmap-Web-Client, pour les couches **Spatialite ou PostGreSQL** du projet QGIS. Le plugin Lizmap permet d'ajouter une ou plusieurs couches et de choisir pour chacune quelles actions seront possible dans l'interface web:
 
@@ -493,14 +493,14 @@ Le **formulaire web** présenté à l'utilisateur pour renseigner la **table att
 
 De plus, Lizmap-Web-Client détecte automatiquement le type de colonne (entier, réel, chaîne de caractère, etc.) et ajoute les vérifications et les contrôles nécessaires sur les champs.
 
-Exemples d'utilisation
+Usage examples
 -----------------------
 
 * **Une commune** souhaite permettre aux citoyens de recenser les problèmes visibles sur la voirie: poubelles non ramassées, lampadaires en panne, épaves à enlever. L'administrateur du projet QGIS crée une couche dédiée à ce recueil de données et affiche à tous la donnée.
 
 * **Un bureau d'étude** souhaite permettre aux partenaires d'un projet de remonter des remarques sur des zones du projet. Il permet l'ajout de polygones dans une couche dédiée.
 
-Configurer l'outil d'édition
+Configuring edition tool
 -----------------------------
 
 Pour permettre l'édition de données dans *Lizmap-Web-Client*, il faut
@@ -548,7 +548,7 @@ Voici le détail des étapes:
    :align: center
    :width: 80%
 
-Réutiliser les données des couches d'édition
+Reusing data of edition layers
 ---------------------------------------------
 
 Les couches que vous avez sélectionnées pour l'outil d'édition sont des **couches comme les autres**, ce qui implique:
@@ -563,15 +563,15 @@ Les couches que vous avez sélectionnées pour l'outil d'édition sont des **cou
 
 .. note:: Pour bien centraliser les choses, nous conseillons d'utiliser une base de données PostGis pour stocker les données. Pour les couches Spatialite, il faut faire attention à ne pas écraser le fichier Spatialite stocké dans le répertoire Lizmap sur le serveur par celui que vous avez en local: pensez à toujours faire une sauvegarde du fichier du serveur avant une nouvelle synchronisation de votre répertoire local.
 
-Utilisation du cache
+Using the cache
 ---------------------
 
 .. note:: Si vous souhaitez utiliser le cache serveur ou client pour les couches d'édition, faites-le en toute connaissance de cause : les données ne seront pas visibles par les utilisateurs tant que le cache ne sera pas expiré. Nous conseillons de ne pas activer le cache pour les couches d'édition
 
-Couches filtrées - Filtrer les données en fonction des utilisateurs
+Filtered layers - Filtering data in function of users
 ===================================================================
 
-Présentation de la fonctionnalité
+Presentation of the function
 ----------------------------------
 
 Habituellement, la gestion des droits d'accès aux projets Lizmap se fait par répertoire. La configuration se fait dans ce cas via l'interface d'administration de Lizmap-Web-Client. Voir :ref:`hide_layers`. Cela permet de masquer complètement certains projets en fonction des groupes d'utilisateurs, mais oblige une gestion par répertoire et projet.
@@ -588,7 +588,7 @@ Le filtrage se base sur l'identifiant du groupe de l'utilisateur actuellement co
 
 Un tutoriel vidéo est disponible à cette adresse : https://vimeo.com/83966790
 
-Configurer l'outil de filtrage des données
+Configuration of the  data filter tool
 -------------------------------------------
 
 Pour utiliser l'outil de filtrage des données dans *Lizmap-Web-Client*, il faut
@@ -615,12 +615,12 @@ Voici le détail des étapes pour configurer cette fonctionnalité:
 
 4. **Désactiver le cache client ET le cache Serveur** pour toutes les couches filtrées. Sinon, les données affichées ne seront pas mises à jour entre chaque connexion ou déconnexion d'utilisateur !
 
-Débrider le filtrage pour certains groupes d'utilisateurs
+Filtering for groups of users
 ----------------------------------------------------------
 
 Voir :ref:`define_group_rights`
 
-Time Manager - Animer des couches vectorielles temporelles
+Time Manager - Animation of temporal vector layers
 ===========================================================
 
 Documentation à venir...
