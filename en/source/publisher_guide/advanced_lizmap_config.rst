@@ -285,11 +285,9 @@ You can also use the values of the columns as parameters to give styling to the 
 Usage of media and external links
 _____________________________________________
 
-You can **use the media** referred to in the table content, even if you use a *template model*. To do this, you should use the media column, taking into account the fact that *Lizmap-Web-Client*
+You can **use the media** referred to in the table content, even if you use a *template model*. To do this, you should use the media column, taking into account the fact that *Lizmap-Web-Client* automatically replaces the relative path of the type ``/media/myfile.jpg`` with the full URL to the file, accessible through the web interface.
 
-, il faut utiliser les colonnes de média en anticipant le fait que Lizmap-Web-Client remplace automatiquement le chemin relatif de type */media/monfichier.jpg* par l'URL complète avec laquelle on peut y accéder depuis l'interface WEB.
-
-On peut aussi utiliser des URL complètes pointant vers les liens ou des images hébergées sur un autre serveur.
+You can also use full URLs pointing to the pages or images on another server.
 
 Here an example of a template handling media and an external link:
 
@@ -311,15 +309,13 @@ Here an example of a template handling media and an external link:
 Creating simple themes
 ===============================================================
 
-Starting from Lizmap-Web-Client version 2.10, it is possible to create themes for all maps of a repository or for a single map. This function needs to be activated
+Starting from Lizmap-Web-Client version 2.10, it is possible to create themes for all maps of a repository or for a single map. This function needs to be activated by the administrator and uses the directory ``media`` :ref:`media_in_lizmap`.
 
-Depuis la version 2.10 de Lizmap-Web-Client, il possible de créer des thèmes pour toutes les cartes d'un répertoire ou pour chaque carte. Cette fonctionnalité doit être activée par l'administrateur et s'appuie sur le dossier média :ref:`media_in_lizmap`.
+The principle is:
 
-Le principe est le suivant :
-
-* le dossier media contient un dossier themes
-* le dossier themes contient un dossier default pour le theme de toute les cartes du répertoire
-* le dossier themes peut contenir une dossier par projet pour le theme spécifique au projet
+* the directory ``media`` contains a directory named ``themes``
+* the directory ``themes`` contains a default directory for the theme of all the maps of the repository
+* the directory ``themes`` may contain a directory per project, for the themes specific for each project
 
 .. code-block:: none
 
@@ -330,9 +326,9 @@ Le principe est le suivant :
        |-- map_project_file_name2
        |-- etc
 
-Afin de faciliter la création d'un theme pour un répertoire ou une carte, lizmap permet de récupérer le thème par défaut de l'application via la requête : index.php/view/media/getDefaultTheme
+In order to simplify the creation of a theme for a repository or a map, Lizmap allows you to obtain the default theme fro the application, through the request: ``index.php/view/media/getDefaultTheme``.
 
-Cette requête renvois un fichier zip contenant le theme par défaut avec la structure suivantes :
+The request returns a zipfile containing the default theme, with the following structure:
 
 .. code-block:: none
 
@@ -349,12 +345,12 @@ Cette requête renvois un fichier zip contenant le theme par défaut avec la str
            |-- sprite_20.png
            |-- etc
 
-Une fois que vous avez récupéré le contenu du thème par défaut, vous pouvez :
+Once downloaded the zipfile, you can:
 
-* remplacer les images
-* modifier les fichiers CSS
+* replace the images
+* deit the CSS files
 
-Une fois que votre thème est prêt, il vous suffit de le publier avec le dossier media et les projets.
+Once your theme is ready, you can just publish it copying it in the directory ``media``.
 
 Printing configuration
 ===============================================================
