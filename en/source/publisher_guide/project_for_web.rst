@@ -48,13 +48,13 @@ Set up your project for Web
 
 Configure the coordinates reference system, CRS, of your project:
 
-* Select the CRS of your Web map: Sélectionner de préférence le SCR de votre carte Web :
+* Select the CRS of your Web map:
 
   * EPSG:3857 for Google Mercator
   * EPSG:2154 for Lambert 93
   * etc
 
-* Enable *on the fly CRS transformation*. QGIS can transform rasters and vectors data.
+* Enable *on the fly CRS transformation*. QGIS can reproject rasters and vectors data.
 
 .. image:: ../MEDIA/qgis-montpellier-project-crs.png
    :align: center
