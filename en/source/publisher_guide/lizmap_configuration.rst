@@ -70,7 +70,7 @@ Layers options:
    :align: center
    :width: 80%
 
-If the layer is provided by a WMS service and that it supports the Web map Coordinate Reference System, it is possible to *directly Request images to the WMS server*. This reduces the QGIS-Server load and optimize LizMap. This option is available in the **Third Party WMS layers** group.
+If the layer is provided by a WMS service and that it supports the Web map Coordinate Reference System, it is possible to *directly Request images to the WMS server*. This reduces the QGIS-Server load and optimize Lizmap. This option is available in the **Third Party WMS layers** group.
 
 The group options:
 
@@ -205,7 +205,7 @@ Here are the approximate integer scales of the current external base layers::
     17  4514
     18  2257
 
-External LizMap layers
+External Lizmap layers
 ----------------------------
 
-This feature has been removed. It's replaced by the possibility of using the menu  :menuselection:`Layer > Embed Layers and Groups`, and in the plugin *Layers* tab declare the parent project and the lizmap repository for the embed layers and groups. See :ref:`lizmap_cache_centralized`
+This feature has been removed. It's replaced by the possibility of using the menu  :menuselection:`Layer > Embed Layers and Groups`, and in the plugin *Layers* tab declare the parent project and the Lizmap repository for the embed layers and groups. See :ref:`lizmap_cache_centralized`

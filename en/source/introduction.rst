@@ -2,7 +2,7 @@
 Introduction
 ===============================================================
 
-LizMap's architecture
+Lizmap architecture
 ===============================================================
 
 .. image:: MEDIA/all-schema-client-server.png
@@ -22,7 +22,7 @@ To be able to put the map online, the publisher configures publishing options (s
 
 **Data vizualisation**
 
-When synchronization is complete, The QGIS map can then be accessed on the Internet at the same. It is available on the application **LizMap Web Client** with a Web browser (Firefox, Safari, Chrome, Internet Explorer).
+When synchronization is complete, The QGIS map can then be accessed on the Internet at the same. It is available on the application **Lizmap Web Client** with a Web browser (Firefox, Safari, Chrome, Internet Explorer).
 
 
 QGIS and QGIS Server
@@ -53,7 +53,7 @@ QGIS and QGIS Server
    :align: center
    :width: 90%
 
-Lizmap's characteristic
+Lizmap features
 ===============================================================
 
 Default features
@@ -72,7 +72,7 @@ The displayed legend respects the order and organization defined in QGIS.
 
 The interface allows the user to hide the legend and take advantage of the map in the entire width of the screen. It also lets you view the information on the map (description, extent, contact).
 
-Finally LizMap is a proxy to the web services used to construct maps. It is therefore possible to use WMS or WFS requests through LizMap. It is possible to secure access to web services for access in QGIS or ArcGIS. It is also possible to share these addresses with web services systems cataloging.
+Finally Lizmap is a proxy to the web services used to construct maps. It is therefore possible to use WMS or WFS requests through Lizmap. It is possible to secure access to web services for access in QGIS or ArcGIS. It is also possible to share these addresses with web services systems cataloging.
 
 .. image:: MEDIA/introduction-alaska-map.png
    :align: center
