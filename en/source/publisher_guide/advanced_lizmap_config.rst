@@ -10,12 +10,12 @@ To add an **overview map**, or location map, in the Lizmap's map, you must:
 * Create an independent group in the QGIS project called **Overview** (with the 1st letter capitalized)
 * **Add layers**, for example a layer of municipalities, a lighter terrain base layer, etc.
 
-All layers and groups in the *Overview* group will **not be shown in the lizmap's map legend**. They only be drawn in the Overview map.
+All layers and groups in the *Overview* group will **not be shown in the lizmap's map legend**. They are drawn only in the Overview map.
 
 It is advisable to use:
 
 * **light and simplified** (if necessary) vector layers
-* use a **suitable symbology**: small strokes and purposes or hidden labels
+* use a **suitable symbology**: small strokes and simple or hidden labels
 
 Here is an example of use:
 
@@ -46,50 +46,50 @@ Prerequisites
 
 .. note:: The layer(s) you want to use must be **published as WFS layer**: check the corresponding box of the *WFS capabilities* in the *OWS Server* tab of the *Project Properties* window.
 
-Working
+How to
 ---------------
 
 To add a layer to this tool:
 
-* you **choose the layer** with the first dropdown from the list of the project vector layers,
-* then **the column that contains the label** you want to display in the dropdown list.
-* If you want the geometry of the related objects is also displayed on the map when the user selects an item from the list, then check the option *Display the geometry*.
-* Finally click the button **Add layer** to add it to the list.
+* **choose the layer** with the first dropdown from the list of the project vector layers
+* then **the column that contains the label** you want to display in the dropdown list
+* if you want the geometry of the related objects is also displayed on the map when the user selects an item from the list, then check the option *Display the geometry*
+* finally click the button **Add layer** to add it to the list.
 
 To remove a layer already configured:
 
 * select the line of the layer you want to remote by clicking on it
-* click on the button **Remove layer**
+* click on the button **Remove layer**.
 
 Hierarchical Lists
 -----------------------
 
-If we take the example of districts, it may be interesting to also provide to the user a *sub-districts* dropdown. We hope that when the user chooses a district, then the dropdown of sub-districts is automatically filtered to display only the sub-districts of the chosen district.
+If we take the example of districts, it may be interesting to also provide to the user a *sub-districts* dropdown. We wish that when the user chooses a district, the dropdown of sub-districts is automatically filtered to display only the sub-districts of the chosen district.
 
 For this, there are 2 methods:
 
-* you either have **2 separate vector layers**: one for districts and for sub-districts. So you have to use a **field join** between the two layers to enable automatic filtering lists in Lizmap.
+* you either have **2 separate vector layers**: one for districts and for sub-districts. So you have to use a **field join** between the two layers to enable automatic filtering lists in Lizmap
 * either we have **only 1 layer for sub-districts**, and then you can specify with the plugin a **group field**. Two dropdowns will be created instead of one in the Web application.
 
-.. note:: Up to 3 project layers cn be added to the Locate by layer tool.
+.. note:: Up to 3 project layers can be added to the *Locate by layer* tool.
 
-Medias in Lizmap
+Media in Lizmap
 ===============================================================
 
 Use principle
 -----------------------
 
-It is possible to provide documents through Lizmap. To do this you simply:
+It is possible to provide documents through Lizmap. To do this, you simply:
 
 * create a directory called **media** (in lower case and without accents) *at the same level as the QGIS project*
-* **place documents in it**: pictures, reports, pdfs, videos, HTML or text files.
-* The documents contained in this **media** directory are **synchronized as other data** with the plugin FTP synchronisation.
-* You can use subdirectories per layer or theme: the organization of **media** directory content is free.
+* **place documents in it**: pictures, reports, pdfs, videos, HTML or text files
+* the documents contained in this **media** directory are **synchronized as other data** with the plugin FTP synchronisation
+* you can use subdirectories per layer or theme: the organization of **media** directory content is free.
 
 Then in Lizmap-Web-Client you can provide access to these documents for 2 things:
 
 * the **popups**: the content of one or more field for each geometry can specify the path to the media. For example a *photo* or *pdf* field
-* the **link** provided for each group or layer in the Lizmap plugin *Layers* tab
+* the **link** provided for each group or layer in the Lizmap plugin *Layers* tab.
 
 Details of these uses is specified below.
 
@@ -121,12 +121,12 @@ _________
 
 As described in the introduction above, you can use **a media path** in the spatial data layer.
 
-For example, if you want that the popups associated with a layer displayed a picture that depends on each object, just create a new field that will contain the media path to the picture to each row of the layer attribute table. And then activate popups for this layer.
+For example, if you want that the popups associated with a layer displayed a picture that depends on each object, just create a new field that will contain the media path to the picture to each row of the layer attribute table, then activate popups for this layer.
 
 Example
 ________
 
-Here for example the attribute table of a layer * landscape * configured to display pictures in the popup. The user has created a *picture* field in which he places the path to the pictures, and a *pdf* field in which he puts the paths to a pdf file describing the object corresponding to each line.
+Here for example the attribute table of a layer *landscape* configured to display pictures in the popup. The user has created a *picture* field in which he places the path to the pictures, and a *pdf* field in which he puts the paths to a pdf file describing the object corresponding to each line.
 
 ======  ======  ===========  ========================  ========================
 id      name    description  picture                   pdf
@@ -141,11 +141,11 @@ id      name    description  picture                   pdf
 Result
 _________
 
-Here are the display rules in the popup
+Here are the display rules in the popup:
 
-* If the path points **to a picture, the image will be displayed** in the popup. Clicking on the picture will display the original image in a new tab.
-* If the path points **to a text file or HTML file, the file contents will be displayed** in the popup.
-* For **other file types, the popup will display a link to the document** that users can download by clicking on the link.
+* if the path points **to a picture, the image will be displayed** in the popup. Clicking on the picture will display the original image in a new tab
+* if the path points **to a text file or HTML file, the file contents will be displayed** in the popup
+* for **other file types, the popup will display a link to the document** that users can download by clicking on the link.
 
 Illustration
 _____________
@@ -156,15 +156,15 @@ Below is an illustration of a Lizmap popup displaying a picture, a text and a li
    :align: center
    :width: 90%
 
-How to configure popups in Lizmap
+How to configure popups
 ===============================================================
  
-Activate popups in Lizmap
+Activate popups
 -------------------------------
 
 With the plugin, you can activate popups **for a single layer** or for **a group configured with the "Group as layer" option**.
 
-Just click on the checkbox **Activate popups** of the tab *Layers* on the Lizmap plugin interface. For the *group as layer* option you must select the option for the group and for all the layers included you want to show in the popup: In this case, only the layers with the option *Popup* checked will be shown.
+Just click on the checkbox **Activate popups** of the tab *Layers* on the Lizmap plugin interface. For the *Group as layer* option you must select the option for the group and for all the layers included you want to show in the popup: in this case, only the layers with the option *Popup* checked will be shown.
 
 In the web application *Lizmap-Web-Client*, a click on a map object will trigger the popup if (and only if):
 
@@ -172,12 +172,12 @@ In the web application *Lizmap-Web-Client*, a click on a map object will trigger
 * the popup **has been activated** through the plugin for the layer or the group
 * the user has clicked on an **area of the canvas** where data for the layer with active popups are displayed.
 
-.. note:: For Point layers you need to click in the middle of the point to display the popup.
+.. note:: For point layers you need to click in the middle of the point to display the popup.
 
 Informations displayed in the popup
 _____________________________________
 
-By default the *Lizmap-Web-Client* popup displays a table showing the columns of the attribute table in two columns *Field* et *Value*, as shown below:
+By default the *Lizmap-Web-Client* popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:
 
 ============  ==============
 Field         Value
@@ -188,7 +188,7 @@ Field         Value
        photo  :-)
 ============  ==============
 
-This is called **simple mode**. You can somewhat modify the info displayed through QGIS, and also display pictures or links.
+This is called **simple mode**. You can modify the info displayed through QGIS, and also display pictures or links.
 
 Simple popup configuration
 --------------------------------
@@ -204,7 +204,7 @@ You can use the tools available in the **Fields** tab of the **Layer properties*
 
 * to **avoid displaying** a column in the popup, **uncheck the relative WMS checkbox**. The WMS column is on the right
 
-* to **change the name** displayed for that column, type a different name in the *Alias column*
+* to **change the name** displayed for that column, type a different name in the *Alias* column
 
 .. image:: ../MEDIA/features-popup-fields.png
    :align: center
@@ -224,7 +224,7 @@ If you use **paths to documents of the media directory**, you can:
 Usage of external links
 ______________________________
 
-You can also use, in a fiels, **full web links to a specific page or image**:
+You can also use, in a field, **full web links to a specific page or image**:
 
 * the image referred to will be displayed, instead of the links
 * the web link will be displayed and clickable
@@ -237,12 +237,12 @@ _____________
 
 If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know well the **HTML format**. See e.g.: http://html.net/tutorials/html/
 
-.. warning:: When you use the advanced mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the temlate. Managin media is also possible, but you have to configure it a well.
+.. warning:: When you use the advanced mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the template. Managing media is also possible, but you have to configure it as well.
 
 Deploying
 _______________
 
-You can edit the popup template with the **button Configure** in the Lizmap plugin. Clicking on it you'll get a window with two text areas:
+You can edit the popup template with the button *Configure* in the Lizmap plugin. Clicking on it you'll get a window with two text areas:
 
 * an **area where you can type your text**
 * a **read-only area**, showing a preview of your template
@@ -348,7 +348,7 @@ The request returns a zipfile containing the default theme, with the following s
 Once downloaded the zipfile, you can:
 
 * replace the images
-* deit the CSS files
+* edit the CSS files
 
 Once your theme is ready, you can just publish it copying it in the directory ``media``.
 
