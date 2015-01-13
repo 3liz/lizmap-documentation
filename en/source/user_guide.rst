@@ -213,13 +213,13 @@ The feature is available in the Lizmap menu bar. The edit menu allows you to sel
    :align: center
    :scale: 80%
 
-Once the layer selected, the edit pannel appears. This varies depending on the configuration desired by the map publisher. If any changes are available you have to choose between *add* a new object or *select* one.
+Once the layer selected, the edit pannel appears. This varies depending on the configuration desired by the map publisher. If any changes are available you have to choose between *Add* a new object or *Select* one.
 
 .. image:: MEDIA/user-guide-20-edition-add.png
    :align: center
    :scale: 80%
 
-If you have selected *add*, you will be asked to draw a simple form that depends on the selected data layer:
+If you have selected *Add*, you will be asked to draw a simple form that depends on the selected data layer:
 
 * point
 * line
@@ -287,12 +287,8 @@ The *Save* button saves the geometry and attributes changes.
 
 If you want to remove the object you selected, you must click *Del*.
 
-Finally, to disable editing tool, simply click on * Stop *.
+Finally, to disable editing tool, simply click on *Stop*.
 
 .. image:: MEDIA/user-guide-30-edition-stop.png
    :align: center
    :scale: 80%
-
-
-
-

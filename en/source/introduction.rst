@@ -28,10 +28,10 @@ When synchronization is complete, The QGIS map can then be accessed on the Inter
 QGIS and QGIS Server
 ===============================================================
 
-* Qgis, a complete Desktop GIS software
+* QGIS, a complete Desktop GIS software
 
-  * Management of a wide range of data format for raster (GeoTIFF, ASC, NetCDF, etc) and vector (SHP, TAB, MIF/MID, GML, GeoJSON, etc)
-  * Management of key geographic database (PostgreSQL/PostGIS, Oracle, MSSQL, etc)
+  * Management of a wide range of data format for raster (GeoTIFF, ASC, NetCDF, etc.) and vector (SHP, TAB, MIF/MID, GML, GeoJSON, etc)
+  * Management of key geographic database (PostgreSQL/PostGIS, Oracle, MSSQL, etc.)
   * Management of raster and vector layers, symbology, printing, processing
   * Performance and functional richness of a desktop GIS Software
 
@@ -44,10 +44,10 @@ QGIS and QGIS Server
 
 * QGIS Server allows you to easily publish 3 types of standardized Web Services Geographic:
  
-  * Install Qgis Server on a server
+  * Install QGIS Server on a server
   * Configure properties of Geographic Web Services
-  * Copy and paste the Qgis project and data files
-  * Qgis Server and Qgis Desktop share **the same rendering engine**
+  * Copy and paste the QGIS project and data files
+  * QGIS Server and QGIS Desktop share **the same rendering engine**
 
 .. image:: MEDIA/introduction-comparison-qgis-web.png
    :align: center
