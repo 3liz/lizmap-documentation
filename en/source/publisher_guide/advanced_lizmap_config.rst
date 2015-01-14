@@ -427,11 +427,9 @@ L'option **Cache client navigateur** permet de spécifier un temps d'expiration 
   
 Nous conseillons de mettre la valeur maximale (1 mois soit 24 x 3600 x 30 = 2592000 secondes), sauf bien sûr pour les couches dont la donnée change souvent.
 
-Notes
--------------
-
-* **Le cache doit être activé seulement une fois le rendu bien maîtrisé**, lorsqu'on souhaite passer le projet en production.
-* **Les 2 modes de cache Serveur et Client sont complètement indépendants** l'un de l'autre. Mais bien sûr, il est intéressant d'utiliser les 2 en même temps pour optimiser l'application et libérer les ressources du serveur.
+.. note::
+   * **Le cache doit être activé seulement une fois le rendu bien maîtrisé**, lorsqu'on souhaite passer le projet en production.
+   * **Les 2 modes de cache Serveur et Client sont complètement indépendants** l'un de l'autre. Mais bien sûr, il est intéressant d'utiliser les 2 en même temps pour optimiser l'application et libérer les ressources du serveur.
 
 Centralizing the cache with the integration of groups and layers from a master project
 =======================================================================================
@@ -440,22 +438,22 @@ Dans QGIS, il est possible d'intégrer dans un projet des groupes ou des couches
 
 Lizmap utilise cette fonctionnalité pour centraliser le cache des tuiles. Pour tous les projets fils qui utilisent des couches intégrées du projet parent, Lizmap demandera à QGIS Server les tuiles du projet parent, et non des projets fils. Le cache sera donc centralisé au niveau du projet parent, et tous les projets fils qui utilisent les couches bénéficieront du cache mis en commun.
 
-Pour pouvoir utiliser cette fonctionnalité, il faut
+Pour pouvoir utiliser cette fonctionnalité, il faut:
 
-* **publier le projet QGIS parent avec Lizmap**. 
+* publier le projet QGIS parent avec Lizmap
 
-  - il faut bien **choisir l'emprise annoncée** dans l'onglet *Serveur Ows* des propriétés du projet, car cette **emprise devra être réutilisée à l'identique dans les projets fils.**
-  - il faut **configurer le cache** pour les couches à intégrer. De même, bien noter les options choisies ici (format d'image, metatile, expiration) pour les utiliser telles quelles dans les projets fils.
-  - Il est possible de **masquer le projet** dans la page d'acceuil de Lizmap via la case à cocher *Masquer le projet dans Lizmap-Web-Client* de l'onglet *Carte* du plugin.
+  - il faut bien **choisir l'emprise annoncée** dans l'onglet *Serveur Ows* des propriétés du projet, car cette **emprise devra être réutilisée à l'identique dans les projets fils**
+  - il faut **configurer le cache** pour les couches à intégrer. De même, bien noter les options choisies ici (format d'image, metatile, expiration) pour les utiliser telles quelles dans les projets fils
+  - Il est possible de masquer le projet dans la page d'acceuil de Lizmap via la case à cocher *Masquer le projet dans Lizmap-Web-Client* de l'onglet *Carte* du plugin
 
-* **Ouvrir le projet fils**, et *intégrer des couches ou des groupes dans ce projet*, par exemple une orthophotographie. Ensuite il faut :
+* ouvrir le projet fils, et *intégrer des couches ou des groupes dans ce projet*, par exemple une orthophotographie. Ensuite il faut :
 
   - vérifier que l'**emprise annonceé** dans les propriétés du projet QGIS / Serveur OwS est **exactement la même que celle du projet parent**
   - il faut **configurer le cache** pour la couche intégrée **avec exactement les mêmes options que celles choisies dans le projet parent** : format d'image, expiration, metatile
   - il faut renseigner l'identifiant Lizmap du **Répertoire source** du projet parent (celui configuré dans l'interface d'administration de Lizmap-Web-Client)
   - le code du **Projet source** (le nom du projet QGIS parent sans l'extension .qgs) est renseigné automatiquement pour les couches et les groupes intégrés.
 
-* **Publier le projet fils** vers l'application Lizmap-Web-Client, comme d'habitude.
+* Publier le projet fils vers l'application Lizmap-Web-Client, comme d'habitude.
 
 Masking individual layers
 ===============================================================
@@ -496,27 +494,27 @@ Usage examples
 
 * **Un bureau d'étude** souhaite permettre aux partenaires d'un projet de remonter des remarques sur des zones du projet. Il permet l'ajout de polygones dans une couche dédiée.
 
-Configuring edition tool
------------------------------
+Configuring the edition tool
+------------------------------
 
-Pour permettre l'édition de données dans *Lizmap-Web-Client*, il faut
+Pour permettre l'édition de données dans *Lizmap-Web-Client*, il faut:
 
-* **Au moins une couche vectorielle de type PostGis ou Spatialite** dans le projet QGIS
+* **Au moins une couche vectorielle de type PostGIS ou Spatialite** dans le projet QGIS
 * **Configurer les outils d'éditions pour cette couche** dans l'onglet *Champs* des propriétés de la couche. Ce n'est pas obligatoire mais recommandé pour contrôler les données saisies par les utilisateurs.
 * **Ajouter la couche dans l'outil via le plugin**
 
 Voici le détail des étapes:
 
-1. Si nécessaire, **créer une couche** dans votre base de données, du type de géométrie souhaité (point, ligne, polygone, etc.)
+* Si nécessaire, **créer une couche** dans votre base de données, du type de géométrie souhaité (point, ligne, polygone, etc.)
 
   - pensez à ajouter une **clé primaire** : c'est indispensable !
-  - cette colonne de clé primaire doit être de type **"auto-incrémenté"**. Par exemple *serial* pour PostGresql.
+  - cette colonne de clé primaire doit être de type **"auto-incrémenté"**. Par exemple *serial* pour PostgreSQL.
   - pensez à ajouter un **index spatial** : c'est important pour les performances
   - *créer autant de champs dont vous avez besoin pour les attributs* : utiliser si possible des noms de champ simples !
 
-  Veuillez vous référer à la documentation de QGIS pour voir comment créer une couche spatiale dans une base de données PostGIS ou Spatialite: http://docs.qgis.org/html/fr/docs/user_manual/index.html
+Veuillez vous référer à la documentation de QGIS pour voir comment créer une couche spatiale dans une base de données PostGIS ou Spatialite: http://docs.qgis.org/html/fr/docs/user_manual/index.html
 
-2. **Configurer les outils d'édition** pour les champs de votre couche
+* **Configurer les outils d'édition** pour les champs de votre couche
 
   - *Ouvrir les propriétés de la couche* en double-cliquant sur le nom de la couche dans la légende
   - Aller à l'onglet *Champs*
@@ -557,12 +555,9 @@ Les couches que vous avez sélectionnées pour l'outil d'édition sont des **cou
 
 * **Les données sont enregistrées dans une couche du projet**. L'administrateur peut donc récupérer ces données et les utiliser par la suite.
 
-.. note:: Pour bien centraliser les choses, nous conseillons d'utiliser une base de données PostGis pour stocker les données. Pour les couches Spatialite, il faut faire attention à ne pas écraser le fichier Spatialite stocké dans le répertoire Lizmap sur le serveur par celui que vous avez en local: pensez à toujours faire une sauvegarde du fichier du serveur avant une nouvelle synchronisation de votre répertoire local.
+.. note:: PostGIS ou Spatialite? Pour bien centraliser les choses, nous conseillons d'utiliser une base de données PostGIS pour stocker les données. Pour les couches Spatialite, il faut faire attention à ne pas écraser le fichier Spatialite stocké dans le répertoire Lizmap sur le serveur par celui que vous avez en local: pensez à toujours faire une sauvegarde du fichier du serveur avant une nouvelle synchronisation de votre répertoire local.
 
-Using the cache
----------------------
-
-.. note:: Si vous souhaitez utiliser le cache serveur ou client pour les couches d'édition, faites-le en toute connaissance de cause : les données ne seront pas visibles par les utilisateurs tant que le cache ne sera pas expiré. Nous conseillons de ne pas activer le cache pour les couches d'édition
+.. note:: Using the cache: si vous souhaitez utiliser le cache serveur ou client pour les couches d'édition, faites-le en toute connaissance de cause : les données ne seront pas visibles par les utilisateurs tant que le cache ne sera pas expiré. Nous conseillons de ne pas activer le cache pour les couches d'édition.
 
 Filtered layers - Filtering data in function of users
 ===================================================================
