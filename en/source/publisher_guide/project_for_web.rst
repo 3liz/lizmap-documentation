@@ -79,6 +79,8 @@ Configure the Web Geographics Services parameters with the *OWS Server* tab:
 
 Check that the paths are saved *relative* in the general tab of the project properties window, access it with the menu :menuselection:`Project --> Project Properties` or CTRL+SHIFT+P.
 
+.. _layers-tab-metadata:
+
 Configure your layers for the Web
 ===============================================================
 

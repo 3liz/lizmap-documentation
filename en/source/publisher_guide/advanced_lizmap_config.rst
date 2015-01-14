@@ -23,6 +23,8 @@ Here is an example of use:
    :align: center
    :width: 60%
 
+.. _locate-by-layer:
+
 Add the localization function
 ===============================================================
 
@@ -157,6 +159,8 @@ Below is an illustration of a Lizmap popup displaying a picture, a text and a li
 .. image:: ../MEDIA/features-popup-photo-example.png
    :align: center
    :width: 90%
+
+.. _popups-in-lizmap:
 
 How to configure popups
 ===============================================================
@@ -308,6 +312,8 @@ Here an example of a template handling media and an external link:
 
 .. seealso:: Chapter :ref:`media-in-lizmap` for more details on the use of documents in the directory media.
 
+.. _lizmap-simples-themes:
+
 Creating simple themes
 ===============================================================
 
@@ -405,7 +411,7 @@ Pour ajouter à l'impression une couche qui remplace un fond externe, il suffit 
 
 Pour les fonds OpenStreetMap, il est possible d'utiliser un fichier XML pour GDAL permettant d'exploiter le services de tuiles d'OpenStreetMap. Son utilisation est décrite dans la documentation GDAL http://www.gdal.org/frmt_wms.html ou dans cet article http://www.3liz.com/blog/rldhont/index.php?post/2012/07/17/Les-Tuiles-OpenStreetMap-dans-QGIS
 
-Par contre si cette couche doit remplacer un fond externe, celle-ci doit-être accessible à QGIS-Server mais ne doit pas être accessible à l'utilisateur dans Lizmap Web Client. Elle doit donc être masquée. Voir le chapitre :ref:`hide_layers`.
+Par contre si cette couche doit remplacer un fond externe, celle-ci doit-être accessible à QGIS-Server mais ne doit pas être accessible à l'utilisateur dans Lizmap Web Client. Elle doit donc être masquée. Voir le chapitre :ref:`hide-layers`.
 
 Optimizing Lizmap with the cache
 ===============================================================
@@ -435,6 +441,8 @@ Nous conseillons de mettre la valeur maximale (1 mois soit 24 x 3600 x 30 = 2592
    * **Le cache doit être activé seulement une fois le rendu bien maîtrisé**, lorsqu'on souhaite passer le projet en production.
    * **Les 2 modes de cache Serveur et Client sont complètement indépendants** l'un de l'autre. Mais bien sûr, il est intéressant d'utiliser les 2 en même temps pour optimiser l'application et libérer les ressources du serveur.
 
+.. _lizmap-cache-centralized:
+
 Centralizing the cache with the integration of groups and layers from a master project
 =======================================================================================
 
@@ -459,6 +467,8 @@ Pour pouvoir utiliser cette fonctionnalité, il faut:
 
 * Publier le projet fils vers l'application Lizmap Web Client, comme d'habitude.
 
+.. _hide-layers:
+
 Masking individual layers
 ===============================================================
 
@@ -470,9 +480,11 @@ Pour ne pas afficher une ou plusieurs couches du projet QGIS dans la légende de
 
 Cette fonctionnalité peut servir pour :
 
-* masquer une couche utiliser dans la localisation (:ref:`locate_by_layer`)
+* masquer une couche utiliser dans la localisation (:ref:`locate-by-layer`)
 * masquer une couche simple d'ajout de données rendu à l'aide d'une vue
 * masquer une couche pour l'impression de plan (:ref:`print-external-baselayer`)
+
+.. _lizmap-config-edition:
 
 Editing data in Lizmap
 ===============================================================
@@ -553,7 +565,7 @@ Les couches que vous avez sélectionnées pour l'outil d'édition sont des **cou
 
 * **Les styles et les étiquettes de QGIS s'appliquent sur ces couches.** On peut donc créer des styles et des étiquettes qui dépendent d'une valeur d'une des colonnes de la couche.
 
-* Si on souhaite proposer l'outil d'édition, mais ne pas permettre aux utilisateurs de voir les données de la couche en ligne ( et donc les ajouts des autres utilisateurs) : **on peut simplement masquer la ou les couches d'édition** en les mettant dans un répertoire *hidden*. Voir :ref:`hide_layers`
+* Si on souhaite proposer l'outil d'édition, mais ne pas permettre aux utilisateurs de voir les données de la couche en ligne ( et donc les ajouts des autres utilisateurs) : **on peut simplement masquer la ou les couches d'édition** en les mettant dans un répertoire *hidden*. Voir :ref:`hide-layers`
 
 * **Les couches sont imprimables** si elles ne sont pas masquées.
 
@@ -563,13 +575,15 @@ Les couches que vous avez sélectionnées pour l'outil d'édition sont des **cou
 
 .. note:: Using the cache: si vous souhaitez utiliser le cache serveur ou client pour les couches d'édition, faites-le en toute connaissance de cause : les données ne seront pas visibles par les utilisateurs tant que le cache ne sera pas expiré. Nous conseillons de ne pas activer le cache pour les couches d'édition.
 
+.. _filter-layer-data-by-group:
+
 Filtered layers - Filtering data in function of users
 ===================================================================
 
 Presentation of the function
 ----------------------------------
 
-Habituellement, la gestion des droits d'accès aux projets Lizmap se fait par répertoire. La configuration se fait dans ce cas via l'interface d'administration de Lizmap Web Client. Voir :ref:`hide_layers`. Cela permet de masquer complètement certains projets en fonction des groupes d'utilisateurs, mais oblige une gestion par répertoire et projet.
+Habituellement, la gestion des droits d'accès aux projets Lizmap se fait par répertoire. La configuration se fait dans ce cas via l'interface d'administration de Lizmap Web Client. Voir :ref:`hide-layers`. Cela permet de masquer complètement certains projets en fonction des groupes d'utilisateurs, mais oblige une gestion par répertoire et projet.
 
 Au contraire, la fonctionnalité de filtrage présentée ici permet de publier un seul projet QGIS, et de filtrer les données affichées sur la carte en fonction de l'utilisateur connecté. Il est possible de filtrer uniquement les couches vectorielles, car Lizmap se base sur une colonne de la table attributaire.
 
@@ -577,8 +591,8 @@ Le filtrage se base sur l'identifiant du groupe de l'utilisateur actuellement co
 
 * les images des couches vectorielles affichées sur la carte
 * les popups
-* les listes de la fonction *Localiser par couche*. Voir :ref:`locate_by_layer`
-* les listes déroulantes des *formulaires d'édition* issues de *Valeur relationnelle*. Voir :ref:`lizmap_config_edition:`
+* les listes de la fonction *Localiser par couche*. Voir :ref:`locate-by-layer`
+* les listes déroulantes des *formulaires d'édition* issues de *Valeur relationnelle*. Voir :ref:`lizmap-config-edition`
 * les fonctionnalités à venir (affichage de la table attributaire, fonctions de recherche, etc.)
 
 Un tutoriel vidéo est disponible à cette adresse : https://vimeo.com/83966790
@@ -613,7 +627,7 @@ Voici le détail des étapes pour configurer cette fonctionnalité:
 Filtering for groups of users
 ----------------------------------------------------------
 
-Voir :ref:`define_group_rights`
+Voir :ref:`define-group-rights`
 
 Time Manager - Animation of temporal vector layers
 ===========================================================

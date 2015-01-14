@@ -2,7 +2,6 @@
 Configuration de Lizmap
 ===============================================================
 
-
 Introduction
 ===============================================================
 
@@ -14,8 +13,6 @@ Le menu *Configuration Lizmap* est divisée en 2 parties
 
 .. image:: ../../MEDIA/administration-lizmap-configuration.png
    :align: center
-
-
 
 Les services
 ===============================================================
@@ -40,7 +37,6 @@ Pour configurer les services, cliquer sur le bouton *Modifier* situé sous le r�
  - *sqlite*: Les tuiles sont enregistrées dans une base de données sqlite par couche
 
 * **Répertoire racine du cache** : le dossier dans lequel est stocké le cache. Il doit être accessible en écriture par le serveur Apache
-
 
 * **Durée de vie du cache** : le temps en seconde pendant lequel chaque tuile est conservée. C'est une valeur par défaut pour les couches dont le temps n'a pas été configuré via le plugin
 
@@ -88,7 +84,7 @@ Pour créer un répertoire, il faut donner
 * **un label** : le nom qui sera affiché pour ce répertoire, accents et espaces autorisés
 * **un chemin (path)** : le chemin complet vers le dossier qui contient les projets QGIS et les données
 
-.. _define_group_rights:
+.. _define-group-rights:
 
 Définir les droits pour chaque groupe
 ---------------------------------------------
@@ -104,14 +100,13 @@ Une fois le répertoire créé, le formulaire de modification du répertoire est
 
   Lorsque cette option est cochée, les utilisateurs du groupe ont accès à l'outil d'édition pour l'ensemble des cartes du répertoire Lizmap pour lesquelles l'édition a été configurée.
 
-
 * **Afficher toutes les données, mêmes si filtrées par login**
 
-  Cette option est en lien avec la fonctionnalité de filtrage des données des couches par groupe. Voir :ref:`filter_layer_data_by_group`. Cocher la case permet de décider quels groupes pourront voir tout le temps toutes les données, même lorsqu'un filtre est actif sur certaines couches.
+  Cette option est en lien avec la fonctionnalité de filtrage des données des couches par groupe. Voir :ref:`filter-layer-data-by-group`. Cocher la case permet de décider quels groupes pourront voir tout le temps toutes les données, même lorsqu'un filtre est actif sur certaines couches.
 
 * **Autoriser les thèmes du répertoire**
 
-  Cette option permet d'activer la possibilité pour l'éditeur de définir un thème pour le répertoire et des thèmes pour chaque carte. Voir :ref:`lizmap_simples_themes`.
+  Cette option permet d'activer la possibilité pour l'éditeur de définir un thème pour le répertoire et des thèmes pour chaque carte. Voir :ref:`lizmap-simples-themes`.
 
 .. image:: ../../MEDIA/administration-modify-repository.png
    :align: center

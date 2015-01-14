@@ -50,12 +50,12 @@ Information about groups and layers:
 
 * *Title*: It will be used in the Web layers tree instead of the name. For layers, the *Title* Field is linked to that of the *Metadata* tab in the layer properties window.
 * *Abstract*: It allows to describe the layer or group. It is displayed in the mouseover. For layers, the *Abstract* Field is linked to that of the *Metadata* tab in the layer properties window.
-* *Link*: The web address of a document or a Web page describing the layer or group. An icon (i) appears in the legend if the link has been submitted. You can use the *media* folder, see :ref:`media_in_lizmap`
+* *Link*: The web address of a document or a Web page describing the layer or group. An icon (i) appears in the legend if the link has been submitted. You can use the *media* folder, see :ref:`media-in-lizmap`
 
 Layers options:
 
 * *Toggled*: allows you to specify whether a layer is displayed by default.
-* *Activate popup*: enables information popups on map's interrogation by clicking. See :ref:`popups_in_lizmap`
+* *Activate popup*: enables information popups on map's interrogation by clicking. See :ref:`popups-in-lizmap`
 * *Hide legend image*: lets not display the legend of the layer in the web interface.
 * *Display in legend tree*: lets not display the layer in the layers tree and thus does not allow the user to manage the display of it.
 * *Base layer*: Sets the layer as a base map. This will be accessible via the list of basemap.
@@ -122,9 +122,11 @@ The scales :
 
 The initial map extent:
 
-* a list of coordinates in the Reference Coordinate System map in the format: `xmin, ymin, xmax, ymax'; describing the initial map extent
+* a list of coordinates in the Reference Coordinate System map in the format: `xmin, ymin, xmax, ymax`; describing the initial map extent
 * the maximal map extent is specified in the *OWS server* tab of *Project Properties* window. The data will not be displayed if they are outside it
 * by default, the initial extent is the maximal one.
+
+.. _lizmap-config-baselayers:
 
 Configure the base layers
 ========================================================
@@ -211,4 +213,4 @@ Here are the approximate integer scales of the current external base layers::
 External Lizmap layers
 ----------------------------
 
-This feature has been removed. It's replaced by the possibility of using the menu  :menuselection:`Layer --> Embed Layers and Groups`, and in the plugin *Layers* tab declare the parent project and the Lizmap repository for the embed layers and groups. See :ref:`lizmap_cache_centralized`
+This feature has been removed. It's replaced by the possibility of using the menu  :menuselection:`Layer --> Embed Layers and Groups`, and in the plugin *Layers* tab declare the parent project and the Lizmap repository for the embed layers and groups. See :ref:`lizmap-cache-centralized`
