@@ -30,12 +30,12 @@ Add the localization function
    :align: center
    :width: 80%
 
-The idea of this tool is to present to the Lizmap-Web-Client user a drop down list that gives the ability to zoom on one or more spatial objects of the layer.
+The idea of this tool is to present to the Lizmap Web Client user a drop down list that gives the ability to zoom on one or more spatial objects of the layer.
 
 Use case
 ------------------
 
-Consider a spatial vector layer **districts** contained in the QGIS project. We choose to add these districts in the tool *Locate by layer*, to allow Lizmap-Web-Client users to quickly position on one of the districts.
+Consider a spatial vector layer **districts** contained in the QGIS project. We choose to add these districts in the tool *Locate by layer*, to allow Lizmap Web Client users to quickly position on one of the districts.
 
 Once this layer added in the tool *Locate by layer*, a drop down list of the districts appears on the Lizmap Web interface.
 
@@ -73,6 +73,8 @@ For this, there are 2 methods:
 
 .. note:: Up to 3 project layers can be added to the *Locate by layer* tool.
 
+.. _media-in-lizmap:
+
 Media in Lizmap
 ===============================================================
 
@@ -86,7 +88,7 @@ It is possible to provide documents through Lizmap. To do this, you simply:
 * the documents contained in this **media** directory are **synchronized as other data** with the plugin FTP synchronisation
 * you can use subdirectories per layer or theme: the organization of **media** directory content is free.
 
-Then in Lizmap-Web-Client you can provide access to these documents for 2 things:
+Then in Lizmap Web Client you can provide access to these documents for 2 things:
 
 * the **popups**: the content of one or more field for each geometry can specify the path to the media. For example a *photo* or *pdf* field
 * the **link** provided for each group or layer in the Lizmap plugin *Layers* tab.
@@ -98,7 +100,7 @@ Use for links
 
 It is possible to use a relative path to a document for layers or groups link.
 
-.. note:: Links can be filled with the Lizmap plugin **Layers** tab after selecting the layer or group. See :ref:`layers_tab_metadata`
+.. note:: Links can be filled with the Lizmap plugin **Layers** tab after selecting the layer or group. See :ref:`layers-tab-metadata`
 
 The path should be written:
 
@@ -111,7 +113,7 @@ Some examples:
 * *media/reports/my_report_on_the_layer.doc*
 * *media/a_picture.png*
 
-On the Lizmap-Web-Client map, if a link has been set up this way for one of the layers, then an icon (i) will be placed to the right of the layer. Clicking this icon opens the linked document in a new browser tab.
+On the Lizmap Web Client map, if a link has been set up this way for one of the layers, then an icon (i) will be placed to the right of the layer. Clicking this icon opens the linked document in a new browser tab.
   
 Use in popups
 ----------------------------
@@ -121,7 +123,7 @@ _________
 
 As described in the introduction above, you can use **a media path** in the spatial data layer.
 
-For example, if you want that the popups associated with a layer displayed a picture that depends on each object, just create a new field that will contain the media path to the picture to each row of the layer attribute table, then activate popups for this layer.
+For example, if you want that the popups associated with a layer displayed a picture that depends on each object, just create a new field that will contain the media path to the picture in each row of the layer attribute table, then activate popups for this layer.
 
 Example
 ________
@@ -166,7 +168,7 @@ With the plugin, you can activate popups **for a single layer** or for **a group
 
 Just click on the checkbox **Activate popups** of the tab *Layers* on the Lizmap plugin interface. For the *Group as layer* option you must select the option for the group and for all the layers included you want to show in the popup: in this case, only the layers with the option *Popup* checked will be shown.
 
-In the web application *Lizmap-Web-Client*, a click on a map object will trigger the popup if (and only if):
+In the web application Lizmap Web Client, a click on a map object will trigger the popup if (and only if):
 
 * the layer is **active in the legend**, so that it is shown on the canvas
 * the popup **has been activated** through the plugin for the layer or the group
@@ -177,7 +179,7 @@ In the web application *Lizmap-Web-Client*, a click on a map object will trigger
 Informations displayed in the popup
 _____________________________________
 
-By default the *Lizmap-Web-Client* popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:
+By default the Lizmap Web Client popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:
 
 ============  ==============
 Field         Value
@@ -219,7 +221,7 @@ If you use **paths to documents of the media directory**, you can:
 * *display the content (text or HTML)* of the file
 * *display a link* to a document
 
-.. seealso:: Chapter :ref:`media_in_lizmap` for more details on the usage of documents of the directory media in the popups.
+.. seealso:: Chapter :ref:`media-in-lizmap` for more details on the usage of documents of the directory media in the popups.
 
 Usage of external links
 ______________________________
@@ -263,7 +265,7 @@ The behaviour is as follows:
 * if the content of the two areas is empty, a simple table will be shown in the popup (default template)
 * if the content is not empty, its content will be used as a template for the popup
 
-*Lizmap-Web-Client* will replace automatically a variable, identified by the name of a field, with its content. To add the content of a column to a popup, you should use the name of the column precede by a dollar sign (`$`), all surrounded by curly brackets (`{}`). For instance:
+Lizmap Web Client will replace automatically a variable, identified by the name of a field, with its content. To add the content of a column to a popup, you should use the name of the column precede by a dollar sign (`$`), all surrounded by curly brackets (`{}`). For instance:
 
 .. code-block:: html
 
@@ -285,7 +287,7 @@ You can also use the values of the columns as parameters to give styling to the 
 Usage of media and external links
 _____________________________________________
 
-You can **use the media** referred to in the table content, even if you use a *template model*. To do this, you should use the media column, taking into account the fact that *Lizmap-Web-Client* automatically replaces the relative path of the type ``/media/myfile.jpg`` with the full URL to the file, accessible through the web interface.
+You can **use the media** referred to in the table content, even if you use a *template model*. To do this, you should use the media column, taking into account the fact that Lizmap Web Client automatically replaces the relative path of the type ``/media/myfile.jpg`` with the full URL to the file, accessible through the web interface.
 
 You can also use full URLs pointing to the pages or images on another server.
 
@@ -304,12 +306,12 @@ Here an example of a template handling media and an external link:
 
    <p><img src="http://www.3liz.com/assets/img/logo.png"/></p> 
 
-.. seealso:: Chapter :ref:`media_in_lizmap` for more details on the use of documents in the directory media.
+.. seealso:: Chapter :ref:`media-in-lizmap` for more details on the use of documents in the directory media.
 
 Creating simple themes
 ===============================================================
 
-Starting from Lizmap-Web-Client version 2.10, it is possible to create themes for all maps of a repository or for a single map. This function needs to be activated by the administrator and uses the directory ``media`` :ref:`media_in_lizmap`.
+Starting from Lizmap Web Client version 2.10, it is possible to create themes for all maps of a repository or for a single map. This function needs to be activated by the administrator and uses the directory ``media`` :ref:`media-in-lizmap`.
 
 The principle is:
 
@@ -355,7 +357,7 @@ Once your theme is ready, you can just publish it copying it in the directory ``
 Printing configuration
 ===============================================================
 
-Pour proposer l’impression sur la carte en ligne, il faut avoir activer l'outil d'impression dans l'onglet *Carte* du plugin (:ref:`lizmap_config_map`) et que le projet QGIS possède au moins un composeur d'impression.
+Pour proposer l’impression sur la carte en ligne, il faut avoir activer l'outil d'impression dans l'onglet *Carte* du plugin (:ref:`lizmap-config-map`) et que le projet QGIS possède au moins un composeur d'impression.
 
 Le composeur d'impression doit contenir **au moins une carte**.
 
@@ -370,14 +372,16 @@ Vous pouvez y ajouter :
 
 Vous pouvez permettre à l'utilisateur de modifier le contenu de certaines étiquettes (titre, description, commentaire, etc). Pour ce faire il vous suffit d'ajouter un identifiant à vos étiquettes.
 
-Enfin la fonction d'impression s'appuiera sur les échelles de la carte que vous aurez défini dans l'onglet *Carte* du plugin (:ref:`lizmap_config_map`).
+Enfin la fonction d'impression s'appuiera sur les échelles de la carte que vous aurez défini dans l'onglet *Carte* du plugin (:ref:`lizmap-config-map`).
 
 .. note:: Il est possible d'exclure des composeurs d'impression de la publication Web. Par exemple, si le projet QGIS contient 4 composeurs, l'administrateur du projet peut en exclure 2 via les *propriétés du projet QGIS*, onglet *Serveur OWS*. Alors ne seront présentés dans Lizmap que les composeurs publiés.
+
+.. _print-external-baselayer:
 
 Allow printing of external baselayers
 ===============================================================
 
-L'onglet *Fonds* du plugin Lizmap permet de sélectionner et d'ajouter des fonds externes (:ref:`lizmap_config_baselayers`). Ces fonds externes ne faisant pas partie du projet QGIS, par défaut la fonction d'impression ne les intègrera pas.
+L'onglet *Fonds* du plugin Lizmap permet de sélectionner et d'ajouter des fonds externes (:ref:`lizmap-config-baselayers`). Ces fonds externes ne faisant pas partie du projet QGIS, par défaut la fonction d'impression ne les intègrera pas.
 
 Pour pallier ce manque Lizmap propose un moyen simple d'imprimer un groupe ou une couche à la place du fond externe.
 
@@ -397,11 +401,11 @@ Pour ajouter à l'impression une couche qui remplace un fond externe, il suffit 
 * *ign-plan* pour IGN Plan
 * *ign-photo* pour IGN Photos
 
-.. note:: L'utilisation de cette méthode doit se faire dans le respect des licences des fonds externes utilisés (:ref:`lizmap_config_baselayers`).
+.. note:: L'utilisation de cette méthode doit se faire dans le respect des licences des fonds externes utilisés (:ref:`lizmap-config-baselayers`).
 
 Pour les fonds OpenStreetMap, il est possible d'utiliser un fichier XML pour GDAL permettant d'exploiter le services de tuiles d'OpenStreetMap. Son utilisation est décrite dans la documentation GDAL http://www.gdal.org/frmt_wms.html ou dans cet article http://www.3liz.com/blog/rldhont/index.php?post/2012/07/17/Les-Tuiles-OpenStreetMap-dans-QGIS
 
-Par contre si cette couche doit remplacer un fond externe, celle-ci doit-être accessible à QGIS-Server mais ne doit pas être accessible à l'utilisateur dans Lizmap-Web-Client. Elle doit donc être masquée. Voir le chapitre :ref:`hide_layers`.
+Par contre si cette couche doit remplacer un fond externe, celle-ci doit-être accessible à QGIS-Server mais ne doit pas être accessible à l'utilisateur dans Lizmap Web Client. Elle doit donc être masquée. Voir le chapitre :ref:`hide_layers`.
 
 Optimizing Lizmap with the cache
 ===============================================================
@@ -411,7 +415,7 @@ L'onglet *Couches* du plugin Lizmap permet d'activer pour chaque couche ou group
 Activating the cache server side
 ---------------------------------
 
-Lizmap-Web-Client sait créer dynamiquement un cache des tuiles sur le serveur. Ce cache représente le stokage sur le serveur des images déjà générées par QGIS-Server. L'application Lizmap-Web-Client génère automatiquement le cache au fur et à mesure que les tuiles sont demandées. Activer le cache permet d'alléger fortement la charge sur le serveur, puisqu'on ne redemande pas à QGIS-Server les tuiles qui ont déjà été rendues. 
+Lizmap Web Client sait créer dynamiquement un cache des tuiles sur le serveur. Ce cache représente le stokage sur le serveur des images déjà générées par QGIS-Server. L'application Lizmap Web Client génère automatiquement le cache au fur et à mesure que les tuiles sont demandées. Activer le cache permet d'alléger fortement la charge sur le serveur, puisqu'on ne redemande pas à QGIS-Server les tuiles qui ont déjà été rendues. 
 
 Pour l'activer il faut :
 
@@ -444,16 +448,16 @@ Pour pouvoir utiliser cette fonctionnalité, il faut:
 
   - il faut bien **choisir l'emprise annoncée** dans l'onglet *Serveur Ows* des propriétés du projet, car cette **emprise devra être réutilisée à l'identique dans les projets fils**
   - il faut **configurer le cache** pour les couches à intégrer. De même, bien noter les options choisies ici (format d'image, metatile, expiration) pour les utiliser telles quelles dans les projets fils
-  - Il est possible de masquer le projet dans la page d'acceuil de Lizmap via la case à cocher *Masquer le projet dans Lizmap-Web-Client* de l'onglet *Carte* du plugin
+  - Il est possible de masquer le projet dans la page d'acceuil de Lizmap via la case à cocher *Masquer le projet dans Lizmap Web Client* de l'onglet *Carte* du plugin
 
 * ouvrir le projet fils, et *intégrer des couches ou des groupes dans ce projet*, par exemple une orthophotographie. Ensuite il faut :
 
   - vérifier que l'**emprise annonceé** dans les propriétés du projet QGIS / Serveur OwS est **exactement la même que celle du projet parent**
   - il faut **configurer le cache** pour la couche intégrée **avec exactement les mêmes options que celles choisies dans le projet parent** : format d'image, expiration, metatile
-  - il faut renseigner l'identifiant Lizmap du **Répertoire source** du projet parent (celui configuré dans l'interface d'administration de Lizmap-Web-Client)
+  - il faut renseigner l'identifiant Lizmap du **Répertoire source** du projet parent (celui configuré dans l'interface d'administration de Lizmap Web Client)
   - le code du **Projet source** (le nom du projet QGIS parent sans l'extension .qgs) est renseigné automatiquement pour les couches et les groupes intégrés.
 
-* Publier le projet fils vers l'application Lizmap-Web-Client, comme d'habitude.
+* Publier le projet fils vers l'application Lizmap Web Client, comme d'habitude.
 
 Masking individual layers
 ===============================================================
@@ -468,7 +472,7 @@ Cette fonctionnalité peut servir pour :
 
 * masquer une couche utiliser dans la localisation (:ref:`locate_by_layer`)
 * masquer une couche simple d'ajout de données rendu à l'aide d'une vue
-* masquer une couche pour l'impression de plan (:ref:`print_external_baselayer`)
+* masquer une couche pour l'impression de plan (:ref:`print-external-baselayer`)
 
 Editing data in Lizmap
 ===============================================================
@@ -476,7 +480,7 @@ Editing data in Lizmap
 Principle
 ----------
 
-Depuis la version 2.8, il est possible de permettre aux utilisateurs d'**éditer des données spatiales et attributaires** depuis l'interface Lizmap-Web-Client, pour les couches **Spatialite ou PostGreSQL** du projet QGIS. Le plugin Lizmap permet d'ajouter une ou plusieurs couches et de choisir pour chacune quelles actions seront possible dans l'interface web:
+Depuis la version 2.8, il est possible de permettre aux utilisateurs d'**éditer des données spatiales et attributaires** depuis l'interface Lizmap Web Client, pour les couches **Spatialite ou PostGreSQL** du projet QGIS. Le plugin Lizmap permet d'ajouter une ou plusieurs couches et de choisir pour chacune quelles actions seront possible dans l'interface web:
 
 * création d'élements
 * modification des attributs
@@ -485,7 +489,7 @@ Depuis la version 2.8, il est possible de permettre aux utilisateurs d'**éditer
 
 Le **formulaire web** présenté à l'utilisateur pour renseigner la **table attributaire** prend en charge les **Outils d'éditions** proposés dans l'onglet *Champs* des *propriétés de la couche* vectorielle QGIS. On peut donc configurer une liste déroulante, masquer une colonne, la rendre non-éditable, utiliser une case à cocher, un champ texte, etc. Toute la configuration se fait à la souris, dans QGIS et dans le plugin Lizmap.
 
-De plus, Lizmap-Web-Client détecte automatiquement le type de colonne (entier, réel, chaîne de caractère, etc.) et ajoute les vérifications et les contrôles nécessaires sur les champs.
+De plus, Lizmap Web Client détecte automatiquement le type de colonne (entier, réel, chaîne de caractère, etc.) et ajoute les vérifications et les contrôles nécessaires sur les champs.
 
 Usage examples
 -----------------------
@@ -497,7 +501,7 @@ Usage examples
 Configuring the edition tool
 ------------------------------
 
-Pour permettre l'édition de données dans *Lizmap-Web-Client*, il faut:
+Pour permettre l'édition de données dans Lizmap Web Client, il faut:
 
 * **Au moins une couche vectorielle de type PostGIS ou Spatialite** dans le projet QGIS
 * **Configurer les outils d'éditions pour cette couche** dans l'onglet *Champs* des propriétés de la couche. Ce n'est pas obligatoire mais recommandé pour contrôler les données saisies par les utilisateurs.
@@ -528,9 +532,9 @@ Veuillez vous référer à la documentation de QGIS pour voir comment créer une
   - **Evolutions de QGIS 2** :
 
     + Pour masquer des colonnes dans la popup de Lizmap, il faut maintenant décocher la case dans la colonne *WMS* pour chaque champs à cacher (cette colonne est juste après *Alias* )
-    + Lizmap-Web-Client ne sait pas encore utiliser le mode *Conception par glisser/déposer* pour la génération des formulaires. Il faut donc seulement utiliser le mode *Autogénérer* pour les couches d'édition.
+    + Lizmap Web Client ne sait pas encore utiliser le mode *Conception par glisser/déposer* pour la génération des formulaires. Il faut donc seulement utiliser le mode *Autogénérer* pour les couches d'édition.
 
-.. note:: Tous les outils d'édition ne sont pas encore gérés par Lizmap-Web-Client. Seuls les outils suivants le sont: Edition de ligne, Classification, Plage, Liste de valeurs, Immuable, Cachée, Boite à cocher, Edition de texte, Calendrier, Valeur relationnelle. Si l'outil n'est pas gérée, le formulaire web affichera un champ texte libre.
+.. note:: Tous les outils d'édition ne sont pas encore gérés par Lizmap Web Client. Seuls les outils suivants le sont: Edition de ligne, Classification, Plage, Liste de valeurs, Immuable, Cachée, Boite à cocher, Edition de texte, Calendrier, Valeur relationnelle. Si l'outil n'est pas gérée, le formulaire web affichera un champ texte libre.
 
 4. Ajouter la couche dans le tableau **Édition de couches** situé dans l'onglet *Outils* du plugin Lizmap:
 
@@ -565,7 +569,7 @@ Filtered layers - Filtering data in function of users
 Presentation of the function
 ----------------------------------
 
-Habituellement, la gestion des droits d'accès aux projets Lizmap se fait par répertoire. La configuration se fait dans ce cas via l'interface d'administration de Lizmap-Web-Client. Voir :ref:`hide_layers`. Cela permet de masquer complètement certains projets en fonction des groupes d'utilisateurs, mais oblige une gestion par répertoire et projet.
+Habituellement, la gestion des droits d'accès aux projets Lizmap se fait par répertoire. La configuration se fait dans ce cas via l'interface d'administration de Lizmap Web Client. Voir :ref:`hide_layers`. Cela permet de masquer complètement certains projets en fonction des groupes d'utilisateurs, mais oblige une gestion par répertoire et projet.
 
 Au contraire, la fonctionnalité de filtrage présentée ici permet de publier un seul projet QGIS, et de filtrer les données affichées sur la carte en fonction de l'utilisateur connecté. Il est possible de filtrer uniquement les couches vectorielles, car Lizmap se base sur une colonne de la table attributaire.
 
@@ -579,17 +583,17 @@ Le filtrage se base sur l'identifiant du groupe de l'utilisateur actuellement co
 
 Un tutoriel vidéo est disponible à cette adresse : https://vimeo.com/83966790
 
-Configuration of the  data filter tool
+Configuration of the data filter tool
 -------------------------------------------
 
-Pour utiliser l'outil de filtrage des données dans *Lizmap-Web-Client*, il faut
+Pour utiliser l'outil de filtrage des données dans Lizmap Web Client, il faut:
 
 * utiliser **QGIS 2 et supérieur** sur le serveur
 * avoir **accès à l'interface d'administration** de Lizmap
 
 Voici le détail des étapes pour configurer cette fonctionnalité:
 
-1. **Connaître les identifiants des groupes d'utilisateurs** configurés dans l'interface d'administration de Lizmap-Web-Client. Pour cela, il faut aller dans l'interface d'administration, menu *SYSTÈME > Groupes d'utilisateurs* : l'identifiant apparaît entre parenthèse derrière le nom de chaque groupe (sous le titre "Groupes des nouveaux utilisateurs")
+1. **Connaître les identifiants des groupes d'utilisateurs** configurés dans l'interface d'administration de Lizmap Web Client. Pour cela, il faut aller dans l'interface d'administration, menu *SYSTÈME > Groupes d'utilisateurs* : l'identifiant apparaît entre parenthèse derrière le nom de chaque groupe (sous le titre "Groupes des nouveaux utilisateurs")
 
 2. Pour toutes les couches vectorielles dont on souhaite filtrer les données, il suffit d'**ajouter une colonne textuelle qui contiendra pour chaque ligne l'identifiant du groupe (et pas le nom !!) qui a le droit de visualiser cette ligne**.
 

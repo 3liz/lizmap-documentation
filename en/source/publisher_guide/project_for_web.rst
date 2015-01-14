@@ -63,12 +63,12 @@ Configure the coordinates reference system, CRS, of your project:
 Configure the Web Geographics Services parameters with the *OWS Server* tab:
 
 * Set the title of your Web Geographics Services
-* Add informations like your organization, the owner of the publication owner, the abstract as the description, etc
+* Add informations like your organization, the owner of the publication, the abstract, etc
 * Set the maximum extent of your WMS service
 * Restrict the CRSs list of your WMS service:
 
-  * at least select the map one
-  * you can use the button *Used* to get all the layer CRS and the map one
+  * at least select the one used in your project
+  * you can use the button *Used* to get all the layer CRS and the project one
 
 * Exclude compositions and layers if data cannot be published in WMS
 * Enable the layers you want to publish WFS and WCS
@@ -77,7 +77,7 @@ Configure the Web Geographics Services parameters with the *OWS Server* tab:
    :align: center
    :width: 60%
 
-Check that the paths are saved *relative* in the general tab of the project properties window, access it with the menu *Project> Project Properties* or CTRL+SHIFT+P.
+Check that the paths are saved *relative* in the general tab of the project properties window, access it with the menu :menuselection:`Project --> Project Properties` or CTRL+SHIFT+P.
 
 Configure your layers for the Web
 ===============================================================
