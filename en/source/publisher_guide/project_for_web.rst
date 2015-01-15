@@ -5,7 +5,7 @@ Prepare a QGIS project for Web
 Create your project
 ===============================================================
 
-Add your data :
+Add your data:
 
 * Vector geographic data files
 
@@ -54,7 +54,7 @@ Configure the coordinates reference system, CRS, of your project:
   * EPSG:2154 for Lambert 93
   * etc
 
-* Enable *on the fly CRS transformation*. QGIS can reproject rasters and vectors data.
+* Enable *on the fly CRS transformation*. QGIS can reproject raster and vector data.
 
 .. image:: ../MEDIA/qgis-montpellier-project-crs.png
    :align: center
@@ -77,7 +77,7 @@ Configure the Web Geographics Services parameters with the *OWS Server* tab:
    :align: center
    :width: 60%
 
-Check that the paths are saved *relative* in the general tab of the project properties window, access it with the menu :menuselection:`Project --> Project Properties` or CTRL+SHIFT+P.
+Check that the paths are saved *relative* in the general tab of the project properties window, access it with the menu :menuselection:`Project --> Project Properties` or `CTRL+SHIFT+P`.
 
 .. _layers-tab-metadata:
 
@@ -86,7 +86,7 @@ Configure your layers for the Web
 
 In the window *Layer properties*, the *Metadata* tab allows you to configure a lot of information for Web Geographic Services:
 
-* Provide a title that can be reused, a description and keywords
+* Provide a title, a description and keywords
 * Specify the attribution to respect the data license
 * Add the metadata record URL if it's available
 
