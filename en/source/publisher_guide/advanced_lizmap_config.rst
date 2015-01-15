@@ -583,7 +583,7 @@ Filtered layers - Filtering data in function of users
 Presentation of the function
 ----------------------------------
 
-Habituellement, la gestion des droits d'accès aux projets Lizmap se fait par répertoire. La configuration se fait dans ce cas via l'interface d'administration de Lizmap Web Client. Voir :ref:`hide-layers`. Cela permet de masquer complètement certains projets en fonction des groupes d'utilisateurs, mais oblige une gestion par répertoire et projet.
+Habituellement, la gestion des droits d'accès aux projets Lizmap se fait par répertoire. La configuration se fait dans ce cas via l'interface d'administration de Lizmap Web Client. Voir :ref:`define-group-rights`. Cela permet de masquer complètement certains projets en fonction des groupes d'utilisateurs, mais oblige une gestion par répertoire et projet.
 
 Au contraire, la fonctionnalité de filtrage présentée ici permet de publier un seul projet QGIS, et de filtrer les données affichées sur la carte en fonction de l'utilisateur connecté. Il est possible de filtrer uniquement les couches vectorielles, car Lizmap se base sur une colonne de la table attributaire.
 
@@ -607,27 +607,21 @@ Pour utiliser l'outil de filtrage des données dans Lizmap Web Client, il faut:
 
 Voici le détail des étapes pour configurer cette fonctionnalité:
 
-1. **Connaître les identifiants des groupes d'utilisateurs** configurés dans l'interface d'administration de Lizmap Web Client. Pour cela, il faut aller dans l'interface d'administration, menu *SYSTÈME > Groupes d'utilisateurs* : l'identifiant apparaît entre parenthèse derrière le nom de chaque groupe (sous le titre "Groupes des nouveaux utilisateurs")
+* **Connaître les identifiants des groupes d'utilisateurs** configurés dans l'interface d'administration de Lizmap Web Client. Pour cela, il faut aller dans l'interface d'administration, :menuselection:`SYSTÈME --> Groupes d'utilisateurs` : l'identifiant apparaît entre parenthèse derrière le nom de chaque groupe (sous le titre *Groupes des nouveaux utilisateurs*)
+* Pour toutes les couches vectorielles dont on souhaite filtrer les données, il suffit d'**ajouter une colonne textuelle qui contiendra pour chaque ligne l'identifiant du groupe (et pas le nom !!) qui a le droit de visualiser cette ligne**.
 
-2. Pour toutes les couches vectorielles dont on souhaite filtrer les données, il suffit d'**ajouter une colonne textuelle qui contiendra pour chaque ligne l'identifiant du groupe (et pas le nom !!) qui a le droit de visualiser cette ligne**.
+   - *Remplir cette colonne* pour chaque ligne de la table attributaire avec l'identifiant du groupe qui a le droit de voir la ligne (via la calculatrice par exemple)
+   - Il est possible de mettre **all** comme valeur dans certaines lignes pour désactiver le filtre : tous les utilisateurs verront les données de ces lignes.
+   - Si la valeur contenue dans cette colonne pour une ligne ne correspond pas à un des groupes d'utilisateurs, alors la donnée ne sera affichée pour aucun utilisateur
 
-  - *Remplir cette colonne* pour chaque ligne de la table attributaire avec l'identifiant du groupe qui a le droit de voir la ligne (via la calculatrice par exemple)
-  - Il est possible de mettre **all** comme valeur dans certaines lignes pour désactiver le filtre : tous les utilisateurs verront les données de ces lignes.
-  - Si la valeur contenue dans cette colonne pour une ligne ne correspond pas à un des groupes d'utilisateurs, alors la donnée ne sera affichée pour aucun utilisateur
+* Ajouter la couche dans le tableau **Filtrer les données par utilisateur** situé dans l'onglet *Outils* du plugin Lizmap:
 
-3. Ajouter la couche dans le tableau **Filtrer les données par utilisateur** situé dans l'onglet *Outils* du plugin Lizmap:
+   - *Sélectionner la couche* dans la liste déroulante
+   - Sélectionner le champ qui contient l'*identifiant du groupe* pour la couche
+   - Ajouter la couche dans la liste via le bouton *Ajouter la couche*
+   - Pour enlever une couche du tableau, cliquer dessus et cliquer sur le bouton *Enlever la couche*
 
-  - *Sélectionner la couche* dans la liste déroulante
-  - Sélectionner le champ qui contient l'*identifiant du groupe* pour la couche
-  - Ajouter la couche dans la liste via le bouton *Ajouter la couche*
-  - Pour enlever une couche du tableau, cliquer dessus et cliquer sur le bouton *Enlever la couche*
-
-4. **Désactiver le cache client ET le cache Serveur** pour toutes les couches filtrées. Sinon, les données affichées ne seront pas mises à jour entre chaque connexion ou déconnexion d'utilisateur !
-
-Filtering for groups of users
-----------------------------------------------------------
-
-Voir :ref:`define-group-rights`
+* **Désactiver le cache client et le cache Serveur** pour toutes les couches filtrées. Sinon, les données affichées ne seront pas mises à jour entre chaque connexion ou déconnexion d'utilisateur !
 
 Time Manager - Animation of temporal vector layers
 ===========================================================
