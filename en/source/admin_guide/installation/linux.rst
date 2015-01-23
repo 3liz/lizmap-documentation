@@ -40,15 +40,15 @@ Depuis le fichier ZIP
    MYAPP=lizmap-web-client
    VERSION=2.10.0
    # récupération de l'archive via wget
-   wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
-   # on dézippze l'archive
+   wget https://github.com/3liz/$MYAPP/archive/$VERSION.zip
+   # on dézippe l'archive
    unzip $VERSION.zip
+   ln -s /var/www/$MYAPP-$VERSION/lizmap/www/ /var/www/html/lm
    # on supprime le zip
    rm $VERSION.zip
 
 Version de développement avec Github
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 .. note:: Attention, la version de développement est en constante évolution, et des bugs peuvent survenir. Ne pas l'utiliser en production.
 
@@ -66,11 +66,9 @@ Version de développement avec Github
    # créer une branche personnelle pour les éventuelles modifications
    git checkout -b mybranch
 
-
 * Pour mettre à jour votre branche depuis le dépôt master
 
 .. code-block:: bash
-
 
    cd /var/www/$MYAPP-$VERSION
    # vérifier que vous êtes bien sur la branche mybranch
@@ -90,23 +88,19 @@ Version de développement avec Github
 
 .. note:: Il est toujours bon de faire une sauvegarde avant toute mise à jour.
 
-
-
 Donner les droits adéquats aux répertoires et fichiers
 --------------------------------------------------------------
 
 .. code-block:: bash
 
    cd /var/www/$MYAPP-$VERSION
-   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+   chgrp www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
    chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-
 
 Premier test
 --------------------------------------------------------------
 
-Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lizmap-web-client-2.10.0/lizmap/www/
-
+Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lm
 
 Outil d'édition : Configurer le serveur avec le support des bases de données
 =============================================================================
@@ -122,7 +116,6 @@ Pour que l'édition de couches PostGIS dans Lizmap Web Client fonctionnent, il f
    sudo service apache2 restart
 
 .. note:: Pour l'édition, nous conseillons fortement d'utiliser une base de données PostGreSQL. Cela simplifie fortement l'installation et la récupération des données saisies par les utilisateurs.
-
 
 Spatialite
 ------------------------------
