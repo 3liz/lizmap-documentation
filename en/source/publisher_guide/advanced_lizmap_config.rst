@@ -363,24 +363,24 @@ Once your theme is ready, you can just publish it copying it in the directory ``
 Printing configuration
 ===============================================================
 
-Pour proposer l’impression sur la carte en ligne, il faut avoir activer l'outil d'impression dans l'onglet *Carte* du plugin (:ref:`lizmap-config-map`) et que le projet QGIS possède au moins un composeur d'impression.
+To add print capabilities in the online map, you have to enbale the printing tool in the plugin *Map* tab (:ref:`lizmap-config-map`) and the QGIS project has at least one print composition.
 
-Le composeur d'impression doit contenir **au moins une carte**.
+The print composition must contain **at least one map**.
 
-Vous pouvez y ajouter :
+you can add :
 
-* une image pour la flèche du nord
-* une image pour le logo de votre structure
-* une légende qui sera fixe pour toutes les impressions (avant la version 2.6)
-* une échelle, de préférence numérique pour l'affichage
-* une carte de localisation soit une carte pour laquelle vous aurez activé et configuré la fonction d'*Aperçu*
-* des étiquettes
+* an image to North arrow
+* an image for the logo of your organization
+* a legend that will be fixed for all printing (before version 2.6)
+* a scale, preferably digital for display
+* a location map, a map for which you have enabled and configured the function of *Overview*
+* labels
 
-Vous pouvez permettre à l'utilisateur de modifier le contenu de certaines étiquettes (titre, description, commentaire, etc). Pour ce faire il vous suffit d'ajouter un identifiant à vos étiquettes.
+You can allow the user to modify the contents of certain labels (title, description, comment, etc). To do this you simply have to add an identifier to your labels.
 
-Enfin la fonction d'impression s'appuiera sur les échelles de la carte que vous aurez défini dans l'onglet *Carte* du plugin (:ref:`lizmap-config-map`).
+Finally the print function will be based on the map scales that you set in the plugin *Map* (:ref:`lizmap-config-map`).
 
-.. note:: Il est possible d'exclure des composeurs d'impression de la publication Web. Par exemple, si le projet QGIS contient 4 composeurs, l'administrateur du projet peut en exclure 2 via les *propriétés du projet QGIS*, onglet *Serveur OWS*. Alors ne seront présentés dans Lizmap que les composeurs publiés.
+.. note:: It is possible to exclude printing compositions for the web. For example, if the QGIS project contains 4 compositions, the project administrator can exclude 2 compositions in the *QGIS project properties*, *OWS server* tab. So only the published compositions will be presented in Lizmap.
 
 .. _print-external-baselayer:
 
