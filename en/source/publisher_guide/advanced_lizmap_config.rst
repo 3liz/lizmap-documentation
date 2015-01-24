@@ -446,26 +446,26 @@ We suggest to set to the maximum value (1 month equals to 24 x 3600 x 30 = 2,592
 Centralizing the cache with the integration of groups and layers from a master project
 =======================================================================================
 
-Dans QGIS, il est possible d'intégrer dans un projet des groupes ou des couches depuis un autre projet (qu'on appellera "parent"). Cette technique est intéressante, car elle permet de définir les propriétés des couches une seule fois dans un projet, par exemple pour les fonds de carte (Dans les projets "fils" qui intègrent ces couches, il n'est pas possible de modifier les propriétés).
+In QGIS, it is possible to integrate in a project, groups or layers from another project (which will be called "parent"). This technique is interesting because it allows you to set the properties of the layers once in a project and use them in several other, for example for baselayers (In the "son" projects that integrate these layers, it is not possible to change the properties).
 
-Lizmap utilise cette fonctionnalité pour centraliser le cache des tuiles. Pour tous les projets fils qui utilisent des couches intégrées du projet parent, Lizmap demandera à QGIS Server les tuiles du projet parent, et non des projets fils. Le cache sera donc centralisé au niveau du projet parent, et tous les projets fils qui utilisent les couches bénéficieront du cache mis en commun.
+Lizmap uses this feature to centralize the tiles cache. For all son projects using integrated layers of the parent project, Lizmap requests QGIS-Server tiles from the parent project, not form son projects. The cache will be centralized at the parent project, and all son projects that use layers benefit shared cache.
 
-Pour pouvoir utiliser cette fonctionnalité, il faut:
+To use this feature, you must:
 
-* publier le projet QGIS parent avec Lizmap
+* publish the parent QGIS project with Lizmap
 
-  - il faut bien **choisir l'emprise annoncée** dans l'onglet *Serveur Ows* des propriétés du projet, car cette **emprise devra être réutilisée à l'identique dans les projets fils**
-  - il faut **configurer le cache** pour les couches à intégrer. De même, bien noter les options choisies ici (format d'image, metatile, expiration) pour les utiliser telles quelles dans les projets fils
-  - Il est possible de masquer le projet dans la page d'acceuil de Lizmap via la case à cocher *Masquer le projet dans Lizmap Web Client* de l'onglet *Carte* du plugin
+  - you must **choose the right announced extent** in the *OWS Server* tab from project properties, because this **extent will be reused identically in son projects**.
+  - you must **configure the cache** for the layers to integrate. Also, note the options chosen here (image format, metatile, expiration) for use as such in the son projects.
+  - It is possible to hide the project from the main page of Lizmap with the check box *Hide the project Web Client Lizmap* in the plugin 'Map' tab.
 
-* ouvrir le projet fils, et *intégrer des couches ou des groupes dans ce projet*, par exemple une orthophotographie. Ensuite il faut :
+* open the son project, and integrate layers or groups in this project, for example orthophoto. Then you must:
 
-  - vérifier que l'**emprise annonceé** dans les propriétés du projet QGIS / Serveur OwS est **exactement la même que celle du projet parent**
-  - il faut **configurer le cache** pour la couche intégrée **avec exactement les mêmes options que celles choisies dans le projet parent** : format d'image, expiration, metatile
-  - il faut renseigner l'identifiant Lizmap du **Répertoire source** du projet parent (celui configuré dans l'interface d'administration de Lizmap Web Client)
-  - le code du **Projet source** (le nom du projet QGIS parent sans l'extension .qgs) est renseigné automatiquement pour les couches et les groupes intégrés.
+  - verify that the **announced extent** in the QGIS project properties / OWS Server is **exactely the same as the parent project**.
+  - you must **configure the cache** for the integrated layer **with exactly the same options as those selected from the parent project**: image size, expiration, metatile.
+  - you must set the Lizmap id of the **Source repository** of the parent project (The one configured in the Lizmap Web Client administration interface).
+  - the code of the "Source project" (the name of the parent QGIS project without the .qgs extension) is automatically entered for layers and integrated groups.
 
-* Publier le projet fils vers l'application Lizmap Web Client, comme d'habitude.
+* Publish the son project to the Lizmap Web Client as usual.
 
 .. _hide-layers:
 
