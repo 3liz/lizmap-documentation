@@ -387,31 +387,31 @@ Finally the print function will be based on the map scales that you set in the p
 Allow printing of external baselayers
 ===============================================================
 
-L'onglet *Fonds* du plugin Lizmap permet de sélectionner et d'ajouter des fonds externes (:ref:`lizmap-config-baselayers`). Ces fonds externes ne faisant pas partie du projet QGIS, par défaut la fonction d'impression ne les intègrera pas.
+The Lizmap plugin *Baselayers* tab allows you to select and add external baselayers (:ref:`lizmap-config-baselayers`). These external baselayers are not part of the QGIS project, default print function does not integrate them.
 
-Pour pallier ce manque Lizmap propose un moyen simple d'imprimer un groupe ou une couche à la place du fond externe.
+To overcome this lack Lizmap offers an easy way to print a group or layer instead of the external baselayer.
 
-Pour ajouter à l'impression une couche qui remplace un fond externe, il suffit d'ajouter au projet QGIS un groupe ou une couche dont le nom fait partie de la liste suivante :
+To add to printing a layer that replaces an external baselayer, simply add to the QGIS project a group or layer whose name is part of the following list:
 
-* *osm-mapnik* pour OpenStreetMap
-* *osm-mapquest* pour MapQuest OSM
-* *osm-cyclemap* pour OSM CycleMap
-* *google-satellite* pour Google Satellite
-* *google-hybrid* pour Google Hybrid
-* *google-terrain* pour Google Terrain
-* *google-street* pour Google Streets
-* *bing-road* pour Bing Road
-* *bing-aerial* pour Bing Aerial
-* *bing-hybrid* pour Bing Hybrid
-* *ign-scan* pour IGN Scan
-* *ign-plan* pour IGN Plan
-* *ign-photo* pour IGN Photos
+* *osm-mapnik* for OpenStreetMap
+* *osm-mapquest* for MapQuest OSM
+* *osm-cyclemap* for OSM CycleMap
+* *google-satellite* for Google Satellite
+* *google-hybrid* for Google Hybrid
+* *google-terrain* for Google Terrain
+* *google-street* for Google Streets
+* *bing-road* for Bing Road
+* *bing-aerial* for Bing Aerial
+* *bing-hybrid* for Bing Hybrid
+* *ign-scan* for IGN Scan
+* *ign-plan* for IGN Plan
+* *ign-photo* for IGN Photos
 
-.. note:: L'utilisation de cette méthode doit se faire dans le respect des licences des fonds externes utilisés (:ref:`lizmap-config-baselayers`).
+.. note:: The use of this method must be in compliance with the licensing of external baselayers used (:ref:`lizmap-config-baselayers`).
 
-Pour les fonds OpenStreetMap, il est possible d'utiliser un fichier XML pour GDAL permettant d'exploiter le services de tuiles d'OpenStreetMap. Son utilisation est décrite dans la documentation GDAL http://www.gdal.org/frmt_wms.html ou dans cet article http://www.3liz.com/blog/rldhont/index.php?post/2012/07/17/Les-Tuiles-OpenStreetMap-dans-QGIS
+For OpenStreetMap baselayers, it is possible to use an XML file for GDAL to exploit the OpenStreetMap tile services. Its use is described in the GDAL documentation http://www.gdal.org/frmt_wms.html or in this blog post http://www.3liz.com/blog/rldhont/index.php?post/2012/07/17/OpenStreetMap-Tiles-in-QGIS
 
-Par contre si cette couche doit remplacer un fond externe, celle-ci doit-être accessible à QGIS-Server mais ne doit pas être accessible à l'utilisateur dans Lizmap Web Client. Elle doit donc être masquée. Voir le chapitre :ref:`hide-layers`.
+By cons, if this layer has to replace an external baselayer, it must be accessible to QGIS-Server but should not be accessible to the user in Lizmap Web Client. So it must be hidden. See chapter :ref:`hide-layers`.
 
 Optimizing Lizmap with the cache
 ===============================================================
