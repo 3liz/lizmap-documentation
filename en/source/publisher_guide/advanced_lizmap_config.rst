@@ -472,17 +472,21 @@ To use this feature, you must:
 Masking individual layers
 ===============================================================
 
-Vous pouvez exclure des couches de votre publication via l'onglet *Serveur OWS* des *propriétés du projet QGIS*. Dans ce cas là les couches ne seront plus accessible dans Lizmap. Avec cette méthode vous ne pouvez pas utiliser une couche dans la fonction de localisation et ne pas l'afficher dans la carte.
+You can exclude layers of your publication with the *OWS Server* tab of the *QGIS project properties*. In this case the layers will not be available in Lizmap. With this method, you cannot use a layer in the locate by layer function and not display in the map.
 
-Pour pallier ce manque Lizmap propose un moyen simple pour ne pas afficher certaines couches.
+To overcome this lack Lizmap offers a simple way to not display some layers.
 
 Pour ne pas afficher une ou plusieurs couches du projet QGIS dans la légende de la carte en ligne, il suffit de **mettre ces couches dans un groupe nommé "hidden"**. Toutes les couches présentes dans ce groupe ne seront pas visibles dans l'application Web.
 
+Not to display one or more layers of QGIS project in the legend of the Web map, just put these layers in a group called "hidden". All the layers in this group will not be visible in the Web application.
+
 Cette fonctionnalité peut servir pour :
 
-* masquer une couche utiliser dans la localisation (:ref:`locate-by-layer`)
-* masquer une couche simple d'ajout de données rendu à l'aide d'une vue
-* masquer une couche pour l'impression de plan (:ref:`print-external-baselayer`)
+This feature can be used for:
+
+* hide a layer used in the localte by layer (:ref:`locate-by-layer`)
+* hide a simple layer for adding data rendered with a view
+* hide a layer for printing (:ref:`print-external-baselayer`)
 
 .. _lizmap-config-edition:
 
