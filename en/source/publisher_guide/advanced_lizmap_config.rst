@@ -496,67 +496,74 @@ Editing data in Lizmap
 Principle
 ----------
 
-Depuis la version 2.8, il est possible de permettre aux utilisateurs d'**éditer des données spatiales et attributaires** depuis l'interface Lizmap Web Client, pour les couches **Spatialite ou PostGreSQL** du projet QGIS. Le plugin Lizmap permet d'ajouter une ou plusieurs couches et de choisir pour chacune quelles actions seront possible dans l'interface web:
+Since version 2.8, it is possible to allow users to **edit spatial and attribute data** from the Lizmap Web Client interface for **PostgreSQL or Spatialite** layers of the QGIS project. The Lizmap plugin allows you to add one or more layers and choose what actions for each will be possible in the web interface:
 
-* création d'élements
-* modification des attributs
-* modification de la géométrie
-* suppression d'éléments
+* creating elements
+* modifying attributes
+* modifying the geometry
+* deleting elements
 
-Le **formulaire web** présenté à l'utilisateur pour renseigner la **table attributaire** prend en charge les **Outils d'éditions** proposés dans l'onglet *Champs* des *propriétés de la couche* vectorielle QGIS. On peut donc configurer une liste déroulante, masquer une colonne, la rendre non-éditable, utiliser une case à cocher, un champ texte, etc. Toute la configuration se fait à la souris, dans QGIS et dans le plugin Lizmap.
+The **Web form** presented to the user to populate the **attribute table** supports **editing tools** available in the *fields* tab of the QGIS Vector *layer properties*. You can configure a dropdown, hide a column, make it non-editable, use a check box, a text area, etc. All configuration is done with the mouse, in QGIS and the Lizmap plugin.
 
-De plus, Lizmap Web Client détecte automatiquement le type de colonne (entier, réel, chaîne de caractère, etc.) et ajoute les vérifications et les contrôles nécessaires sur les champs.
+In addition, Lizmap Web Client automatically detects the column type (integer, real, string, etc.) and adds the necessary checks and controls on the fields.
 
 Usage examples
 -----------------------
 
-* **Une commune** souhaite permettre aux citoyens de recenser les problèmes visibles sur la voirie: poubelles non ramassées, lampadaires en panne, épaves à enlever. L'administrateur du projet QGIS crée une couche dédiée à ce recueil de données et affiche à tous la donnée.
+* **A town** wish that citizens identify visible problems on the road: uncollected trash, broken street lights, wrecks to remove. The QGIS project administrator creates a layer dedicated to collect data and displays them to all.
 
-* **Un bureau d'étude** souhaite permettre aux partenaires d'un projet de remonter des remarques sur des zones du projet. Il permet l'ajout de polygones dans une couche dédiée.
+* **An engineering office** wants to allow project partners to trace remarks on the project areas. It allows the addition of polygons in a dedicated layer.
 
 Configuring the edition tool
 ------------------------------
 
-Pour permettre l'édition de données dans Lizmap Web Client, il faut:
+To allow data editing in Lizmap Web Client, you must:
 
-* **Au moins une couche vectorielle de type PostGIS ou Spatialite** dans le projet QGIS
-* **Configurer les outils d'éditions pour cette couche** dans l'onglet *Champs* des propriétés de la couche. Ce n'est pas obligatoire mais recommandé pour contrôler les données saisies par les utilisateurs.
-* **Ajouter la couche dans l'outil via le plugin**
+* **At least one vector layer with PostGIS or Spatialite type** in the QGIS project.
+* **Configure editing tools** for this layer in the *fields* tab of the layer properties. This is not required but recommended to control the data entered by users.
+* **Add the layer in the tool with the plugin**
 
-Voici le détail des étapes:
+Here are the detailed steps:
 
-* Si nécessaire, **créer une couche** dans votre base de données, du type de géométrie souhaité (point, ligne, polygone, etc.)
+* If necessary, **create a layer** in your database with the desired geometry type (point, line, polygon, etc.)
 
-  - pensez à ajouter une **clé primaire** : c'est indispensable !
-  - cette colonne de clé primaire doit être de type **"auto-incrémenté"**. Par exemple *serial* pour PostgreSQL.
-  - pensez à ajouter un **index spatial** : c'est important pour les performances
-  - *créer autant de champs dont vous avez besoin pour les attributs* : utiliser si possible des noms de champ simples !
+  - think about adding a **primary key**: this is essential!
+  - the primary key column must be of type **auto-increment**. For example *serial* to PostgreSQL.
+  - think about adding a **spatial index** : this is important for performance
+  - *create as many fields as you need for attributes*: if possible, use simple field names!
 
-Veuillez vous référer à la documentation de QGIS pour voir comment créer une couche spatiale dans une base de données PostGIS ou Spatialite: http://docs.qgis.org/html/fr/docs/user_manual/index.html
+Please refer to the QGIS documentation to see how to create a spatial layer in a PostGIS or Spatialite database: http://docs.qgis.org/html/en/docs/user_manual/index.html
 
-* **Configurer les outils d'édition** pour les champs de votre couche
+* **Set the editing tools** for your layer fields
 
-  - *Ouvrir les propriétés de la couche* en double-cliquant sur le nom de la couche dans la légende
-  - Aller à l'onglet *Champs*
-  - Choisir l'*Outil d'édition* via la liste déroulante pour chacun des champs de la couche
+  - *Open the layer properties* by double-clicking on the layer name in the legend.
+  - Go to *Fields* tab.
+  - Select the *Editing tool* in the *Edit widget* column for each field of the layer:
 
-    + Pour masquer un champ, choisir *Cachée*. L'utilisateur ne verra pas ce champ dans le formulaire. Aucun contenu n'y sera écrit. *Utilisez-le pour la clé primaire*
-    + Pour afficher un champ en lecture seule, choisir *Immuable*
-    + Cas particulier de l'option *Valeur relationnelle*. Vous pouvez utiliser cette option pour une carte Lizmap. Pour que les utilisateurs aient accès aux informations de la couche externe qui contient les données, il faut activer la publication de la couche en WFS dans l'onglet *Serveur OWS* de la boîte de dialogue *Propriétés du projet* dans QGIS.
+    + To hide a field, choose *Hidden*. The user will not see the field in the form. There will be no content inserting. *Use it for the primary key*.
+    + To add a read-only field, unchecked *Editable* checkbox.
+    + Special case of the option *Value Relation*. You can use this option for a Lizmap map. For users to have access to information of the outer layer that contains the data, you must enable the publication of the layer as a WFS layer in the *OWS Server* tab of the QGIS *project properties*.
     + etc.
 
-  - **Evolutions de QGIS 2** :
+  - **QGIS 2 evolutions** :
 
-    + Pour masquer des colonnes dans la popup de Lizmap, il faut maintenant décocher la case dans la colonne *WMS* pour chaque champs à cacher (cette colonne est juste après *Alias* )
-    + Lizmap Web Client ne sait pas encore utiliser le mode *Conception par glisser/déposer* pour la génération des formulaires. Il faut donc seulement utiliser le mode *Autogénérer* pour les couches d'édition.
+    + To hide columns in the Lizmap popup, you must now uncheck the box in the *WMS* for each field to hide (this column is just after *Alias*)
+    + Lizmap Web Client does not know yet use the "Drag and drop designer" for form generation.
+    + Lizmap Web Client ne sait pas encore utiliser le mode *Conception par glisser/déposer* pour la génération des formulaires. Therefore only use the *Autogenerate* mode for editing layers.
 
-.. note:: Tous les outils d'édition ne sont pas encore gérés par Lizmap Web Client. Seuls les outils suivants le sont: Edition de ligne, Classification, Plage, Liste de valeurs, Immuable, Cachée, Boite à cocher, Edition de texte, Calendrier, Valeur relationnelle. Si l'outil n'est pas gérée, le formulaire web affichera un champ texte libre.
+.. note:: All the editing tools are not yet managed by Lizmap Web Client. Only the following tools are supported: Text edit, Classification, Range, Value Map, Hidden, Check Box, Date/Time, Value Relation. If the tool is not supported, the web form displays a text input field.
 
-4. Ajouter la couche dans le tableau **Édition de couches** situé dans l'onglet *Outils* du plugin Lizmap:
+4. Add the layer in the table "Layer Editing" located in the plugin Lizmap "Tools" tab:
 
-  - *Sélectionner la couche* dans la liste déroulante
-  - Cocher les actions que vous souhaitez activer parmi: *Créer, Modifier les attributs, Modifier la géométrie, Supprimer*
-  - Ajouter la couche dans la liste via le bouton *Ajouter la couche*.
+  - *Select the layer* in the drop-down list
+  - Check the actions you want to activate from:
+
+    + Create
+    + Modify attributes
+    + Modify geometry
+    + Delete
+
+  - Add the layer in the list with the "Add layer" button.
 
 .. image:: ../MEDIA/features-edition-table.png
    :align: center
@@ -565,19 +572,19 @@ Veuillez vous référer à la documentation de QGIS pour voir comment créer une
 Reusing data of edition layers
 ---------------------------------------------
 
-Les couches que vous avez sélectionnées pour l'outil d'édition sont des **couches comme les autres**, ce qui implique:
+The layers that you have selected for the editing tool are "layers like the others", which means:
 
-* **Les styles et les étiquettes de QGIS s'appliquent sur ces couches.** On peut donc créer des styles et des étiquettes qui dépendent d'une valeur d'une des colonnes de la couche.
+* **QGIS styles and labels are applied to these layers.** You can create styles and labels that depend on a value of a layer column.
 
-* Si on souhaite proposer l'outil d'édition, mais ne pas permettre aux utilisateurs de voir les données de la couche en ligne ( et donc les ajouts des autres utilisateurs) : **on peut simplement masquer la ou les couches d'édition** en les mettant dans un répertoire *hidden*. Voir :ref:`hide-layers`
+* If you want to propose the editing tool, but does not allow users to view data from the online layer (and therefore the additions of other users): **you can simply hide edition layers** by putting them in a *hidden* directory. See :ref:`hide-layers`
 
-* **Les couches sont imprimables** si elles ne sont pas masquées.
+* **The layers are printable** if they are not masked.
 
-* **Les données sont enregistrées dans une couche du projet**. L'administrateur peut donc récupérer ces données et les utiliser par la suite.
+* **The data are stored in a layer of the project**. The administrator can retrieve this data and use them thereafter.
 
-.. note:: PostGIS ou Spatialite? Pour bien centraliser les choses, nous conseillons d'utiliser une base de données PostGIS pour stocker les données. Pour les couches Spatialite, il faut faire attention à ne pas écraser le fichier Spatialite stocké dans le répertoire Lizmap sur le serveur par celui que vous avez en local: pensez à toujours faire une sauvegarde du fichier du serveur avant une nouvelle synchronisation de votre répertoire local.
+.. note:: PostGIS or Spatialite? To centralize things, we recommend using a PostGIS database to store data. For Spatialite layers, be careful not to overwrite the Spatialite file stored in the Lizmap directory on the server with the one you have locally: remember always to make a backup of the server file before a new sync your local directory.
 
-.. note:: Using the cache: si vous souhaitez utiliser le cache serveur ou client pour les couches d'édition, faites-le en toute connaissance de cause : les données ne seront pas visibles par les utilisateurs tant que le cache ne sera pas expiré. Nous conseillons de ne pas activer le cache pour les couches d'édition.
+.. note:: Using the cache: swhether to use the server or client cache for editing layers, do so by knowingly: the data will not be visible to users until the cache has not expired. We suggest not to enable the cache for editing layers.
 
 .. _filter-layer-data-by-group:
 
