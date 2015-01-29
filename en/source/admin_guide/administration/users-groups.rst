@@ -31,11 +31,10 @@ Application
   1. *Supprimer le groupe "lizadmins" et "Intranet demo group"*
   2. *Créer un groupe "prive" qui contiendra les utilisateurs ayant accès aux cartes privées*
 
-
 .. image:: ../../MEDIA/administration-create-group.png
    :align: center
 
-
+.. note:: Le groupe users est un groupe système pour donner les droits à un utilisateurs authentifié de modifier ses propres informations d'utilisateurs dont le mot de passe. Nous avons exclu ce groupe de la configuration lizmap car tous utilisateurs identifiées doivent faire parti de ce groupe.
 
 Gérer les utilisateurs
 ===============================================================
@@ -49,12 +48,9 @@ Application
 Lizmap
   *Une fois les utitilisateurs créés, il faut les mettre dans des groupes pour leur assigner les droits liés*
 
-
 .. image:: ../../MEDIA/administration-user-list.png
    :align: center
 
-
-  
 Mettre les utilisateurs dans des groupes
 ===============================================================
 
@@ -66,7 +62,6 @@ Mettre les utilisateurs dans des groupes
  - La dernière colonne affiche *les droits résultants*
  - Dans la *ligne d'entête*, des boutons + et - permettent de mettre/enlever l'utilisateur dans un groupe
  - *CONSEIL* : ne pas utiliser la colonne *Droits personnels*
-
 
 Assigner des groupes pour chacun des utilisateurs créés
 -----------------------------------------------------------
