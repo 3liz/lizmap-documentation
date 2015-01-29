@@ -476,11 +476,7 @@ You can exclude layers of your publication with the *OWS Server* tab of the *QGI
 
 To overcome this lack Lizmap offers a simple way to not display some layers.
 
-Pour ne pas afficher une ou plusieurs couches du projet QGIS dans la légende de la carte en ligne, il suffit de **mettre ces couches dans un groupe nommé "hidden"**. Toutes les couches présentes dans ce groupe ne seront pas visibles dans l'application Web.
-
 Not to display one or more layers of QGIS project in the legend of the Web map, just put these layers in a group called "hidden". All the layers in this group will not be visible in the Web application.
-
-Cette fonctionnalité peut servir pour :
 
 This feature can be used for:
 
@@ -548,8 +544,7 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
   - **QGIS 2 evolutions** :
 
     + To hide columns in the Lizmap popup, you must now uncheck the box in the *WMS* for each field to hide (this column is just after *Alias*)
-    + Lizmap Web Client does not know yet use the "Drag and drop designer" for form generation.
-    + Lizmap Web Client ne sait pas encore utiliser le mode *Conception par glisser/déposer* pour la génération des formulaires. Therefore only use the *Autogenerate* mode for editing layers.
+    + Lizmap Web Client does not know yet use the "Drag and drop designer" for form generation. Therefore only use the *Autogenerate* mode for editing layers.
 
 .. note:: All the editing tools are not yet managed by Lizmap Web Client. Only the following tools are supported: Text edit, Classification, Range, Value Map, Hidden, Check Box, Date/Time, Value Relation. If the tool is not supported, the web form displays a text input field.
 
@@ -584,7 +579,7 @@ The layers that you have selected for the editing tool are "layers like the othe
 
 .. note:: PostGIS or Spatialite? To centralize things, we recommend using a PostGIS database to store data. For Spatialite layers, be careful not to overwrite the Spatialite file stored in the Lizmap directory on the server with the one you have locally: remember always to make a backup of the server file before a new sync your local directory.
 
-.. note:: Using the cache: swhether to use the server or client cache for editing layers, do so by knowingly: the data will not be visible to users until the cache has not expired. We suggest not to enable the cache for editing layers.
+.. note:: Using the cache: whether to use the server or client cache for editing layers, do so by knowingly: the data will not be visible to users until the cache has not expired. We suggest not to enable the cache for editing layers.
 
 .. _filter-layer-data-by-group:
 
@@ -594,45 +589,44 @@ Filtered layers - Filtering data in function of users
 Presentation of the function
 ----------------------------------
 
-Habituellement, la gestion des droits d'accès aux projets Lizmap se fait par répertoire. La configuration se fait dans ce cas via l'interface d'administration de Lizmap Web Client. Voir :ref:`define-group-rights`. Cela permet de masquer complètement certains projets en fonction des groupes d'utilisateurs, mais oblige une gestion par répertoire et projet.
+Usually, the management of projects Lizmap access rights is via directory. Configuration is done in this case in the Lizmap Web Client administration interface. See :ref:`define-group-rights`. This will completely hide some projects based on user groups, but requires a directory and project management.
 
-Au contraire, la fonctionnalité de filtrage présentée ici permet de publier un seul projet QGIS, et de filtrer les données affichées sur la carte en fonction de l'utilisateur connecté. Il est possible de filtrer uniquement les couches vectorielles, car Lizmap se base sur une colonne de la table attributaire.
+Instead, the filtering feature presented here allows you to publish a single project QGIS, and filter the data displayed on the map based on the logged in user. It is possible to filter only vector layers because Lizmap uses a column in the attribute table.
 
-Le filtrage se base sur l'identifiant du groupe de l'utilisateur actuellement connecté à l'application Web. Il est actif pour toutes les requêtes vers le serveur QGIS, et concerne donc :
+Filtering currently uses the ID of the user group connected to the Web application. He is active for all requests to the QGIS server, and thus concerns:
 
-* les images des couches vectorielles affichées sur la carte
-* les popups
-* les listes de la fonction *Localiser par couche*. Voir :ref:`locate-by-layer`
-* les listes déroulantes des *formulaires d'édition* issues de *Valeur relationnelle*. Voir :ref:`lizmap-config-edition`
-* les fonctionnalités à venir (affichage de la table attributaire, fonctions de recherche, etc.)
+* the vector layers images displayed on the map
+* the popups
+* the *Locate by layer* feature lists. See :ref:`locate-by-layer`
+* drop-down lists of *Editing forms* from *Value relation*. See :ref:`lizmap-config-edition`
+* upcoming features (the attribute table display, search features, etc.)
 
-Un tutoriel vidéo est disponible à cette adresse : https://vimeo.com/83966790
+A video tutorial is available at: https://vimeo.com/83966790
 
 Configuration of the data filter tool
 -------------------------------------------
 
-Pour utiliser l'outil de filtrage des données dans Lizmap Web Client, il faut:
+To use data filtering tool in Lizmap Web Client, you must:
 
-* utiliser **QGIS 2 et supérieur** sur le serveur
-* avoir **accès à l'interface d'administration** de Lizmap
+* use **QGIS 2 and above** on the server
+* have **access to the administration interface** of Lizmap Web Client
 
-Voici le détail des étapes pour configurer cette fonctionnalité:
+Here are the detailed steps to configure this feature:
 
-* **Connaître les identifiants des groupes d'utilisateurs** configurés dans l'interface d'administration de Lizmap Web Client. Pour cela, il faut aller dans l'interface d'administration, :menuselection:`SYSTÈME --> Groupes d'utilisateurs` : l'identifiant apparaît entre parenthèse derrière le nom de chaque groupe (sous le titre *Groupes des nouveaux utilisateurs*)
-* Pour toutes les couches vectorielles dont on souhaite filtrer les données, il suffit d'**ajouter une colonne textuelle qui contiendra pour chaque ligne l'identifiant du groupe (et pas le nom !!) qui a le droit de visualiser cette ligne**.
+* **Knowing the identifiers of user groups** configured in the Lizmap Web Client adminstration interface. For this, you must go to the administration interface :menuselection:`SYSTEM --> Groups of users for rights`: ID appears in parentheses after the name of each group (under the title *Groups of new users*)
+* For all vector layers which is desired filter data, just add a text column that will hold the group ID for each line (not the name !!) who has the right to display this line.
+   - *Fill this column* for each line of the attribute table with the identifier of the group who has the right to see the line (using the calculator, for example).
+   - It is possible to set **all** as the value in some lines to disable the filter: All users will see the data from these lines.
+   - If the value in this column for a row does not correspond to a user group, then the data will be displayed for no user.
 
-   - *Remplir cette colonne* pour chaque ligne de la table attributaire avec l'identifiant du groupe qui a le droit de voir la ligne (via la calculatrice par exemple)
-   - Il est possible de mettre **all** comme valeur dans certaines lignes pour désactiver le filtre : tous les utilisateurs verront les données de ces lignes.
-   - Si la valeur contenue dans cette colonne pour une ligne ne correspond pas à un des groupes d'utilisateurs, alors la donnée ne sera affichée pour aucun utilisateur
+* Add the layer in the table **Filter Data by User** located in the plugin Lizmap *Tools* tab:
 
-* Ajouter la couche dans le tableau **Filtrer les données par utilisateur** situé dans l'onglet *Outils* du plugin Lizmap:
+   - *Select layer* from the dropdown list
+   - Select the field that contains the *group identifier* for the layer
+   - Add the layer in the list with the button *Add layer*
+   - To remove a layer of the table, click on it and click the button *Delete the layer*
 
-   - *Sélectionner la couche* dans la liste déroulante
-   - Sélectionner le champ qui contient l'*identifiant du groupe* pour la couche
-   - Ajouter la couche dans la liste via le bouton *Ajouter la couche*
-   - Pour enlever une couche du tableau, cliquer dessus et cliquer sur le bouton *Enlever la couche*
-
-* **Désactiver le cache client et le cache Serveur** pour toutes les couches filtrées. Sinon, les données affichées ne seront pas mises à jour entre chaque connexion ou déconnexion d'utilisateur !
+* **Disable the client cache and cache server** for all filtered layers. Otherwise, the data displayed will not be updated between each connection or user logout!
 
 Time Manager - Animation of temporal vector layers
 ===========================================================
