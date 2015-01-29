@@ -1123,47 +1123,437 @@ msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:479
 # 900b0c37731a46919f0f4d1bda96aa95
-msgid "Pour ne pas afficher une ou plusieurs couches du projet QGIS dans la légende de la carte en ligne, il suffit de **mettre ces couches dans un groupe nommé \"hidden\"**. Toutes les couches présentes dans ce groupe ne seront pas visibles dans l'application Web."
-msgstr ""
-
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:481
-# 900b0c37731a46919f0f4d1bda96aa95
 msgid "Not to display one or more layers of QGIS project in the legend of the Web map, just put these layers in a group called \"hidden\". All the layers in this group will not be visible in the Web application."
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:483
-# 3b29b9837eba4319820cc2ccde7be113
-msgid "Cette fonctionnalité peut servir pour :"
-msgstr ""
-
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:485
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:481
 # faaa02dbe5cc4bcd80b175b3082b207d
 msgid "This feature can be used for:"
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:487
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:483
 # 01504ba5d6b24506a4cab4d2b34ea072
 msgid "hide a layer used in the localte by layer (:ref:`locate-by-layer`)"
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:488
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:484
 # cd8ee0bfc60f45a3bafaff18ea934738
 msgid "hide a simple layer for adding data rendered with a view"
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:489
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:485
 # 70a951a8ade04f218055caa560a531c0
 msgid "hide a layer for printing (:ref:`print-external-baselayer`)"
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:494
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:490
 # a9c638ce13d247d18778f3ae43fb0d0d
 msgid "Editing data in Lizmap"
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:631
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:495
+# f7d720befcac41d0ad6209952ae468ec
+msgid "Since version 2.8, it is possible to allow users to **edit spatial and attribute data** from the Lizmap Web Client interface for **PostgreSQL or Spatialite** layers of the QGIS project. The Lizmap plugin allows you to add one or more layers and choose what actions for each will be possible in the web interface:"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:497
+# 43d225344a504c2ba95562952b386e85
+msgid "creating elements"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:498
+# 8fb0926e117b4714adf10bcacdb996a8
+msgid "modifying attributes"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:499
+# 9776851928d747b8b3cdc31d4774632e
+msgid "modifying the geometry"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:500
+# 43d225344a504c2ba95562952b386e85
+msgid "deleting elements"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:502
+# 36e0a985c01242fe8a20ab65ee875daf
+msgid "The **Web form** presented to the user to populate the **attribute table** supports **editing tools** available in the *fields* tab of the QGIS Vector *layer properties*. You can configure a dropdown, hide a column, make it non-editable, use a check box, a text area, etc. All configuration is done with the mouse, in QGIS and the Lizmap plugin."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:504
+# 4c6b6d0c271c4b5a90d04e156c5f5dd4
+msgid "In addition, Lizmap Web Client automatically detects the column type (integer, real, string, etc.) and adds the necessary checks and controls on the fields."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:507
+# c8850eb604a547e0a726de6e7685f592
+msgid "Usage examples"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:509
+# 2f498fa53295409aa60bd6738d9f04c6
+msgid "**A town** wish that citizens identify visible problems on the road: uncollected trash, broken street lights, wrecks to remove. The QGIS project administrator creates a layer dedicated to collect data and displays them to all."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:511
+# a0d52e7b5d8245d680448653925b6222
+msgid "**An engineering office** wants to allow project partners to trace remarks on the project areas. It allows the addition of polygons in a dedicated layer."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:514
+# 2a7d526f811e42b48315d16cf2e7d097
+msgid "Configuring the edition tool"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:516
+# 77c70d37ac4845269f6a1946f3b34155
+msgid "To allow data editing in Lizmap Web Client, you must:"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:518
+# 13d63d08a1a347678984af4c25276e77
+msgid "**At least one vector layer with PostGIS or Spatialite type** in the QGIS project."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:519
+# 9880c615036a4a6ea7d057e694ff6080
+msgid "**Configure editing tools** for this layer in the *fields* tab of the layer properties. This is not required but recommended to control the data entered by users."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:520
+# 325d54525fe84e9d9bb6a0fc2134196a
+msgid "**Add the layer in the tool with the plugin**"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:522
+# 9cf2f00f735e484a9e467a71b44a5e0c
+msgid "Here are the detailed steps:"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:524
+# 2c40e7f0b7e94292baec36ca5cc88129
+msgid "If necessary, **create a layer** in your database with the desired geometry type (point, line, polygon, etc.)"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:526
+# 3824131b2bbb4eed89597bf3f83e3722
+msgid "think about adding a **primary key**: this is essential!"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:527
+# a3d660a3d6424745819bba9d5b20648d
+msgid "the primary key column must be of type **auto-increment**. For example *serial* to PostgreSQL."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:528
+# 7ce8f83ade8e43c2a9379b129b6ffde1
+msgid "think about adding a **spatial index** : this is important for performance"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:529
+# 39d4d3da1894472c90a5c8b23808cc9f
+msgid "*create as many fields as you need for attributes*: if possible, use simple field names!"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:531
+# 2858cfb7715a4402a8f37e9de0c5d03a
+msgid "Please refer to the QGIS documentation to see how to create a spatial layer in a PostGIS or Spatialite database: http://docs.qgis.org/html/en/docs/user_manual/index.html"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:533
+# ad0c63bfdcd642dbac7d36e4caa0c8d3
+msgid "**Set the editing tools** for your layer fields"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:535
+# 31263fde6ce54c3a9023b135e17886e5
+msgid "*Open the layer properties* by double-clicking on the layer name in the legend."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:536
+# 9dadc57c24e549c8a3e2be164646371a
+msgid "Go to *Fields* tab."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:537
+# 06a638203dcb49e8bddfc348a5f1e8b1
+msgid "Select the *Editing tool* in the *Edit widget* column for each field of the layer:"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:539
+# 76510d26629f48cb93880826e61bb6a2
+msgid "To hide a field, choose *Hidden*. The user will not see the field in the form. There will be no content inserting. *Use it for the primary key*."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:540
+# f1bbd5292f264434b5b6ab204d57dc17
+msgid "To add a read-only field, unchecked *Editable* checkbox."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:541
+# c656fa9226ee4e0ebea00261de7b7d95
+msgid "Special case of the option *Value Relation*. You can use this option for a Lizmap map. For users to have access to information of the outer layer that contains the data, you must enable the publication of the layer as a WFS layer in the *OWS Server* tab of the QGIS *project properties*."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:542
+# 4d46a3f98c394d9c873284c92b7172bf
+msgid "etc."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:544
+# fc0a5a9a12334a5b9654f5aedff7fb5b
+msgid "**QGIS 2 evolutions** :"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:546
+# 0d71719ca1634c379ae08ae3bb68167e
+msgid "To hide columns in the Lizmap popup, you must now uncheck the box in the *WMS* for each field to hide (this column is just after *Alias*)"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:547
+# a42a30ac436d4664af274a712b90d421
+msgid "Lizmap Web Client does not know yet use the \"Drag and drop designer\" for form generation. Therefore only use the *Autogenerate* mode for editing layers."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:549
+# 955b2cfec26048e1915f66af62b9276b
+msgid "All the editing tools are not yet managed by Lizmap Web Client. Only the following tools are supported: Text edit, Classification, Range, Value Map, Hidden, Check Box, Date/Time, Value Relation. If the tool is not supported, the web form displays a text input field."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:551
+# bec789d40b7842a0bd3e5fa8ec522826
+msgid "Add the layer in the table \"Layer Editing\" located in the plugin Lizmap \"Tools\" tab:"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:553
+# 743cf418bcd04850aeb261286d82823e
+msgid "*Select the layer* in the drop-down list"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:554
+# 5fd0d8657a834777b9bc1c863a750b07
+msgid "Check the actions you want to activate from:"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:556
+# a17cfd99f6d4416b86997c73b3ce2d72
+msgid "Create"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:557
+# 8fb0926e117b4714adf10bcacdb996a8
+msgid "Modify attributes"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:558
+# 9776851928d747b8b3cdc31d4774632e
+msgid "Modify geometry"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:559
+# b2d29cb8354748719adb3bbb0be3c26f
+msgid "Delete"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:561
+# 71d8c9ee6b1e4646bd62b0bb7d031416
+msgid "Add the layer in the list with the \"Add layer\" button."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:568
+# bd3970ba0f7d43febc40f4bc5fcad3c7
+msgid "Reusing data of edition layers"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:570
+# f66aabbf8dff4b5a9a643b747a1c16e1
+msgid "The layers that you have selected for the editing tool are \"layers like the others\", which means:"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:572
+# d4574f72e9a042ba9988f5258b93a80e
+msgid "**QGIS styles and labels are applied to these layers.** You can create styles and labels that depend on a value of a layer column."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:574
+# f530224a59ff432e8c9f5453275c3db9
+msgid "If you want to propose the editing tool, but does not allow users to view data from the online layer (and therefore the additions of other users): **you can simply hide edition layers** by putting them in a *hidden* directory. See :ref:`hide-layers`"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:576
+# d0b3b56b123d4525948849dd7d300519
+msgid "**The layers are printable** if they are not masked."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:578
+# 84238719721b4b40a82b8691cd512e2e
+msgid "**The data are stored in a layer of the project**. The administrator can retrieve this data and use them thereafter."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:580
+# 26e25e6c4d7e40619afea66765a25422
+msgid "PostGIS or Spatialite? To centralize things, we recommend using a PostGIS database to store data. For Spatialite layers, be careful not to overwrite the Spatialite file stored in the Lizmap directory on the server with the one you have locally: remember always to make a backup of the server file before a new sync your local directory."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:582
+# af861482fb514e1ba629821642aff440
+msgid "Using the cache: whether to use the server or client cache for editing layers, do so by knowingly: the data will not be visible to users until the cache has not expired. We suggest not to enable the cache for editing layers."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:587
+# 7dbebd61d1974287b8db8897e08a5c18
+msgid "Filtered layers - Filtering data in function of users"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:590
+# 91652505618a488f8d0d4613ee1fccd4
+msgid "Presentation of the function"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:592
+# f2f6c67ef2c54d48b08534084e8b1193
+msgid "Habituellement, la gestion des droits d'accès aux projets Lizmap se fait par répertoire. La configuration se fait dans ce cas via l'interface d'administration de Lizmap Web Client. Voir :ref:`define-group-rights`. Cela permet de masquer complètement certains projets en fonction des groupes d'utilisateurs, mais oblige une gestion par répertoire et projet."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:594
+# f180d2bda0f74b0da8658148df4f6850
+msgid "Au contraire, la fonctionnalité de filtrage présentée ici permet de publier un seul projet QGIS, et de filtrer les données affichées sur la carte en fonction de l'utilisateur connecté. Il est possible de filtrer uniquement les couches vectorielles, car Lizmap se base sur une colonne de la table attributaire."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:596
+# 058b53a6aaa54b4db6be32b531e69eac
+msgid "Le filtrage se base sur l'identifiant du groupe de l'utilisateur actuellement connecté à l'application Web. Il est actif pour toutes les requêtes vers le serveur QGIS, et concerne donc :"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:598
+# cd056b2bae2b490f9715f923b9ab5116
+msgid "les images des couches vectorielles affichées sur la carte"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:599
+# c133d1671c8d4e1e951a35c59c9f6bc9
+msgid "les popups"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:600
+# 03baa885c0664daa93270ec8ed4e7e23
+msgid "les listes de la fonction *Localiser par couche*. Voir :ref:`locate-by-layer`"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:601
+# 0ae2faefcaf34f6fb62bcda2e27a1840
+msgid "les listes déroulantes des *formulaires d'édition* issues de *Valeur relationnelle*. Voir :ref:`lizmap-config-edition`"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:602
+# 7c530aa136494c2d8ea7e3fce6fe29f6
+msgid "les fonctionnalités à venir (affichage de la table attributaire, fonctions de recherche, etc.)"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:604
+# 3f8e6c8254874e9cad0f1bd48fcbd2ac
+msgid "Un tutoriel vidéo est disponible à cette adresse : https://vimeo.com/83966790"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:607
+# 248ad492daca44a782a864c82321e963
+msgid "Configuration of the data filter tool"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:609
+# 9381129c60664e83911e969ff72eff8d
+msgid "Pour utiliser l'outil de filtrage des données dans Lizmap Web Client, il faut:"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:611
+# 2c548db0cd2047008f9c0a52effdb670
+msgid "utiliser **QGIS 2 et supérieur** sur le serveur"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:612
+# 79e01f2a571445c3b9b2085e53518481
+msgid "avoir **accès à l'interface d'administration** de Lizmap"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:614
+# 7593dd567a574532ae8734b71496dce6
+msgid "Voici le détail des étapes pour configurer cette fonctionnalité:"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:616
+# e4beb239e245412db08130132d089001
+msgid "**Connaître les identifiants des groupes d'utilisateurs** configurés dans l'interface d'administration de Lizmap Web Client. Pour cela, il faut aller dans l'interface d'administration, :menuselection:`SYSTÈME --> Groupes d'utilisateurs` : l'identifiant apparaît entre parenthèse derrière le nom de chaque groupe (sous le titre *Groupes des nouveaux utilisateurs*)"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:617
+# e07ccdb2fe9947f6b5784777ae8efff8
+msgid "Pour toutes les couches vectorielles dont on souhaite filtrer les données, il suffit d'**ajouter une colonne textuelle qui contiendra pour chaque ligne l'identifiant du groupe (et pas le nom !!) qui a le droit de visualiser cette ligne**."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:619
+# 434ba4fa55e14f67be9011b2dfe5b1cc
+msgid "*Remplir cette colonne* pour chaque ligne de la table attributaire avec l'identifiant du groupe qui a le droit de voir la ligne (via la calculatrice par exemple)"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:620
+# 7b34c821b49446e5b04f52324a01f6bf
+msgid "Il est possible de mettre **all** comme valeur dans certaines lignes pour désactiver le filtre : tous les utilisateurs verront les données de ces lignes."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:621
+# 0c6c5836981142e78a1dc88e4b80c8bf
+msgid "Si la valeur contenue dans cette colonne pour une ligne ne correspond pas à un des groupes d'utilisateurs, alors la donnée ne sera affichée pour aucun utilisateur"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:623
+# fbc78de7363a44179046a0a7e697b77f
+msgid "Ajouter la couche dans le tableau **Filtrer les données par utilisateur** situé dans l'onglet *Outils* du plugin Lizmap:"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:625
+# 5d6e6ce121f445b8ae83984b6f71a018
+msgid "*Sélectionner la couche* dans la liste déroulante"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:626
+# 84fffbfe5298475f8f69caf5ab48f3a5
+msgid "Sélectionner le champ qui contient l'*identifiant du groupe* pour la couche"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:627
+# 870c6e3dfdb94a9eb39ef881af9eee99
+msgid "Ajouter la couche dans la liste via le bouton *Ajouter la couche*"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:628
+# 2723bdfc5b7a46ce81b6fb5d41b50db7
+msgid "Pour enlever une couche du tableau, cliquer dessus et cliquer sur le bouton *Enlever la couche*"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:630
+# e9361ccc7163482a93659edd54026b77
+msgid "**Désactiver le cache client et le cache Serveur** pour toutes les couches filtrées. Sinon, les données affichées ne seront pas mises à jour entre chaque connexion ou déconnexion d'utilisateur !"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:633
 # f96d68cde8ea43f19c08c5526c5b78d3
 msgid "Time Manager - Animation of temporal vector layers"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:635
+# fc64b12aa0754c818c0266d5e4938abd
+msgid "Documentation à venir..."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:637
+# 0a2eaf0a132a4510b90e1213f863846d
+msgid "Un tutoriel vidéo est disponible ici : https://vimeo.com/83845949 . Il présente l'ensemble des étapes pour utiliser la fonctionalité."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:639
+# 6834e319f7a948d6afebf5dbff5a685e
+msgid "Site de démonstration : http://demo.lizmap.3liz.com/index.php/view/?repository=rep6"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/index.rst:3

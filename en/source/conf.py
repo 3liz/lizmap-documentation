@@ -252,4 +252,4 @@ texinfo_documents = [
 intersphinx_mapping = {'http://docs.python.org/': None}
 
 locale_dirs = ['../i18n/']
-gettext_compact = False
+gettext_compact = True
