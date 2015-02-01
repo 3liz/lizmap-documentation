@@ -631,8 +631,8 @@ Here are the detailed steps to configure this feature:
 Time Manager - Animation of temporal vector layers
 ===========================================================
 
-Documentation à venir...
+Documentation coming ...
 
-Un tutoriel vidéo est disponible ici : https://vimeo.com/83845949 . Il présente l'ensemble des étapes pour utiliser la fonctionalité.
+A video tutorial is available here: https://vimeo.com/83845949. It shows all the steps to use the functionality.
 
-Site de démonstration : http://demo.lizmap.3liz.com/index.php/view/?repository=rep6
+Demonstration site: http://demo.lizmap.3liz.com/index.php/view/?repository=rep6
