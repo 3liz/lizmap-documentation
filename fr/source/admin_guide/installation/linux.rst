@@ -38,7 +38,7 @@ Depuis le fichier ZIP
    cd /var/www/
    # options
    MYAPP=lizmap-web-client
-   VERSION=2.10.0
+   VERSION=2.11.0
    # récupération de l'archive via wget
    wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
    # on dézippze l'archive
