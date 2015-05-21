@@ -95,6 +95,8 @@ Configuration de php5
 
 On utilise dans cet exemple le mpm-worker d'Apache. On doit donc configurer manuellement l'activation de php5.
 
+.. warning:: In Apache 2.4, the file ``php.conf`` is in ``/etc/apache2/conf-available/``. Then the configuration must be activated with: ``a2enmod php``
+
 .. code-block:: bash
 
    cat > /etc/apache2/conf.d/php.conf << EOF
@@ -112,7 +114,6 @@ On utilise dans cet exemple le mpm-worker d'Apache. On doit donc configurer manu
    </Files>
    EOF
 
-   
 Configuration du mpm-worker
 -----------------------------
 
