@@ -636,3 +636,16 @@ Documentation coming ...
 A video tutorial is available here: https://vimeo.com/83845949. It shows all the steps to use the functionality.
 
 Demonstration site: http://demo.lizmap.3liz.com/index.php/view/?repository=rep6
+
+
+Changing the default image of a project in the repositories and projects site
+===========================================================
+
+By default the following image is displayed for a project:
+
+.. image:: http://imgur.com/5hGIvAM
+   :align: left
+   :width: 100%
+   
+   
+You can change this default image by adding in the same project folder a .png image with the exact project name and extension. Example: If the project is called montpellier.qgs you can add an image named montpellier.qgs.png. Note that the image has the project extension too.
