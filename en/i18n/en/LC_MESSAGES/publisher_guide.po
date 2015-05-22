@@ -297,7 +297,7 @@ msgid "Use in popups"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:124
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:497
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:493
 # c2d438d2538042099cc50742ae228197
 # 8183cb6bdda84c53b204bffd68b57a25
 msgid "Principle"
@@ -1413,47 +1413,47 @@ msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:592
 # f2f6c67ef2c54d48b08534084e8b1193
-msgid "Habituellement, la gestion des droits d'accès aux projets Lizmap se fait par répertoire. La configuration se fait dans ce cas via l'interface d'administration de Lizmap Web Client. Voir :ref:`define-group-rights`. Cela permet de masquer complètement certains projets en fonction des groupes d'utilisateurs, mais oblige une gestion par répertoire et projet."
+msgid "Usually, the management of projects Lizmap access rights is via directory. Configuration is done in this case in the Lizmap Web Client administration interface. See :ref:`define-group-rights`. This will completely hide some projects based on user groups, but requires a directory and project management."
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:594
 # f180d2bda0f74b0da8658148df4f6850
-msgid "Au contraire, la fonctionnalité de filtrage présentée ici permet de publier un seul projet QGIS, et de filtrer les données affichées sur la carte en fonction de l'utilisateur connecté. Il est possible de filtrer uniquement les couches vectorielles, car Lizmap se base sur une colonne de la table attributaire."
+msgid "Instead, the filtering feature presented here allows you to publish a single project QGIS, and filter the data displayed on the map based on the logged in user. It is possible to filter only vector layers because Lizmap uses a column in the attribute table."
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:596
 # 058b53a6aaa54b4db6be32b531e69eac
-msgid "Le filtrage se base sur l'identifiant du groupe de l'utilisateur actuellement connecté à l'application Web. Il est actif pour toutes les requêtes vers le serveur QGIS, et concerne donc :"
+msgid "Filtering currently uses the ID of the user group connected to the Web application. He is active for all requests to the QGIS server, and thus concerns:"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:598
-# cd056b2bae2b490f9715f923b9ab5116
-msgid "les images des couches vectorielles affichées sur la carte"
+# eb0ecdf627ad4407bf8c9d2f33df0cfb
+msgid "the vector layers images displayed on the map"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:599
 # c133d1671c8d4e1e951a35c59c9f6bc9
-msgid "les popups"
+msgid "the popups"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:600
 # 03baa885c0664daa93270ec8ed4e7e23
-msgid "les listes de la fonction *Localiser par couche*. Voir :ref:`locate-by-layer`"
+msgid "the *Locate by layer* feature lists. See :ref:`locate-by-layer`"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:601
 # 0ae2faefcaf34f6fb62bcda2e27a1840
-msgid "les listes déroulantes des *formulaires d'édition* issues de *Valeur relationnelle*. Voir :ref:`lizmap-config-edition`"
+msgid "drop-down lists of *Editing forms* from *Value relation*. See :ref:`lizmap-config-edition`"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:602
-# 7c530aa136494c2d8ea7e3fce6fe29f6
-msgid "les fonctionnalités à venir (affichage de la table attributaire, fonctions de recherche, etc.)"
+# 07e280331af84ad69684dad92c859983
+msgid "upcoming features (the attribute table display, search features, etc.)"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:604
 # 3f8e6c8254874e9cad0f1bd48fcbd2ac
-msgid "Un tutoriel vidéo est disponible à cette adresse : https://vimeo.com/83966790"
+msgid "A video tutorial is available at: https://vimeo.com/83966790"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:607
@@ -1463,97 +1463,97 @@ msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:609
 # 9381129c60664e83911e969ff72eff8d
-msgid "Pour utiliser l'outil de filtrage des données dans Lizmap Web Client, il faut:"
+msgid "To use data filtering tool in Lizmap Web Client, you must:"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:611
 # 2c548db0cd2047008f9c0a52effdb670
-msgid "utiliser **QGIS 2 et supérieur** sur le serveur"
+msgid "use **QGIS 2 and above** on the server"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:612
-# 79e01f2a571445c3b9b2085e53518481
-msgid "avoir **accès à l'interface d'administration** de Lizmap"
+# d02f9a2c267946b2b0ae82b70f4f4c52
+msgid "have **access to the administration interface** of Lizmap Web Client"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:614
 # 7593dd567a574532ae8734b71496dce6
-msgid "Voici le détail des étapes pour configurer cette fonctionnalité:"
+msgid "Here are the detailed steps to configure this feature:"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:616
 # e4beb239e245412db08130132d089001
-msgid "**Connaître les identifiants des groupes d'utilisateurs** configurés dans l'interface d'administration de Lizmap Web Client. Pour cela, il faut aller dans l'interface d'administration, :menuselection:`SYSTÈME --> Groupes d'utilisateurs` : l'identifiant apparaît entre parenthèse derrière le nom de chaque groupe (sous le titre *Groupes des nouveaux utilisateurs*)"
-msgstr ""
-
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:617
-# e07ccdb2fe9947f6b5784777ae8efff8
-msgid "Pour toutes les couches vectorielles dont on souhaite filtrer les données, il suffit d'**ajouter une colonne textuelle qui contiendra pour chaque ligne l'identifiant du groupe (et pas le nom !!) qui a le droit de visualiser cette ligne**."
-msgstr ""
-
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:619
-# 434ba4fa55e14f67be9011b2dfe5b1cc
-msgid "*Remplir cette colonne* pour chaque ligne de la table attributaire avec l'identifiant du groupe qui a le droit de voir la ligne (via la calculatrice par exemple)"
+msgid "**Knowing the identifiers of user groups** configured in the Lizmap Web Client adminstration interface. For this, you must go to the administration interface :menuselection:`SYSTEM --> Groups of users for rights`: ID appears in parentheses after the name of each group (under the title *Groups of new users*)"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:620
+# 82847d5e266a453ebbc617fe2a537f52
+msgid "For all vector layers which is desired filter data, just add a text column that will hold the group ID for each line (not the name !!) who has the right to display this line."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:618
+# 434ba4fa55e14f67be9011b2dfe5b1cc
+msgid "*Fill this column* for each line of the attribute table with the identifier of the group who has the right to see the line (using the calculator, for example)."
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:619
 # 7b34c821b49446e5b04f52324a01f6bf
-msgid "Il est possible de mettre **all** comme valeur dans certaines lignes pour désactiver le filtre : tous les utilisateurs verront les données de ces lignes."
+msgid "It is possible to set **all** as the value in some lines to disable the filter: All users will see the data from these lines."
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:621
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:620
 # 0c6c5836981142e78a1dc88e4b80c8bf
-msgid "Si la valeur contenue dans cette colonne pour une ligne ne correspond pas à un des groupes d'utilisateurs, alors la donnée ne sera affichée pour aucun utilisateur"
+msgid "If the value in this column for a row does not correspond to a user group, then the data will be displayed for no user."
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:623
-# fbc78de7363a44179046a0a7e697b77f
-msgid "Ajouter la couche dans le tableau **Filtrer les données par utilisateur** situé dans l'onglet *Outils* du plugin Lizmap:"
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:622
+# 12f863d25ee344bc89133d53ba594c89
+msgid "Add the layer in the table **Filter Data by User** located in the plugin Lizmap *Tools* tab:"
+msgstr ""
+
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:624
+# b35b8948d83044f59c7b99c4f76c1128
+msgid "*Select layer* from the dropdown list"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:625
-# 5d6e6ce121f445b8ae83984b6f71a018
-msgid "*Sélectionner la couche* dans la liste déroulante"
+# a64fcc8dcfa24d4bbce84f49a4130831
+msgid "Select the field that contains the *group identifier* for the layer"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:626
-# 84fffbfe5298475f8f69caf5ab48f3a5
-msgid "Sélectionner le champ qui contient l'*identifiant du groupe* pour la couche"
+# 870c6e3dfdb94a9eb39ef881af9eee99
+msgid "Add the layer in the list with the button *Add layer*"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:627
-# 870c6e3dfdb94a9eb39ef881af9eee99
-msgid "Ajouter la couche dans la liste via le bouton *Ajouter la couche*"
-msgstr ""
-
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:628
 # 2723bdfc5b7a46ce81b6fb5d41b50db7
-msgid "Pour enlever une couche du tableau, cliquer dessus et cliquer sur le bouton *Enlever la couche*"
+msgid "To remove a layer of the table, click on it and click the button *Delete the layer*"
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:630
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:629
 # e9361ccc7163482a93659edd54026b77
-msgid "**Désactiver le cache client et le cache Serveur** pour toutes les couches filtrées. Sinon, les données affichées ne seront pas mises à jour entre chaque connexion ou déconnexion d'utilisateur !"
+msgid "**Disable the client cache and cache server** for all filtered layers. Otherwise, the data displayed will not be updated between each connection or user logout!"
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:633
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:632
 # f96d68cde8ea43f19c08c5526c5b78d3
 msgid "Time Manager - Animation of temporal vector layers"
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:635
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:634
 # fc64b12aa0754c818c0266d5e4938abd
-msgid "Documentation à venir..."
+msgid "Documentation coming ..."
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:637
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:636
 # 0a2eaf0a132a4510b90e1213f863846d
-msgid "Un tutoriel vidéo est disponible ici : https://vimeo.com/83845949 . Il présente l'ensemble des étapes pour utiliser la fonctionalité."
+msgid "A video tutorial is available here: https://vimeo.com/83845949. It shows all the steps to use the functionality."
 msgstr ""
 
-#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:639
+#: ../../../en/source/publisher_guide/advanced_lizmap_config.rst:638
 # 6834e319f7a948d6afebf5dbff5a685e
-msgid "Site de démonstration : http://demo.lizmap.3liz.com/index.php/view/?repository=rep6"
+msgid "Demonstration site: http://demo.lizmap.3liz.com/index.php/view/?repository=rep6"
 msgstr ""
 
 #: ../../../en/source/publisher_guide/index.rst:3
