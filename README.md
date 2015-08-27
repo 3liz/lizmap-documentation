@@ -3,10 +3,7 @@ Lizmap - Documentation
 
 This repository contains the complete documentation of the Lizmap application to publish online QGIS maps: the QGIS plugin and Lizmap Web Client application.
 
-This documentation uses **Sphinx** and its internationalization mechanism
-* http://sphinx-doc.org
-* http://sphinx-doc.org/intl.html
-
+This documentation uses **Sphinx** (http://sphinx-doc.org) and its internationalization mechanism (http://sphinx-doc.org/intl.html):
 * **source** contains the documentation in \*.rst format
 * **i18n** contains the locals
 
