@@ -1,15 +1,15 @@
 ===============================================================
-Gestion du cache en tant qu'administrateur
+Cache management as administrator
 ===============================================================
 
-Lizmap Web Client permet de générer automatique un cache des tuiles par le serveur au fur et à mesure que les utilisateurs accèdent aux cartes. Dans certains cas, il est souhaitable de pouvoir supprimer le cache serveur, par exemple lorsque des modifications de style ont été faites pour certaines couches spatialies publiées par Lizmap Web Client. Pour cela, 2 solutions sont possibles
+Lizmap Web Client can automatically generate a tile cache by the server as and when users access maps. In some cases it is desirable to remove the server cache, for example, when the style changes have been made for some spatial layers published in Lizmap Web Client. For this, two solutions are possible:
 
-Suppression de tout le cache par répertoire Lizmap
+Remove all the cache by Lizmap repository
 ===================================================
 
-Dans l'interface d'administration, le menu **Configuration Lizmap** montre la liste des *répertoires Lizmap* configurés. Pour chacun des répertoire, l'administrateur peut supprimer le cache pour toutes les couches de tous les projets du répertoire en cliquant sur le bouton **Vider le cache**.
+In the administration interface, The **Lizmap configuration** menu lists configured *Lizmap repository*. For each repository, the administrator can delete the cache for all layers of all the projects repository by clicking the button **Empty cache**.
 
-Supprimer le cache couche par couche pour chaque projet Lizmap
+Delete the cache, layer by layer, for each Lizmap project
 ==============================================================
 
-Lorsque l'administrateur est connecté et qu'il consulte une carte Lizmap, une **petite croix rouge** est affichée à droite du nom de chaque couche qui est configurée pour être mise en cache serveur. Un clic sur cette croix permet, après validation, de supprimer le cache serveur uniquement pour cette couche de ce projet QGIS. Seul l'administrateur connecté voit ces croix rouges et a le droit de lancer la suppression.
+When the administrator is connected and consults a Lizmap map, a **little red cross** is displayed to the right of the name of each layer that is configured to be server cached. Clicking on the cross allows, after confirmation, delete the server cache only for this layer of the QGIS project. Only logged administrator sees these red crosses and has the right to start the delete.

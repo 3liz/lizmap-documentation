@@ -1,69 +1,67 @@
 ===============================================================
-Gérer les groupes et les utilisateurs dans Lizmap
+Manage groups and users in Lizmap Web CLient
 ===============================================================
 
 
-Les groupes et les utilisateurs : principes
+The groups and users: principles
 ===============================================================
 
-En tant qu'administrateur, vous pouvez
+As an administrator, you can:
 
-* créer, renommer, supprimer des groupes d'utilisateurs
-* créer, modifier, supprimer des utilisateurs
-* rattacher un utilisateur à un ou plusieurs groupes
+* create, rename, delete user groups
+* create, modify, delete users
+* linking a user to one or more groups
 
-Lizmap
-  *Les droits sur les répertoires Lizmap sont gérés au niveau des groupes d'utilisateurs, pas au niveau des utilisateurs*
+.. note:: Rights on Lizmap Web CLient repositories are managed at group level, not at the user level.
   
 
 
-Gérer les groupes : créer, renommer, supprimer
+Manage Groups: create, rename, delete
 ===============================================================
 
+* *Create a group*: In the left menu click on *Groups of users for rights* and scroll down to *Create a group*.
+* Define the *label*: it is possible to use spaces and accents
+* Define the *ident*: one word without special characters
 
-* *Créer un groupe* : Menu *Groupes d'utilisateurs* et descendre jusqu'au formulaire *Créer un groupe*
-* *Donné un libellé* : il est possible d'utiliser des espaces et des accents
-* Donner un identifiant : un seul mot sans caractères spéciaux
-
-Via cette page, on peut aussi *renommer ou supprimer un groupe*
-
-Application
-  1. *Supprimer le groupe "lizadmins" et "Intranet demo group"*
-  2. *Créer un groupe "prive" qui contiendra les utilisateurs ayant accès aux cartes privées*
+In the page *Groups of users for rights*, it is also possible to *Change the name* and *Delete a group*.
 
 .. image:: ../../MEDIA/administration-create-group.png
    :align: center
 
-.. note:: Le groupe users est un groupe système pour donner les droits à un utilisateurs authentifié de modifier ses propres informations d'utilisateurs dont le mot de passe. Nous avons exclu ce groupe de la configuration lizmap car tous utilisateurs identifiées doivent faire parti de ce groupe.
+.. note:: The **users** group is a group system to give the rights to authenticated users to edit their own user information including passwords. We excluded this group of Lizmap Web Client configuration because all identified users must be part of this group.
 
-Gérer les utilisateurs
+
+Manage Users
 ===============================================================
 
-* *Créer* : Menu *Utilisateurs > Créer un nouvel utilisateur*: donner un identifiant, un email et un mot de passe
-* On peut aussi *modifier un utilisateur existant*
+* *Create a user* : In the left menu click on *Users* and click on the button *Create a new user*: 
 
-Application
-  *Créer un ou plusieurs utilisateurs*
+  - give a *Nickname* which will be used for the login
+  - give an email
+  - define and validate the password
+  - set name and firstname
+  
+* it is also possible to *view* and *edit* informations about users
 
-Lizmap
-  *Une fois les utitilisateurs créés, il faut les mettre dans des groupes pour leur assigner les droits liés*
+.. warning:: Once users created, you must put them into groups to assign the associated rights.
 
 .. image:: ../../MEDIA/administration-user-list.png
    :align: center
 
-Mettre les utilisateurs dans des groupes
+Putting users in groups
 ===============================================================
 
-* Menu *Droits des utilisateurs*
-* On peut filtrer les utilisateurs visibles via la liste déroulante
-* Pour mettre les utilisateurs, utiliser le bouton *Droits*
+* In the left menu click on *Rights of users*
+* it is possible to filter the visible users with the dropdown menu
+* to put a user in groups, click on the its button *rights*
 
- - La page affiche un tableau avec *les droits en ligne et les groupes en colonne*
- - La dernière colonne affiche *les droits résultants*
- - Dans la *ligne d'entête*, des boutons + et - permettent de mettre/enlever l'utilisateur dans un groupe
- - *CONSEIL* : ne pas utiliser la colonne *Droits personnels*
+ - The page displays a table with *rights online and groups on column*
+ - The last column shows *the resulting rights*
+ - In the *head row*, the + and - buttons allow to set / remove the user from a group
 
-Assigner des groupes pour chacun des utilisateurs créés
+.. warning:: do not use the *Personal rights* column.
+
+Assigning groups for each user created
 -----------------------------------------------------------
 
 .. image:: ../../MEDIA/administration-users-rights-list.png

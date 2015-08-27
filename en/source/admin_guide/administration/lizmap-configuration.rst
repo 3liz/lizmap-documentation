@@ -1,112 +1,112 @@
 ===============================================================
-Configuration de Lizmap
+Lizmap Web Client configuration
 ===============================================================
 
 Introduction
 ===============================================================
 
-Le menu *Configuration Lizmap* est divisée en 2 parties
+The *Lizmap configuration* menu is divided into 2 parts:
 
-* Les **Services** : la configuration générale de Lizmap Web Client - serveur, cache, etc.
-* Les **Répertoires** : créer et configurer les répertoires Lizmap
+* **Services**: the general configuration of Lizmap Web client - server, cache, etc.
+* **Repositories**: create and configure Lizmap repositories
 
 
 .. image:: ../../MEDIA/administration-lizmap-configuration.png
    :align: center
 
-Les services
+Services
 ===============================================================
 
-Pour configurer les services, cliquer sur le bouton *Modifier* situé sous le récapitulatif
+To configure **Services**, click the *Modify* button under the summary.
 
-* **URL du serveur WMS** : L'url complète du serveur QGIS, par exemple http://localhost/cgi-bin/qgis_mapserv.fcgi . **Attention** QGIS Server doit être installé sur le même ordinateur que Lizmap Web Client
+* **WMS server URL**: The full QGIS Server URL, such as http://localhost/cgi-bin/qgis_mapserv.fcgi or http://localhost/cgi-bin/qgis_mapserv.fcgi.exe.
 
-* **Liste d'URLs WMS de sous-domaine (optionnel)** L'utilisation de plusieurs noms de domaines est une des optimisations classiques lorsqu'une application web utilise OpenLayers (comme Lizmap Web Client). Vous pouvez entrer ici une liste des sous-domaine séparés par virgule.
+.. warning:: QGIS Server must be installed on the same computer as Lizmap Web Client
 
-  + Vous devez utiliser une **liste de sous-domaines** par rapport au domaine avec lequel est utilisé Lizmap Web Client. Par exemple, si votre nom de domaine principal est **cartes.exemple.com**, alors vous pouvez utiliser **a.cartes.exemple.com, b.cartes.exemple.com, c.cartes.exemple.com, d.cartes.exemple.com**.
+* **WMS subdomain URLs list (optionnal))**: The use of multiple domain names is one of the classic optimizations when a web application uses OpenLayers (as Lizmap Web Client). You can enter a list of subdomains separated by comma.
 
-  + Vous devez bien sûr avoir configuré l'*hôte virtuel* du serveur Apache pour prendre en compte ces sous-domaines, par exemple avec la variable
+  + You must use a **list of subdomains** relative to the domain with which is used Lizmap Web Client. For example, if your main domain name is **maps.example.com**, then you can use **a.maps.example.com, b.maps.example.com, c.maps.example.com, d.maps.example.com**.
 
+  + Of course you must have configured the Apache server *virtual host* to take into account these subdomains, for example with the variable:
+  
     .. code:: bash
 
-       ServerAlias \*.cartes.exemple.com
+       ServerAlias \*.maps.example.com
 
-* **Type de stockage pour le cache**
+* **Server cache storage type**
 
- - *file*: Les tuiles mises en cache sont stockées dans un répertoire du serveur par couche
- - *sqlite*: Les tuiles sont enregistrées dans une base de données sqlite par couche
+ - *file*: Tiles cached are stored in a server directory by layer
+ - *sqlite*: The tiles are stored in a sqlite database by layer
 
-* **Répertoire racine du cache** : le dossier dans lequel est stocké le cache. Il doit être accessible en écriture par le serveur Apache
+* **Cache root directory**: the folder where the cache is stored. It must be writable by the Apache server.
 
-* **Durée de vie du cache** : le temps en seconde pendant lequel chaque tuile est conservée. C'est une valeur par défaut pour les couches dont le temps n'a pas été configuré via le plugin
+* **Server cache expiration time (s)**: the time in seconds during which each tile is retained. This is a default value for layers whose time has not been configured with the plugin.
 
- - Les tuiles du cache plus vieilles que ce temps sont automatiquement raffraîchies.
- - La valeur 0 signigie que les tuiles n'expirent jamais
- - Le temps d'expiration doit être adapté à l'évolution des données
+ - The cached tiles older than that time are automatically refreshed.
+ - A value of 0 means that the tiles do not expire.
+ - The expiration time must be adapted to changing data.
 
-* **Envoi des requêtes à QGIS Server avec** : 2 méthodes. *Php ou Curl* . Utiliser la première si curl n'est pas installé sur le serveur
-* *Mode de débogage* : enregistre certaines requêtes dans un fichier de log : *lizmap/var/log/messages.log*
+* **Send request to QGIS Server with**: 2 methods *php or curl*. Use first if curl is not installed on the server.
 
-* **Autoriser les visiteurs à demander un compte** : Si cette option est activée, un nouveau lien **Inscription** sera ajouté dans le menu des cartes Lizmap. En cliquant sur ce lien, le visiteur affiche un formulaire qui lui permet de demander un compte à l'administrateur. Il doit remplir certains champs (nom, prénom, adresse e-mail, raison de la demande) puis valide le formulaire pour envoyer sa demande.
+* **Debug mode**: saves some queries to a log file: *lizmap/var/log/messages.log*
 
-* **Couriel de l'administrateur** Si une adresse e-mail valide est donnée, alors les notifications de Lizmap pourront y être envoyées. Par exemple, chaque demande de création de compte via le formulaire d'inscription génrère l'envoi d'un courriel à cette adresse.
+* **Allow visitors to request an account**: If this option is enabled, a new link 'Registration' will be added in the public menu. By clicking on this link, the visitor displays a form that allows it to request an account to administrator. He must complete some fields (name, email, due to demand) then validates the form to send the request.
+
+* **Administrator e-mail** If a valid e-mail address is given, then the Lizmap Web Client notifications will be sent. For example, each account creation request via the registration form generates an email sent to this address.
 
 .. image:: ../../MEDIA/administration-modify-services.png
    :align: center
 
 
 
-Les répertoires
+Repositories
 ===============================================================
 
-Pour chaque répertoire Lizmap sont listés
+For each Lizmap repository, are listed:
 
-* **Les informations principales** : nom (label) et chemin (path)
-* **La liste des droits** avec les groupes concernés
-* **Des boutons d'action** :
+* **The main informations**: label and path
+* **The list of rights** with the groups concerned
+* **Action buttons**:
 
-  - *voir* : affiche la page qui liste les cartes de ce répertoire
-  - *Modifier*: affiche le formulaire de modification du répertoire
-  - *Supprimer* : permet de supprimer le répertoire
-  - *Vider le cache* : permet de supprimer tout le cache de toutes les couches des projets de ce répertoire
+  - *View*: displays a page that lists the maps in this repository
+  - *Modify*: displays the repository modification form
+  - *Remove*: delete the repository from the Lizmap Web Client configuration
+  - *Empty cache*: deletes the entire cache of all layers of the repository projects
 
 .. image:: ../../MEDIA/administration-repository-detail.png
    :align: center
 
-On peut créer un nouveau répertoire avec le bouton **Ajouter un répertoire** situé tout en bas de la page
+You can create a new repository using the button **Create a repository** located at the top and bottom of the section *Repositories*.
 
-Ajouter un répertoire
+Add a repository
 ---------------------------------------------
 
-Pour créer un répertoire, il faut donner
+To create a repository, you must give:
 
-* **un identifiant**: un mot sans espaces, accents ni caractères spéciaux
-* **un label** : le nom qui sera affiché pour ce répertoire, accents et espaces autorisés
-* **un chemin (path)** : le chemin complet vers le dossier qui contient les projets QGIS et les données
+* **an id**: a word without spaces, accents or special characters
+* **a label**: the name that will be displayed for this repository, accents and spaces allowed
+* **a local folder path**: the full path on the server to the folder that contains the QGIS projects and data
+* **Allow repository themes**: This option enables the possibility for the publisher to set a theme for the repository and themes for each map. See :ref:`lizmap-simples-themes`.
 
 .. _define-group-rights:
 
-Définir les droits pour chaque groupe
+Define the rights for each group
 ---------------------------------------------
 
-Une fois le répertoire créé, le formulaire de modification du répertoire est automatiquement affiché et permet de définir les droits suivants pour chacun des groupes:
+After creating the directory, the repository modification form is displayed automatically and defines the following rights for each group:
 
-* **Voir les répertoires** :
+* **View repository** :
 
-  - tous les utilisateurs des groupes cochés pourront accéder aux cartes de ce répertoire
-  - le groupe *anonymous* représente les utilisateurs non enregistrés et permet de rendre les cartes publiques
+  - all users of checked groups can access maps of this repository
+  - the group *anonymous* is unregistered users and allows to make public maps
 
-* **Utiliser l'outil d'Édition**
+* **Use the Edition tool**
 
-  Lorsque cette option est cochée, les utilisateurs du groupe ont accès à l'outil d'édition pour l'ensemble des cartes du répertoire Lizmap pour lesquelles l'édition a été configurée.
+  When this option is checked, the group users have access to the editing tool for all of Lizmap repository maps for which the edition was configured.
 
-* **Afficher toutes les données, mêmes si filtrées par login**
+* **Always see complete layers data, even if filtered by login**
 
-  Cette option est en lien avec la fonctionnalité de filtrage des données des couches par groupe. Voir :ref:`filter-layer-data-by-group`. Cocher la case permet de décider quels groupes pourront voir tout le temps toutes les données, même lorsqu'un filtre est actif sur certaines couches.
-
-* **Autoriser les thèmes du répertoire**
-
-  Cette option permet d'activer la possibilité pour l'éditeur de définir un thème pour le répertoire et des thèmes pour chaque carte. Voir :ref:`lizmap-simples-themes`.
+  This option is in connection with the filtering feature data layers per group. See :ref:`filter-layer-data-by-group`. Check the box for deciding which groups can see all the time all the data, even when a filter is active on some layers.
 
 .. image:: ../../MEDIA/administration-modify-repository.png
    :align: center

@@ -1,75 +1,74 @@
 ===============================================================
-Installation de Lizmap sous Windows
+Installing Lizmap Web CLient on Windows
 ===============================================================
 
-Cette documentation présente le déroulement de l'installation de Lizmap Web Client sur un environnement  Windows 7. Les autres versions de Windows ne devraient pas poser de problème. Afin de faciliter l'installation, nous utilisons le logiciel OSGeo4W, qui permet d'installer l'ensemble des composants nécessaires de manière centralisée.
+This documentation shows the progress of the installation Lizmap Web Client on a Windows 7 environment. The other versions of Windows should not be a problem. To facilitate installation, we use the OSGeo4W software, which allows to install all the necessary components in a centralized manner.
 
-.. note:: Dans ce document, nous utilisons la version 2.9.0 de Lizmap. Veuillez à adapter en fonction de la version que vous souhaitez installer (la dernière est recommandée)
+.. warning:: The Apache version provided by OSGeo4W is out of date. This documentation has to be updated.
 
-Installation
+.. note:: In this document, the version 2.10.3 of Lizmap Web Client is used. Be sure to adapt it according to the version you want to install (the latter is recommended).
+
+Install
 ===============================================================
 
-1. Télécharger OSGeo4W sur la page de téléchargement de QGIS
+1. Download OSGeo4W on the QGIS download page
 
-http://hub.qgis.org/projects/quantum-gis/wiki/DownloadFr#Installateur-R%C3%A9seau-OSGeo4W
+http://qgis.org/fr/site/forusers/download.html
 
-2. Lancer l'installateur OSGeo4W et choisir l'installation avancée
+2. Launch the OSGeo4W installer and choose the Advanced Installation
 
 .. image:: ../../MEDIA/installation-osgeo4w-01.jpg
    :align: center
 
-
-3. Utiliser l'installation par internet
+3. Use the internet facility
 
 .. image:: ../../MEDIA/installation-osgeo4w-02.jpg
    :align: center
 
-4. Sélectionner la racine pour l'installation des éléments d'OSGeo4W et préférer l'option d'accessibilité à tous les utilisateurs
-
+4. Select the root for OSGeo4W elements installation and prefer the accessibility option to all users
 
 .. image:: ../../MEDIA/installation-osgeo4w-03.jpg
    :align: center
 
-5. Sélectionner la racine des paquets locaux
-
+5. Select the root of local packages
 
 .. image:: ../../MEDIA/installation-osgeo4w-04.jpg
    :align: center
 
-6. Préciser le type de connexion internet (via un proxy ou non)
+6. Specify the type of Internet connection (with a proxy or not)
 
 .. image:: ../../MEDIA/installation-osgeo4w-05.jpg
    :align: center
 
-7. Sélectionner dans 'Desktop' le paquet 'QGIS-full'
+7. Select in 'Desktop' the package 'QGIS-full'
 
 .. image:: ../../MEDIA/installation-osgeo4w-06.jpg
    :align: center
 
-8. Sélectionner dans 'Web' le paquet 'QGIS-server'
+8. Select in 'Web' the package 'QGIS-server'
 
 .. image:: ../../MEDIA/installation-osgeo4w-07.jpg
    :align: center
 
-9. Sélectioner dans 'Lib' le paquet 'fcgi'
+9. Select in 'Lib' the package 'fcgi'
 
 .. image:: ../../MEDIA/installation-osgeo4w-08.jpg
    :align: center
 
-10. Lancer et terminer l'installation
+10. Initiate and complete the installation
 
-A cette étape tout ce qui est nécessaire à LizMap est installé sur votre machine.
-Les étapes suivantes consistent à configurer le serveur, installer LizMap et de configurer LizMap.
+At this point all that is necessary to LizMap Web Client is installed on the machine.
+The next steps are to configure the server, install and configure LizMap Web Client.
 
-11. Vérification d'Apache
+11. Apache checking
 
-Afin de vérifier que le serveur est bien installé ouvrir dans le navigateur l'adresse http://localhost
+To verify that the server is well installed, open in the browser the url: http://localhost
 
-Si rien ne s'affiche c'est que l'installation n'a pas réussi.
+If nothing appears this is that the installation was not successful.
 
-12. Vérification de PHP
+12. PHP checking
 
-Cliquer sur le lien 'phpinfo' de la page d'accueil du serveur apache d'OSGeo4W. Cette page permet de vérifier la configuration de votre serveur. Vous devriez y trouver des informations sur cgi-fcgi, PDO et PDO_sqlite mais pas sur CURL ni GD dont dépend LizMap.
+Click on the link 'phpinfo' on the home page of the OSGeo4W Apache server. This page allows you to check the configuration of your server. You should find information about cgi-fcgi, PDO and PDO_SQLITE but not CURL or GD which depends LizMap Web Client.
 
 .. image:: ../../MEDIA/installation-osgeo4w-09.jpg
    :align: center
@@ -77,75 +76,77 @@ Cliquer sur le lien 'phpinfo' de la page d'accueil du serveur apache d'OSGeo4W. 
 .. image:: ../../MEDIA/installation-osgeo4w-10.jpg
    :align: center
 
-13. Activer CURL et GD2
+13. Activate CURL and GD2
 
-Ouvrir le fichier C:\OSGeo4W\bin\PHP.ini et dé-commenter l'extension curl et gd2
+Open the file C:\OSGeo4W\bin\PHP.ini and uncomment extensions curl and gd2
 
 .. image:: ../../MEDIA/installation-osgeo4w-11.jpg
    :align: center
 
-14. Rédémarrer Apache
+14. Restart Apache
 
-La modification du fichier C:\OSGeo4W\bin\PHP.ini afin d'activer CURL et GD dans PHP, oblige à redémarrer le serveur apache. Pour ce faire,
+Changing the file C:\OSGeo4W\bin\PHP.ini to activate CURL and GD into PHP CURL, requires to restart the Apache server. To do this :
 
-* cliquer dans le menu principal de windows sur le moniteur apache 'Tous les programmes > OSGeo4W > Apache > OSGeo4W-Apache-Monitor'.
+* click in the main menu of windows on the monitor apache 'All programs > OSGeo4W > Apache > OSGeo4W-Apache-Monitor'.
 
   .. image:: ../../MEDIA/installation-osgeo4w-12.png
      :align: center
 
-* Cliquer sur le moniteur apache qui se trouve parmi les icônes cachées de la barre des tâches (en bas à droite) et sur 'Restart'.
+* Click on the apache monitor that is among the hidden icons in the task bar (bottom right) and 'Restart'.
 
   .. image:: ../../MEDIA/installation-osgeo4w-13.png
      :align: center
 
-16. Vérfier CURL et GD
+16. Check CURL and GD
 
-Dans le navigateur web, recharger la page 'phpinfo'. Vous devriez y trouver une section CURL et GD.
+In the web browser, reload the page 'phpinfo'. You should find a CURL and GD section.
 
 .. image:: ../../MEDIA/installation-osgeo4w-14.jpg
    :align: center
 
-17. Télécharger LizMap
+17. Download LizMap Web Client
 
-Le code de Lizmap Web Client est libre et téléchargeable sur github. Pour télécharger la dernière version:
+The Lizmap Web Client code is free and downloadable from github. To download the latest version:
 
-* allez sur https://github.com/3liz/lizmap-web-client/tags
-* Cliquez sur le petit lien *zip* de la dernière version. Par exemple le lien suivant pour la 2.10.0 : https://github.com/3liz/lizmap-web-client/archive/2.10.0.zip
+* Go to https://github.com/3liz/lizmap-web-client/tags
+* Click on the small *zip* link of the latest version.
+* Cliquez sur le petit lien *zip* de la dernière version. For example the following link for 2.10.3 version: https://github.com/3liz/lizmap-web-client/archive/2.10.3.zip
+
+18. Unzip LizMap Web Client in 'C:\\OSGeo4W\\apache\\htdocs\\lizmap\\'
+
+You should now have a folder 'C:\\OSGeo4W\\apache\\htdocs\\lizmap\\lizmap-web-client-2.10.3\\'
+
+19. Test Lizmap Web Client Installation
 
 
-18. Décompresser LizMap dans 'C:\\OSGeo4W\\apache\\htdocs\\lizmap\\'
+Test if LizMap Web Client is well installed by opening in the browser the link: http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www. You should see displayed the project "Montpellier" supplied with LizMap Web Client and set to be visible to all. To view maps, it is necessary to configure LizMap Web Client.
 
-Vous devez maintenant avoir un dossier 'C:\\OSGeo4W\\apache\\htdocs\\lizmap\\lizmap-web-client-2.10.0\\'
+20. Administration Interface
 
-19. Test l'installation de Lizmap
+Go to the address http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www/admin.php and connect with the login / password: 'admin/admin'.
 
-Tester si LizMap est bien installé en ouvrant dans le navigateur l'adresse http://localhost/lizmap/lizmap-web-client-2.10.0/lizmap/www. Vous devriez y voir s'afficher le projet "Montpellier" fourni avec LizMap et configurer pour être visible par tous. Pour pouvoir consulter les cartes, il va falloir configurer LizMap.
+.. note:: 
+If authentication does not work check that the directory 'C:\\OSGeo4W\\tmp' exists.
 
-20. Interface d'administration
+21. Edit QGIS Server URL
 
-Aller à l'adresse http://localhost/lizmap/lizmap-web-client-2.10.0/lizmap/www/admin.php et se connecter avec le login / mot de passe : 'admin/admin'.
+* Click on 'LizMap config' and then modify in the Services section to specify the url of your QGIS-Server.
 
-.. note:: Si l'authentification ne fonctionne pas vérifier que le dossier 'C:\\OSGeo4W\\tmp' existe.
-
-21. Modifier l'URL de QGIS Server
-
-* Cliquer sur 'Configuration LizMap' puis sur modifier dans la section Services afin de préciser l'url de votre QGIS-Server.
-
-* Remplacer l'url du serveur WMS par http://127.0.0.1/qgis/qgis_mapserv.fcgi.exe et enregistrer :
+* Replace the url of WMS server by http://127.0.0.1/qgis/qgis_mapserv.fcgi.exe and record:
 
 .. image:: ../../MEDIA/installation-osgeo4w-17.jpg
    :align: center
 
-23. Vérification
+23. Check
 
-Afin de s'assurer que la configuration a bien réussi, cliquer sur 'Liste des projets' en haut. Vous devriez avoir accès à deux cartes puisque vous êtes authentifié comme administrateur. Cliquer sur l'une des cartes. Si la configuration est bonne vous devriez visualiser la carte, et donc être en possession d'une version de LizMap prête pour vos cartes.
+To ensure that the configuration was successful, click on 'Project List' above. You should have access to two maps since you are authenticated as administrator. Click on one of the maps. If the configuration is good you should view the map, and thus be in possession of a Lizmap Web Client ready for yours.
 
 
-Ajouter le support spatiatlite au PHP
+Add Spatialite support to PHP
 ==============================================================
 
-Pour pouvoir utiliser l'outil d'édition sur des couches spatiatlite, il faut ajouter l'extension spatialite dans PHP. Malheureusement, il faut une version de PHP au moins égale à la 5.3 pour le faire, et pour l'instant, l'installateur OSGeo4W ne propose que la 5.2.
+To use the editing tool on Spatialite layers, it is necessary to add the spatialite extension to PHP. Unfortunately, it requires a PHP version of at least 5.3 to do it, and for now, the installer OSGeo4W offers only 5.2.
 
-*Il n'est donc pas possible pour l'instant sous Windows avec le serveur apache de l'installateur OSGeo4W d'utiliser des couches Spatialite pour l'édition.*
+*It is therefore not possible at this time under Windows with the apache server from the OSGeo4W installer to use Spatialite layers for editing.*
 
-Lizmap Web Client teste si le support du spatialite est bien activé dans le PHP. S'il ne l'est pas, alors les couches Spatialite ne seront pas utilisables dans l'outil d'édition. Vous pouvez toujours utiliser des données PostGreSQL à la place.
+Lizmap Web Client tests whether the Spatialite support is enabled in PHP. If it is not, then the Spatialite layers will not be used in the editing tool. You can always use PostgreSQL data instead.

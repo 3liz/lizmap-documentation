@@ -1,29 +1,29 @@
 =============================
-Gestion des logs dans Lizmap
+Log management in Lizmap
 =============================
 
-Principe et description
-========================
+Principle and description
+===========================
 
-Depuis la version 2.8, il est possible de configurer *Lizmap Web Client* pour que certaines actions des utilisateurs soient enregistrées dans une base de données sqlite :
+Since version 2.8, you can configure *Lizmap Web Client* so that certain user actions are stored in a SQLite database:
 
-* Connexion des utilisateurs
-* Affichage d'une carte Lizmap (correspondant à un projet QGIS)
-* Impression d'une carte
-* Affichage d'une popup
-* Utilisation de l'outil d'édition
+* User Login
+* Displaying a Lizmap map
+* Printing a map
+* Displaying a popup
+* Using the editing tool
 
-Pour chacune de ces actions, on peut choisir 
+For each of these actions can be chosen:
 
-* d'enregistrer une nouvelle ligne dans les logs contenant différentes informations : utilisateur, date et heure, action, répertoire Lizmap, projet QGIS, adresse IP
-* d'incrémenter le compteur pour cette action, le répertoire Lizmap et le projet QGIS.
+* to record a new line in the logs containing various information: user, date and time, action, Lizmap repository, QGIS project, IP address
+* to increment the counter for this action, the Lizmap repository and QGIS project.
 
-Configurer les logs
+Configure logs
 ====================
 
-Pour l'instant, il n'est pas possible de modifier la configuration des logs via l'interface d'administration. Il est nécessaire d'éditer à la main le fichier de configuration **lizmap/var/config/lizmapLogConfig.ini.php**. Ce fichier est au format *ini* et contient autant de sections que d'actions à enregistrer. Pour chacune des actions, on peut choisir d'activer via *on* ou de désactiver avec *off* l'enregistrement du log.
+For now, it is not possible to change the configuration of logs in the administration interface. It is necessary to manually edit the configuration file **lizmap/var/config/lizmapLogConfig.ini.php**. This file is in *ini* format and contains many sections as action to save. For each action, you can choose to activate with *on* or off with *off* the recording of the log.
 
-Par exemple, la section suivante montre que l'administrateur a choisit d'enregistrer un décompte dans les logs chaque fois qu'un utilisateur se connecte. Mais qu'il ne souhaite pas enregistrer le détail pour chaque connexion.
+For example, the following section shows that the administrator has chosen to record a count in the logs every time a user connects. But he does not want to save the details for each connection.
 
 .. code-block:: bash
 
@@ -33,25 +33,22 @@ Par exemple, la section suivante montre que l'administrateur a choisit d'enregis
    logDetail=off
    logIp=off
 
-Consulter les logs
+View logs
 ===================
 
-Pour consulter les logs, il suffit de se connecter à l'interface d'administration de Lizmap en tant qu'administrateur. Ensuite les logs peuvent être consultés via le menu **LIZMAP > Logs LizMap**. Cette page montre les statistiques générales sur les 2 tables de logs: *Compteurs* et *Logs détaillés*. Pour chacun, il est possible de
+To view logs, simply connect to the Lizmap administration interface as an administrator. Then the logs can be accessed through the menu **Lizmap Logs**. This page shows the general statistics on the 2 log tables: *Log count* and *Log detail*. For each, it is possible to:
 
-* **Consulter les tableaux** qui contienent les données brutes
-* **Vider complètement les logs** :remise à zéro complète !
+* **View Tables** containing the raw data
+* **Completely empty logs**: completly reset!
 
-Fichier de stockage des logs
+Log storage file
 =============================
 
-La base de données des logs est située ici par rapport au répertoire d'installation : **lizmap/var/logs.db**. Par exemple
+The log database is located here in relation to the installation directory: **lizmap/var/logs.db**. For example:
 
 .. code-block:: bash
 
-   # si Lizmap Web Client est installé ici : /var/www/lizmap-web-client-2.8.1/, le fichier est:
+   # ifLizmap  Web Client is installed here : /var/www/lizmap-web-client-2.8.1/, the file is:
    /var/www/lizmap-web-client-2.8.1/lizmap/var/logs.db   
 
-
-Cette base de données peut être consultée via un outil de lecture de base de données Sqlite, par exemple *SQLite Browser* ou l'extension Firefox *SQlite Manager*. Si vous connaissez le langage SQL, vous pourrez ainsi faire des requêtes pour extraire des informations à partir des logs détaillés.
-
-
+This database can be accessed with a Sqlite database reading tool, like *SQLite Browser* or the Firefox add-on *SQlite Manager*. If you know SQL, so you can make queries to extract information from the detailed logs.

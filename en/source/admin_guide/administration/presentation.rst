@@ -1,43 +1,39 @@
 ===============================================================
-Présentation générale de l'interface d'administration
+Overview of the administration interface
 ===============================================================
 
-Accéder à l'interface d'administration
+Access the administration interface
 ===============================================================
 
-Par souci de sécurité, aucun lien ne mène vers l'interface d'administration. L'adresse est la suivante
+For safety reasons, no link leads to the administration interface. The address is:
 
-http://mondomaine.lizmap.3liz.com/admin.php
+http://mydomain.lizmap.3liz.com/admin.php
 
-Identifiants temporaires
+Temporary identifiers
 
 * login = admin
-* mot de passe = admin
-  
-Application
-  *Se connecter à votre interface*
+* password = admin
 
 .. image:: ../../MEDIA/administration-admin-home.png
    :align: center
   
-Modifier son mot de passe
+Change password
 ===============================================================
 
-Une fois connecté, on peut modifier son mot de passe 
+Once connected, it is possible to change the password:
 
-* Cliquer sur votre login dans le menu en haut à droite puis *Votre compte*
-* Cliquer sur le bouton *Changer votre mot de passe*
-* Donner le nouveau mot de passe, confirmer et enregistrer
+* Click on your login at the top right menu and then *Your account*
+* Click on the button *Change your password*
+* Type the new password, confirme it and save
 
-Attention
-  *Il est impératif de modifier votre mot de passe. Utilisez un mot de passe complexe qui mélange chiffres, lettres et ponctuation*
+.. warning:: It is imperative to change your password. Use a complex password that mixes numbers, letters and punctuation.
   
   
-Rappel sur les répertoires Lizmap
+Reminder on Lizmap Web CLient repositories
 ===============================================================
 
-Lizmap Web Client peut utiliser les cartes QGIS enregistrées dans différents répertoires sur le serveur.
+Lizmap Web Client can use QGIS maps stored in different folders on the server.
 
-* Un *répertoire Lizmap* est un dossier sur le serveur où sont stockés un ou plusieurs projet QGIS et les données liées.
-* On peut utiliser les répertoires pour *regrouper des projets liés par une thématique*
-* On peut utiliser les répertoires pour *gérer les droits d'accès sur les cartes*
+* A *Lizmap Web CLient repository* is a folder on the server that stores one or more QGIS projects and their related data.
+* Repositories can be used to *group related projects by theme*.
+* Repositories can be used to *manage the access rights on maps*.

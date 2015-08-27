@@ -1,16 +1,16 @@
 ===============================================================
-Configuration du serveur cartographique Lizmap
+Configurating the map server for Lizmap Web Client
 ===============================================================
 
-Cette documentation présente un exemple de configuration d'un serveur sous la distribution Ubuntu Server 12.04 LTS. 
+This documentation provides an example for configuring a server with the Ubuntu Server 12.04 LTS distribution.
 
-Configuration générique du serveur
+Generic Server Configuration
 ===============================================================
 
-Configurer les locales
+Configure Locales
 --------------------------------------------------------------
 
-Pour simplifier les choses, il est intéressant de configurer le serveur avec l'encodage par défaut UTF-8
+For simplicity, it is interesting to configure the server with UTF-8 default encoding.
 
 .. code-block:: bash
 
@@ -19,27 +19,27 @@ Pour simplifier les choses, il est intéressant de configurer le serveur avec l'
    dpkg-reconfigure locales
    dpkg-reconfigure tzdata
 
-.. note:: Il faudra aussi configurer les autres logiciels pour qu'ils utilisent cet encodage par défaut si ce n'est pas le cas.
+.. note:: It is also necessary configure the other softwares so that they are using this default encoding if this is not the case.
 
-Installation de quelques librairies utiles
+Installing some useful libraries
 -------------------------------------------
 
-* On met à jour les paquets
+* Updating packages
 
 .. code-block:: bash
 
-   # Mise à jour des paquets
+   # Updating packages
    apt-get update
    apt-get upgrade
 
-* On installe l'ensemble des paquets qu'on utilisera pour ce serveur cartographique
+* Installing all the packages that will be used for map server
 
 .. code-block:: bash
 
    apt-get install python-simplejson xauth htop nano curl ntp ntpdate python-software-properties git
 
 
-Création des répertoires pour les données
+Create directories for data
 -------------------------------------------
 
 .. code-block:: bash
@@ -52,10 +52,10 @@ Création des répertoires pour les données
    mkdir /home/data/postgresql
    
 
-Serveur Web : Apache
+Web Server : Apache
 ======================================
 
-Installation des paquets nécessaires
+Installing necessary packages
 -------------------------------------
 
 .. code-block:: bash
@@ -69,31 +69,31 @@ Installation des paquets nécessaires
    a2enmod headers
    a2enmod deflate
 
-Configuration de la compression
+Setting the compression
 -------------------------------
 .. code-block:: bash
 
    nano /etc/apache2/conf.d/mod_deflate.conf # y ajouter
    <Location />
-           # Insérer le filtre
+           # Insert filter
            SetOutputFilter DEFLATE
-           # Netscape 4.x rencontre quelques problèmes...
+           # Netscape 4.x encounters some problems ...
            BrowserMatch ^Mozilla/4 gzip-only-text/html
-           # Netscape 4.06-4.08 rencontre encore plus de problèmes
+           # Netscape 4.06-4.08 encounter even more problems
            BrowserMatch ^Mozilla/4\.0[678] no-gzip
-           # MSIE se fait passer pour Netscape, mais tout va bien
+           # MSIE pretends it is Netscape, but all is well
            BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
-           # Ne pas compresser les images
+           # Do not compress images
            SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
-           # S'assurer que les serveurs mandataires délivrent le bon contenu
+           # Ensure that proxy servers deliver the right content
            Header append Vary User-Agent env=!dont-vary
    </Location>
 
 
-Configuration de php5
+php5 configuration
 -----------------------
 
-On utilise dans cet exemple le mpm-worker d'Apache. On doit donc configurer manuellement l'activation de php5.
+In this example, we use Apache mpm-worker. So we must manually configure the activation of php5.
 
 .. code-block:: bash
 
@@ -113,14 +113,14 @@ On utilise dans cet exemple le mpm-worker d'Apache. On doit donc configurer manu
    EOF
 
    
-Configuration du mpm-worker
+mpm-worker configuration
 -----------------------------
 
-On modifie le fichier de configuration d'Apache pour adapter les options du mpm_worker à la configuration du serveur
+We modify the Apache configuration file to adapt the options to mpm_worker server configuration.
 
 .. code-block:: bash
 
-   # configuration worker
+   # configuring worker
    nano /etc/apache2/apache2.conf # aller au worker et mettre par exemple
    <IfModule mpm_worker_module>
      StartServers       4
@@ -132,16 +132,16 @@ On modifie le fichier de configuration d'Apache pour adapter les options du mpm_
      MaxRequestsPerChild   0
    </IfModule>
 
-Configuration de mod_fcgid
+mod_fcgid configuration
 ---------------------------
 
-QGIS Server fonctionne en mode fcgi. Il faut donc configurer le mod_fcgid d'Apache pour l'adapter aux capacités du serveur.
+QGIS Server runs fcgi mode. We must therefore configure the Apache mod_fcgid to suit to the server capabilities.
 
 .. code-block:: bash
 
-   # Ouvrir le fichier de configuration de mod_fcgid
+   # Open the mod_fcgid configuration file
    nano /etc/apache2/mods-enabled/fcgid.conf
-   # Coller le contenu suivant en l'adaptant
+   # Paste the following content and adapt it
    <IfModule mod_fcgid.c> 
      AddHandler    fcgid-script .fcgi
      FcgidConnectTimeout 300
@@ -154,30 +154,30 @@ QGIS Server fonctionne en mode fcgi. Il faut donc configurer le mod_fcgid d'Apac
    </IfModule>
 
 
-Redémarrer Apache
+Restart Apache
 ------------------
 
-Il faut redémarrer le serveur Apache pour valider la configuration
+You must restart the Apache server to validate the configuration.
 
 .. code-block:: bash
 
    service apache2 restart
 
 
-SGBD Spatial : PostGreSQL
+Spatial DBMS: PostgreSQL
 ============================================
 
-Il peut être très intéressant d'utiliser PostGreSQL et PostGIS pour gérer les données spatiales de manière centralisée sur le serveur.
+It can be very interesting to use PostgreSQL and PostGIS to manage spatial data centralized manner on the server.
 
-Installation
+Install
 -------------
 
 .. code-block:: bash
 
-   # Installation des paquets
+   # Install packages
    apt-get install postgresql postgresql-contrib postgis pgtune php5-pgsql
 
-   # On recrée un cluster pour pouvoir spécifier le répertoire de stockage
+   # A cluster is created in order to specify the storage directory
    mkdir /home/data
    mkdir /home/data/postgresql
    service postgresql stop
@@ -185,107 +185,117 @@ Installation
    chown postgres:postgres /home/data/postgresql
    pg_createcluster 9.1 main -d /home/data/postgresql --locale fr_FR.UTF8 -p 5678 --start
    
-   # On crée un utilisateur "superuser"
+   # Creating a "superuser" user
    su - postgres
    createuser myuser --superuser
-   # On modifie les mots de passe
+   # Modifying passwords
    psql
    ALTER USER postgres WITH ENCRYPTED PASSWORD '************';
    ALTER USER myuser WITH ENCRYPTED PASSWORD '************';
    \q
    exit
 
-Adapatation de la configuration de PostGreSQL
+Adapting the PostGreSQL configuration
 ----------------------------------------------
 
-Nous allons utiliser pgtune, un utilitaire qui permet de générer automatiquement un fichier de configuration de PostGreSQL adapté aux propriétés du serveur (mémoire vive, processeurs, etc.)
+We will use pgtune, an utility program that can automatically generate a PostGreSQL configuration file adapted to the properties of the server (memory, processors, etc.)
 
 .. code-block:: bash
 
-   # PostgreSQL Tuning avevc pgtune
+   # PostgreSQL Tuning with pgtune
    pgtune -i /etc/postgresql/9.1/main/postgresql.conf -o /etc/postgresql/9.1/main/postgresql.conf.pgtune --type Web
    cp /etc/postgresql/9.1/main/postgresql.conf /etc/postgresql/9.1/main/postgresql.conf.backup
    cp /etc/postgresql/9.1/main/postgresql.conf.pgtune /etc/postgresql/9.1/main/postgresql.conf  
    nano /etc/postgresql/9.1/main/postgresql.conf
-   # On redémarre pour voir si pas de problèmes
+   # Restart to check any problems
    service postgresql restart
-   # Si message d'erreur, il faut augmenter les variables de configuration du noyau linux
+   # If error messages, increase the linux kernel configuration variables
    echo "kernel.shmall = 4294967296" >> /etc/sysctl.conf # pour shared_buffers à 3000Mo
    echo "kernel.shmmax = 4294967296" >> /etc/sysctl.conf
    echo 4294967296 > /proc/sys/kernel/shmall
    echo 4294967296 > /proc/sys/kernel/shmmax
    sysctl -a | sort | grep shm     
-   # On redémarre PostGreSQL
+   # Restart PostGreSQL
    service postgresql restart
 
 
-Serveur FTP: pure-ftpd
+FTP Server: pure-ftpd
 =======================
 
-Installation
+Install
 ---------------
 
 .. code-block:: bash
 
    apt-get install pure-ftpd pure-ftpd-common
    
-Configuration
+Configure
 ---------------
 
 .. code-block:: bash
 
-   # création d'un shell vide pour les utilisateurs
+   # Creating an empty shell for users
    ln /bin/false /bin/ftponly
-   # On configure le serveur FTP
+   # Configuring FTP server
    echo "/bin/ftponly" >> /etc/shells
-   # On bloque chaque utilisateur dans son home
+   # Each user is locked in his home
    echo "yes" > /etc/pure-ftpd/conf/ChrootEveryone
-   # On permet d'utiliser le FTP sécurisé via SSL
+   # Allow to use secure FTP over SSL
    echo "1" > /etc/pure-ftpd/conf/TLS
-   # On configure les propriétés des répertoires et fichiers créés par les utilisateurs
+   # Configure the properties of directories and files created by users
    echo "133 022" > /etc/pure-ftpd/conf/Umask
-   # La plage de ports pour le mode passif (à ouvrir vers l'extérieur)
+   # The port range for passive mode (opening outwards)
    echo "5400 5600" > /etc/pure-ftpd/conf/PassivePortRange
-   # On crée un certificat SSL pour le FTP
+   # Creating an SSL certificate for FTP
    openssl req -x509 -nodes -newkey rsa:1024 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem 
    chmod 400 /etc/ssl/private/pure-ftpd.pem
-   # On redémarre le serveur FTP
+   # Restart FTP server
    service pure-ftpd restart 
 
-Création d'un compte utilisateur
+Creating a user account
 --------------------------------
 
 .. code-block:: bash
 
-   # créer un compte utilisateur
+   # Creating a user accountr
    MYUSER=demo
    useradd -g client -d /home/data/ftp/$MYUSER -s /bin/ftponly -m $MYUSER -k /home/data/ftp/template/
    passwd $MYUSER
-   # on ne permet pas de modifier la racine du ftp
+   # Fix the user's FTP root
    chmod a-w /home/data/ftp/$MYUSER 
-   # On crée des répertoires vides qui seront les futurs répertoires lizmap
+   # Creating empty directories that will be the future Lizmap Web Client directories
    mkdir /home/data/ftp/$MYUSER/qgis/rep1 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep1
    mkdir /home/data/ftp/$MYUSER/qgis/rep2 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep2
    mkdir /home/data/ftp/$MYUSER/qgis/rep3 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep3
    mkdir /home/data/ftp/$MYUSER/qgis/rep4 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep4
    mkdir /home/data/ftp/$MYUSER/qgis/rep5 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep5
-   # On crée un répertoire pour stocker le cache serveur de Lizmap
+   # Create a directory to store the cached server
    mkdir /home/data/cache/$MYUSER
    chmod 700 /home/data/cache/$MYUSER -R
    chown www-data:www-data /home/data/cache/$MYUSER -R 
 
 
-Serveur cartographique: QGIS Server
+Map server: QGIS Server
 ====================================
 
-Installation
+Install
 ---------------
 
 .. code-block:: bash
 
-   # Ajout du dépôt UbuntuGis
-   add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-   apt-get update
-   # Installation de QGIS Server
-   apt-get install qgis-mapserver
+   # Add the repository UbuntuGis
+   cat /etc/apt/sources.list.d/debian-gis.list
+   deb http://qgis.org/debian trusty main
+   deb-src http://qgis.org/debian trusty main
+    
+   # Add keys
+   sudo gpg --recv-key DD45F6C3
+   sudo gpg --export --armor DD45F6C3 | sudo apt-key add -
+    
+   # Update package list
+   sudo apt-get update
    
+   # Install QGIS Server
+   sudo apt-get install qgis-server python-qgis
+
+.. note:: See http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html to more information on QGIS Server.

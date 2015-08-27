@@ -1,164 +1,168 @@
 ===============================================================
-Installation de Lizmap sous Linux Debian ou Ubuntu
+Installing Lizmap Web CLient on Linux Debian or Ubuntu
 ===============================================================
 
 
-Installation
+Install
 ===============================================================
 
-Au préalable, vous devez avoir un serveur tournant avec Apache. Dans ce document, nous considérons que QGIS Server a aussi été installé correctement : http://hub.qgis.org/wiki/quantum-gis/QGIS_Server_Tutorial
+.. note:: Beforehand, you must have a server running Apache. We also consider that QGIS Server has been installed correctly. See: :ref:`server_configuration` or http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html
 
-Cette page ne décrit pas comment sécuriser votre serveur Apache.
+.. warning:: This page does not describe how to secure your Apache server.
 
 
-Récupérer les librairies
+Get libraries
 --------------------------------------------------------------
 
 .. code-block:: bash
 
-   sudo su # utile seulement si vous n'êtes pas connecté en tant que root
-   apt-get update # mise à jour des paquets
+   sudo su # only useful if you are not logged in as root
+   apt-get update # update packages
    apt-get install apache2 php5 curl php5-curl php5-sqlite php5-gd # installation de apache2, php, curl, gd et sqlite
-   service apache2 restart # redémarrage du serveur Apache
+   service apache2 restart # restart Apache server
 
-Aller au répertoire www par défaut d'Apache (à modifier selon vos besoins)
+Go to the *www* default Apache directory (modify as needed).
 
 .. code-block:: bash
 
    cd /var/www/
 
-Récupérer et installer LizMap Web Client
+Retrieve and install Lizmap Web Client
 --------------------------------------------------------------
 
-Depuis le fichier ZIP
+With ZIP file
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
    cd /var/www/
-   # options
+   # Options
    MYAPP=lizmap-web-client
-   VERSION=2.10.0
-   # récupération de l'archive via wget
+   VERSION=2.10.3
+   # Archive recovery with wget
    wget https://github.com/3liz/$MYAPP/archive/$VERSION.zip
-   # on dézippe l'archive
+   # Unzip archive
    unzip $VERSION.zip
+   # virtual link for http://localhost/lm
    ln -s /var/www/$MYAPP-$VERSION/lizmap/www/ /var/www/html/lm
-   # on supprime le zip
+   # Remove archive
    rm $VERSION.zip
 
-Version de développement avec Github
+Development version with git
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: Attention, la version de développement est en constante évolution, et des bugs peuvent survenir. Ne pas l'utiliser en production.
+.. warning:: the development version is always changing, and bugs can occur. Do not use it in production.
 
-* Pour installer
+* The first time
 
 .. code-block:: bash
 
    cd /var/www/
    MYAPP=lizmap-web-client
    VERSION=master
-   # cloner la branche master
+   # Clone the master branch
    git clone https://github.com/3liz/lizmap-web-client.git $MYAPP-$VERSION
-   # aller dans le dépôt git
+   # Go into the git repository
    cd $MYAPP-$VERSION
-   # créer une branche personnelle pour les éventuelles modifications
+   # Create a personal branch for your changes
    git checkout -b mybranch
 
-* Pour mettre à jour votre branche depuis le dépôt master
+* To update your branch from the master repository
 
 .. code-block:: bash
 
    cd /var/www/$MYAPP-$VERSION
-   # vérifier que vous êtes bien sur la branche mybranch
+   # Check that you are on the branch: mybranch
    git checkout mybranch
-   # Si vous avez des modifications, faire un commit
+   
+   # If you have any changes, make a commit
    git status
-   git commit -am "Votre message de commit"
-   # sauvegarder vos fichiers de configuration !
+   git commit -am "Your commit message"
+   
+   # Sava your configuration files!
    cp lizmap/var/jauth.db /tmp/jauth.db && cp lizmap/var/logs.db /tmp/logs.db && cp lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php
-   # Mettre à jour votre branche master
+   
+   # Update your master branch
    git checkout master && git fetch origin && git merge origin/master
-   # Appliquer sur votre branche, et gérer les éventuels conflits de merge
-   git checkout mybranch && git rebase master
-   # réappliquer les droits
+   # Apply to your branch, marge and manage potential conflicts
+   git checkout mybranch && git merge master
+   # Apply rights
    chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
    chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
 
-.. note:: Il est toujours bon de faire une sauvegarde avant toute mise à jour.
+.. note:: It is always good to make a backup before updating.
 
-Donner les droits adéquats aux répertoires et fichiers
+Give the appropriate rights to directories and files
 --------------------------------------------------------------
 
 .. code-block:: bash
 
    cd /var/www/$MYAPP-$VERSION
-   chgrp www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
    chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
 
-Premier test
+First test
 --------------------------------------------------------------
 
-Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lm
+Go to the Lizmap Web Client home to see if the installation was performed correctly: http://localhost/lm
 
-Outil d'édition : Configurer le serveur avec le support des bases de données
+Editing tool: Configure the server with the database support
 =============================================================================
 
 PostGreSQL
 ------------------------------
 
-Pour que l'édition de couches PostGIS dans Lizmap Web Client fonctionnent, il faut installer le support de PostGreSQL pour PHP.
+For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreSQL support for PHP.
 
 .. code-block:: bash
 
    sudo apt-get install php5-pgsql
    sudo service apache2 restart
 
-.. note:: Pour l'édition, nous conseillons fortement d'utiliser une base de données PostGreSQL. Cela simplifie fortement l'installation et la récupération des données saisies par les utilisateurs.
+.. note:: For editing, we strongly recommend using a PostgreSQL database. This greatly simplifies installation and retrieval of data entered by users.
 
 Spatialite
 ------------------------------
 
-Activer l'extension Spatialite
+Enable Spatialite extension
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Pour pouvoir utiliser l'édition sur des couches spatiatlite, il faut ajouter l'extension spatialite dans PHP. Vous pouvez suivre les instructions suivantes pour le faire :
+To use editing on layers spatiatlite,you have to add the spatialite extension in PHP. You can follow these instructions to do so:
 http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html
 
-Lizmap Web Client teste si le support du spatialite est bien activé dans le php. S'il ne l'est pas, alors les couches spatialites ne seront pas utilisables dans l'outil d'édition. Vous pouvez toujours utiliser des données PostGreSQL pour l'édition.
+Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it is not, then spatialities layers will not be used in the editing tool. You can always use PostgreSQL data for editing.
 
-Donner les droits adéquats au répertoire contenant les bases de données Spatialite
+Give the appropriate rights to the directory containing Spatialite databases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Pour que l'application Lizmap Web Client puisse modifier les données contenues dans les bases Spatialite, il faut s'assurer que **l'utilisateur Apache (www-data) ait bien les droits en écriture sur le répertoire contenant chaque fichier spatialite**.
+So that Lizmap Web Client can modify the data contained in databases Spatialite, we must ensure that **the Apache user (www-data) has well write access to the directory containing each Spatialite file**
 
-Par exemple, si un répertoire contient un projet QGIS, qui utilise une base de données Spatialite placée dans un répertoire **bdd** au même niveau que le projet QGIS:
+For example, if a directory contains a QGIS project, which uses a Spatialite database placed in a **db** directory at the same level as the QGIS project:
 
 .. code-block:: bash
 
-   /un/chemin/vers/un_repertoire_lizmap
+   /path/to/a/lizmap_directory
    |--- mon_projet.qgs
    |--- bdd
-      |--- mon_fichier_spatialite.sqlite
+      |--- my_spatialite_file.sqlite
 
-Alors il faut donner les droits de cette manière:
+So you have to give the rights in this way:
 
 .. code-block:: bash
 
-   chown :www-data /un/chemin/vers/un_repertoire_lizmap/ -R
-   chmod 775 /un/chemin/vers/un_repertoire_lizmap/ -R
+   chown :www-data /path/to/a/lizmap_directory -R
+   chmod 775 /path/to/a/lizmap_directory -R
 
-.. note:: c'est pourquoi, si vous souhaitez installer Lizmap pour offrir un accès à plusieurs utilisateurs, nous vous conseillons de leur dire de toujours créer un répertoire bdd au même niveau que les projets QGIS dans le répertoire Lizmap. Cela facilitera le travail de l'administrateur qui pourra modifier les droits de cet unique répertoire.
+.. note:: so if you want to install Lizmap to provide access to multiple map publishers, you should tell them to always create a **db** directory at the same level as the QGIS projects in the Lizmap Web Client directory. This will facilitate the admin work that just have to change the rights of this unique directory.
 
-Montée de version
+
+Version upgrade
 ===============================================================
 
-Sauvegarde préalable
+Preliminary backup
 --------------------------------------------------------------
 
-Avant de mettre à jour, faites une sauvegarde des données de configuration : lizmap/var/jauth.db and lizmap/var/config/lizmapConfig.ini.php et du fichier de log (à partir de la 2.8) lizmap/var/logs.db
-
+Before update, make a backup of the configuration data: *lizmap/var/config/lizmapConfig.ini.php*, *lizmap/var/jauth.db* and the log file (from 2.8) *lizmap/var/logs.db*
 
 .. code-block:: bash
 
@@ -166,39 +170,39 @@ Avant de mettre à jour, faites une sauvegarde des données de configuration : l
    OLDVERSION=2.8.1 # replace by the version number of your current lizmap installation
    # if you installation is 2.1.0 or less, use an empty OLDVERSION instead :
    # OLDVERSION=
-   cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/jauth.db /tmp/jauth.db # base de données utilisateur
+   cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/jauth.db /tmp/jauth.db # user database
    cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php # text configuration file with services and repositories
    cp /var/www/$MYAPP-$OLDVERSION/lizmap/var/logs.db /tmp/logs.db # lizmap logs
 
-Puis faites une installation classique de la nouvelle version (voir ci-dessus), ce qui crééra un nouveau dossier dans le répertoire /var/www/
+Then do a typical installation of the new version (see above), which will create a new folder in the directory */var/www/*
 
 
-Copier les fichiers sauvegardés dans le dossier de la nouvelle version
+Copy the files saved in the folder of the new version
 -----------------------------------------------------------------------
 
 .. code-block:: bash
 
-   $VERSION=2.10.0
+   $VERSION=2.10.3
    cp /tmp/jauth.db /var/www/$MYAPP-$VERSION/lizmap/var/jauth.db
    cp /tmp/lizmapConfig.ini.php /var/www/$MYAPP-$VERSION/lizmap/var/config/lizmapConfig.ini.php
    cp /tmp/logs.db /var/www/$MYAPP-$VERSION/lizmap/var/logs.db
 
-.. note:: Pour certaines versions, il est aussi nécessaire de mettre à jour la base de données qui stocke les droits. Voir les points suivants pour plus de détail.
+.. note:: In some versions, it is also necessary to update the database that stores the rights. See the following for more details.
 
-De la version 2.3.0 ou inférieure à la 2.4.0 ou supérieure
+From version 2.3 or lower to version 2.4 or upper
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les librairies Jelix (outil avec lequel est construit Lizmap Web Client) a été mis à jour. Il faut modifier la base de données sqlite de gestion des droits :
+The Jelix framework (tool with which Lizmap Web Client is built) has been updated. It is necessary to change the rights management SQLite database:
 
 .. code-block:: bash
 
    cd /var/www/$MYAPP-$VERSION/
    sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_1.3_1.4.sql
 
-De la version 2.6 ou inférieure à la version 2.7
+From version 2.6 or lower to version 2.7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le support des annotations a été ajouté à Lizmap, ainsi que la gestion des droits liée. Il faut donc modifier la base de données des droits pour mettre à niveau :
+Support for annotations and management of related rights was added to Lizmap Web Client. It is necessary to change the rights management SQLite database to upgrade it:
 
 .. code-block:: bash
 
@@ -206,44 +210,44 @@ Le support des annotations a été ajouté à Lizmap, ainsi que la gestion des d
    sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_lizmap_from_2.0_and_above_to_2.5.sql
 
 
-De la version 2.7.*  à la version 2.8
+From version 2.7.*  to version 2.8
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-L'outil d'édition a remplacé l'outil d'annotation et nous avons ajouté des champs pour décrire chaque utilisateur Lizmap. Il faut mettre à jour la base de donnée de gestion des droits:
+The editing tool replaced the annotation tool and fields to describe each Lizmap Web Client user has been added. It is necessary to upgrade the rights management SQLite database:
 
 .. code-block:: bash
 
    cd /var/www/$MYAPP-$VERSION/
    sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_2.7_2.8.sql
 
-De la version 2.8.*  à la version 2.9
+From version 2.8.*  to version 2.9
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La fonctionnalité de filtrage des données des couches en fonction de l'utilisateur connecté nécessite l'ajout des droits liés dans la base de données des utilisateurs:
+The functionality of layers data filtering based on the connected user requires the addition of rights related to the user data base:
 
 .. code-block:: bash
 
    cd /var/www/$MYAPP-$VERSION/
    sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_2.8_2.9.sql
 
-De la version 2.9.*  à la version 2.10
+From version 2.9.*  to version 2.10
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La fonctionnalité de filtrage des données des couches en fonction de l'utilisateur connecté nécessite l'ajout des droits liés dans la base de données des utilisateurs:
+The functionality of layers data filtering based on the connected user requires the addition of rights related to the user data base:
 
 .. code-block:: bash
 
    cd /var/www/$MYAPP-$VERSION/
    sqlite3 lizmap/var/jauth.db < lizmap/install/sql/upgrade_jacl2db_2.9_2.10.sql
 
-Supprimer les fichiers temporaires de Jelix
+Delete Jelix temporary files
 --------------------------------------------------------------
 
 .. code-block:: bash
 
    rm -rf /var/www/$MYAPP-$VERSION/temp/lizmap/*
 
-Redéfinir les droits sur les fichiers de l'application
+Redefine the rights to the application files
 -------------------------------------------------------
 
 .. code-block:: bash
