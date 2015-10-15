@@ -112,7 +112,10 @@ In this example, we use Apache mpm-worker. So we must manually configure the act
    </Files>
    EOF
 
-   
+   note:: In later versions of apache, the config for ``php-cgi`` is in ``/etc/apache2/conf-available/php.conf``. Copy the text above, then::
+
+  a2enconf php
+
 mpm-worker configuration
 -----------------------------
 
