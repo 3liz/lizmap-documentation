@@ -57,8 +57,6 @@ To configure **Services**, click the *Modify* button under the summary.
 .. image:: ../../MEDIA/administration-modify-services.png
    :align: center
 
-
-
 Repositories
 ===============================================================
 
@@ -110,5 +108,3 @@ After creating the directory, the repository modification form is displayed auto
 
 .. image:: ../../MEDIA/administration-modify-repository.png
    :align: center
-
-

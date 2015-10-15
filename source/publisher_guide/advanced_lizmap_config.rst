@@ -360,6 +360,48 @@ Once downloaded the zipfile, you can:
 
 Once your theme is ready, you can just publish it copying it in the directory ``media``.
 
+Adding your own JavaScript
+===============================================================
+
+This is useful for a variety of advanced usage. For instance, you can avoid people being able to download elements of the page by right clicking on them, and of course much more.
+
+.. note:: This is available starting with Lizmap 2.11. For earlier versions, you must add your code directly to file ``lizmap/www/js/map.js``
+
+* In your repository (e.g. ``/home/data/repo1/myproject.qgs`` you should have these directories::
+
+.. code-block:: none
+
+    media
+    |-- js
+      |-- myproject
+
+* All the Javascript code you copy in the ``/home/data/rep1/media/js/myproject/`` directory will be executed by Lizmap, provided that:
+* you allow it, through the Lizmap admin interface, adding the privilege "Allow themes for this repository" in the form for the modification of the repository
+
+For the example above, just add a file named e.g. ``disableRightClick.js`` with::
+
+.. code-block:: none
+
+    lizMap.events.on({
+
+      uicreated: function(e) {
+        $('body').attr('oncontextmenu', 'return false;');
+      }
+
+    });
+
+* If you want this code to be executed for all projects of your repository, you have to copy the file in the directory::
+
+  /home/data/rep1/media/js/default/
+
+rather than in::
+
+  /home/data/rep1/media/js/myproject/
+
+That's all.
+
+In the directory ``lizmap-web-client/lizmap/install/qgis/media/js/`` you can find examples of suitable JavaScript code; just remove the extension ``.example`` to activate them.
+
 Printing configuration
 ===============================================================
 
