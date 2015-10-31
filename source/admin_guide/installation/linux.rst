@@ -18,7 +18,7 @@ Get libraries
 
    sudo su # only useful if you are not logged in as root
    apt-get update # update packages
-   apt-get install apache2 php5 curl php5-curl php5-sqlite php5-gd # installation de apache2, php, curl, gd et sqlite
+   apt-get install apache2 php5 curl php5-curl php5-sqlite php5-pgsql php5-gd # installation of apache2, php, curl, gd, sqlite and pgsql
    service apache2 restart # restart Apache server
 
 Go to the *www* default Apache directory (modify as needed).
@@ -79,7 +79,7 @@ Development version with git
    git status
    git commit -am "Your commit message"
    
-   # Sava your configuration files!
+   # Save your configuration files!
    cp lizmap/var/jauth.db /tmp/jauth.db && cp lizmap/var/logs.db /tmp/logs.db && cp lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php
    
    # Update your master branch
