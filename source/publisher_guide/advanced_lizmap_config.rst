@@ -679,6 +679,7 @@ A video tutorial is available here: https://vimeo.com/83845949. It shows all the
 
 Demonstration site: http://demo.lizmap.3liz.com/index.php/view/?repository=rep6
 
+.. note:: Several different formats for date/time are acceptable (those supported by the JavaScript library `DateJS`). You can check whether your format is supported by entering it in this page: http://www.datejs.com/
 
 Changing the default image of a project in the repositories and projects site
 ===========================================================
