@@ -116,7 +116,7 @@ Some examples:
 * *media/a_picture.png*
 
 On the Lizmap Web Client map, if a link has been set up this way for one of the layers, then an icon (i) will be placed to the right of the layer. Clicking this icon opens the linked document in a new browser tab.
-  
+
 Use in popups
 ----------------------------
 
@@ -164,7 +164,7 @@ Below is an illustration of a Lizmap popup displaying a picture, a text and a li
 
 How to configure popups
 ===============================================================
- 
+
 Activate popups
 -------------------------------
 
@@ -215,7 +215,7 @@ You can use the tools available in the **Fields** tab of the **Layer properties*
 .. image:: ../MEDIA/features-popup-fields.png
    :align: center
    :width: 70%
-   
+
 Usage of media: images, documents, etc.
 ________________________________________________
 
@@ -308,7 +308,7 @@ Here an example of a template handling media and an external link:
 
    <p><a href="{$website}" target="_blank">Web link</a></p>
 
-   <p><img src="http://www.3liz.com/assets/img/logo.png"/></p> 
+   <p><img src="http://www.3liz.com/assets/img/logo.png"/></p>
 
 .. seealso:: Chapter :ref:`media-in-lizmap` for more details on the use of documents in the directory media.
 
@@ -526,6 +526,69 @@ This feature can be used for:
 * hide a simple layer for adding data rendered with a view
 * hide a layer for printing (:ref:`print-external-baselayer`)
 
+
+.. _lizmap-config-attribute-table:
+
+Show attribute table for Lizmap layers
+===============================================================
+
+Principle
+----------
+
+Lizmap is designed to show spatial data in the main map, and you can propose users to see an object data through the "popup" feature (a small popup containing the objects data is shown whenever the user clicks on the map ). See :ref:`popups-in-lizmap`
+
+Sometimes this is not enough, and as a map editor, you would like the user to see all the data of a specific layer, as you can do in QGIS by opening the attribute table. Since Lizmap 2.11, you can propose such a feature for any vector layer published in you map. (This feature has been heavily enhanced since Lizmap 3.0. Many features described underneath are only available for Lizmap 3.0 )
+
+Activate the attribute table tool for a vector layer
+-----------------------------------------------------------------
+
+In the **Tools** tab of Lizmap plugin dialog, there is a group called "Attribute layers" which shows a table and some form fields dedicated to add or remove vector layers.
+
+Lizmap Web Client uses the **Web Feature Service** (WFS) to get data from a QGIS vector layer and display it in the web interface. This is why the first thing to do whenever you want to show a layer data in the web client is to **publish the vector layer through the WFS**. To do so, open the **Project properties** dialog, got the the **OWS Server** tab, and add the layer as "published" by checking the corresponding checkbox in the **Web Feature Service** table, and save the project. You can also tune the number of decimals to decrease the size of data to be fetched from WFS ( keep 8 only for a map published in degrees, and keep 1 for map projections in meters )
+
+Once the layer is published through WFS, you can add it in the attribute layers table. Some options are available to finely tune the features provided to the user:
+
+* **Layer** : Choose one of the vector layers (spatial or not). This can be any vector layer format : GeoJSON, Shapefile, PostGIS, CSV, etc.
+* **Unique ID** : The attribute table tool needs to be able to defined each feature as unique. We strongly advise you to add such a field if your layer has not one yet. Usually the unique ID field contains **integers**. If the layer do not have this kind of field, you can easily create it with the *Field calculator*. Choose the correct field with the combo box.
+* **Fields to hide** You have 2 ways of hiding fields in the published attribute table.
+
+  -  In the *vector layer properties dialog* of the QGIS vector layer, in the *Fields* tab, you can uncheck the checkbox of the column **WFS** for the fields to unpublish. This means this fields will not be published via the WFS protocol. This is the **simplest and safiest way** to restrict the publication to some fields (for example to get rid of sensitive fields)
+  - You can use this **Fields to hide** option to **hide** the given fields in the attribute table display. The hidden fields won't be visible for the end user, but will still be available for Lizmap Web Client. **You must use this option to hide the Unique ID field**. If you use the first way (uncheck WFS column), the unique ID won't be usable by Lizmap, and some of the attribute table features will not work properly.
+
+Using relations with the attribute layers tool
+-----------------------------------------------
+
+In QGIS, you can configure **relations** between layers, in the **project properties** dialog. If you publish in Lizmap more than one layers in the attribute layers tool, and if some layers are part of a relation, the end user will be able to see child tables under the parent layer table, and a click on one line in the parent table will trigger the filter of the child tables content.
+
+For example, you could have a layer of cities, and a child layer of public building. Clicking on one city in the attribute table will make the public building child table refresh its content with only the public buildings of the clicked city.
+
+Relations in QGIS is a great tool. But at the moment, you cannot configure "many-to-many" (N:M) relations. You can only create "one-to-many" (1:N) relations. In many cases, N:M relations are very handy. For example, you can have the three following vector layers in your project:
+
+* **Tramway lines**: this layers name "Lines" contains one feature per tram line, and has a unique ID field *tram_id*
+* **Tramway stops**: this layer named "Stops" contains one feature per tram stop, with a unique ID field called *stop_id*
+* **Correspondance table between lines and stops**: this layer named "Pivot" is a pivot table between tram lines and stops, since a stop can be used for more than one line, and a line serves many stops. It has the following fields: *tram_id*, *stop_id* and *order* which defines the order of the stop in the line.
+
+You can add 2 relations in QGIS project properties : one between Lines and Pivot using the tram_id field, and one between Stops and Pivot using the stop_id field.
+
+In Lizmap, we added a simple way to configure the N:M relation. You can simply
+
+* Create the two relations described above in QGIS project properties dialog, tab **Relations**
+* Add the Lines and Stops layers in the attribute layers tool
+* Add the Pivot layer in the attribute layers tool with the option **Pivot table** checked
+
+Lizmap Web Client will then handle the relation as a N:M relation:
+
+* The pivot table will be displayed under each parent attribute table and show only the corresponding children.
+* The filter feature based on the attribute layers will trigger the cascading filter of the pivot and the other parent. For example, if the user uses the filter to show only one tramway line, Lizmap will also only show the corresponding stops in the map and in the Stops attribute tables
+
+
+Attribute layers and edition
+-------------------------------
+
+todo
+
+
+
 .. _lizmap-config-edition:
 
 Editing data in Lizmap
@@ -698,6 +761,6 @@ By default the following image is displayed for a project:
 .. image:: http://imgur.com/5hGIvAM
    :align: left
    :width: 100%
-   
-   
+
+
 You can change this default image by adding in the same project folder a .png image with the exact project name and extension. Example: If the project is called montpellier.qgs you can add an image named montpellier.qgs.png. Note that the image has the project extension too.
