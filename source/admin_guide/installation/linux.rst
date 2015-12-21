@@ -38,7 +38,7 @@ With ZIP file
    cd /var/www/
    # Options
    MYAPP=lizmap-web-client
-   VERSION=2.10.3
+   VERSION=2.12.2
    # Archive recovery with wget
    wget https://github.com/3liz/$MYAPP/archive/$VERSION.zip
    # Unzip archive
@@ -74,14 +74,14 @@ Development version with git
    cd /var/www/$MYAPP-$VERSION
    # Check that you are on the branch: mybranch
    git checkout mybranch
-   
+
    # If you have any changes, make a commit
    git status
    git commit -am "Your commit message"
-   
+
    # Save your configuration files!
    cp lizmap/var/jauth.db /tmp/jauth.db && cp lizmap/var/logs.db /tmp/logs.db && cp lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php
-   
+
    # Update your master branch
    git checkout master && git fetch origin && git merge origin/master
    # Apply to your branch, marge and manage potential conflicts
@@ -182,7 +182,7 @@ Copy the files saved in the folder of the new version
 
 .. code-block:: bash
 
-   $VERSION=2.10.3
+   $VERSION=2.12.2
    cp /tmp/jauth.db /var/www/$MYAPP-$VERSION/lizmap/var/jauth.db
    cp /tmp/lizmapConfig.ini.php /var/www/$MYAPP-$VERSION/lizmap/var/config/lizmapConfig.ini.php
    cp /tmp/logs.db /var/www/$MYAPP-$VERSION/lizmap/var/logs.db

@@ -6,7 +6,7 @@ This documentation shows the progress of the installation Lizmap Web Client on a
 
 .. warning:: The Apache version provided by OSGeo4W is out of date. This documentation has to be updated.
 
-.. note:: In this document, the version 2.10.3 of Lizmap Web Client is used. Be sure to adapt it according to the version you want to install (the latter is recommended).
+.. note:: In this document, the version 2.12.2 of Lizmap Web Client is used. Be sure to adapt it according to the version you want to install (the latter is recommended).
 
 Install
 ===============================================================
@@ -110,22 +110,22 @@ The Lizmap Web Client code is free and downloadable from github. To download the
 
 * Go to https://github.com/3liz/lizmap-web-client/tags
 * Click on the small *zip* link of the latest version.
-* Cliquez sur le petit lien *zip* de la dernière version. For example the following link for 2.10.3 version: https://github.com/3liz/lizmap-web-client/archive/2.10.3.zip
+* For example the following link for 2.12.2 version: https://github.com/3liz/lizmap-web-client/archive/2.12.2.zip
 
 18. Unzip LizMap Web Client in 'C:\\OSGeo4W\\apache\\htdocs\\lizmap\\'
 
-You should now have a folder 'C:\\OSGeo4W\\apache\\htdocs\\lizmap\\lizmap-web-client-2.10.3\\'
+You should now have a folder 'C:\\OSGeo4W\\apache\\htdocs\\lizmap\\lizmap-web-client-2.12.2\\'
 
 19. Test Lizmap Web Client Installation
 
 
-Test if LizMap Web Client is well installed by opening in the browser the link: http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www. You should see displayed the project "Montpellier" supplied with LizMap Web Client and set to be visible to all. To view maps, it is necessary to configure LizMap Web Client.
+Test if LizMap Web Client is well installed by opening in the browser the link: http://localhost/lizmap/lizmap-web-client-2.12.2/lizmap/www. You should see displayed the project "Montpellier" supplied with LizMap Web Client and set to be visible to all. To view maps, it is necessary to configure LizMap Web Client.
 
 20. Administration Interface
 
-Go to the address http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www/admin.php and connect with the login / password: 'admin/admin'.
+Go to the address http://localhost/lizmap/lizmap-web-client-2.12.2/lizmap/www/admin.php and connect with the login / password: 'admin/admin'.
 
-.. note:: 
+.. note::
 If authentication does not work check that the directory 'C:\\OSGeo4W\\tmp' exists.
 
 21. Edit QGIS Server URL

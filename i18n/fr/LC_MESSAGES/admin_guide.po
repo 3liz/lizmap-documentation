@@ -2,7 +2,7 @@
 # Copyright (C) 2014, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -15,6 +15,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: fr_FR\n"
+"X-Source-Language: C\n"
 
 # ccc966fe98b64f0c957063de42717e5f
 #: ../../source/admin_guide/administration/cache.rst:3
@@ -52,8 +55,8 @@ msgid ""
 msgstr ""
 "Dans l'interface d'administration, le menu **Configuration Lizmap** montre "
 "la liste des *répertoires Lizmap* configurés. Pour chacun des répertoire, "
-"l'administrateur peut supprimer le cache pour toutes les couches de tous les"
-" projets du répertoire en cliquant sur le bouton **Vider le cache**."
+"l'administrateur peut supprimer le cache pour toutes les couches de tous les "
+"projets du répertoire en cliquant sur le bouton **Vider le cache**."
 
 # 14199847db054fca981b3f03cee0e772
 #: ../../source/admin_guide/administration/cache.rst:13
@@ -71,8 +74,8 @@ msgid ""
 "to start the delete."
 msgstr ""
 "Lorsque l'administrateur est connecté et qu'il consulte une carte Lizmap, "
-"une **petite croix rouge** est affichée à droite du nom de chaque couche qui"
-" est configurée pour être mise en cache serveur. Un clic sur cette croix "
+"une **petite croix rouge** est affichée à droite du nom de chaque couche qui "
+"est configurée pour être mise en cache serveur. Un clic sur cette croix "
 "permet, après validation, de supprimer le cache serveur uniquement pour "
 "cette couche de ce projet QGIS. Seul l'administrateur connecté voit ces "
 "croix rouges et a le droit de lancer la suppression."
@@ -103,8 +106,8 @@ msgid ""
 "**Services**: the general configuration of Lizmap Web client - server, "
 "cache, etc."
 msgstr ""
-"Les **Services** : la configuration générale de Lizmap Web Client - serveur,"
-" cache, etc."
+"Les **Services** : la configuration générale de Lizmap Web Client - serveur, "
+"cache, etc."
 
 # 4aa57cf6d03441dfa178c0efdda283ba
 #: ../../source/admin_guide/administration/lizmap-configuration.rst:11
@@ -118,25 +121,24 @@ msgstr "Les services"
 
 # cbcf8bdd470841b59198032f002ec7ae
 #: ../../source/admin_guide/administration/lizmap-configuration.rst:20
-msgid ""
-"To configure **Services**, click the *Modify* button under the summary."
+msgid "To configure **Services**, click the *Modify* button under the summary."
 msgstr ""
-"Pour configurer les services, cliquer sur le bouton *Modifier* situé sous le"
-" récapitulatif"
+"Pour configurer les **Services**, cliquer sur le bouton *Modifier* situé "
+"sous le récapitulatif."
 
 # 0f81786bbe4c48e18b0235d4a5f1ac20
 #: ../../source/admin_guide/administration/lizmap-configuration.rst:22
 msgid ""
-"**WMS server URL**: The full QGIS Server URL, such as http://localhost/cgi-"
-"bin/qgis_mapserv.fcgi or http://localhost/cgi-bin/qgis_mapserv.fcgi.exe."
+"**WMS server URL**: The full QGIS Server URL, such as "
+"http://localhost/cgi-bin/qgis_mapserv.fcgi or "
+"http://localhost/cgi-bin/qgis_mapserv.fcgi.exe."
 msgstr ""
 "**URL du serveur WMS** : L'url complète du serveur QGIS, par exemple "
 "http://localhost/cgi-bin/qgis_mapserv.fcgi ."
 
 # dc680bca70f04839a970035a2e2e103d
 #: ../../source/admin_guide/administration/lizmap-configuration.rst:24
-msgid ""
-"QGIS Server must be installed on the same computer as Lizmap Web Client"
+msgid "QGIS Server must be installed on the same computer as Lizmap Web Client"
 msgstr ""
 "QGIS Server doit être installé sur le même ordinateur que Lizmap Web Client"
 
@@ -149,9 +151,9 @@ msgid ""
 "comma."
 msgstr ""
 "**Liste d'URLs WMS de sous-domaine (optionnel)** L'utilisation de plusieurs "
-"noms de domaines est une des optimisations classiques lorsqu'une application"
-" web utilise OpenLayers (comme Lizmap Web Client). Vous pouvez entrer ici "
-"une liste des sous-domaine séparés par virgule."
+"noms de domaines est une des optimisations classiques lorsqu'une application "
+"web utilise OpenLayers (comme Lizmap Web Client). Vous pouvez entrer ici une "
+"liste des sous-domaine séparés par virgule."
 
 # d3abf44fd30141ba9f5f612034dfa9f2
 #: ../../source/admin_guide/administration/lizmap-configuration.rst:28
@@ -201,15 +203,15 @@ msgid ""
 "**Cache root directory**: the folder where the cache is stored. It must be "
 "writable by the Apache server."
 msgstr ""
-"**Répertoire racine du cache** : le dossier dans lequel est stocké le cache."
-" Il doit être accessible en écriture par le serveur Apache"
+"**Répertoire racine du cache** : le dossier dans lequel est stocké le cache. "
+"Il doit être accessible en écriture par le serveur Apache"
 
 # b6ed3d73fcf34ecdbd1b3aa5c2f95d8b
 #: ../../source/admin_guide/administration/lizmap-configuration.rst:43
 msgid ""
 "**Server cache expiration time (s)**: the time in seconds during which each "
-"tile is retained. This is a default value for layers whose time has not been"
-" configured with the plugin."
+"tile is retained. This is a default value for layers whose time has not been "
+"configured with the plugin."
 msgstr ""
 "**Durée de vie du cache** : le temps en seconde pendant lequel chaque tuile "
 "est conservée. C'est une valeur par défaut pour les couches dont le temps "
@@ -260,8 +262,8 @@ msgid ""
 "then validates the form to send the request."
 msgstr ""
 "**Autoriser les visiteurs à demander un compte** : Si cette option est "
-"activée, un nouveau lien **Inscription** sera ajouté dans le menu des cartes"
-" Lizmap. En cliquant sur ce lien, le visiteur affiche un formulaire qui lui "
+"activée, un nouveau lien **Inscription** sera ajouté dans le menu des cartes "
+"Lizmap. En cliquant sur ce lien, le visiteur affiche un formulaire qui lui "
 "permet de demander un compte à l'administrateur. Il doit remplir certains "
 "champs (nom, prénom, adresse e-mail, raison de la demande) puis valide le "
 "formulaire pour envoyer sa demande."
@@ -269,14 +271,14 @@ msgstr ""
 # 3a517cd3609a4650a6376e5908872edc
 #: ../../source/admin_guide/administration/lizmap-configuration.rst:55
 msgid ""
-"**Administrator e-mail** If a valid e-mail address is given, then the Lizmap"
-" Web Client notifications will be sent. For example, each account creation "
+"**Administrator e-mail** If a valid e-mail address is given, then the Lizmap "
+"Web Client notifications will be sent. For example, each account creation "
 "request via the registration form generates an email sent to this address."
 msgstr ""
 "**Couriel de l'administrateur** Si une adresse e-mail valide est donnée, "
 "alors les notifications de Lizmap pourront y être envoyées. Par exemple, "
-"chaque demande de création de compte via le formulaire d'inscription génrère"
-" l'envoi d'un courriel à cette adresse."
+"chaque demande de création de compte via le formulaire d'inscription génrère "
+"l'envoi d'un courriel à cette adresse."
 
 # d0ab308b74f1440ea6db0991d2d0f89e
 #: ../../source/admin_guide/administration/lizmap-configuration.rst:61
@@ -334,8 +336,8 @@ msgid ""
 "You can create a new repository using the button **Create a repository** "
 "located at the top and bottom of the section *Repositories*."
 msgstr ""
-"On peut créer un nouveau répertoire avec le bouton **Ajouter un répertoire**"
-" situé tout en bas de la page"
+"On peut créer un nouveau répertoire avec le bouton **Ajouter un répertoire** "
+"situé tout en bas de la page"
 
 # 28d8296de685435fa389156c3c84d366
 #: ../../source/admin_guide/administration/lizmap-configuration.rst:80
@@ -393,9 +395,9 @@ msgid ""
 "After creating the directory, the repository modification form is displayed "
 "automatically and defines the following rights for each group:"
 msgstr ""
-"Une fois le répertoire créé, le formulaire de modification du répertoire est"
-" automatiquement affiché et permet de définir les droits suivants pour "
-"chacun des groupes :"
+"Une fois le répertoire créé, le formulaire de modification du répertoire est "
+"automatiquement affiché et permet de définir les droits suivants pour chacun "
+"des groupes :"
 
 # af97c6dac2064536abc7df09ecf9c3bf
 #: ../../source/admin_guide/administration/lizmap-configuration.rst:96
@@ -425,8 +427,8 @@ msgstr "**Utiliser l'outil d'Édition**"
 # 097de2b34cfb40ad91f3694fec529ca8
 #: ../../source/admin_guide/administration/lizmap-configuration.rst:103
 msgid ""
-"When this option is checked, the group users have access to the editing tool"
-" for all of Lizmap repository maps for which the edition was configured."
+"When this option is checked, the group users have access to the editing tool "
+"for all of Lizmap repository maps for which the edition was configured."
 msgstr ""
 "Lorsque cette option est cochée, les utilisateurs du groupe ont accès à "
 "l'outil d'édition pour l'ensemble des cartes du répertoire Lizmap pour "
@@ -442,8 +444,8 @@ msgstr "**Afficher toutes les données, mêmes si filtrées par login**"
 msgid ""
 "This option is in connection with the filtering feature data layers per "
 "group. See :ref:`filter-layer-data-by-group`. Check the box for deciding "
-"which groups can see all the time all the data, even when a filter is active"
-" on some layers."
+"which groups can see all the time all the data, even when a filter is active "
+"on some layers."
 msgstr ""
 "Cette option est en lien avec la fonctionnalité de filtrage des données des "
 "couches par groupe. Voir :ref:`filter-layer-data-by-group`. Cocher la case "
@@ -507,8 +509,8 @@ msgid ""
 "and time, action, Lizmap repository, QGIS project, IP address"
 msgstr ""
 "d'enregistrer une nouvelle ligne dans les logs contenant différentes "
-"informations : utilisateur, date et heure, action, répertoire Lizmap, projet"
-" QGIS, adresse IP"
+"informations : utilisateur, date et heure, action, répertoire Lizmap, projet "
+"QGIS, adresse IP"
 
 # 5cc43b3edcb1492d8fe66126c6334451
 #: ../../source/admin_guide/administration/logs.rst:19
@@ -528,8 +530,8 @@ msgstr "Configurer les logs"
 #: ../../source/admin_guide/administration/logs.rst:24
 msgid ""
 "For now, it is not possible to change the configuration of logs in the "
-"administration interface. It is necessary to manually edit the configuration"
-" file **lizmap/var/config/lizmapLogConfig.ini.php**. This file is in *ini* "
+"administration interface. It is necessary to manually edit the configuration "
+"file **lizmap/var/config/lizmapLogConfig.ini.php**. This file is in *ini* "
 "format and contains many sections as action to save. For each action, you "
 "can choose to activate with *on* or off with *off* the recording of the log."
 msgstr ""
@@ -537,8 +539,8 @@ msgstr ""
 "via l'interface d'administration. Il est nécessaire d'éditer à la main le "
 "fichier de configuration **lizmap/var/config/lizmapLogConfig.ini.php**. Ce "
 "fichier est au format *ini* et contient autant de sections que d'actions à "
-"enregistrer. Pour chacune des actions, on peut choisir d'activer via *on* ou"
-" de désactiver avec *off* l'enregistrement du log."
+"enregistrer. Pour chacune des actions, on peut choisir d'activer via *on* ou "
+"de désactiver avec *off* l'enregistrement du log."
 
 # 7fb2785a10124c808fb6e6940a3d168d
 #: ../../source/admin_guide/administration/logs.rst:26
@@ -599,12 +601,12 @@ msgstr ""
 #: ../../source/admin_guide/administration/logs.rst:54
 msgid ""
 "This database can be accessed with a Sqlite database reading tool, like "
-"*SQLite Browser* or the Firefox add-on *SQlite Manager*. If you know SQL, so"
-" you can make queries to extract information from the detailed logs."
+"*SQLite Browser* or the Firefox add-on *SQlite Manager*. If you know SQL, so "
+"you can make queries to extract information from the detailed logs."
 msgstr ""
-"Cette base de données peut être consultée via un outil de lecture de base de"
-" données Sqlite, par exemple *SQLite Browser* ou l'extension Firefox *SQlite"
-" Manager*. Si vous connaissez le langage SQL, vous pourrez ainsi faire des "
+"Cette base de données peut être consultée via un outil de lecture de base de "
+"données Sqlite, par exemple *SQLite Browser* ou l'extension Firefox *SQlite "
+"Manager*. Si vous connaissez le langage SQL, vous pourrez ainsi faire des "
 "requêtes pour extraire des informations à partir des logs détaillés."
 
 # b5310095e22f473ba1e9bab956cfcdec
@@ -623,8 +625,8 @@ msgid ""
 "For safety reasons, no link leads to the administration interface. The "
 "address is:"
 msgstr ""
-"Par souci de sécurité, aucun lien ne mène vers l'interface d'administration."
-" L'adresse est la suivante"
+"Par souci de sécurité, aucun lien ne mène vers l'interface d'administration. "
+"L'adresse est la suivante"
 
 # e9cd210f41ec42c8a6353d4c12049b72
 #: ../../source/admin_guide/administration/presentation.rst:10
@@ -692,8 +694,8 @@ msgid ""
 "Lizmap Web Client can use QGIS maps stored in different folders on the "
 "server."
 msgstr ""
-"Lizmap Web Client peut utiliser les cartes QGIS enregistrées dans différents"
-" répertoires sur le serveur."
+"Lizmap Web Client peut utiliser les cartes QGIS enregistrées dans différents "
+"répertoires sur le serveur."
 
 # 3b923f0e5449466dba8b8bb7d63e14cc
 #: ../../source/admin_guide/administration/presentation.rst:37
@@ -765,8 +767,8 @@ msgstr "Gérer les groupes : créer, renommer, supprimer"
 # 6fc048afada5459f8b4521a72c727cbd
 #: ../../source/admin_guide/administration/users-groups.rst:22
 msgid ""
-"*Create a group*: In the left menu click on *Groups of users for rights* and"
-" scroll down to *Create a group*."
+"*Create a group*: In the left menu click on *Groups of users for rights* and "
+"scroll down to *Create a group*."
 msgstr ""
 "*Créer un groupe* : Menu *Groupes d'utilisateurs* et descendre jusqu'au "
 "formulaire *Créer un groupe*"
@@ -785,8 +787,8 @@ msgstr "Donner un *identifiant* : un seul mot sans caractères spéciaux"
 # 16a8d754c1814466af14fe1c48271e93
 #: ../../source/admin_guide/administration/users-groups.rst:26
 msgid ""
-"In the page *Groups of users for rights*, it is also possible to *Change the"
-" name* and *Delete a group*."
+"In the page *Groups of users for rights*, it is also possible to *Change the "
+"name* and *Delete a group*."
 msgstr "Via cette page, on peut aussi *renommer ou supprimer un groupe*"
 
 # f2eccc2fc1ee42dc854bb40114355382
@@ -798,9 +800,9 @@ msgid ""
 "must be part of this group."
 msgstr ""
 "Le groupe **users** est un groupe système pour donner les droits à un "
-"utilisateurs authentifié de modifier ses propres informations d'utilisateurs"
-" dont le mot de passe. Nous avons exclu ce groupe de la configuration lizmap"
-" car tous utilisateurs identifiées doivent faire parti de ce groupe."
+"utilisateurs authentifié de modifier ses propres informations d'utilisateurs "
+"dont le mot de passe. Nous avons exclu ce groupe de la configuration lizmap "
+"car tous utilisateurs identifiées doivent faire parti de ce groupe."
 
 # 0fc3975fc75e4a7ebd4dea5bc0b5fc04
 #: ../../source/admin_guide/administration/users-groups.rst:35
@@ -845,8 +847,8 @@ msgid ""
 "Once users created, you must put them into groups to assign the associated "
 "rights."
 msgstr ""
-"*Une fois les utitilisateurs créés, il faut les mettre dans des groupes pour"
-" leur assigner les droits liés*"
+"*Une fois les utitilisateurs créés, il faut les mettre dans des groupes pour "
+"leur assigner les droits liés*"
 
 # e9871e74a2a94671b9d9038347e79294
 #: ../../source/admin_guide/administration/users-groups.rst:52
@@ -883,8 +885,8 @@ msgstr "La dernière colonne affiche *les droits résultants*"
 # c5da91c207044a67b111ef4dc122d7e1
 #: ../../source/admin_guide/administration/users-groups.rst:60
 msgid ""
-"In the *head row*, the + and - buttons allow to set / remove the user from a"
-" group"
+"In the *head row*, the + and - buttons allow to set / remove the user from a "
+"group"
 msgstr ""
 "Dans la *ligne d'entête*, des boutons + et - permettent de mettre/enlever "
 "l'utilisateur dans un groupe"
@@ -936,8 +938,8 @@ msgid ""
 "http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html"
 msgstr ""
 "Au préalable, vous devez avoir un serveur tournant avec Apache. Dans ce "
-"document, nous considérons que QGIS Server a aussi été installé correctement"
-" : http://hub.qgis.org/wiki/quantum-gis/QGIS_Server_Tutorial"
+"document, nous considérons que QGIS Server a aussi été installé correctement "
+": http://hub.qgis.org/wiki/quantum-gis/QGIS_Server_Tutorial"
 
 # d71936a1a9884d3dbf96c37bb8840b99
 #: ../../source/admin_guide/installation/linux.rst:11
@@ -1036,8 +1038,8 @@ msgstr ""
 # 01924069d5fa4808b7f29f50be2b0ea5
 #: ../../source/admin_guide/installation/linux.rst:122
 msgid ""
-"For editing, we strongly recommend using a PostgreSQL database. This greatly"
-" simplifies installation and retrieval of data entered by users."
+"For editing, we strongly recommend using a PostgreSQL database. This greatly "
+"simplifies installation and retrieval of data entered by users."
 msgstr ""
 "Pour l'édition, nous conseillons fortement d'utiliser une base de données "
 "PostGreSQL. Cela simplifie fortement l'installation et la récupération des "
@@ -1057,19 +1059,19 @@ msgstr "Activer l'extension Spatialite"
 #: ../../source/admin_guide/installation/linux.rst:130
 msgid ""
 "To use editing on layers spatiatlite,you have to add the spatialite "
-"extension in PHP. You can follow these instructions to do so: http://www"
-".gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
+"extension in PHP. You can follow these instructions to do so: "
+"http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
 msgstr ""
-"Pour pouvoir utiliser l'édition sur des couches spatiatlite, il faut ajouter"
-" l'extension spatialite dans PHP. Vous pouvez suivre les instructions "
-"suivantes pour le faire : http://www.gaia-gis.it/spatialite-2.4.0-4/splite-"
-"php.html"
+"Pour pouvoir utiliser l'édition sur des couches spatiatlite, il faut ajouter "
+"l'extension spatialite dans PHP. Vous pouvez suivre les instructions "
+"suivantes pour le faire : "
+"http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
 
 # 33d36322980946618f178d688b8c5ebf
 #: ../../source/admin_guide/installation/linux.rst:133
 msgid ""
-"Lizmap Web Client tests whether the spatialite support is enabled in PHP. If"
-" it is not, then spatialities layers will not be used in the editing tool. "
+"Lizmap Web Client tests whether the spatialite support is enabled in PHP. If "
+"it is not, then spatialities layers will not be used in the editing tool. "
 "You can always use PostgreSQL data for editing."
 msgstr ""
 "Lizmap Web Client teste si le support du spatialite est bien activé dans le "
@@ -1100,9 +1102,8 @@ msgstr ""
 # dd6fb5d760dc4517b62b7163d25ae3f0
 #: ../../source/admin_guide/installation/linux.rst:140
 msgid ""
-"For example, if a directory contains a QGIS project, which uses a Spatialite"
-" database placed in a **db** directory at the same level as the QGIS "
-"project:"
+"For example, if a directory contains a QGIS project, which uses a Spatialite "
+"database placed in a **db** directory at the same level as the QGIS project:"
 msgstr ""
 "Par exemple, si un répertoire contient un projet QGIS, qui utilise une base "
 "de données Spatialite placée dans un répertoire **bdd** au même niveau que "
@@ -1123,8 +1124,8 @@ msgid ""
 "unique directory."
 msgstr ""
 "c'est pourquoi, si vous souhaitez installer Lizmap pour offrir un accès à "
-"plusieurs utilisateurs, nous vous conseillons de leur dire de toujours créer"
-" un répertoire bdd au même niveau que les projets QGIS dans le répertoire "
+"plusieurs utilisateurs, nous vous conseillons de leur dire de toujours créer "
+"un répertoire bdd au même niveau que les projets QGIS dans le répertoire "
 "Lizmap. Cela facilitera le travail de l'administrateur qui pourra modifier "
 "les droits de cet unique répertoire."
 
@@ -1145,9 +1146,9 @@ msgid ""
 "*lizmap/var/config/lizmapConfig.ini.php*, *lizmap/var/jauth.db* and the log "
 "file (from 2.8) *lizmap/var/logs.db*"
 msgstr ""
-"Avant de mettre à jour, faites une sauvegarde des données de configuration :"
-" lizmap/var/jauth.db and lizmap/var/config/lizmapConfig.ini.php et du "
-"fichier de log (à partir de la 2.8) lizmap/var/logs.db"
+"Avant de mettre à jour, faites une sauvegarde des données de configuration : "
+"lizmap/var/jauth.db and lizmap/var/config/lizmapConfig.ini.php et du fichier "
+"de log (à partir de la 2.8) lizmap/var/logs.db"
 
 # db7b6559a9f0422983e36489293d4822
 #: ../../source/admin_guide/installation/linux.rst:177
@@ -1155,14 +1156,13 @@ msgid ""
 "Then do a typical installation of the new version (see above), which will "
 "create a new folder in the directory */var/www/*"
 msgstr ""
-"Puis faites une installation classique de la nouvelle version (voir ci-"
-"dessus), ce qui crééra un nouveau dossier dans le répertoire /var/www/"
+"Puis faites une installation classique de la nouvelle version (voir "
+"ci-dessus), ce qui crééra un nouveau dossier dans le répertoire /var/www/"
 
 # 45603c26e1ed4602b86cb8464836723c
 #: ../../source/admin_guide/installation/linux.rst:181
 msgid "Copy the files saved in the folder of the new version"
-msgstr ""
-"Copier les fichiers sauvegardés dans le dossier de la nouvelle version"
+msgstr "Copier les fichiers sauvegardés dans le dossier de la nouvelle version"
 
 # 54b3eb454f2240a6a65b10bf43edf59e
 #: ../../source/admin_guide/installation/linux.rst:190
@@ -1170,9 +1170,8 @@ msgid ""
 "In some versions, it is also necessary to update the database that stores "
 "the rights. See the following for more details."
 msgstr ""
-"Pour certaines versions, il est aussi nécessaire de mettre à jour la base de"
-" données qui stocke les droits. Voir les points suivants pour plus de "
-"détail."
+"Pour certaines versions, il est aussi nécessaire de mettre à jour la base de "
+"données qui stocke les droits. Voir les points suivants pour plus de détail."
 
 # 9e06af41e3f54611a42c64184d28bd31
 #: ../../source/admin_guide/installation/linux.rst:193
@@ -1185,9 +1184,9 @@ msgid ""
 "The Jelix framework (tool with which Lizmap Web Client is built) has been "
 "updated. It is necessary to change the rights management SQLite database:"
 msgstr ""
-"Le framework Jelix (outil avec lequel est construit Lizmap Web Client) a été"
-" mis à jour. Il faut modifier la base de données sqlite de gestion des "
-"droits :"
+"Le framework Jelix (outil avec lequel est construit Lizmap Web Client) a été "
+"mis à jour. Il faut modifier la base de données sqlite de gestion des droits "
+":"
 
 # af300033e51d4682b5a52377f08577bd
 #: ../../source/admin_guide/installation/linux.rst:203
@@ -1197,13 +1196,13 @@ msgstr "De la version 2.6 ou inférieure à la version 2.7"
 # 51dd74fa83bb4235915fec6969de462e
 #: ../../source/admin_guide/installation/linux.rst:205
 msgid ""
-"Support for annotations and management of related rights was added to Lizmap"
-" Web Client. It is necessary to change the rights management SQLite database"
-" to upgrade it:"
+"Support for annotations and management of related rights was added to Lizmap "
+"Web Client. It is necessary to change the rights management SQLite database "
+"to upgrade it:"
 msgstr ""
 "Le support des annotations a été ajouté à Lizmap, ainsi que la gestion des "
-"droits liée. Il faut donc modifier la base de données des droits pour mettre"
-" à niveau :"
+"droits liée. Il faut donc modifier la base de données des droits pour mettre "
+"à niveau :"
 
 # e00b243a1519410d9863828240210979
 #: ../../source/admin_guide/installation/linux.rst:214
@@ -1214,12 +1213,12 @@ msgstr "De la version 2.7.*  à la version 2.8"
 #: ../../source/admin_guide/installation/linux.rst:216
 msgid ""
 "The editing tool replaced the annotation tool and fields to describe each "
-"Lizmap Web Client user has been added. It is necessary to upgrade the rights"
-" management SQLite database:"
+"Lizmap Web Client user has been added. It is necessary to upgrade the rights "
+"management SQLite database:"
 msgstr ""
 "L'outil d'édition a remplacé l'outil d'annotation et nous avons ajouté des "
-"champs pour décrire chaque utilisateur Lizmap. Il faut mettre à jour la base"
-" de donnée de gestion des droits :"
+"champs pour décrire chaque utilisateur Lizmap. Il faut mettre à jour la base "
+"de donnée de gestion des droits :"
 
 # 3f82df74192e4adc935542710847f581
 #: ../../source/admin_guide/installation/linux.rst:224
@@ -1280,11 +1279,11 @@ msgstr "Configurer les locales"
 # cc4963a2defb4be4a799695cc71f319d
 #: ../../source/admin_guide/installation/server_configuration.rst:13
 msgid ""
-"For simplicity, it is interesting to configure the server with UTF-8 default"
-" encoding."
+"For simplicity, it is interesting to configure the server with UTF-8 default "
+"encoding."
 msgstr ""
-"Pour simplifier les choses, il est intéressant de configurer le serveur avec"
-" l'encodage par défaut UTF-8."
+"Pour simplifier les choses, il est intéressant de configurer le serveur avec "
+"l'encodage par défaut UTF-8."
 
 # 4f93ca6fd3704d74a07dadf34a5f50d3
 #: ../../source/admin_guide/installation/server_configuration.rst:22
@@ -1340,8 +1339,8 @@ msgstr "Configuration de php5"
 # 61f5805a0ac54978b75e8d8c762ad389
 #: ../../source/admin_guide/installation/server_configuration.rst:96
 msgid ""
-"In this example, we use Apache mpm-worker. So we must manually configure the"
-" activation of php5."
+"In this example, we use Apache mpm-worker. So we must manually configure the "
+"activation of php5."
 msgstr ""
 "On utilise dans cet exemple le mpm-worker d'Apache. On doit donc configurer "
 "manuellement l'activation de php5."
@@ -1368,8 +1367,8 @@ msgstr "Configuration de mod_fcgid"
 # ae45d06faee345baa678dc802b233f10
 #: ../../source/admin_guide/installation/server_configuration.rst:141
 msgid ""
-"QGIS Server runs fcgi mode. We must therefore configure the Apache mod_fcgid"
-" to suit to the server capabilities."
+"QGIS Server runs fcgi mode. We must therefore configure the Apache mod_fcgid "
+"to suit to the server capabilities."
 msgstr ""
 "QGIS Server fonctionne en mode fcgi. Il faut donc configurer le mod_fcgid "
 "d'Apache pour l'adapter aux capacités du serveur."
@@ -1440,9 +1439,12 @@ msgstr "Serveur cartographique: QGIS Server"
 #: ../../source/admin_guide/installation/server_configuration.rst:304
 msgid ""
 "See "
-"http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html"
-" to more information on QGIS Server."
+"http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html "
+"to more information on QGIS Server."
 msgstr ""
+"Pour plus d'information sur QGIS Server, vous pouvez vous référer à "
+"http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html "
+"."
 
 # 89db389f7e524cf181591909f87d93ca
 #: ../../source/admin_guide/installation/windows.rst:3
@@ -1469,17 +1471,8 @@ msgid ""
 "The Apache version provided by OSGeo4W is out of date. This documentation "
 "has to be updated."
 msgstr ""
-
-# c2f30bb1fab64b2f874580d6843c471c
-#: ../../source/admin_guide/installation/windows.rst:9
-msgid ""
-"In this document, the version 2.10.3 of Lizmap Web Client is used. Be sure "
-"to adapt it according to the version you want to install (the latter is "
-"recommended)."
-msgstr ""
-"Dans ce document, nous utilisons la version 2.10.3 de Lizmap. Veuillez à "
-"adapter en fonction de la version que vous souhaitez installer (la dernière "
-"est recommandée)"
+"La version de Apache fourni par OSGeo4W n'est pas récente. Cette "
+"documentation doit-être mise à jour."
 
 # bdfda4ab8c1645a5807fa5fdea0a552b
 #: ../../source/admin_guide/installation/windows.rst:14
@@ -1543,8 +1536,8 @@ msgstr "Lancer et terminer l'installation"
 # 078b7a6ab7964f78a89889a793d2e46f
 #: ../../source/admin_guide/installation/windows.rst:60
 msgid ""
-"At this point all that is necessary to LizMap Web Client is installed on the"
-" machine. The next steps are to configure the server, install and configure "
+"At this point all that is necessary to LizMap Web Client is installed on the "
+"machine. The next steps are to configure the server, install and configure "
 "LizMap Web Client."
 msgstr ""
 "A cette étape tout ce qui est nécessaire à LizMap est installé sur votre "
@@ -1580,13 +1573,13 @@ msgstr "Vérification de PHP"
 msgid ""
 "Click on the link 'phpinfo' on the home page of the OSGeo4W Apache server. "
 "This page allows you to check the configuration of your server. You should "
-"find information about cgi-fcgi, PDO and PDO_SQLITE but not CURL or GD which"
-" depends LizMap Web Client."
+"find information about cgi-fcgi, PDO and PDO_SQLITE but not CURL or GD which "
+"depends LizMap Web Client."
 msgstr ""
 "Cliquer sur le lien 'phpinfo' de la page d'accueil du serveur apache "
 "d'OSGeo4W. Cette page permet de vérifier la configuration de votre serveur. "
-"Vous devriez y trouver des informations sur cgi-fcgi, PDO et PDO_sqlite mais"
-" pas sur CURL ni GD dont dépend LizMap."
+"Vous devriez y trouver des informations sur cgi-fcgi, PDO et PDO_sqlite mais "
+"pas sur CURL ni GD dont dépend LizMap."
 
 # 25650aa292c842b4812fdfa25cb44ad7
 #: ../../source/admin_guide/installation/windows.rst:79
@@ -1596,17 +1589,16 @@ msgstr "Activer CURL et GD2"
 # 977e7374613c48af9e1bbe12876edbc1
 #: ../../source/admin_guide/installation/windows.rst:81
 msgid ""
-"Open the file C:\\OSGeo4W\\bin\\PHP.ini and uncomment extensions curl and "
-"gd2"
+"Open the file C:\\OSGeo4W\\bin\\PHP.ini and uncomment extensions curl and gd2"
 msgstr ""
-"Ouvrir le fichier C:\\OSGeo4W\\bin\\PHP.ini et dé-commenter l'extension curl"
-" et gd2"
+"Ouvrir le fichier C:\\OSGeo4W\\bin\\PHP.ini et dé-commenter l'extension curl "
+"et gd2"
 
 # 2adf173fbb914aae8aa975321cefdf74
 #: ../../source/admin_guide/installation/windows.rst:88
 msgid ""
-"Changing the file C:\\OSGeo4W\\bin\\PHP.ini to activate CURL and GD into PHP"
-" CURL, requires to restart the Apache server. To do this :"
+"Changing the file C:\\OSGeo4W\\bin\\PHP.ini to activate CURL and GD into PHP "
+"CURL, requires to restart the Apache server. To do this :"
 msgstr ""
 "La modification du fichier C:\\OSGeo4W\\bin\\PHP.ini afin d'activer CURL et "
 "GD dans PHP, oblige à redémarrer le serveur apache. Pour ce faire,"
@@ -1637,8 +1629,8 @@ msgstr "Vérfier CURL et GD"
 # 7a8554f21e384cb7a69009c54624f2d1
 #: ../../source/admin_guide/installation/windows.rst:102
 msgid ""
-"In the web browser, reload the page 'phpinfo'. You should find a CURL and GD"
-" section."
+"In the web browser, reload the page 'phpinfo'. You should find a CURL and GD "
+"section."
 msgstr ""
 "Dans le navigateur web, recharger la page 'phpinfo'. Vous devriez y trouver "
 "une section CURL et GD."
@@ -1651,8 +1643,8 @@ msgstr "Télécharger LizMap Web Client"
 # 42cc83431a274c0594d2fbb4a439b25b
 #: ../../source/admin_guide/installation/windows.rst:109
 msgid ""
-"The Lizmap Web Client code is free and downloadable from github. To download"
-" the latest version:"
+"The Lizmap Web Client code is free and downloadable from github. To download "
+"the latest version:"
 msgstr ""
 "Le code de Lizmap Web Client est libre et téléchargeable sur github. Pour "
 "télécharger la dernière version :"
@@ -1667,66 +1659,22 @@ msgstr "allez sur https://github.com/3liz/lizmap-web-client/tags"
 msgid "Click on the small *zip* link of the latest version."
 msgstr "Cliquez sur le petit lien *zip* de la dernière version."
 
-# abb69735007e48b38d213cf7942c4e30
-#: ../../source/admin_guide/installation/windows.rst:113
-msgid ""
-"Cliquez sur le petit lien *zip* de la dernière version. For example the "
-"following link for 2.10.3 version: https://github.com/3liz/lizmap-web-"
-"client/archive/2.10.3.zip"
-msgstr ""
-"Par exemple le lien suivant pour la 2.10.3 : https://github.com/3liz/lizmap-"
-"web-client/archive/2.10.3.zip"
-
 # 01a5931630814668b57fbe911ccc39a7
 #: ../../source/admin_guide/installation/windows.rst:115
-msgid "Unzip LizMap Web Client in 'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap\\\\'"
-msgstr "Décompresser LizMap dans 'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap\\\\'"
-
-# 312ba158ff3c448bb3495e1ded50e124
-#: ../../source/admin_guide/installation/windows.rst:117
 msgid ""
-"You should now have a folder 'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap"
-"\\\\lizmap-web-client-2.10.3\\\\'"
+"Unzip LizMap Web Client in 'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap\\\\'"
 msgstr ""
-"Vous devez maintenant avoir un dossier "
-"'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap\\\\lizmap-web-"
-"client-2.10.3\\\\'"
+"Décompresser LizMap dans 'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap\\\\'"
 
 # 2405efb432424e7886cb708f41a7c777
 #: ../../source/admin_guide/installation/windows.rst:119
 msgid "Test Lizmap Web Client Installation"
 msgstr "Teste de l'installation de Lizmap Web Client"
 
-# 9130a3332f4f48a8b415d55bdc2a9304
-#: ../../source/admin_guide/installation/windows.rst:122
-msgid ""
-"Test if LizMap Web Client is well installed by opening in the browser the "
-"link: http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www. You "
-"should see displayed the project \"Montpellier\" supplied with LizMap Web "
-"Client and set to be visible to all. To view maps, it is necessary to "
-"configure LizMap Web Client."
-msgstr ""
-"Tester si LizMap est bien installé en ouvrant dans le navigateur l'adresse "
-"http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www. Vous devriez y "
-"voir s'afficher le projet \"Montpellier\" fourni avec LizMap et configurer "
-"pour être visible par tous. Pour pouvoir consulter les cartes, il va falloir"
-" configurer LizMap."
-
 # 0b5880754fc2404c8e7054bbddfaf9d5
 #: ../../source/admin_guide/installation/windows.rst:124
 msgid "Administration Interface"
 msgstr "Interface d'administration"
-
-# 6b15e2667fa74dd48e5c0e662943c67d
-#: ../../source/admin_guide/installation/windows.rst:126
-msgid ""
-"Go to the address http://localhost/lizmap/lizmap-web-"
-"client-2.10.3/lizmap/www/admin.php and connect with the login / password: "
-"'admin/admin'."
-msgstr ""
-"Aller à l'adresse http://localhost/lizmap/lizmap-web-"
-"client-2.10.3/lizmap/www/admin.php et se connecter avec le login / mot de "
-"passe : 'admin/admin'."
 
 # cd7e7c1ec33d4612af62ff627f2be739
 #: ../../source/admin_guide/installation/windows.rst:129
@@ -1754,8 +1702,8 @@ msgstr ""
 # 34c97eb4f4a9478e86e1038accf45429
 #: ../../source/admin_guide/installation/windows.rst:135
 msgid ""
-"Replace the url of WMS server by http://127.0.0.1/qgis/qgis_mapserv.fcgi.exe"
-" and record:"
+"Replace the url of WMS server by http://127.0.0.1/qgis/qgis_mapserv.fcgi.exe "
+"and record:"
 msgstr ""
 "Remplacer l'url du serveur WMS par "
 "http://127.0.0.1/qgis/qgis_mapserv.fcgi.exe et enregistrer :"
@@ -1774,8 +1722,8 @@ msgid ""
 "should view the map, and thus be in possession of a Lizmap Web Client ready "
 "for yours."
 msgstr ""
-"Afin de s'assurer que la configuration a bien réussi, cliquer sur 'Liste des"
-" projets' en haut. Vous devriez avoir accès à deux cartes puisque vous êtes "
+"Afin de s'assurer que la configuration a bien réussi, cliquer sur 'Liste des "
+"projets' en haut. Vous devriez avoir accès à deux cartes puisque vous êtes "
 "authentifié comme administrateur. Cliquer sur l'une des cartes. Si la "
 "configuration est bonne vous devriez visualiser la carte, et donc être en "
 "possession d'une version de LizMap prête pour vos cartes."
@@ -1792,8 +1740,8 @@ msgid ""
 "spatialite extension to PHP. Unfortunately, it requires a PHP version of at "
 "least 5.3 to do it, and for now, the installer OSGeo4W offers only 5.2."
 msgstr ""
-"Pour pouvoir utiliser l'outil d'édition sur des couches spatiatlite, il faut"
-" ajouter l'extension spatialite dans PHP. Malheureusement, il faut une "
+"Pour pouvoir utiliser l'outil d'édition sur des couches spatiatlite, il faut "
+"ajouter l'extension spatialite dans PHP. Malheureusement, il faut une "
 "version de PHP au moins égale à la 5.3 pour le faire, et pour l'instant, "
 "l'installateur OSGeo4W ne propose que la 5.2."
 
@@ -1810,11 +1758,113 @@ msgstr ""
 # b7d7c699629140c2b83d034681e39c3b
 #: ../../source/admin_guide/installation/windows.rst:152
 msgid ""
-"Lizmap Web Client tests whether the Spatialite support is enabled in PHP. If"
-" it is not, then the Spatialite layers will not be used in the editing tool."
-" You can always use PostgreSQL data instead."
+"Lizmap Web Client tests whether the Spatialite support is enabled in PHP. If "
+"it is not, then the Spatialite layers will not be used in the editing tool. "
+"You can always use PostgreSQL data instead."
 msgstr ""
 "Lizmap Web Client teste si le support du spatialite est bien activé dans le "
 "PHP. S'il ne l'est pas, alors les couches Spatialite ne seront pas "
 "utilisables dans l'outil d'édition. Vous pouvez toujours utiliser des "
 "données PostGreSQL à la place."
+
+#: ../../source/admin_guide/installation/windows.rst:9
+msgid ""
+"In this document, the version 2.12.2 of Lizmap Web Client is used. Be sure "
+"to adapt it according to the version you want to install (the latter is "
+"recommended)."
+msgstr ""
+"Dans ce document, nous utilisons la version 2.12.2 de Lizmap. Veuillez à "
+"adapter en fonction de la version que vous souhaitez installer (la dernière "
+"est recommandée)."
+
+#: ../../source/admin_guide/installation/windows.rst:117
+msgid ""
+"You should now have a folder "
+"'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap\\\\lizmap-web-client-2.12.2\\\\'"
+msgstr ""
+"Vous devez maintenant avoir un dossier "
+"'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap\\\\lizmap-web-client-2.12.2\\\\'"
+
+#: ../../source/admin_guide/installation/windows.rst:122
+msgid ""
+"Test if LizMap Web Client is well installed by opening in the browser the "
+"link: http://localhost/lizmap/lizmap-web-client-2.12.2/lizmap/www. You "
+"should see displayed the project \"Montpellier\" supplied with LizMap Web "
+"Client and set to be visible to all. To view maps, it is necessary to "
+"configure LizMap Web Client."
+msgstr ""
+"Tester si LizMap est bien installé en ouvrant dans le navigateur l'adresse "
+"http://localhost/lizmap/lizmap-web-client-2.12.2/lizmap/www. Vous devriez y "
+"voir s'afficher le projet \"Montpellier\" fourni avec LizMap et configurer "
+"pour être visible par tous. Pour pouvoir consulter les cartes, il va falloir "
+"configurer LizMap."
+
+#: ../../source/admin_guide/installation/windows.rst:126
+msgid ""
+"Go to the address "
+"http://localhost/lizmap/lizmap-web-client-2.12.2/lizmap/www/admin.php and "
+"connect with the login / password: 'admin/admin'."
+msgstr ""
+"Aller à l'adresse "
+"http://localhost/lizmap/lizmap-web-client-2.12.2/lizmap/www/admin.php et se "
+"connecter avec le login / mot de passe : 'admin/admin'."
+
+#: ../../source/admin_guide/installation/windows.rst:113
+msgid ""
+"For example the following link for 2.12.2 version: "
+"https://github.com/3liz/lizmap-web-client/archive/2.12.2.zip"
+msgstr ""
+"Par exemple le lien suivant pour la 2.12.2 : "
+"https://github.com/3liz/lizmap-web-client/archive/2.10.3.zip"
+
+#~ msgid ""
+#~ "Cliquez sur le petit lien *zip* de la dernière version. For example the "
+#~ "following link for 2.12.2 version: "
+#~ "https://github.com/3liz/lizmap-web-client/archive/2.12.2.zip"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this document, the version 2.10.3 of Lizmap Web Client is used. Be "
+#~ "sure to adapt it according to the version you want to install (the latter "
+#~ "is recommended)."
+#~ msgstr ""
+#~ "Dans ce document, nous utilisons la version 2.10.3 de Lizmap. Veuillez à "
+#~ "adapter en fonction de la version que vous souhaitez installer (la "
+#~ "dernière est recommandée)"
+
+#~ msgid ""
+#~ "Cliquez sur le petit lien *zip* de la dernière version. For example the "
+#~ "following link for 2.10.3 version: "
+#~ "https://github.com/3liz/lizmap-web-client/archive/2.10.3.zip"
+#~ msgstr ""
+#~ "Par exemple le lien suivant pour la 2.10.3 : "
+#~ "https://github.com/3liz/lizmap-web-client/archive/2.10.3.zip"
+
+#~ msgid ""
+#~ "You should now have a folder "
+#~ "'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap\\\\lizmap-web-client-2.10.3\\\\'"
+#~ msgstr ""
+#~ "Vous devez maintenant avoir un dossier "
+#~ "'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap\\\\lizmap-web-client-2.10.3\\\\'"
+
+#~ msgid ""
+#~ "Test if LizMap Web Client is well installed by opening in the browser the "
+#~ "link: http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www. You "
+#~ "should see displayed the project \"Montpellier\" supplied with LizMap Web "
+#~ "Client and set to be visible to all. To view maps, it is necessary to "
+#~ "configure LizMap Web Client."
+#~ msgstr ""
+#~ "Tester si LizMap est bien installé en ouvrant dans le navigateur "
+#~ "l'adresse http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www. "
+#~ "Vous devriez y voir s'afficher le projet \"Montpellier\" fourni avec "
+#~ "LizMap et configurer pour être visible par tous. Pour pouvoir consulter "
+#~ "les cartes, il va falloir configurer LizMap."
+
+#~ msgid ""
+#~ "Go to the address "
+#~ "http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www/admin.php and "
+#~ "connect with the login / password: 'admin/admin'."
+#~ msgstr ""
+#~ "Aller à l'adresse "
+#~ "http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www/admin.php et "
+#~ "se connecter avec le login / mot de passe : 'admin/admin'."
