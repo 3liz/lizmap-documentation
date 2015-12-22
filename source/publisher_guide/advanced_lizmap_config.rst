@@ -378,7 +378,7 @@ This is useful for a variety of advanced usage. For instance, you can avoid peop
 * All the Javascript code you copy in the ``/home/data/rep1/media/js/myproject/`` directory will be executed by Lizmap, provided that:
 * you allow it, through the Lizmap admin interface, adding the privilege "Allow themes for this repository" in the form for the modification of the repository
 
-For the example above, just add a file named e.g. ``disableRightClick.js`` with::
+For the example above, just add a file named e.g. ``disableRightClick.js`` with:
 
 .. code-block:: none
 
