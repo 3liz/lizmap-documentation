@@ -41,7 +41,7 @@ First you can get the cache capabilities of one project, and some details on a s
 .. code-block:: bash
 
    # Command help
-   # php lizmap/scripts/script.php lizmap~wmts:capabilities [-v] [-f] repository project [layer] [TileMatrixSet]
+   # php lizmap/scripts/script.php lizmap~wmts:capabilities [-v] repository project [layer] [TileMatrixSet]
 
    # Get the cache capabilities for a given project published with Lizmap
    php lizmap/scripts/script.php lizmap~wmts:capabilities montpellier montpellier
@@ -87,3 +87,8 @@ In this example, you see that the bus layer has 3 different TileMatrixSet , corr
    ================
    End generation
 
+After seeding, update rights on cache :
+
+.. code-block:: bash
+
+   lizmap/install/set_rights.sh www-data www-data
