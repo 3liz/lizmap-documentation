@@ -22,23 +22,34 @@ Update localized files
 sphinx-build -b gettext source i18n/pot
 ```
 
-* Update localized files
+* Update localized files (*.po)
 
 ```
 sphinx-intl update -d i18n
 ```
 
+Then you can improve po files by opening them with QtLinguist.
+
 Build documentation
 ====================
 
+We advise to use the **make** command to build Sphinx documentation. Here are some examples:
+
 ```
-# Generate .mo files ( build from .po )
+
+# Generate mo files by building freshly modified po files
 sphinx-intl build -d i18n
 
-# Build default HTML documentation, default is english version
-sphinx-build -b html source/ build/html/en/
+# Build documentation in english (default language) in HTML format
+make html BUILDDIR=build/latex/en
 
-# Build french HTML documentation
-sphinx-build -b html -D language='fr' source/ build/html/fr/
-# Replace fr for other languages
+# Build documentation in french in HTML
+make html BUILDDIR=build/latex/fr SPHINXOPTS="-D language='fr'"
+
+# Build PDF in english
+make latexpdf BUILDDIR=build/latex/en
+
+# Build PDF in french
+make latexpdf BUILDDIR=build/latex/fr SPHINXOPTS="-D language='fr'"
+
 ```
