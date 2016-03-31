@@ -51,7 +51,7 @@ With ZIP file
 Development version with git
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. warning:: the development version is always changing, and bugs can occur. Do not use it in production.
+.. warning:: The development version is always changing, and bugs can occur. Do not use it in production.
 
 * The first time
 
