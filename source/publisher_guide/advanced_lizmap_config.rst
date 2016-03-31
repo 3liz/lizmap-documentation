@@ -369,6 +369,8 @@ This is useful for a variety of advanced usage. For instance, you can avoid peop
 
 * In your repository (e.g. ``/home/data/repo1/myproject.qgs`` you should have these directories::
 
+.. code-block:: none
+
     media
     |-- js
       |-- myproject
@@ -378,12 +380,12 @@ This is useful for a variety of advanced usage. For instance, you can avoid peop
 
 For the example above, just add a file named e.g. ``disableRightClick.js`` with::
 
-    lizMap.events.on({
+.. code-block:: none
 
+    lizMap.events.on({
       uicreated: function(e) {
         $('body').attr('oncontextmenu', 'return false;');
       }
-
     });
 
 * If you want this code to be executed for all projects of your repository, you have to copy the file in the directory::
