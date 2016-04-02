@@ -373,7 +373,7 @@ Once you have filtered some data in the attribute table by entering some text in
 Filter data
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you have selected one or more objects in the layer attribute table, you can then **filter the data displayed in Lizmap**for this layer. To do so, just click on the "Funnel" button labelled "Filter" situated above the table (only available if some the selection contains at least one object).
+When you have selected one or more objects in the layer attribute table, you can then **filter the data displayed in Lizmap** for this layer. To do so, just click on the "Funnel" button labelled "Filter" situated above the table (only available if some the selection contains at least one object).
 
 Filtering will have the following consequences:
 

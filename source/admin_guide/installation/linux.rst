@@ -2,14 +2,12 @@
 Installing Lizmap Web CLient on Linux Debian or Ubuntu
 ===============================================================
 
-
 Install
 ===============================================================
 
 .. note:: Beforehand, you must have a server running Apache. We also consider that QGIS Server has been installed correctly. See: :ref:`server_configuration` or http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html
 
 .. warning:: This page does not describe how to secure your Apache server.
-
 
 Get libraries
 --------------------------------------------------------------
@@ -18,7 +16,7 @@ Get libraries
 
    sudo su # only useful if you are not logged in as root
    apt-get update # update packages
-   apt-get install apache2 php5 curl php5-curl php5-sqlite php5-pgsql php5-gd # installation of apache2, php, curl, gd, sqlite and pgsql
+   apt-get install apache2 php5 curl php5-curl php5-sqlite php5-gd # installation of apache2, php, curl, gd, sqlite and pgsql
    service apache2 restart # restart Apache server
 
 Go to the *www* default Apache directory (modify as needed).
@@ -105,6 +103,22 @@ First test
 --------------------------------------------------------------
 
 Go to the Lizmap Web Client home to see if the installation was performed correctly: http://localhost/lm
+
+.. note:: Replace ``localhost`` with the address or IP number of your server.
+
+Lizmap is accessible, without further configurations, also as WMS and WFS server from a browser:
+
+http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities
+
+http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities
+
+and from QGIS:
+
+http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&
+
+http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&
+
+.. note:: Access to the WMS and WFS servers can be limited by assigning privileges to specific repositories, see the administration section.
 
 Editing tool: Configure the server with the database support
 =============================================================================
