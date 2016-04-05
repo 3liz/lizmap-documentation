@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, 3liz
+# Copyright (C) 2014-2016, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Lizmap 2.10\n"
+"Project-Id-Version: Lizmap 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-21 11:33+0100\n"
+"POT-Creation-Date: 2016-04-05 11:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,437 +17,350 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../source/introduction.rst:3
-# 3ad97ec256c14e7bad5ebe61cf7a2f75
 msgid "Introduction"
 msgstr ""
 
 #: ../../source/introduction.rst:6
-# 87b9939a499247c6be9a82ed18bb1d68
 msgid "Lizmap architecture"
 msgstr ""
 
 #: ../../source/introduction.rst:11
-# 7351a51ae8be48f89ebd1334070bb2b0
 msgid "**Data preparation**"
 msgstr ""
 
 #: ../../source/introduction.rst:13
-# 6b59a8561374404d862f0a69f1f1bf98
 msgid "The map's construction work is carried on his own computer with **QGIS Desktop**:"
 msgstr ""
 
 #: ../../source/introduction.rst:15
-# 5940a49de0f84fedba8e16463a97f408
 msgid "loading layers,"
 msgstr ""
 
 #: ../../source/introduction.rst:16
-# f913394cbca9436c82fb38b5038a7b73
 msgid "map creation,"
 msgstr ""
 
 #: ../../source/introduction.rst:17
-# 76e6e50c088c4603918af3533fcc7fb6
 msgid "organising and preparing data."
 msgstr ""
 
 #: ../../source/introduction.rst:19
-# 70e094c05e0e4248a19f8adc4d9deca8
 msgid "**Map configuration & publication**"
 msgstr ""
 
 #: ../../source/introduction.rst:21
-# 4d8e3f3ef39940e68ae3e9f77cb86a41
 msgid "To be able to put the map online, the publisher configures publishing options (scales, base layers, metadata) with **Lizmap plugin** in QGIS Desktop. Then he synchronizes his working folder with his server in intra- or extranet."
 msgstr ""
 
 #: ../../source/introduction.rst:23
-# eb1f73f29d82457ca3a48a9f2c3322f7
 msgid "**Data vizualisation**"
 msgstr ""
 
 #: ../../source/introduction.rst:25
-# a1991b03e378484abcbb7035f9362c0d
 msgid "When synchronization is complete, The QGIS map can then be accessed on the Internet at the same. It is available on the application **Lizmap Web Client** with a Web browser (Firefox, Safari, Chrome, Internet Explorer)."
 msgstr ""
 
 #: ../../source/introduction.rst:29
-# 1ced6599bc4348e2bbb01d38ef404787
 msgid "QGIS and QGIS Server"
 msgstr ""
 
 #: ../../source/introduction.rst:31
-# f9ea6c0165724b01a21a4f23a34697ed
 msgid "QGIS, a complete Desktop GIS software"
 msgstr ""
 
 #: ../../source/introduction.rst:33
-# e092eeb2d38c48198f23ec870d7072ed
 msgid "Management of a wide range of data format for raster (GeoTIFF, ASC, NetCDF, etc.) and vector (SHP, TAB, MIF/MID, GML, GeoJSON, etc)"
 msgstr ""
 
 #: ../../source/introduction.rst:34
-# ef9865ffdb1b442c93a744e10a433c06
 msgid "Management of key geographic database (PostgreSQL/PostGIS, Oracle, MSSQL, etc.)"
 msgstr ""
 
 #: ../../source/introduction.rst:35
-# c8c59f827d8f4241860969647dda7365
 msgid "Management of raster and vector layers, symbology, printing, processing"
 msgstr ""
 
 #: ../../source/introduction.rst:36
-# d8434676e08147fa8cfc82c6edef36ca
 msgid "Performance and functional richness of a desktop GIS Software"
 msgstr ""
 
 #: ../../source/introduction.rst:38
-# ca72b27c473148b0846663cbdfbe6f96
 msgid "Geographical standardized Web Services:"
 msgstr ""
 
 #: ../../source/introduction.rst:40
-# 72948f47725b4403a9b81a9522986ff0
 msgid "*Open Geospatial Consortium*, OGC, consortium for standardization of geographic information exchange through Internet"
 msgstr ""
 
 #: ../../source/introduction.rst:41
-# 585bb6d1e012462381c5f50a679f6760
 msgid "*Web Mapping Service*, WMS: standard for publishing map as image"
 msgstr ""
 
 #: ../../source/introduction.rst:42
-# 88d7ab87b5784bedbe2f5552b551a004
 msgid "*Web Feature Service*, WFS: standard for publishing geographic vector data"
 msgstr ""
 
 #: ../../source/introduction.rst:43
-# fe449ea2198747728ec41641871d2cc6
 msgid "*Web Coverage Service*, WCS: standard for publishing geographic raster data"
 msgstr ""
 
 #: ../../source/introduction.rst:45
-# 70cbe5223d4a4c5c9a74bc42152dfbc6
 msgid "QGIS Server allows you to easily publish 3 types of standardized Web Services Geographic:"
 msgstr ""
 
 #: ../../source/introduction.rst:47
-# 3e54107d2b4547e1b77cded233fe6315
 msgid "Install QGIS Server on a server"
 msgstr ""
 
 #: ../../source/introduction.rst:48
-# 5ba251b4f03c47cea7d0307d93342c88
 msgid "Configure properties of Geographic Web Services"
 msgstr ""
 
 #: ../../source/introduction.rst:49
-# 925186ddc0414d28bb63e5c35fd70557
 msgid "Copy and paste the QGIS project and data files"
 msgstr ""
 
 #: ../../source/introduction.rst:50
-# 6027ddc81f9d4ee88715b13068a7ecb2
 msgid "QGIS Server and QGIS Desktop share **the same rendering engine**"
 msgstr ""
 
 #: ../../source/introduction.rst:57
-# 5737f0181f454065ac4508694e7041b8
 msgid "Lizmap features"
 msgstr ""
 
 #: ../../source/introduction.rst:60
-# dfda743b5dde4e63a051fe45bb90d9dc
 msgid "Default features"
 msgstr ""
 
 #: ../../source/introduction.rst:62
-# cb2d009d471e43f0a17a8e5eed4d89ca
 msgid "By default, Lizmap offers web maps with the following features:"
 msgstr ""
 
 #: ../../source/introduction.rst:64
-# 6b7adc2aa92241ab8fb18748888dc1aa
 msgid "pan"
 msgstr ""
 
 #: ../../source/introduction.rst:65
-# cd67112378344d239af656a2ca40d5f0
 msgid "zoom on area drawn by the user"
 msgstr ""
 
 #: ../../source/introduction.rst:66
-# d102a6e9283344b2898f047934bcd2a8
 msgid "zoom more"
 msgstr ""
 
 #: ../../source/introduction.rst:67
-# 0e60e1229c794a3e9b5aae01b6742dbc
 msgid "selecting a zoom level with a level bar"
 msgstr ""
 
 #: ../../source/introduction.rst:68
-# 132f1d9d35194586a914776e82d53c17
 msgid "zoom less"
 msgstr ""
 
 #: ../../source/introduction.rst:69
-# 135200ee0354454798ab35b01268139a
 msgid "displaying the scale as a scale bar and digitally"
 msgstr ""
 
 #: ../../source/introduction.rst:71
-# 6220043cc85f4d048ecf6d4e36875aa4
 msgid "The displayed legend respects the order and organization defined in QGIS."
 msgstr ""
 
 #: ../../source/introduction.rst:73
-# 790323419b9f4f74ab42b02d5f00c918
 msgid "The interface allows the user to hide the legend and take advantage of the map in the entire width of the screen. It also lets you view the information on the map (description, extent, contact)."
 msgstr ""
 
 #: ../../source/introduction.rst:75
-# f2274218ed1044d38eb3357cf3335db9
 msgid "Finally Lizmap is a proxy to the web services used to construct maps. It is therefore possible to use WMS or WFS requests through Lizmap. It is possible to secure access to web services for access in QGIS or ArcGIS. It is also possible to share these addresses with web services systems cataloging."
 msgstr ""
 
 #: ../../source/introduction.rst:82
-# 12a9f28cfdfb4fbd8ca1bec550353d48
 msgid "Configuration with QGIS"
 msgstr ""
 
 #: ../../source/introduction.rst:84
-# 1658b6bc4ade41b4969c23d54486de17
 msgid "Map's configuration is done in QGIS."
 msgstr ""
 
 #: ../../source/introduction.rst:86
-# 97bd621cf0214210aa768677c3e03d4f
 msgid "One part comes directly from the **QGIS project**:"
 msgstr ""
 
 #: ../../source/introduction.rst:88
-# 98cf5ec4e0704171ba7dd957e456f206
 msgid "legend order and structure"
 msgstr ""
 
 #: ../../source/introduction.rst:89
-# 021d3d9edd27483bbdc4e515ee44ee8b
 msgid "layer symbology"
 msgstr ""
 
 #: ../../source/introduction.rst:90
-# 14390f4e06614c879eb89a5c133043ad
 msgid "location map with a group Overview in the legend"
 msgstr ""
 
 #: ../../source/introduction.rst:91
-# c54b733053c048929b37ae2956d16309
 msgid "configure print templates via composers"
 msgstr ""
 
 #: ../../source/introduction.rst:93
-# e681d7fe66594337a6b699b6f6ad024d
 msgid "The rest is done with the **Lizmap plugin**. This plugin allows to:"
 msgstr ""
 
 #: ../../source/introduction.rst:95
-# e878a370096e4f9e9e436ffe983fd717
 msgid "specify the layers and groups name in the Web interface"
 msgstr ""
 
 #: ../../source/introduction.rst:96
-# ba5effc43d00440eb9597e3ec770f277
 msgid "group the layers into a single WMS layer"
 msgstr ""
 
 #: ../../source/introduction.rst:97
-# 7af5159a475d4593ac6bde9c1fa14d36
 msgid "set some layers as baselayer"
 msgstr ""
 
 #: ../../source/introduction.rst:98
-# cf78263c59b44ebd8239326a9db925d0
 msgid "set the display layer system: alone image or tiles"
 msgstr ""
 
 #: ../../source/introduction.rst:99
-# 2fe318ab17014f5ca23000a377a5dfa6
 msgid "set the lifetime of the images in the cache"
 msgstr ""
 
 #: ../../source/introduction.rst:100
-# f63551bd7e564bd6aa6eca3ac3953559
 msgid "set the lifetime of the images in the network"
 msgstr ""
 
 #: ../../source/introduction.rst:101
-# 1439ad6beb3742b29f3552e429e88900
 msgid "set the popups for querying layer"
 msgstr ""
 
 #: ../../source/introduction.rst:102
-# eb12c4d3cbe74981b562bd177925f420
 msgid "set a link to the metadata"
 msgstr ""
 
 #: ../../source/introduction.rst:103
-# c9bfd7499f91442892d4043e44662d26
 msgid "set the map scales"
 msgstr ""
 
 #: ../../source/introduction.rst:104
-# 47042bf37a60444984a347f1c85057b0
 msgid "set the tools available with the map:"
 msgstr ""
 
 #: ../../source/introduction.rst:106
-# c4259abebd8045579ebd0e4c44c887f2
 msgid "printing"
 msgstr ""
 
 #: ../../source/introduction.rst:107
-# b57d4520137f4750a79d89978abc02c1
 msgid "measuring length, area and perimeter"
 msgstr ""
 
 #: ../../source/introduction.rst:108
-# 96812f2cef41467abcc8f8d12556b995
 msgid "using user geolocation (GPS)"
 msgstr ""
 
 #: ../../source/introduction.rst:109
-# a24eb97feab241b4a283c91520504232
 msgid "address search in OpenStreetMap or Google"
 msgstr ""
 
 #: ../../source/introduction.rst:111
-# f07a4464662d44c1ac7fa210c13d5ff3
 msgid "set external baselayers:"
 msgstr ""
 
 #: ../../source/introduction.rst:113
-# 15ead3cebf224a3f9de5cae3e84693e8
 msgid "Google Maps"
 msgstr ""
 
 #: ../../source/introduction.rst:114
-# 911fb7d0ee0f4a87920a2758f417157e
 msgid "Bing Maps"
 msgstr ""
 
 #: ../../source/introduction.rst:115
-# cb2b86e39ebc4305a25041b1b9d3956d
 msgid "OpenStreetMap"
 msgstr ""
 
 #: ../../source/introduction.rst:116
-# 0966e576d54648b39b7d43c3aa983381
 msgid "Géoportail IGN"
 msgstr ""
 
 #: ../../source/introduction.rst:118
-# 994a4881b1184584b6dbad91ae317431
 msgid "set layers for navigation shortcut:"
 msgstr ""
 
 #: ../../source/introduction.rst:120
-# f7c081af05914cc3be66c0cf8939550a
 msgid "search in a layer field"
 msgstr ""
 
 #: ../../source/introduction.rst:121
-# c7ffaff64e0d446db59a27808e37acc7
 msgid "zoom to the selected item"
 msgstr ""
 
 #: ../../source/introduction.rst:122
-# 0fa6a0d402054e01a538b9d1234042fc
 msgid "cascaded search within 2 fields of the same layer or between joined layers"
 msgstr ""
 
 #: ../../source/introduction.rst:130
-# 4614b48af8664e418bbfd8acf93ef627
 msgid "Configuring with the Web back-office"
 msgstr ""
 
 #: ../../source/introduction.rst:132
-# 4ee272bd55a446a0bf67f4ee130438a5
 msgid "The Lizmap back-office defines:"
 msgstr ""
 
 #: ../../source/introduction.rst:134
-# 9ed657cc0c88402a9ce00fa416976a82
 msgid "the directory list containing maps"
 msgstr ""
 
 #: ../../source/introduction.rst:135
-# 46362d034fe2428483e566ac4acc3405
 msgid "users' rights by map directory"
 msgstr ""
 
 #: ../../source/introduction.rst:136
-# d022a0080d03479a82549b63ef7e8824
 msgid "using subdomain to improve the responsiveness of the interface."
 msgstr ""
 
 #: ../../source/introduction.rst:140
-# 550a9691a77f4112b9b39e67be7242f6
 msgid "In a nutshell"
 msgstr ""
 
 #: ../../source/introduction.rst:142
-# 68c09a9913b04eadb83fbd48f298a20d
 msgid "HTML5 interface compatible mobiles and tablets"
 msgstr ""
 
 #: ../../source/introduction.rst:143
-# fb4e7575e9f14ce485a53cdb6d446739
 msgid "Grouping maps by directory: application multi-directories and multi-projects"
 msgstr ""
 
 #: ../../source/introduction.rst:144
-# f11482aa6a694d4dad353c74921ba721
 msgid "Management of access rights per directory for user groups"
 msgstr ""
 
 #: ../../source/introduction.rst:145
-# 2db70d6bd49040ce828a3f05833cf6ec
 msgid "Automatic map cache management"
 msgstr ""
 
 #: ../../source/introduction.rst:146
-# c3b1af282cad45b99026ab9a36d7a6ef
 msgid "Multilingual interface: English, French, Italian, Spanish, Portuguese, Greek"
 msgstr ""
 
 #: ../../source/introduction.rst:147
-# 88446951d9084bd992f1ed8f2324993c
 msgid "Using external baselayers: OSM, Google, Bing"
 msgstr ""
 
 #: ../../source/introduction.rst:148
-# 9685c6af372b4193aa61d1a029786d06
 msgid "Printing"
 msgstr ""
 
 #: ../../source/introduction.rst:149
-# db7ef123c4ad42bdba871e8f0d3ef21f
 msgid "Online edition: adding, spatial and filed changing, deleting"
 msgstr ""
 
 #: ../../source/introduction.rst:150
-# df76bce1e0d041d98069187c2da8556c
 msgid "Zoom with localisation"
 msgstr ""
 
 #: ../../source/introduction.rst:151
-# ff932e6d0c92446db99bdca5e36e4f4d
 msgid "Address search: Nominatim (OpenStreetMap engine), Google"
 msgstr ""
 
 #: ../../source/introduction.rst:152
-# 35639c26437e42338ec15703f4e6e257
 msgid "Access logs"
 msgstr ""
 
