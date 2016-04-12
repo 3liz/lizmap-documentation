@@ -319,7 +319,6 @@ You can click back on any of these 2 **Pin** and **Maximise** button to get back
 
 The **Close** button closes the attribute table tool completely (as if you clicked in the menu bar icon).
 
-
 Open an attribute table for a layer
 -------------------------------------------
 
@@ -341,14 +340,14 @@ When you **click on a table line**, the line will be displayed with a border to 
 
 If the publisher has enabled the **popup** for the layer, you will be able to see the content of the popup for the highlighted feature by clicking on the (i) button (labelled with *Display info* when hovering the mouse on it). This will open a panel right to the table, which will display the detailed information on the highlighted table line. Furthermore:
 
- * Clicking on another line will refresh the right panel content with the new highlighted feature.
- * Clicking back on the (i) button or on the cross situated at the top right side of the information panel will hide the panel.
+* Clicking on another line will refresh the right panel content with the new highlighted feature.
+* Clicking back on the (i) button or on the cross situated at the top right side of the information panel will hide the panel.
 
 Each line of the table shows some buttons at the left side:
 
 * **Select** button : when clicked, the corresponding feature is selected. You can select many lines by using this button on different lines. The selected features will be displayed in a different style on the map, usually with a Yellow color. You can click again on the "Select" to unselect a selected feature.
 * **Zoom** button : clicking on this button will zoom to the corresponding geometry in the map. The scale will be chosen so that the feature geometry uses most of the available space.
-* **Center** button : clicking on this button will just pan the map to the corresponding feature, without changinf scale.
+* **Center** button : clicking on this button will just pan the map to the corresponding feature, without changing scale.
 
 More about selection tools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -390,7 +389,7 @@ You can cancel the filter to go back to previous state:
 
 
 When exporting the map view with the permalink tool (situated in the menu bar), **the filter will be activated** in the linked map and the users won't be able to easily unfilter the data : the unfilter button will not be displayed in Lizmap interface
-The only way would be to remove the filter parameters from the permalink URL. **This is not a safe way to protect some data, but a way to focus on some data only**
+The only way would be to remove the filter parameters from the permalink URL. **This is not a safe way to protect some data, but a way to focus on some data only**.
 
 More complex scenarios : relations between layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
