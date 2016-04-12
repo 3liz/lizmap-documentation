@@ -10,7 +10,6 @@ The *Lizmap configuration* menu is divided into 2 parts:
 * **Services**: the general configuration of Lizmap Web client - server, cache, etc.
 * **Repositories**: create and configure Lizmap repositories
 
-
 .. image:: ../../MEDIA/administration-lizmap-configuration.png
    :align: center
 
@@ -35,16 +34,16 @@ To configure **Services**, click the *Modify* button under the summary.
 
 * **Server cache storage type**
 
- - *file*: Tiles cached are stored in a server directory by layer
- - *sqlite*: The tiles are stored in a sqlite database by layer
+  - *file*: Tiles cached are stored in a server directory by layer
+  - *sqlite*: The tiles are stored in a sqlite database by layer
 
 * **Cache root directory**: the folder where the cache is stored. It must be writable by the Apache server.
 
 * **Server cache expiration time (s)**: the time in seconds during which each tile is retained. This is a default value for layers whose time has not been configured with the plugin.
 
- - The cached tiles older than that time are automatically refreshed.
- - A value of 0 means that the tiles do not expire.
- - The expiration time must be adapted to changing data.
+  - The cached tiles older than that time are automatically refreshed.
+  - A value of 0 means that the tiles do not expire.
+  - The expiration time must be adapted to changing data.
 
 * **Send request to QGIS Server with**: 2 methods *php or curl*. Use first if curl is not installed on the server.
 

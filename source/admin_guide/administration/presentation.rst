@@ -29,7 +29,7 @@ Once connected, it is possible to change the password:
 .. warning:: It is imperative to change your password. Use a complex password that mixes numbers, letters and punctuation.
   
   
-Reminder on Lizmap Web CLient repositories
+Reminder on Lizmap Web Client repositories
 ===============================================================
 
 Lizmap Web Client can use QGIS maps stored in different folders on the server.

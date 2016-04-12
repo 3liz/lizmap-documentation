@@ -31,12 +31,14 @@ Retrieve and install Lizmap Web Client
 With ZIP file
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+Retrieve the latest available stable version from https://github.com/3liz/lizmap-web-client/releases/
+
 .. code-block:: bash
 
    cd /var/www/
    # Options
    MYAPP=lizmap-web-client
-   VERSION=2.10.3
+   VERSION=2.12.4
    # Archive recovery with wget
    wget https://github.com/3liz/$MYAPP/archive/$VERSION.zip
    # Unzip archive
