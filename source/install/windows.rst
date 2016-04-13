@@ -125,8 +125,7 @@ Test if LizMap Web Client is well installed by opening in the browser the link: 
 
 Go to the address http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www/admin.php and connect with the login / password: 'admin/admin'.
 
-.. note:: 
-If authentication does not work check that the directory 'C:\\OSGeo4W\\tmp' exists.
+.. note:: If authentication does not work check that the directory 'C:\\OSGeo4W\\tmp' exists.
 
 21. Edit QGIS Server URL
 
