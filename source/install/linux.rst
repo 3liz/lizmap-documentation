@@ -45,6 +45,8 @@ Installing necessary packages
 
 .. todo:: Check and fix the list (these two are different)
 
+.. code-block:: bash
+
    apt-get install apache2 php5 curl php5-curl php5-sqlite php5-gd python-simplejson xauth htop nano ntp ntpdate python-software-properties
    apt-get install apache2 apache2-mpm-worker libapache2-mod-fcgid php5-cgi php5-curl php5-cli php5-sqlite php5-gd
    a2dismod php5
