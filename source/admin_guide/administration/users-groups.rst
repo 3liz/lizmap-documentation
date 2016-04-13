@@ -1,7 +1,6 @@
 ===============================================================
-Manage groups and users in Lizmap Web CLient
+Manage groups and users in Lizmap Web Client
 ===============================================================
-
 
 The groups and users: principles
 ===============================================================
@@ -13,8 +12,6 @@ As an administrator, you can:
 * linking a user to one or more groups
 
 .. note:: Rights on Lizmap Web CLient repositories are managed at group level, not at the user level.
-  
-
 
 Manage Groups: create, rename, delete
 ===============================================================
@@ -29,7 +26,6 @@ In the page *Groups of users for rights*, it is also possible to *Change the nam
    :align: center
 
 .. note:: The **users** group is a group system to give the rights to authenticated users to edit their own user information including passwords. We excluded this group of Lizmap Web Client configuration because all identified users must be part of this group.
-
 
 Manage Users
 ===============================================================
@@ -55,11 +51,11 @@ Putting users in groups
 * it is possible to filter the visible users with the dropdown menu
 * to put a user in groups, click on the its button *rights*
 
- - The page displays a table with *rights online and groups on column*
- - The last column shows *the resulting rights*
- - In the *head row*, the + and - buttons allow to set / remove the user from a group
+  - The page displays a table with *rights online and groups on column*
+  - The last column shows *the resulting rights*
+  - In the *head row*, the + and - buttons allow to set / remove the user from a group
 
-.. warning:: do not use the *Personal rights* column.
+.. warning:: Do not use the *Personal rights* column.
 
 Assigning groups for each user created
 -----------------------------------------------------------

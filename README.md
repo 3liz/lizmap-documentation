@@ -36,7 +36,9 @@ Then you can improve po files by opening them with QtLinguist.
 Build documentation
 ====================
 
-We advise to use the **make** command to build Sphinx documentation. Here are some examples:
+We advise to use the **make** command to build Sphinx documentation. By default, make html will build the docs in all available languages.
+
+Here some more examples:
 
 ```
 
@@ -44,10 +46,10 @@ We advise to use the **make** command to build Sphinx documentation. Here are so
 sphinx-intl build -d i18n
 
 # Build documentation in english (default language) in HTML format
-make html BUILDDIR=build/latex/en
+make html BUILDDIR=build/html/en
 
 # Build documentation in french in HTML
-make html BUILDDIR=build/latex/fr SPHINXOPTS="-D language='fr'"
+make html BUILDDIR=build/html/fr SPHINXOPTS="-D language='fr'"
 
 # Build PDF in english
 make latexpdf BUILDDIR=build/latex/en

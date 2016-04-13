@@ -6,6 +6,8 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
+TRANSLATIONS  = fr it es
+LANGUAGES     = en $(TRANSLATIONS)
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -42,9 +44,16 @@ clean:
 	-rm -rf $(BUILDDIR)/*
 
 html:
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
-	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+	@for lang in $(LANGUAGES);\
+	do \
+		mkdir -p $(BUILDDIR)/html/$(SOURCE)/$$lang $(BUILDDIR)/doctrees/$(SOURCE)/$$lang; \
+		echo "$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/html/$$lang";\
+		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/html/$(SOURCE)/$$lang;\
+	done
+
+#	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+#	@echo
+#	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml

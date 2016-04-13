@@ -10,7 +10,6 @@ The *Lizmap configuration* menu is divided into 2 parts:
 * **Services**: the general configuration of Lizmap Web client - server, cache, etc.
 * **Repositories**: create and configure Lizmap repositories
 
-
 .. image:: ../../MEDIA/administration-lizmap-configuration.png
    :align: center
 
@@ -23,7 +22,7 @@ To configure **Services**, click the *Modify* button under the summary.
 
 .. warning:: QGIS Server must be installed on the same computer as Lizmap Web Client
 
-* **WMS subdomain URLs list (optionnal))**: The use of multiple domain names is one of the classic optimizations when a web application uses OpenLayers (as Lizmap Web Client). You can enter a list of subdomains separated by comma.
+* **WMS subdomain URLs list (optional))**: The use of multiple domain names is one of the classic optimizations when a web application uses OpenLayers (as Lizmap Web Client). You can enter a list of subdomains separated by comma.
 
   + You must use a **list of subdomains** relative to the domain with which is used Lizmap Web Client. For example, if your main domain name is **maps.example.com**, then you can use **a.maps.example.com, b.maps.example.com, c.maps.example.com, d.maps.example.com**.
 
@@ -35,16 +34,16 @@ To configure **Services**, click the *Modify* button under the summary.
 
 * **Server cache storage type**
 
- - *file*: Tiles cached are stored in a server directory by layer
- - *sqlite*: The tiles are stored in a sqlite database by layer
+  - *file*: Tiles cached are stored in a server directory by layer
+  - *sqlite*: The tiles are stored in a sqlite database by layer
 
 * **Cache root directory**: the folder where the cache is stored. It must be writable by the Apache server.
 
 * **Server cache expiration time (s)**: the time in seconds during which each tile is retained. This is a default value for layers whose time has not been configured with the plugin.
 
- - The cached tiles older than that time are automatically refreshed.
- - A value of 0 means that the tiles do not expire.
- - The expiration time must be adapted to changing data.
+  - The cached tiles older than that time are automatically refreshed.
+  - A value of 0 means that the tiles do not expire.
+  - The expiration time must be adapted to changing data.
 
 * **Send request to QGIS Server with**: 2 methods *php or curl*. Use first if curl is not installed on the server.
 

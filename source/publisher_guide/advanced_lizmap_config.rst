@@ -117,6 +117,8 @@ Some examples:
 
 On the Lizmap Web Client map, if a link has been set up this way for one of the layers, then an icon (i) will be placed to the right of the layer. Clicking this icon opens the linked document in a new browser tab.
 
+.. _use-in-popups:
+
 Use in popups
 ----------------------------
 
@@ -369,8 +371,6 @@ This is useful for a variety of advanced usage. For instance, you can avoid peop
 
 * In your repository (e.g. ``/home/data/repo1/myproject.qgs`` you should have these directories::
 
-.. code-block:: none
-
     media
     |-- js
       |-- myproject
@@ -378,23 +378,17 @@ This is useful for a variety of advanced usage. For instance, you can avoid peop
 * All the Javascript code you copy in the ``/home/data/rep1/media/js/myproject/`` directory will be executed by Lizmap, provided that:
 * you allow it, through the Lizmap admin interface, adding the privilege "Allow themes for this repository" in the form for the modification of the repository
 
-For the example above, just add a file named e.g. ``disableRightClick.js`` with::
+For the example above, just add a file named e.g. ``disableRightClick.js`` with:
 
-.. code-block:: none
+.. code-block:: js
 
-    lizMap.events.on({
-      uicreated: function(e) {
-        $('body').attr('oncontextmenu', 'return false;');
-      }
-    });
+ lizMap.events.on({
+  uicreated: function(e) {
+  $('body').attr('oncontextmenu', 'return false;');
+  }
+ });
 
-* If you want this code to be executed for all projects of your repository, you have to copy the file in the directory::
-
-  /home/data/rep1/media/js/default/
-
-rather than in::
-
-  /home/data/rep1/media/js/myproject/
+* If you want this code to be executed for all projects of your repository, you have to copy the file in the directory ``/home/data/rep1/media/js/default/`` rather than in ``/home/data/rep1/media/js/myproject/``.
 
 That's all.
 
@@ -710,7 +704,7 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
 
 .. note:: All the editing tools are not yet managed by Lizmap Web Client. Only the following tools are supported: Text edit, Classification, Range, Value Map, Hidden, Check Box, Date/Time, Value Relation. If the tool is not supported, the web form displays a text input field.
 
-4. Add the layer in the table "Layer Editing" located in the plugin Lizmap "Tools" tab:
+* Add the layer in the table "Layer Editing" located in the plugin Lizmap "Tools" tab:
 
   - *Select the layer* in the drop-down list
   - Check the actions you want to activate from:
@@ -742,6 +736,25 @@ The layers that you have selected for the editing tool are "layers like the othe
 .. note:: PostGIS or Spatialite? To centralize things, we recommend using a PostGIS database to store data. For Spatialite layers, be careful not to overwrite the Spatialite file stored in the Lizmap directory on the server with the one you have locally: remember always to make a backup of the server file before a new sync your local directory.
 
 .. note:: Using the cache: whether to use the server or client cache for editing layers, do so by knowingly: the data will not be visible to users until the cache has not expired. We suggest not to enable the cache for editing layers.
+
+.. note:: Lizmap 3 only
+
+Adding files and images for features
+===================================================================
+
+With Lizmap 3, it is now possible to upload your files, including images, for each feature, during online editing; to achieve this, you need to:
+
+* Configure edition for the layer, with one or more fields with the **edit type** "Photo" or "File". For example, let say the field name is "photo"
+* Create a folder at the root of the QGIS project file : **media/** and a subfolder **media/upload** (obviously you need to do that locally in your computer and server side ).
+* Give Apache user (usually www-data) **write permission** on the upload folder, so that it can create files and folders in media/upload::
+
+   chmod 775 -R media/upload && chown :www-data -R media/upload
+
+* Check you ``php.ini`` to see if the variables ``post_max_size`` and ``max_upload_size`` are correctly set (by default, php only allows uploading files up to 2 Mbyte)
+
+Lizmap will then create folders to store the data, depending on the layer name, field name, etc. For example, a file would be stored in the folder ``media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT`` and an image in ``media/upload/environment/observations/species_picture/my_picture.png``.
+
+Obviously you will be able to display this image (or any other file) in the popup, as it will be stored in the media folder. See :ref:`use-in-popups`
 
 .. _filter-layer-data-by-group:
 
