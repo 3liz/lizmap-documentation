@@ -17,9 +17,10 @@ Lizmap - Documentation
    :maxdepth: 3
 	
    introduction
-   user_guide
-   publisher_guide/index
-   admin_guide/index
+   user/index
+   publish/index
+   admin/index
+   install/index
 
 Indices and tables
 ==================

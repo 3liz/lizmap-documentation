@@ -19,7 +19,7 @@ It is advisable to use:
 
 Here is an example of use:
 
-.. image:: ../MEDIA/features-overview.png
+.. image:: /images/features-overview.png
    :align: center
    :width: 60%
 
@@ -28,7 +28,7 @@ Here is an example of use:
 Add the localization function
 ===============================================================
 
-.. image:: ../MEDIA/interface-tools-tab-locate.png
+.. image:: /images/interface-tools-tab-locate.png
    :align: center
    :width: 80%
 
@@ -158,7 +158,7 @@ _____________
 
 Below is an illustration of a Lizmap popup displaying a picture, a text and a link in the popup:
 
-.. image:: ../MEDIA/features-popup-photo-example.png
+.. image:: /images/features-popup-photo-example.png
    :align: center
    :width: 90%
 
@@ -214,7 +214,7 @@ You can use the tools available in the **Fields** tab of the **Layer properties*
 
 * to **change the name** displayed for that column, type a different name in the *Alias* column
 
-.. image:: ../MEDIA/features-popup-fields.png
+.. image:: /images/features-popup-fields.png
    :align: center
    :width: 70%
 
@@ -255,7 +255,7 @@ You can edit the popup template with the button *Configure* in the Lizmap plugin
 * an **area where you can type your text**
 * a **read-only area**, showing a preview of your template
 
-.. image:: ../MEDIA/features-popup-configure.png
+.. image:: /images/features-popup-configure.png
    :align: center
    :width: 70%
 
@@ -716,7 +716,7 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
 
   - Add the layer in the list with the "Add layer" button.
 
-.. image:: ../MEDIA/features-edition-table.png
+.. image:: /images/features-edition-table.png
    :align: center
    :width: 80%
 

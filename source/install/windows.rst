@@ -17,42 +17,42 @@ http://qgis.org/fr/site/forusers/download.html
 
 2. Launch the OSGeo4W installer and choose the Advanced Installation
 
-.. image:: ../../MEDIA/installation-osgeo4w-01.jpg
+.. image:: /images/installation-osgeo4w-01.jpg
    :align: center
 
 3. Use the internet facility
 
-.. image:: ../../MEDIA/installation-osgeo4w-02.jpg
+.. image:: /images/installation-osgeo4w-02.jpg
    :align: center
 
 4. Select the root for OSGeo4W elements installation and prefer the accessibility option to all users
 
-.. image:: ../../MEDIA/installation-osgeo4w-03.jpg
+.. image:: /images/installation-osgeo4w-03.jpg
    :align: center
 
 5. Select the root of local packages
 
-.. image:: ../../MEDIA/installation-osgeo4w-04.jpg
+.. image:: /images/installation-osgeo4w-04.jpg
    :align: center
 
 6. Specify the type of Internet connection (with a proxy or not)
 
-.. image:: ../../MEDIA/installation-osgeo4w-05.jpg
+.. image:: /images/installation-osgeo4w-05.jpg
    :align: center
 
 7. Select in 'Desktop' the package 'QGIS-full'
 
-.. image:: ../../MEDIA/installation-osgeo4w-06.jpg
+.. image:: /images/installation-osgeo4w-06.jpg
    :align: center
 
 8. Select in 'Web' the package 'QGIS-server'
 
-.. image:: ../../MEDIA/installation-osgeo4w-07.jpg
+.. image:: /images/installation-osgeo4w-07.jpg
    :align: center
 
 9. Select in 'Lib' the package 'fcgi'
 
-.. image:: ../../MEDIA/installation-osgeo4w-08.jpg
+.. image:: /images/installation-osgeo4w-08.jpg
    :align: center
 
 10. Initiate and complete the installation
@@ -70,17 +70,17 @@ If nothing appears this is that the installation was not successful.
 
 Click on the link 'phpinfo' on the home page of the OSGeo4W Apache server. This page allows you to check the configuration of your server. You should find information about cgi-fcgi, PDO and PDO_SQLITE but not CURL or GD which depends LizMap Web Client.
 
-.. image:: ../../MEDIA/installation-osgeo4w-09.jpg
+.. image:: /images/installation-osgeo4w-09.jpg
    :align: center
 
-.. image:: ../../MEDIA/installation-osgeo4w-10.jpg
+.. image:: /images/installation-osgeo4w-10.jpg
    :align: center
 
 13. Activate CURL and GD2
 
 Open the file C:\OSGeo4W\bin\PHP.ini and uncomment extensions curl and gd2
 
-.. image:: ../../MEDIA/installation-osgeo4w-11.jpg
+.. image:: /images/installation-osgeo4w-11.jpg
    :align: center
 
 14. Restart Apache
@@ -89,19 +89,19 @@ Changing the file C:\OSGeo4W\bin\PHP.ini to activate CURL and GD into PHP CURL, 
 
 * click in the main menu of windows on the monitor apache 'All programs > OSGeo4W > Apache > OSGeo4W-Apache-Monitor'.
 
-  .. image:: ../../MEDIA/installation-osgeo4w-12.png
+  .. image:: /images/installation-osgeo4w-12.png
      :align: center
 
 * Click on the apache monitor that is among the hidden icons in the task bar (bottom right) and 'Restart'.
 
-  .. image:: ../../MEDIA/installation-osgeo4w-13.png
+  .. image:: /images/installation-osgeo4w-13.png
      :align: center
 
 16. Check CURL and GD
 
 In the web browser, reload the page 'phpinfo'. You should find a CURL and GD section.
 
-.. image:: ../../MEDIA/installation-osgeo4w-14.jpg
+.. image:: /images/installation-osgeo4w-14.jpg
    :align: center
 
 17. Download LizMap Web Client
@@ -134,7 +134,7 @@ If authentication does not work check that the directory 'C:\\OSGeo4W\\tmp' exis
 
 * Replace the url of WMS server by http://127.0.0.1/qgis/qgis_mapserv.fcgi.exe and record:
 
-.. image:: ../../MEDIA/installation-osgeo4w-17.jpg
+.. image:: /images/installation-osgeo4w-17.jpg
    :align: center
 
 23. Check

@@ -22,7 +22,7 @@ Manage Groups: create, rename, delete
 
 In the page *Groups of users for rights*, it is also possible to *Change the name* and *Delete a group*.
 
-.. image:: ../../MEDIA/administration-create-group.png
+.. image:: /images/administration-create-group.png
    :align: center
 
 .. note:: The **users** group is a group system to give the rights to authenticated users to edit their own user information including passwords. We excluded this group of Lizmap Web Client configuration because all identified users must be part of this group.
@@ -41,7 +41,7 @@ Manage Users
 
 .. warning:: Once users created, you must put them into groups to assign the associated rights.
 
-.. image:: ../../MEDIA/administration-user-list.png
+.. image:: /images/administration-user-list.png
    :align: center
 
 Putting users in groups
@@ -60,8 +60,8 @@ Putting users in groups
 Assigning groups for each user created
 -----------------------------------------------------------
 
-.. image:: ../../MEDIA/administration-users-rights-list.png
+.. image:: /images/administration-users-rights-list.png
    :align: center
 
-.. image:: ../../MEDIA/administration-users-groups.png
+.. image:: /images/administration-users-groups.png
    :align: center

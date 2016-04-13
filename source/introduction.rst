@@ -5,7 +5,7 @@ Introduction
 Lizmap architecture
 ===============================================================
 
-.. image:: MEDIA/all-schema-client-server.png
+.. image:: images/all-schema-client-server.png
    :align: center
 
 **Data preparation**
@@ -49,7 +49,7 @@ QGIS and QGIS Server
   * Copy and paste the QGIS project and data files
   * QGIS Server and QGIS Desktop share **the same rendering engine**
 
-.. image:: MEDIA/introduction-comparison-qgis-web.png
+.. image:: images/introduction-comparison-qgis-web.png
    :align: center
    :width: 90%
 
@@ -74,7 +74,7 @@ The interface allows the user to hide the legend and take advantage of the map i
 
 Finally Lizmap is a proxy to the web services used to construct maps. It is therefore possible to use WMS or WFS requests through Lizmap. It is possible to secure access to web services for access in QGIS or ArcGIS. It is also possible to share these addresses with web services systems cataloging.
 
-.. image:: MEDIA/introduction-alaska-map.png
+.. image:: images/introduction-alaska-map.png
    :align: center
    :scale: 80%
 
@@ -121,7 +121,7 @@ The rest is done with the **Lizmap plugin**. This plugin allows to:
   * zoom to the selected item
   * cascaded search within 2 fields of the same layer or between joined layers
 
-.. image:: MEDIA/introduction-montpellier-map.png
+.. image:: images/introduction-montpellier-map.png
    :align: center
    :scale: 80%
    :target: http://demo.3liz.com/lizmap/index.php/view/map?repository=montpellier&project=montpellier
