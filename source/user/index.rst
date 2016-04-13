@@ -1,9 +1,8 @@
 ===============================================================
-Admin guide
+User guide
 ===============================================================
 
 .. toctree::
   :maxdepth: 0
-
-  installation/index
-  administration/index
+	
+  user_guide

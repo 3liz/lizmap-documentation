@@ -14,7 +14,7 @@ Temporary identifiers
 * login = admin
 * password = admin
 
-.. image:: ../../MEDIA/administration-admin-home.png
+.. image:: /images/administration-admin-home.png
    :align: center
   
 Change password

@@ -10,7 +10,7 @@ The *Lizmap configuration* menu is divided into 2 parts:
 * **Services**: the general configuration of Lizmap Web client - server, cache, etc.
 * **Repositories**: create and configure Lizmap repositories
 
-.. image:: ../../MEDIA/administration-lizmap-configuration.png
+.. image:: /images/administration-lizmap-configuration.png
    :align: center
 
 Services
@@ -53,7 +53,7 @@ To configure **Services**, click the *Modify* button under the summary.
 
 * **Administrator e-mail** If a valid e-mail address is given, then the Lizmap Web Client notifications will be sent. For example, each account creation request via the registration form generates an email sent to this address.
 
-.. image:: ../../MEDIA/administration-modify-services.png
+.. image:: /images/administration-modify-services.png
    :align: center
 
 Repositories
@@ -70,7 +70,7 @@ For each Lizmap repository, are listed:
   - *Remove*: delete the repository from the Lizmap Web Client configuration
   - *Empty cache*: deletes the entire cache of all layers of the repository projects
 
-.. image:: ../../MEDIA/administration-repository-detail.png
+.. image:: /images/administration-repository-detail.png
    :align: center
 
 You can create a new repository using the button **Create a repository** located at the top and bottom of the section *Repositories*.
@@ -105,5 +105,5 @@ After creating the directory, the repository modification form is displayed auto
 
   This option is in connection with the filtering feature data layers per group. See :ref:`filter-layer-data-by-group`. Check the box for deciding which groups can see all the time all the data, even when a filter is active on some layers.
 
-.. image:: ../../MEDIA/administration-modify-repository.png
+.. image:: /images/administration-modify-repository.png
    :align: center
