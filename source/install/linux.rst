@@ -1,5 +1,5 @@
 ===============================================================
-Installing Lizmap Web CLient on Linux Debian or Ubuntu
+Installing Lizmap Web Client on Linux Debian or Ubuntu
 ===============================================================
 
 Generic Server Configuration
