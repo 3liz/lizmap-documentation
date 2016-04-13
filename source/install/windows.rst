@@ -1,5 +1,5 @@
 ===============================================================
-Installing Lizmap Web CLient on Windows
+Installing Lizmap Web Client on Windows
 ===============================================================
 
 This documentation shows the progress of the installation Lizmap Web Client on a Windows 7 environment. The other versions of Windows should not be a problem. To facilitate installation, we use the OSGeo4W software, which allows to install all the necessary components in a centralized manner.
