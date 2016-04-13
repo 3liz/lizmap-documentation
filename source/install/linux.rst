@@ -23,25 +23,13 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 
 .. note:: It is also necessary configure the other software so that they are using this default encoding if this is not the case.
 
-Create directories for data
--------------------------------------------
-
-.. code-block:: bash
-
-   mkdir /home/data
-   mkdir /home/data/cache/
-   mkdir /home/data/ftp
-   mkdir /home/data/ftp/template/
-   mkdir /home/data/ftp/template/qgis
-   mkdir /home/data/postgresql
-
 Installing necessary packages
 --------------------------------------------------------------
 
 .. code-block:: bash
 
    sudo su # only necessary if you are not logged in as root
-   apt-get update # update packages
+   apt-get update # update package lists
 
 .. todo:: Check and fix the list (these two are different)
 
@@ -160,6 +148,17 @@ You must restart the Apache server to validate the configuration.
 
    service apache2 restart
 
+Create directories for data
+============================================
+
+.. code-block:: bash
+
+   mkdir /home/data
+   mkdir /home/data/cache/
+   mkdir /home/data/ftp
+   mkdir /home/data/ftp/template/
+   mkdir /home/data/ftp/template/qgis
+   mkdir /home/data/postgresql
 
 Spatial DBMS: PostgreSQL
 ============================================
