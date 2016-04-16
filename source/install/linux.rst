@@ -16,10 +16,12 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 
 .. code-block:: bash
 
-   # locales
+   # configure locales
    locale-gen fr_FR.UTF-8 #replace fr with your language
    dpkg-reconfigure locales
-   dpkg-reconfigure tzdata #define your timezone [useful for logs]
+   # define your timezone [useful for logs]
+   dpkg-reconfigure tzdata
+   apt-get install ntp ntpdate
 
 .. note:: It is also necessary configure the other software so that they are using this default encoding if this is not the case.
 
@@ -30,13 +32,11 @@ Installing necessary packages
 
    sudo su # only necessary if you are not logged in as root
    apt-get update # update package lists
+   apt-get install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php5 php5-gd php5-sqlite php5-curl python-simplejson python-software-properties
 
-.. todo:: Check and fix the list (these two are different)
+.. todo:: Check whether the following packages should be installed: php5 php5-cgi
 
-.. code-block:: bash
-
-   apt-get install apache2 php5 curl php5-curl php5-sqlite php5-gd python-simplejson xauth htop nano ntp ntpdate python-software-properties
-   apt-get install apache2 apache2-mpm-worker libapache2-mod-fcgid php5-cgi php5-curl php5-cli php5-sqlite php5-gd
+.. todo:: Check this: still necessary?
    a2dismod php5
    a2enmod actions
    a2enmod fcgid
@@ -48,31 +48,10 @@ Installing necessary packages
 
 Then go to the *www* default Apache directory (modify as needed).
 
-Setting the compression
--------------------------------
-
-.. code-block:: bash
-
-   nano /etc/apache2/conf.d/mod_deflate.conf # y ajouter
-   <Location />
-           # Insert filter
-           SetOutputFilter DEFLATE
-           # Netscape 4.x encounters some problems ...
-           BrowserMatch ^Mozilla/4 gzip-only-text/html
-           # Netscape 4.06-4.08 encounter even more problems
-           BrowserMatch ^Mozilla/4\.0[678] no-gzip
-           # MSIE pretends it is Netscape, but all is well
-           BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
-           # Do not compress images
-           SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
-           # Ensure that proxy servers deliver the right content
-           Header append Vary User-Agent env=!dont-vary
-   </Location>
-
 php5 configuration
 -----------------------
 
-.. todo:: Check this, according to the list above.
+.. todo:: Check this: still necessary?
 
 In this example, we use Apache mpm-worker. So we must manually configure the activation of php5.
 
@@ -100,7 +79,7 @@ In this example, we use Apache mpm-worker. So we must manually configure the act
 mpm-worker configuration
 -----------------------------
 
-.. todo:: Check this, according to the list above.
+.. todo:: Check this: still necessary?
 
 We modify the Apache configuration file to adapt the options to mpm_worker server configuration.
 
@@ -139,6 +118,27 @@ QGIS Server runs fcgi mode. We must therefore configure the Apache mod_fcgid to 
      BusyTimeout   300
    </IfModule>
 
+Setting the compression
+-------------------------------
+
+.. code-block:: bash
+
+   nano /etc/apache2/conf.d/mod_deflate.conf # y ajouter
+   <Location />
+           # Insert filter
+           SetOutputFilter DEFLATE
+           # Netscape 4.x encounters some problems ...
+           BrowserMatch ^Mozilla/4 gzip-only-text/html
+           # Netscape 4.06-4.08 encounter even more problems
+           BrowserMatch ^Mozilla/4\.0[678] no-gzip
+           # MSIE pretends it is Netscape, but all is well
+           BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+           # Do not compress images
+           SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+           # Ensure that proxy servers deliver the right content
+           Header append Vary User-Agent env=!dont-vary
+   </Location>
+
 Restart Apache
 ------------------
 
@@ -158,7 +158,6 @@ Create directories for data
    mkdir /home/data/ftp
    mkdir /home/data/ftp/template/
    mkdir /home/data/ftp/template/qgis
-   mkdir /home/data/postgresql
 
 Spatial DBMS: PostgreSQL
 ============================================
@@ -176,12 +175,11 @@ Install
    apt-get install postgresql postgresql-contrib postgis pgtune php5-pgsql
 
    # A cluster is created in order to specify the storage directory
-   mkdir /home/data
    mkdir /home/data/postgresql
    service postgresql stop
-   pg_dropcluster --stop 9.1 main
+   pg_dropcluster --stop 9.5 main
    chown postgres:postgres /home/data/postgresql
-   pg_createcluster 9.1 main -d /home/data/postgresql --locale fr_FR.UTF8 -p 5678 --start
+   pg_createcluster 9.5 main -d /home/data/postgresql --locale fr_FR.UTF8 -p 5678 --start
    
    # Creating a "superuser" user
    su - postgres
@@ -193,27 +191,27 @@ Install
    \q
    exit
 
-Adapting the PostGreSQL configuration
+Adapting the PostgreSQL configuration
 ----------------------------------------------
 
-We will use pgtune, an utility program that can automatically generate a PostGreSQL configuration file adapted to the properties of the server (memory, processors, etc.)
+We will use pgtune, an utility program that can automatically generate a PostgreSQL configuration file adapted to the properties of the server (memory, processors, etc.)
 
 .. code-block:: bash
 
    # PostgreSQL Tuning with pgtune
-   pgtune -i /etc/postgresql/9.1/main/postgresql.conf -o /etc/postgresql/9.1/main/postgresql.conf.pgtune --type Web
-   cp /etc/postgresql/9.1/main/postgresql.conf /etc/postgresql/9.1/main/postgresql.conf.backup
-   cp /etc/postgresql/9.1/main/postgresql.conf.pgtune /etc/postgresql/9.1/main/postgresql.conf  
-   nano /etc/postgresql/9.1/main/postgresql.conf
+   pgtune -i /etc/postgresql/9.5/main/postgresql.conf -o /etc/postgresql/9.5/main/postgresql.conf.pgtune --type Web
+   cp /etc/postgresql/9.5/main/postgresql.conf /etc/postgresql/9.5/main/postgresql.conf.backup
+   cp /etc/postgresql/9.5/main/postgresql.conf.pgtune /etc/postgresql/9.5/main/postgresql.conf  
+   nano /etc/postgresql/9.5/main/postgresql.conf
    # Restart to check any problems
    service postgresql restart
    # If error messages, increase the linux kernel configuration variables
-   echo "kernel.shmall = 4294967296" >> /etc/sysctl.conf # pour shared_buffers à 3000Mo
+   echo "kernel.shmall = 4294967296" >> /etc/sysctl.conf # to increas shred buffer param in kernel
    echo "kernel.shmmax = 4294967296" >> /etc/sysctl.conf
    echo 4294967296 > /proc/sys/kernel/shmall
    echo 4294967296 > /proc/sys/kernel/shmmax
    sysctl -a | sort | grep shm     
-   # Restart PostGreSQL
+   # Restart PostgreSQL
    service postgresql restart
 
 FTP Server: pure-ftpd
