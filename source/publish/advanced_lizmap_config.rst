@@ -547,7 +547,7 @@ To optimize your application as much as possible, we suggest you to:
   * pyramidize all your raster layers (except the very small ones)
   * only display data at appropriate scale: for instance, displaying a detailed building layer at 1:500,000 is meaningless, as the image is almost unreadable, and puts a lot of stress on the server
   * use simplified version of a layer to display it at different scales. You can then group the original layer (to be displayed e.g. around 1:1,000) with the simplified versions (to be displayed e.g. around 1:10,000, 1:50,000, etc.), and *Goup as a layer* to let the user see this as a single layer, using the most appropriate data at each scale
-  * be careful about On The Fly (OTF) reprojection. If, for instance, you display data in Lambert 93 (EPSG:2154) on a base map from OpenStreetmap or Google(in Pseudo Mercator, EPSG:3857), QGIS Server needs to reproject rasters and vectors before generating the map. This may have an impact in rendering times for large and complex layers. In France, you can avoid repojection by using the base map from IGN Géoportail directly in EPSG:2154
+  * be careful about On The Fly (OTF) reprojection. If, for instance, you display data in Lambert 93 (EPSG:2154) on a base map from OpenStreetmap or Google (in Pseudo Mercator, EPSG:3857), QGIS Server needs to reproject rasters and vectors before generating the map. This may have an impact in rendering times for large and complex layers. In France, you can avoid reprojection by using the base map from IGN Géoportail directly in EPSG:2154
   * be aware of the fact that certain rendering options (e.g. labels, expressions, etc.) can be very demanding from the server
   * if you use PostGIS, optimize it: always add spatial indexes, indexes for filtered fields, for foreign keys, appropriate parameters for the configuration of PostgreSQL, possibly a connection through Unix socket instead of TCP/IP (you can do this through the use of services), etc.
   * use an appropriate image format. For the base layers, where you do not need transparency JPEG is usually the best option: the tiles will be smaller, and faster to download. For other layers, try smaller depth PNGs (16bit or 8bit): for some symbolizations, the visual result may be the same, and the tiles smaller. Have a check to see if the image quality is acceptable in your case
@@ -555,7 +555,7 @@ To optimize your application as much as possible, we suggest you to:
 * Upgrade your server. This is always an option, but is often useless if you did not optimize your project as described above. In any case, a low end server (e.g. 2 Gb RAM, 2 cores at 2.2 GHz) is unsuitable. A fast quad-core with 8 Gb RAM is a reasonable minimum. Avoid installing QGIS server and Lizmap on Windows, it's more complex and slower.
 
 .. note:: Lizmap 3: On the upcoming Lizmap 3 you'll find several improvements that will help optimizing your installation:
-    * a tool for the preparation of the server cache, through the use of a WMTS protocol. In addition, this will allow to use the cached layers as WMTS layers in QGIS desktop
+     * a tool for the preparation of the server cache, through the use of a WMTS protocol. In addition, this will allow to use the cached layers as WMTS layers in QGIS desktop
     * avoiding the automatic download of the legends at startup, and at every zoom level; this will be done exclusively on demand, if the legend is displayed, thus saving one request per layer for each zoom
     * code optimization.
 
