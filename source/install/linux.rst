@@ -139,6 +139,11 @@ Setting the compression
            Header append Vary User-Agent env=!dont-vary
    </Location>
 
+Enable geolocation
+-------------------
+
+The automatic geolocation provided by Lizmap relies on Google services. To enable it, your webGIS must be placed under a secure protocol, like HTTPS.See https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins for more details.
+
 Restart Apache
 ------------------
 
