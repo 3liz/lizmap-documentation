@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.0beta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-26 14:45+0200\n"
+"POT-Creation-Date: 2016-06-15 19:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,11 +44,11 @@ msgstr ""
 msgid "For simplicity, it is interesting to configure the server with UTF-8 default encoding."
 msgstr ""
 
-#: ../../source/install/linux.rst:24
+#: ../../source/install/linux.rst:26
 msgid "It is also necessary configure the other software so that they are using this default encoding if this is not the case."
 msgstr ""
 
-#: ../../source/install/linux.rst:27
+#: ../../source/install/linux.rst:29
 msgid "Installing necessary packages"
 msgstr ""
 
@@ -57,293 +57,309 @@ msgid "Then go to the *www* default Apache directory (modify as needed)."
 msgstr ""
 
 #: ../../source/install/linux.rst:52
-msgid "Setting the compression"
-msgstr ""
-
-#: ../../source/install/linux.rst:73
 msgid "php5 configuration"
 msgstr ""
 
-#: ../../source/install/linux.rst:77
+#: ../../source/install/linux.rst:56
 msgid "In this example, we use Apache mpm-worker. So we must manually configure the activation of php5."
 msgstr ""
 
-#: ../../source/install/linux.rst:101
+#: ../../source/install/linux.rst:75
+msgid "In later versions of apache, the config for ``php-cgi`` is in ``/etc/apache2/conf-available/php.conf``. Copy the text above, then::"
+msgstr ""
+
+#: ../../source/install/linux.rst:77
+msgid "a2enconf php"
+msgstr ""
+
+#: ../../source/install/linux.rst:80
 msgid "mpm-worker configuration"
 msgstr ""
 
-#: ../../source/install/linux.rst:105
+#: ../../source/install/linux.rst:84
 msgid "We modify the Apache configuration file to adapt the options to mpm_worker server configuration."
 msgstr ""
 
-#: ../../source/install/linux.rst:122
+#: ../../source/install/linux.rst:101
 msgid "mod_fcgid configuration"
 msgstr ""
 
-#: ../../source/install/linux.rst:124
+#: ../../source/install/linux.rst:103
 msgid "QGIS Server runs fcgi mode. We must therefore configure the Apache mod_fcgid to suit to the server capabilities."
 msgstr ""
 
+#: ../../source/install/linux.rst:122
+msgid "Setting the compression"
+msgstr ""
+
 #: ../../source/install/linux.rst:143
+msgid "Enable geolocation"
+msgstr ""
+
+#: ../../source/install/linux.rst:145
+msgid "The automatic geolocation provided by Lizmap relies on Google services. To enable it, your webGIS must be placed under a secure protocol, like HTTPS.See https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins for more details."
+msgstr ""
+
+#: ../../source/install/linux.rst:148
 #: ../../source/install/windows.rst:86
 msgid "Restart Apache"
 msgstr ""
 
-#: ../../source/install/linux.rst:145
+#: ../../source/install/linux.rst:150
 msgid "You must restart the Apache server to validate the configuration."
 msgstr ""
 
-#: ../../source/install/linux.rst:152
+#: ../../source/install/linux.rst:157
 msgid "Create directories for data"
 msgstr ""
 
-#: ../../source/install/linux.rst:164
+#: ../../source/install/linux.rst:169
 msgid "Spatial DBMS: PostgreSQL"
 msgstr ""
 
-#: ../../source/install/linux.rst:166
-#: ../../source/install/linux.rst:222
-#: ../../source/install/linux.rst:408
+#: ../../source/install/linux.rst:171
+#: ../../source/install/linux.rst:226
+#: ../../source/install/linux.rst:412
 msgid "This section is optional"
 msgstr ""
 
-#: ../../source/install/linux.rst:168
+#: ../../source/install/linux.rst:173
 msgid "PostgreSQL and PostGIS can be very useful to manage spatial data centralized manner on the server."
 msgstr ""
 
-#: ../../source/install/linux.rst:171
-#: ../../source/install/linux.rst:225
-#: ../../source/install/linux.rst:282
+#: ../../source/install/linux.rst:176
+#: ../../source/install/linux.rst:229
+#: ../../source/install/linux.rst:286
 #: ../../source/install/windows.rst:12
 msgid "Install"
 msgstr ""
 
-#: ../../source/install/linux.rst:197
-msgid "Adapting the PostGreSQL configuration"
+#: ../../source/install/linux.rst:201
+msgid "Adapting the PostgreSQL configuration"
 msgstr ""
 
-#: ../../source/install/linux.rst:199
-msgid "We will use pgtune, an utility program that can automatically generate a PostGreSQL configuration file adapted to the properties of the server (memory, processors, etc.)"
+#: ../../source/install/linux.rst:203
+msgid "We will use pgtune, an utility program that can automatically generate a PostgreSQL configuration file adapted to the properties of the server (memory, processors, etc.)"
 msgstr ""
 
-#: ../../source/install/linux.rst:220
+#: ../../source/install/linux.rst:224
 msgid "FTP Server: pure-ftpd"
 msgstr ""
 
-#: ../../source/install/linux.rst:232
+#: ../../source/install/linux.rst:236
 msgid "Configure"
 msgstr ""
 
-#: ../../source/install/linux.rst:255
+#: ../../source/install/linux.rst:259
 msgid "Creating a user account"
 msgstr ""
 
-#: ../../source/install/linux.rst:277
+#: ../../source/install/linux.rst:281
 msgid "Map server: QGIS Server"
 msgstr ""
 
-#: ../../source/install/linux.rst:279
+#: ../../source/install/linux.rst:283
 msgid "Details for the installation may differ for specific versions of the operating system. Please refer to http://qgis.org/en/site/forusers/download.html for up to date documentation."
 msgstr ""
 
-#: ../../source/install/linux.rst:301
+#: ../../source/install/linux.rst:305
 msgid "See http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html for more information on QGIS Server."
 msgstr ""
 
-#: ../../source/install/linux.rst:304
+#: ../../source/install/linux.rst:308
 msgid "Retrieve and install Lizmap Web Client"
 msgstr ""
 
-#: ../../source/install/linux.rst:311
+#: ../../source/install/linux.rst:315
 msgid "With ZIP file"
 msgstr ""
 
-#: ../../source/install/linux.rst:313
+#: ../../source/install/linux.rst:317
 msgid "Retrieve the latest available stable version from https://github.com/3liz/lizmap-web-client/releases/"
 msgstr ""
 
-#: ../../source/install/linux.rst:331
+#: ../../source/install/linux.rst:335
 msgid "Development version with git"
 msgstr ""
 
-#: ../../source/install/linux.rst:333
+#: ../../source/install/linux.rst:337
 msgid "The development version is always changing, and bugs can occur. Do not use it in production."
 msgstr ""
 
-#: ../../source/install/linux.rst:335
+#: ../../source/install/linux.rst:339
 msgid "The first time"
 msgstr ""
 
-#: ../../source/install/linux.rst:350
+#: ../../source/install/linux.rst:354
 msgid "To update your branch from the master repository"
 msgstr ""
 
-#: ../../source/install/linux.rst:373
+#: ../../source/install/linux.rst:377
 msgid "It is always good to make a backup before updating."
 msgstr ""
 
-#: ../../source/install/linux.rst:376
+#: ../../source/install/linux.rst:380
 msgid "Give the appropriate rights to directories and files"
 msgstr ""
 
-#: ../../source/install/linux.rst:385
+#: ../../source/install/linux.rst:389
 msgid "First test"
 msgstr ""
 
-#: ../../source/install/linux.rst:387
+#: ../../source/install/linux.rst:391
 msgid "Go to the Lizmap Web Client home to see if the installation was performed correctly: http://localhost/lm"
 msgstr ""
 
-#: ../../source/install/linux.rst:389
+#: ../../source/install/linux.rst:393
 msgid "Replace ``localhost`` with the address or IP number of your server."
 msgstr ""
 
-#: ../../source/install/linux.rst:391
+#: ../../source/install/linux.rst:395
 msgid "Lizmap is accessible, without further configurations, also as WMS and WFS server from a browser:"
 msgstr ""
 
-#: ../../source/install/linux.rst:393
+#: ../../source/install/linux.rst:397
 msgid "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities"
 msgstr ""
 
-#: ../../source/install/linux.rst:395
+#: ../../source/install/linux.rst:399
 msgid "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities"
 msgstr ""
 
-#: ../../source/install/linux.rst:397
+#: ../../source/install/linux.rst:401
 msgid "and from QGIS:"
 msgstr ""
 
-#: ../../source/install/linux.rst:399
+#: ../../source/install/linux.rst:403
 msgid "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&"
 msgstr ""
 
-#: ../../source/install/linux.rst:401
+#: ../../source/install/linux.rst:405
 msgid "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 msgstr ""
 
-#: ../../source/install/linux.rst:403
+#: ../../source/install/linux.rst:407
 msgid "Access to the WMS and WFS servers can be limited by assigning privileges to specific repositories, see the administration section."
 msgstr ""
 
-#: ../../source/install/linux.rst:406
+#: ../../source/install/linux.rst:410
 msgid "Editing tool: Configure the server with the database support"
 msgstr ""
 
-#: ../../source/install/linux.rst:411
+#: ../../source/install/linux.rst:415
 msgid "PostgreSQL"
 msgstr ""
 
-#: ../../source/install/linux.rst:413
+#: ../../source/install/linux.rst:417
 msgid "For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreSQL support for PHP."
 msgstr ""
 
-#: ../../source/install/linux.rst:420
+#: ../../source/install/linux.rst:424
 msgid "For editing, we strongly recommend using a PostgreSQL database. This greatly simplifies installation and retrieval of data entered by users."
 msgstr ""
 
-#: ../../source/install/linux.rst:423
+#: ../../source/install/linux.rst:427
 msgid "Spatialite"
 msgstr ""
 
-#: ../../source/install/linux.rst:426
+#: ../../source/install/linux.rst:430
 msgid "Enable Spatialite extension"
 msgstr ""
 
-#: ../../source/install/linux.rst:428
+#: ../../source/install/linux.rst:432
 msgid "To use editing on layers spatiatlite,you have to add the spatialite extension in PHP. You can follow these instructions to do so: http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
 msgstr ""
 
-#: ../../source/install/linux.rst:431
+#: ../../source/install/linux.rst:435
 msgid "Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it is not, then spatialities layers will not be used in the editing tool. You can always use PostgreSQL data for editing."
 msgstr ""
 
-#: ../../source/install/linux.rst:434
+#: ../../source/install/linux.rst:438
 msgid "Give the appropriate rights to the directory containing Spatialite databases"
 msgstr ""
 
-#: ../../source/install/linux.rst:436
+#: ../../source/install/linux.rst:440
 msgid "So that Lizmap Web Client can modify the data contained in databases Spatialite, we must ensure that **the Apache user (www-data) has well write access to the directory containing each Spatialite file**"
 msgstr ""
 
-#: ../../source/install/linux.rst:438
+#: ../../source/install/linux.rst:442
 msgid "For example, if a directory contains a QGIS project, which uses a Spatialite database placed in a **db** directory at the same level as the QGIS project:"
 msgstr ""
 
-#: ../../source/install/linux.rst:447
+#: ../../source/install/linux.rst:451
 msgid "So you have to give the rights in this way:"
 msgstr ""
 
-#: ../../source/install/linux.rst:454
+#: ../../source/install/linux.rst:458
 msgid "so if you want to install Lizmap to provide access to multiple map publishers, you should tell them to always create a **db** directory at the same level as the QGIS projects in the Lizmap Web Client directory. This will facilitate the admin work that just have to change the rights of this unique directory."
 msgstr ""
 
-#: ../../source/install/linux.rst:457
+#: ../../source/install/linux.rst:461
 msgid "Version upgrade"
 msgstr ""
 
-#: ../../source/install/linux.rst:460
+#: ../../source/install/linux.rst:464
 msgid "Preliminary backup"
 msgstr ""
 
-#: ../../source/install/linux.rst:462
+#: ../../source/install/linux.rst:466
 msgid "Before update, make a backup of the configuration data: *lizmap/var/config/lizmapConfig.ini.php*, *lizmap/var/jauth.db* and the log file (from 2.8) *lizmap/var/logs.db*"
 msgstr ""
 
-#: ../../source/install/linux.rst:474
+#: ../../source/install/linux.rst:478
 msgid "Then do a typical installation of the new version (see above), which will create a new folder in the directory */var/www/*"
 msgstr ""
 
-#: ../../source/install/linux.rst:477
+#: ../../source/install/linux.rst:481
 msgid "Copy the files saved in the folder of the new version"
 msgstr ""
 
-#: ../../source/install/linux.rst:486
+#: ../../source/install/linux.rst:490
 msgid "In some versions, it is also necessary to update the database that stores the rights. See the following for more details."
 msgstr ""
 
-#: ../../source/install/linux.rst:489
+#: ../../source/install/linux.rst:493
 msgid "From version 2.3 or lower to version 2.4 or upper"
 msgstr ""
 
-#: ../../source/install/linux.rst:491
+#: ../../source/install/linux.rst:495
 msgid "The Jelix framework (tool with which Lizmap Web Client is built) has been updated. It is necessary to change the rights management SQLite database:"
 msgstr ""
 
-#: ../../source/install/linux.rst:499
+#: ../../source/install/linux.rst:503
 msgid "From version 2.6 or lower to version 2.7"
 msgstr ""
 
-#: ../../source/install/linux.rst:501
+#: ../../source/install/linux.rst:505
 msgid "Support for annotations and management of related rights was added to Lizmap Web Client. It is necessary to change the rights management SQLite database to upgrade it:"
 msgstr ""
 
-#: ../../source/install/linux.rst:510
+#: ../../source/install/linux.rst:514
 msgid "From version 2.7.*  to version 2.8"
 msgstr ""
 
-#: ../../source/install/linux.rst:512
+#: ../../source/install/linux.rst:516
 msgid "The editing tool replaced the annotation tool and fields to describe each Lizmap Web Client user has been added. It is necessary to upgrade the rights management SQLite database:"
 msgstr ""
 
-#: ../../source/install/linux.rst:520
+#: ../../source/install/linux.rst:524
 msgid "From version 2.8.*  to version 2.9"
 msgstr ""
 
-#: ../../source/install/linux.rst:522
-#: ../../source/install/linux.rst:532
+#: ../../source/install/linux.rst:526
+#: ../../source/install/linux.rst:536
 msgid "The functionality of layers data filtering based on the connected user requires the addition of rights related to the user data base:"
 msgstr ""
 
-#: ../../source/install/linux.rst:530
+#: ../../source/install/linux.rst:534
 msgid "From version 2.9.*  to version 2.10"
 msgstr ""
 
-#: ../../source/install/linux.rst:540
+#: ../../source/install/linux.rst:544
 msgid "Delete Jelix temporary files"
 msgstr ""
 
-#: ../../source/install/linux.rst:547
+#: ../../source/install/linux.rst:551
 msgid "Redefine the rights to the application files"
 msgstr ""
 

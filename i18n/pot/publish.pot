@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.0beta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-26 14:45+0200\n"
+"POT-Creation-Date: 2016-06-15 19:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1296,7 +1296,7 @@ msgid "use simplified version of a layer to display it at different scales. You 
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:550
-msgid "be careful about On The Fly (OTF) reprojection. If, for instance, you display data in Lambert 93 (EPSG:2154) on a base map from OpenStreetmap or Google(in Pseudo Mercator, EPSG:3857), QGIS Server needs to reproject rasters and vectors before generating the map. This may have an impact in rendering times for large and complex layers. In France, you can avoid repojection by using the base map from IGN Géoportail directly in EPSG:2154"
+msgid "be careful about On The Fly (OTF) reprojection. If, for instance, you display data in Lambert 93 (EPSG:2154) on a base map from OpenStreetmap or Google (in Pseudo Mercator, EPSG:3857), QGIS Server needs to reproject rasters and vectors before generating the map. This may have an impact in rendering times for large and complex layers. In France, you can avoid reprojection by using the base map from IGN Géoportail directly in EPSG:2154"
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:551
@@ -1316,7 +1316,19 @@ msgid "Upgrade your server. This is always an option, but is often useless if yo
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:557
-msgid "Lizmap 3: On the upcoming Lizmap 3 you'll find several improvements that will help optimizing your installation: * a tool for the preparation of the server cache, through the use of a WMTS protocol. In addition, this will allow to use the cached layers as WMTS layers in QGIS desktop * avoiding the automatic download of the legends at startup, and at every zoom level; this will be done exclusively on demand, if the legend is displayed, thus saving one request per layer for each zoom * code optimization."
+msgid "Lizmap 3: On the upcoming Lizmap 3 you'll find several improvements that will help optimizing your installation:"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:558
+msgid "a tool for the preparation of the server cache, through the use of a WMTS protocol. In addition, this will allow to use the cached layers as WMTS layers in QGIS desktop"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:559
+msgid "avoiding the automatic download of the legends at startup, and at every zoom level; this will be done exclusively on demand, if the legend is displayed, thus saving one request per layer for each zoom"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:560
+msgid "code optimization."
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:563
