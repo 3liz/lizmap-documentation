@@ -1,0 +1,685 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, 3liz
+# This file is distributed under the same license as the Lizmap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lizmap 3.0beta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-26 14:45+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.2.0\n"
+
+#: ../../source/install/index.rst:3
+msgid "Installing Lizmap"
+msgstr ""
+
+#: ../../source/install/linux.rst:3
+msgid "Installing Lizmap Web Client on Linux Debian or Ubuntu"
+msgstr ""
+
+#: ../../source/install/linux.rst:6
+msgid "Generic Server Configuration"
+msgstr ""
+
+#: ../../source/install/linux.rst:8
+msgid ""
+"This documentation provides an example for configuring a server with the "
+"Debian or Ubuntu Server distribution. We assume you have base systrem "
+"installed and updated."
+msgstr ""
+
+#: ../../source/install/linux.rst:10
+msgid "This page does not describe how to secure your Apache server."
+msgstr ""
+
+#: ../../source/install/linux.rst:13
+msgid "Configure Locales"
+msgstr ""
+
+#: ../../source/install/linux.rst:15
+msgid ""
+"For simplicity, it is interesting to configure the server with UTF-8 "
+"default encoding."
+msgstr ""
+
+#: ../../source/install/linux.rst:24
+msgid ""
+"It is also necessary configure the other software so that they are using "
+"this default encoding if this is not the case."
+msgstr ""
+
+#: ../../source/install/linux.rst:27
+msgid "Installing necessary packages"
+msgstr ""
+
+#: ../../source/install/linux.rst:49
+msgid "Then go to the *www* default Apache directory (modify as needed)."
+msgstr ""
+
+#: ../../source/install/linux.rst:52
+msgid "Setting the compression"
+msgstr ""
+
+#: ../../source/install/linux.rst:73
+msgid "php5 configuration"
+msgstr ""
+
+#: ../../source/install/linux.rst:77
+msgid ""
+"In this example, we use Apache mpm-worker. So we must manually configure "
+"the activation of php5."
+msgstr ""
+
+#: ../../source/install/linux.rst:101
+msgid "mpm-worker configuration"
+msgstr ""
+
+#: ../../source/install/linux.rst:105
+msgid ""
+"We modify the Apache configuration file to adapt the options to "
+"mpm_worker server configuration."
+msgstr ""
+
+#: ../../source/install/linux.rst:122
+msgid "mod_fcgid configuration"
+msgstr ""
+
+#: ../../source/install/linux.rst:124
+msgid ""
+"QGIS Server runs fcgi mode. We must therefore configure the Apache "
+"mod_fcgid to suit to the server capabilities."
+msgstr ""
+
+#: ../../source/install/linux.rst:143 ../../source/install/windows.rst:86
+msgid "Restart Apache"
+msgstr ""
+
+#: ../../source/install/linux.rst:145
+msgid "You must restart the Apache server to validate the configuration."
+msgstr ""
+
+#: ../../source/install/linux.rst:152
+msgid "Create directories for data"
+msgstr ""
+
+#: ../../source/install/linux.rst:164
+msgid "Spatial DBMS: PostgreSQL"
+msgstr ""
+
+#: ../../source/install/linux.rst:166 ../../source/install/linux.rst:222
+#: ../../source/install/linux.rst:408
+msgid "This section is optional"
+msgstr ""
+
+#: ../../source/install/linux.rst:168
+msgid ""
+"PostgreSQL and PostGIS can be very useful to manage spatial data "
+"centralized manner on the server."
+msgstr ""
+
+#: ../../source/install/linux.rst:171 ../../source/install/linux.rst:225
+#: ../../source/install/linux.rst:282 ../../source/install/windows.rst:12
+msgid "Install"
+msgstr ""
+
+#: ../../source/install/linux.rst:197
+msgid "Adapting the PostGreSQL configuration"
+msgstr ""
+
+#: ../../source/install/linux.rst:199
+msgid ""
+"We will use pgtune, an utility program that can automatically generate a "
+"PostGreSQL configuration file adapted to the properties of the server "
+"(memory, processors, etc.)"
+msgstr ""
+
+#: ../../source/install/linux.rst:220
+msgid "FTP Server: pure-ftpd"
+msgstr ""
+
+#: ../../source/install/linux.rst:232
+msgid "Configure"
+msgstr ""
+
+#: ../../source/install/linux.rst:255
+msgid "Creating a user account"
+msgstr ""
+
+#: ../../source/install/linux.rst:277
+msgid "Map server: QGIS Server"
+msgstr ""
+
+#: ../../source/install/linux.rst:279
+msgid ""
+"Details for the installation may differ for specific versions of the "
+"operating system. Please refer to "
+"http://qgis.org/en/site/forusers/download.html for up to date "
+"documentation."
+msgstr ""
+
+#: ../../source/install/linux.rst:301
+msgid ""
+"See "
+"http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html"
+" for more information on QGIS Server."
+msgstr ""
+
+#: ../../source/install/linux.rst:304
+msgid "Retrieve and install Lizmap Web Client"
+msgstr ""
+
+#: ../../source/install/linux.rst:311
+msgid "With ZIP file"
+msgstr ""
+
+#: ../../source/install/linux.rst:313
+msgid ""
+"Retrieve the latest available stable version from https://github.com/3liz"
+"/lizmap-web-client/releases/"
+msgstr ""
+
+#: ../../source/install/linux.rst:331
+msgid "Development version with git"
+msgstr ""
+
+#: ../../source/install/linux.rst:333
+msgid ""
+"The development version is always changing, and bugs can occur. Do not "
+"use it in production."
+msgstr ""
+
+#: ../../source/install/linux.rst:335
+msgid "The first time"
+msgstr ""
+
+#: ../../source/install/linux.rst:350
+msgid "To update your branch from the master repository"
+msgstr ""
+
+#: ../../source/install/linux.rst:373
+msgid "It is always good to make a backup before updating."
+msgstr ""
+
+#: ../../source/install/linux.rst:376
+msgid "Give the appropriate rights to directories and files"
+msgstr ""
+
+#: ../../source/install/linux.rst:385
+msgid "First test"
+msgstr ""
+
+#: ../../source/install/linux.rst:387
+msgid ""
+"Go to the Lizmap Web Client home to see if the installation was performed"
+" correctly: http://localhost/lm"
+msgstr ""
+
+#: ../../source/install/linux.rst:389
+msgid "Replace ``localhost`` with the address or IP number of your server."
+msgstr ""
+
+#: ../../source/install/linux.rst:391
+msgid ""
+"Lizmap is accessible, without further configurations, also as WMS and WFS"
+" server from a browser:"
+msgstr ""
+
+#: ../../source/install/linux.rst:393
+msgid "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities"
+msgstr ""
+
+#: ../../source/install/linux.rst:395
+msgid "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities"
+msgstr ""
+
+#: ../../source/install/linux.rst:397
+msgid "and from QGIS:"
+msgstr ""
+
+#: ../../source/install/linux.rst:399
+msgid "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&"
+msgstr ""
+
+#: ../../source/install/linux.rst:401
+msgid "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
+msgstr ""
+
+#: ../../source/install/linux.rst:403
+msgid ""
+"Access to the WMS and WFS servers can be limited by assigning privileges "
+"to specific repositories, see the administration section."
+msgstr ""
+
+#: ../../source/install/linux.rst:406
+msgid "Editing tool: Configure the server with the database support"
+msgstr ""
+
+#: ../../source/install/linux.rst:411
+msgid "PostgreSQL"
+msgstr ""
+
+#: ../../source/install/linux.rst:413
+msgid ""
+"For the editing of PostGIS layers in Web Client Lizmap operate, install "
+"PostgreSQL support for PHP."
+msgstr ""
+
+#: ../../source/install/linux.rst:420
+msgid ""
+"For editing, we strongly recommend using a PostgreSQL database. This "
+"greatly simplifies installation and retrieval of data entered by users."
+msgstr ""
+
+#: ../../source/install/linux.rst:423
+msgid "Spatialite"
+msgstr ""
+
+#: ../../source/install/linux.rst:426
+msgid "Enable Spatialite extension"
+msgstr ""
+
+#: ../../source/install/linux.rst:428
+msgid ""
+"To use editing on layers spatiatlite,you have to add the spatialite "
+"extension in PHP. You can follow these instructions to do so: http://www"
+".gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
+msgstr ""
+
+#: ../../source/install/linux.rst:431
+msgid ""
+"Lizmap Web Client tests whether the spatialite support is enabled in PHP."
+" If it is not, then spatialities layers will not be used in the editing "
+"tool. You can always use PostgreSQL data for editing."
+msgstr ""
+
+#: ../../source/install/linux.rst:434
+msgid ""
+"Give the appropriate rights to the directory containing Spatialite "
+"databases"
+msgstr ""
+
+#: ../../source/install/linux.rst:436
+msgid ""
+"So that Lizmap Web Client can modify the data contained in databases "
+"Spatialite, we must ensure that **the Apache user (www-data) has well "
+"write access to the directory containing each Spatialite file**"
+msgstr ""
+
+#: ../../source/install/linux.rst:438
+msgid ""
+"For example, if a directory contains a QGIS project, which uses a "
+"Spatialite database placed in a **db** directory at the same level as the"
+" QGIS project:"
+msgstr ""
+
+#: ../../source/install/linux.rst:447
+msgid "So you have to give the rights in this way:"
+msgstr ""
+
+#: ../../source/install/linux.rst:454
+msgid ""
+"so if you want to install Lizmap to provide access to multiple map "
+"publishers, you should tell them to always create a **db** directory at "
+"the same level as the QGIS projects in the Lizmap Web Client directory. "
+"This will facilitate the admin work that just have to change the rights "
+"of this unique directory."
+msgstr ""
+
+#: ../../source/install/linux.rst:457
+msgid "Version upgrade"
+msgstr ""
+
+#: ../../source/install/linux.rst:460
+msgid "Preliminary backup"
+msgstr ""
+
+#: ../../source/install/linux.rst:462
+msgid ""
+"Before update, make a backup of the configuration data: "
+"*lizmap/var/config/lizmapConfig.ini.php*, *lizmap/var/jauth.db* and the "
+"log file (from 2.8) *lizmap/var/logs.db*"
+msgstr ""
+
+#: ../../source/install/linux.rst:474
+msgid ""
+"Then do a typical installation of the new version (see above), which will"
+" create a new folder in the directory */var/www/*"
+msgstr ""
+
+#: ../../source/install/linux.rst:477
+msgid "Copy the files saved in the folder of the new version"
+msgstr ""
+
+#: ../../source/install/linux.rst:486
+msgid ""
+"In some versions, it is also necessary to update the database that stores"
+" the rights. See the following for more details."
+msgstr ""
+
+#: ../../source/install/linux.rst:489
+msgid "From version 2.3 or lower to version 2.4 or upper"
+msgstr ""
+
+#: ../../source/install/linux.rst:491
+msgid ""
+"The Jelix framework (tool with which Lizmap Web Client is built) has been"
+" updated. It is necessary to change the rights management SQLite "
+"database:"
+msgstr ""
+
+#: ../../source/install/linux.rst:499
+msgid "From version 2.6 or lower to version 2.7"
+msgstr ""
+
+#: ../../source/install/linux.rst:501
+msgid ""
+"Support for annotations and management of related rights was added to "
+"Lizmap Web Client. It is necessary to change the rights management SQLite"
+" database to upgrade it:"
+msgstr ""
+
+#: ../../source/install/linux.rst:510
+msgid "From version 2.7.*  to version 2.8"
+msgstr ""
+
+#: ../../source/install/linux.rst:512
+msgid ""
+"The editing tool replaced the annotation tool and fields to describe each"
+" Lizmap Web Client user has been added. It is necessary to upgrade the "
+"rights management SQLite database:"
+msgstr ""
+
+#: ../../source/install/linux.rst:520
+msgid "From version 2.8.*  to version 2.9"
+msgstr ""
+
+#: ../../source/install/linux.rst:522 ../../source/install/linux.rst:532
+msgid ""
+"The functionality of layers data filtering based on the connected user "
+"requires the addition of rights related to the user data base:"
+msgstr ""
+
+#: ../../source/install/linux.rst:530
+msgid "From version 2.9.*  to version 2.10"
+msgstr ""
+
+#: ../../source/install/linux.rst:540
+msgid "Delete Jelix temporary files"
+msgstr ""
+
+#: ../../source/install/linux.rst:547
+msgid "Redefine the rights to the application files"
+msgstr ""
+
+#: ../../source/install/windows.rst:3
+msgid "Installing Lizmap Web Client on Windows"
+msgstr ""
+
+#: ../../source/install/windows.rst:5
+msgid ""
+"This documentation shows the progress of the installation Lizmap Web "
+"Client on a Windows 7 environment. The other versions of Windows should "
+"not be a problem. To facilitate installation, we use the OSGeo4W "
+"software, which allows to install all the necessary components in a "
+"centralized manner."
+msgstr ""
+
+#: ../../source/install/windows.rst:7
+msgid ""
+"The Apache version provided by OSGeo4W is out of date. This documentation"
+" has to be updated."
+msgstr ""
+
+#: ../../source/install/windows.rst:9
+msgid ""
+"In this document, the version 2.10.3 of Lizmap Web Client is used. Be "
+"sure to adapt it according to the version you want to install (the latter"
+" is recommended)."
+msgstr ""
+
+#: ../../source/install/windows.rst:14
+msgid "Download OSGeo4W on the QGIS download page"
+msgstr ""
+
+#: ../../source/install/windows.rst:16
+msgid "http://qgis.org/fr/site/forusers/download.html"
+msgstr ""
+
+#: ../../source/install/windows.rst:18
+msgid "Launch the OSGeo4W installer and choose the Advanced Installation"
+msgstr ""
+
+#: ../../source/install/windows.rst:23
+msgid "Use the internet facility"
+msgstr ""
+
+#: ../../source/install/windows.rst:28
+msgid ""
+"Select the root for OSGeo4W elements installation and prefer the "
+"accessibility option to all users"
+msgstr ""
+
+#: ../../source/install/windows.rst:33
+msgid "Select the root of local packages"
+msgstr ""
+
+#: ../../source/install/windows.rst:38
+msgid "Specify the type of Internet connection (with a proxy or not)"
+msgstr ""
+
+#: ../../source/install/windows.rst:43
+msgid "Select in 'Desktop' the package 'QGIS-full'"
+msgstr ""
+
+#: ../../source/install/windows.rst:48
+msgid "Select in 'Web' the package 'QGIS-server'"
+msgstr ""
+
+#: ../../source/install/windows.rst:53
+msgid "Select in 'Lib' the package 'fcgi'"
+msgstr ""
+
+#: ../../source/install/windows.rst:58
+msgid "Initiate and complete the installation"
+msgstr ""
+
+#: ../../source/install/windows.rst:60
+msgid ""
+"At this point all that is necessary to LizMap Web Client is installed on "
+"the machine. The next steps are to configure the server, install and "
+"configure LizMap Web Client."
+msgstr ""
+
+#: ../../source/install/windows.rst:63
+msgid "Apache checking"
+msgstr ""
+
+#: ../../source/install/windows.rst:65
+msgid ""
+"To verify that the server is well installed, open in the browser the url:"
+" http://localhost"
+msgstr ""
+
+#: ../../source/install/windows.rst:67
+msgid "If nothing appears this is that the installation was not successful."
+msgstr ""
+
+#: ../../source/install/windows.rst:69
+msgid "PHP checking"
+msgstr ""
+
+#: ../../source/install/windows.rst:71
+msgid ""
+"Click on the link 'phpinfo' on the home page of the OSGeo4W Apache "
+"server. This page allows you to check the configuration of your server. "
+"You should find information about cgi-fcgi, PDO and PDO_SQLITE but not "
+"CURL or GD which depends LizMap Web Client."
+msgstr ""
+
+#: ../../source/install/windows.rst:79
+msgid "Activate CURL and GD2"
+msgstr ""
+
+#: ../../source/install/windows.rst:81
+msgid ""
+"Open the file C:\\OSGeo4W\\bin\\PHP.ini and uncomment extensions curl and"
+" gd2"
+msgstr ""
+
+#: ../../source/install/windows.rst:88
+msgid ""
+"Changing the file C:\\OSGeo4W\\bin\\PHP.ini to activate CURL and GD into "
+"PHP CURL, requires to restart the Apache server. To do this :"
+msgstr ""
+
+#: ../../source/install/windows.rst:90
+msgid ""
+"click in the main menu of windows on the monitor apache 'All programs > "
+"OSGeo4W > Apache > OSGeo4W-Apache-Monitor'."
+msgstr ""
+
+#: ../../source/install/windows.rst:95
+msgid ""
+"Click on the apache monitor that is among the hidden icons in the task "
+"bar (bottom right) and 'Restart'."
+msgstr ""
+
+#: ../../source/install/windows.rst:100
+msgid "Check CURL and GD"
+msgstr ""
+
+#: ../../source/install/windows.rst:102
+msgid ""
+"In the web browser, reload the page 'phpinfo'. You should find a CURL and"
+" GD section."
+msgstr ""
+
+#: ../../source/install/windows.rst:107
+msgid "Download LizMap Web Client"
+msgstr ""
+
+#: ../../source/install/windows.rst:109
+msgid ""
+"The Lizmap Web Client code is free and downloadable from github. To "
+"download the latest version:"
+msgstr ""
+
+#: ../../source/install/windows.rst:111
+msgid "Go to https://github.com/3liz/lizmap-web-client/tags"
+msgstr ""
+
+#: ../../source/install/windows.rst:112
+msgid "Click on the small *zip* link of the latest version."
+msgstr ""
+
+#: ../../source/install/windows.rst:113
+msgid ""
+"Cliquez sur le petit lien *zip* de la dernière version. For example the "
+"following link for 2.10.3 version: https://github.com/3liz/lizmap-web-"
+"client/archive/2.10.3.zip"
+msgstr ""
+
+#: ../../source/install/windows.rst:115
+msgid ""
+"Unzip LizMap Web Client in "
+"'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap\\\\'"
+msgstr ""
+
+#: ../../source/install/windows.rst:117
+msgid ""
+"You should now have a folder 'C:\\\\OSGeo4W\\\\apache\\\\htdocs\\\\lizmap"
+"\\\\lizmap-web-client-2.10.3\\\\'"
+msgstr ""
+
+#: ../../source/install/windows.rst:119
+msgid "Test Lizmap Web Client Installation"
+msgstr ""
+
+#: ../../source/install/windows.rst:122
+msgid ""
+"Test if LizMap Web Client is well installed by opening in the browser the"
+" link: http://localhost/lizmap/lizmap-web-client-2.10.3/lizmap/www. You "
+"should see displayed the project \"Montpellier\" supplied with LizMap Web"
+" Client and set to be visible to all. To view maps, it is necessary to "
+"configure LizMap Web Client."
+msgstr ""
+
+#: ../../source/install/windows.rst:124
+msgid "Administration Interface"
+msgstr ""
+
+#: ../../source/install/windows.rst:126
+msgid ""
+"Go to the address http://localhost/lizmap/lizmap-web-"
+"client-2.10.3/lizmap/www/admin.php and connect with the login / password:"
+" 'admin/admin'."
+msgstr ""
+
+#: ../../source/install/windows.rst:128
+msgid ""
+"If authentication does not work check that the directory "
+"'C:\\\\OSGeo4W\\\\tmp' exists."
+msgstr ""
+
+#: ../../source/install/windows.rst:130
+msgid "Edit QGIS Server URL"
+msgstr ""
+
+#: ../../source/install/windows.rst:132
+msgid ""
+"Click on 'LizMap config' and then modify in the Services section to "
+"specify the url of your QGIS-Server."
+msgstr ""
+
+#: ../../source/install/windows.rst:134
+msgid ""
+"Replace the url of WMS server by "
+"http://127.0.0.1/qgis/qgis_mapserv.fcgi.exe and record:"
+msgstr ""
+
+#: ../../source/install/windows.rst:139
+msgid "Check"
+msgstr ""
+
+#: ../../source/install/windows.rst:141
+msgid ""
+"To ensure that the configuration was successful, click on 'Project List' "
+"above. You should have access to two maps since you are authenticated as "
+"administrator. Click on one of the maps. If the configuration is good you"
+" should view the map, and thus be in possession of a Lizmap Web Client "
+"ready for yours."
+msgstr ""
+
+#: ../../source/install/windows.rst:145
+msgid "Add Spatialite support to PHP"
+msgstr ""
+
+#: ../../source/install/windows.rst:147
+msgid ""
+"To use the editing tool on Spatialite layers, it is necessary to add the "
+"spatialite extension to PHP. Unfortunately, it requires a PHP version of "
+"at least 5.3 to do it, and for now, the installer OSGeo4W offers only "
+"5.2."
+msgstr ""
+
+#: ../../source/install/windows.rst:149
+msgid ""
+"*It is therefore not possible at this time under Windows with the apache "
+"server from the OSGeo4W installer to use Spatialite layers for editing.*"
+msgstr ""
+
+#: ../../source/install/windows.rst:151
+msgid ""
+"Lizmap Web Client tests whether the Spatialite support is enabled in PHP."
+" If it is not, then the Spatialite layers will not be used in the editing"
+" tool. You can always use PostgreSQL data instead."
+msgstr ""
+
