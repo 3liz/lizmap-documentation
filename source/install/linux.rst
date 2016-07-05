@@ -28,6 +28,8 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 Installing necessary packages
 --------------------------------------------------------------
 
+.. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.4 installation)
+
 .. code-block:: bash
 
    sudo su # only necessary if you are not logged in as root
@@ -107,7 +109,7 @@ QGIS Server runs fcgi mode. We must therefore configure the Apache mod_fcgid to 
    # Open the mod_fcgid configuration file
    nano /etc/apache2/mods-enabled/fcgid.conf
    # Paste the following content and adapt it
-   <IfModule mod_fcgid.c> 
+   <IfModule mod_fcgid.c>
      AddHandler    fcgid-script .fcgi
      FcgidConnectTimeout 300
      FcgidIOTimeout 300
@@ -186,7 +188,7 @@ Install
    pg_dropcluster --stop 9.5 main
    chown postgres:postgres /home/data/postgresql
    pg_createcluster 9.5 main -d /home/data/postgresql --locale fr_FR.UTF8 -p 5678 --start
-   
+
    # Creating a "superuser" user
    su - postgres
    createuser myuser --superuser
@@ -207,7 +209,7 @@ We will use pgtune, an utility program that can automatically generate a Postgre
    # PostgreSQL Tuning with pgtune
    pgtune -i /etc/postgresql/9.5/main/postgresql.conf -o /etc/postgresql/9.5/main/postgresql.conf.pgtune --type Web
    cp /etc/postgresql/9.5/main/postgresql.conf /etc/postgresql/9.5/main/postgresql.conf.backup
-   cp /etc/postgresql/9.5/main/postgresql.conf.pgtune /etc/postgresql/9.5/main/postgresql.conf  
+   cp /etc/postgresql/9.5/main/postgresql.conf.pgtune /etc/postgresql/9.5/main/postgresql.conf
    nano /etc/postgresql/9.5/main/postgresql.conf
    # Restart to check any problems
    service postgresql restart
@@ -216,7 +218,7 @@ We will use pgtune, an utility program that can automatically generate a Postgre
    echo "kernel.shmmax = 4294967296" >> /etc/sysctl.conf
    echo 4294967296 > /proc/sys/kernel/shmall
    echo 4294967296 > /proc/sys/kernel/shmmax
-   sysctl -a | sort | grep shm     
+   sysctl -a | sort | grep shm
    # Restart PostgreSQL
    service postgresql restart
 
@@ -231,7 +233,7 @@ Install
 .. code-block:: bash
 
    apt-get install pure-ftpd pure-ftpd-common
-   
+
 Configure
 ---------------
 
@@ -250,10 +252,10 @@ Configure
    # The port range for passive mode (opening outwards)
    echo "5400 5600" > /etc/pure-ftpd/conf/PassivePortRange
    # Creating an SSL certificate for FTP
-   openssl req -x509 -nodes -newkey rsa:1024 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem 
+   openssl req -x509 -nodes -newkey rsa:1024 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
    chmod 400 /etc/ssl/private/pure-ftpd.pem
    # Restart FTP server
-   service pure-ftpd restart 
+   service pure-ftpd restart
 
 Creating a user account
 --------------------------------
@@ -265,7 +267,7 @@ Creating a user account
    useradd -g client -d /home/data/ftp/$MYUSER -s /bin/ftponly -m $MYUSER -k /home/data/ftp/template/
    passwd $MYUSER
    # Fix the user's FTP root
-   chmod a-w /home/data/ftp/$MYUSER 
+   chmod a-w /home/data/ftp/$MYUSER
    # Creating empty directories that will be the future Lizmap Web Client directories
    mkdir /home/data/ftp/$MYUSER/qgis/rep1 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep1
    mkdir /home/data/ftp/$MYUSER/qgis/rep2 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep2
@@ -275,7 +277,7 @@ Creating a user account
    # Create a directory to store the cached server
    mkdir /home/data/cache/$MYUSER
    chmod 700 /home/data/cache/$MYUSER -R
-   chown www-data:www-data /home/data/cache/$MYUSER -R 
+   chown www-data:www-data /home/data/cache/$MYUSER -R
 
 Map server: QGIS Server
 ====================================
@@ -291,14 +293,14 @@ Install
    cat /etc/apt/sources.list.d/debian-gis.list
    deb http://qgis.org/debian trusty main
    deb-src http://qgis.org/debian trusty main
-    
+
    # Add keys
    sudo gpg --recv-key DD45F6C3
    sudo gpg --export --armor DD45F6C3 | sudo apt-key add -
-    
+
    # Update package list
    sudo apt-get update
-   
+
    # Install QGIS Server
    sudo apt-get install qgis-server python-qgis
 
@@ -358,14 +360,14 @@ Development version with git
    cd /var/www/$MYAPP-$VERSION
    # Check that you are on the branch: mybranch
    git checkout mybranch
-   
+
    # If you have any changes, make a commit
    git status
    git commit -am "Your commit message"
-   
+
    # Save your configuration files!
    cp lizmap/var/jauth.db /tmp/jauth.db && cp lizmap/var/logs.db /tmp/logs.db && cp lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php
-   
+
    # Update your master branch
    git checkout master && git fetch origin && git merge origin/master
    # Apply to your branch, marge and manage potential conflicts

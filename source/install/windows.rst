@@ -28,13 +28,13 @@ Then open the browser and write http://localhost and press enter this will open 
 
 Open the :kbd:`cmd` where you run the previous command and press :kbd:`Ctrl+C` to stop Apache. Then add the Apache to your Windows System Path allowing to you call the apache directly in the :kbd:`cmd`. So for this task, you hold the :kbd:`Windows` and press :kbd:`Pause`. Then, click in *Advanced System Settings* and then in :kbd:`Environment Variables`. The next step is to append (not replace!) **;C:\\webserver\\Apache24\\bin** to the *Path* variable (double-click in "Path" line). After this step, close :kbd:`cmd` , reopen :kbd:`cmd` and check Apache is correctly declare in the *System path*. In :kbd:`cmd` type :kbd:`httpd` then hit enter this will run Apache, if Yes you can stop pressing :kbd:`Ctrl+C`.
 
-Now it's time to add Apache as Service, for this step you need to open the command line and type :kbd:`httpd -k install`. This will start Apache as a Windows Service. 
+Now it's time to add Apache as Service, for this step you need to open the command line and type :kbd:`httpd -k install`. This will start Apache as a Windows Service.
 
 After you have the Apache configured as Service you will need the mod_fgci module that can be found in http://www.apachelounge.com/download/VC11/modules/modules-2.4-win64-VC11.zip .
 
 .. note:: You can use anothers installations http://www.apachelounge.com/download/VC11/
 
-The link above include several apache modules, unzip the file **mod_fcgid-2.3.9\mod_fcgid\mod_fcgid.so** into the directory **C:\\webserver\\Apache24\\modules\\**. After this you need to change the Apache configuration in **C:\\webserver\\Apache24\\conf\\httpd.conf** and enable the modules that you need. Search for **LoadModule** command lines and the line **LoadModule fcgid_module modules/mod_fcgid.so**. In the added LoadModule line please uncheck ( remove :kbd:`#`) the following modules: **mod_actions.so**, **mod_ssl.so**, **mod_rewrite.so**, **mod_headers.so**, **mod_deflate.so**, **mod_expires.so**, **mod_ext_filter.so**, **mod_ident.so**. This action will activate them. 
+The link above include several apache modules, unzip the file **mod_fcgid-2.3.9\mod_fcgid\mod_fcgid.so** into the directory **C:\\webserver\\Apache24\\modules\\**. After this you need to change the Apache configuration in **C:\\webserver\\Apache24\\conf\\httpd.conf** and enable the modules that you need. Search for **LoadModule** command lines and the line **LoadModule fcgid_module modules/mod_fcgid.so**. In the added LoadModule line please uncheck ( remove :kbd:`#`) the following modules: **mod_actions.so**, **mod_ssl.so**, **mod_rewrite.so**, **mod_headers.so**, **mod_deflate.so**, **mod_expires.so**, **mod_ext_filter.so**, **mod_ident.so**. This action will activate them.
 
 .. note:: If you need to use a different port, it's necessary active others modules associated to proxy : **proxy**, **proxy_http**, **proxy-connect**, **proxy-fcgin cache**, **disk-cache**, **headers**
 
@@ -51,15 +51,17 @@ You need to configure the files compression, so you need to add the following li
     Header append Vary User-Agent env=!dont-vary
   </IfModule>
 
-.. note:: If another port is to be used e.g. **1664**, add **Listen** option to the Apache **httpd.conf** file: 
+.. note:: If another port is to be used e.g. **1664**, add **Listen** option to the Apache **httpd.conf** file:
    Listen 80
    Listen 1664
 
 After this restart the Apache use the command-line and type :kbd:`httpd -k restart` .
 
 
-php 5.xx.x Configuration
+php 5.x.xx Configuration
 ------------------------
+
+.. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.4 installation)
 
 Go to http://windows.php.net/download/ and download php-5.6.23-Win32-VC11-x64.zip , make sure it is the non-thread-safe file, for example:
 http://windows.php.net/downloads/releases/php-5.6.23-Win32-VC11-x64.zip
@@ -116,8 +118,8 @@ You need to create the new virtual host, so open the file **C:/webserver/Apache2
     ErrorLog "logs/lizmap-error.log"
   </VirtualHost>
 
-After this step save the file. 
-Create a folder with the name lizmap inside **C:/webserver** and in the **C:/webserver/lizmap** add a file with PHP extension and save with this code inside of file: 
+After this step save the file.
+Create a folder with the name lizmap inside **C:/webserver** and in the **C:/webserver/lizmap** add a file with PHP extension and save with this code inside of file:
 
 .. code-block:: php
 
@@ -131,9 +133,9 @@ Restart Apache in command line with :kbd:`httpd -k restart` and see if everythin
 QGIS Server Installation
 ------------------------
 
-Go to http://www.qgis.org and get the file **Osgeo4W Network installer (64 bit)** (e.g. http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe ) and run the installer. Choose the following options: 
+Go to http://www.qgis.org and get the file **Osgeo4W Network installer (64 bit)** (e.g. http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe ) and run the installer. Choose the following options:
 
-1. Advanced Installer; 
+1. Advanced Installer;
 2. Install from internet;
 3. Root Directory **C:\\OSGeo4W64** and install for **all users**;
 4. Keep default Local Package Directory and Start Menu Name
@@ -151,23 +153,23 @@ After the installation we need to configure QGIS Server to be accessible as fcgi
     <VirtualHost *:80>
     Include conf/extra/php-5.6.23.conf
     ServerName localhost
-	
-	# Lizmap Production
-    DocumentRoot "C:/webserver/lizmap/prod/"	
+
+    # Lizmap Production
+    DocumentRoot "C:/webserver/lizmap/prod/"
     <Directory "C:/webserver/lizmap/prod">
         Options -Indexes +FollowSymLinks +ExecCGI
         AllowOverride All
         Require all granted
     </Directory>
-	
-	# LizMap Pré-production
-	Alias /preprod/ "C:/webserver/lizmap/preprod/"
+
+    # LizMap Pré-production
+    Alias /preprod/ "C:/webserver/lizmap/preprod/"
     <Directory "C:/webserver/lizmap/preprod">
         Options -Indexes +FollowSymLinks +ExecCGI
         AllowOverride All
         Require all granted
     </Directory>
-	
+
     Alias /qgis/ "C:/OSGeo4W64/apps/qgis-ltr/bin/"
     <Directory "C:/OSGeo4W64/apps/qgis-ltr/bin/">
         SetHandler fcgid-script
@@ -185,7 +187,7 @@ After this modification go to the file **C:\\webserver\\Apache24\\conf\\extra\\p
 .. code-block:: apache
 
   FcgidInitialEnv PHPRC "C:\\webserver\\php-5.6.23"
-  
+
   FcgidInitialEnv PATH "C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\qgis\bin;C:\OSGeo4W64\apps\grass\grass-6.4.3\lib;C:\OSGeo4W64\apps\grass\grass-6.4.3\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\WBem"
    FcgidInitialEnv QT_PLUGIN_PATH "C:\OSGeo4W64\apps\qgis\qtplugins;C:\OSGeo4W64\apps\Qt4\plugins"
    FcgidInitialEnv PYTHONHOME "C:\OSGeo4W64\apps\Python27"
@@ -193,10 +195,10 @@ After this modification go to the file **C:\\webserver\\Apache24\\conf\\extra\\p
 
   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
   FcgidInitialEnv QGIS_SERVER_LOG_FILE "C:\\webserver\\Apache24\\logs\\qgis_server.log"
-  
+
   SetEnvIf Request_URI ^/qgis QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis"
   SetEnvIf Request_URI ^/qgis TEMP "C:\Windows\Temp"
-  
+
   SetEnvIf Request_URI ^/qgis GDAL_DATA "C:\OSGeo4W64\share\gdal"
   SetEnvIf Request_URI ^/qgis GDAL_DRIVER_PATH "C:\OSGeo4W64\bin"
   SetEnvIf Request_URI ^/qgis PDAL_DRIVER_PATH "C:\OSGeo4W64\bin"
@@ -218,7 +220,7 @@ After the changes restart apache, type in commandline the instruction:
 
 Now it's time to test the QGIS Server and see if is accessible in fcgi, for this you nee to type in the browser the link: http://localhost/qgis/qgis_mapserv.fcgi.exe and if everything is right you will receive the following response:
 
-.. code-block:: xml 
+.. code-block:: xml
 
    <ServiceExceptionReport version="1.3.0">
      ServiceException code="OperationNotSupported">Please check the value of the REQUEST parameter</ServiceException>
@@ -228,7 +230,7 @@ Preparing the home of LizMap Web Client
 --------------------------------------
 
 Now you will install 2 environments, one for production and other for preproduction, for this action you need to create in the following folders:
-**C:\\webserver\\lizmap\\prod\\** and  **C:\\webserver\\lizmap\\preprod\\** 
+**C:\\webserver\\lizmap\\prod\\** and  **C:\\webserver\\lizmap\\preprod\\**
 
 Go to 3Liz Github repository https://github.com/3liz/lizmap-web-client/tags and get the last version in ZIP format. For example, you can use 3.0 (
 **https://codeload.github.com/3liz/lizmap-web-client/zip/release_3_0.zip**) or for master version (**https://github.com/3liz/lizmap-web-client/archive/master.zip**).
@@ -244,25 +246,25 @@ After create the cache folders, modify the virtual host to point to the **www fo
     <VirtualHost *:80>
     Include conf/extra/php5.6.23.conf
     ServerName localhost
-	
-	# Lizmap Production
-	# Version master
+
+    # Lizmap Production
+    # Version master
     DocumentRoot "C:/webserver/lizmap/prod/master/lizmap/www/"
     <Directory "C:/webserver/lizmap/prod/master/lizmap/www/">
         Options -Indexes +FollowSymLinks +ExecCGI
         AllowOverride All
         Require all granted
     </Directory>
-	
-	# LizMap Pré-production
-	# Version master used
-	Alias /preprod/ "C:/webserver/lizmap/preprod/master/lizmap/www/"
+
+    # LizMap Pré-production
+    # Version master used
+    Alias /preprod/ "C:/webserver/lizmap/preprod/master/lizmap/www/"
     <Directory "C:/webserver/lizmap/preprod/master/lizmap/www/">
         Options -Indexes +FollowSymLinks +ExecCGI
         AllowOverride All
         Require all granted
     </Directory>
-	
+
     Alias /qgis/ "C:/OSGeo4W64/apps/qgis-ltr/bin/"
     <Directory "C:/OSGeo4W64/apps/qgis-ltr/bin/">
         SetHandler fcgid-script
@@ -270,13 +272,13 @@ After create the cache folders, modify the virtual host to point to the **www fo
         AllowOverride All
         Require all granted
     </Directory>
-	
-	# ABP: needed for authentication in Lizmap 
-	<IfModule mod_fcgid.c>
-		RewriteEngine on
-		RewriteCond %{HTTP:Authorization} .
-		RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-	</IfModule>	
+
+    # ABP: needed for authentication in Lizmap
+    <IfModule mod_fcgid.c>
+        RewriteEngine on
+        RewriteCond %{HTTP:Authorization} .
+        RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    </IfModule>
 
     CustomLog "logs/lizmap-access.log" common
     ErrorLog "logs/lizmap-error.log"
@@ -285,7 +287,7 @@ After create the cache folders, modify the virtual host to point to the **www fo
 After the replacement save the file and restart Apache with the command-line instruction:
 
 .. code-block:: winbatch
-   
+
   httpd -k restart
 
 In case of lizmap version >= 3.0, you must use some scripts to install it properly (see https://github.com/3liz/lizmap-web-client/blob/master/INSTALL.md ). Open the command-line (:kbd:`cmd.exe`) and write the next instructions:
@@ -323,7 +325,7 @@ By default, when you install LizMap Web Client, you will install a sqlite databa
 Imagine that you are GIS Manager and you want to link the user and password credentials of lizmap to the PostgreSQL users and password credentials.
 
 For that before the installation you need to change the file :kbd:`profiles.ini.php` in the folder **C:\\webserver\\lizmap\\lizmap-web-client-master\\lizmap\\var\\config** with the following lines:
- 
+
 .. code-block:: ini
 
    default=jauth
@@ -383,7 +385,7 @@ After that, also change the cache directory from  **C:/Windows/Temp/** to: **C:/
 Now check the Montpellier demo project is working: http://localhost/index.php/view/map/?repository=montpellier&project=montpellier
 
 
-LizMap directories configuration 
+LizMap directories configuration
 --------------------------------
 
 You need to create a Lizmap directory architecture for organization porposes. Create the following directories via a :kbd:`*.bat` file ( Please Check line ends are correct, you can open using notepad and not notepad++):
@@ -430,7 +432,7 @@ Please add these lines before CustomLog:
         AllowOverride All
         Require all granted
     </Directory>
-	
+
 
 After this step save and restart Apache. Please check if you can add svg file in the folder C:/webserver/Data/document/svg/, for example C:/webserver/Data/document/svg/my_icon.svg and then access it via http://localhost/document/svg/my_icon.svg and use it as the SVG path in the style properties of a vector layer.
 
@@ -455,7 +457,7 @@ First you need to download at https://filezilla-project.org/download.php?type=se
 9. Shared folder: Add **D:\\webserver\\prod\\data** - Give all rights by checking checkboxes for Files and Directories.
 10. You can add IP filter here too if needed.
 
-Now you need to it, install FireFTP and restart Firefox. After that try to connect with: 
+Now you need to it, install FireFTP and restart Firefox. After that try to connect with:
 **Server** = localhost . Use Passive mode AND check IPV6.
 
 .. note:: You can see this tutorial (only in french): http://forum.hardware.fr/hfr/WindowsSoftware/Tutoriels/filezilla-serveur-securise-sujet_300273_1.htm
