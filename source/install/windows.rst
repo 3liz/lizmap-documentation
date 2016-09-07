@@ -196,6 +196,15 @@ After this modification go to the file **C:\\webserver\\Apache24\\conf\\extra\\p
   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
   FcgidInitialEnv QGIS_SERVER_LOG_FILE "C:\\webserver\\Apache24\\logs\\qgis_server.log"
 
+  FcgidIOTimeout 120
+        FcgidInitialEnv LC_ALL "en_US.UTF-8"
+        FcgidInitialEnv PYTHONIOENCODING UTF-8
+        FcgidInitialEnv LANG "en_US.UTF-8"
+        FcgidInitialEnv QGIS_DEBUG 1
+        FcgidInitialEnv QGIS_SERVER_LOG_FILE "C:\\webserver\Apache24\logs\\qgis_server.log"
+        FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
+        FcgidInitialEnv QGIS_PLUGINPATH "C:\OSGeo4W64\apps\qgis-ltr\python\plugins"
+		
   SetEnvIf Request_URI ^/qgis QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis-ltr"
   SetEnvIf Request_URI ^/qgis TEMP "C:\Windows\Temp"
 
