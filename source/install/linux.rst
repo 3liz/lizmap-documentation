@@ -34,9 +34,7 @@ Installing necessary packages
 
    sudo su # only necessary if you are not logged in as root
    apt-get update # update package lists
-   apt-get install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php5 php5-gd php5-sqlite php5-curl python-simplejson python-software-properties
-
-.. todo:: Check whether the following packages should be installed: php5 php5-cgi
+   apt-get install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php5 php5-cgi php5-gd php5-sqlite php5-curl python-simplejson python-software-properties
 
 .. todo:: Check this: still necessary?
    a2dismod php5
@@ -59,7 +57,7 @@ In this example, we use Apache mpm-worker. So we must manually configure the act
 
 .. code-block:: bash
 
-   cat > /etc/apache2/conf.d/php.conf << EOF
+   cat > /etc/apache2/conf-available/php.conf << EOF
    <Directory /usr/share>
      AddHandler fcgid-script .php
      FCGIWrapper /usr/lib/cgi-bin/php5 .php
@@ -74,7 +72,9 @@ In this example, we use Apache mpm-worker. So we must manually configure the act
    </Files>
    EOF
 
-.. note:: In later versions of apache, the config for ``php-cgi`` is in ``/etc/apache2/conf-available/php.conf``. Copy the text above, then::
+.. note:: In older versions of apache, the config for ``php-cgi`` is in ``/etc/apache2/conf.d/php.conf``. Copy the text above, then::
+
+.. code-block:: bash
 
    a2enconf php
 
@@ -125,7 +125,7 @@ Setting the compression
 
 .. code-block:: bash
 
-   nano /etc/apache2/conf.d/mod_deflate.conf # y ajouter
+   nano /etc/apache2/conf-available/mod_deflate.conf # y ajouter
    <Location />
            # Insert filter
            SetOutputFilter DEFLATE
@@ -140,6 +140,8 @@ Setting the compression
            # Ensure that proxy servers deliver the right content
            Header append Vary User-Agent env=!dont-vary
    </Location>
+
+.. note:: In older versions of apache, the config for ``DEFLATE compression`` is in ``/etc/apache2/conf.d/mod_deflate.conf``.
 
 Enable geolocation
 -------------------
@@ -323,7 +325,7 @@ Retrieve the latest available stable version from https://github.com/3liz/lizmap
    cd /var/www/
    # Options
    MYAPP=lizmap-web-client
-   VERSION=2.12.4
+   VERSION=3.0.3
    # Archive recovery with wget
    wget https://github.com/3liz/$MYAPP/archive/$VERSION.zip
    # Unzip archive
@@ -332,6 +334,52 @@ Retrieve the latest available stable version from https://github.com/3liz/lizmap
    ln -s /var/www/$MYAPP-$VERSION/lizmap/www/ /var/www/html/lm
    # Remove archive
    rm $VERSION.zip
+
+
+Set rights for Apache, so php scripts could write some temporary files or do changes.
+
+.. code-block:: bash
+
+   cd /var/www/$MYAPP-$VERSION/
+   lizmap/install/set_rights.sh www-data www-data
+
+
+Create lizmapConfig.ini.php, localconfig.ini.php and profiles.ini.php and edit them
+to set parameters specific to your installation. You can modify lizmapConfig.ini.php
+to set the url of qgis map server and other things, and profiles.ini.php to store
+data in a database other than an sqlite database.
+
+.. code-block:: bash
+
+   cd lizmap/var/config
+   cp lizmapConfig.ini.php.dist lizmapConfig.ini.php
+   cp localconfig.ini.php.dist localconfig.ini.php
+   cp profiles.ini.php.dist profiles.ini.php
+   cd ../../..
+
+In case you want to enable the demo repositories, just add to ``localconfig.ini.php`` the following:
+
+```
+[modules]
+lizmap.installparam=demo
+```
+
+Then you can launch the installer
+
+.. code-block:: bash
+
+   php lizmap/install/installer.php
+
+
+For testing launch: ``http://127.0.0.1/lm`` in your browser.
+
+In case you get a ``500 - internal server error``, run again:
+
+.. code-block:: bash
+
+   cd /var/www/$MYAPP-$VERSION/
+   lizmap/install/set_rights.sh www-data www-data
+
 
 Development version with git
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
