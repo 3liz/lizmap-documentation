@@ -359,10 +359,11 @@ data in a database other than an sqlite database.
 
 In case you want to enable the demo repositories, just add to ``localconfig.ini.php`` the following:
 
-```
-[modules]
-lizmap.installparam=demo
-```
+.. code-block:: bash
+
+   [modules]
+   lizmap.installparam=demo
+
 
 Then you can launch the installer
 
