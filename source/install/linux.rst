@@ -34,7 +34,8 @@ Installing necessary packages
 
    sudo su # only necessary if you are not logged in as root
    apt-get update # update package lists
-   # On Ubuntu 14.04 LTS install (newer versions of Ubuntu or Debian php7 will have to be installed)
+   # On Ubuntu 14.04 LTS install the following packages
+   # (on newer versions of Ubuntu or Debian php7 will have to be installed)
    apt-get install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php5 php5-cgi php5-gd php5-sqlite php5-curl python-simplejson python-software-properties
 
 .. todo:: Check this: still necessary?
