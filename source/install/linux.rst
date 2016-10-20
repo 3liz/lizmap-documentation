@@ -36,7 +36,7 @@ Installing necessary packages
    apt-get update # update package lists
    # On Ubuntu 14.04 LTS install the following packages
    # (on newer versions of Ubuntu or Debian php7 will have to be installed)
-   apt-get install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php5 php5-cgi php5-gd php5-sqlite php5-curl python-simplejson python-software-properties
+   apt-get install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php5 php5-cgi php5-gd php5-sqlite php5-curl php5-xmlrpc python-simplejson python-software-properties
 
 .. todo:: Check this: still necessary?
    a2dismod php5
