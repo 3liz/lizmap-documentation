@@ -10,7 +10,8 @@ Apache 2.x.x Server Configuration
 
 First we create a folder near to **C:\\** . For example, **C:\\webserver\\** . After that, we need to download the Apache 64 bits, compiled with VC11, for example: http://www.apachelounge.com/download/VC11/binaries/httpd-2.4.20-win64-VC11.zip.
 
-.. note:: You can use anothers installations http://www.apachelounge.com/download/VC11/
+.. note:: You can use another installations http://www.apachelounge.com/download/VC11/
+
 Extract the zip file inside **C:\\webserver\\** and change the name from **httpd-2.4.20-win64-VC11** to **Apache24**.
 Then you open the Apache configuration in **C:\\webserver\\Apache24\\conf\\httpd.conf** and edit with a text editor (e.g. Notepad++ or Notepad) and replace all occurrences of **C:/Apache24** into **C:/webserver/Apache24**.
 
@@ -236,7 +237,7 @@ Now it's time to test the QGIS Server and see if is accessible in fcgi, for this
    </ServiceExceptionReport>
 
 Preparing the home of LizMap Web Client
---------------------------------------
+-----------------------------------------
 
 Now you will install 2 environments, one for production and other for preproduction, for this action you need to create in the following folders:
 **C:\\webserver\\lizmap\\prod\\** and  **C:\\webserver\\lizmap\\preprod\\**
