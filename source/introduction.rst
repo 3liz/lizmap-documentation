@@ -1,9 +1,9 @@
-===============================================================
+============
 Introduction
-===============================================================
+============
 
 Lizmap architecture
-===============================================================
+===================
 
 .. image:: images/all-schema-client-server.png
    :align: center
@@ -26,7 +26,7 @@ When synchronization is complete, The QGIS map can then be accessed on the Inter
 
 
 QGIS and QGIS Server
-===============================================================
+====================
 
 * QGIS, a complete Desktop GIS software
 
@@ -54,10 +54,10 @@ QGIS and QGIS Server
    :width: 90%
 
 Lizmap features
-===============================================================
+===============
 
 Default features
------------------
+----------------
 
 By default, Lizmap offers web maps with the following features:
 
@@ -79,7 +79,7 @@ Finally Lizmap is a proxy to the web services used to construct maps. It is ther
    :scale: 80%
 
 Configuration with QGIS
-------------------------
+-----------------------
 
 Map's configuration is done in QGIS.
 
@@ -127,7 +127,7 @@ The rest is done with the **Lizmap plugin**. This plugin allows to:
    :target: http://demo.3liz.com/lizmap/index.php/view/map?repository=montpellier&project=montpellier
 
 Configuring with the Web back-office
--------------------------------------
+------------------------------------
 
 The Lizmap back-office defines:
 
@@ -137,7 +137,7 @@ The Lizmap back-office defines:
 
 
 In a nutshell
---------------
+-------------
 
 * HTML5 interface compatible mobiles and tablets
 * Grouping maps by directory: application multi-directories and multi-projects

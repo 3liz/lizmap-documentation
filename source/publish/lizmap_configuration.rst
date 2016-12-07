@@ -1,9 +1,9 @@
-===============================================================
+==============================
 Set up your project for Lizmap
-===============================================================
+==============================
 
 Install the Lizmap plugin
-===============================================================
+=========================
 
 The Lizmap plugin is available through the official QGIS project repository:
 http://plugins.qgis.org/plugins/lizmap/
@@ -36,7 +36,7 @@ And it has 4 action buttons:
 * Close
 
 Configure layers and groups
-===============================================================
+===========================
 
 The layer configuration is done in the *Layers* tab.
 
@@ -87,7 +87,7 @@ The group options:
 .. _lizmap-config-map:
 
 Configure the map
-===============================================================
+=================
 
 The tab *Map* allows you to enable or disable basic Lizmap tools, choosing scales and the intial extent.
 
@@ -129,7 +129,7 @@ The initial map extent:
 .. _lizmap-config-baselayers:
 
 Configure the base layers
-========================================================
+=========================
 
 It is often useful to separate base layers as a reference and thematic layers in a Web map. In Lizmap, you can use groups or layers as base layers. It is also possible to use external services in the Web map.
 
@@ -144,7 +144,7 @@ The *Base layers* tab lets you add external services as base layer and an empty 
    :width: 80%
 
 The available base layers
--------------------------------
+-------------------------
 
 * *OpenStreetMap*, mapping project under free and open licenses:
 
@@ -211,6 +211,6 @@ Here are the approximate integer scales of the current external base layers::
     18  2257
 
 External Lizmap layers
-----------------------------
+----------------------
 
 This feature has been removed. It's replaced by the possibility of using the menu  :menuselection:`Layer --> Embed Layers and Groups`, and in the plugin *Layers* tab declare the parent project and the Lizmap repository for the embed layers and groups. See :ref:`lizmap-cache-centralized`

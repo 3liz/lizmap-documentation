@@ -1,9 +1,9 @@
-===============================================================
+==============================
 Prepare a QGIS project for Web
-===============================================================
+==============================
 
 Create your project
-===============================================================
+===================
 
 Add your data:
 
@@ -84,7 +84,7 @@ Check that the paths are saved *relative* in the general tab of the project prop
 .. _layers-tab-metadata:
 
 Configure your layers for the Web
-===============================================================
+=================================
 
 In the window *Layer properties*, the *Metadata* tab allows you to configure a lot of information for Web Geographic Services:
 

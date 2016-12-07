@@ -1,9 +1,9 @@
-===============================================================
+======================
 Advanced Configuration
-===============================================================
+======================
 
 Create an overview map
-===============================================================
+======================
 
 To add an **overview map**, or location map, in the Lizmap's map, you must:
 
@@ -26,7 +26,7 @@ Here is an example of use:
 .. _locate-by-layer:
 
 Add the localization function
-===============================================================
+=============================
 
 .. image:: /images/interface-tools-tab-locate.png
    :align: center
@@ -35,7 +35,7 @@ Add the localization function
 The idea of this tool is to present to the Lizmap Web Client user a drop down list that gives the ability to zoom on one or more spatial objects of the layer.
 
 Use case
-------------------
+--------
 
 Consider a spatial vector layer **districts** contained in the QGIS project. We choose to add these districts in the tool *Locate by layer*, to allow Lizmap Web Client users to quickly position on one of the districts.
 
@@ -44,12 +44,12 @@ Once this layer added in the tool *Locate by layer*, a drop down list of the dis
 When the Web map user selects one name in this list, the map will automatically refocuses on the selected district and the district's geometry is displayed (optional).
 
 Prerequisites
---------------
+-------------
 
 .. note:: The layer(s) you want to use must be **published as WFS layer**: check the corresponding box of the *WFS capabilities* in the *OWS Server* tab of the *Project Properties* window.
 
 How to
----------------
+------
 
 To add a layer to this tool:
 
@@ -64,7 +64,7 @@ To remove a layer already configured:
 * click on the button **Remove layer**.
 
 Hierarchical Lists
------------------------
+------------------
 
 If we take the example of districts, it may be interesting to also provide to the user a *sub-districts* dropdown. We wish that when the user chooses a district, the dropdown of sub-districts is automatically filtered to display only the sub-districts of the chosen district.
 
@@ -78,10 +78,10 @@ For this, there are 2 methods:
 .. _media-in-lizmap:
 
 Media in Lizmap
-===============================================================
+===============
 
 Use principle
------------------------
+-------------
 
 It is possible to provide documents through Lizmap. To do this, you simply:
 
@@ -98,7 +98,7 @@ Then in Lizmap Web Client you can provide access to these documents for 2 things
 Details of these uses is specified below.
 
 Use for links
----------------------------
+-------------
 
 It is possible to use a relative path to a document for layers or groups link.
 
@@ -120,7 +120,7 @@ On the Lizmap Web Client map, if a link has been set up this way for one of the 
 .. _use-in-popups:
 
 Use in popups
-----------------------------
+-------------
 
 Principle
 _________
@@ -130,7 +130,7 @@ As described in the introduction above, you can use **a media path** in the spat
 For example, if you want that the popups associated with a layer displayed a picture that depends on each object, just create a new field that will contain the media path to the picture in each row of the layer attribute table, then activate popups for this layer.
 
 Example
-________
+_______
 
 Here for example the attribute table of a layer *landscape* configured to display pictures in the popup. The user has created a *picture* field in which he places the path to the pictures, and a *pdf* field in which he puts the paths to a pdf file describing the object corresponding to each line.
 
@@ -145,7 +145,7 @@ id      name    description  picture                   pdf
 .. note:: In this example, we see that the pictures and pdf file names are normalized. Please follow this example because it allows using the QGIS Field Calculator to create or update  automatically the media column data for the entire layer.
 
 Result
-_________
+______
 
 Here are the display rules in the popup:
 
@@ -154,7 +154,7 @@ Here are the display rules in the popup:
 * for **other file types, the popup will display a link to the document** that users can download by clicking on the link.
 
 Illustration
-_____________
+____________
 
 Below is an illustration of a Lizmap popup displaying a picture, a text and a link in the popup:
 
@@ -165,10 +165,10 @@ Below is an illustration of a Lizmap popup displaying a picture, a text and a li
 .. _popups-in-lizmap:
 
 How to configure popups
-===============================================================
+=======================
 
 Activate popups
--------------------------------
+---------------
 
 With the plugin, you can activate popups **for a single layer** or for **a group configured with the "Group as layer" option**.
 
@@ -183,7 +183,7 @@ In the web application Lizmap Web Client, a click on a map object will trigger t
 .. note:: For point layers you need to click in the middle of the point to display the popup.
 
 Informations displayed in the popup
-_____________________________________
+___________________________________
 
 By default the Lizmap Web Client popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:
 
@@ -199,14 +199,14 @@ Field         Value
 This is called **simple mode**. You can modify the info displayed through QGIS, and also display pictures or links.
 
 Simple popup configuration
---------------------------------
+--------------------------
 
 With the plugin, if you click on the checkbox **Activate popups** without modifying its content through the button *Configure* the default table is shown.
 
 Nevertheless, you can tune several things in QGIS and with the help of Lizmap plugin to **parametrize the fields displayed**, **rename fields**, and even **display images, photos, or links to internal or external documents**.
 
 Mask or rename a column
-________________________________________
+_______________________
 
 You can use the tools available in the **Fields** tab of the **Layer properties**, in QGIS:
 
@@ -219,7 +219,7 @@ You can use the tools available in the **Fields** tab of the **Layer properties*
    :width: 70%
 
 Usage of media: images, documents, etc.
-________________________________________________
+_______________________________________
 
 If you use **paths to documents of the media directory**, you can:
 
@@ -230,7 +230,7 @@ If you use **paths to documents of the media directory**, you can:
 .. seealso:: Chapter :ref:`media-in-lizmap` for more details on the usage of documents of the directory media in the popups.
 
 Usage of external links
-______________________________
+_______________________
 
 You can also use, in a field, **full web links to a specific page or image**:
 
@@ -238,17 +238,17 @@ You can also use, in a field, **full web links to a specific page or image**:
 * the web link will be displayed and clickable
 
 Advanced popup configuration - HTML format
-------------------------------------------------
+------------------------------------------
 
 Introduction
-_____________
+____________
 
 If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know well the **HTML format**. See e.g.: http://html.net/tutorials/html/
 
 .. warning:: When you use the advanced mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the template. Managing media is also possible, but you have to configure it as well.
 
 Deploying
-_______________
+_________
 
 You can edit the popup template with the button *Configure* in the Lizmap plugin. Clicking on it you'll get a window with two text areas:
 
@@ -291,7 +291,7 @@ You can also use the values of the columns as parameters to give styling to the 
    <p/>
 
 Usage of media and external links
-_____________________________________________
+_________________________________
 
 You can **use the media** referred to in the table content, even if you use a *template model*. To do this, you should use the media column, taking into account the fact that Lizmap Web Client automatically replaces the relative path of the type ``/media/myfile.jpg`` with the full URL to the file, accessible through the web interface.
 
@@ -317,7 +317,7 @@ Here an example of a template handling media and an external link:
 .. _lizmap-simples-themes:
 
 Creating simple themes
-===============================================================
+======================
 
 Starting from Lizmap Web Client version 2.10, it is possible to create themes for all maps of a repository or for a single map. This function needs to be activated by the administrator and uses the directory ``media`` :ref:`media-in-lizmap`.
 
@@ -363,10 +363,10 @@ Once downloaded the zipfile, you can:
 Once your theme is ready, you can just publish it copying it in the directory ``media``.
 
 Adding your own JavaScript
-===============================================================
+==========================
 
 Purpose
---------
+-------
 
 This is useful for a variety of advanced usage. For instance, you can avoid people being able to download elements of the page by right clicking on them, and of course much more.
 
@@ -383,7 +383,7 @@ This is useful for a variety of advanced usage. For instance, you can avoid peop
 
 
 Available Javascript events
------------------------------
+---------------------------
 
 The Javascript code can use many events fired by Lizmap Web Client. Here is a list of all the events available, with the returned properties.
 
@@ -425,17 +425,17 @@ The Javascript code can use many events fired by Lizmap Web Client. Here is a li
 
 
 Examples
-------------------
+--------
 
 Here is a very small example allowing you to disable right clic in Lizmap. Just add a file named e.g. ``disableRightClick.js`` with the following code:
 
-.. code-block:: js
+.. code-block:: javascript
 
- lizMap.events.on({
-  uicreated: function(e) {
-  $('body').attr('oncontextmenu', 'return false;');
-  }
- });
+   lizMap.events.on({
+      uicreated: function(e) {
+         $('body').attr('oncontextmenu', 'return false;');
+      }
+   });
 
 * If you want this code to be executed for all projects of your repository, you have to copy the file in the directory ``/home/data/rep1/media/js/default/`` rather than in ``/home/data/rep1/media/js/myproject/``.
 
@@ -444,7 +444,7 @@ That's all.
 In the directory ``lizmap-web-client/lizmap/install/qgis/media/js/`` you can find examples of suitable JavaScript code; just remove the extension ``.example`` and copy them to your media/js/default/ folder to activate them.
 
 Printing configuration
-===============================================================
+======================
 
 To add print capabilities in the online map, you have to enbale the printing tool in the plugin *Map* tab (:ref:`lizmap-config-map`) and the QGIS project has at least one print composition.
 
@@ -468,7 +468,7 @@ Finally the print function will be based on the map scales that you set in the p
 .. _print-external-baselayer:
 
 Allow printing of external baselayers
-===============================================================
+=====================================
 
 The Lizmap plugin *Baselayers* tab allows you to select and add external baselayers (:ref:`lizmap-config-baselayers`). These external baselayers are not part of the QGIS project, default print function does not integrate them.
 
@@ -497,10 +497,10 @@ For OpenStreetMap baselayers, it is possible to use an XML file for GDAL to expl
 By cons, if this layer has to replace an external baselayer, it must be accessible to QGIS-Server but should not be accessible to the user in Lizmap Web Client. So it must be hidden. See chapter :ref:`hide-layers`.
 
 Optimizing Lizmap
-===============================================================
+=================
 
 General concepts
--------------------
+----------------
 
 Rendering speed is crucial for a webGIS, much more so than for a desktop application:
 
@@ -555,12 +555,12 @@ To optimize your application as much as possible, we suggest you to:
 * Upgrade your server. This is always an option, but is often useless if you did not optimize your project as described above. In any case, a low end server (e.g. 2 Gb RAM, 2 cores at 2.2 GHz) is unsuitable. A fast quad-core with 8 Gb RAM is a reasonable minimum. Avoid installing QGIS server and Lizmap on Windows, it's more complex and slower.
 
 .. note:: Lizmap 3: On the upcoming Lizmap 3 you'll find several improvements that will help optimizing your installation:
-     * a tool for the preparation of the server cache, through the use of a WMTS protocol. In addition, this will allow to use the cached layers as WMTS layers in QGIS desktop
+    * a tool for the preparation of the server cache, through the use of a WMTS protocol. In addition, this will allow to use the cached layers as WMTS layers in QGIS desktop
     * avoiding the automatic download of the legends at startup, and at every zoom level; this will be done exclusively on demand, if the legend is displayed, thus saving one request per layer for each zoom
     * code optimization.
 
 In detail: how to activate the caches
------------------------------------------
+-------------------------------------
 
 The Lizmap plugin *Layers* tab allows you to enable for each layer or group as a layer the cache for generated images. This feature is not compatible with the option *not tiled image*.
 
@@ -614,7 +614,7 @@ To use this feature, you must:
 .. _hide-layers:
 
 Masking individual layers
-===============================================================
+=========================
 
 You can exclude layers of your publication with the *OWS Server* tab of the *QGIS project properties*. In this case the layers will not be available in Lizmap. With this method, you cannot use a layer in the locate by layer function and not display in the map.
 
@@ -632,17 +632,17 @@ This feature can be used for:
 .. _lizmap-config-attribute-table:
 
 Show attribute table for Lizmap layers
-===============================================================
+======================================
 
 Principle
-----------
+---------
 
 Lizmap is designed to show spatial data in the main map, and you can propose users to see an object data through the "popup" feature (a small popup containing the objects data is shown whenever the user clicks on the map ). See :ref:`popups-in-lizmap`
 
 Sometimes this is not enough, and as a map editor, you would like the user to see all the data of a specific layer, as you can do in QGIS by opening the attribute table. Since Lizmap 2.11, you can propose such a feature for any vector layer published in you map. (This feature has been heavily enhanced since Lizmap 3.0. Many features described underneath are only available for Lizmap 3.0 )
 
 Activate the attribute table tool for a vector layer
------------------------------------------------------------------
+----------------------------------------------------
 
 In the **Tools** tab of Lizmap plugin dialog, there is a group called "Attribute layers" which shows a table and some form fields dedicated to add or remove vector layers.
 
@@ -658,7 +658,7 @@ Once the layer is published through WFS, you can add it in the attribute layers 
   - You can use this **Fields to hide** option to **hide** the given fields in the attribute table display. The hidden fields won't be visible for the end user, but will still be available for Lizmap Web Client. **You must use this option to hide the Unique ID field**. If you use the first way (uncheck WFS column), the unique ID won't be usable by Lizmap, and some of the attribute table features will not work properly.
 
 Using relations with the attribute layers tool
------------------------------------------------
+----------------------------------------------
 
 In QGIS, you can configure **relations** between layers, in the **project properties** dialog. If you publish in Lizmap more than one layers in the attribute layers tool, and if some layers are part of a relation, the end user will be able to see child tables under the parent layer table, and a click on one line in the parent table will trigger the filter of the child tables content.
 
@@ -685,17 +685,17 @@ Lizmap Web Client will then handle the relation as a N:M relation:
 
 
 Attribute layers and edition
--------------------------------
+----------------------------
 
 todo
 
 .. _lizmap-config-edition:
 
 Editing data in Lizmap
-===============================================================
+======================
 
 Principle
-----------
+---------
 
 Since version 2.8, it is possible to allow users to **edit spatial and attribute data** from the Lizmap Web Client interface for **PostgreSQL or Spatialite** layers of the QGIS project. The Lizmap plugin allows you to add one or more layers and choose what actions for each will be possible in the web interface:
 
@@ -709,14 +709,14 @@ The **Web form** presented to the user to populate the **attribute table** suppo
 In addition, Lizmap Web Client automatically detects the column type (integer, real, string, etc.) and adds the necessary checks and controls on the fields.
 
 Usage examples
------------------------
+--------------
 
 * **A town** wish that citizens identify visible problems on the road: uncollected trash, broken street lights, wrecks to remove. The QGIS project administrator creates a layer dedicated to collect data and displays them to all.
 
 * **An engineering office** wants to allow project partners to trace remarks on the project areas. It allows the addition of polygons in a dedicated layer.
 
 Configuring the edition tool
-------------------------------
+----------------------------
 
 To allow data editing in Lizmap Web Client, you must:
 
@@ -770,7 +770,7 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
    :width: 80%
 
 Reusing data of edition layers
----------------------------------------------
+------------------------------
 
 The layers that you have selected for the editing tool are "layers like the others", which means:
 
@@ -808,10 +808,10 @@ Obviously you will be able to display this image (or any other file) in the popu
 .. _filter-layer-data-by-group:
 
 Filtered layers - Filtering data in function of users
-===================================================================
+=====================================================
 
 Presentation of the function
-----------------------------------
+----------------------------
 
 Usually, the management of projects Lizmap access rights is via directory. Configuration is done in this case in the Lizmap Web Client administration interface. See :ref:`define-group-rights`. This will completely hide some projects based on user groups, but requires a directory and project management.
 
@@ -828,7 +828,7 @@ Filtering currently uses the ID of the user group connected to the Web applicati
 A video tutorial is available at: https://vimeo.com/83966790
 
 Configuration of the data filter tool
--------------------------------------------
+-------------------------------------
 
 To use data filtering tool in Lizmap Web Client, you must:
 
@@ -853,7 +853,7 @@ Here are the detailed steps to configure this feature:
 * **Disable the client cache and cache server** for all filtered layers. Otherwise, the data displayed will not be updated between each connection or user logout!
 
 Time Manager - Animation of temporal vector layers
-===========================================================
+==================================================
 
 You can create animations of your vectors, provided you have at least a layer with a column with a valid date/time. You should select from the plugin:
 
@@ -873,11 +873,11 @@ Demonstration site: http://demo.lizmap.3liz.com/index.php/view/?repository=rep6
 .. note:: Several different formats for date/time are acceptable (those supported by the JavaScript library `DateJS`). You can check whether your format is supported by entering it in this page: http://www.datejs.com/
 
 Changing the default image of a project in the repositories and projects site
-=================================================================================
+=============================================================================
 
 By default the following image is displayed for a project:
 
-.. image:: http://imgur.com/5hGIvAM
+.. image:: /images/mapmonde.png
    :align: left
    :width: 100%
 

@@ -1,9 +1,9 @@
-===============================================================
+======================
 Publish the map by FTP
-===============================================================
+======================
 
 Reminder of Lizmap architecture
-===============================================================
+===============================
 
 .. image:: /images/all-schema-client-server.png
    :align: center
@@ -18,7 +18,7 @@ For this, it is necessary **to synchronize the local directory with that of the 
 
 
 Use an FTP client
-===============================================================
+=================
 
 FTP allows you to access files from a server, retrieve it and add documents and/or folders. It can therefore be used to synchronize your local directory with the server one Where Lizmap Web Client is on. This protocol is a Web standard that can be exploited through many FTP clients.
 
@@ -36,7 +36,7 @@ You can use these tools to make manual changes to the remote directory:
 
 
 Using FTP tab in Lizmap plugin
-===============================================================
+==============================
 
 The FTP tab in Lizmap plugin allows you to configure the use of the FTP protocol directly into QGIS, in order to make a mirrored synchronization directly from the plugin. To integrate FTP synchronization in the plugin, we relied on two free tools that have proven reliable:
 

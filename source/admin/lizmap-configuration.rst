@@ -1,9 +1,9 @@
-===============================================================
+===============================
 Lizmap Web Client configuration
-===============================================================
+===============================
 
 Introduction
-===============================================================
+============
 
 The *Lizmap configuration* menu is divided into 2 parts:
 
@@ -14,7 +14,7 @@ The *Lizmap configuration* menu is divided into 2 parts:
    :align: center
 
 Services
-===============================================================
+========
 
 To configure **Services**, click the *Modify* button under the summary.
 
@@ -57,7 +57,7 @@ To configure **Services**, click the *Modify* button under the summary.
    :align: center
 
 Repositories
-===============================================================
+============
 
 For each Lizmap repository, are listed:
 
@@ -76,7 +76,7 @@ For each Lizmap repository, are listed:
 You can create a new repository using the button **Create a repository** located at the top and bottom of the section *Repositories*.
 
 Add a repository
----------------------------------------------
+----------------
 
 To create a repository, you must give:
 
@@ -88,7 +88,7 @@ To create a repository, you must give:
 .. _define-group-rights:
 
 Define the rights for each group
----------------------------------------------
+--------------------------------
 
 After creating the directory, the repository modification form is displayed automatically and defines the following rights for each group:
 

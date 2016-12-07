@@ -3,15 +3,17 @@
 # This file is distributed under the same license as the Lizmap package.
 # 
 # Translators:
+# bobolica <bobo-romania@users.noreply.github.com>, 2016
+# Laurent J. <dev@ljouanneau.com>, 2016
 # Nicolas Boisteault <nboisteault@gmail.com>, 2016
 # rldhont <rldhont@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-05 17:13+0200\n"
-"PO-Revision-Date: 2016-07-06 10:20+0000\n"
-"Last-Translator: rldhont <rldhont@gmail.com>\n"
+"POT-Creation-Date: 2016-12-07 10:42+0100\n"
+"PO-Revision-Date: 2016-12-07 12:30+0000\n"
+"Last-Translator: Laurent J. <dev@ljouanneau.com>\n"
 "Language-Team: French (http://www.transifex.com/3liz-1/lizmap-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,9 +36,9 @@ msgstr "Configuration générique du serveur"
 #: ../../source/install/linux.rst:8
 msgid ""
 "This documentation provides an example for configuring a server with the "
-"Debian or Ubuntu Server distribution. We assume you have base systrem "
+"Debian or Ubuntu Server distribution. We assume you have base system "
 "installed and updated."
-msgstr "Cette documentation présente un exemple de configuration d'un serveur sous la distribution Debian ou  Ubuntu Server. Nous considérons que vous avez un système installé et à jour."
+msgstr "La documentation fournie un exemple pour configurer un serveur avec une distribution Debian ou Ubuntu. Nous supposons que vous avec un système de base installé et mis à jour"
 
 #: ../../source/install/linux.rst:10
 msgid "This page does not describe how to secure your Apache server."
@@ -62,7 +64,7 @@ msgstr "Il faudra aussi configurer les autres logiciels pour qu'ils utilisent ce
 msgid "Installing necessary packages"
 msgstr "Installation des paquets nécessaires"
 
-#: ../../source/install/linux.rst:31 ../../source/install/windows.rst:64
+#: ../../source/install/linux.rst:31 ../../source/install/windows.rst:65
 msgid ""
 "Lizmap web client is based on Jelix 1.6. You must install at least the "
 "**5.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, "
@@ -84,281 +86,315 @@ msgid ""
 " activation of php5."
 msgstr "On utilise dans cet exemple le mpm-worker d'Apache. On doit donc configurer manuellement l'activation de php5."
 
-#: ../../source/install/linux.rst:77
+#: ../../source/install/linux.rst:78
 msgid ""
-"In later versions of apache, the config for ``php-cgi`` is in ``/etc/apache2"
-"/conf-available/php.conf``. Copy the text above, then::"
-msgstr ""
+"In older versions of apache, the config for ``php-cgi`` is in "
+"``/etc/apache2/conf.d/php.conf``. Copy the text above, then::"
+msgstr "Dans les vieilles versions d'apache, la configuration pour  ``php-cgi`` est dans ``/etc/apache2/conf.d/php.conf``. Copiez le texte ci-dessus et ensuite :"
 
-#: ../../source/install/linux.rst:79
-msgid "a2enconf php"
-msgstr "a2enconf php"
-
-#: ../../source/install/linux.rst:82
+#: ../../source/install/linux.rst:85
 msgid "mpm-worker configuration"
 msgstr "Configuration du mpm-worker"
 
-#: ../../source/install/linux.rst:86
+#: ../../source/install/linux.rst:89
 msgid ""
 "We modify the Apache configuration file to adapt the options to mpm_worker "
 "server configuration."
 msgstr "On modifie le fichier de configuration d'Apache pour adapter les options du mpm_worker à la configuration du serveur."
 
-#: ../../source/install/linux.rst:103
+#: ../../source/install/linux.rst:106
 msgid "mod_fcgid configuration"
 msgstr "Configuration de mod_fcgid"
 
-#: ../../source/install/linux.rst:105
+#: ../../source/install/linux.rst:108
 msgid ""
 "QGIS Server runs fcgi mode. We must therefore configure the Apache mod_fcgid"
 " to suit to the server capabilities."
 msgstr "QGIS Server fonctionne en mode fcgi. Il faut donc configurer le mod_fcgid d'Apache pour l'adapter aux capacités du serveur."
 
-#: ../../source/install/linux.rst:124
+#: ../../source/install/linux.rst:127
 msgid "Setting the compression"
 msgstr "Configuration de la compression"
 
-#: ../../source/install/linux.rst:145
+#: ../../source/install/linux.rst:147
+msgid ""
+"In older versions of apache, the config for ``DEFLATE compression`` is in "
+"``/etc/apache2/conf.d/mod_deflate.conf``."
+msgstr "Dans les vieilles versions d'apache, la configuration pour  ``DEFLATE compression`` est dans ``/etc/apache2/conf.d/mod_deflate.conf``."
+
+#: ../../source/install/linux.rst:150
 msgid "Enable geolocation"
 msgstr "Activer la géolocalisation"
 
-#: ../../source/install/linux.rst:147
+#: ../../source/install/linux.rst:152
 msgid ""
 "The automatic geolocation provided by Lizmap relies on Google services. To "
 "enable it, your webGIS must be placed under a secure protocol, like "
 "HTTPS.See https://sites.google.com/a/chromium.org/dev/Home/chromium-security"
 "/deprecating-powerful-features-on-insecure-origins for more details."
-msgstr ""
+msgstr "Le système de géolocalisation automatique fourni par lizmap est basé sur les services de Google. Pour l'utiliser, il est nécessaire d'utiliser un protocole sécurisé comme https. Pour plus d'informations: https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins for more details."
 
-#: ../../source/install/linux.rst:150
+#: ../../source/install/linux.rst:155
 msgid "Restart Apache"
 msgstr "Redémarrer Apache"
 
-#: ../../source/install/linux.rst:152
+#: ../../source/install/linux.rst:157
 msgid "You must restart the Apache server to validate the configuration."
 msgstr "Il faut redémarrer le serveur Apache pour valider la configuration"
 
-#: ../../source/install/linux.rst:159
+#: ../../source/install/linux.rst:164
 msgid "Create directories for data"
 msgstr "Création des répertoires pour les données"
 
-#: ../../source/install/linux.rst:171
+#: ../../source/install/linux.rst:176
 msgid "Spatial DBMS: PostgreSQL"
 msgstr "SGBD Spatial : PostGreSQL"
 
-#: ../../source/install/linux.rst:173 ../../source/install/linux.rst:228
-#: ../../source/install/linux.rst:414
+#: ../../source/install/linux.rst:178 ../../source/install/linux.rst:233
+#: ../../source/install/linux.rst:466
 msgid "This section is optional"
 msgstr "Cette partie est optionnelle"
 
-#: ../../source/install/linux.rst:175
+#: ../../source/install/linux.rst:180
 msgid ""
 "PostgreSQL and PostGIS can be very useful to manage spatial data centralized"
 " manner on the server."
 msgstr "Il peut être très intéressant d'utiliser PostGreSQL et PostGIS pour gérer les données spatiales de manière centralisée sur le serveur."
 
-#: ../../source/install/linux.rst:178 ../../source/install/linux.rst:231
-#: ../../source/install/linux.rst:288
+#: ../../source/install/linux.rst:183 ../../source/install/linux.rst:236
+#: ../../source/install/linux.rst:293
 msgid "Install"
 msgstr "Installation"
 
-#: ../../source/install/linux.rst:203
+#: ../../source/install/linux.rst:208
 msgid "Adapting the PostgreSQL configuration"
 msgstr "Adapatation de la configuration de PostgreSQL"
 
-#: ../../source/install/linux.rst:205
+#: ../../source/install/linux.rst:210
 msgid ""
 "We will use pgtune, an utility program that can automatically generate a "
 "PostgreSQL configuration file adapted to the properties of the server "
 "(memory, processors, etc.)"
 msgstr "Nous allons utiliser pgtune, un utilitaire qui permet de générer automatiquement un fichier de configuration de PostgreSQL adapté aux propriétés du serveur (mémoire vive, processeurs, etc.)"
 
-#: ../../source/install/linux.rst:226
+#: ../../source/install/linux.rst:231
 msgid "FTP Server: pure-ftpd"
 msgstr "Serveur FTP : pure-ftpd"
 
-#: ../../source/install/linux.rst:238
+#: ../../source/install/linux.rst:243
 msgid "Configure"
 msgstr "Configuration"
 
-#: ../../source/install/linux.rst:261
+#: ../../source/install/linux.rst:266
 msgid "Creating a user account"
 msgstr "Création d'un compte utilisateur"
 
-#: ../../source/install/linux.rst:283
+#: ../../source/install/linux.rst:288
 msgid "Map server: QGIS Server"
 msgstr "Serveur cartographique: QGIS Server"
 
-#: ../../source/install/linux.rst:285
+#: ../../source/install/linux.rst:290
 msgid ""
 "Details for the installation may differ for specific versions of the "
 "operating system. Please refer to "
 "http://qgis.org/en/site/forusers/download.html for up to date documentation."
 msgstr "Des étapes de l'installation peuvent être différentes pour des versions spécifiques du système d'exploitation. Veuillez vous référer à http://qgis.org/fr/site/forusers/download.html pour une documentation à jour."
 
-#: ../../source/install/linux.rst:307
+#: ../../source/install/linux.rst:312
 msgid ""
 "See "
 "http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html"
 " for more information on QGIS Server."
 msgstr "Consultez http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html pour plus d'information sur QGIS Server."
 
-#: ../../source/install/linux.rst:310
+#: ../../source/install/linux.rst:315
 msgid "Retrieve and install Lizmap Web Client"
 msgstr "Récupérer et installer LizMap Web Client"
 
-#: ../../source/install/linux.rst:317
+#: ../../source/install/linux.rst:322
 msgid "With ZIP file"
 msgstr "Depuis le fichier ZIP"
 
-#: ../../source/install/linux.rst:319
+#: ../../source/install/linux.rst:324
 msgid ""
 "Retrieve the latest available stable version from https://github.com/3liz"
 "/lizmap-web-client/releases/"
 msgstr "Vous pouvez trouver la dernière version stable disponible à l'adresse https://github.com/3liz/lizmap-web-client/releases/"
 
-#: ../../source/install/linux.rst:337
+#: ../../source/install/linux.rst:342
+msgid ""
+"Set rights for Apache, so php scripts could write some temporary files or do"
+" changes."
+msgstr "Mettez les droits pour Apache, afin que les scripts PHP puisse écrire des fichiers temporaires ou faire des changements."
+
+#: ../../source/install/linux.rst:350
+msgid ""
+"Create lizmapConfig.ini.php, localconfig.ini.php and profiles.ini.php and "
+"edit them to set parameters specific to your installation. You can modify "
+"lizmapConfig.ini.php to set the url of qgis map server and other things, and"
+" profiles.ini.php to store data in a database other than an sqlite database."
+msgstr "Créez les fichiers lizmapConfig.ini.php, localconfig.ini.php et profiles.ini.php, et éditez les pour spécifier les paramètres pour votre installation. Vous pouvez modifier lizmapConfig.ini.php pour mettre l'url du serveur QGIS, et d'autres choses, et profiles.ini.php pour stocker les données dans une autre base que la base sqlite."
+
+#: ../../source/install/linux.rst:363
+msgid ""
+"In case you want to enable the demo repositories, just add to "
+"``localconfig.ini.php`` the following:"
+msgstr "Au cas où vous voudriez activer le repertoire des démos, ajoutez juste dans ``localconfig.ini.php`` :"
+
+#: ../../source/install/linux.rst:371
+msgid "Then you can launch the installer"
+msgstr "Ensuite vous pouvez lancer l'installateur"
+
+#: ../../source/install/linux.rst:378
+msgid "For testing launch: ``http://127.0.0.1/lm`` in your browser."
+msgstr "Pour tester : ``http://127.0.0.1/lm`` dans votre navigateur."
+
+#: ../../source/install/linux.rst:380
+msgid "In case you get a ``500 - internal server error``, run again:"
+msgstr "Si vous avez un ``500 - internal server error``, lancez de nouveau :"
+
+#: ../../source/install/linux.rst:389
 msgid "Development version with git"
 msgstr "Version de développement avec Github"
 
-#: ../../source/install/linux.rst:339
+#: ../../source/install/linux.rst:391
 msgid ""
 "The development version is always changing, and bugs can occur. Do not use "
 "it in production."
 msgstr "la version de développement est en constante évolution, et des bugs peuvent survenir. Ne pas l'utiliser en production."
 
-#: ../../source/install/linux.rst:341
+#: ../../source/install/linux.rst:393
 msgid "The first time"
 msgstr "Pour installer"
 
-#: ../../source/install/linux.rst:356
+#: ../../source/install/linux.rst:408
 msgid "To update your branch from the master repository"
 msgstr "Pour mettre à jour votre branche depuis le dépôt master"
 
-#: ../../source/install/linux.rst:379
+#: ../../source/install/linux.rst:431
 msgid "It is always good to make a backup before updating."
 msgstr "Il est toujours bon de faire une sauvegarde avant toute mise à jour."
 
-#: ../../source/install/linux.rst:382
+#: ../../source/install/linux.rst:434
 msgid "Give the appropriate rights to directories and files"
 msgstr "Donner les droits adéquats aux répertoires et fichiers"
 
-#: ../../source/install/linux.rst:391
+#: ../../source/install/linux.rst:443
 msgid "First test"
 msgstr "Premier test"
 
-#: ../../source/install/linux.rst:393
+#: ../../source/install/linux.rst:445
 msgid ""
 "Go to the Lizmap Web Client home to see if the installation was performed "
 "correctly: http://localhost/lm"
 msgstr "Aller à l'accueil de Lizmap pour voir si l'installation a été correctement réalisée : http://localhost/lm"
 
-#: ../../source/install/linux.rst:395
+#: ../../source/install/linux.rst:447
 msgid "Replace ``localhost`` with the address or IP number of your server."
 msgstr "Remplacer ``localhost`` par l'adresse ou l'adresse IP de votre serveur."
 
-#: ../../source/install/linux.rst:397
+#: ../../source/install/linux.rst:449
 msgid ""
 "Lizmap is accessible, without further configurations, also as WMS and WFS "
 "server from a browser:"
 msgstr "Lizmap est aussi accessible, sans plus de configurations, comme serveur WMS et WFS depuis un navigateur:"
 
-#: ../../source/install/linux.rst:399
+#: ../../source/install/linux.rst:451
 msgid ""
 "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities"
 msgstr "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities"
 
-#: ../../source/install/linux.rst:401
+#: ../../source/install/linux.rst:453
 msgid ""
 "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities"
 msgstr "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities"
 
-#: ../../source/install/linux.rst:403
+#: ../../source/install/linux.rst:455
 msgid "and from QGIS:"
 msgstr "et depuis QGIS:"
 
-#: ../../source/install/linux.rst:405
+#: ../../source/install/linux.rst:457
 msgid ""
 "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&"
 msgstr "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&"
 
-#: ../../source/install/linux.rst:407
+#: ../../source/install/linux.rst:459
 msgid ""
 "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 msgstr "http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 
-#: ../../source/install/linux.rst:409
+#: ../../source/install/linux.rst:461
 msgid ""
 "Access to the WMS and WFS servers can be limited by assigning privileges to "
 "specific repositories, see the administration section."
 msgstr "Les accès aux serveurs WMS et WFS peuvent être restreints en assignant des droits à certains projets, pour cela consultez la partie administration."
 
-#: ../../source/install/linux.rst:412
+#: ../../source/install/linux.rst:464
 msgid "Editing tool: Configure the server with the database support"
 msgstr "Outil d'édition : Configurer le serveur avec le support des bases de données"
 
-#: ../../source/install/linux.rst:417
+#: ../../source/install/linux.rst:469
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
-#: ../../source/install/linux.rst:419
+#: ../../source/install/linux.rst:471
 msgid ""
 "For the editing of PostGIS layers in Web Client Lizmap operate, install "
 "PostgreSQL support for PHP."
 msgstr "Pour que l'édition de couches PostGIS dans Lizmap Web Client fonctionnent, il faut installer le support de PostGreSQL pour PHP."
 
-#: ../../source/install/linux.rst:426
+#: ../../source/install/linux.rst:478
 msgid ""
 "For editing, we strongly recommend using a PostgreSQL database. This greatly"
 " simplifies installation and retrieval of data entered by users."
 msgstr "Pour l'édition, nous conseillons fortement d'utiliser une base de données PostGreSQL. Cela simplifie fortement l'installation et la récupération des données saisies par les utilisateurs."
 
-#: ../../source/install/linux.rst:429
+#: ../../source/install/linux.rst:481
 msgid "Spatialite"
 msgstr "Spatialite"
 
-#: ../../source/install/linux.rst:432
+#: ../../source/install/linux.rst:484
 msgid "Enable Spatialite extension"
 msgstr "Activer l'extension Spatialite"
 
-#: ../../source/install/linux.rst:434
+#: ../../source/install/linux.rst:486
 msgid ""
 "To use editing on layers spatiatlite,you have to add the spatialite "
 "extension in PHP. You can follow these instructions to do so: http://www"
 ".gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
 msgstr "Pour pouvoir utiliser l'édition sur des couches spatiatlite, il faut ajouter l'extension spatialite dans PHP. Vous pouvez suivre les instructions suivantes pour le faire : http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
 
-#: ../../source/install/linux.rst:437
+#: ../../source/install/linux.rst:489
 msgid ""
 "Lizmap Web Client tests whether the spatialite support is enabled in PHP. If"
 " it is not, then spatialities layers will not be used in the editing tool. "
 "You can always use PostgreSQL data for editing."
 msgstr "Lizmap Web Client teste si le support du spatialite est bien activé dans le php. S'il ne l'est pas, alors les couches spatialites ne seront pas utilisables dans l'outil d'édition. Vous pouvez toujours utiliser des données PostGreSQL pour l'édition."
 
-#: ../../source/install/linux.rst:440
+#: ../../source/install/linux.rst:492
 msgid ""
 "Give the appropriate rights to the directory containing Spatialite databases"
 msgstr "Donner les droits adéquats au répertoire contenant les bases de données Spatialite"
 
-#: ../../source/install/linux.rst:442
+#: ../../source/install/linux.rst:494
 msgid ""
 "So that Lizmap Web Client can modify the data contained in databases "
 "Spatialite, we must ensure that **the Apache user (www-data) has well write "
 "access to the directory containing each Spatialite file**"
 msgstr "Pour que l'application Lizmap Web Client puisse modifier les données contenues dans les bases Spatialite, il faut s'assurer que **l'utilisateur Apache (www-data) ait bien les droits en écriture sur le répertoire contenant chaque fichier spatialite**."
 
-#: ../../source/install/linux.rst:444
+#: ../../source/install/linux.rst:496
 msgid ""
 "For example, if a directory contains a QGIS project, which uses a Spatialite"
 " database placed in a **db** directory at the same level as the QGIS "
 "project:"
 msgstr "Par exemple, si un répertoire contient un projet QGIS, qui utilise une base de données Spatialite placée dans un répertoire **bdd** au même niveau que le projet QGIS :"
 
-#: ../../source/install/linux.rst:453
+#: ../../source/install/linux.rst:505
 msgid "So you have to give the rights in this way:"
 msgstr "Alors il faut donner les droits de cette manière :"
 
-#: ../../source/install/linux.rst:460
+#: ../../source/install/linux.rst:512
 msgid ""
 "so if you want to install Lizmap to provide access to multiple map "
 "publishers, you should tell them to always create a **db** directory at the "
@@ -367,88 +403,88 @@ msgid ""
 "unique directory."
 msgstr "c'est pourquoi, si vous souhaitez installer Lizmap pour offrir un accès à plusieurs utilisateurs, nous vous conseillons de leur dire de toujours créer un répertoire bdd au même niveau que les projets QGIS dans le répertoire Lizmap. Cela facilitera le travail de l'administrateur qui pourra modifier les droits de cet unique répertoire."
 
-#: ../../source/install/linux.rst:463
+#: ../../source/install/linux.rst:515
 msgid "Version upgrade"
 msgstr "Montée de version"
 
-#: ../../source/install/linux.rst:466
+#: ../../source/install/linux.rst:518
 msgid "Preliminary backup"
 msgstr "Sauvegarde préalable"
 
-#: ../../source/install/linux.rst:468
+#: ../../source/install/linux.rst:520
 msgid ""
 "Before update, make a backup of the configuration data: "
 "*lizmap/var/config/lizmapConfig.ini.php*, *lizmap/var/jauth.db* and the log "
 "file (from 2.8) *lizmap/var/logs.db*"
 msgstr "Avant de mettre à jour, faites une sauvegarde des données de configuration : lizmap/var/jauth.db and lizmap/var/config/lizmapConfig.ini.php et du fichier de log (à partir de la 2.8) lizmap/var/logs.db"
 
-#: ../../source/install/linux.rst:480
+#: ../../source/install/linux.rst:532
 msgid ""
 "Then do a typical installation of the new version (see above), which will "
 "create a new folder in the directory */var/www/*"
 msgstr "Puis faites une installation classique de la nouvelle version (voir ci-dessus), ce qui crééra un nouveau dossier dans le répertoire /var/www/"
 
-#: ../../source/install/linux.rst:483
+#: ../../source/install/linux.rst:535
 msgid "Copy the files saved in the folder of the new version"
 msgstr "Copier les fichiers sauvegardés dans le dossier de la nouvelle version"
 
-#: ../../source/install/linux.rst:492
+#: ../../source/install/linux.rst:544
 msgid ""
 "In some versions, it is also necessary to update the database that stores "
 "the rights. See the following for more details."
 msgstr "Pour certaines versions, il est aussi nécessaire de mettre à jour la base de données qui stocke les droits. Voir les points suivants pour plus de détail."
 
-#: ../../source/install/linux.rst:495
+#: ../../source/install/linux.rst:547
 msgid "From version 2.3 or lower to version 2.4 or upper"
 msgstr "De la version 2.3.0 ou inférieure à la 2.4.0 ou supérieure"
 
-#: ../../source/install/linux.rst:497
+#: ../../source/install/linux.rst:549
 msgid ""
 "The Jelix framework (tool with which Lizmap Web Client is built) has been "
 "updated. It is necessary to change the rights management SQLite database:"
 msgstr "Le framework Jelix (outil avec lequel est construit Lizmap Web Client) a été mis à jour. Il faut modifier la base de données sqlite de gestion des droits :"
 
-#: ../../source/install/linux.rst:505
+#: ../../source/install/linux.rst:557
 msgid "From version 2.6 or lower to version 2.7"
 msgstr "De la version 2.6 ou inférieure à la version 2.7"
 
-#: ../../source/install/linux.rst:507
+#: ../../source/install/linux.rst:559
 msgid ""
 "Support for annotations and management of related rights was added to Lizmap"
 " Web Client. It is necessary to change the rights management SQLite database"
 " to upgrade it:"
 msgstr "Le support des annotations a été ajouté à Lizmap, ainsi que la gestion des droits liée. Il faut donc modifier la base de données des droits pour mettre à niveau :"
 
-#: ../../source/install/linux.rst:516
+#: ../../source/install/linux.rst:568
 msgid "From version 2.7.*  to version 2.8"
 msgstr "De la version 2.7.*  à la version 2.8"
 
-#: ../../source/install/linux.rst:518
+#: ../../source/install/linux.rst:570
 msgid ""
 "The editing tool replaced the annotation tool and fields to describe each "
 "Lizmap Web Client user has been added. It is necessary to upgrade the rights"
 " management SQLite database:"
 msgstr "L'outil d'édition a remplacé l'outil d'annotation et nous avons ajouté des champs pour décrire chaque utilisateur Lizmap. Il faut mettre à jour la base de donnée de gestion des droits :"
 
-#: ../../source/install/linux.rst:526
+#: ../../source/install/linux.rst:578
 msgid "From version 2.8.*  to version 2.9"
 msgstr "De la version 2.8.*  à la version 2.9"
 
-#: ../../source/install/linux.rst:528 ../../source/install/linux.rst:538
+#: ../../source/install/linux.rst:580 ../../source/install/linux.rst:590
 msgid ""
 "The functionality of layers data filtering based on the connected user "
 "requires the addition of rights related to the user data base:"
 msgstr "La fonctionnalité de filtrage des données des couches en fonction de l'utilisateur connecté nécessite l'ajout des droits liés dans la base de données des utilisateurs :"
 
-#: ../../source/install/linux.rst:536
+#: ../../source/install/linux.rst:588
 msgid "From version 2.9.*  to version 2.10"
 msgstr "De la version 2.9.*  à la version 2.10"
 
-#: ../../source/install/linux.rst:546
+#: ../../source/install/linux.rst:598
 msgid "Delete Jelix temporary files"
 msgstr "Supprimer les fichiers temporaires de Jelix"
 
-#: ../../source/install/linux.rst:553
+#: ../../source/install/linux.rst:605
 msgid "Redefine the rights to the application files"
 msgstr "Redéfinir les droits sur les fichiers de l'application"
 
@@ -461,14 +497,14 @@ msgid ""
 "This documentation shows the progress of the installation Lizmap Web Client "
 "on a Windows 10 environment. The other versions of Windows should not be a "
 "problem."
-msgstr ""
+msgstr "La documentation montre la progression de l'installation de Lizmap Web Client dans un environnement Windows 10. Les autres versions de Windows ne devraient pas poser de problème."
 
 #: ../../source/install/windows.rst:6
 msgid ""
 "In this document, the version 3.0 of Lizmap Web Client is used. Be sure to "
 "adapt it according to the version you want to install (the latter is "
 "recommended)."
-msgstr ""
+msgstr "Dans la documentation la version 3.0 de Lizmap Web Client est utilisée. Soyez certain de l'adapter en fonction de la version que vous voulez installer (la dernière est recommandée)."
 
 #: ../../source/install/windows.rst:9
 msgid "Apache 2.x.x Server Configuration"
@@ -482,13 +518,12 @@ msgid ""
 "http://www.apachelounge.com/download/VC11/binaries/httpd-2.4.20-win64-VC11.zip."
 msgstr ""
 
-#: ../../source/install/windows.rst:13 ../../source/install/windows.rst:35
+#: ../../source/install/windows.rst:13
 msgid ""
-"You can use anothers installations "
-"http://www.apachelounge.com/download/VC11/"
-msgstr "Vous pouvez utiliser une autre installation http://www.apachelounge.com/download/VC11/"
+"You can use another installations http://www.apachelounge.com/download/VC11/"
+msgstr ""
 
-#: ../../source/install/windows.rst:14
+#: ../../source/install/windows.rst:15
 msgid ""
 "Extract the zip file inside **C:\\\\webserver\\\\** and change the name from"
 " **httpd-2.4.20-win64-VC11** to **Apache24**. Then you open the Apache "
@@ -497,7 +532,7 @@ msgid ""
 "occurrences of **C:/Apache24** into **C:/webserver/Apache24**."
 msgstr ""
 
-#: ../../source/install/windows.rst:17
+#: ../../source/install/windows.rst:18
 msgid ""
 "After this replacement, search with :kbd:`Ctrl+F` by the variable "
 "**ServerName** and add below the following words **ServerName localhost**. "
@@ -506,7 +541,7 @@ msgid ""
 " and **save** the file."
 msgstr ""
 
-#: ../../source/install/windows.rst:19
+#: ../../source/install/windows.rst:20
 msgid ""
 "To see if the Apache can start, open the command-line with :kbd:`Windows+R` "
 "and type :kbd:`cmd`, then in the shell write "
@@ -514,13 +549,13 @@ msgid ""
 ":kbd:`cmd`."
 msgstr ""
 
-#: ../../source/install/windows.rst:21
+#: ../../source/install/windows.rst:22
 msgid ""
 "It is important to **RIGHT-CLICK** and *\"Run as administrator\"* to have "
 "complete access. Do it every time you need to use the *Shell*."
 msgstr ""
 
-#: ../../source/install/windows.rst:24
+#: ../../source/install/windows.rst:25
 msgid ""
 "After you type the instruction click enter and you will see a notice of "
 "windows firewall and you need to **Allow Access For all**. Then open the "
@@ -528,14 +563,18 @@ msgid ""
 "with the **\"It Works\"**."
 msgstr ""
 
-#: ../../source/install/windows.rst:27
+#: ../../source/install/windows.rst:28
 msgid ""
 "If don't popup  the firewall windows this means that you probably have an "
 "anti-virus software managing your firewall. In this case, you need to check "
-"the configurations and allow manually the apache service."
+"the configurations and allow manually the apache service. Another import tip"
+" if Windows Firewall don't show the previous dialog you need to add manually"
+" the port 80 as inbound/outbound port in Advanced Windows Firewall "
+"properties (Control Planel>Administrative Tools>Windows Firewall with "
+"Advanced Security)."
 msgstr ""
 
-#: ../../source/install/windows.rst:29
+#: ../../source/install/windows.rst:30
 msgid ""
 "Open the :kbd:`cmd` where you run the previous command and press "
 ":kbd:`Ctrl+C` to stop Apache. Then add the Apache to your Windows System "
@@ -550,14 +589,14 @@ msgid ""
 "pressing :kbd:`Ctrl+C`."
 msgstr ""
 
-#: ../../source/install/windows.rst:31
+#: ../../source/install/windows.rst:32
 msgid ""
 "Now it's time to add Apache as Service, for this step you need to open the "
 "command line and type :kbd:`httpd -k install`. This will start Apache as a "
 "Windows Service."
 msgstr ""
 
-#: ../../source/install/windows.rst:33
+#: ../../source/install/windows.rst:34
 msgid ""
 "After you have the Apache configured as Service you will need the mod_fgci "
 "module that can be found in "
@@ -565,7 +604,13 @@ msgid ""
 " ."
 msgstr ""
 
-#: ../../source/install/windows.rst:37
+#: ../../source/install/windows.rst:36
+msgid ""
+"You can use anothers installations "
+"http://www.apachelounge.com/download/VC11/"
+msgstr "Vous pouvez utiliser une autre installation http://www.apachelounge.com/download/VC11/"
+
+#: ../../source/install/windows.rst:38
 msgid ""
 "The link above include several apache modules, unzip the file "
 "**mod_fcgid-2.3.9\\mod_fcgid\\mod_fcgid.so** into the directory "
@@ -580,36 +625,36 @@ msgid ""
 "**mod_ident.so**. This action will activate them."
 msgstr ""
 
-#: ../../source/install/windows.rst:39
+#: ../../source/install/windows.rst:40
 msgid ""
 "If you need to use a different port, it's necessary active others modules "
 "associated to proxy : **proxy**, **proxy_http**, **proxy-connect**, **proxy-"
 "fcgin cache**, **disk-cache**, **headers**"
 msgstr ""
 
-#: ../../source/install/windows.rst:41
+#: ../../source/install/windows.rst:42
 msgid ""
 "You need to configure the files compression, so you need to add the "
 "following lines at the end of the :kbd:`httpd` configuration file:"
 msgstr ""
 
-#: ../../source/install/windows.rst:54
+#: ../../source/install/windows.rst:55
 msgid ""
 "If another port is to be used e.g. **1664**, add **Listen** option to the "
 "Apache **httpd.conf** file: Listen 80 Listen 1664"
 msgstr ""
 
-#: ../../source/install/windows.rst:58
+#: ../../source/install/windows.rst:59
 msgid ""
 "After this restart the Apache use the command-line and type :kbd:`httpd -k "
 "restart` ."
 msgstr ""
 
-#: ../../source/install/windows.rst:62
+#: ../../source/install/windows.rst:63
 msgid "php 5.x.xx Configuration"
-msgstr ""
+msgstr "Configuration php 5.x.xx"
 
-#: ../../source/install/windows.rst:66
+#: ../../source/install/windows.rst:67
 msgid ""
 "Go to http://windows.php.net/download/ and download "
 "php-5.6.23-Win32-VC11-x64.zip , make sure it is the non-thread-safe file, "
@@ -617,7 +662,7 @@ msgid ""
 "http://windows.php.net/downloads/releases/php-5.6.23-Win32-VC11-x64.zip"
 msgstr ""
 
-#: ../../source/install/windows.rst:69
+#: ../../source/install/windows.rst:70
 msgid ""
 "After download unzip in **C:\\\\webserver\\\\php-5.6.23** and go to the file"
 " **C:\\\\webserver\\\\php-5.6.23\\\\php.ini-production** and change into "
@@ -629,7 +674,7 @@ msgid ""
 "following lines:"
 msgstr ""
 
-#: ../../source/install/windows.rst:84
+#: ../../source/install/windows.rst:85
 msgid ""
 "Then you need to change the upload values from deafult value to 15M and will"
 " stay like :kbd:`upload_max_filesize = 15M`. Do the same for post_max_size "
@@ -645,7 +690,7 @@ msgid ""
 "Apache configuration with :kbd:`httpd -S`"
 msgstr ""
 
-#: ../../source/install/windows.rst:88
+#: ../../source/install/windows.rst:89
 msgid ""
 "After this steps and you need to create a configuration file for using of "
 "PHP, so you need to create a file in **C:/webserver/Apache24/conf/extra/** "
@@ -653,11 +698,11 @@ msgid ""
 " editor and save it with the following code:"
 msgstr ""
 
-#: ../../source/install/windows.rst:99
+#: ../../source/install/windows.rst:100
 msgid "Make sure that you have the extension :kbd:`.conf` in this file."
 msgstr ""
 
-#: ../../source/install/windows.rst:101
+#: ../../source/install/windows.rst:102
 msgid ""
 "Go to :kbd:`http.conf` and uncomment the line :kbd:`Include conf/extra"
 "/httpd-vhosts.conf` . This will permit you add new virtual hosts in the file"
@@ -669,14 +714,14 @@ msgid ""
 "after the default configurations:"
 msgstr ""
 
-#: ../../source/install/windows.rst:121
+#: ../../source/install/windows.rst:122
 msgid ""
 "After this step save the file. Create a folder with the name lizmap inside "
 "**C:/webserver** and in the **C:/webserver/lizmap** add a file with PHP "
 "extension and save with this code inside of file:"
 msgstr ""
 
-#: ../../source/install/windows.rst:129
+#: ../../source/install/windows.rst:130
 msgid ""
 "Restart Apache in command line with :kbd:`httpd -k restart` and see if "
 "everything is right. If YES, open the browser and type "
@@ -684,83 +729,83 @@ msgid ""
 "assume that you install correctly the PHP."
 msgstr ""
 
-#: ../../source/install/windows.rst:131
+#: ../../source/install/windows.rst:132
 msgid ""
 "for the PostgreSQL drivers PHP extensions you need to have them "
 "**installed**."
 msgstr ""
 
-#: ../../source/install/windows.rst:134
+#: ../../source/install/windows.rst:135
 msgid "QGIS Server Installation"
-msgstr ""
+msgstr "Installation de QGIS Server"
 
-#: ../../source/install/windows.rst:136
+#: ../../source/install/windows.rst:137
 msgid ""
 "Go to http://www.qgis.org and get the file **Osgeo4W Network installer (64 "
 "bit)** (e.g. http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe ) "
 "and run the installer. Choose the following options:"
 msgstr ""
 
-#: ../../source/install/windows.rst:138
+#: ../../source/install/windows.rst:139
 msgid "Advanced Installer;"
 msgstr "Installation avancée ;"
 
-#: ../../source/install/windows.rst:139
+#: ../../source/install/windows.rst:140
 msgid "Install from internet;"
 msgstr "Installation depuis internet ;"
 
-#: ../../source/install/windows.rst:140
+#: ../../source/install/windows.rst:141
 msgid "Root Directory **C:\\\\OSGeo4W64** and install for **all users**;"
 msgstr ""
 
-#: ../../source/install/windows.rst:141
+#: ../../source/install/windows.rst:142
 msgid "Keep default Local Package Directory and Start Menu Name"
 msgstr ""
 
-#: ../../source/install/windows.rst:142
+#: ../../source/install/windows.rst:143
 msgid "Do not configure proxy if not needed"
 msgstr ""
 
-#: ../../source/install/windows.rst:143
+#: ../../source/install/windows.rst:144
 msgid "Choose a download site : click on http://download.osgeo.org the \"Next\""
 msgstr ""
 
-#: ../../source/install/windows.rst:144
+#: ../../source/install/windows.rst:145
 msgid ""
 "Select packages : Commandline_Utilities/gdal, Desktop/Qgis full , Web/Qgis "
 "server, lib/fcgi  then Next (We use for stable purposes, the QGIS LTR "
 "version)"
 msgstr ""
 
-#: ../../source/install/windows.rst:145
+#: ../../source/install/windows.rst:146
 msgid ""
 "Accept to get packages to meet dependencies : Next then Wait for the "
 "download to be completed and Agree to all licenses"
 msgstr ""
 
-#: ../../source/install/windows.rst:147
+#: ../../source/install/windows.rst:148
 msgid "This process can be long (~ 1 hour)."
 msgstr ""
 
-#: ../../source/install/windows.rst:149
+#: ../../source/install/windows.rst:150
 msgid ""
 "After the installation we need to configure QGIS Server to be accessible as "
 "fcgi, so you need to modify the file in the directory  "
 "**C:/webserver/Apache24/conf/extra/httpd-vhosts.conf** to have this content:"
 msgstr ""
 
-#: ../../source/install/windows.rst:185
+#: ../../source/install/windows.rst:186
 msgid ""
 "After this modification go to the file "
 "**C:\\\\webserver\\\\Apache24\\\\conf\\\\extra\\\\php5.6.23.conf** and "
 "modify it as well to have the next configuration:"
 msgstr ""
 
-#: ../../source/install/windows.rst:214
+#: ../../source/install/windows.rst:224
 msgid "After the changes restart apache, type in commandline the instruction:"
 msgstr ""
 
-#: ../../source/install/windows.rst:221
+#: ../../source/install/windows.rst:231
 msgid ""
 "Now it's time to test the QGIS Server and see if is accessible in fcgi, for "
 "this you nee to type in the browser the link: "
@@ -768,11 +813,11 @@ msgid ""
 "will receive the following response:"
 msgstr ""
 
-#: ../../source/install/windows.rst:230
+#: ../../source/install/windows.rst:240
 msgid "Preparing the home of LizMap Web Client"
 msgstr ""
 
-#: ../../source/install/windows.rst:232
+#: ../../source/install/windows.rst:242
 msgid ""
 "Now you will install 2 environments, one for production and other for "
 "preproduction, for this action you need to create in the following folders: "
@@ -780,7 +825,7 @@ msgid ""
 "**C:\\\\webserver\\\\lizmap\\\\preprod\\\\**"
 msgstr ""
 
-#: ../../source/install/windows.rst:235
+#: ../../source/install/windows.rst:245
 msgid ""
 "Go to 3Liz Github repository https://github.com/3liz/lizmap-web-client/tags "
 "and get the last version in ZIP format. For example, you can use 3.0 ( "
@@ -789,7 +834,7 @@ msgid ""
 "client/archive/master.zip**)."
 msgstr ""
 
-#: ../../source/install/windows.rst:238
+#: ../../source/install/windows.rst:248
 msgid ""
 "Each environment will have several versions in parallel. For example: master"
 " and release_3_0. For that you need to unzip in "
@@ -800,7 +845,7 @@ msgid ""
 "for preprod **C:/webserver/cache/preprod**."
 msgstr ""
 
-#: ../../source/install/windows.rst:241
+#: ../../source/install/windows.rst:251
 msgid ""
 "After create the cache folders, modify the virtual host to point to the "
 "**www folder** of lizmap web client application. Got to the file  "
@@ -809,13 +854,13 @@ msgid ""
 "**C:/webserver/lizmap/prod/master/lizmap/www** ."
 msgstr ""
 
-#: ../../source/install/windows.rst:287
+#: ../../source/install/windows.rst:297
 msgid ""
 "After the replacement save the file and restart Apache with the command-line"
 " instruction:"
 msgstr ""
 
-#: ../../source/install/windows.rst:293
+#: ../../source/install/windows.rst:303
 msgid ""
 "In case of lizmap version >= 3.0, you must use some scripts to install it "
 "properly (see https://github.com/3liz/lizmap-web-"
@@ -823,58 +868,58 @@ msgid ""
 "write the next instructions:"
 msgstr ""
 
-#: ../../source/install/windows.rst:304
+#: ../../source/install/windows.rst:314
 msgid ""
 "If you want to enable the demo repositories, just add to localconfig.ini.php"
 " the following code:"
 msgstr ""
 
-#: ../../source/install/windows.rst:311
+#: ../../source/install/windows.rst:321
 msgid ""
 "And then you can launch the installer in the command-line (:kbd:`cmd`):"
 msgstr ""
 
-#: ../../source/install/windows.rst:319
+#: ../../source/install/windows.rst:329
 msgid "Using PostgreSQL as administrator database (Optional)"
 msgstr ""
 
-#: ../../source/install/windows.rst:321
+#: ../../source/install/windows.rst:331
 msgid "**Requirements**: PostgreSQL/PostGIS installation"
 msgstr ""
 
-#: ../../source/install/windows.rst:323
+#: ../../source/install/windows.rst:333
 msgid ""
 "By default, when you install LizMap Web Client, you will install a sqlite "
 "database where will be store the information about users, permissions among "
 "other information."
 msgstr ""
 
-#: ../../source/install/windows.rst:325
+#: ../../source/install/windows.rst:335
 msgid ""
 "Imagine that you are GIS Manager and you want to link the user and password "
 "credentials of lizmap to the PostgreSQL users and password credentials."
 msgstr ""
 
-#: ../../source/install/windows.rst:327
+#: ../../source/install/windows.rst:337
 msgid ""
 "For that before the installation you need to change the file "
 ":kbd:`profiles.ini.php` in the folder **C:\\\\webserver\\\\lizmap\\\\lizmap-"
 "web-client-master\\\\lizmap\\\\var\\\\config** with the following lines:"
 msgstr ""
 
-#: ../../source/install/windows.rst:334
+#: ../../source/install/windows.rst:344
 msgid "Add :kbd:`;` to deactivate the sqlite database."
 msgstr ""
 
-#: ../../source/install/windows.rst:354
+#: ../../source/install/windows.rst:364
 msgid "Remove :kbd:`;` and fill with PostgreSQL credentials:"
 msgstr ""
 
-#: ../../source/install/windows.rst:379
+#: ../../source/install/windows.rst:392
 msgid "Configurating the LizMap Admin Panel"
 msgstr ""
 
-#: ../../source/install/windows.rst:381
+#: ../../source/install/windows.rst:394
 msgid ""
 "After the correct installation with the installer, go to "
 "http://localhost/index.php and you sould see the Lizmap application home "
@@ -894,18 +939,18 @@ msgid ""
 "http://localhost/index.php/view/map/?repository=montpellier&project=montpellier"
 msgstr ""
 
-#: ../../source/install/windows.rst:389
+#: ../../source/install/windows.rst:402
 msgid "LizMap directories configuration"
 msgstr ""
 
-#: ../../source/install/windows.rst:391
+#: ../../source/install/windows.rst:404
 msgid ""
 "You need to create a Lizmap directory architecture for organization "
 "porposes. Create the following directories via a :kbd:`*.bat` file ( Please "
 "Check line ends are correct, you can open using notepad and not notepad++):"
 msgstr ""
 
-#: ../../source/install/windows.rst:415
+#: ../../source/install/windows.rst:428
 msgid ""
 "Now we need to get access to the folder **C:\\\\webserver\\\\data\\\\prod** "
 "and its subfolders so that the GIS admin can send the QGIS project files, "
@@ -914,32 +959,32 @@ msgid ""
 "http://localhost/admin.php and create the new repository. Follow this steps:"
 msgstr ""
 
-#: ../../source/install/windows.rst:417
+#: ../../source/install/windows.rst:430
 msgid ""
 "Lizmap configuration / Create a new repository (button at the bottom of the "
 "page)"
 msgstr ""
 
-#: ../../source/install/windows.rst:418
+#: ../../source/install/windows.rst:431
 msgid "**id** = rep1"
 msgstr ""
 
-#: ../../source/install/windows.rst:419
+#: ../../source/install/windows.rst:432
 msgid ""
 "**label** = A repository label (you will be able to change it afterwards)"
 msgstr ""
 
-#: ../../source/install/windows.rst:420
+#: ../../source/install/windows.rst:433
 msgid "**path** = /webserver/data/prod/rep1/"
 msgstr ""
 
-#: ../../source/install/windows.rst:422
+#: ../../source/install/windows.rst:435
 msgid ""
 "IMPORTANT FOR THE REPOSITORY PATH -> DO NOT USE: "
-"**D:\\\\webserver\\\\data\\\\prod\\\\rep1**"
+"**C:\\\\webserver\\\\data\\\\prod\\\\rep1**"
 msgstr ""
 
-#: ../../source/install/windows.rst:424
+#: ../../source/install/windows.rst:437
 msgid ""
 "In Apache you need to Add a vhost to publish SVG and images files via HTTP "
 "this will avoid the bug in QGIS Server under Windows which cannot display "
@@ -949,7 +994,7 @@ msgid ""
 "lines before CustomLog:"
 msgstr ""
 
-#: ../../source/install/windows.rst:437
+#: ../../source/install/windows.rst:450
 msgid ""
 "After this step save and restart Apache. Please check if you can add svg "
 "file in the folder C:/webserver/Data/document/svg/, for example "
@@ -958,11 +1003,11 @@ msgid ""
 "style properties of a vector layer."
 msgstr ""
 
-#: ../../source/install/windows.rst:442
+#: ../../source/install/windows.rst:455
 msgid "Filezilla Server Configuration"
 msgstr ""
 
-#: ../../source/install/windows.rst:444
+#: ../../source/install/windows.rst:457
 msgid ""
 "Now you will configure a FTP to have a rmeote access and deploy in a easy "
 "way into the server the qgis projects and their project elements. First you "
@@ -970,103 +1015,103 @@ msgid ""
 "Then install the default configuration."
 msgstr ""
 
-#: ../../source/install/windows.rst:447
+#: ../../source/install/windows.rst:460
 msgid "Do not forget to **\"Execute with admin rights\"**"
 msgstr ""
 
-#: ../../source/install/windows.rst:449
+#: ../../source/install/windows.rst:462
 msgid "Specify the **Port: 14147** ."
 msgstr ""
 
-#: ../../source/install/windows.rst:450
+#: ../../source/install/windows.rst:463
 msgid ""
 "Open the FileZilla Server Interface trough  Windows Menu / All programs / "
 "FileZilla Server / FileZilla Server Interface and click **OK** to connect "
 "(no password required yet)."
 msgstr ""
 
-#: ../../source/install/windows.rst:451
+#: ../../source/install/windows.rst:464
 msgid ""
 "Modify some options via Menu Edit / Settings and change IP Filter if needed "
 ": to filter only some IP, use **\"*\"** in the first block, the add the mask"
 " in the second block."
 msgstr ""
 
-#: ../../source/install/windows.rst:452
+#: ../../source/install/windows.rst:465
 msgid ""
 "Passive mode settings : Use following IP : write your public IP + change "
 "port range : **5500 5700**."
 msgstr ""
 
-#: ../../source/install/windows.rst:453
+#: ../../source/install/windows.rst:466
 msgid ""
 "Logging: Enable logging to file, and limit log file size to **500 KB**."
 msgstr ""
 
-#: ../../source/install/windows.rst:454
+#: ../../source/install/windows.rst:467
 msgid ""
 "SSL/TLS settings : Enable FTP over SSL/TLS && Generate new certificate into "
-"**C:\\webserver\\cert\\ftp_certificate.crt** && Allow explici FTP over TLS "
+"**C:\\webserver\\cert\\ftp_certificate.crt** && Allow explicit FTP over TLS "
 "&& Disallow plain unencrypted FTP && Leave **port 990**."
 msgstr ""
 
-#: ../../source/install/windows.rst:455
+#: ../../source/install/windows.rst:468
 msgid "Autoban - Enable with default values."
 msgstr ""
 
-#: ../../source/install/windows.rst:456
+#: ../../source/install/windows.rst:469
 msgid ""
 "Create user: Edit / Users - button Add **user= lizmap_user** and **pass= "
 "choose_a_password**"
 msgstr ""
 
-#: ../../source/install/windows.rst:457
+#: ../../source/install/windows.rst:470
 msgid ""
 "Shared folder: Add **D:\\\\webserver\\\\prod\\\\data** - Give all rights by "
 "checking checkboxes for Files and Directories."
 msgstr ""
 
-#: ../../source/install/windows.rst:458
+#: ../../source/install/windows.rst:471
 msgid "You can add IP filter here too if needed."
 msgstr ""
 
-#: ../../source/install/windows.rst:460
+#: ../../source/install/windows.rst:473
 msgid ""
 "Now you need to it, install FireFTP and restart Firefox. After that try to "
 "connect with: **Server** = localhost . Use Passive mode AND check IPV6."
 msgstr ""
 
-#: ../../source/install/windows.rst:463
+#: ../../source/install/windows.rst:476
 msgid ""
 "You can see this tutorial (only in french): "
 "http://forum.hardware.fr/hfr/WindowsSoftware/Tutoriels/filezilla-serveur-"
 "securise-sujet_300273_1.htm"
 msgstr ""
 
-#: ../../source/install/windows.rst:465
+#: ../../source/install/windows.rst:478
 msgid "Now you need to set the PREPROD environment, for this you need to:"
 msgstr ""
 
-#: ../../source/install/windows.rst:467
+#: ../../source/install/windows.rst:480
 msgid ""
 "Copy **C:\\\\webserver\\\\lizmap\\\\prod** content into "
 "**C:\\\\webserver\\\\lizmap\\\\preprod** ;"
 msgstr ""
 
-#: ../../source/install/windows.rst:468
+#: ../../source/install/windows.rst:481
 msgid ""
 "Delete content of folder "
 "**C:\\\\webserver\\\\lizmap\\\\preprod\\\\master\\\\temp\\\\lizmap\\\\www\\\\**"
 " ;"
 msgstr ""
 
-#: ../../source/install/windows.rst:469
+#: ../../source/install/windows.rst:482
 msgid ""
 "Lauch admin web interface to configure preprod lizmap repositories: "
 "http://localhost/preprod/admin.php ;"
 msgstr ""
 
-#: ../../source/install/windows.rst:470
+#: ../../source/install/windows.rst:483
 msgid ""
 "In Lizmap / Configuration Lizmap / Services : Change \"Cache root "
 "directory\" into **C:\\\\webserver\\\\cache\\\\preprod**."
