@@ -1,9 +1,9 @@
-=============================
+========================
 Log management in Lizmap
-=============================
+========================
 
 Principle and description
-===========================
+=========================
 
 Since version 2.8, you can configure *Lizmap Web Client* so that certain user actions are stored in a SQLite database:
 
@@ -19,7 +19,7 @@ For each of these actions can be chosen:
 * to increment the counter for this action, the Lizmap repository and QGIS project.
 
 Configure logs
-====================
+==============
 
 For now, it is not possible to change the configuration of logs in the administration interface. It is necessary to manually edit the configuration file **lizmap/var/config/lizmapLogConfig.ini.php**. This file is in *ini* format and contains many sections as action to save. For each action, you can choose to activate with *on* or off with *off* the recording of the log.
 
@@ -34,7 +34,7 @@ For example, the following section shows that the administrator has chosen to re
    logIp=off
 
 View logs
-===================
+=========
 
 To view logs, simply connect to the Lizmap administration interface as an administrator. Then the logs can be accessed through the menu **Lizmap Logs**. This page shows the general statistics on the 2 log tables: *Log count* and *Log detail*. For each, it is possible to:
 
@@ -42,7 +42,7 @@ To view logs, simply connect to the Lizmap administration interface as an admini
 * **Completely empty logs**: completly reset!
 
 Log storage file
-=============================
+================
 
 The log database is located here in relation to the installation directory: **lizmap/var/logs.db**. For example:
 

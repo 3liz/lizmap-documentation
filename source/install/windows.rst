@@ -237,7 +237,7 @@ Now it's time to test the QGIS Server and see if is accessible in fcgi, for this
    </ServiceExceptionReport>
 
 Preparing the home of LizMap Web Client
------------------------------------------
+---------------------------------------
 
 Now you will install 2 environments, one for production and other for preproduction, for this action you need to create in the following folders:
 **C:\\webserver\\lizmap\\prod\\** and  **C:\\webserver\\lizmap\\preprod\\**

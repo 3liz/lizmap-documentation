@@ -1,5 +1,5 @@
 The projects pages
-===============================================================
+==================
 
 The default lizmap page offers a list maps organized by folder.
 
@@ -16,7 +16,7 @@ You can access to the map information sheet. This informations come directly fro
 Access to the map is done either by clicking the **Load the map** buttons or the image that accompanies the project.
 
 A simple map
-===============================================================
+============
 
 Lizmap offers default web maps with the following features:
 
@@ -63,7 +63,7 @@ Finally you can:
 * display the map information sheet
 
 Authentication
-===============================================================
+==============
 
 The admin can restrict access to certain map groups. To access these maps, you must authenticate. Authentication is accessible through the button *Connect* at the top left.
 
@@ -80,7 +80,7 @@ Once authentication is enabled, depending on your rights, you should have access
 You can log out and edit your user information.
 
 Advanced features
-===============================================================
+=================
 
 The map publisher can add some features depending on the desired user experience:
 
@@ -95,7 +95,7 @@ The map publisher can add some features depending on the desired user experience
    :scale: 80%
 
 Selecting a basemap
--------------------------------
+-------------------
 
 Using the Lizmap plugin, the editor may have added external base maps or an empty base layer to the map. These base maps are available in the layer management panel as a list.
 
@@ -104,7 +104,7 @@ Using the Lizmap plugin, the editor may have added external base maps or an empt
    :scale: 80%
 
 Locate by layer
----------------------------
+---------------
 
 This feature is displayed by default if it has been activated by the map publisher.
 
@@ -122,7 +122,7 @@ Simply select a location from the list to zoom to the item.
    :scale: 80%
 
 Measurement
-------------
+-----------
 
 Measurement feature give you the ability to calculate:
 
@@ -160,7 +160,7 @@ It is also possible to change the measurement functionality without having to st
 
 
 Printing
-------------
+--------
 
 The print feature is available in the Lizmap menu bar. It depends on the number of print compositions published by the map publisher.
 
@@ -194,7 +194,7 @@ To begin building the print file, you can click on *Print*. You will get a PDF f
 
 
 Editing spatial data
------------------------------------
+--------------------
 
 The map publisher can allow users to edit certain data. It also has the ability to limit possible changes:
 
@@ -292,14 +292,14 @@ Finally, to disable editing tool, simply click on *Stop*.
 
 
 Attribute layers
-==================
+================
 
 When this feature has been enabled by the map publisher for one or many vector layers, a new menu entry will be visible at the bottom of the menu bar, labelled as **Data**.
 
 Clicking on this icon will open a new panel situated at the bottom of the interface, containing one single **Data** tab with a list of published vector layers.
 
 Attribute table panel behaviour
------------------------------------------
+-------------------------------
 
 Since this panel is situated above the map, some default behaviours have been proposed to ease the consultation of the data in the map and in the table at the same time.
 
@@ -316,21 +316,21 @@ You can click back on any of these 2 **Pin** and **Maximise** button to get back
 The **Close** button closes the attribute table tool completely (as if you clicked in the menu bar icon).
 
 Open an attribute table for a layer
--------------------------------------------
+-----------------------------------
 
 Once the attribute table panel is displayed, you can open the attribute table of each vector layer by clicking on the button situated right to the layer name. This will open a new tab labelled with the layer title which will show the attribute table for the chose layer.
 
 *Opening an attribute table can take some time depending on the data size and complexity.*
 
 Description of the attribute table functionality
----------------------------------------------------
+------------------------------------------------
 
 The layer data is shown in a **paginated table**. By default, the table shows 100 lines at a time. You can change this behaviour by using the list situated in the bottom left side of the tab content.
 
 The table of data can be **ordered by a field** by clicking on the column corresponding to . If you click again on the column, the order will be reversed.
 
 Actions on lines
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 When you **click on a table line**, the line will be displayed with a border to help viewing which line is **highlighted**.
 
@@ -346,7 +346,7 @@ Each line of the table shows some buttons at the left side:
 * **Center** button : clicking on this button will just pan the map to the corresponding feature, without changing scale.
 
 More about selection tools
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can also select a layer object by **displaying the popup** for this object (if the map publisher has enabled the popup for the layer, a click on the map will show a popup window containing detailed information on the clicked feature). Inside the popup, if you can see the select button, you can use it to select only this object. Previous selection will be replaced by only this object.
 
@@ -355,7 +355,7 @@ When one or more lines have been selected in the attribute table (they become ye
 You can **unselect all the selected objects** by clicking on the "white star" button situated above the table.
 
 Quickly search through data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can **filter the lines displayed** in the table by entering some letters in the **Search field** situated at the top left side of the tab content. If you want to see all the features again, just erase the search field content manually or by clicking on the cross button situated inside the field.
 
@@ -366,7 +366,7 @@ Note that only the content of the table will be restricted to the lines matching
 Once you have filtered some data in the attribute table by entering some text in it, **you can easily select them all** by clicking on the "black star" button labelled "Select searched lines". This will select all the corresponding objects in the attribute table (display them in yellow) and also change their color in the map (usually in yellow too, depending on the configuration done by the map publisher)
 
 Filter data
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
 
 When you have selected one or more objects in the layer attribute table, you can then **filter the data displayed in Lizmap** for this layer. To do so, just click on the "Funnel" button labelled "Filter" situated above the table (only available if some the selection contains at least one object).
 
@@ -388,7 +388,7 @@ When exporting the map view with the permalink tool (situated in the menu bar), 
 The only way would be to remove the filter parameters from the permalink URL. **This is not a safe way to protect some data, but a way to focus on some data only**.
 
 More complex scenarios : relations between layers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 todo
 

@@ -1,9 +1,9 @@
-===============================================================
+============================================
 Manage groups and users in Lizmap Web Client
-===============================================================
+============================================
 
 The groups and users: principles
-===============================================================
+================================
 
 As an administrator, you can:
 
@@ -14,7 +14,7 @@ As an administrator, you can:
 .. note:: Rights on Lizmap Web CLient repositories are managed at group level, not at the user level.
 
 Manage Groups: create, rename, delete
-===============================================================
+=====================================
 
 * *Create a group*: In the left menu click on *Groups of users for rights* and scroll down to *Create a group*.
 * Define the *label*: it is possible to use spaces and accents
@@ -28,7 +28,7 @@ In the page *Groups of users for rights*, it is also possible to *Change the nam
 .. note:: The **users** group is a group system to give the rights to authenticated users to edit their own user information including passwords. We excluded this group of Lizmap Web Client configuration because all identified users must be part of this group.
 
 Manage Users
-===============================================================
+============
 
 * *Create a user* : In the left menu click on *Users* and click on the button *Create a new user*: 
 
@@ -45,7 +45,7 @@ Manage Users
    :align: center
 
 Putting users in groups
-===============================================================
+=======================
 
 * In the left menu click on *Rights of users*
 * it is possible to filter the visible users with the dropdown menu
@@ -58,7 +58,7 @@ Putting users in groups
 .. warning:: Do not use the *Personal rights* column.
 
 Assigning groups for each user created
------------------------------------------------------------
+--------------------------------------
 
 .. image:: /images/administration-users-rights-list.png
    :align: center

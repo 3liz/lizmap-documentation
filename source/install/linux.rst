@@ -51,7 +51,7 @@ Installing necessary packages
 Then go to the *www* default Apache directory (modify as needed).
 
 php5 configuration
------------------------
+------------------
 
 .. todo:: Check this: still necessary?
 
@@ -82,7 +82,7 @@ In this example, we use Apache mpm-worker. So we must manually configure the act
    a2enconf php
 
 mpm-worker configuration
------------------------------
+------------------------
 
 .. todo:: Check this: still necessary?
 

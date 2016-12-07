@@ -1,9 +1,9 @@
-===============================================================
+========================================
 Overview of the administration interface
-===============================================================
+========================================
 
 Access the administration interface
-===============================================================
+===================================
 
 For safety reasons, no link leads to the administration interface. The address is:
 
@@ -18,7 +18,7 @@ Temporary identifiers
    :align: center
   
 Change password
-===============================================================
+===============
 
 Once connected, it is possible to change the password:
 
@@ -30,7 +30,7 @@ Once connected, it is possible to change the password:
   
   
 Reminder on Lizmap Web Client repositories
-===============================================================
+==========================================
 
 Lizmap Web Client can use QGIS maps stored in different folders on the server.
 
