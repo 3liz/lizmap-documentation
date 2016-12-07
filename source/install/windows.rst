@@ -10,7 +10,8 @@ Apache 2.x.x Server Configuration
 
 First we create a folder near to **C:\\** . For example, **C:\\webserver\\** . After that, we need to download the Apache 64 bits, compiled with VC11, for example: http://www.apachelounge.com/download/VC11/binaries/httpd-2.4.20-win64-VC11.zip.
 
-.. note:: You can use anothers installations http://www.apachelounge.com/download/VC11/
+.. note:: You can use another installations http://www.apachelounge.com/download/VC11/
+
 Extract the zip file inside **C:\\webserver\\** and change the name from **httpd-2.4.20-win64-VC11** to **Apache24**.
 Then you open the Apache configuration in **C:\\webserver\\Apache24\\conf\\httpd.conf** and edit with a text editor (e.g. Notepad++ or Notepad) and replace all occurrences of **C:/Apache24** into **C:/webserver/Apache24**.
 
@@ -24,7 +25,7 @@ To see if the Apache can start, open the command-line with :kbd:`Windows+R` and 
 After you type the instruction click enter and you will see a notice of windows firewall and you need to **Allow Access For all**.
 Then open the browser and write http://localhost and press enter this will open the page with the **"It Works"**.
 
-.. warning:: If don't popup  the firewall windows this means that you probably have an anti-virus software managing your firewall. In this case, you need to check the configurations and allow manually the apache service.
+.. warning:: If don't popup  the firewall windows this means that you probably have an anti-virus software managing your firewall. In this case, you need to check the configurations and allow manually the apache service. Another import tip if Windows Firewall don't show the previous dialog you need to add manually the port 80 as inbound/outbound port in Advanced Windows Firewall properties (Control Planel>Administrative Tools>Windows Firewall with Advanced Security). 
 
 Open the :kbd:`cmd` where you run the previous command and press :kbd:`Ctrl+C` to stop Apache. Then add the Apache to your Windows System Path allowing to you call the apache directly in the :kbd:`cmd`. So for this task, you hold the :kbd:`Windows` and press :kbd:`Pause`. Then, click in *Advanced System Settings* and then in :kbd:`Environment Variables`. The next step is to append (not replace!) **;C:\\webserver\\Apache24\\bin** to the *Path* variable (double-click in "Path" line). After this step, close :kbd:`cmd` , reopen :kbd:`cmd` and check Apache is correctly declare in the *System path*. In :kbd:`cmd` type :kbd:`httpd` then hit enter this will run Apache, if Yes you can stop pressing :kbd:`Ctrl+C`.
 
@@ -188,15 +189,24 @@ After this modification go to the file **C:\\webserver\\Apache24\\conf\\extra\\p
 
   FcgidInitialEnv PHPRC "C:\\webserver\\php-5.6.23"
 
-  FcgidInitialEnv PATH "C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\qgis\bin;C:\OSGeo4W64\apps\grass\grass-6.4.3\lib;C:\OSGeo4W64\apps\grass\grass-6.4.3\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\WBem"
-   FcgidInitialEnv QT_PLUGIN_PATH "C:\OSGeo4W64\apps\qgis\qtplugins;C:\OSGeo4W64\apps\Qt4\plugins"
+  FcgidInitialEnv PATH "C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\qgis-ltr\bin;C:\OSGeo4W64\apps\grass\grass-6.4.3\lib;C:\OSGeo4W64\apps\grass\grass-6.4.3\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\WBem"
+   FcgidInitialEnv QT_PLUGIN_PATH "C:\OSGeo4W64\apps\qgis-ltr\qtplugins;C:\OSGeo4W64\apps\Qt4\plugins"
    FcgidInitialEnv PYTHONHOME "C:\OSGeo4W64\apps\Python27"
-   FcgidInitialEnv PYTHONPATH "C:\OSGeo4W64\apps\qgis\.\python;C:\OSGeo4W64\apps\qgis\.\python\plugins;C:\OSGeo4W64\apps\Python27\DLLs;C:\OSGeo4W64\apps\Python27\lib;C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\Python27;C:\OSGeo4W64\apps\Python27\lib\site-packages"
+   FcgidInitialEnv PYTHONPATH "C:\OSGeo4W64\apps\qgis-ltr\.\python;C:\OSGeo4W64\apps\qgis-ltr\.\python\plugins;C:\OSGeo4W64\apps\Python27\DLLs;C:\OSGeo4W64\apps\Python27\lib;C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\Python27;C:\OSGeo4W64\apps\Python27\lib\site-packages"
 
   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
   FcgidInitialEnv QGIS_SERVER_LOG_FILE "C:\\webserver\\Apache24\\logs\\qgis_server.log"
 
-  SetEnvIf Request_URI ^/qgis QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis"
+  FcgidIOTimeout 120
+        FcgidInitialEnv LC_ALL "en_US.UTF-8"
+        FcgidInitialEnv PYTHONIOENCODING UTF-8
+        FcgidInitialEnv LANG "en_US.UTF-8"
+        FcgidInitialEnv QGIS_DEBUG 1
+        FcgidInitialEnv QGIS_SERVER_LOG_FILE "C:\\webserver\Apache24\logs\\qgis_server.log"
+        FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
+        FcgidInitialEnv QGIS_PLUGINPATH "C:\OSGeo4W64\apps\qgis-ltr\python\plugins"
+		
+  SetEnvIf Request_URI ^/qgis QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis-ltr"
   SetEnvIf Request_URI ^/qgis TEMP "C:\Windows\Temp"
 
   SetEnvIf Request_URI ^/qgis GDAL_DATA "C:\OSGeo4W64\share\gdal"
@@ -227,7 +237,7 @@ Now it's time to test the QGIS Server and see if is accessible in fcgi, for this
    </ServiceExceptionReport>
 
 Preparing the home of LizMap Web Client
---------------------------------------
+-----------------------------------------
 
 Now you will install 2 environments, one for production and other for preproduction, for this action you need to create in the following folders:
 **C:\\webserver\\lizmap\\prod\\** and  **C:\\webserver\\lizmap\\preprod\\**
@@ -357,15 +367,18 @@ Remove :kbd:`;` and fill with PostgreSQL credentials:
 
    ;Example of different driver (e.g PostgreSQL)
    [jdb:jauth]
-   driver=pgsql
-   user=Admin_user_postgreSQL
-   password=put_here_the_password
-
-   database=put_here_name_of_database
+   driver="pgsql"
+   database="name_of_database"
+   host="localhost"
+   user="Admin_user_postgreSQL"
+   password="put_here_the_password"
+   
    [jdb:lizlog]
-   driver=pgsql
-   user=Admin_user_postgreSQL
-   password=put_here_the_password
+   driver="pgsql"
+   database="name_of_database"
+   host="localhost"
+   user="Admin_user_postgreSQL"
+   password="put_here_the_password"
 
 
    ; Example for pdo (eg. MySQL):
@@ -392,10 +405,10 @@ You need to create a Lizmap directory architecture for organization porposes. Cr
 
 .. code-block:: winbatch
 
-   mkdir C:\webserver\data\commun\
+   mkdir C:\webserver\data\common\
    mkdir C:\webserver\data\document\
    mkdir C:\webserver\data\prod\
-   mkdir C:\webserver\data\prod\commun\
+   mkdir C:\webserver\data\prod\common\
    mkdir C:\webserver\data\prod\rep1\
    mkdir C:\webserver\data\prod\rep1\media\
    mkdir C:\webserver\data\prod\rep1\media\js\
@@ -403,7 +416,7 @@ You need to create a Lizmap directory architecture for organization porposes. Cr
    mkdir C:\webserver\data\prod\rep2\media\
    mkdir C:\webserver\data\prod\rep2\media\js\
    mkdir C:\webserver\data\preprod
-   mkdir C:\webserver\data\preprod\commun\
+   mkdir C:\webserver\data\preprod\common\
    mkdir C:\webserver\data\preprod\rep1\
    mkdir C:\webserver\data\preprod\rep1\media\
    mkdir C:\webserver\data\preprod\rep1\media\js\
@@ -419,7 +432,7 @@ Now we need to get access to the folder **C:\\webserver\\data\\prod** and its su
 * **label** = A repository label (you will be able to change it afterwards)
 * **path** = /webserver/data/prod/rep1/
 
-.. note:: IMPORTANT FOR THE REPOSITORY PATH -> DO NOT USE: **D:\\webserver\\data\\prod\\rep1**
+.. note:: IMPORTANT FOR THE REPOSITORY PATH -> DO NOT USE: **C:\\webserver\\data\\prod\\rep1**
 
 In Apache you need to Add a vhost to publish SVG and images files via HTTP this will avoid the bug in QGIS Server under Windows which cannot display SVG icon when you have a relative path. Create a folder **D:/webserver/data/document/** and modify the file **C:/webserver/Apache24/conf/extra/httpd-vhosts.conf** .
 Please add these lines before CustomLog:
@@ -451,7 +464,7 @@ First you need to download at https://filezilla-project.org/download.php?type=se
 3. Modify some options via Menu Edit / Settings and change IP Filter if needed : to filter only some IP, use **"*"** in the first block, the add the mask in the second block.
 4. Passive mode settings : Use following IP : write your public IP + change port range : **5500 5700**.
 5. Logging: Enable logging to file, and limit log file size to **500 KB**.
-6. SSL/TLS settings : Enable FTP over SSL/TLS && Generate new certificate into **C:\webserver\cert\ftp_certificate.crt** && Allow explici FTP over TLS && Disallow plain unencrypted FTP && Leave **port 990**.
+6. SSL/TLS settings : Enable FTP over SSL/TLS && Generate new certificate into **C:\webserver\cert\ftp_certificate.crt** && Allow explicit FTP over TLS && Disallow plain unencrypted FTP && Leave **port 990**.
 7. Autoban - Enable with default values.
 8. Create user: Edit / Users - button Add **user= lizmap_user** and **pass= choose_a_password**
 9. Shared folder: Add **D:\\webserver\\prod\\data** - Give all rights by checking checkboxes for Files and Directories.

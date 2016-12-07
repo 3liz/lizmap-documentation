@@ -44,11 +44,12 @@ clean:
 	-rm -rf $(BUILDDIR)/*
 
 html:
+	sphinx-intl build -d i18n
 	@for lang in $(LANGUAGES);\
 	do \
-		mkdir -p $(BUILDDIR)/html/$(SOURCE)/$$lang $(BUILDDIR)/doctrees/$(SOURCE)/$$lang; \
-		echo "$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/html/$$lang";\
-		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/html/$(SOURCE)/$$lang;\
+		mkdir -p $(BUILDDIR)/html/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		echo "$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) -D language=$$lang  $(BUILDDIR)/html/$$lang";\
+		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) -D language=$$lang $(BUILDDIR)/html/$$lang;\
 	done
 
 #	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
