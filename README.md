@@ -1,11 +1,13 @@
 Lizmap - Documentation
 =======================
 
-This repository contains the complete documentation of the Lizmap application to publish online QGIS maps: the QGIS plugin and Lizmap Web Client application.
+This repository contains the complete documentation of the Lizmap application to 
+publish online QGIS maps: the QGIS plugin and Lizmap Web Client application.
 
-This documentation uses **Sphinx** (http://sphinx-doc.org) and its internationalization mechanism (http://sphinx-doc.org/intl.html):
+This documentation uses **Sphinx** (http://sphinx-doc.org) and its 
+internationalization mechanism (http://sphinx-doc.org/intl.html):
 * **source** contains the documentation in \*.rst format
-* **i18n** contains the locals
+* **i18n** contains the locales
 
 Contribution
 =============
@@ -36,7 +38,8 @@ Then you can improve po files by opening them with QtLinguist.
 Build documentation
 ====================
 
-We advise to use the **make** command to build Sphinx documentation. By default, make html will build the docs in all available languages.
+We advise to use the **make** command to build Sphinx documentation. By default,
+`make html` will build the docs in all available languages.
 
 Here some more examples:
 
@@ -44,17 +47,5 @@ Here some more examples:
 
 # Generate mo files by building freshly modified po files
 sphinx-intl build -d i18n
-
-# Build documentation in english (default language) in HTML format
-make html BUILDDIR=build/html/en
-
-# Build documentation in french in HTML
-make html BUILDDIR=build/html/fr SPHINXOPTS="-D language='fr'"
-
-# Build PDF in english
-make latexpdf BUILDDIR=build/latex/en
-
-# Build PDF in french
-make latexpdf BUILDDIR=build/latex/fr SPHINXOPTS="-D language='fr'"
 
 ```
