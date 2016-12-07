@@ -877,7 +877,7 @@ Changing the default image of a project in the repositories and projects site
 
 By default the following image is displayed for a project:
 
-.. image:: http://imgur.com/5hGIvAM
+.. image:: /images/mapmonde.png
    :align: left
    :width: 100%
 

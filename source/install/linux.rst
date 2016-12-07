@@ -75,7 +75,7 @@ In this example, we use Apache mpm-worker. So we must manually configure the act
    EOF
 
 .. note::
- In older versions of apache, the config for ``php-cgi`` is in ``/etc/apache2/conf.d/php.conf``. Copy the text above, then::
+ In older versions of apache, the config for ``php-cgi`` is in ``/etc/apache2/conf.d/php.conf``. Copy the text above, then:
 
 .. code-block:: bash
 
