@@ -429,13 +429,13 @@ Examples
 
 Here is a very small example allowing you to disable right clic in Lizmap. Just add a file named e.g. ``disableRightClick.js`` with the following code:
 
-.. code-block:: js
+.. code-block:: javascript
 
- lizMap.events.on({
-  uicreated: function(e) {
-  $('body').attr('oncontextmenu', 'return false;');
-  }
- });
+   lizMap.events.on({
+      uicreated: function(e) {
+         $('body').attr('oncontextmenu', 'return false;');
+      }
+   });
 
 * If you want this code to be executed for all projects of your repository, you have to copy the file in the directory ``/home/data/rep1/media/js/default/`` rather than in ``/home/data/rep1/media/js/myproject/``.
 

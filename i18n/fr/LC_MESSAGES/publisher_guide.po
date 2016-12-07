@@ -3,14 +3,16 @@
 # This file is distributed under the same license as the Lizmap package.
 # 
 # Translators:
+# Laurent J. <dev@ljouanneau.com>, 2016
 # Nicolas Boisteault <nboisteault@gmail.com>, 2016
+# rldhont <rldhont@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-21 11:33+0100\n"
-"PO-Revision-Date: 2016-05-18 13:39+0000\n"
-"Last-Translator: Nicolas Boisteault <nboisteault@gmail.com>\n"
+"PO-Revision-Date: 2016-12-07 12:19+0000\n"
+"Last-Translator: Laurent J. <dev@ljouanneau.com>\n"
 "Language-Team: French (http://www.transifex.com/3liz-1/lizmap-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1001,7 +1003,7 @@ msgstr "Ceci est disponible depuis la version 2.11 de Lizmap. Pour les versions 
 msgid ""
 "In your repository (e.g. ``/home/data/repo1/myproject.qgs`` you should have "
 "these directories::"
-msgstr ""
+msgstr "Dans votre répertoire, (par ex. ``/home/data/repo1/myproject.qgs`` vous devez avoir ces répertoires:"
 
 # 01e0b9a395d64358bebb72bfe0247209
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:378
@@ -1009,7 +1011,7 @@ msgid ""
 "All the Javascript code you copy in the "
 "``/home/data/rep1/media/js/myproject/`` directory will be executed by "
 "Lizmap, provided that:"
-msgstr ""
+msgstr "Tout le code javascript que vous copiez dans le répertoire ``/home/data/rep1/media/js/myproject/`` sera executé par Lizmap, à condition que"
 
 # 1c2567ef7d4a4b21bb0f2e08966c8e95
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:379
@@ -1017,14 +1019,14 @@ msgid ""
 "you allow it, through the Lizmap admin interface, adding the privilege "
 "\"Allow themes for this repository\" in the form for the modification of the"
 " repository"
-msgstr ""
+msgstr "vous l'autorisiez, via l'interface d'admin de Lizmap, en ajouter le privilège \"Autoriser les thèmes pour ce repertoire\" dans le formulaire de modification du répertoire"
 
 # b15543f4867b4dabb110d6d3985c4590
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:381
 msgid ""
 "For the example above, just add a file named e.g. ``disableRightClick.js`` "
 "with::"
-msgstr ""
+msgstr "Pour l'exemple du dessus, ajoutez juste un fichier nommé, par exemple, ``disableRightClick.js`` avec :"
 
 # b532ae2031b64005aa87adbcee3f74d7
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:385
@@ -1056,17 +1058,17 @@ msgstr ""
 msgid ""
 "If you want this code to be executed for all projects of your repository, "
 "you have to copy the file in the directory::"
-msgstr ""
+msgstr "Si vous voulez que ce code soit executé pour tous les projets de votre répertoire, vous devez copier le fichier dans le répertoire :"
 
 # 0d0cc6a162f34373bcf025ce3505c648
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:397
 msgid "rather than in::"
-msgstr ""
+msgstr "au lieu de :"
 
 # 8d330efa5f6e4491bd5fd7930aefe776
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:401
 msgid "That's all."
-msgstr ""
+msgstr "C'est tout."
 
 # 0b211af0520349b4a70c3b64b7338379
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:403
@@ -1074,7 +1076,7 @@ msgid ""
 "In the directory ``lizmap-web-client/lizmap/install/qgis/media/js/`` you can"
 " find examples of suitable JavaScript code; just remove the extension "
 "``.example`` to activate them."
-msgstr ""
+msgstr "Dans le répertoire ``lizmap-web-client/lizmap/install/qgis/media/js/`` vous trouverez des exemples de code javascript. Enlevez simplement l'extension ``.example`` pour les activer."
 
 # 02c291811eae4009bc40acd215f02062
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:406
@@ -1277,7 +1279,7 @@ msgstr "Par contre si cette couche doit remplacer un fond externe, celle-ci doit
 # 15df5cb80c6e4301a7594ae483faa25a
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:459
 msgid "Optimizing Lizmap with the cache"
-msgstr ""
+msgstr "Optimiser Lizmap avec le cache"
 
 # 798f1ba189c54a77b333bc14692ad307
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:461
@@ -1346,7 +1348,7 @@ msgid ""
 "the browser, it stores displayed tiles in its cache. Enable client cache can"
 " greatly optimize Lizmap because the browser does not re-request the server "
 "for tiles already in cache that are not expired."
-msgstr ""
+msgstr "L'option **cache du navigateur** vous permet de spécifier une date d’expiration en seconde pour les tuiles dans le cache du navigateur (Mozilla Firefox, Chrome, Internet Exploreur, Opera, etc). Quand vous parcourez la carte avec le navigateur, celui-ci stockes les tuiles affichées dans son cache. Activer le cache client permet grandement d'optimiser Lizmap parce que le navigateur n'a pas à redemander au serveur les tuiles qui sont dans le cache et non expirées."
 
 # d9869b9b813949f491dd20e7b77f320c
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:480
@@ -1510,7 +1512,7 @@ msgstr "Cette fonctionnalité peut servir pour :"
 # 2e77cfdd15254a8a991593d323259667
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:525
 msgid "hide a layer used in the localte by layer (:ref:`locate-by-layer`)"
-msgstr ""
+msgstr "cache la couche utilisé par la localisation par couche (:ref:`locate-by-layer`)"
 
 # 195d4263a47b4f36b868643d0f4a1bae
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:526
@@ -1924,7 +1926,7 @@ msgstr "Un tutoriel vidéo est disponible à cette adresse : https://vimeo.com/8
 # 3ca3ef2a02eb46478329ab49d18259ea
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:649
 msgid "Configuration of the data filter tool"
-msgstr ""
+msgstr "Configuration de l'outil de filtre de données"
 
 # d4e2783c2319455ab6a31c51cba548ac
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:651
@@ -2001,19 +2003,19 @@ msgstr "*Sélectionner la couche* dans la liste déroulante"
 # f10bc101cb8844aba3fc9d3d3740fb3f
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:667
 msgid "Select the field that contains the *group identifier* for the layer"
-msgstr ""
+msgstr "Sélectionnez le champ qui contient *l'identifiant du groupe* pour la couche"
 
 # 3dea3d8562054009a407bba1f300a32d
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:668
 msgid "Add the layer in the list with the button *Add layer*"
-msgstr ""
+msgstr "Ajoutez la couche dans la liste avec le bouton \"Ajoutez la couche\""
 
 # 2a488a0d347146a6808016486aff664e
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:669
 msgid ""
 "To remove a layer of the table, click on it and click the button *Delete the"
 " layer*"
-msgstr ""
+msgstr "Pour supprimer une couche de la table, cliquez sur celle-ci et sur le bouton \"supprimer la couche\"."
 
 # 0279161e785843788784a45f2ecc149a
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:671
@@ -2021,12 +2023,12 @@ msgid ""
 "**Disable the client cache and cache server** for all filtered layers. "
 "Otherwise, the data displayed will not be updated between each connection or"
 " user logout!"
-msgstr ""
+msgstr "**Désactivez le cache client et le cache serveur** pour toute les couches filtrées. Autrement les données affichées ne seront pas mise à jour entre chaque connexions ou déconnexions !"
 
 # 2fb0b8f34b3843dbb33905896efc4f44
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:674
 msgid "Time Manager - Animation of temporal vector layers"
-msgstr ""
+msgstr "Gestionnaire de temps - Animation de couches de vecteurs temporels"
 
 # 1509eb9f99f64ccd922175381c352632
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:676
@@ -2034,41 +2036,41 @@ msgid ""
 "You can create animations of your vectors, provided you have at least a "
 "layer with a column with a valid date/time. You should select from the "
 "plugin:"
-msgstr ""
+msgstr "Vous pouvez créer des animations pour vos vecteurs, du moment que vous avez au moins une couche avec une colonne ayant des dates/heures valides. Vous devez sélectionner à partir du plugin :"
 
 # 696d432abdb3476aba319803a3adcf66
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:678
 msgid "at least one layer with the date/time"
-msgstr ""
+msgstr "au moins une couche avec date/heure"
 
 # 093f8e467bf94023ad47937c6e9eef25
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:679
 msgid "the column with the date/time"
-msgstr ""
+msgstr "la colonne avec date/heure"
 
 # 92ff37c9b6a6489cbe952e0f66fa36b7
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:680
 msgid "the number and type of time units for each step of the animation"
-msgstr ""
+msgstr "le nombre et le type d'unité de temps pour chaque étape de l'animation"
 
 # f0c480993cef491ba0deda0a2b01cb20
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:681
 msgid ""
 "the duration, in milliseconds, of each step (the default is to display each "
 "10 days block for one second)"
-msgstr ""
+msgstr "la durée, en millisecondes, de chaque étapes (par défaut cela affiche des blocs de 10 jours pour chaque seconde)"
 
 # 23dafd2d68b24c6587a2d359981b5ea9
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:682
 msgid ""
 "one field to display as a label when hovering with the mouse over the "
 "objects"
-msgstr ""
+msgstr "un champ à afficher comme label quand la souris est au dessus des objets"
 
 # ec9d3c5e392644479135ac7e1660b2a5
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:683
 msgid "optionally, an ID and a title for groups of objects."
-msgstr ""
+msgstr "optionnellement, un ID et un titre pour les groupes d'objets"
 
 # 53ccef5c70a5459fae31897f7a299bba
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:685
@@ -2078,21 +2080,21 @@ msgid ""
 "steps, or paly the entire animation. At startup, the application will load "
 "the entire table, so if you have thousands of objects you may need to wait "
 "for several seconds before the application is available."
-msgstr ""
+msgstr "Quand c'est prêt, votre application web affichera le symbole d'une montre; En cliquant dessus, cela ouvrira un petit panneau qui vous permettra de vous déplacer entre chaque étape, ou de démarrer l'animation entière. Au démarrage, l'application chargera entièrement la table, ainsi si vous avez des milliers d'objets, vous pourriez être contraint d'attendre plusieurs secondes avant que l'application soit disponible."
 
 # 4b295f0ba6174937b8931818117680a9
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:687
 msgid ""
 "A video tutorial is available here: https://vimeo.com/83845949. It shows all"
 " the steps to use the functionality."
-msgstr ""
+msgstr "Un tutoriel vidéo est disponible ici : https://vimeo.com/83845949. Il montre toutes les étapes pour utiliser cette fonctionnalité"
 
 # 712a5f6a6fcb43568b03d68c1959efb7
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:689
 msgid ""
 "Demonstration site: "
 "http://demo.lizmap.3liz.com/index.php/view/?repository=rep6"
-msgstr ""
+msgstr "Site de démonstration : http://demo.lizmap.3liz.com/index.php/view/?repository=rep6"
 
 # 71a78ef7df124ac2836159ef45160bcf
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:691
@@ -2100,19 +2102,19 @@ msgid ""
 "Several different formats for date/time are acceptable (those supported by "
 "the JavaScript library `DateJS`). You can check whether your format is "
 "supported by entering it in this page: http://www.datejs.com/"
-msgstr ""
+msgstr "Plusieurs  formats différents pour les dates/heures/ sont acceptés (ceux supportés par la bibliothèque JS `DateJS`). Vous pouvez vérifier si votre format est supporté en allant sur la page http://www.datejs.com/"
 
 # 49af923195a047bcb55bbebfdf7766e7
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:694
 msgid ""
 "Changing the default image of a project in the repositories and projects "
 "site"
-msgstr ""
+msgstr "Modifier l'image par défaut d'un projet dans la liste des répertoires et projets"
 
 # df4f65b1e03f4b819c1bf9a4512ec023
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:696
 msgid "By default the following image is displayed for a project:"
-msgstr ""
+msgstr "Par défaut, l'image suivante est affiché pour un projet :"
 
 # 05816a1921c54c52820b3f66820ceaf3
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:703
@@ -2121,7 +2123,7 @@ msgid ""
 ".png image with the exact project name and extension. Example: If the "
 "project is called montpellier.qgs you can add an image named "
 "montpellier.qgs.png. Note that the image has the project extension too."
-msgstr ""
+msgstr "Vous pouvez modifier cette image par défaut en ajoutant dans le dossier contenant le projet une image .png dont le nom est exactement le même que le projet avec l'extension. Par exemple : si le projet s'appelle montpellier.qgs, vous pouvez ajouter une image nommée montpellier.qgs.png. Notez bien que l'image porte aussi l'extensio du projet."
 
 # d9dabef5c639438aa3aca48005bfaac9
 #: ../../source/publisher_guide/index.rst:3
