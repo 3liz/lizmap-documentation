@@ -490,6 +490,8 @@ To add to printing a layer that replaces an external baselayer, simply add to th
 * *ign-plan* for IGN Plan
 * *ign-photo* for IGN Photos
 
+and then add your layer(s) you want to print as base.
+
 .. note:: The use of this method must be in compliance with the licensing of external baselayers used (:ref:`lizmap-config-baselayers`).
 
 For OpenStreetMap baselayers, it is possible to use an XML file for GDAL to exploit the OpenStreetMap tile services. Its use is described in the GDAL documentation http://www.gdal.org/frmt_wms.html or in this blog post http://www.3liz.com/blog/rldhont/index.php?post/2012/07/17/OpenStreetMap-Tiles-in-QGIS
