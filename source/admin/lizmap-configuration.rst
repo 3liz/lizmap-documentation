@@ -22,7 +22,7 @@ To configure **Services**, click the *Modify* button under the summary.
 
 .. warning:: QGIS Server must be installed on the same computer as Lizmap Web Client
 
-* **WMS subdomain URLs list (optional))**: The use of multiple domain names is one of the classic optimizations when a web application uses OpenLayers (as Lizmap Web Client). You can enter a list of subdomains separated by comma.
+* **WMS subdomain URLs list (optional)**: The use of multiple domain names is one of the classic optimizations when a web application uses OpenLayers (as Lizmap Web Client). You can enter a list of subdomains separated by comma.
 
   + You must use a **list of subdomains** relative to the domain with which is used Lizmap Web Client. For example, if your main domain name is **maps.example.com**, then you can use **a.maps.example.com, b.maps.example.com, c.maps.example.com, d.maps.example.com**.
 
