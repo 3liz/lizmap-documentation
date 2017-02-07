@@ -174,6 +174,12 @@ With the plugin, you can activate popups **for a single layer** or for **a group
 
 Just click on the checkbox **Activate popups** of the tab *Layers* on the Lizmap plugin interface. For the *Group as layer* option you must select the option for the group and for all the layers included you want to show in the popup: in this case, only the layers with the option *Popup* checked will be shown.
 
+You have three types of popup sources:
+
+* *auto*
+* *lizmap*
+* *qgis*
+
 In the web application Lizmap Web Client, a click on a map object will trigger the popup if (and only if):
 
 * the layer is **active in the legend**, so that it is shown on the canvas
@@ -182,10 +188,10 @@ In the web application Lizmap Web Client, a click on a map object will trigger t
 
 .. note:: For point layers you need to click in the middle of the point to display the popup.
 
-Informations displayed in the popup
-___________________________________
+Auto popup
+-----------
 
-By default the Lizmap Web Client popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:
+The Lizmap Web Client `auto` popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:
 
 ============  ==============
 Field         Value
@@ -196,10 +202,10 @@ Field         Value
        photo  :-)
 ============  ==============
 
-This is called **simple mode**. You can modify the info displayed through QGIS, and also display pictures or links.
+You can modify the info displayed through QGIS, and also display pictures or links.
 
 Simple popup configuration
---------------------------
+____________________________
 
 With the plugin, if you click on the checkbox **Activate popups** without modifying its content through the button *Configure* the default table is shown.
 
@@ -237,15 +243,15 @@ You can also use, in a field, **full web links to a specific page or image**:
 * the image referred to will be displayed, instead of the links
 * the web link will be displayed and clickable
 
-Advanced popup configuration - HTML format
-------------------------------------------
+Lizmap popup
+--------------------
 
 Introduction
 ____________
 
 If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know well the **HTML format**. See e.g.: http://html.net/tutorials/html/
 
-.. warning:: When you use the advanced mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the template. Managing media is also possible, but you have to configure it as well.
+.. warning:: When you use the *lizmap* mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the template. Managing media is also possible, but you have to configure it as well.
 
 Deploying
 _________
@@ -313,6 +319,15 @@ Here an example of a template handling media and an external link:
    <p><img src="http://www.3liz.com/assets/img/logo.png"/></p>
 
 .. seealso:: Chapter :ref:`media-in-lizmap` for more details on the use of documents in the directory media.
+
+QGIS popup
+-----------
+
+*QGIS* popups can be configured via `QGIS --> Layer properties --> Tooltips --> HTML`, using the same syntax as for the *lizmap* popups. The main advantages of this approach are:
+
+* you can use QGIS variables and expressions, thus adding information created dynamically
+* the popup can be previewed in QGIS, using tooltips
+* the popup configurations are stored in QGIS project and layer style, so they can be reused in other Lizmap projects without replicating the configuration.
 
 .. _lizmap-simples-themes:
 
