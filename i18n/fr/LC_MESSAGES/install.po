@@ -3,17 +3,20 @@
 # This file is distributed under the same license as the Lizmap package.
 # 
 # Translators:
-# bobolica <bobo-romania@users.noreply.github.com>, 2016
-# Laurent J. <dev@ljouanneau.com>, 2016
+# Bobo Plateau <bobo-romania@users.noreply.github.com>, 2017
+# Bobo Plateau <bobo-romania@users.noreply.github.com>, 2016
+# Laurent Jouanneau <dev@ljouanneau.com>, 2016
+# luckgentilpiron <luck.gentil@gmail.com>, 2017
+# Mathieu Bossaert <mathieu.bossaert@gmail.com>, 2017
 # Nicolas Boisteault <nboisteault@gmail.com>, 2016
 # rldhont <rldhont@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-07 10:42+0100\n"
-"PO-Revision-Date: 2016-12-07 12:30+0000\n"
-"Last-Translator: Laurent J. <dev@ljouanneau.com>\n"
+"POT-Creation-Date: 2017-02-24 15:24+0100\n"
+"PO-Revision-Date: 2017-01-31 15:36+0000\n"
+"Last-Translator: Bobo Plateau <bobo-romania@users.noreply.github.com>\n"
 "Language-Team: French (http://www.transifex.com/3liz-1/lizmap-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -89,8 +92,8 @@ msgstr "On utilise dans cet exemple le mpm-worker d'Apache. On doit donc configu
 #: ../../source/install/linux.rst:78
 msgid ""
 "In older versions of apache, the config for ``php-cgi`` is in "
-"``/etc/apache2/conf.d/php.conf``. Copy the text above, then::"
-msgstr "Dans les vieilles versions d'apache, la configuration pour  ``php-cgi`` est dans ``/etc/apache2/conf.d/php.conf``. Copiez le texte ci-dessus et ensuite :"
+"``/etc/apache2/conf.d/php.conf``. Copy the text above, then:"
+msgstr "Dans des versions plus anciennes d'apache, la configuration pour ``php-cgi`` est située dans ``/etc/apache2/conf.d/php.conf``.\nCopiez le texte ci-dessous, puis:"
 
 #: ../../source/install/linux.rst:85
 msgid "mpm-worker configuration"
@@ -516,12 +519,12 @@ msgid ""
 "**C:\\\\webserver\\\\** . After that, we need to download the Apache 64 "
 "bits, compiled with VC11, for example: "
 "http://www.apachelounge.com/download/VC11/binaries/httpd-2.4.20-win64-VC11.zip."
-msgstr ""
+msgstr "Nous allons d'abord créer un dossier proche de **C:\\\\**. Par exemple, **C:\\\\webserver\\\\**. Après cela, nous allons télécharger Apache 64 bits, compilé avec VC11, par exemple : http://www.apachelounge.com/download/VC11/binaries/httpd-2.4.20-win64-VC11.zip."
 
 #: ../../source/install/windows.rst:13
 msgid ""
 "You can use another installations http://www.apachelounge.com/download/VC11/"
-msgstr ""
+msgstr "Vous pouvez utiliser d'autres versions http://www.apachelounge.com/download/VC11/"
 
 #: ../../source/install/windows.rst:15
 msgid ""
@@ -530,7 +533,7 @@ msgid ""
 "configuration in **C:\\\\webserver\\\\Apache24\\\\conf\\\\httpd.conf** and "
 "edit with a text editor (e.g. Notepad++ or Notepad) and replace all "
 "occurrences of **C:/Apache24** into **C:/webserver/Apache24**."
-msgstr ""
+msgstr "Extraire le fichier zip dans le répertoire **C:\\\\webserver\\\\** et changez le nom de **httpd-2.4.20-win64-VC11** à **Apache24**. Ensuite, il faut ouvrir le fichier de configuration d'Apache **C:\\\\webserver\\\\Apache24\\\\conf\\\\httpd.conf** et le modifier avec un éditeur de texte (par exemple Notepad++ ou Notepad) pour remplacer tous les **C:/Apache24** en **C:/webserver/Apache24**."
 
 #: ../../source/install/windows.rst:18
 msgid ""
@@ -539,7 +542,7 @@ msgid ""
 "If you continue in this file, you will find **\"DirectoryIndex "
 "index.html\"** and then replace with **DirectoryIndex index.html index.php**"
 " and **save** the file."
-msgstr ""
+msgstr "Après cette modification, cherchez avec :kbd:`Ctrl+F` la variable **ServerName** et ajoutez à la suite les mots suivants **ServerName localhost**. Si vous continuez dans ce fichier, vous allez trouver **\"DirectoryIndex index.html\"** qui est à remplacer par **DirectoryIndex index.html index.php** et **sauvegarder** le fichier."
 
 #: ../../source/install/windows.rst:20
 msgid ""
@@ -547,13 +550,13 @@ msgid ""
 "and type :kbd:`cmd`, then in the shell write "
 "**C:\\\\webserver\\\\Apache24\\\\bin\\\\httpd.exe** and don't close the "
 ":kbd:`cmd`."
-msgstr ""
+msgstr "Pour voir si Apache peut démarrer, ouvrir l'invite de commande avec :kbd:`Windows+R` et taper :kbd:`cmd`, ensuite écrire dans le shell **C:\\\\webserver\\\\Apache24\\\\bin\\\\httpd.exe** et ne fermer pas la fenêtre :kbd:`cmd`."
 
 #: ../../source/install/windows.rst:22
 msgid ""
 "It is important to **RIGHT-CLICK** and *\"Run as administrator\"* to have "
 "complete access. Do it every time you need to use the *Shell*."
-msgstr ""
+msgstr "Il est important d'effectuer un **CLIQUE DROIT** et *\"Exécuter en tant qu'administrateur\"* pour avoir accès à toutes les fonctions. Il faut le faire à chaque fois que l'on souhaite utiliser le *Shell*"
 
 #: ../../source/install/windows.rst:25
 msgid ""
@@ -561,7 +564,7 @@ msgid ""
 "windows firewall and you need to **Allow Access For all**. Then open the "
 "browser and write http://localhost and press enter this will open the page "
 "with the **\"It Works\"**."
-msgstr ""
+msgstr "Après avoir écrit l'instruction, appuyez sur Entrée. Vous allez recevoir une notification du parefeu Windows, il faut alors **Autoriser l'accès pour tous**. Ouvrez le navigateur et taper  http://localhost et appuyez sur Entrée, cela devrait ouvrir une page avec le **\"It Works\"**."
 
 #: ../../source/install/windows.rst:28
 msgid ""
@@ -572,7 +575,7 @@ msgid ""
 " the port 80 as inbound/outbound port in Advanced Windows Firewall "
 "properties (Control Planel>Administrative Tools>Windows Firewall with "
 "Advanced Security)."
-msgstr ""
+msgstr "Si vous n'avez pas d'alerte du parfeux Windows, cela signifie sûrement que vous avez un anti-viruse qui le gère. Dans ce cas, vous devez modifier la configuration pour ajouter le service apache de façon manuelle. Autre astuce, si le parfeux Windows n'indique pas la boite de dialogue précédente, vous devez ajouter manuellement le port 80 en entrée et sortie dans les propriétés avancées du parfeux windows (panneau de configuration > outils d'administration > Parfeux windows avec sécurité avancée"
 
 #: ../../source/install/windows.rst:30
 msgid ""
@@ -594,7 +597,7 @@ msgid ""
 "Now it's time to add Apache as Service, for this step you need to open the "
 "command line and type :kbd:`httpd -k install`. This will start Apache as a "
 "Windows Service."
-msgstr ""
+msgstr "Il est maintenant temps d'ajouter Apache comme service. Pour cela, vous devez ouvrir un terminal et taper :kbd:`httpd -k install`. \nCela va démarrer Apache comme un service Windows."
 
 #: ../../source/install/windows.rst:34
 msgid ""
