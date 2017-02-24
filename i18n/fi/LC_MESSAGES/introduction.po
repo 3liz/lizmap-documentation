@@ -1,0 +1,398 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, 3liz
+# This file is distributed under the same license as the Lizmap package.
+# 
+# Translators:
+# Kari Salovaara <kari.salovaara@pp1.inet.fi>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Lizmap documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-24 15:24+0100\n"
+"PO-Revision-Date: 2016-09-08 10:34+0000\n"
+"Last-Translator: Kari Salovaara <kari.salovaara@pp1.inet.fi>\n"
+"Language-Team: Finnish (http://www.transifex.com/3liz-1/lizmap-documentation/language/fi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/introduction.rst:3
+msgid "Introduction"
+msgstr "Johdanto"
+
+#: ../../source/introduction.rst:6
+msgid "Lizmap architecture"
+msgstr "Lizmap arkkitehtuuri"
+
+#: ../../source/introduction.rst:11
+msgid "**Data preparation**"
+msgstr "**Data valmistelu**"
+
+#: ../../source/introduction.rst:13
+msgid ""
+"The map's construction work is carried on his own computer with **QGIS "
+"Desktop**:"
+msgstr "Kartan kehittämistyö suoritetaan käyttäjän omalla tietokoneella **QGIS Desktop** ohjelmistolla:"
+
+#: ../../source/introduction.rst:15
+msgid "loading layers,"
+msgstr "tasojen lataaminen;"
+
+#: ../../source/introduction.rst:16
+msgid "map creation,"
+msgstr "kartan luonti;"
+
+#: ../../source/introduction.rst:17
+msgid "organising and preparing data."
+msgstr "datan järjestely ja valmistelu."
+
+#: ../../source/introduction.rst:19
+msgid "**Map configuration & publication**"
+msgstr "**Kartan konfigurointi ja julkaisu**"
+
+#: ../../source/introduction.rst:21
+msgid ""
+"To be able to put the map online, the publisher configures publishing "
+"options (scales, base layers, metadata) with **Lizmap plugin** in QGIS "
+"Desktop. Then he synchronizes his working folder with his server in intra- "
+"or extranet."
+msgstr "Voidakseen laittaa kartan verkkoon, julkaisija konfiguroi julkaisuvalinnat (mittakaavat, perustasaot, metadatan) käyttäen Lizmap liitännäistä QGIS Desktop ohjelmassa. Sen jälkeen hän synkronoi työhakemiston palvelimensa kanssa joko intra- tai extranetissä,"
+
+#: ../../source/introduction.rst:23
+msgid "**Data vizualisation**"
+msgstr "**Datan visualisointi**"
+
+#: ../../source/introduction.rst:25
+msgid ""
+"When synchronization is complete, The QGIS map can then be accessed on the "
+"Internet at the same. It is available on the application **Lizmap Web "
+"Client** with a Web browser (Firefox, Safari, Chrome, Internet Explorer)."
+msgstr "Synkronoinnin valmistuttua, voidaan QGIS kartta avata Internetissä samoin tein. Se on käytettävissä sovellutuksessa **Lizmap Web Client** web-selaimella (Firefox, Safari, Chrome, Internet Explorer)."
+
+#: ../../source/introduction.rst:29
+msgid "QGIS and QGIS Server"
+msgstr "QGIS ja QGIS palvelin"
+
+#: ../../source/introduction.rst:31
+msgid "QGIS, a complete Desktop GIS software"
+msgstr "QGIS, täydellinen Desktop GIS ohjelmisto"
+
+#: ../../source/introduction.rst:33
+msgid ""
+"Management of a wide range of data format for raster (GeoTIFF, ASC, NetCDF, "
+"etc.) and vector (SHP, TAB, MIF/MID, GML, GeoJSON, etc)"
+msgstr "Käsitellään laajaa joukkoa dataformaatteja rastereille  (GeoTIFF, ASC, NetCDF, jne.) ja vektoreille (SHP, TAB, MIF/MID, GML, GeoJSON, jne.)"
+
+#: ../../source/introduction.rst:34
+msgid ""
+"Management of key geographic database (PostgreSQL/PostGIS, Oracle, MSSQL, "
+"etc.)"
+msgstr "Tärkeiden maantieteellisten tietokantojen hallinta (PostgreSQL/PostGIS, Oracle, MSSQL, jne.)"
+
+#: ../../source/introduction.rst:35
+msgid ""
+"Management of raster and vector layers, symbology, printing, processing"
+msgstr "Rasteri ja vektori tasojen, symbolien, tulostuksen ja prosessoinnin hoitaminen"
+
+#: ../../source/introduction.rst:36
+msgid "Performance and functional richness of a desktop GIS Software"
+msgstr "Työasema GIS ohjelmiston tehokkuus ja toiminnallinen monipuolisuus"
+
+#: ../../source/introduction.rst:38
+msgid "Geographical standardized Web Services:"
+msgstr "Maantieteelliset standardoidut verkkopalvelut:"
+
+#: ../../source/introduction.rst:40
+msgid ""
+"*Open Geospatial Consortium*, OGC, consortium for standardization of "
+"geographic information exchange through Internet"
+msgstr "*Open Geospatial Consortium*, OGC, ryhmittymä maantieteellisen tiedon siirtämiseksi internetissä standardoidusti"
+
+#: ../../source/introduction.rst:41
+msgid "*Web Mapping Service*, WMS: standard for publishing map as image"
+msgstr "*Web Mapping Service*, WMS: standardi kartan julkaisemiseksi  kuvana"
+
+#: ../../source/introduction.rst:42
+msgid ""
+"*Web Feature Service*, WFS: standard for publishing geographic vector data"
+msgstr "*Web Feature Service*, WFS: standardi julkaista maantieteellistä vektoridataa"
+
+#: ../../source/introduction.rst:43
+msgid ""
+"*Web Coverage Service*, WCS: standard for publishing geographic raster data"
+msgstr "*Web Coverage Service*, WCS: standardi julkaista maantieteellistä rasteridataa"
+
+#: ../../source/introduction.rst:45
+msgid ""
+"QGIS Server allows you to easily publish 3 types of standardized Web "
+"Services Geographic:"
+msgstr "QGIS palvelin mahdollistaa Sinun julkaisevan helposti käyttäen kolmea standardoitua maantieteellisen datan verkkopalvelua:"
+
+#: ../../source/introduction.rst:47
+msgid "Install QGIS Server on a server"
+msgstr "Asenna QGIS palvelin palvelimelle"
+
+#: ../../source/introduction.rst:48
+msgid "Configure properties of Geographic Web Services"
+msgstr "Konfiguroi maantieteellisten verkkopalveluiden ominaisuudet"
+
+#: ../../source/introduction.rst:49
+msgid "Copy and paste the QGIS project and data files"
+msgstr "Kopioi ja liitä QGIS projekti ja datatiedostot"
+
+#: ../../source/introduction.rst:50
+msgid "QGIS Server and QGIS Desktop share **the same rendering engine**"
+msgstr "QGIS palvelin ja QGIS Desktop jakavat **saman hahmottamismoottorin**"
+
+#: ../../source/introduction.rst:57
+msgid "Lizmap features"
+msgstr "Lizmapin ominaisuudet"
+
+#: ../../source/introduction.rst:60
+msgid "Default features"
+msgstr "Oletusominaisuudet"
+
+#: ../../source/introduction.rst:62
+msgid "By default, Lizmap offers web maps with the following features:"
+msgstr "Oletuksena Lizmap verkkokartat sisältävät seuraavat ominaisuudet:"
+
+#: ../../source/introduction.rst:64
+msgid "pan"
+msgstr "panorointi"
+
+#: ../../source/introduction.rst:65
+msgid "zoom on area drawn by the user"
+msgstr "käyttäjän rajaaman alueen zoomaus"
+
+#: ../../source/introduction.rst:66
+msgid "zoom more"
+msgstr "lisäzoomaus"
+
+#: ../../source/introduction.rst:67
+msgid "selecting a zoom level with a level bar"
+msgstr "zoomaustason valinta tasopalkista"
+
+#: ../../source/introduction.rst:68
+msgid "zoom less"
+msgstr "zoomauksen vähentöminen"
+
+#: ../../source/introduction.rst:69
+msgid "displaying the scale as a scale bar and digitally"
+msgstr "mittakaavan näyttö mittakaavajanalla ja digitaalisesti"
+
+#: ../../source/introduction.rst:71
+msgid ""
+"The displayed legend respects the order and organization defined in QGIS."
+msgstr "Näytettävä selite noudattaa QGIS:ssä määritettyä järjestystä ja rakennetta"
+
+#: ../../source/introduction.rst:73
+msgid ""
+"The interface allows the user to hide the legend and take advantage of the "
+"map in the entire width of the screen. It also lets you view the information"
+" on the map (description, extent, contact)."
+msgstr "Liittymä mahdollistaa selitteen piilottamisen ja siten hyödyntämään kartalle koko näytön leveyttä. Se mahdollistaa myös tietojen näyttämisen kartalla (kuvaus, laajuus, yhteystiedot)."
+
+#: ../../source/introduction.rst:75
+msgid ""
+"Finally Lizmap is a proxy to the web services used to construct maps. It is "
+"therefore possible to use WMS or WFS requests through Lizmap. It is possible"
+" to secure access to web services for access in QGIS or ArcGIS. It is also "
+"possible to share these addresses with web services systems cataloging."
+msgstr "Lopuksi Lizmap on proxy web palveluille käytettäessä karttojen muodostamiseen. Siksi on mahdollista käyttää WMS ja WFS pyyntöjä Lizmapin kautta. On myös mahdollista suojata pääsy verkkopalveluihin pääsyllä QGIS tai ArcGIS ohjelmiin. Lisäksi on mahdollista jakaa nämä osoitteet verkkopalveluihin verkkopalveluiden luetteloinnilla."
+
+#: ../../source/introduction.rst:82
+msgid "Configuration with QGIS"
+msgstr "Konfigurointi QGISillä"
+
+#: ../../source/introduction.rst:84
+msgid "Map's configuration is done in QGIS."
+msgstr "Kartan konfigurointi tehdään käyttäen QGISiä."
+
+#: ../../source/introduction.rst:86
+msgid "One part comes directly from the **QGIS project**:"
+msgstr "Osa tulee suoraan **QGIS projektista**:"
+
+#: ../../source/introduction.rst:88
+msgid "legend order and structure"
+msgstr "selitteen järjestys ja rakenne"
+
+#: ../../source/introduction.rst:89
+msgid "layer symbology"
+msgstr "tason symbolit"
+
+#: ../../source/introduction.rst:90
+msgid "location map with a group Overview in the legend"
+msgstr "sijaintikartta selitteen ryhmä yleiskatsauksella"
+
+#: ../../source/introduction.rst:91
+msgid "configure print templates via composers"
+msgstr "konfiguroida tulostemallit tulostesuunnittelijalla"
+
+#: ../../source/introduction.rst:93
+msgid "The rest is done with the **Lizmap plugin**. This plugin allows to:"
+msgstr "Loput tehdään käyttäen **Lizmap liitännäistä**. Tämä liiitännäinen mahdollistaa:"
+
+#: ../../source/introduction.rst:95
+msgid "specify the layers and groups name in the Web interface"
+msgstr "määritellä tasojen ja ryhmien nimet verkkoliitännässä"
+
+#: ../../source/introduction.rst:96
+msgid "group the layers into a single WMS layer"
+msgstr "ryhmitellä tasot yhdeksi WMS tasoksi"
+
+#: ../../source/introduction.rst:97
+msgid "set some layers as baselayer"
+msgstr "asettaa joitakin tasoja perustasoiksi"
+
+#: ../../source/introduction.rst:98
+msgid "set the display layer system: alone image or tiles"
+msgstr "asettaa näytettävien tasojen järjestelmä: yksittäinen kuva tai kuvakkeet"
+
+#: ../../source/introduction.rst:99
+msgid "set the lifetime of the images in the cache"
+msgstr "asettaa kuvien ikäraja välimuistissa"
+
+#: ../../source/introduction.rst:100
+msgid "set the lifetime of the images in the network"
+msgstr "asettaa kuvien ikäraja verkossa"
+
+#: ../../source/introduction.rst:101
+msgid "set the popups for querying layer"
+msgstr "asettaa popupit kyselytasoille"
+
+#: ../../source/introduction.rst:102
+msgid "set a link to the metadata"
+msgstr "asettaa linkit metadatalle"
+
+#: ../../source/introduction.rst:103
+msgid "set the map scales"
+msgstr "asettaa kartan  mittakaavat"
+
+#: ../../source/introduction.rst:104
+msgid "set the tools available with the map:"
+msgstr "asettaa kartan käytettävissä olevat työkalut:"
+
+#: ../../source/introduction.rst:106
+msgid "printing"
+msgstr "tulostus"
+
+#: ../../source/introduction.rst:107
+msgid "measuring length, area and perimeter"
+msgstr "pituuden, alan ja ympärysmitan mittaus"
+
+#: ../../source/introduction.rst:108
+msgid "using user geolocation (GPS)"
+msgstr "käyttäjän sijaintitieto (GPS)"
+
+#: ../../source/introduction.rst:109
+msgid "address search in OpenStreetMap or Google"
+msgstr "osoitteen haku joko OpenStreetMap tai Google"
+
+#: ../../source/introduction.rst:111
+msgid "set external baselayers:"
+msgstr "asettaa ulkoiset perustasot:"
+
+#: ../../source/introduction.rst:113
+msgid "Google Maps"
+msgstr "Google karta"
+
+#: ../../source/introduction.rst:114
+msgid "Bing Maps"
+msgstr "Bing kartat"
+
+#: ../../source/introduction.rst:115
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#: ../../source/introduction.rst:116
+msgid "Géoportail IGN"
+msgstr "Géoportail IGN"
+
+#: ../../source/introduction.rst:118
+msgid "set layers for navigation shortcut:"
+msgstr "aseta tasot navigoinnin pikavalintaan:"
+
+#: ../../source/introduction.rst:120
+msgid "search in a layer field"
+msgstr "haku tason tiedosta"
+
+#: ../../source/introduction.rst:121
+msgid "zoom to the selected item"
+msgstr "zoomaus valittuuun jäseneen"
+
+#: ../../source/introduction.rst:122
+msgid ""
+"cascaded search within 2 fields of the same layer or between joined layers"
+msgstr "järjestetty haku samalla tasolla tai liitetyillä tasoilla kahdella tiedolla"
+
+#: ../../source/introduction.rst:130
+msgid "Configuring with the Web back-office"
+msgstr "Verkkotuen konfigurointi"
+
+#: ../../source/introduction.rst:132
+msgid "The Lizmap back-office defines:"
+msgstr "Lizmap verkkotuki määrittelee:"
+
+#: ../../source/introduction.rst:134
+msgid "the directory list containing maps"
+msgstr "kartat sisältävän hakemistoluettelon"
+
+#: ../../source/introduction.rst:135
+msgid "users' rights by map directory"
+msgstr "käyttäjän oikeudet karttahakemistoon"
+
+#: ../../source/introduction.rst:136
+msgid "using subdomain to improve the responsiveness of the interface."
+msgstr "aladomainin käyttö parantamaan liittymän vastauskykyä"
+
+#: ../../source/introduction.rst:140
+msgid "In a nutshell"
+msgstr "Lizmap pähkinänkuoressa"
+
+#: ../../source/introduction.rst:142
+msgid "HTML5 interface compatible mobiles and tablets"
+msgstr "HTML5 liittymä yhteensopiva mobiileihin ratkaisuihin ja tabletteihin"
+
+#: ../../source/introduction.rst:143
+msgid ""
+"Grouping maps by directory: application multi-directories and multi-projects"
+msgstr "Karttojen ryhmittely hakemistoittain: sovelluksen monihakemistot ja useat projektit"
+
+#: ../../source/introduction.rst:144
+msgid "Management of access rights per directory for user groups"
+msgstr "Käyttäjäryhmien oikeuksien hakemistokohtainen hallinta"
+
+#: ../../source/introduction.rst:145
+msgid "Automatic map cache management"
+msgstr "Automaattinen kartan välimuistin hallinta"
+
+#: ../../source/introduction.rst:146
+msgid ""
+"Multilingual interface: English, French, Italian, Spanish, Portuguese, Greek"
+msgstr "Monikielinen liittymä: englanti, ranska, italia, espanja, portugali, kreikka ja suomi"
+
+#: ../../source/introduction.rst:147
+msgid "Using external baselayers: OSM, Google, Bing"
+msgstr "Ulkoisten perustasojen käyttö: OSM. Google, Bing"
+
+#: ../../source/introduction.rst:148
+msgid "Printing"
+msgstr "Tulostus"
+
+#: ../../source/introduction.rst:149
+msgid "Online edition: adding, spatial and filed changing, deleting"
+msgstr "Muokkaus onlinessa:  lisäys, spatiaalinen ja tallennettu, muutos, poisto"
+
+#: ../../source/introduction.rst:150
+msgid "Zoom with localisation"
+msgstr "Zoomaus paikallisesti"
+
+#: ../../source/introduction.rst:151
+msgid "Address search: Nominatim (OpenStreetMap engine), Google"
+msgstr "Osoitteen haku: Nominatim (OpenStreetMap moottori), Google"
+
+#: ../../source/introduction.rst:152
+msgid "Access logs"
+msgstr "Käyttölokit"
