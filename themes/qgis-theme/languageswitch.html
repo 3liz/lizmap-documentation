@@ -52,6 +52,8 @@
         }
         langPlusPage = langPlusPage[0];
         currentLang = langPlusPage.replace(currentPage, '');
+        if (currentLang[0] != '/')
+            currentLang = '/'+currentLang;
         // put some style around the current locale flag, we have to remove the '/' here
         // this is for the flags:
         //$('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');

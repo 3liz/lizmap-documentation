@@ -6,7 +6,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
-TRANSLATIONS  = fr it es
+TRANSLATIONS  = fr it es pt fi
 LANGUAGES     = en $(TRANSLATIONS)
 
 # Internal variables.
