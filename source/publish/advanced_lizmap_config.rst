@@ -770,6 +770,8 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
 
 .. note:: All the editing tools are not yet managed by Lizmap Web Client. Only the following tools are supported: Text edit, Classification, Range, Value Map, Hidden, Check Box, Date/Time, Value Relation. If the tool is not supported, the web form displays a text input field.
 
+.. note:: To make the field compulsory you have to define it as `NOT NULL` in the properties of the table, at the database level.
+
 * Add the layer in the table "Layer Editing" located in the plugin Lizmap "Tools" tab:
 
   - *Select the layer* in the drop-down list
