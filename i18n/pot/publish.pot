@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-24 15:24+0100\n"
+"POT-Creation-Date: 2017-03-08 15:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1756,270 +1756,274 @@ msgid "All the editing tools are not yet managed by Lizmap Web Client. Only the 
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:773
-msgid "Add the layer in the table \"Layer Editing\" located in the plugin Lizmap \"Tools\" tab:"
+msgid "To make the field compulsory you have to define it as `NOT NULL` in the properties of the table, at the database level."
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:775
+msgid "Add the layer in the table \"Layer Editing\" located in the plugin Lizmap \"Tools\" tab:"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:777
 msgid "*Select the layer* in the drop-down list"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:776
+#: ../../source/publish/advanced_lizmap_config.rst:778
 msgid "Check the actions you want to activate from:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:778
+#: ../../source/publish/advanced_lizmap_config.rst:780
 msgid "Create"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:779
+#: ../../source/publish/advanced_lizmap_config.rst:781
 msgid "Modify attributes"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:780
+#: ../../source/publish/advanced_lizmap_config.rst:782
 msgid "Modify geometry"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:781
+#: ../../source/publish/advanced_lizmap_config.rst:783
 msgid "Delete"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:783
+#: ../../source/publish/advanced_lizmap_config.rst:785
 msgid "Add the layer in the list with the \"Add layer\" button."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:790
+#: ../../source/publish/advanced_lizmap_config.rst:792
 msgid "Reusing data of edition layers"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:792
+#: ../../source/publish/advanced_lizmap_config.rst:794
 msgid "The layers that you have selected for the editing tool are \"layers like the others\", which means:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:794
+#: ../../source/publish/advanced_lizmap_config.rst:796
 msgid "**QGIS styles and labels are applied to these layers.** You can create styles and labels that depend on a value of a layer column."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:796
+#: ../../source/publish/advanced_lizmap_config.rst:798
 msgid "If you want to propose the editing tool, but does not allow users to view data from the online layer (and therefore the additions of other users): **you can simply hide edition layers** by putting them in a *hidden* directory. See :ref:`hide-layers`"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:798
+#: ../../source/publish/advanced_lizmap_config.rst:800
 msgid "**The layers are printable** if they are not masked."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:800
+#: ../../source/publish/advanced_lizmap_config.rst:802
 msgid "**The data are stored in a layer of the project**. The administrator can retrieve this data and use them thereafter."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:802
+#: ../../source/publish/advanced_lizmap_config.rst:804
 msgid "PostGIS or Spatialite? To centralize things, we recommend using a PostGIS database to store data. For Spatialite layers, be careful not to overwrite the Spatialite file stored in the Lizmap directory on the server with the one you have locally: remember always to make a backup of the server file before a new sync your local directory."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:804
+#: ../../source/publish/advanced_lizmap_config.rst:806
 msgid "Using the cache: whether to use the server or client cache for editing layers, do so by knowingly: the data will not be visible to users until the cache has not expired. We suggest not to enable the cache for editing layers."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:806
+#: ../../source/publish/advanced_lizmap_config.rst:808
 msgid "Lizmap 3 only"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:809
+#: ../../source/publish/advanced_lizmap_config.rst:811
 msgid "Adding files and images for features"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:811
+#: ../../source/publish/advanced_lizmap_config.rst:813
 msgid "With Lizmap 3, it is now possible to upload your files, including images, for each feature, during online editing; to achieve this, you need to:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:813
+#: ../../source/publish/advanced_lizmap_config.rst:815
 msgid "Configure edition for the layer, with one or more fields with the **edit type** \"Photo\" or \"File\". For example, let say the field name is \"photo\""
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:814
+#: ../../source/publish/advanced_lizmap_config.rst:816
 msgid "Create a folder at the root of the QGIS project file : **media/** and a subfolder **media/upload** (obviously you need to do that locally in your computer and server side )."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:815
+#: ../../source/publish/advanced_lizmap_config.rst:817
 msgid "Give Apache user (usually www-data) **write permission** on the upload folder, so that it can create files and folders in media/upload::"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:819
+#: ../../source/publish/advanced_lizmap_config.rst:821
 msgid "Check you ``php.ini`` to see if the variables ``post_max_size`` and ``max_upload_size`` are correctly set (by default, php only allows uploading files up to 2 Mbyte)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:821
+#: ../../source/publish/advanced_lizmap_config.rst:823
 msgid "Lizmap will then create folders to store the data, depending on the layer name, field name, etc. For example, a file would be stored in the folder ``media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT`` and an image in ``media/upload/environment/observations/species_picture/my_picture.png``."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:823
+#: ../../source/publish/advanced_lizmap_config.rst:825
 msgid "Obviously you will be able to display this image (or any other file) in the popup, as it will be stored in the media folder. See :ref:`use-in-popups`"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:828
+#: ../../source/publish/advanced_lizmap_config.rst:830
 msgid "Filtered layers - Filtering data in function of users"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:831
+#: ../../source/publish/advanced_lizmap_config.rst:833
 msgid "Presentation of the function"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:833
+#: ../../source/publish/advanced_lizmap_config.rst:835
 msgid "Usually, the management of projects Lizmap access rights is via directory. Configuration is done in this case in the Lizmap Web Client administration interface. See :ref:`define-group-rights`. This will completely hide some projects based on user groups, but requires a directory and project management."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:835
+#: ../../source/publish/advanced_lizmap_config.rst:837
 msgid "Instead, the filtering feature presented here allows you to publish a single project QGIS, and filter the data displayed on the map based on the logged in user. It is possible to filter only vector layers because Lizmap uses a column in the attribute table."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:837
+#: ../../source/publish/advanced_lizmap_config.rst:839
 msgid "Filtering currently uses the ID of the user group connected to the Web application. He is active for all requests to the QGIS server, and thus concerns:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:839
+#: ../../source/publish/advanced_lizmap_config.rst:841
 msgid "the vector layers images displayed on the map"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:840
+#: ../../source/publish/advanced_lizmap_config.rst:842
 msgid "the popups"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:841
+#: ../../source/publish/advanced_lizmap_config.rst:843
 msgid "the *Locate by layer* feature lists. See :ref:`locate-by-layer`"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:842
+#: ../../source/publish/advanced_lizmap_config.rst:844
 msgid "drop-down lists of *Editing forms* from *Value relation*. See :ref:`lizmap-config-edition`"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:843
+#: ../../source/publish/advanced_lizmap_config.rst:845
 msgid "upcoming features (the attribute table display, search features, etc.)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:845
+#: ../../source/publish/advanced_lizmap_config.rst:847
 msgid "A video tutorial is available at: https://vimeo.com/83966790"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:848
+#: ../../source/publish/advanced_lizmap_config.rst:850
 msgid "Configuration of the data filter tool"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:850
+#: ../../source/publish/advanced_lizmap_config.rst:852
 msgid "To use data filtering tool in Lizmap Web Client, you must:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:852
+#: ../../source/publish/advanced_lizmap_config.rst:854
 msgid "use **QGIS 2 and above** on the server"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:853
+#: ../../source/publish/advanced_lizmap_config.rst:855
 msgid "have **access to the administration interface** of Lizmap Web Client"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:855
+#: ../../source/publish/advanced_lizmap_config.rst:857
 msgid "Here are the detailed steps to configure this feature:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:857
+#: ../../source/publish/advanced_lizmap_config.rst:859
 msgid "**Knowing the identifiers of user groups** configured in the Lizmap Web Client adminstration interface. For this, you must go to the administration interface :menuselection:`SYSTEM --> Groups of users for rights`: ID appears in parentheses after the name of each group (under the title *Groups of new users*)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:861
+#: ../../source/publish/advanced_lizmap_config.rst:863
 msgid "For all vector layers which is desired filter data, just add a text column that will hold the group ID for each line (not the name !!) who has the right to display this line."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:859
+#: ../../source/publish/advanced_lizmap_config.rst:861
 msgid "*Fill this column* for each line of the attribute table with the identifier of the group who has the right to see the line (using the calculator, for example)."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:860
+#: ../../source/publish/advanced_lizmap_config.rst:862
 msgid "It is possible to set **all** as the value in some lines to disable the filter: All users will see the data from these lines."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:861
+#: ../../source/publish/advanced_lizmap_config.rst:863
 msgid "If the value in this column for a row does not correspond to a user group, then the data will be displayed for no user."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:863
+#: ../../source/publish/advanced_lizmap_config.rst:865
 msgid "Add the layer in the table **Filter Data by User** located in the plugin Lizmap *Tools* tab:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:865
+#: ../../source/publish/advanced_lizmap_config.rst:867
 msgid "*Select layer* from the dropdown list"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:866
+#: ../../source/publish/advanced_lizmap_config.rst:868
 msgid "Select the field that contains the *group identifier* for the layer"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:867
+#: ../../source/publish/advanced_lizmap_config.rst:869
 msgid "Add the layer in the list with the button *Add layer*"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:868
+#: ../../source/publish/advanced_lizmap_config.rst:870
 msgid "To remove a layer of the table, click on it and click the button *Delete the layer*"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:870
+#: ../../source/publish/advanced_lizmap_config.rst:872
 msgid "**Disable the client cache and cache server** for all filtered layers. Otherwise, the data displayed will not be updated between each connection or user logout!"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:873
+#: ../../source/publish/advanced_lizmap_config.rst:875
 msgid "Time Manager - Animation of temporal vector layers"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:875
+#: ../../source/publish/advanced_lizmap_config.rst:877
 msgid "You can create animations of your vectors, provided you have at least a layer with a column with a valid date/time. You should select from the plugin:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:877
+#: ../../source/publish/advanced_lizmap_config.rst:879
 msgid "at least one layer with the date/time"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:878
+#: ../../source/publish/advanced_lizmap_config.rst:880
 msgid "the column with the date/time"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:879
+#: ../../source/publish/advanced_lizmap_config.rst:881
 msgid "the number and type of time units for each step of the animation"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:880
+#: ../../source/publish/advanced_lizmap_config.rst:882
 msgid "the duration, in milliseconds, of each step (the default is to display each 10 days block for one second)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:881
+#: ../../source/publish/advanced_lizmap_config.rst:883
 msgid "one field to display as a label when hovering with the mouse over the objects"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:882
+#: ../../source/publish/advanced_lizmap_config.rst:884
 msgid "optionally, an ID and a title for groups of objects."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:884
+#: ../../source/publish/advanced_lizmap_config.rst:886
 msgid "When ready, your web application will display the symbol of a watch; clicking on it will open a small panel that will allow you to move between steps, or paly the entire animation. At startup, the application will load the entire table, so if you have thousands of objects you may need to wait for several seconds before the application is available."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:886
+#: ../../source/publish/advanced_lizmap_config.rst:888
 msgid "A video tutorial is available here: https://vimeo.com/83845949. It shows all the steps to use the functionality."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:888
+#: ../../source/publish/advanced_lizmap_config.rst:890
 msgid "Demonstration site: http://demo.lizmap.3liz.com/index.php/view/?repository=rep6"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:890
+#: ../../source/publish/advanced_lizmap_config.rst:892
 msgid "Several different formats for date/time are acceptable (those supported by the JavaScript library `DateJS`). You can check whether your format is supported by entering it in this page: http://www.datejs.com/"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:893
+#: ../../source/publish/advanced_lizmap_config.rst:895
 msgid "Changing the default image of a project in the repositories and projects site"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:895
+#: ../../source/publish/advanced_lizmap_config.rst:897
 msgid "By default the following image is displayed for a project:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:902
+#: ../../source/publish/advanced_lizmap_config.rst:904
 msgid "You can change this default image by adding in the same project folder a .png image with the exact project name and extension. Example: If the project is called montpellier.qgs you can add an image named montpellier.qgs.png. Note that the image has the project extension too."
 msgstr ""
 
