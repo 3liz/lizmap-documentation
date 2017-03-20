@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-24 15:24+0100\n"
-"PO-Revision-Date: 2017-02-03 17:22+0000\n"
+"POT-Creation-Date: 2017-03-08 15:43+0100\n"
+"PO-Revision-Date: 2017-02-26 15:56+0000\n"
 "Last-Translator: José Macau <jose.macau@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/3liz-1/lizmap-documentation/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr "Introdução"
 
 #: ../../source/introduction.rst:6
 msgid "Lizmap architecture"
-msgstr "Arquitetura Lizmap"
+msgstr "Arquitetura do Lizmap"
 
 #: ../../source/introduction.rst:11
 msgid "**Data preparation**"
@@ -39,7 +39,7 @@ msgstr "O fluxo de de construção dos mapas é efetuado no seu computador com o
 
 #: ../../source/introduction.rst:15
 msgid "loading layers,"
-msgstr "carregando as camadas,"
+msgstr "carregamento de camadas,"
 
 #: ../../source/introduction.rst:16
 msgid "map creation,"
@@ -47,7 +47,7 @@ msgstr "criação do mapa,"
 
 #: ../../source/introduction.rst:17
 msgid "organising and preparing data."
-msgstr "organizando e preparando os dados."
+msgstr "organização e preparação dos dados."
 
 #: ../../source/introduction.rst:19
 msgid "**Map configuration & publication**"
@@ -59,7 +59,7 @@ msgid ""
 "options (scales, base layers, metadata) with **Lizmap plugin** in QGIS "
 "Desktop. Then he synchronizes his working folder with his server in intra- "
 "or extranet."
-msgstr "Para poder colocar o mapa online, é necessário configurar algumas opções de publicação (escalas, camadas de base, metadados) através do **Lizmap plugin** do QGIS Desktop. De seguida, há que sincronizar a pasta de trabalho com o servidor intranet ou extranet."
+msgstr "Para poder colocar o mapa online, é necessário configurar algumas opções de publicação (escalas, camadas de base, metadados) através do **plugin Lizmap** do QGIS Desktop. De seguida, há que sincronizar a pasta de trabalho com o servidor intranet ou extranet."
 
 #: ../../source/introduction.rst:23
 msgid "**Data vizualisation**"
@@ -137,7 +137,7 @@ msgstr "Instalar o QGIS Server num servidor"
 
 #: ../../source/introduction.rst:48
 msgid "Configure properties of Geographic Web Services"
-msgstr "Configuração de propriedades dos Serviços Geográficos Web"
+msgstr "Configurar as propriedades dos Serviços Geográficos Web"
 
 #: ../../source/introduction.rst:49
 msgid "Copy and paste the QGIS project and data files"
@@ -169,7 +169,7 @@ msgstr "zoom para uma área definida pelo utilizador"
 
 #: ../../source/introduction.rst:66
 msgid "zoom more"
-msgstr "mais zoom"
+msgstr "aproximar"
 
 #: ../../source/introduction.rst:67
 msgid "selecting a zoom level with a level bar"
@@ -177,7 +177,7 @@ msgstr "selecionar um nível de zoom através de uma barra vertical"
 
 #: ../../source/introduction.rst:68
 msgid "zoom less"
-msgstr "menos zoom"
+msgstr "afastar"
 
 #: ../../source/introduction.rst:69
 msgid "displaying the scale as a scale bar and digitally"
@@ -193,7 +193,7 @@ msgid ""
 "The interface allows the user to hide the legend and take advantage of the "
 "map in the entire width of the screen. It also lets you view the information"
 " on the map (description, extent, contact)."
-msgstr "A interface permite ao utilizador ocultar a legenda e visualizar o mapa em toda a largura do ecrã. Também permite visualizar informações no mapa (descrição, extensão, contato)."
+msgstr "A interface permite ao utilizador ocultar a legenda e visualizar o mapa em toda a largura do ecrã. Também permite visualizar informações no mapa (descrição, extensão, contacto)."
 
 #: ../../source/introduction.rst:75
 msgid ""
@@ -201,7 +201,7 @@ msgid ""
 "therefore possible to use WMS or WFS requests through Lizmap. It is possible"
 " to secure access to web services for access in QGIS or ArcGIS. It is also "
 "possible to share these addresses with web services systems cataloging."
-msgstr "Finalmente o Lizmap é um proxy para os serviços Web utilizados para a construção de mapas. Portanto, é possível utilizar pedidos WMS ou WFS através do Lizmap. É possível garantir o acesso aos serviços Web para acesso no QGIS ou no ArcGIS. Também é possível partilhar esses endereços com sistemas de catalogação de serviços Web."
+msgstr "Finalmente o Lizmap funciona como um proxy para os serviços Web utilizados na construção de mapas. Portanto, é possível efetuar pedidos WMS ou WFS através do Lizmap. É possível garantir ao QGIS ou ao ArcGIS o acesso aos serviços Web. Também é possível partilhar esses endereços com sistemas de catalogação de serviços Web."
 
 #: ../../source/introduction.rst:82
 msgid "Configuration with QGIS"
@@ -225,15 +225,15 @@ msgstr "simbologia da camada"
 
 #: ../../source/introduction.rst:90
 msgid "location map with a group Overview in the legend"
-msgstr "Mapa de enquadramento através de um grupo Overview na legenda"
+msgstr "mapa de enquadramento através de um grupo Overview na legenda"
 
 #: ../../source/introduction.rst:91
 msgid "configure print templates via composers"
-msgstr "configurar modelos de impressão via compositores"
+msgstr "configurar modelos de impressão através dos respetivos compositores"
 
 #: ../../source/introduction.rst:93
 msgid "The rest is done with the **Lizmap plugin**. This plugin allows to:"
-msgstr "O resto é feito com o **módulo Lizmap**. Este módulo permite:"
+msgstr "O resto é feito através do **plugin Lizmap**. Este plugin permite:"
 
 #: ../../source/introduction.rst:95
 msgid "specify the layers and groups name in the Web interface"
@@ -245,47 +245,47 @@ msgstr "agrupar as camadas numa única camada WMS"
 
 #: ../../source/introduction.rst:97
 msgid "set some layers as baselayer"
-msgstr "defina algumas camadas como camadas base"
+msgstr "definir algumas camadas como camadas base"
 
 #: ../../source/introduction.rst:98
 msgid "set the display layer system: alone image or tiles"
-msgstr "defina o sistema de exibição das camadas: uma única imagem ou mosaicos"
+msgstr "definir o sistema de visualização das camadas: uma única imagem ou mosaicos"
 
 #: ../../source/introduction.rst:99
 msgid "set the lifetime of the images in the cache"
-msgstr "defina o tempo de vida útil das imagens em cache"
+msgstr "definir o tempo de vida útil das imagens em cache"
 
 #: ../../source/introduction.rst:100
 msgid "set the lifetime of the images in the network"
-msgstr "defina o tempo de vida útil das imagens na rede"
+msgstr "definir o tempo de vida útil das imagens na rede"
 
 #: ../../source/introduction.rst:101
 msgid "set the popups for querying layer"
-msgstr "defina os popups para a camada de consulta"
+msgstr "definir popups para a camada de consulta"
 
 #: ../../source/introduction.rst:102
 msgid "set a link to the metadata"
-msgstr "defina o link para os metadados"
+msgstr "definir o link para os metadados"
 
 #: ../../source/introduction.rst:103
 msgid "set the map scales"
-msgstr "defina as escalas do mapa"
+msgstr "definir as escalas do mapa"
 
 #: ../../source/introduction.rst:104
 msgid "set the tools available with the map:"
-msgstr "defina as ferramentas disponíveis com o mapa:"
+msgstr "definir as ferramentas disponíveis com o mapa:"
 
 #: ../../source/introduction.rst:106
 msgid "printing"
-msgstr "imprimindo"
+msgstr "impressão"
 
 #: ../../source/introduction.rst:107
 msgid "measuring length, area and perimeter"
-msgstr "medindo o comprimento, área e perímetro"
+msgstr "medição do comprimento, área e perímetro"
 
 #: ../../source/introduction.rst:108
 msgid "using user geolocation (GPS)"
-msgstr "usando a geolocalização do utilizador (GPS)"
+msgstr "utilização da geolocalização do utilizador (GPS)"
 
 #: ../../source/introduction.rst:109
 msgid "address search in OpenStreetMap or Google"
@@ -293,7 +293,7 @@ msgstr "pesquisa de endereços no OpenStreetMap ou Google"
 
 #: ../../source/introduction.rst:111
 msgid "set external baselayers:"
-msgstr "definir as camadas base externas:"
+msgstr "definir camadas base externas:"
 
 #: ../../source/introduction.rst:113
 msgid "Google Maps"
@@ -326,11 +326,11 @@ msgstr "ampliar a um item seleccionado"
 #: ../../source/introduction.rst:122
 msgid ""
 "cascaded search within 2 fields of the same layer or between joined layers"
-msgstr "pesquisa em cascata dentro de 2 campos da mesma camada ou entre camadas unidas"
+msgstr "pesquisar em cascata dentro de 2 campos da mesma camada ou entre camadas unidas"
 
 #: ../../source/introduction.rst:130
 msgid "Configuring with the Web back-office"
-msgstr "Configurando com o back-office da Web"
+msgstr "Configuração através do Web back-office"
 
 #: ../../source/introduction.rst:132
 msgid "The Lizmap back-office defines:"
@@ -338,15 +338,15 @@ msgstr "O back-office do Lizmap define:"
 
 #: ../../source/introduction.rst:134
 msgid "the directory list containing maps"
-msgstr "A lista de pastas que contêm os mapas"
+msgstr "a lista de pastas que contêm os mapas"
 
 #: ../../source/introduction.rst:135
 msgid "users' rights by map directory"
-msgstr "permissões dos utilizadores por pasta do mapa"
+msgstr "as permissões dos utilizadores por pasta do mapa"
 
 #: ../../source/introduction.rst:136
 msgid "using subdomain to improve the responsiveness of the interface."
-msgstr "utilizando um subdomínio para melhorar a capacidade de resposta da interface."
+msgstr "a utilização de subdomínios para melhorar a capacidade de resposta da interface."
 
 #: ../../source/introduction.rst:140
 msgid "In a nutshell"
@@ -354,7 +354,7 @@ msgstr "Em resumo"
 
 #: ../../source/introduction.rst:142
 msgid "HTML5 interface compatible mobiles and tablets"
-msgstr "interface HTML5 compatível com telemóveis e tablets"
+msgstr "Interface HTML5 compatível com telemóveis e tablets"
 
 #: ../../source/introduction.rst:143
 msgid ""
@@ -363,11 +363,11 @@ msgstr "Agrupar mapas por pasta: aplicação multi-pastas e multi-projetos"
 
 #: ../../source/introduction.rst:144
 msgid "Management of access rights per directory for user groups"
-msgstr "Gestão das permissões de acesso por directório de grupos de utilizadores"
+msgstr "Gestão das permissões de acesso por diretório para grupos de utilizadores"
 
 #: ../../source/introduction.rst:145
 msgid "Automatic map cache management"
-msgstr "Gestão automática do cache do mapa"
+msgstr "Gestão automática da cache do mapa"
 
 #: ../../source/introduction.rst:146
 msgid ""
@@ -380,11 +380,11 @@ msgstr "Utilização de camadas base externas: OSM, Google, Bing"
 
 #: ../../source/introduction.rst:148
 msgid "Printing"
-msgstr "Imprimindo"
+msgstr "Impressão"
 
 #: ../../source/introduction.rst:149
 msgid "Online edition: adding, spatial and filed changing, deleting"
-msgstr "Edição online: adicionando, alteração espacial e preenchimento, eliminando"
+msgstr "Edição online: adicionar, alteração espacial e de atributos, eliminar"
 
 #: ../../source/introduction.rst:150
 msgid "Zoom with localisation"
@@ -396,4 +396,4 @@ msgstr "Pesquisa de endereços:  Nominatim (OpenStreetMap engine), Google"
 
 #: ../../source/introduction.rst:152
 msgid "Access logs"
-msgstr "Registos de acesso"
+msgstr "Registo de acessos"

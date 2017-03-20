@@ -4,12 +4,13 @@
 # 
 # Translators:
 # José Macau <jose.macau@gmail.com>, 2017
+# José Macau <jose.macau@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-24 15:24+0100\n"
-"PO-Revision-Date: 2017-02-03 17:22+0000\n"
+"POT-Creation-Date: 2017-03-08 15:43+0100\n"
+"PO-Revision-Date: 2017-02-26 18:40+0000\n"
 "Last-Translator: José Macau <jose.macau@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/3liz-1/lizmap-documentation/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +56,7 @@ msgstr "Para simplificar, é importante configurar o servidor com a codificaçã
 msgid ""
 "It is also necessary configure the other software so that they are using "
 "this default encoding if this is not the case."
-msgstr "Também é necessário configurar outro software para que o mesmo esteja a utilizar esta codificação padrão se não for esse o caso."
+msgstr "Também é necessário configurar outro software para que o mesmo passe a utilizar esta codificação padrão, se não for esse o caso."
 
 #: ../../source/install/linux.rst:29
 msgid "Installing necessary packages"
@@ -91,7 +92,7 @@ msgstr "Em versões mais antigas do Apache, a configuração do ``php-cgi`` enco
 
 #: ../../source/install/linux.rst:85
 msgid "mpm-worker configuration"
-msgstr "configuração do mpm-worker"
+msgstr "Configuração do mpm-worker"
 
 #: ../../source/install/linux.rst:89
 msgid ""
@@ -101,7 +102,7 @@ msgstr "Modificamos o ficheiro de configuração do Apache para adaptar as opç�
 
 #: ../../source/install/linux.rst:106
 msgid "mod_fcgid configuration"
-msgstr "configuração do mod_fcgid"
+msgstr "Configuração do mod_fcgid"
 
 #: ../../source/install/linux.rst:108
 msgid ""
@@ -172,7 +173,7 @@ msgid ""
 "We will use pgtune, an utility program that can automatically generate a "
 "PostgreSQL configuration file adapted to the properties of the server "
 "(memory, processors, etc.)"
-msgstr "Utilizaremos o pgtune, um programa utilitário que pode gerar automaticamente um arquivo de configuração do PostgreSQL adaptado às propriedades do servidor (memória, processadores, etc.)"
+msgstr "Utilizaremos o pgtune, um programa utilitário que pode gerar automaticamente um ficheiro de configuração do PostgreSQL adaptado às propriedades do servidor (memória, processadores, etc.)"
 
 #: ../../source/install/linux.rst:231
 msgid "FTP Server: pure-ftpd"
@@ -398,7 +399,7 @@ msgid ""
 "same level as the QGIS projects in the Lizmap Web Client directory. This "
 "will facilitate the admin work that just have to change the rights of this "
 "unique directory."
-msgstr "Então se quiser instalar o Lizmap para fornecer acesso a várias publicações de mapas, deve configurar-lo de forma a criar sempre um diretório **db** no mesmo nível que os projetos QGIS no diretório do Lizmap Web Client. Isto facilitará o trabalho do administrador que apenas tem que alterar as permissões deste diretório único."
+msgstr "Se quiser instalar o Lizmap para fornecer acesso a várias publicações de mapas, deve configurar-lo de forma a criar sempre um diretório **db** no mesmo nível que os projetos QGIS no diretório do Lizmap Web Client. Isto facilitará o trabalho do administrador que apenas tem que alterar as permissões desse diretório único."
 
 #: ../../source/install/linux.rst:515
 msgid "Version upgrade"
@@ -527,7 +528,7 @@ msgid ""
 "configuration in **C:\\\\webserver\\\\Apache24\\\\conf\\\\httpd.conf** and "
 "edit with a text editor (e.g. Notepad++ or Notepad) and replace all "
 "occurrences of **C:/Apache24** into **C:/webserver/Apache24**."
-msgstr "Extraia o ficheiro zip para dentro de **C:\\\\webserver\\\\** e altere o nome de **httpd-2.4.20-win64-VC11** para **Apache24**. Proceda à configuração do Apache em **C:\\\\webserver\\\\Apache24\\\\conf\\\\httpd.conf ** e com recurso a um editor de texto (por exemplo o Notepad ++ ou o Notepad) substitua todas as ocorrências de **C:/Apache24** em **C:/webserver/Apache24**."
+msgstr "Extraia o ficheiro zip para dentro de **C:\\\\webserver\\\\** e altere o nome de **httpd-2.4.20-win64-VC11** para **Apache24**. Proceda à configuração do Apache em **C:\\\\webserver\\\\Apache24\\\\conf\\\\httpd.conf** e com recurso a um editor de texto (por exemplo o Notepad ++ ou o Notepad) substitua todas as ocorrências de **C:/Apache24** em **C:/webserver/Apache24**."
 
 #: ../../source/install/windows.rst:18
 msgid ""
@@ -544,7 +545,7 @@ msgid ""
 "and type :kbd:`cmd`, then in the shell write "
 "**C:\\\\webserver\\\\Apache24\\\\bin\\\\httpd.exe** and don't close the "
 ":kbd:`cmd`."
-msgstr "Para verificar se o Apache pode ser iniciado, abra uma linha de comandos com: kbd: `Windows + R` e digite: kbd:` cmd`, uma vez na shell escreva **C:\\\\webserver\\\\Apache24\\\\bin\\\\httpd.exe** e não feche o: kbd: `cmd`."
+msgstr "Para verificar se o Apache pode ser iniciado, abra uma linha de comandos com: kbd: `Windows + R` e digite: kbd: `cmd`, uma vez na shell escreva **C:\\\\webserver\\\\Apache24\\\\bin\\\\httpd.exe** e não feche o: kbd: `cmd`."
 
 #: ../../source/install/windows.rst:22
 msgid ""
@@ -889,7 +890,7 @@ msgid ""
 "By default, when you install LizMap Web Client, you will install a sqlite "
 "database where will be store the information about users, permissions among "
 "other information."
-msgstr "Por padrão, ao instalar o LizMap Web Client, instalará uma basevde dados SQLite onde serão armazenadas as informações sobre utilizadores, permissões entre outras informações."
+msgstr "Por padrão, ao instalar o LizMap Web Client, instalará uma base de dados SQLite onde serão armazenadas as informações sobre utilizadores, permissões, entre outras informações."
 
 #: ../../source/install/windows.rst:335
 msgid ""
@@ -1018,7 +1019,7 @@ msgstr "Não se esqueça de **\"Executar com privilégios de administrador\"**"
 
 #: ../../source/install/windows.rst:462
 msgid "Specify the **Port: 14147** ."
-msgstr "Especifique a **Port: 14147** ."
+msgstr "Especifique **Port: 14147** ."
 
 #: ../../source/install/windows.rst:463
 msgid ""
@@ -1087,7 +1088,7 @@ msgstr "Pode consultar este tutorial (apenas em francês) em: http://forum.hardw
 
 #: ../../source/install/windows.rst:478
 msgid "Now you need to set the PREPROD environment, for this you need to:"
-msgstr "Agora é necessário definir o ambiente PREPROD, para isso é preciso:"
+msgstr "Agora é necessário definir o ambiente PREPROD, para isso:"
 
 #: ../../source/install/windows.rst:480
 msgid ""
