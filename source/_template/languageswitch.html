@@ -31,7 +31,7 @@
       pages.pop();
       currentPage = pages.join('/') + '/';
     }
-    $(document).ready(function(){
+    window.addEventListener("load", function(){
         var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
         var langPlusPage = window.location.href.match(search);
         // it's possible this is the index.html page called without 'index.html', try without the currentPage
@@ -58,14 +58,14 @@
         // this is for the flags:
         //$('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
         // set language select to current lang
+        var selectLanguage = document.getElementById("languages");
+        selectLanguage.value = currentLang.replace(/\//g,''); // currentLang is something like '/nl/'
 
-        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+        selectLanguage.addEventListener("change", function(event) {
+            gotoLang(event.target.value);
+        }, false);
 
-        $("#languages").change(function() {
-            gotoLang($(this).val());
-        });
-
-    });
+    }, false);
 
     // load current page in a different language
     function gotoLang(lang){
