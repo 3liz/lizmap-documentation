@@ -31,7 +31,7 @@
       pages.pop();
       currentPage = pages.join('/') + '/';
     }
-    window.addEventListener("load", function(){
+    document.addEventListener("DOMContentLoaded", function(){
         var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
         var langPlusPage = window.location.href.match(search);
         // it's possible this is the index.html page called without 'index.html', try without the currentPage
