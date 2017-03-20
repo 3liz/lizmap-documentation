@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-21 11:33+0100\n"
-"PO-Revision-Date: 2017-03-07 13:11+0000\n"
+"PO-Revision-Date: 2017-03-11 23:39+0000\n"
 "Last-Translator: José Macau <jose.macau@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/3liz-1/lizmap-documentation/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -1857,12 +1857,12 @@ msgstr "Utilizando a cache: para utilizar a cache do servidor ou do cliente em c
 # e4e9826032d4402f9cad5b15af1f765b
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:629
 msgid "Filtered layers - Filtering data in function of users"
-msgstr ""
+msgstr "Camadas filtradas - Filtragem de dados em função dos utilizadores"
 
 # 514c3bd40a384823a7b417df57397c2e
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:632
 msgid "Presentation of the function"
-msgstr ""
+msgstr "Apresentação da função"
 
 # c837728289ce4c4b8418ff65397a4d8f
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:634
@@ -1872,7 +1872,7 @@ msgid ""
 "interface. See :ref:`define-group-rights`. This will completely hide some "
 "projects based on user groups, but requires a directory and project "
 "management."
-msgstr ""
+msgstr "Normalmente, a gestão dos direitos de acesso aos projectos Lizmap é feita através do diretório. Neste caso, a configuração é feita através da interface de administração do Lizmap Web Client. Veja :ref:`define-group-rights`. Isso ocultará completamente alguns projetos com base nos grupos de utilizadores, mas requer um diretório e gestão de projetos."
 
 # 2d8367350f8e4207a1ea5cad86bd71fe
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:636
@@ -1881,7 +1881,7 @@ msgid ""
 " project QGIS, and filter the data displayed on the map based on the logged "
 "in user. It is possible to filter only vector layers because Lizmap uses a "
 "column in the attribute table."
-msgstr ""
+msgstr "Em vez disso, o recurso de filtragem aqui apresentado permite que publique um único projeto QGIS e filtre os dados apresentados no mapa com base no utilizador ligado ao sistema. É possível filtrar apenas camadas vetoriais porque o Lizmap utiliza, para o efeito, uma coluna da tabela de atributos."
 
 # c735b06cf78a4d538c7c416325362beb
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:638
@@ -1889,34 +1889,34 @@ msgid ""
 "Filtering currently uses the ID of the user group connected to the Web "
 "application. He is active for all requests to the QGIS server, and thus "
 "concerns:"
-msgstr ""
+msgstr "Atualmente, o processo de filtragem utiliza o ID do grupo de utilizadores ligado à aplicação Web. O mesmo estará ativo para todas as solicitações feitas ao servidor QGIS e, portanto, diz respeito a:"
 
 # 00f4a0221efe4b2f844a097f5830277d
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:640
 msgid "the vector layers images displayed on the map"
-msgstr ""
+msgstr "as imagens de camadas vetoriais apresentadas no mapa"
 
 # 5a79990d1d554302a6a617ef989e2801
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:641
 msgid "the popups"
-msgstr ""
+msgstr "as popups"
 
 # d68e146d79ee4c30b1004e60b263bae6
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:642
 msgid "the *Locate by layer* feature lists. See :ref:`locate-by-layer`"
-msgstr ""
+msgstr "as listas de recursos *Localizar por Camada*. Veja :ref:`locate-by-layer`"
 
 # 943919257e6f46d48aba3e9debe35e29
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:643
 msgid ""
 "drop-down lists of *Editing forms* from *Value relation*. See :ref:`lizmap-"
 "config-edition`"
-msgstr ""
+msgstr "listas de valores *Edição de formulários* de *Valor da Relação*. Veja :ref:`lizmap-config-edition`"
 
 # 91944a6348c6422aaf210b8d55cd9195
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:644
 msgid "upcoming features (the attribute table display, search features, etc.)"
-msgstr ""
+msgstr "próximos recursos (apresentação da tabela de atributos, recursos de pesquisa, etc.)"
 
 # 06ac570e63d940de86e5c50ac9a3593b
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:646
@@ -1926,27 +1926,27 @@ msgstr "Está disponível um vídeo tutorial em: https://vimeo.com/83966790"
 # 3ca3ef2a02eb46478329ab49d18259ea
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:649
 msgid "Configuration of the data filter tool"
-msgstr ""
+msgstr "Configuração da ferramenta de filtragem de dados"
 
 # d4e2783c2319455ab6a31c51cba548ac
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:651
 msgid "To use data filtering tool in Lizmap Web Client, you must:"
-msgstr ""
+msgstr "Para utilizar a ferramenta de filtragem de dados no Lizmap Web Client, deve:"
 
 # bc0209b5337342a8bf5bb621d3cd5f12
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:653
 msgid "use **QGIS 2 and above** on the server"
-msgstr ""
+msgstr "utilizar o **QGIS 2 ou superior** no servidor"
 
 # ac0952b558dc419288dbaa93695103ca
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:654
 msgid "have **access to the administration interface** of Lizmap Web Client"
-msgstr ""
+msgstr "ter **acesso à interface de administração** do Lizmap Web Client"
 
 # 2871203f09e14147aa19e8ac046237a9
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:656
 msgid "Here are the detailed steps to configure this feature:"
-msgstr ""
+msgstr "Aqui estão os passos detalhados para configurar este recurso:"
 
 # f5488fbb24454c50b83749f3bde4f746
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:658
@@ -1956,7 +1956,7 @@ msgid ""
 "interface :menuselection:`SYSTEM --> Groups of users for rights`: ID appears"
 " in parentheses after the name of each group (under the title *Groups of new"
 " users*)"
-msgstr ""
+msgstr "**Conhecer os identificadores dos grupos de utilizadores** configurados na interface de administração do Lizmap Web Client. Para isso, deve ir para a interface de administração :menuselection:`SISTEMA --> Grupos de utilizadores e permissões`: o ID aparece entre parênteses após o nome de cada grupo (sob o título *Grupos de novos utilizadores*)"
 
 # 71ecb25450664eb1af92df874dff6aab
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:662
@@ -1964,7 +1964,7 @@ msgid ""
 "For all vector layers which is desired filter data, just add a text column "
 "that will hold the group ID for each line (not the name !!) who has the "
 "right to display this line."
-msgstr ""
+msgstr "Para todas as camadas vetoriais para as quais se deseje aplicar um filtro de dados, basta adicionar uma coluna de texto que contenha o ID do grupo em cada linha (não o nome !!) que tem o direito de visualizar essa linha."
 
 # c28306ee6d1e40169d4a94aa73cd940b
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:660
@@ -1972,50 +1972,50 @@ msgid ""
 "*Fill this column* for each line of the attribute table with the identifier "
 "of the group who has the right to see the line (using the calculator, for "
 "example)."
-msgstr ""
+msgstr "*Preencha esta coluna* para cada linha da tabela de atributos com o identificador do grupo que tem o direito de ver a linha (utilizando a calculadora de campo, por exemplo)."
 
 # 1db63b6b59ee40618018dde5d6c7324c
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:661
 msgid ""
 "It is possible to set **all** as the value in some lines to disable the "
 "filter: All users will see the data from these lines."
-msgstr ""
+msgstr "É possível definir **all** como valor em algumas linhas para desativar o filtro: Todos os utilizadores visualizarão os dados dessas linhas."
 
 # cbfb234df63c4cd1afba882c15cdb74d
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:662
 msgid ""
 "If the value in this column for a row does not correspond to a user group, "
 "then the data will be displayed for no user."
-msgstr ""
+msgstr "Se o valor nesta coluna para uma linha não corresponder a um grupo de utilizadores, os dados não serão apresentados para nenhum dos utilizadores."
 
 # 892bb0db3f1c4f1f886bee7e40e8f4c7
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:664
 msgid ""
 "Add the layer in the table **Filter Data by User** located in the plugin "
 "Lizmap *Tools* tab:"
-msgstr ""
+msgstr "Adicione a camada à tabela **Filtrar camada por utilizador** localizada no separador *Ferramentas* do plugin Lizmap:"
 
 # b9022fc87509462baa96f5e63735402b
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:666
 msgid "*Select layer* from the dropdown list"
-msgstr ""
+msgstr "*Selecione a camada* na lista de valores disponíveis"
 
 # f10bc101cb8844aba3fc9d3d3740fb3f
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:667
 msgid "Select the field that contains the *group identifier* for the layer"
-msgstr ""
+msgstr "Selecione o campo que contém o *identificador de grupo* para a camada"
 
 # 3dea3d8562054009a407bba1f300a32d
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:668
 msgid "Add the layer in the list with the button *Add layer*"
-msgstr ""
+msgstr "Adicione a camada à lista com o botão *Adicionar camada*"
 
 # 2a488a0d347146a6808016486aff664e
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:669
 msgid ""
 "To remove a layer of the table, click on it and click the button *Delete the"
 " layer*"
-msgstr ""
+msgstr "Para remover uma camada da tabela, selecione a mesma e clique no botão *Remover camada*"
 
 # 0279161e785843788784a45f2ecc149a
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:671
@@ -2023,12 +2023,12 @@ msgid ""
 "**Disable the client cache and cache server** for all filtered layers. "
 "Otherwise, the data displayed will not be updated between each connection or"
 " user logout!"
-msgstr ""
+msgstr "**Desative a cache tanto do lado do cliente como do lado do servidor** para todas as camadas filtradas. Caso contrário, os dados apresentados não serão atualizados entre cada ligação ou fim de sessão por parte do utilizador!"
 
 # 2fb0b8f34b3843dbb33905896efc4f44
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:674
 msgid "Time Manager - Animation of temporal vector layers"
-msgstr ""
+msgstr "Série Temporal - Animação de camadas vetoriais temporais"
 
 # 1509eb9f99f64ccd922175381c352632
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:676
@@ -2036,41 +2036,41 @@ msgid ""
 "You can create animations of your vectors, provided you have at least a "
 "layer with a column with a valid date/time. You should select from the "
 "plugin:"
-msgstr ""
+msgstr "Pode criar animações com os seus vetores, desde que tenha pelo menos uma camada com uma coluna date/time válida. Deve selecionar através do plugin:"
 
 # 696d432abdb3476aba319803a3adcf66
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:678
 msgid "at least one layer with the date/time"
-msgstr ""
+msgstr "pelo menos uma camada com data/hora"
 
 # 093f8e467bf94023ad47937c6e9eef25
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:679
 msgid "the column with the date/time"
-msgstr ""
+msgstr "a coluna com data/hora"
 
 # 92ff37c9b6a6489cbe952e0f66fa36b7
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:680
 msgid "the number and type of time units for each step of the animation"
-msgstr ""
+msgstr "o número e o tipo de unidades de tempo para cada etapa da animação"
 
 # f0c480993cef491ba0deda0a2b01cb20
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:681
 msgid ""
 "the duration, in milliseconds, of each step (the default is to display each "
 "10 days block for one second)"
-msgstr ""
+msgstr "a duração, em milissegundos, de cada etapa (o padrão é apresentar cada bloco de 10 dias num segundo)"
 
 # 23dafd2d68b24c6587a2d359981b5ea9
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:682
 msgid ""
 "one field to display as a label when hovering with the mouse over the "
 "objects"
-msgstr ""
+msgstr "um campo para funcionar como um rótulo flutuante ao passar o rato sobre os objetos"
 
 # ec9d3c5e392644479135ac7e1660b2a5
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:683
 msgid "optionally, an ID and a title for groups of objects."
-msgstr ""
+msgstr "opcionalmente, um ID e um título para grupos de objetos."
 
 # 53ccef5c70a5459fae31897f7a299bba
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:685
@@ -2080,21 +2080,21 @@ msgid ""
 "steps, or paly the entire animation. At startup, the application will load "
 "the entire table, so if you have thousands of objects you may need to wait "
 "for several seconds before the application is available."
-msgstr ""
+msgstr "Quando tudo estiver pronto, a sua aplicação web mostrará o símbolo de um relógio; Ao clicar nele abrir-se-á um pequeno painel que lhe permitirá mover-se entre as etapas, ou executar toda a animação. Na inicialização, a aplicação carregará toda a tabela, portanto, se tiver milhares de objetos, talvez seja necessário aguardar alguns segundos até que a aplicação esteja disponível."
 
 # 4b295f0ba6174937b8931818117680a9
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:687
 msgid ""
 "A video tutorial is available here: https://vimeo.com/83845949. It shows all"
 " the steps to use the functionality."
-msgstr ""
+msgstr "Um tutorial em vídeo está disponível em: https://vimeo.com/83845949. O mesmo mostra todas as etapas necessárias para utilizar a funcionalidade."
 
 # 712a5f6a6fcb43568b03d68c1959efb7
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:689
 msgid ""
 "Demonstration site: "
 "http://demo.lizmap.3liz.com/index.php/view/?repository=rep6"
-msgstr ""
+msgstr "Site de demonstração: http://demo.lizmap.3liz.com/index.php/view/?repository=rep6"
 
 # 71a78ef7df124ac2836159ef45160bcf
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:691
@@ -2102,19 +2102,19 @@ msgid ""
 "Several different formats for date/time are acceptable (those supported by "
 "the JavaScript library `DateJS`). You can check whether your format is "
 "supported by entering it in this page: http://www.datejs.com/"
-msgstr ""
+msgstr "Vários formatos diferentes de data/hora são aceitáveis (os mesmos que são suportados pela biblioteca JavaScript `DateJS`). Pode verificar se o seu formato é suportado introduzindo-o nesta página: http://www.datejs.com/"
 
 # 49af923195a047bcb55bbebfdf7766e7
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:694
 msgid ""
 "Changing the default image of a project in the repositories and projects "
 "site"
-msgstr ""
+msgstr "Alterando a imagem padrão de um projeto no site de repositórios e projetos"
 
 # df4f65b1e03f4b819c1bf9a4512ec023
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:696
 msgid "By default the following image is displayed for a project:"
-msgstr ""
+msgstr "Por padrão, a seguinte imagem é apresentada para um projeto:"
 
 # 05816a1921c54c52820b3f66820ceaf3
 #: ../../source/publisher_guide/advanced_lizmap_config.rst:703
@@ -2123,7 +2123,7 @@ msgid ""
 ".png image with the exact project name and extension. Example: If the "
 "project is called montpellier.qgs you can add an image named "
 "montpellier.qgs.png. Note that the image has the project extension too."
-msgstr ""
+msgstr "Pode alterar essa imagem padrão adicionando na mesma pasta de projeto uma imagem .png com o nome exato do projeto e a extensão. Exemplo: Se o nome do projeto é montpellier.qgs pode adicionar uma imagem chamada montpellier.qgs.png. Repare que o nome da imagem também contem a extensão do projeto."
 
 # d9dabef5c639438aa3aca48005bfaac9
 #: ../../source/publisher_guide/index.rst:3
@@ -2133,84 +2133,84 @@ msgstr "Guia de publicação"
 # 765fe64ad0564b269fe853d1be7c50cd
 #: ../../source/publisher_guide/lizmap_configuration.rst:3
 msgid "Set up your project for Lizmap"
-msgstr ""
+msgstr "Configure seu projeto para o Lizmap"
 
 # f38a6058bdba45878206157674ed0cbd
 #: ../../source/publisher_guide/lizmap_configuration.rst:6
 msgid "Install the Lizmap plugin"
-msgstr ""
+msgstr "Instalar o plugin Lizmap"
 
 # 20aebcff08534d93911b54675461d8d2
 #: ../../source/publisher_guide/lizmap_configuration.rst:8
 msgid ""
 "The Lizmap plugin is available through the official QGIS project repository:"
 " http://plugins.qgis.org/plugins/lizmap/"
-msgstr ""
+msgstr "O plugin Lizmap encontra-se disponível através do repositório oficial do projeto QGIS: http://plugins.qgis.org/plugins/lizmap/"
 
 # a2823ae95af840b5bd3c261affb7ce61
 #: ../../source/publisher_guide/lizmap_configuration.rst:11
 msgid "To install it, just do it like any QGIS plugin:"
-msgstr ""
+msgstr "Para instalá-lo, basta fazer como para qualquer plugin QGIS:"
 
 # c48046708f1642cebea5fc37dc1e6933
 #: ../../source/publisher_guide/lizmap_configuration.rst:13
 msgid ":menuselection:`Menu --> Plugins --> Manage and Install Plugins`"
-msgstr ""
+msgstr ":menuselection:`Menu --> Módulos --> Gerir e Instalar Módulos`"
 
 # 8e88868fea3b4f63b1f85062dc1c1261
 #: ../../source/publisher_guide/lizmap_configuration.rst:14
 msgid "Search Lizmap"
-msgstr ""
+msgstr "Pesquisar por Lizmap"
 
 # f87bc48aeac741fd9d3a31fa79d558c6
 #: ../../source/publisher_guide/lizmap_configuration.rst:15
 msgid "Install the plugin"
-msgstr ""
+msgstr "Instalar o plugin"
 
 # ee5e730a87ed49a98bf5b7dd68ea86ea
 #: ../../source/publisher_guide/lizmap_configuration.rst:16
 msgid "It's available in the menu and toolbar :menuselection:`Web`"
-msgstr ""
+msgstr "Está disponível no menu e na barra de ferramentas :menuselection:`Web`"
 
 # c3228330b7a14db4826e64b76765191a
 #: ../../source/publisher_guide/lizmap_configuration.rst:22
 msgid "The plugin is organized in 6 tabs:"
-msgstr ""
+msgstr "O plugin está organizado em 6 separadores:"
 
 # 225495d5c9ca4cb288675198d0b11350
 #: ../../source/publisher_guide/lizmap_configuration.rst:24
 msgid "*Layers*: the options of each layer"
-msgstr ""
+msgstr "*Camadas*: as opções de cada camada"
 
 # 5273cfb870d843d2bbe892bcd62b6812
 #: ../../source/publisher_guide/lizmap_configuration.rst:25
 msgid "*Map*: the general options of the map"
-msgstr ""
+msgstr "*Mapa*: as opções gerais do mapa"
 
 # d247e062189f4c4bacbbd9886d1d36f5
 #: ../../source/publisher_guide/lizmap_configuration.rst:26
 msgid "*Baselayers*: the baselayers used on the Web"
-msgstr ""
+msgstr "*Temas base*: os temas base utilizados na Web"
 
 # 7f5d8004e7e44f4aa9ae1498bd667464
 #: ../../source/publisher_guide/lizmap_configuration.rst:27
 msgid "*Tools* : the Web map tools"
-msgstr ""
+msgstr "*Ferramentas*: as ferramentas para mapas Web"
 
 # 13df533aa0a443dbaa049a747de5d86a
 #: ../../source/publisher_guide/lizmap_configuration.rst:28
 msgid "*FTP*: The configuration for synchronization through the plugin"
-msgstr ""
+msgstr "*FTP*: A configuração para sincronização através do plugin"
 
 # a4fd2aecea0a4f4b901ad07c27a794cf
 #: ../../source/publisher_guide/lizmap_configuration.rst:29
 msgid "*Log*: displays information of performed actions"
-msgstr ""
+msgstr "*Log*: mostra informações sobre as ações executadas"
 
 # 00f313f00e9a47b6981ab059c2839c33
 #: ../../source/publisher_guide/lizmap_configuration.rst:31
 msgid "And it has 4 action buttons:"
-msgstr ""
+msgstr "Existem 4 botões de ação:"
 
 # 8c0390d7cc87486b82476524215316dd
 #: ../../source/publisher_guide/lizmap_configuration.rst:33
@@ -2240,7 +2240,7 @@ msgstr "Configurar camadas e grupos"
 # d204bdfc55264d988fcce46a61115078
 #: ../../source/publisher_guide/lizmap_configuration.rst:41
 msgid "The layer configuration is done in the *Layers* tab."
-msgstr ""
+msgstr "A configuração da camada é feita no separador *Camadas*."
 
 # 7ddaa8c92de049f3ba58c2d919b762fb
 #: ../../source/publisher_guide/lizmap_configuration.rst:43
@@ -2249,7 +2249,7 @@ msgid ""
 "that is defined in the Layers panel. You can select one of the tree "
 "elements, a layer or group, and then configure the options for the selected "
 "group or layer."
-msgstr ""
+msgstr "Este separador mostra a árvore de camadas do projeto com a mesma organização definida no painel Camadas. Pode selecionar um dos elementos da árvore, uma camada ou grupo e, em seguida, configurar as opções para o grupo ou camada selecionada."
 
 # 9fa295160acc404f8faae8bef67b056b
 #: ../../source/publisher_guide/lizmap_configuration.rst:49
@@ -2262,7 +2262,7 @@ msgid ""
 "*Title*: It will be used in the Web layers tree instead of the name. For "
 "layers, the *Title* Field is linked to that of the *Metadata* tab in the "
 "layer properties window"
-msgstr ""
+msgstr "*Título*: será utilizado na árvore de camadas Web em vez do nome. Para as camadas, o campo *Título* está vinculado ao separador *Metadados* na janela de propriedades da camada"
 
 # 5c96379ababa43d0852cec57643dec91
 #: ../../source/publisher_guide/lizmap_configuration.rst:52
@@ -2270,7 +2270,7 @@ msgid ""
 "*Abstract*: It allows to describe the layer or group. It is displayed in the"
 " mouseover. For layers, the *Abstract* Field is linked to that of the "
 "*Metadata* tab in the layer properties window"
-msgstr ""
+msgstr "*Resumo*: Permite descrever a camada ou o grupo. Será apresentado ao passar o rato sobre o mesmo. Para camadas, o campo *Resumo* está vinculado ao separador *Metadados* na janela de propriedades da camada"
 
 # de868027bec344a587531c0ffdf5511d
 #: ../../source/publisher_guide/lizmap_configuration.rst:53
@@ -2278,7 +2278,7 @@ msgid ""
 "*Link*: The web address of a document or a Web page describing the layer or "
 "group. An icon (i) appears in the legend if the link has been submitted. You"
 " can use the *media* folder, see :ref:`media-in-lizmap`."
-msgstr ""
+msgstr "*Link*: O endereço Web de um documento ou uma página Web descrevendo a camada ou o grupo. Um ícone (i) aparece na legenda se o link se encontrar ativado. Pode utilizar a pasta *media*, veja :ref:`media-in-lizmap`."
 
 # a85502fe8039420ca09b3a75b11aa2a5
 #: ../../source/publisher_guide/lizmap_configuration.rst:55
@@ -2289,21 +2289,21 @@ msgstr "Opções das Camadas:"
 #: ../../source/publisher_guide/lizmap_configuration.rst:57
 msgid ""
 "*Toggled*: allows you to specify whether a layer is displayed by default"
-msgstr ""
+msgstr "*Ativar*: permite especificar se uma camada é apresentada por padrão"
 
 # 0172c0837a4a406f82c764d4a8665ae3
 #: ../../source/publisher_guide/lizmap_configuration.rst:58
 msgid ""
 "*Activate popup*: enables information popups on map's interrogation by "
 "clicking. See :ref:`popups-in-lizmap`"
-msgstr ""
+msgstr "*Ativar popup*: permite popups de informações ao clicar no mapa num dos objetos da camada. Veja :ref:`popups-in-lizmap`"
 
 # d0864db0117f4c80a2f6ad6da2d52565
 #: ../../source/publisher_guide/lizmap_configuration.rst:59
 msgid ""
 "*Hide legend image*: allows you to hide the legend of the layer in the web "
 "interface"
-msgstr ""
+msgstr "*Ocultar a imagem na legenda*: permite esconder a legenda da camada na interface web"
 
 # f950da9fe29f407aaaff659952a89dc0
 #: ../../source/publisher_guide/lizmap_configuration.rst:60
@@ -2311,50 +2311,50 @@ msgid ""
 "*Display in legend tree*: toggles visibility of the layer in the layers "
 "tree; when toggled off, it does not allow the user to manage the display of "
 "it"
-msgstr ""
+msgstr "*Mostrar na árvore da legenda*: alterna a visibilidade da camada na árvore de camadas; Quando desligada, não permite ao utilizador a gestão da apresentação da mesma"
 
 # 01699922abf84f90a910ce2133c03c05
 #: ../../source/publisher_guide/lizmap_configuration.rst:61
 msgid ""
 "*Base layer*: sets the layer as a base map. This will be accessible via the "
 "list of basemap"
-msgstr ""
+msgstr "*Tema base*: define a camada como um mapa base. A camada encontrar-se-á acessível através da lista de temas base"
 
 # 1bcebe8782e94fc8bc578b12b1e1a79a
 #: ../../source/publisher_guide/lizmap_configuration.rst:62
 msgid ""
 "*Single Tile*: selects the layer display mode. It can be displayed as "
 "multiple images, tiles, or a single image generated by the server"
-msgstr ""
+msgstr "*Mosaico único*: seleciona o modo de exibição de camada. A mesma pode ser apresentada como imagens múltiplas, mosaicos, ou como uma imagem única gerada pelo servidor"
 
 # 07e323f10ffa4595a1cf78e201f012f7
 #: ../../source/publisher_guide/lizmap_configuration.rst:63
 msgid "*Image format*:"
-msgstr ""
+msgstr "*Formato da imagem*:"
 
 # 21c4aed6f95a4d139022720b7da97146
 #: ../../source/publisher_guide/lizmap_configuration.rst:65
 msgid "`png`: full image format, full range of colors with transparency"
-msgstr ""
+msgstr "`png`: formato de imagem completa, gama completa de cores com transparência"
 
 # 03d78aab37a64e62854b4290770b8316
 #: ../../source/publisher_guide/lizmap_configuration.rst:66
 msgid ""
 "`png; mode=16bit`: lighter image format, panel color restricted with "
 "transparency"
-msgstr ""
+msgstr "`png; modo=16bits`: formato de imagem mais leve, cor do painel restrito com transparência"
 
 # f7f737580ee8415f96b2ab98096c045b
 #: ../../source/publisher_guide/lizmap_configuration.rst:67
 msgid ""
 "`png; mode=8bit`: very light image format, color panel restricts to the "
 "maximum with transparency, possible degradation of the image"
-msgstr ""
+msgstr "`png; modo=8bit`: formato de imagem muito leve, painel de cores restrito ao máximo com transparência, possível degradação da imagem"
 
 # 35d98af89b4440f9854715f5e70d8f12
 #: ../../source/publisher_guide/lizmap_configuration.rst:68
 msgid "`jpeg`: light image format without transparency with loss of quality"
-msgstr ""
+msgstr "`jpeg`: formato de imagem leve sem transparência e com perda de qualidade"
 
 # bfb5a2a62e464727a951754f9139ee1c
 #: ../../source/publisher_guide/lizmap_configuration.rst:74
@@ -2363,12 +2363,12 @@ msgid ""
 "Coordinate Reference System, it is possible to *Directly Request images to "
 "the WMS server*. This reduces the QGIS-Server load and optimize Lizmap. This"
 " option is available in the **Third Party WMS layers** group."
-msgstr ""
+msgstr "Se a camada for fornecida por um serviço WMS que suporta o Sistema de Referência de Coordenadas do mapa Web, é possível *Solicitar Diretamente Imagens ao Servidor WMS*. Essa opção reduz a carga sobre QGIS-Server e otimiza o Lizmap. A opção encontra-se disponível no grupo **Camadas WMS de terceiros**."
 
 # fc1317e5de714b0784c306f0a24fbcfd
 #: ../../source/publisher_guide/lizmap_configuration.rst:76
 msgid "The group options:"
-msgstr ""
+msgstr "As opções de grupo:"
 
 # 2ecd200e2314423a9dceebca24508c09
 #: ../../source/publisher_guide/lizmap_configuration.rst:78
@@ -2378,49 +2378,49 @@ msgstr "Agrupar como camada:"
 # 53fb1a9956b4486a838dbb106268466b
 #: ../../source/publisher_guide/lizmap_configuration.rst:80
 msgid "transforms a group in a single layer in the web interface"
-msgstr ""
+msgstr "transforma um grupo numa camada única na interface web"
 
 # 573e3bebb18a485fb604215174ea4213
 #: ../../source/publisher_guide/lizmap_configuration.rst:81
 msgid "used to group layers with scale dependent  visibility"
-msgstr ""
+msgstr "utilizado para agrupar camadas com a visibilidade dependente da escala"
 
 # b495b4b5415041a98fa9162e13c8f70c
 #: ../../source/publisher_guide/lizmap_configuration.rst:82
 msgid "simplifies the interface to the users of the Web map"
-msgstr ""
+msgstr "simplifica a interface para os utilizadores do mapa Web"
 
 # 1fd7e1ff86b3479c939d95c7c0501ffb
 #: ../../source/publisher_guide/lizmap_configuration.rst:83
 msgid "to create a base map from multiple layers"
-msgstr ""
+msgstr "para criar um tema base a partir de várias camadas"
 
 # 0c50a47fb4dd4363be1c86d1faafdd76
 #: ../../source/publisher_guide/lizmap_configuration.rst:85
 msgid "if the group is a layer other options apply to it."
-msgstr ""
+msgstr "se o grupo for uma camada, outras opções se aplicam ao mesmo."
 
 # 5d0a989c36704b3ea8be8713fb62e714
 #: ../../source/publisher_guide/lizmap_configuration.rst:90
 msgid "Configure the map"
-msgstr ""
+msgstr "Configurar o mapa"
 
 # 28b8660316c04f8aa2838719222dee38
 #: ../../source/publisher_guide/lizmap_configuration.rst:92
 msgid ""
 "The tab *Map* allows you to enable or disable basic Lizmap tools, choosing "
 "scales and the intial extent."
-msgstr ""
+msgstr "O separador *Mapa* permite ativar ou desativar as ferramentas básicas do Lizmap, escolhendo escalas e a extensão inicial."
 
 # 04fdd73b099342a5bd998687501bf910
 #: ../../source/publisher_guide/lizmap_configuration.rst:98
 msgid "The generic options:"
-msgstr ""
+msgstr "As opções genéricas:"
 
 # 18abfb041230417c863815b79c1b77a0
 #: ../../source/publisher_guide/lizmap_configuration.rst:100
 msgid "hide the project in Lizmap Web Client:"
-msgstr ""
+msgstr "ocultar o projeto no Lizmap Web Client:"
 
 # d7ed5b6b5b5846219b05d1f781cc897e
 #: ../../source/publisher_guide/lizmap_configuration.rst:102
@@ -2428,59 +2428,59 @@ msgid ""
 "if this option is checked, the project will be hidden in the Lizmap home "
 "page that shows thumbnails for all directories and project of the "
 "application. You can use this option to hide the project"
-msgstr ""
+msgstr "se essa opção estiver marcada, o projeto será ocultado na página inicial do Lizmap que mostra miniaturas para todos os diretórios e projetos da aplicação. Pode utilizar essa opção para ocultar o projeto"
 
 # 94693c10eb2441878b78e11ba0de91f8
 #: ../../source/publisher_guide/lizmap_configuration.rst:103
 msgid ""
 "the project will still be accessible for WMS or WFS clients based on "
 "directories rights"
-msgstr ""
+msgstr "o projeto ainda estará acessível para clientes WMS ou WFS com base em permissões sobre os diretórios"
 
 # 43ccde6b658c4ad298e37f87bcdc4bcd
 #: ../../source/publisher_guide/lizmap_configuration.rst:104
 msgid ""
 "this feature is interesting  in the case of using this project as an "
 "external project for other ones."
-msgstr ""
+msgstr "este recurso é interessante no caso de utilizar este projeto como um projeto externo para outros."
 
 # 41c88103d65f4de88fbd8ea6c77f3b77
 #: ../../source/publisher_guide/lizmap_configuration.rst:106
 msgid "The map tools:"
-msgstr ""
+msgstr "As ferramentas do mapa:"
 
 # 6c75237edeb44c22bff6899ef033a7f7
 #: ../../source/publisher_guide/lizmap_configuration.rst:108
 msgid "*Print*: enables the use of QGIS compositions for PDF generation map"
-msgstr ""
+msgstr "*Imprimir*: permite a utilização de compositores QGIS para a criação de mapas em formato PDF"
 
 # d407c46bf8164c5b848617a50d7a9f8e
 #: ../../source/publisher_guide/lizmap_configuration.rst:109
 msgid ""
 "*Measure tools*: enables the measurement tools in the map (length, area, "
 "perimeter)"
-msgstr ""
+msgstr "*Ferramentas de medição*: permite utilizar as ferramentas de medição no mapa (comprimento, área, perímetro)"
 
 # e5c64978f462402c984b180476c62c74
 #: ../../source/publisher_guide/lizmap_configuration.rst:110
 msgid ""
 "*Zoom history*: enables the navigation buttons in the history of zoom and "
 "move in the map"
-msgstr ""
+msgstr "*Histórico de Zoom*: permite, através dos respetivos botões, a navegação no histórico de zoom e de movimentações no mapa"
 
 # 1e4a85f8223b4e8f91108b19d98456c7
 #: ../../source/publisher_guide/lizmap_configuration.rst:111
 msgid ""
 "*Automatic geolocation*: enables the functions to use the HTML5 geolocation "
 "based on Wifi and/or GPS"
-msgstr ""
+msgstr "*Geolocalização automática*: permite que as funções utilizem a geolocalização HTML5 com base em Wifi e/ou GPS"
 
 # 1b29444eec414132b3dd85441feded2e
 #: ../../source/publisher_guide/lizmap_configuration.rst:112
 msgid ""
 "*Address search*: to add an address search engine that is based on one of "
 "these services:"
-msgstr ""
+msgstr "*Pesquisa por endereço*: para adicionar um mecanismo de busca de endereços que se baseie num desses serviços:"
 
 # bc57deca9d544d9aadf0183873785dac
 #: ../../source/publisher_guide/lizmap_configuration.rst:114
@@ -2500,14 +2500,14 @@ msgstr "IGN France (Géoportail)"
 # 53956bdb0a3345b1b24985dc9ed6f743
 #: ../../source/publisher_guide/lizmap_configuration.rst:118
 msgid "The scales :"
-msgstr ""
+msgstr "As escalas:"
 
 # 21ae977645044d8ea24f1c28df8b152c
 #: ../../source/publisher_guide/lizmap_configuration.rst:120
 msgid ""
 "a list of integer values separated by commas (and optional whitespace), eg: "
 "*250000, 100000, 50000*."
-msgstr ""
+msgstr "uma lista de valores inteiros separados por vírgulas (e, opcionalmente, espaços em branco), p.ex.: *250000, 100000, 50000*."
 
 # 0dbb1c27a42c44e8b33bf0496411fff2
 #: ../../source/publisher_guide/lizmap_configuration.rst:121
@@ -2515,31 +2515,31 @@ msgid ""
 "Lizmap also used these scales to restrict the display between the minimum "
 "and maximum data scales. This is why **it is mandatory to enter at least 2 "
 "scales** in the list."
-msgstr ""
+msgstr "O Lizmap também utiliza essas escalas para restringir a apresentação entre as escalas de dados mínimo e máximo. É por isso que **é obrigatório introduzir pelo menos 2 escalas** na lista."
 
 # 6830a53e53664fbc80da958aab8e5080
 #: ../../source/publisher_guide/lizmap_configuration.rst:123
 msgid "The initial map extent:"
-msgstr ""
+msgstr "A extensão inicial do mapa:"
 
 # 2dd5f6e0a6114cd9b7954bb6c2c59c7c
 #: ../../source/publisher_guide/lizmap_configuration.rst:125
 msgid ""
 "a list of coordinates in the Reference Coordinate System map in the format: "
 "``xmin, ymin, xmax, ymax``, setting the initial map extent"
-msgstr ""
+msgstr "uma lista de coordenadas no Sistema de Coordenadas de Referência do mapa no formato: ` xmin, ymin, xmax, ymax``, definindo a extensão inicial do mapa"
 
 # 655fbb40fd9344fb86e72dec5b7bab9c
 #: ../../source/publisher_guide/lizmap_configuration.rst:126
 msgid ""
 "the maximal map extent is specified in the *OWS server* tab of *Project "
 "Properties* window. The data will not be displayed if they are outside it"
-msgstr ""
+msgstr "a extensão máxima do mapa é especificada no separador *Servidor OWS* da janela *Propriedades do Projeto*. Os dados não serão apresentados se estiverem fora dela"
 
 # eea441b96eda45bb80d92146662456c2
 #: ../../source/publisher_guide/lizmap_configuration.rst:127
 msgid "by default, the initial extent is the maximal one."
-msgstr ""
+msgstr "por padrão, a extensão inicial é a extensão máxima."
 
 # 8bbcf7ec607d4805a57734172585333b
 #: ../../source/publisher_guide/lizmap_configuration.rst:132
@@ -2552,13 +2552,13 @@ msgid ""
 "It is often useful to separate base layers as a reference and thematic "
 "layers in a Web map. In Lizmap, you can use groups or layers as base layers."
 " It is also possible to use external services in the Web map."
-msgstr ""
+msgstr "muitas vezes é útil separar temas base como uma referência e camadas temáticas num mapa Web. No Lizmap, pode utilizar grupos ou camadas como temas base. Também é possível utilizar serviços externos no mapa Web."
 
 # f0df7893417047e1a3ddfe1acc7a353c
 #: ../../source/publisher_guide/lizmap_configuration.rst:136
 msgid ""
 "The base layers are not part of the legend and are presented as a list."
-msgstr ""
+msgstr "Os temas base não fazem parte da legenda e são apresentados como uma lista."
 
 # d487fc041c5148dc98f411f58a314bb5
 #: ../../source/publisher_guide/lizmap_configuration.rst:138
@@ -2566,7 +2566,7 @@ msgid ""
 "If a single base layer is configured (project layer, external service or "
 "empty base layer), then Lizmap Web Client interface does not show the box "
 "*Base layers*, but the layer will be however visible below the other layers."
-msgstr ""
+msgstr "Se um único tema base estiver configurado (camada de projeto, serviço externo ou tema base vazio), a interface do Lizmap Web Client não mostrará a caixa de valores *Temas base*, mas a camada ficará visível por debaixo das outras camadas."
 
 # 77760a6aaba1491b9228d0e87b1f2a80
 #: ../../source/publisher_guide/lizmap_configuration.rst:140
@@ -2574,44 +2574,44 @@ msgid ""
 "The *Base layers* tab lets you add external services as base layer and an "
 "empty base layer. The empty base layer will display thematic layers over the"
 " project background color."
-msgstr ""
+msgstr "O separador *Temas base* permite adicionar serviços externos como temas base e uma camada base vazia. A camada base vazia permitirá a apresentação de camadas temáticas sobre a cor de plano de fundo do projeto."
 
 # 8c49210a94294859910f4116673ce658
 #: ../../source/publisher_guide/lizmap_configuration.rst:147
 msgid "The available base layers"
-msgstr ""
+msgstr "Os temas base disponíveis"
 
 # be0bd5bf0bd3490e8f85f593afc64fac
 #: ../../source/publisher_guide/lizmap_configuration.rst:149
 msgid "*OpenStreetMap*, mapping project under free and open licenses:"
-msgstr ""
+msgstr "*OpenStreetMap*, projeto de mapeamento sob licenças livres e abertas:"
 
 # 37ca3c3f8af04987bdc0732d27634ac1
 #: ../../source/publisher_guide/lizmap_configuration.rst:151
 msgid "OSM Mapnik: service available on openstreetmap.org"
-msgstr ""
+msgstr "OSM Mapnik: serviço disponível em openstreetmap.org"
 
 # fd02226f98a641d8a7565d4b43881fc3
 #: ../../source/publisher_guide/lizmap_configuration.rst:152
 msgid "OSM Mapquest: service provided by Mapquest company"
-msgstr ""
+msgstr "OSM Mapquest: serviço disponibilizado pela empresa Mapquest"
 
 # 617dadaa938b4185be8b59ab7dde1fab
 #: ../../source/publisher_guide/lizmap_configuration.rst:153
 msgid ""
 "Cycle Map: promotion map of OpenStreetMap cycling data including altitude "
 "information"
-msgstr ""
+msgstr "Cycle Map: mapa da promoção de dados sobre pistas cicláveis do OpenStreetMap que incluem informação sobre a altitude"
 
 # f25181695b854563960b8cd7a6d09b37
 #: ../../source/publisher_guide/lizmap_configuration.rst:155
 msgid "*Google*, requires compliance to use licence agreement:"
-msgstr ""
+msgstr "*Google*, requer conformidade para utilizar o contrato de licença:"
 
 # 9320e51f04c64a78baa235199fa7cef7
 #: ../../source/publisher_guide/lizmap_configuration.rst:157
 msgid "Streets: the default Google Maps background layer"
-msgstr ""
+msgstr "Streets: a camada de fundo padrão do Google Maps"
 
 # 9dae392d6e03494abc95f53b9dd187a4
 # a0547065e39a4279998cf1453176c10f
@@ -2619,14 +2619,14 @@ msgstr ""
 #: ../../source/publisher_guide/lizmap_configuration.rst:165
 msgid ""
 "Satellite: the background map incorporating aerial and satellite images"
-msgstr ""
+msgstr "Satellite: o mapa de fundo que incorpora imagens aéreas e de satélite"
 
 # 1c97b3d932a54193be584936f0ea044a
 # a3dd85ea058c4b0c9b6c36578e844e58
 #: ../../source/publisher_guide/lizmap_configuration.rst:159
 #: ../../source/publisher_guide/lizmap_configuration.rst:166
 msgid "Hybrid: the background map mixing streets and satellite"
-msgstr ""
+msgstr "Hybrid: o mapa de fundo que inclui ruas e imagens de satélite"
 
 # 63e6390aee824b94acd95558813484bd
 #: ../../source/publisher_guide/lizmap_configuration.rst:160
@@ -2638,35 +2638,35 @@ msgstr "Terreno"
 msgid ""
 "*Bing Map*, requires compliance with the Microsoft license agreement and "
 "therefore a key:"
-msgstr ""
+msgstr "*Bing Map*, requer conformidade com o contrato de licença da Microsoft e, portanto, uma chave:"
 
 # 3f057d8b4c5541dbbcde4e6497ab7600
 #: ../../source/publisher_guide/lizmap_configuration.rst:164
 msgid "Streets: the default Bing Map background layer"
-msgstr ""
+msgstr "Streets: a camada de fundo padrão do Bing Map"
 
 # 490f05626d8d48a29a3fbfd525466a05
 #: ../../source/publisher_guide/lizmap_configuration.rst:168
 msgid ""
 "*IGN Géoportail*, requires compliance with the IGN license agreement and "
 "therefore a key:"
-msgstr ""
+msgstr "*IGN Géoportail*, exige conformidade com o contrato de licença IGN e, portanto, uma chave:"
 
 # 23936cd4ef104eeca20662e1cf4a4e6b
 #: ../../source/publisher_guide/lizmap_configuration.rst:170
 msgid "Plan: The IGN rendering for the Web"
-msgstr ""
+msgstr "Plan: A renderização IGN para Web"
 
 # 584f8a8e6eca468eb1dc6f2673003643
 #: ../../source/publisher_guide/lizmap_configuration.rst:171
 msgid ""
 "Satellite: the background map incorporating IGN aerial and satellite images"
-msgstr ""
+msgstr "Satellite: o mapa de fundo que incorpora imagens aéreas e de satélite IGN"
 
 # d417ca5a7dbb4244bfb15a574c9d2b71
 #: ../../source/publisher_guide/lizmap_configuration.rst:172
 msgid "Scan: the background map mixing the various IGN scan"
-msgstr ""
+msgstr "Scan: o mapa de fundo misturando a digitalização de vários IGN"
 
 # 1cf9843abfdf4333934b42d2786c8266
 #: ../../source/publisher_guide/lizmap_configuration.rst:174
@@ -2676,7 +2676,7 @@ msgstr "As licenças estão disponíveis nos seguintes URLs:"
 # f2ffdf32d7a24784a663c077ab5d9aa4
 #: ../../source/publisher_guide/lizmap_configuration.rst:176
 msgid "*OpenStreetMap*: http://wiki.openstreetmap.org/wiki/Tile_usage_policy"
-msgstr ""
+msgstr "*OpenStreetMap*: http://wiki.openstreetmap.org/wiki/Tile_usage_policy"
 
 # 101fabab1e394d9aa023ded38565eafd
 #: ../../source/publisher_guide/lizmap_configuration.rst:177
@@ -2704,12 +2704,12 @@ msgid ""
 "If you choose an external base layer, the map will be displayed in Google "
 "Mercator (EPSG: 3857 or EPSG: 900913), the scales are those of external "
 "services and QGIS-Server will perform on the fly reprojection."
-msgstr ""
+msgstr "Se escolher um tema base externo, o mapa será apresentado no sistema Google Mercator (EPSG: 3857 ou EPSG: 900913), as escalas são as definidas pelos serviços externos e o QGIS-Server executará a reprojeção instantânea."
 
 # 6a744f71602f4feaae3503165c84e1ef
 #: ../../source/publisher_guide/lizmap_configuration.rst:184
 msgid "It is therefore necessary to prepare the QGIS project accordingly."
-msgstr ""
+msgstr "Por conseguinte, é necessário preparar o projecto QGIS em conformidade."
 
 # eb115ec857eb4a1eb09833eaacfb1709
 #: ../../source/publisher_guide/lizmap_configuration.rst:186
@@ -2717,14 +2717,14 @@ msgid ""
 "The *Google Mercator* coordinate reference system must be added in the Web "
 "Services CRSs list with the *OWS Server* tab in the *Project Properties* "
 "window. For now, all the proposed base layers use the projection::"
-msgstr ""
+msgstr "O sistema de referência de coordenadas *Google Mercator* deve ser adicionado na lista de CRSs dos Serviços Web no separador *Servidor OWS* na janela *Propriedades do Projeto*. Por enquanto, todos os temas base propostos utilizam a projeção::"
 
 # 19b9d7c7303f4e1aa90209b378221dd2
 #: ../../source/publisher_guide/lizmap_configuration.rst:191
 msgid ""
 "Here are the approximate integer scales of the current external base "
 "layers::"
-msgstr ""
+msgstr "Aqui estão as escalas de números inteiros aproximados dos temas base externos atuais::"
 
 # c6f5686b51b243a98db9fda9e68666a9
 #: ../../source/publisher_guide/lizmap_configuration.rst:214
@@ -2738,7 +2738,7 @@ msgid ""
 " menu  :menuselection:`Layer --> Embed Layers and Groups`, and in the plugin"
 " *Layers* tab declare the parent project and the Lizmap repository for the "
 "embed layers and groups. See :ref:`lizmap-cache-centralized`"
-msgstr ""
+msgstr "Este recurso foi removido. É substituído pela possibilidade de utilizar o menu :menuselection:`Camadas --> Camadas e grupos embebidos`, e através do plugin, separador *Camadas*, declaram a fonte do projeto e o repositório Lizmap fonte para as camadas e grupos embebidos. Veja :ref:`lizmap-cache-centralized`"
 
 # 5c37757c1130431fa0fcad1e60ab8ecb
 #: ../../source/publisher_guide/project_for_web.rst:3
@@ -2758,7 +2758,7 @@ msgstr "Adicione os seus dados"
 # db78d75c848c4121b0245e4ec84a210d
 #: ../../source/publisher_guide/project_for_web.rst:10
 msgid "Vector geographic data files"
-msgstr ""
+msgstr "Ficheiros de dados geográficos vetoriais"
 
 # c88a68f3fa014fb5ab3b596738bac2f8
 #: ../../source/publisher_guide/project_for_web.rst:12
@@ -2787,7 +2787,7 @@ msgstr "etc"
 # 4ac12e0158c54c8ba392a91c5a2cd2e1
 #: ../../source/publisher_guide/project_for_web.rst:17
 msgid "RASTER geographic data files"
-msgstr ""
+msgstr "Ficheiros RASTER  de dados geográficos"
 
 # facf794860754ad8afc3ff329357f062
 #: ../../source/publisher_guide/project_for_web.rst:19
@@ -2807,7 +2807,7 @@ msgstr "netCDF"
 # adb809adc1fd4f239d89cbb6ddec91c9
 #: ../../source/publisher_guide/project_for_web.rst:24
 msgid "Geographic data base"
-msgstr ""
+msgstr "Base de dados geográficos"
 
 # fb3e3dabddf043a3879fb4595742394e
 #: ../../source/publisher_guide/project_for_web.rst:26
@@ -2822,30 +2822,30 @@ msgstr "MSSQL espacial"
 # 0ab6073858d349b6a0cecfd8e29dc631
 #: ../../source/publisher_guide/project_for_web.rst:28
 msgid "Oracle locator / spatial"
-msgstr ""
+msgstr "Oracle locator / spatial"
 
 # 8d9c6b1fd34d49f38917fe33e249580c
 #: ../../source/publisher_guide/project_for_web.rst:34
 msgid "Organize and manipulate the layes in the legend:"
-msgstr ""
+msgstr "Organize e manipule as camadas na legenda:"
 
 # d45783fcf7c0400dbcc767c14fc8a419
 #: ../../source/publisher_guide/project_for_web.rst:36
 msgid ""
 "*Add groups* with a right click in the empty part of the legend: *Add a new "
 "group*"
-msgstr ""
+msgstr "*Adicionar grupos* com um clique direito na parte vazia da legenda: *Adicionar um novo grupo*"
 
 # 16fc55c859bd4c9abe443c7aa3c7f6cd
 #: ../../source/publisher_guide/project_for_web.rst:37
 msgid "*Move* layers and groups with *drag-and-drop*"
-msgstr ""
+msgstr "*Mover* camadas e grupos com *arrastar e soltar*"
 
 # fb06f2e3a9604e888533e5500354f7ed
 #: ../../source/publisher_guide/project_for_web.rst:38
 msgid ""
 "*Rename* layers and groups with the F2 key or the layer properties window"
-msgstr ""
+msgstr "*Renomear* camadas e grupos com a tecla F2 ou a janela de propriedades da camada"
 
 # 0ea29e0296b849a693e411ab319b5219
 #: ../../source/publisher_guide/project_for_web.rst:39
@@ -2857,33 +2857,33 @@ msgstr "Manipular a ordem de renderização"
 msgid ""
 "with the *legend layer order*: the upper layers are rendered above the "
 "others."
-msgstr ""
+msgstr "com a *ordem das camadas na  legenda*: as camadas superiores são renderizadas acima das outras."
 
 # bcd1fac22c4842f8a2d57d5f80332a23
 #: ../../source/publisher_guide/project_for_web.rst:42
 msgid ""
 "by specifying *layer order* with the menu *View > Panels > Layer order*"
-msgstr ""
+msgstr "especificando a *ordem das camadas* com o menu *Ver > Painéis > Painel da Ordem de Camadas*"
 
 # 958a0f2144fc451ba1a19fc45db9c0e5
 #: ../../source/publisher_guide/project_for_web.rst:44
 msgid "Add a title to your project and save it in your working directory."
-msgstr ""
+msgstr "Adicione um título ao seu projeto e grave-o no seu diretório de trabalho."
 
 # 2fbc2b9944f14ae586b9366ac85823fa
 #: ../../source/publisher_guide/project_for_web.rst:47
 msgid "Set up your project for Web"
-msgstr ""
+msgstr "Configure seu projeto para a Web"
 
 # b35616837a9c40f0b3b258f7021335ff
 #: ../../source/publisher_guide/project_for_web.rst:49
 msgid "Configure the coordinates reference system, CRS, of your project:"
-msgstr ""
+msgstr "Configure o sistema de referência de coordenadas, CRS, do seu projeto:"
 
 # 432c4ded876b4e4a9c3bea93b25d8684
 #: ../../source/publisher_guide/project_for_web.rst:51
 msgid "Select the CRS of your Web map:"
-msgstr ""
+msgstr "Selecione o CRS do seu mapa Web:"
 
 # 678756bc5ed04c5491de23458991c415
 #: ../../source/publisher_guide/project_for_web.rst:53
@@ -2900,56 +2900,56 @@ msgstr "EPSG:2154 para o Lambert 93"
 msgid ""
 "Enable *on the fly CRS transformation*. QGIS can reproject raster and vector"
 " data."
-msgstr ""
+msgstr "Ativar *transformação instantânea do CRS*. O QGIS pode reprojetar  dados raster e dados vetoriais."
 
 # 647b4551bc424f5b87a4e4b0ae823bb9
 #: ../../source/publisher_guide/project_for_web.rst:63
 msgid ""
 "Configure the Web Geographics Services parameters with the *OWS Server* tab:"
-msgstr ""
+msgstr "Configure os parâmetros Web Geographics Services através do separador *Servidor OWS*:"
 
 # 213bf91aefc5467cb532f72bc06abbf3
 #: ../../source/publisher_guide/project_for_web.rst:65
 msgid "Set the title of your Web Geographics Services"
-msgstr ""
+msgstr "Defina o título de seus Web Geographics Services"
 
 # d219c36d1a4847b48e387d5916761d4b
 #: ../../source/publisher_guide/project_for_web.rst:66
 msgid ""
 "Add informations like your organization, the owner of the publication, the "
 "abstract, etc"
-msgstr ""
+msgstr "Adicione informações como sua organização, o proprietário da publicação, o resumo, etc."
 
 # bf7e7ed6c4164b6cb85320152cfcab97
 #: ../../source/publisher_guide/project_for_web.rst:67
 msgid "Set the maximum extent of your WMS service"
-msgstr ""
+msgstr "Definir a extensão máxima do seu serviço WMS"
 
 # 57472f6b794046ce8862d97a162b9c37
 #: ../../source/publisher_guide/project_for_web.rst:68
 msgid "Restrict the CRSs list of your WMS service:"
-msgstr ""
+msgstr "Restringir a lista de CRSs do seu serviço WMS:"
 
 # af2b9683186d48909dbfcf81dad7a5c4
 #: ../../source/publisher_guide/project_for_web.rst:70
 msgid "at least select the one used in your project"
-msgstr ""
+msgstr "pelo menos, selecione aquele utilizado no seu projeto"
 
 # 72b72961959847fcbc3745edbe1b2a1e
 #: ../../source/publisher_guide/project_for_web.rst:71
 msgid ""
 "you can use the button *Used* to get all the layer CRS and the project one"
-msgstr ""
+msgstr "pode utilizar o botão *Usar* para obter todos os CRS da camada para esse projeto"
 
 # ffa23fc6be3246dcb6cd1afb8c984f8f
 #: ../../source/publisher_guide/project_for_web.rst:73
 msgid "Exclude compositions and layers if data cannot be published in WMS"
-msgstr ""
+msgstr "Excluir compositores e camadas se os dados não puderem ser publicados via WMS"
 
 # f83de23f735040ffb45b780ee6585de8
 #: ../../source/publisher_guide/project_for_web.rst:74
 msgid "Enable the layers you want to publish WFS and WCS"
-msgstr ""
+msgstr "Ativar as camadas que deseja publicar via WFS e WCS"
 
 # d4f11a08a3704579acfe8e4f69f8d40e
 #: ../../source/publisher_guide/project_for_web.rst:80
@@ -2957,44 +2957,44 @@ msgid ""
 "Check that the paths are saved *relative* in the general tab of the project "
 "properties window, access it with the menu :menuselection:`Project --> "
 "Project Properties` or `CTRL+SHIFT+P`."
-msgstr ""
+msgstr "Verifique se os caminhos são gravados como *relativos* no separador geral da janela de propriedades do projeto, aceda à opção através do menu: menuselection:`Projeto --> Propriedades do Projeto` ou `CTRL+SHIFT+P`."
 
 # 1ff041098ac1419da105766ba54ccf4a
 #: ../../source/publisher_guide/project_for_web.rst:85
 msgid "Configure your layers for the Web"
-msgstr ""
+msgstr "Configurar as suas camadas Web"
 
 # 7f75cebacbda4360aeebfa09cad9e75b
 #: ../../source/publisher_guide/project_for_web.rst:87
 msgid ""
 "In the window *Layer properties*, the *Metadata* tab allows you to configure"
 " a lot of information for Web Geographic Services:"
-msgstr ""
+msgstr "Na janela *Propriedades da camada*, separador *Metadados* permite configurar um conjunto de informações para os Web Geographic Services:"
 
 # 157f3b88e5c04186b2c52d41d02b7df7
 #: ../../source/publisher_guide/project_for_web.rst:89
 msgid "Provide a title, a description and keywords"
-msgstr ""
+msgstr "Fornecer um título, uma descrição e palavras-chave"
 
 # f65e0c6756f441e1ba7d91bc97a3d449
 #: ../../source/publisher_guide/project_for_web.rst:90
 msgid "Specify the attribution to respect the data license"
-msgstr ""
+msgstr "Especificar a obrigação de respeitar a licença de dados"
 
 # da907d1d49ed4e519b6b95f660227e3b
 #: ../../source/publisher_guide/project_for_web.rst:91
 msgid "Add the metadata record URL if it's available"
-msgstr ""
+msgstr "Adicionar o URL do registo de metadados se estiver disponível"
 
 # 3318282d8d8a4aafb016b18eab7fa80c
 #: ../../source/publisher_guide/publish_with_ftp.rst:3
 msgid "Publish the map by FTP"
-msgstr ""
+msgstr "Publicar o mapa via FTP"
 
 # beeb760d377f42ba9e075f6974dd8417
 #: ../../source/publisher_guide/publish_with_ftp.rst:6
 msgid "Reminder of Lizmap architecture"
-msgstr ""
+msgstr "Relembrar a arquitetura do Lizmap"
 
 # 57dc4bc85ac74a7085bbe4d152153c32
 #: ../../source/publisher_guide/publish_with_ftp.rst:11
@@ -3003,7 +3003,7 @@ msgid ""
 "is sufficient to ensure that the contents of the local directory containing "
 "the data and QGIS projects **be reproduced exactly** identical in the "
 "corresponding server repository."
-msgstr ""
+msgstr "**O Lizmap é baseado num sistema de repositórios**. Para publicar um mapa no Lizmap, é suficiente assegurar que o conteúdo do diretório local, composto pelos dados e projetos QGIS, **seja reproduzido exatamente** da mesma forma no repositório do servidor correspondente."
 
 # baecf434a8964bfea3f02e79d4fc630d
 #: ../../source/publisher_guide/publish_with_ftp.rst:13
@@ -3011,7 +3011,7 @@ msgid ""
 "For this, it is necessary **to synchronize the local directory with that of "
 "the server** each time you update the QGIS project, modify the Lizmap "
 "configuration with the plugin, or add files in the local directory."
-msgstr ""
+msgstr "Para isso, é necessário **sincronizar o diretório local com o do servidor** cada vez que atualizar o seu projeto QGIS, modificar a configuração do Lizmap através do plugin ou adicionar ficheiros no diretório local."
 
 # 2e0eb785482a45c3aadf7b3daeb3b3d9
 #: ../../source/publisher_guide/publish_with_ftp.rst:15
@@ -3019,7 +3019,7 @@ msgid ""
 "If you are working locally, as Lizmap Web Client is installed on the same "
 "machine you use for QGIS, you do not need to *synchronize* your files with "
 "FTP. This configuration should only exist for testing."
-msgstr ""
+msgstr "Se estiver a trabalhar localmente, já que o Lizmap Web Client está instalado na mesma máquina que utiliza para o QGIS, não precisa *sincronizar* seus ficheiros via FTP. Esta configuração apenas deve existir para testes."
 
 # 328ea08e64e645068bc5d0c155dd9fa2
 #: ../../source/publisher_guide/publish_with_ftp.rst:17
@@ -3027,12 +3027,12 @@ msgid ""
 "You can use any tool and synchronization protocol (FTP, FTPS, SFTP, rsync, "
 "unison, etc), if you can master the tool and have access to the Lizmap "
 "server configuration."
-msgstr ""
+msgstr "Pode utilizar qualquer ferramenta e protocolo de sincronização (FTP, FTPS, SFTP, rsync, unison, etc), dominar essa ferramenta e ter acesso à configuração do servidor Lizmap."
 
 # 851a25ae00db48d48353db61c26f54d1
 #: ../../source/publisher_guide/publish_with_ftp.rst:21
 msgid "Use an FTP client"
-msgstr ""
+msgstr "Utilizar um cliente FTP"
 
 # f53928def8ef47e7a8cfb55064626da9
 #: ../../source/publisher_guide/publish_with_ftp.rst:23
@@ -3041,55 +3041,55 @@ msgid ""
 "and/or folders. It can therefore be used to synchronize your local directory"
 " with the server one Where Lizmap Web Client is on. This protocol is a Web "
 "standard that can be exploited through many FTP clients."
-msgstr ""
+msgstr "FTP permite aceder a ficheiros de um servidor, recuperá-los e adicionar documentos e/ou pastas. Este pode, portanto, ser utilizado para sincronizar seu diretório local com o servidor onde está instalado o Lizmap Web Client. Este protocolo é um padrão Web que pode ser explorado através de muitos clientes FTP."
 
 # 413ff88aaadf49ada051398a547eed3e
 #: ../../source/publisher_guide/publish_with_ftp.rst:25
 msgid "You can use the following client or one you usually use:"
-msgstr ""
+msgstr "Pode utilizar o seguinte cliente ou outro que costume utilizar:"
 
 # 6a7105e34d5f40818f539d61d77bb9a5
 #: ../../source/publisher_guide/publish_with_ftp.rst:27
 msgid "*FireFTP*: Firefox add-on"
-msgstr ""
+msgstr "*FireFTP*: Extra para o Firefox"
 
 # 3a8ea0d92f0347d29089c9302bd00220
 #: ../../source/publisher_guide/publish_with_ftp.rst:28
 msgid "*Filezilla*: Free cross-platform software (Windows, MacOS, Linux)"
-msgstr ""
+msgstr "*Filezilla*: software livre multi-plataforma (Windows, MacOS, Linux)"
 
 # ba0ca22c5ead4f7b8f4925b102d9a462
 #: ../../source/publisher_guide/publish_with_ftp.rst:29
 msgid "*WinSCP*: Free software for Windows"
-msgstr ""
+msgstr "*WinSCP*: Software livre para Windows"
 
 # c925d9c233e24cddb7fce31873c6095d
 #: ../../source/publisher_guide/publish_with_ftp.rst:31
 msgid ""
 "You can use these tools to make manual changes to the remote directory:"
-msgstr ""
+msgstr "Pode utilizar essas ferramentas para fazer alterações manuais no diretório remoto:"
 
 # 528440ca1f72451684a1ab6f4cd48082
 #: ../../source/publisher_guide/publish_with_ftp.rst:33
 msgid "**made a backup**"
-msgstr ""
+msgstr "**fazer um backup**"
 
 # d7903b73047a464bb12ddd1e0755c8f3
 #: ../../source/publisher_guide/publish_with_ftp.rst:34
 msgid "**remove contents**"
-msgstr ""
+msgstr "**remover conteúdos**"
 
 # a86398f19b5d4a88a4f1087b7b5f5f08
 #: ../../source/publisher_guide/publish_with_ftp.rst:35
 msgid ""
 "**overwrite files manually**: QGIS project (``.qgs``) and Lizmap "
 "configuration (``.qgs.cfg``)."
-msgstr ""
+msgstr "**substituir ficheiros manualmente**: projeto QGIS (``.qgs``) e configuração Lizmap (``.qgs.cfg``)."
 
 # 445c99967c6c45f0bf9af48357a99085
 #: ../../source/publisher_guide/publish_with_ftp.rst:39
 msgid "Using FTP tab in Lizmap plugin"
-msgstr ""
+msgstr "Utilizar o separador FTP do plugin Lizmap"
 
 # 4c265e703f704d898ef509373a18af81
 #: ../../source/publisher_guide/publish_with_ftp.rst:41
@@ -3098,30 +3098,30 @@ msgid ""
 "protocol directly into QGIS, in order to make a mirrored synchronization "
 "directly from the plugin. To integrate FTP synchronization in the plugin, we"
 " relied on two free tools that have proven reliable:"
-msgstr ""
+msgstr "O separador FTP no plugin Lizmap permite que configurar a utilização do protocolo FTP diretamente no QGIS, para fazer uma sincronização espelhada diretamente através do plugin. Para integrar a sincronização FTP no plugin, confiamos em duas ferramentas gratuitas que se mostraram confiáveis:"
 
 # 1e78840a10a444beab128f0f613e5cc8
 #: ../../source/publisher_guide/publish_with_ftp.rst:43
 msgid "**WinSCP** on Windows: http://winscp.net/"
-msgstr ""
+msgstr "**WinSCP** para Windows: http://winscp.net/"
 
 # 24bb5642a5664f7eaae060bd92d0eee9
 #: ../../source/publisher_guide/publish_with_ftp.rst:44
 msgid "**lftp** on Linux: http://lftp.yar.ru/"
-msgstr ""
+msgstr "**lftp** para Linux: http://lftp.yar.ru/"
 
 # 08cc2edc32e74bca91571efdf1e42f19
 #: ../../source/publisher_guide/publish_with_ftp.rst:45
 msgid ""
 "We have not yet found an equivalent for Mac OS (contributions are welcome)"
-msgstr ""
+msgstr "Ainda não encontrámos um equivalente para Mac OS (as contribuições são bem-vindas)"
 
 # b9aaddfef00c4d8a9cf966c3ec0705a9
 #: ../../source/publisher_guide/publish_with_ftp.rst:47
 msgid ""
 "To use FTP synchronization from the Lizmap plugin, install an FTP client "
 "above."
-msgstr ""
+msgstr "Para utilizar a sincronização via FTP a partir do plugin Lizmap, instale um dos clientes FTP acima referidos."
 
 # a02bd7ede9104ab9a600cac45a2f9929
 #: ../../source/publisher_guide/publish_with_ftp.rst:49
@@ -3131,51 +3131,51 @@ msgstr "No Windows: WinSCP"
 # 84d6649aabd34d3ab60dd90b7a191eb9
 #: ../../source/publisher_guide/publish_with_ftp.rst:51
 msgid "Download **portable version**: http://winscp.net/eng/download.php"
-msgstr ""
+msgstr "Descarregar a **versão portátil** em: http://winscp.net/eng/download.php"
 
 # 31fbf9ee56654febaa37a0b25ff5ee41
 #: ../../source/publisher_guide/publish_with_ftp.rst:52
 msgid "**Unzip to a directory**: for example ``C:\\\\winscp\\\\``"
-msgstr ""
+msgstr "**Descomprima para um diretório**: por exemplo ``C:\\\\winscp\\\\``"
 
 # 116f92f5c8bf47cb99034bcbd9634d02
 #: ../../source/publisher_guide/publish_with_ftp.rst:53
 msgid ""
 "**FTP tab in the plugin**: specify the directory where you unzipped WinSCP "
 "with the button `...`"
-msgstr ""
+msgstr "**Separador FTP do plugin**: especifique o diretório onde descomprimiu o WinSCP com o botão `...`"
 
 # 18281979d5634202af63ec5e43b6477f
 #: ../../source/publisher_guide/publish_with_ftp.rst:55
 msgid "On Linux : LFTP"
-msgstr ""
+msgstr "Em Linux: LFTP"
 
 # 93453e35221d45abab3d8b89a316a4d4
 #: ../../source/publisher_guide/publish_with_ftp.rst:61
 msgid "In the FTP tab, you configure the following settings:"
-msgstr ""
+msgstr "No separador FTP, defina as seguintes configurações:"
 
 # 66f8218d0d4f4cf990887c30965db065
 #: ../../source/publisher_guide/publish_with_ftp.rst:63
 msgid ""
 "**Host**: the FTP host, for the server on which Qgis server and Lizmap Web "
 "Client are installed (IP address or domain name)"
-msgstr ""
+msgstr "**Host**: o host FTP, para o servidor no qual o servidor Qgis e o Lizmap Web Client estão instalados (endereço IP ou nome de domínio)"
 
 # c6de49232dc3425f9435c5f223a9d707
 #: ../../source/publisher_guide/publish_with_ftp.rst:64
 msgid "**Port**: the FTP port, 21 by default"
-msgstr ""
+msgstr "**Porta**: a porta FTP, 21 por padrão"
 
 # ec785679281d410b9f58bce082bfc918
 #: ../../source/publisher_guide/publish_with_ftp.rst:65
 msgid "**User**: the FTP user"
-msgstr ""
+msgstr "**Utilizador**: o utilizador FTP"
 
 # 7d331339f31c45368be2dfba1235cc20
 #: ../../source/publisher_guide/publish_with_ftp.rst:66
 msgid "**Password**: the FTP password"
-msgstr ""
+msgstr "**Palavra-passe**: a palavra-passe do utilizador FTP"
 
 # d8f5207234cb40e981ae68fd1e3db147
 #: ../../source/publisher_guide/publish_with_ftp.rst:67
@@ -3183,16 +3183,16 @@ msgid ""
 "**Remote directory**: directory path in which the Qgis projects are stored "
 "on the server, relative to the root of your FTP access. For example: "
 "/qgis/public/"
-msgstr ""
+msgstr "**Diretório remoto**: caminho do diretório no qual os projetos Qgis são armazenados no servidor, em relação à raiz do seu acesso FTP. Por exemplo: /qgis/public/"
 
 # dcd93690378b49d39caee39801fbdbf1
 #: ../../source/publisher_guide/publish_with_ftp.rst:68
 msgid "**Local directory**: reminder of the full path to the QGIS project"
-msgstr ""
+msgstr "**Diretório local**: relembrar o caminho completo para o projeto QGIS"
 
 # 264bc7ddb9974e1594c4279fdf32ef1f
 #: ../../source/publisher_guide/publish_with_ftp.rst:70
 msgid ""
 "Be careful to check the configuration with the server administrator on which"
 " Lizmap Web Client is installed before your tests!"
-msgstr ""
+msgstr "Tenha cuidado ao verificar a configuração com o administrador do servidor no qual o Lizmap Web Client está instalado antes de iniciar dos testes!"
