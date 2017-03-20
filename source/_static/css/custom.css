@@ -1,0 +1,61 @@
+
+@import url('theme.css');
+
+.wy-nav-side {
+    position: absolute;
+}
+
+.wy-nav-content {
+    max-width: unset;
+}
+
+.wy-side-nav-search {
+    background-color: #c5e5ea;
+}
+
+.globalhead {
+    background: #000;
+    padding: 4px 18px 4px 8px;
+    width: auto;
+    border-bottom: 1px solid #444;
+}
+
+.siteNav {
+}
+
+.siteNavTitle {
+    padding-left: 4px;
+    margin-top: 4px;  
+    font-size: 24px;
+    color: white;
+}
+
+select#languages {
+  float: right;
+  margin: 8px 1px 0 4px;
+  width: 120px;
+  background: white url('_static/images/down-arrow.png') no-repeat 95% 50%;
+  line-height: 10px;
+  color: black;
+  outline: none;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+select#languages a {
+  outline: 0;
+}
+select#languages option {
+  outline: 0;
+  padding: 2px;
+}
+
+
+

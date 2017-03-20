@@ -33,7 +33,7 @@ extensions = [
 todo_include_todos = 0
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['../themes/qgis-theme']
+templates_path = ['_template']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -96,7 +96,7 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'basic'
+html_theme = 'srtd'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -104,7 +104,7 @@ html_theme = 'basic'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = ['../themes']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -117,6 +117,13 @@ html_title = ""
 # of the sidebar.
 #html_logo = None
 html_logo = 'images/logo.png'
+
+html_context = {
+        'theme_logo_only': True
+}
+
+html_style = 'css/custom.css'
+
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
@@ -125,7 +132,7 @@ html_logo = 'images/logo.png'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['../themes/qgis-theme/static']
+html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -136,11 +143,11 @@ html_static_path = ['../themes/qgis-theme/static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-html_sidebars = {
-    'index': ['myglobaltoc.html'],
-    'search': [],
-    '**': ['myglobaltoc.html']
-}
+#html_sidebars = {
+#    'index': ['myglobaltoc.html'],
+#    'search': [],
+#    '**': ['myglobaltoc.html']
+#}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -159,10 +166,10 @@ html_sidebars = {
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-html_show_sphinx = False
+html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-html_show_copyright = False
+html_show_copyright = True
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the

@@ -1,0 +1,24 @@
+{% extends "!layout.html" %}
+
+{% block bodyheader %}
+<div class="globalnav globalhead">
+    <a class="siteNav" href="{{ pathto(master_doc) }}" >
+        <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" />
+        <span class="siteNavTitle">
+            Documentation
+        </span>
+    </a>
+    {% include "languageswitch.html" %}
+</div>
+{% endblock %}
+
+{% block sidebartitle %}
+    <a class="sideTitle" href="{{ pathto(master_doc) }}" style="color:black">
+        LIZMAP
+    </a>
+    <div class="version" style="color:black">
+        {{ version }}
+    </div>
+    {% include "searchbox.html" %}
+{% endblock %}
+
