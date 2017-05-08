@@ -462,9 +462,25 @@ http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=mon
 
 LDAP authentication
 --------------------------------------------------------------
+.. note:: This section is optional
+
+The advantage of using LDAP is that all the users and groups information can be held on one server which is centrally managed.
+
+In order to enable the LDAP support, you have to change the authentication method in the files as follows:
+
 See ldapdao-module project at https://github.com/jelix/ldapdao-module for downloading, installing, and configuring module
 
-Install the php ldap module on your linux system
+Install the php ldap extension on your linux system
+
+.. code-block:: bash
+
+   apt-get install php5.6-ldap
+   
+or
+
+.. code-block:: bash
+   
+   apt-get install php7.1-ldap
 
 Declare the ldapdao module into the *lizmap/var/config/localconfig.ini.php* file
 
