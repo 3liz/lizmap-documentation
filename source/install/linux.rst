@@ -460,6 +460,69 @@ http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=mon
 
 .. note:: Access to the WMS and WFS servers can be limited by assigning privileges to specific repositories, see the administration section.
 
+LDAP authentication
+--------------------------------------------------------------
+.. note:: This section is optional
+
+The advantage of using LDAP is that all the users and groups information can be held on one server which is centrally managed.
+
+In order to enable the LDAP support, you have to change the authentication method in the files as follows:
+
+See ldapdao-module project at https://github.com/jelix/ldapdao-module for downloading, installing, and configuring module
+
+Install the php ldap extension on your linux system
+
+.. code-block:: bash
+
+   apt-get install php5.6-ldap
+   
+or
+
+.. code-block:: bash
+   
+   apt-get install php7.1-ldap
+
+Declare the ldapdao module into the *lizmap/var/config/localconfig.ini.php* file
+
+.. code-block:: bash
+
+   [modules]
+   ldapdao.access=1
+
+Check the following modules state into the *lizmap/var/config/localconfig.ini.php* file
+
+.. code-block:: bash
+
+   jacl2.access=1
+   jauth.access=2
+   jauthdb.access=1
+ 
+Redefine the path of the auth config into the *lizmap/var/config/admin/config.ini.php* and *lizmap/var/config/index/config.ini.php* files
+
+.. code-block:: bash
+
+   [coordplugins]
+   auth="authldap.coord.ini.php"
+   
+Create a profile like this according to your ldap settings into the *lizmap/var/config/profiles.ini.php* file
+
+.. code-block:: bash
+
+   [ldap:myldapdao]
+   hostname=localhost
+   port=389
+   adminUserDn="cn=admin,ou=admins,dc=acme"
+   adminPassword="Sup3rP4ssw0rd"
+
+Run *php lizmap/install/installer.php*
+
+Indicate the new configuration file into the *lizmap/var/config/mainconfig.ini.php* file
+
+.. code-block:: bash
+
+   [coordplugins]
+   auth="authldap.coord.ini.php"
+   
 Editing tool: Configure the server with the database support
 =============================================================================
 
