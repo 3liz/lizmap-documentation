@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2016, 3liz
+# Copyright (C) 2014-2017, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Lizmap 3.0.4\n"
+"Project-Id-Version: Lizmap 3.0.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-08 15:43+0100\n"
+"POT-Creation-Date: 2017-07-28 16:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -123,7 +123,8 @@ msgstr ""
 
 #: ../../source/install/linux.rst:178
 #: ../../source/install/linux.rst:233
-#: ../../source/install/linux.rst:466
+#: ../../source/install/linux.rst:465
+#: ../../source/install/linux.rst:529
 msgid "This section is optional"
 msgstr ""
 
@@ -270,123 +271,171 @@ msgid "Access to the WMS and WFS servers can be limited by assigning privileges 
 msgstr ""
 
 #: ../../source/install/linux.rst:464
-msgid "Editing tool: Configure the server with the database support"
+msgid "LDAP authentication"
+msgstr ""
+
+#: ../../source/install/linux.rst:467
+msgid "The advantage of using LDAP is that all the users and groups information can be held on one server which is centrally managed."
 msgstr ""
 
 #: ../../source/install/linux.rst:469
-msgid "PostgreSQL"
+msgid "In order to enable the LDAP support, you have to change the authentication method in the files as follows:"
 msgstr ""
 
 #: ../../source/install/linux.rst:471
-msgid "For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreSQL support for PHP."
+msgid "See ldapdao-module project at https://github.com/jelix/ldapdao-module for downloading, installing, and configuring module"
 msgstr ""
 
-#: ../../source/install/linux.rst:478
-msgid "For editing, we strongly recommend using a PostgreSQL database. This greatly simplifies installation and retrieval of data entered by users."
+#: ../../source/install/linux.rst:473
+msgid "Install the php ldap extension on your linux system"
 msgstr ""
 
-#: ../../source/install/linux.rst:481
-msgid "Spatialite"
+#: ../../source/install/linux.rst:479
+msgid "or"
 msgstr ""
 
-#: ../../source/install/linux.rst:484
-msgid "Enable Spatialite extension"
-msgstr ""
-
-#: ../../source/install/linux.rst:486
-msgid "To use editing on layers spatiatlite,you have to add the spatialite extension in PHP. You can follow these instructions to do so: http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
-msgstr ""
-
-#: ../../source/install/linux.rst:489
-msgid "Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it is not, then spatialities layers will not be used in the editing tool. You can always use PostgreSQL data for editing."
+#: ../../source/install/linux.rst:485
+msgid "Declare the ldapdao module into the *lizmap/var/config/localconfig.ini.php* file"
 msgstr ""
 
 #: ../../source/install/linux.rst:492
-msgid "Give the appropriate rights to the directory containing Spatialite databases"
+msgid "Check the following modules state into the *lizmap/var/config/localconfig.ini.php* file"
 msgstr ""
 
-#: ../../source/install/linux.rst:494
-msgid "So that Lizmap Web Client can modify the data contained in databases Spatialite, we must ensure that **the Apache user (www-data) has well write access to the directory containing each Spatialite file**"
+#: ../../source/install/linux.rst:500
+msgid "Redefine the path of the auth config into the *lizmap/var/config/admin/config.ini.php* and *lizmap/var/config/index/config.ini.php* files"
 msgstr ""
 
-#: ../../source/install/linux.rst:496
-msgid "For example, if a directory contains a QGIS project, which uses a Spatialite database placed in a **db** directory at the same level as the QGIS project:"
+#: ../../source/install/linux.rst:507
+msgid "Create a profile like this according to your ldap settings into the *lizmap/var/config/profiles.ini.php* file"
 msgstr ""
 
-#: ../../source/install/linux.rst:505
-msgid "So you have to give the rights in this way:"
+#: ../../source/install/linux.rst:517
+msgid "Run *php lizmap/install/installer.php*"
 msgstr ""
 
-#: ../../source/install/linux.rst:512
-msgid "so if you want to install Lizmap to provide access to multiple map publishers, you should tell them to always create a **db** directory at the same level as the QGIS projects in the Lizmap Web Client directory. This will facilitate the admin work that just have to change the rights of this unique directory."
+#: ../../source/install/linux.rst:519
+msgid "Indicate the new configuration file into the *lizmap/var/config/mainconfig.ini.php* file"
 msgstr ""
 
-#: ../../source/install/linux.rst:515
-msgid "Version upgrade"
-msgstr ""
-
-#: ../../source/install/linux.rst:518
-msgid "Preliminary backup"
-msgstr ""
-
-#: ../../source/install/linux.rst:520
-msgid "Before update, make a backup of the configuration data: *lizmap/var/config/lizmapConfig.ini.php*, *lizmap/var/jauth.db* and the log file (from 2.8) *lizmap/var/logs.db*"
+#: ../../source/install/linux.rst:527
+msgid "Editing tool: Configure the server with the database support"
 msgstr ""
 
 #: ../../source/install/linux.rst:532
-msgid "Then do a typical installation of the new version (see above), which will create a new folder in the directory */var/www/*"
+msgid "PostgreSQL"
 msgstr ""
 
-#: ../../source/install/linux.rst:535
-msgid "Copy the files saved in the folder of the new version"
+#: ../../source/install/linux.rst:534
+msgid "For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreSQL support for PHP."
+msgstr ""
+
+#: ../../source/install/linux.rst:541
+msgid "For editing, we strongly recommend using a PostgreSQL database. This greatly simplifies installation and retrieval of data entered by users."
 msgstr ""
 
 #: ../../source/install/linux.rst:544
-msgid "In some versions, it is also necessary to update the database that stores the rights. See the following for more details."
+msgid "Spatialite"
 msgstr ""
 
 #: ../../source/install/linux.rst:547
-msgid "From version 2.3 or lower to version 2.4 or upper"
+msgid "Enable Spatialite extension"
 msgstr ""
 
 #: ../../source/install/linux.rst:549
-msgid "The Jelix framework (tool with which Lizmap Web Client is built) has been updated. It is necessary to change the rights management SQLite database:"
+msgid "To use editing on layers spatiatlite,you have to add the spatialite extension in PHP. You can follow these instructions to do so: http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
+msgstr ""
+
+#: ../../source/install/linux.rst:552
+msgid "Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it is not, then spatialities layers will not be used in the editing tool. You can always use PostgreSQL data for editing."
+msgstr ""
+
+#: ../../source/install/linux.rst:555
+msgid "Give the appropriate rights to the directory containing Spatialite databases"
 msgstr ""
 
 #: ../../source/install/linux.rst:557
-msgid "From version 2.6 or lower to version 2.7"
+msgid "So that Lizmap Web Client can modify the data contained in databases Spatialite, we must ensure that **the Apache user (www-data) has well write access to the directory containing each Spatialite file**"
 msgstr ""
 
 #: ../../source/install/linux.rst:559
-msgid "Support for annotations and management of related rights was added to Lizmap Web Client. It is necessary to change the rights management SQLite database to upgrade it:"
+msgid "For example, if a directory contains a QGIS project, which uses a Spatialite database placed in a **db** directory at the same level as the QGIS project:"
 msgstr ""
 
 #: ../../source/install/linux.rst:568
-msgid "From version 2.7.*  to version 2.8"
+msgid "So you have to give the rights in this way:"
 msgstr ""
 
-#: ../../source/install/linux.rst:570
-msgid "The editing tool replaced the annotation tool and fields to describe each Lizmap Web Client user has been added. It is necessary to upgrade the rights management SQLite database:"
+#: ../../source/install/linux.rst:575
+msgid "so if you want to install Lizmap to provide access to multiple map publishers, you should tell them to always create a **db** directory at the same level as the QGIS projects in the Lizmap Web Client directory. This will facilitate the admin work that just have to change the rights of this unique directory."
 msgstr ""
 
 #: ../../source/install/linux.rst:578
-msgid "From version 2.8.*  to version 2.9"
+msgid "Version upgrade"
 msgstr ""
 
-#: ../../source/install/linux.rst:580
-#: ../../source/install/linux.rst:590
-msgid "The functionality of layers data filtering based on the connected user requires the addition of rights related to the user data base:"
+#: ../../source/install/linux.rst:581
+msgid "Preliminary backup"
 msgstr ""
 
-#: ../../source/install/linux.rst:588
-msgid "From version 2.9.*  to version 2.10"
+#: ../../source/install/linux.rst:583
+msgid "Before update, make a backup of the configuration data: *lizmap/var/config/lizmapConfig.ini.php*, *lizmap/var/jauth.db* and the log file (from 2.8) *lizmap/var/logs.db*"
+msgstr ""
+
+#: ../../source/install/linux.rst:595
+msgid "Then do a typical installation of the new version (see above), which will create a new folder in the directory */var/www/*"
 msgstr ""
 
 #: ../../source/install/linux.rst:598
+msgid "Copy the files saved in the folder of the new version"
+msgstr ""
+
+#: ../../source/install/linux.rst:607
+msgid "In some versions, it is also necessary to update the database that stores the rights. See the following for more details."
+msgstr ""
+
+#: ../../source/install/linux.rst:610
+msgid "From version 2.3 or lower to version 2.4 or upper"
+msgstr ""
+
+#: ../../source/install/linux.rst:612
+msgid "The Jelix framework (tool with which Lizmap Web Client is built) has been updated. It is necessary to change the rights management SQLite database:"
+msgstr ""
+
+#: ../../source/install/linux.rst:620
+msgid "From version 2.6 or lower to version 2.7"
+msgstr ""
+
+#: ../../source/install/linux.rst:622
+msgid "Support for annotations and management of related rights was added to Lizmap Web Client. It is necessary to change the rights management SQLite database to upgrade it:"
+msgstr ""
+
+#: ../../source/install/linux.rst:631
+msgid "From version 2.7.*  to version 2.8"
+msgstr ""
+
+#: ../../source/install/linux.rst:633
+msgid "The editing tool replaced the annotation tool and fields to describe each Lizmap Web Client user has been added. It is necessary to upgrade the rights management SQLite database:"
+msgstr ""
+
+#: ../../source/install/linux.rst:641
+msgid "From version 2.8.*  to version 2.9"
+msgstr ""
+
+#: ../../source/install/linux.rst:643
+#: ../../source/install/linux.rst:653
+msgid "The functionality of layers data filtering based on the connected user requires the addition of rights related to the user data base:"
+msgstr ""
+
+#: ../../source/install/linux.rst:651
+msgid "From version 2.9.*  to version 2.10"
+msgstr ""
+
+#: ../../source/install/linux.rst:661
 msgid "Delete Jelix temporary files"
 msgstr ""
 
-#: ../../source/install/linux.rst:605
+#: ../../source/install/linux.rst:668
 msgid "Redefine the rights to the application files"
 msgstr ""
 
