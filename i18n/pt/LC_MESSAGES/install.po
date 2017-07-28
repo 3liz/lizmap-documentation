@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2016, 3liz
+# Copyright (C) 2014-2017, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # 
 # Translators:
@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-08 15:43+0100\n"
-"PO-Revision-Date: 2017-02-26 18:40+0000\n"
-"Last-Translator: José Macau <jose.macau@gmail.com>\n"
+"POT-Creation-Date: 2017-07-28 16:36+0200\n"
+"PO-Revision-Date: 2017-07-28 14:41+0000\n"
+"Last-Translator: rldhont <rldhont@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/3liz-1/lizmap-documentation/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -149,7 +149,7 @@ msgid "Spatial DBMS: PostgreSQL"
 msgstr "Spatial DBMS: PostgreSQL"
 
 #: ../../source/install/linux.rst:178 ../../source/install/linux.rst:233
-#: ../../source/install/linux.rst:466
+#: ../../source/install/linux.rst:465 ../../source/install/linux.rst:529
 msgid "This section is optional"
 msgstr "Esta secção é opcional"
 
@@ -328,71 +328,136 @@ msgid ""
 msgstr "O acesso aos servidores WMS e WFS pode ser limitado pela atribuição de privilégios a repositórios específicos, consulte a secção de administração."
 
 #: ../../source/install/linux.rst:464
+msgid "LDAP authentication"
+msgstr ""
+
+#: ../../source/install/linux.rst:467
+msgid ""
+"The advantage of using LDAP is that all the users and groups information can"
+" be held on one server which is centrally managed."
+msgstr ""
+
+#: ../../source/install/linux.rst:469
+msgid ""
+"In order to enable the LDAP support, you have to change the authentication "
+"method in the files as follows:"
+msgstr ""
+
+#: ../../source/install/linux.rst:471
+msgid ""
+"See ldapdao-module project at https://github.com/jelix/ldapdao-module for "
+"downloading, installing, and configuring module"
+msgstr ""
+
+#: ../../source/install/linux.rst:473
+msgid "Install the php ldap extension on your linux system"
+msgstr ""
+
+#: ../../source/install/linux.rst:479
+msgid "or"
+msgstr ""
+
+#: ../../source/install/linux.rst:485
+msgid ""
+"Declare the ldapdao module into the *lizmap/var/config/localconfig.ini.php* "
+"file"
+msgstr ""
+
+#: ../../source/install/linux.rst:492
+msgid ""
+"Check the following modules state into the "
+"*lizmap/var/config/localconfig.ini.php* file"
+msgstr ""
+
+#: ../../source/install/linux.rst:500
+msgid ""
+"Redefine the path of the auth config into the "
+"*lizmap/var/config/admin/config.ini.php* and "
+"*lizmap/var/config/index/config.ini.php* files"
+msgstr ""
+
+#: ../../source/install/linux.rst:507
+msgid ""
+"Create a profile like this according to your ldap settings into the "
+"*lizmap/var/config/profiles.ini.php* file"
+msgstr ""
+
+#: ../../source/install/linux.rst:517
+msgid "Run *php lizmap/install/installer.php*"
+msgstr ""
+
+#: ../../source/install/linux.rst:519
+msgid ""
+"Indicate the new configuration file into the "
+"*lizmap/var/config/mainconfig.ini.php* file"
+msgstr ""
+
+#: ../../source/install/linux.rst:527
 msgid "Editing tool: Configure the server with the database support"
 msgstr "Ferramenta de edição: Configure o servidor com suporte para base de dados"
 
-#: ../../source/install/linux.rst:469
+#: ../../source/install/linux.rst:532
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
-#: ../../source/install/linux.rst:471
+#: ../../source/install/linux.rst:534
 msgid ""
 "For the editing of PostGIS layers in Web Client Lizmap operate, install "
 "PostgreSQL support for PHP."
 msgstr "Para a edição de camadas PostGIS funcionar no Lizmap Web Client, instale o suporte PostgreSQL para PHP."
 
-#: ../../source/install/linux.rst:478
+#: ../../source/install/linux.rst:541
 msgid ""
 "For editing, we strongly recommend using a PostgreSQL database. This greatly"
 " simplifies installation and retrieval of data entered by users."
 msgstr "Para edição, é altamente recomendável utilizar uma base de dados PostgreSQL. Isso simplifica muito a instalação e recuperação de dados introduzidos pelos utilizadores."
 
-#: ../../source/install/linux.rst:481
+#: ../../source/install/linux.rst:544
 msgid "Spatialite"
 msgstr "Spatialite"
 
-#: ../../source/install/linux.rst:484
+#: ../../source/install/linux.rst:547
 msgid "Enable Spatialite extension"
 msgstr "Ativar a extensão Spatialite"
 
-#: ../../source/install/linux.rst:486
+#: ../../source/install/linux.rst:549
 msgid ""
 "To use editing on layers spatiatlite,you have to add the spatialite "
 "extension in PHP. You can follow these instructions to do so: http://www"
 ".gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
 msgstr "Para utilizar a edição em camadas spatiatlite, é necessário adicionar a extensão spatialite para PHP. Pode seguir estas instruções para fazê-lo: http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
 
-#: ../../source/install/linux.rst:489
+#: ../../source/install/linux.rst:552
 msgid ""
 "Lizmap Web Client tests whether the spatialite support is enabled in PHP. If"
 " it is not, then spatialities layers will not be used in the editing tool. "
 "You can always use PostgreSQL data for editing."
 msgstr "O Lizmap Web Client verifica se o suporte spatialite está habilitado no PHP. Se não estiver, as camadas espaciais não serão utilizadas na ferramenta de edição. Poderá sempre utilizar dados do PostgreSQL para edição."
 
-#: ../../source/install/linux.rst:492
+#: ../../source/install/linux.rst:555
 msgid ""
 "Give the appropriate rights to the directory containing Spatialite databases"
 msgstr "Atribua as permissões apropriadas ao diretório que contém as bases de dados Spatialite"
 
-#: ../../source/install/linux.rst:494
+#: ../../source/install/linux.rst:557
 msgid ""
 "So that Lizmap Web Client can modify the data contained in databases "
 "Spatialite, we must ensure that **the Apache user (www-data) has well write "
 "access to the directory containing each Spatialite file**"
 msgstr "Para que o Lizmap Web Client possa modificar os dados contidos nas bases de dados Spatialite, deve assegurar-se que **o utilizador Apache (www-data) tenha garantido acesso de escrita ao diretório que contém cada ficheiro Spatialite**"
 
-#: ../../source/install/linux.rst:496
+#: ../../source/install/linux.rst:559
 msgid ""
 "For example, if a directory contains a QGIS project, which uses a Spatialite"
 " database placed in a **db** directory at the same level as the QGIS "
 "project:"
 msgstr "Por exemplo, se um diretório contém um projeto QGIS, que utiliza uma base de dados Spatialite colocada num diretório **db** no mesmo nível do projeto QGIS:"
 
-#: ../../source/install/linux.rst:505
+#: ../../source/install/linux.rst:568
 msgid "So you have to give the rights in this way:"
 msgstr "Então terá que atribuir as permissões desta forma:"
 
-#: ../../source/install/linux.rst:512
+#: ../../source/install/linux.rst:575
 msgid ""
 "so if you want to install Lizmap to provide access to multiple map "
 "publishers, you should tell them to always create a **db** directory at the "
@@ -401,88 +466,88 @@ msgid ""
 "unique directory."
 msgstr "Se quiser instalar o Lizmap para fornecer acesso a várias publicações de mapas, deve configurar-lo de forma a criar sempre um diretório **db** no mesmo nível que os projetos QGIS no diretório do Lizmap Web Client. Isto facilitará o trabalho do administrador que apenas tem que alterar as permissões desse diretório único."
 
-#: ../../source/install/linux.rst:515
+#: ../../source/install/linux.rst:578
 msgid "Version upgrade"
 msgstr "Versão upgrade"
 
-#: ../../source/install/linux.rst:518
+#: ../../source/install/linux.rst:581
 msgid "Preliminary backup"
 msgstr "Backup preliminar"
 
-#: ../../source/install/linux.rst:520
+#: ../../source/install/linux.rst:583
 msgid ""
 "Before update, make a backup of the configuration data: "
 "*lizmap/var/config/lizmapConfig.ini.php*, *lizmap/var/jauth.db* and the log "
 "file (from 2.8) *lizmap/var/logs.db*"
 msgstr "Antes da atualização, faça um backup dos dados de configuração: *lizmap/var/config/lizmapConfig.ini.php*, *lizmap/var/jauth.db* e o ficheiro de log (a partir da versão 2.8) *lizmap/var/logs.db*"
 
-#: ../../source/install/linux.rst:532
+#: ../../source/install/linux.rst:595
 msgid ""
 "Then do a typical installation of the new version (see above), which will "
 "create a new folder in the directory */var/www/*"
 msgstr "Em seguida, faça uma instalação típica da nova versão (veja acima), que criará uma nova pasta no diretório */var/www/*"
 
-#: ../../source/install/linux.rst:535
+#: ../../source/install/linux.rst:598
 msgid "Copy the files saved in the folder of the new version"
 msgstr "Copie os ficheiros guardados na pasta da nova versão"
 
-#: ../../source/install/linux.rst:544
+#: ../../source/install/linux.rst:607
 msgid ""
 "In some versions, it is also necessary to update the database that stores "
 "the rights. See the following for more details."
 msgstr "Em algumas versões, também é necessário atualizar a base de dados que armazena as permissões. Consulte o seguinte para obter mais detalhes."
 
-#: ../../source/install/linux.rst:547
+#: ../../source/install/linux.rst:610
 msgid "From version 2.3 or lower to version 2.4 or upper"
 msgstr "A partir da versão 2.3 ou inferior para a versão 2.4 ou superior"
 
-#: ../../source/install/linux.rst:549
+#: ../../source/install/linux.rst:612
 msgid ""
 "The Jelix framework (tool with which Lizmap Web Client is built) has been "
 "updated. It is necessary to change the rights management SQLite database:"
 msgstr "O framework Jelix (ferramenta com a qual o Lizmap Web Client foi construído) foi atualizado. É necessário alterar a base de dados SQLite de gestão de permissões:"
 
-#: ../../source/install/linux.rst:557
+#: ../../source/install/linux.rst:620
 msgid "From version 2.6 or lower to version 2.7"
 msgstr "A partir da versão 2.6 ou inferior para a versão 2.7"
 
-#: ../../source/install/linux.rst:559
+#: ../../source/install/linux.rst:622
 msgid ""
 "Support for annotations and management of related rights was added to Lizmap"
 " Web Client. It is necessary to change the rights management SQLite database"
 " to upgrade it:"
 msgstr "O suporte para anotações e gestão de permissões relacionadas foi adicionado ao Lizmap Web Client. É necessário alterar a base de dados SQLite de gestão de permissões para proceder à instalação:"
 
-#: ../../source/install/linux.rst:568
+#: ../../source/install/linux.rst:631
 msgid "From version 2.7.*  to version 2.8"
 msgstr "Da versão 2.7. * à versão 2.8"
 
-#: ../../source/install/linux.rst:570
+#: ../../source/install/linux.rst:633
 msgid ""
 "The editing tool replaced the annotation tool and fields to describe each "
 "Lizmap Web Client user has been added. It is necessary to upgrade the rights"
 " management SQLite database:"
 msgstr "A ferramenta de edição substituiu a ferramenta de anotação e os campos para descrever cada utilizador do Lizmap Web Client foram adicionados. É necessário atualizar a base de dados SQLite de gestão de permissões:"
 
-#: ../../source/install/linux.rst:578
+#: ../../source/install/linux.rst:641
 msgid "From version 2.8.*  to version 2.9"
 msgstr "A partir da versão 2.8. * para a versão 2.9"
 
-#: ../../source/install/linux.rst:580 ../../source/install/linux.rst:590
+#: ../../source/install/linux.rst:643 ../../source/install/linux.rst:653
 msgid ""
 "The functionality of layers data filtering based on the connected user "
 "requires the addition of rights related to the user data base:"
 msgstr "A funcionalidade de filtragem de dados de camadas com base na conta do utilizador requer a adição de permissões relativas à base de dados do utilizador:"
 
-#: ../../source/install/linux.rst:588
+#: ../../source/install/linux.rst:651
 msgid "From version 2.9.*  to version 2.10"
 msgstr "Da versão 2.9. * à versão 2.10"
 
-#: ../../source/install/linux.rst:598
+#: ../../source/install/linux.rst:661
 msgid "Delete Jelix temporary files"
 msgstr "Eliminar ficheiros temporários do Jelix"
 
-#: ../../source/install/linux.rst:605
+#: ../../source/install/linux.rst:668
 msgid "Redefine the rights to the application files"
 msgstr "Redefinir as permissões para os ficheiros da aplicação"
 
