@@ -1,1 +1,701 @@
-Not Found
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2017, 3liz
+# This file is distributed under the same license as the Lizmap package.
+# 
+# Translators:
+# Jean-Louis Stanus <rammstan@msn.com>, 2017
+# Nicolas Boisteault <nboisteault@gmail.com>, 2017
+# rldhont <rldhont@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Lizmap documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-28 16:36+0200\n"
+"PO-Revision-Date: 2017-07-18 15:47+0000\n"
+"Last-Translator: Nicolas Boisteault <nboisteault@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/3liz-1/lizmap-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/admin/cache.rst:3
+msgid "Cache management as administrator"
+msgstr "Gestion du cache en tant qu'administrateur"
+
+#: ../../source/admin/cache.rst:5
+msgid ""
+"Lizmap Web Client can automatically generate a tile cache by the server as "
+"and when users access maps. In some cases it is desirable to remove the "
+"server cache, for example, when the style changes have been made for some "
+"spatial layers published in Lizmap Web Client. For this, two solutions are "
+"possible:"
+msgstr "Lizmap Web Client permet de générer automatique un cache des tuiles par le serveur au fur et à mesure que les utilisateurs accèdent aux cartes. Dans certains cas, il est souhaitable de pouvoir supprimer le cache serveur, par exemple lorsque des modifications de style ont été faites pour certaines couches spatialies publiées par Lizmap Web Client. Pour cela, 2 solutions sont possibles :"
+
+#: ../../source/admin/cache.rst:8
+msgid "Remove all the cache by Lizmap repository"
+msgstr "Suppression de tout le cache par répertoire Lizmap"
+
+#: ../../source/admin/cache.rst:10
+msgid ""
+"In the administration interface, The **Lizmap configuration** menu lists "
+"configured *Lizmap repository*. For each repository, the administrator can "
+"delete the cache for all layers of all the projects repository by clicking "
+"the button **Empty cache**."
+msgstr "Dans l'interface d'administration, le menu **Configuration Lizmap** montre la liste des *répertoires Lizmap* configurés. Pour chacun des répertoire, l'administrateur peut supprimer le cache pour toutes les couches de tous les projets du répertoire en cliquant sur le bouton **Vider le cache**."
+
+#: ../../source/admin/cache.rst:13
+msgid "Delete the cache, layer by layer, for each Lizmap project"
+msgstr "Supprimer le cache couche par couche pour chaque projet Lizmap"
+
+#: ../../source/admin/cache.rst:15
+msgid ""
+"When the administrator is connected and consults a Lizmap map, a **little "
+"red cross** is displayed to the right of the name of each layer that is "
+"configured to be server cached. Clicking on the cross allows, after "
+"confirmation, delete the server cache only for this layer of the QGIS "
+"project. Only logged administrator sees these red crosses and has the right "
+"to start the delete."
+msgstr "Lorsque l'administrateur est connecté et qu'il consulte une carte Lizmap, une **petite croix rouge** est affichée à droite du nom de chaque couche qui est configurée pour être mise en cache serveur. Un clic sur cette croix permet, après validation, de supprimer le cache serveur uniquement pour cette couche de ce projet QGIS. Seul l'administrateur connecté voit ces croix rouges et a le droit de lancer la suppression."
+
+#: ../../source/admin/cache.rst:19
+msgid "Seeding"
+msgstr "Générer le cache de tuiles"
+
+#: ../../source/admin/cache.rst:21
+msgid ""
+"You can pre-generate the tiles for any layers of a QGIS project configured "
+"with server-side caching on. To do so, you need to have full access on the "
+"server where Lizmap is installed, and use a terminal to connect to it. You "
+"also need to know the ids of Lizmap repositories, and the code name of the "
+"project ( the QGIS project filename without the extension )."
+msgstr "Vous pouvez prégénérer les tuiles pour n'importe quelles couches d'un projet QGIS configurer pour être mis en cache côté serveur. Pour pouvoir le faire, vous devez avoir un accès complet au serveur sur lequel Lizmap est installé, et utiliser un terminal pour vous y connecter. Vous devez aussi connaître les identifiants des répertoires Lizmap, et le nom d'identification du projet ( le nom du fichier du projet QGIS sans l'extension )."
+
+#: ../../source/admin/cache.rst:23
+msgid ""
+"In this example, we will show commands to manage the tiles cache for the "
+"demo project Montpellier, shiped with Lizmap Web Client. We also assume that"
+" your Lizmap application is installed in the folder /var/www/lizmap-web-"
+"client/ ."
+msgstr ""
+
+#: ../../source/admin/cache.rst:32
+msgid ""
+"It is important to know that Lizmap publish the cached layers in WMTS ( Web "
+"Map Tiled Service). The following concepts are used as options of Lizmap "
+"tile cache seeder:"
+msgstr ""
+
+#: ../../source/admin/cache.rst:34
+msgid ""
+"**TileMatrixSet** - In Lizmap, this represents the projection code, for "
+"exampe *EPSG:3857* ( Pseudo mercator )"
+msgstr ""
+
+#: ../../source/admin/cache.rst:35
+msgid ""
+"**TileMatrixMin** - This is the minimum zoom level . This is not a map "
+"scale, but a ID of the zoom level. In Lizmap plugin, the project publisher "
+"can configure scales for the published project. For example the list : "
+"*100000, 50000, 25000, 10000* ."
+msgstr ""
+
+#: ../../source/admin/cache.rst:36
+msgid "**TileMatrixMax** - This is the maximum zoom level"
+msgstr ""
+
+#: ../../source/admin/cache.rst:39
+msgid ""
+"First you can get the cache capabilities of one project, and some details on"
+" a specific layer."
+msgstr ""
+
+#: ../../source/admin/cache.rst:57
+msgid ""
+"In this example, you see that the bus layer has 3 different TileMatrixSet , "
+"corresponding to the 3 different spatial coordinate systems available for "
+"this project in Lizmap publication ( configured in the *Project properties*,"
+" tab *OWS Server*. Once you have a good knowledge of a layer, you can "
+"generate the cache for it:"
+msgstr ""
+
+#: ../../source/admin/cache.rst:90
+msgid "After seeding, update rights on cache :"
+msgstr ""
+
+#: ../../source/admin/index.rst:3
+msgid "Administrator guide"
+msgstr "Guide pour l'administrateur"
+
+#: ../../source/admin/lizmap-configuration.rst:3
+msgid "Lizmap Web Client configuration"
+msgstr "Configuration de Lizmap Web Client"
+
+#: ../../source/admin/lizmap-configuration.rst:6
+msgid "Introduction"
+msgstr "Introduction"
+
+#: ../../source/admin/lizmap-configuration.rst:8
+msgid "The *Lizmap configuration* menu is divided into 2 parts:"
+msgstr "Le menu *Configuration Lizmap* est divisée en 2 parties :"
+
+#: ../../source/admin/lizmap-configuration.rst:10
+msgid ""
+"**Services**: the general configuration of Lizmap Web client - server, "
+"cache, etc."
+msgstr "Les **Services** : la configuration générale de Lizmap Web Client - serveur, cache, etc."
+
+#: ../../source/admin/lizmap-configuration.rst:11
+msgid "**Repositories**: create and configure Lizmap repositories"
+msgstr "Les **Répertoires** : créer et configurer les répertoires Lizmap"
+
+#: ../../source/admin/lizmap-configuration.rst:17
+msgid "Services"
+msgstr "Les services"
+
+#: ../../source/admin/lizmap-configuration.rst:19
+msgid ""
+"To configure **Services**, click the *Modify* button under the summary."
+msgstr "Pour configurer les services, cliquer sur le bouton *Modifier* situé sous le récapitulatif"
+
+#: ../../source/admin/lizmap-configuration.rst:21
+msgid ""
+"**WMS server URL**: The full QGIS Server URL, such as http://localhost/cgi-"
+"bin/qgis_mapserv.fcgi or http://localhost/cgi-bin/qgis_mapserv.fcgi.exe."
+msgstr "**URL du serveur WMS** : L'url complète du serveur QGIS, par exemple http://localhost/cgi-bin/qgis_mapserv.fcgi ."
+
+#: ../../source/admin/lizmap-configuration.rst:23
+msgid ""
+"QGIS Server must be installed on the same computer as Lizmap Web Client"
+msgstr "QGIS Server doit être installé sur le même ordinateur que Lizmap Web Client"
+
+#: ../../source/admin/lizmap-configuration.rst:25
+msgid ""
+"**WMS subdomain URLs list (optional)**: The use of multiple domain names is "
+"one of the classic optimizations when a web application uses OpenLayers (as "
+"Lizmap Web Client). You can enter a list of subdomains separated by comma."
+msgstr "**Liste des URL des sous-domaines WMS (optionnel)**: L'utilisation de multiples noms de domaine est une des optimisations classiques quand une application web utilise OpenLayers (en tant que Client Web Lizmap). Vous pouvez également entrer une liste de sous-domaines séparés par une virgule."
+
+#: ../../source/admin/lizmap-configuration.rst:27
+msgid ""
+"You must use a **list of subdomains** relative to the domain with which is "
+"used Lizmap Web Client. For example, if your main domain name is "
+"**maps.example.com**, then you can use **a.maps.example.com, "
+"b.maps.example.com, c.maps.example.com, d.maps.example.com**."
+msgstr "Vous devez utiliser une **liste de sous-domaines** par rapport au domaine avec lequel est utilisé Lizmap Web Client. Par exemple, si votre nom de domaine principal est **cartes.exemple.com**, alors vous pouvez utiliser **a.cartes.exemple.com, b.cartes.exemple.com, c.cartes.exemple.com, d.cartes.exemple.com**."
+
+#: ../../source/admin/lizmap-configuration.rst:29
+msgid ""
+"Of course you must have configured the Apache server *virtual host* to take "
+"into account these subdomains, for example with the variable:"
+msgstr "Vous devez bien sûr avoir configuré l'*hôte virtuel* du serveur Apache pour prendre en compte ces sous-domaines, par exemple avec la variable :"
+
+#: ../../source/admin/lizmap-configuration.rst:35
+msgid "**Server cache storage type**"
+msgstr "**Type de stockage pour le cache**"
+
+#: ../../source/admin/lizmap-configuration.rst:37
+msgid "*file*: Tiles cached are stored in a server directory by layer"
+msgstr "*file*: Les tuiles mises en cache sont stockées dans un répertoire du serveur par couche"
+
+#: ../../source/admin/lizmap-configuration.rst:38
+msgid "*sqlite*: The tiles are stored in a sqlite database by layer"
+msgstr "*sqlite*: Les tuiles sont enregistrées dans une base de données sqlite par couche"
+
+#: ../../source/admin/lizmap-configuration.rst:40
+msgid ""
+"**Cache root directory**: the folder where the cache is stored. It must be "
+"writable by the Apache server."
+msgstr "**Répertoire racine du cache** : le dossier dans lequel est stocké le cache. Il doit être accessible en écriture par le serveur Apache"
+
+#: ../../source/admin/lizmap-configuration.rst:42
+msgid ""
+"**Server cache expiration time (s)**: the time in seconds during which each "
+"tile is retained. This is a default value for layers whose time has not been"
+" configured with the plugin."
+msgstr "**Durée de vie du cache** : le temps en seconde pendant lequel chaque tuile est conservée. C'est une valeur par défaut pour les couches dont le temps n'a pas été configuré via le plugin"
+
+#: ../../source/admin/lizmap-configuration.rst:44
+msgid "The cached tiles older than that time are automatically refreshed."
+msgstr "Les tuiles du cache plus vieilles que ce temps sont automatiquement raffraîchies."
+
+#: ../../source/admin/lizmap-configuration.rst:45
+msgid "A value of 0 means that the tiles do not expire."
+msgstr "La valeur 0 signigie que les tuiles n'expirent jamais"
+
+#: ../../source/admin/lizmap-configuration.rst:46
+msgid "The expiration time must be adapted to changing data."
+msgstr "Le temps d'expiration doit être adapté à l'évolution des données"
+
+#: ../../source/admin/lizmap-configuration.rst:48
+msgid ""
+"**Send request to QGIS Server with**: 2 methods *php or curl*. Use first if "
+"curl is not installed on the server."
+msgstr "**Envoi des requêtes à QGIS Server avec** : 2 méthodes. *Php ou Curl* . Utiliser la première si curl n'est pas installé sur le serveur."
+
+#: ../../source/admin/lizmap-configuration.rst:50
+msgid ""
+"**Debug mode**: saves some queries to a log file: "
+"*lizmap/var/log/messages.log*"
+msgstr "*Mode de débogage* : enregistre certaines requêtes dans un fichier de log : *lizmap/var/log/messages.log*"
+
+#: ../../source/admin/lizmap-configuration.rst:52
+msgid ""
+"**Allow visitors to request an account**: If this option is enabled, a new "
+"link 'Registration' will be added in the public menu. By clicking on this "
+"link, the visitor displays a form that allows it to request an account to "
+"administrator. He must complete some fields (name, email, due to demand) "
+"then validates the form to send the request."
+msgstr "**Autoriser les visiteurs à demander un compte** : Si cette option est activée, un nouveau lien **Inscription** sera ajouté dans le menu des cartes Lizmap. En cliquant sur ce lien, le visiteur affiche un formulaire qui lui permet de demander un compte à l'administrateur. Il doit remplir certains champs (nom, prénom, adresse e-mail, raison de la demande) puis valide le formulaire pour envoyer sa demande."
+
+#: ../../source/admin/lizmap-configuration.rst:54
+msgid ""
+"**Administrator e-mail** If a valid e-mail address is given, then the Lizmap"
+" Web Client notifications will be sent. For example, each account creation "
+"request via the registration form generates an email sent to this address."
+msgstr "**Couriel de l'administrateur** Si une adresse e-mail valide est donnée, alors les notifications de Lizmap pourront y être envoyées. Par exemple, chaque demande de création de compte via le formulaire d'inscription génrère l'envoi d'un courriel à cette adresse."
+
+#: ../../source/admin/lizmap-configuration.rst:60
+msgid "Repositories"
+msgstr "Les répertoires"
+
+#: ../../source/admin/lizmap-configuration.rst:62
+msgid "For each Lizmap repository, are listed:"
+msgstr "Pour chaque répertoire Lizmap sont listés"
+
+#: ../../source/admin/lizmap-configuration.rst:64
+msgid "**The main informations**: label and path"
+msgstr "**Les informations principales** : nom (label) et chemin (path)"
+
+#: ../../source/admin/lizmap-configuration.rst:65
+msgid "**The list of rights** with the groups concerned"
+msgstr "**La liste des droits** avec les groupes concernés"
+
+#: ../../source/admin/lizmap-configuration.rst:66
+msgid "**Action buttons**:"
+msgstr "**Des boutons d'action** :"
+
+#: ../../source/admin/lizmap-configuration.rst:68
+msgid "*View*: displays a page that lists the maps in this repository"
+msgstr "*Voir* : affiche la page qui liste les cartes de ce répertoire"
+
+#: ../../source/admin/lizmap-configuration.rst:69
+msgid "*Modify*: displays the repository modification form"
+msgstr "*Modifier*: affiche le formulaire de modification du répertoire"
+
+#: ../../source/admin/lizmap-configuration.rst:70
+msgid ""
+"*Remove*: delete the repository from the Lizmap Web Client configuration"
+msgstr "*Supprimer* : permet de supprimer le répertoire"
+
+#: ../../source/admin/lizmap-configuration.rst:71
+msgid ""
+"*Empty cache*: deletes the entire cache of all layers of the repository "
+"projects"
+msgstr "*Vider le cache* : permet de supprimer tout le cache de toutes les couches des projets de ce répertoire"
+
+#: ../../source/admin/lizmap-configuration.rst:76
+msgid ""
+"You can create a new repository using the button **Create a repository** "
+"located at the top and bottom of the section *Repositories*."
+msgstr "On peut créer un nouveau répertoire avec le bouton **Ajouter un répertoire** situé tout en bas de la page"
+
+#: ../../source/admin/lizmap-configuration.rst:79
+msgid "Add a repository"
+msgstr "Ajouter un répertoire"
+
+#: ../../source/admin/lizmap-configuration.rst:81
+msgid "To create a repository, you must give:"
+msgstr "Pour créer un répertoire, il faut donner"
+
+#: ../../source/admin/lizmap-configuration.rst:83
+msgid "**an id**: a word without spaces, accents or special characters"
+msgstr "**un identifiant**: un mot sans espaces, accents ni caractères spéciaux"
+
+#: ../../source/admin/lizmap-configuration.rst:84
+msgid ""
+"**a label**: the name that will be displayed for this repository, accents "
+"and spaces allowed"
+msgstr "**un label** : le nom qui sera affiché pour ce répertoire, accents et espaces autorisés"
+
+#: ../../source/admin/lizmap-configuration.rst:85
+msgid ""
+"**a local folder path**: the full path on the server to the folder that "
+"contains the QGIS projects and data"
+msgstr "**un chemin (path)** : le chemin complet vers le dossier qui contient les projets QGIS et les données"
+
+#: ../../source/admin/lizmap-configuration.rst:86
+msgid ""
+"**Allow repository themes**: This option enables the possibility for the "
+"publisher to set a theme for the repository and themes for each map. See "
+":ref:`lizmap-simples-themes`."
+msgstr "**Autoriser les thèmes du répertoire**: Cette option permet d'activer la possibilité pour l'éditeur de définir un thème pour le répertoire et des thèmes pour chaque carte. Voir :ref:`lizmap-simples-themes`."
+
+#: ../../source/admin/lizmap-configuration.rst:91
+msgid "Define the rights for each group"
+msgstr "Définir les droits pour chaque groupe"
+
+#: ../../source/admin/lizmap-configuration.rst:93
+msgid ""
+"After creating the directory, the repository modification form is displayed "
+"automatically and defines the following rights for each group:"
+msgstr "Une fois le répertoire créé, le formulaire de modification du répertoire est automatiquement affiché et permet de définir les droits suivants pour chacun des groupes :"
+
+#: ../../source/admin/lizmap-configuration.rst:95
+msgid "**View repository** :"
+msgstr "**Voir les répertoires** :"
+
+#: ../../source/admin/lizmap-configuration.rst:97
+msgid "all users of checked groups can access maps of this repository"
+msgstr "tous les utilisateurs des groupes cochés pourront accéder aux cartes de ce répertoire"
+
+#: ../../source/admin/lizmap-configuration.rst:98
+msgid ""
+"the group *anonymous* is unregistered users and allows to make public maps"
+msgstr "le groupe *anonymous* représente les utilisateurs non enregistrés et permet de rendre les cartes publiques"
+
+#: ../../source/admin/lizmap-configuration.rst:100
+msgid "**Use the Edition tool**"
+msgstr "**Utiliser l'outil d'Édition**"
+
+#: ../../source/admin/lizmap-configuration.rst:102
+msgid ""
+"When this option is checked, the group users have access to the editing tool"
+" for all of Lizmap repository maps for which the edition was configured."
+msgstr "Lorsque cette option est cochée, les utilisateurs du groupe ont accès à l'outil d'édition pour l'ensemble des cartes du répertoire Lizmap pour lesquelles l'édition a été configurée."
+
+#: ../../source/admin/lizmap-configuration.rst:104
+msgid "**Always see complete layers data, even if filtered by login**"
+msgstr "**Afficher toutes les données, mêmes si filtrées par login**"
+
+#: ../../source/admin/lizmap-configuration.rst:106
+msgid ""
+"This option is in connection with the filtering feature data layers per "
+"group. See :ref:`filter-layer-data-by-group`. Check the box for deciding "
+"which groups can see all the time all the data, even when a filter is active"
+" on some layers."
+msgstr "Cette option est en lien avec la fonctionnalité de filtrage des données des couches par groupe. Voir :ref:`filter-layer-data-by-group`. Cocher la case permet de décider quels groupes pourront voir tout le temps toutes les données, même lorsqu'un filtre est actif sur certaines couches."
+
+#: ../../source/admin/logs.rst:3
+msgid "Log management in Lizmap"
+msgstr "Gestion des logs dans Lizmap"
+
+#: ../../source/admin/logs.rst:6
+msgid "Principle and description"
+msgstr "Principe et description"
+
+#: ../../source/admin/logs.rst:8
+msgid ""
+"Since version 2.8, you can configure *Lizmap Web Client* so that certain "
+"user actions are stored in a SQLite database:"
+msgstr "Depuis la version 2.8, il est possible de configurer *Lizmap Web Client* pour que certaines actions des utilisateurs soient enregistrées dans une base de données sqlite :"
+
+#: ../../source/admin/logs.rst:10
+msgid "User Login"
+msgstr "Connexion des utilisateurs"
+
+#: ../../source/admin/logs.rst:11
+msgid "Displaying a Lizmap map"
+msgstr "Affichage d'une carte Lizmap (correspondant à un projet QGIS)"
+
+#: ../../source/admin/logs.rst:12
+msgid "Printing a map"
+msgstr "Impression d'une carte"
+
+#: ../../source/admin/logs.rst:13
+msgid "Displaying a popup"
+msgstr "Affichage d'une popup"
+
+#: ../../source/admin/logs.rst:14
+msgid "Using the editing tool"
+msgstr "Utilisation de l'outil d'édition"
+
+#: ../../source/admin/logs.rst:16
+msgid "For each of these actions can be chosen:"
+msgstr "Pour chacune de ces actions, on peut choisir"
+
+#: ../../source/admin/logs.rst:18
+msgid ""
+"to record a new line in the logs containing various information: user, date "
+"and time, action, Lizmap repository, QGIS project, IP address"
+msgstr "d'enregistrer une nouvelle ligne dans les logs contenant différentes informations : utilisateur, date et heure, action, répertoire Lizmap, projet QGIS, adresse IP"
+
+#: ../../source/admin/logs.rst:19
+msgid ""
+"to increment the counter for this action, the Lizmap repository and QGIS "
+"project."
+msgstr "d'incrémenter le compteur pour cette action, le répertoire Lizmap et le projet QGIS."
+
+#: ../../source/admin/logs.rst:22
+msgid "Configure logs"
+msgstr "Configurer les logs"
+
+#: ../../source/admin/logs.rst:24
+msgid ""
+"For now, it is not possible to change the configuration of logs in the "
+"administration interface. It is necessary to manually edit the configuration"
+" file **lizmap/var/config/lizmapLogConfig.ini.php**. This file is in *ini* "
+"format and contains many sections as action to save. For each action, you "
+"can choose to activate with *on* or off with *off* the recording of the log."
+msgstr "Pour l'instant, il n'est pas possible de modifier la configuration des logs via l'interface d'administration. Il est nécessaire d'éditer à la main le fichier de configuration **lizmap/var/config/lizmapLogConfig.ini.php**. Ce fichier est au format *ini* et contient autant de sections que d'actions à enregistrer. Pour chacune des actions, on peut choisir d'activer via *on* ou de désactiver avec *off* l'enregistrement du log."
+
+#: ../../source/admin/logs.rst:26
+msgid ""
+"For example, the following section shows that the administrator has chosen "
+"to record a count in the logs every time a user connects. But he does not "
+"want to save the details for each connection."
+msgstr "Par exemple, la section suivante montre que l'administrateur a choisit d'enregistrer un décompte dans les logs chaque fois qu'un utilisateur se connecte. Mais qu'il ne souhaite pas enregistrer le détail pour chaque connexion."
+
+#: ../../source/admin/logs.rst:37
+msgid "View logs"
+msgstr "Consulter les logs"
+
+#: ../../source/admin/logs.rst:39
+msgid ""
+"To view logs, simply connect to the Lizmap administration interface as an "
+"administrator. Then the logs can be accessed through the menu **Lizmap "
+"Logs**. This page shows the general statistics on the 2 log tables: *Log "
+"count* and *Log detail*. For each, it is possible to:"
+msgstr "Pour consulter les logs, il suffit de se connecter à l'interface d'administration de Lizmap en tant qu'administrateur. Ensuite les logs peuvent être consultés via le menu **LIZMAP > Logs LizMap**. Cette page montre les statistiques générales sur les 2 tables de logs: *Compteurs* et *Logs détaillés*. Pour chacun, il est possible de :"
+
+#: ../../source/admin/logs.rst:41
+msgid "**View Tables** containing the raw data"
+msgstr "**Consulter les tableaux** qui contienent les données brutes"
+
+#: ../../source/admin/logs.rst:42
+msgid "**Completely empty logs**: completly reset!"
+msgstr "**Vider complètement les logs** :remise à zéro complète !"
+
+#: ../../source/admin/logs.rst:45
+msgid "Log storage file"
+msgstr "Fichier de stockage des logs"
+
+#: ../../source/admin/logs.rst:47
+msgid ""
+"The log database is located here in relation to the installation directory: "
+"**lizmap/var/logs.db**. For example:"
+msgstr "La base de données des logs est située ici par rapport au répertoire d'installation : **lizmap/var/logs.db**. Par exemple :"
+
+#: ../../source/admin/logs.rst:54
+msgid ""
+"This database can be accessed with a Sqlite database reading tool, like "
+"*SQLite Browser* or the Firefox add-on *SQlite Manager*. If you know SQL, so"
+" you can make queries to extract information from the detailed logs."
+msgstr "Cette base de données peut être consultée via un outil de lecture de base de données Sqlite, par exemple *SQLite Browser* ou l'extension Firefox *SQlite Manager*. Si vous connaissez le langage SQL, vous pourrez ainsi faire des requêtes pour extraire des informations à partir des logs détaillés."
+
+#: ../../source/admin/presentation.rst:3
+msgid "Overview of the administration interface"
+msgstr "Présentation générale de l'interface d'administration"
+
+#: ../../source/admin/presentation.rst:6
+msgid "Access the administration interface"
+msgstr "Accéder à l'interface d'administration"
+
+#: ../../source/admin/presentation.rst:8
+msgid ""
+"For safety reasons, no link leads to the administration interface. The "
+"address is:"
+msgstr "Par souci de sécurité, aucun lien ne mène vers l'interface d'administration. L'adresse est la suivante"
+
+#: ../../source/admin/presentation.rst:10
+msgid "http://mydomain.lizmap.3liz.com/admin.php"
+msgstr "http://mondomaine.lizmap.3liz.com/admin.php"
+
+#: ../../source/admin/presentation.rst:12
+msgid "Temporary identifiers"
+msgstr "Identifiants temporaires"
+
+#: ../../source/admin/presentation.rst:14
+msgid "login = admin"
+msgstr "login = admin"
+
+#: ../../source/admin/presentation.rst:15
+msgid "password = admin"
+msgstr "mot de passe = admin"
+
+#: ../../source/admin/presentation.rst:21
+msgid "Change password"
+msgstr "Modifier son mot de passe"
+
+#: ../../source/admin/presentation.rst:23
+msgid "Once connected, it is possible to change the password:"
+msgstr "Une fois connecté, on peut modifier son mot de passe :"
+
+#: ../../source/admin/presentation.rst:25
+msgid "Click on your login at the top right menu and then *Your account*"
+msgstr "Cliquer sur votre login dans le menu en haut à droite puis *Votre compte*"
+
+#: ../../source/admin/presentation.rst:26
+msgid "Click on the button *Change your password*"
+msgstr "Cliquer sur le bouton *Changer votre mot de passe*"
+
+#: ../../source/admin/presentation.rst:27
+msgid "Type the new password, confirme it and save"
+msgstr "Donner le nouveau mot de passe, confirmer et enregistrer"
+
+#: ../../source/admin/presentation.rst:29
+msgid ""
+"It is imperative to change your password. Use a complex password that mixes "
+"numbers, letters and punctuation."
+msgstr "Il est impératif de modifier votre mot de passe. Utilisez un mot de passe complexe qui mélange chiffres, lettres et ponctuation."
+
+#: ../../source/admin/presentation.rst:33
+msgid "Reminder on Lizmap Web Client repositories"
+msgstr ""
+
+#: ../../source/admin/presentation.rst:35
+msgid ""
+"Lizmap Web Client can use QGIS maps stored in different folders on the "
+"server."
+msgstr "Lizmap Web Client peut utiliser les cartes QGIS enregistrées dans différents répertoires sur le serveur."
+
+#: ../../source/admin/presentation.rst:37
+msgid ""
+"A *Lizmap Web CLient repository* is a folder on the server that stores one "
+"or more QGIS projects and their related data."
+msgstr "Un *répertoire Lizmap* est un dossier sur le serveur où sont stockés un ou plusieurs projet QGIS et les données liées."
+
+#: ../../source/admin/presentation.rst:38
+msgid "Repositories can be used to *group related projects by theme*."
+msgstr "On peut utiliser les répertoires pour *regrouper des projets liés par une thématique*"
+
+#: ../../source/admin/presentation.rst:39
+msgid "Repositories can be used to *manage the access rights on maps*."
+msgstr "On peut utiliser les répertoires pour *gérer les droits d'accès sur les cartes*"
+
+#: ../../source/admin/users-groups.rst:3
+msgid "Manage groups and users in Lizmap Web Client"
+msgstr "Gérer les groupes et les utilisateurs dans Lizmap Web Client"
+
+#: ../../source/admin/users-groups.rst:6
+msgid "The groups and users: principles"
+msgstr "Les groupes et les utilisateurs : principes"
+
+#: ../../source/admin/users-groups.rst:8
+msgid "As an administrator, you can:"
+msgstr "En tant qu'administrateur, vous pouvez :"
+
+#: ../../source/admin/users-groups.rst:10
+msgid "create, rename, delete user groups"
+msgstr "créer, renommer, supprimer des groupes d'utilisateurs"
+
+#: ../../source/admin/users-groups.rst:11
+msgid "create, modify, delete users"
+msgstr "créer, modifier, supprimer des utilisateurs"
+
+#: ../../source/admin/users-groups.rst:12
+msgid "linking a user to one or more groups"
+msgstr "rattacher un utilisateur à un ou plusieurs groupes"
+
+#: ../../source/admin/users-groups.rst:14
+msgid ""
+"Rights on Lizmap Web CLient repositories are managed at group level, not at "
+"the user level."
+msgstr "*Les droits sur les répertoires Lizmap sont gérés au niveau des groupes d'utilisateurs, pas au niveau des utilisateurs*"
+
+#: ../../source/admin/users-groups.rst:17
+msgid "Manage Groups: create, rename, delete"
+msgstr "Gérer les groupes : créer, renommer, supprimer"
+
+#: ../../source/admin/users-groups.rst:19
+msgid ""
+"*Create a group*: In the left menu click on *Groups of users for rights* and"
+" scroll down to *Create a group*."
+msgstr "*Créer un groupe* : Menu *Groupes d'utilisateurs* et descendre jusqu'au formulaire *Créer un groupe*"
+
+#: ../../source/admin/users-groups.rst:20
+msgid "Define the *label*: it is possible to use spaces and accents"
+msgstr "*Donné un libellé* : il est possible d'utiliser des espaces et des accents"
+
+#: ../../source/admin/users-groups.rst:21
+msgid "Define the *ident*: one word without special characters"
+msgstr "Donner un *identifiant* : un seul mot sans caractères spéciaux"
+
+#: ../../source/admin/users-groups.rst:23
+msgid ""
+"In the page *Groups of users for rights*, it is also possible to *Change the"
+" name* and *Delete a group*."
+msgstr "Via cette page, on peut aussi *renommer ou supprimer un groupe*"
+
+#: ../../source/admin/users-groups.rst:28
+msgid ""
+"The **users** group is a group system to give the rights to authenticated "
+"users to edit their own user information including passwords. We excluded "
+"this group of Lizmap Web Client configuration because all identified users "
+"must be part of this group."
+msgstr "Le groupe **users** est un groupe système pour donner les droits à un utilisateurs authentifié de modifier ses propres informations d'utilisateurs dont le mot de passe. Nous avons exclu ce groupe de la configuration lizmap car tous utilisateurs identifiées doivent faire parti de ce groupe."
+
+#: ../../source/admin/users-groups.rst:31
+msgid "Manage Users"
+msgstr "Gérer les utilisateurs"
+
+#: ../../source/admin/users-groups.rst:33
+msgid ""
+"*Create a user* : In the left menu click on *Users* and click on the button "
+"*Create a new user*:"
+msgstr "*Créer* : Menu *Utilisateurs > Créer un nouvel utilisateur* :"
+
+#: ../../source/admin/users-groups.rst:35
+msgid "give a *Nickname* which will be used for the login"
+msgstr "donner un *Pseudo* qui serva pour l'authentification"
+
+#: ../../source/admin/users-groups.rst:36
+msgid "give an email"
+msgstr "donner un email"
+
+#: ../../source/admin/users-groups.rst:37
+msgid "define and validate the password"
+msgstr "définir et confirmer un mot de passe"
+
+#: ../../source/admin/users-groups.rst:38
+msgid "set name and firstname"
+msgstr "préciser un nom et prénom"
+
+#: ../../source/admin/users-groups.rst:40
+msgid "it is also possible to *view* and *edit* informations about users"
+msgstr "On peut aussi *modifier un utilisateur existant*"
+
+#: ../../source/admin/users-groups.rst:42
+msgid ""
+"Once users created, you must put them into groups to assign the associated "
+"rights."
+msgstr "*Une fois les utitilisateurs créés, il faut les mettre dans des groupes pour leur assigner les droits liés*"
+
+#: ../../source/admin/users-groups.rst:48
+msgid "Putting users in groups"
+msgstr "Mettre les utilisateurs dans des groupes"
+
+#: ../../source/admin/users-groups.rst:50
+msgid "In the left menu click on *Rights of users*"
+msgstr "Menu *Droits des utilisateurs*"
+
+#: ../../source/admin/users-groups.rst:51
+msgid "it is possible to filter the visible users with the dropdown menu"
+msgstr "On peut filtrer les utilisateurs visibles via la liste déroulante"
+
+#: ../../source/admin/users-groups.rst:52
+msgid "to put a user in groups, click on the its button *rights*"
+msgstr "Pour mettre les utilisateurs, utiliser le bouton *Droits*"
+
+#: ../../source/admin/users-groups.rst:54
+msgid "The page displays a table with *rights online and groups on column*"
+msgstr "La page affiche un tableau avec *les droits en ligne et les groupes en colonne*"
+
+#: ../../source/admin/users-groups.rst:55
+msgid "The last column shows *the resulting rights*"
+msgstr "La dernière colonne affiche *les droits résultants*"
+
+#: ../../source/admin/users-groups.rst:56
+msgid ""
+"In the *head row*, the + and - buttons allow to set / remove the user from a"
+" group"
+msgstr "Dans la *ligne d'entête*, des boutons + et - permettent de mettre/enlever l'utilisateur dans un groupe"
+
+#: ../../source/admin/users-groups.rst:58
+msgid "Do not use the *Personal rights* column."
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:61
+msgid "Assigning groups for each user created"
+msgstr "Assigner des groupes pour chacun des utilisateurs créés"
