@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-28 16:36+0200\n"
-"PO-Revision-Date: 2017-07-28 14:42+0000\n"
-"Last-Translator: rldhont <rldhont@gmail.com>\n"
+"PO-Revision-Date: 2017-07-30 18:55+0000\n"
+"Last-Translator: José Macau <jose.macau@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/3liz-1/lizmap-documentation/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -807,75 +807,75 @@ msgstr "as configurações popup e estilo das camada são armazenados no projeto
 
 #: ../../source/publish/advanced_lizmap_config.rst:333
 msgid "One to many relations"
-msgstr ""
+msgstr "Relações de um para vários"
 
 #: ../../source/publish/advanced_lizmap_config.rst:335
 msgid ""
 "It is possible to display multiple objects (photos, documents) for each "
 "geographical feaature. To do so, you have to configure both the QGIS project"
 " and the Lizmap config."
-msgstr ""
+msgstr "É possível apresentar vários objetos (fotos, documentos) para cada elemento geográfico. Para fazer isso, deve configurar o projeto QGIS e o plugin Lizmap."
 
 #: ../../source/publish/advanced_lizmap_config.rst:337
 msgid "In QGIS project:"
-msgstr ""
+msgstr "No projeto QGIS:"
 
 #: ../../source/publish/advanced_lizmap_config.rst:339
 msgid ""
 "Use 2 separate layers to store the main features and the pictures. For "
 "example \"trees\" and \"tree_pictures\". The child layer must contain a "
 "field referencing the parent layer id"
-msgstr ""
+msgstr "Utilize 2 camadas diferentes para armazenar os elementos principais e as imagens. Por exemplo, \"arvores\" e \"fotos_arvores\". A camada secundária deve conter um campo referenciando o ID da camada principal"
 
 #: ../../source/publish/advanced_lizmap_config.rst:340
 msgid ""
 "Configure aliases and field types in tab Fields of the layers properties "
 "dialog. Use \"Photo\" for the field which will contains the relative path to"
 " pictures"
-msgstr ""
+msgstr "Configure os nomes alternativos e os tipos de campo no separador Campos da caixa de diálogo propriedades das camadas. Utilize \"Foto\" para o campo que contém o caminho relativo às imagens"
 
 #: ../../source/publish/advanced_lizmap_config.rst:341
 msgid ""
 "Add a relation in QGIS project properties between the main layer \"trees\" "
 "and the child layer \"tree_pictures\""
-msgstr ""
+msgstr "Adicione uma relação nas propriedades do projeto QGIS entre a camada principal \"arvores\" e a camada secundária \"fotos_arvores\""
 
 #: ../../source/publish/advanced_lizmap_config.rst:342
 msgid ""
 "Add data to the layers. You should use relative path to store the pictures "
 "path. Theses paths must refer to a project media subdirectory, for example: "
 "media/photos/feature_1_a.jpg"
-msgstr ""
+msgstr "Adicione dados às camadas. Deve utilizar um caminho relativo para indicar o caminho das imagens. Esses caminhos devem referir-se a um sub-diretório do diretório media do projeto, por exemplo: media/fotos/elemento_1_a.jpg"
 
 #: ../../source/publish/advanced_lizmap_config.rst:344
 msgid "In Lizmap plugin:"
-msgstr ""
+msgstr "No plugin Lizmap:"
 
 #: ../../source/publish/advanced_lizmap_config.rst:346
 msgid ""
 "In the Layers tab, activate popup for both layers. You can configure popup "
 "if you need specific layouts ( See documentation on popups )"
-msgstr ""
+msgstr "No separador Camadas, ative popup para ambas as camadas. Pode configurar a popup se necessitar de layouts específicos (consulte a documentação sobre popups)"
 
 #: ../../source/publish/advanced_lizmap_config.rst:347
 msgid ""
 "For the parent layer, activate the option \"Display relative children under "
 "each object (use relations)\""
-msgstr ""
+msgstr "Para a camada principal, ative a opção \"Apresentar ligações filho sobre cada objeto (utilize relações)\""
 
 #: ../../source/publish/advanced_lizmap_config.rst:348
 msgid "Add the two layers in the Attribute table tab"
-msgstr ""
+msgstr "Adicione as duas camadas no separador Tabela de atributos"
 
 #: ../../source/publish/advanced_lizmap_config.rst:349
 msgid ""
 "You can optionally activate editing for the two layers, to allow the web "
 "users to create new features and upload pictures"
-msgstr ""
+msgstr "Opcionalmente pode ativar a edição para as duas camadas, para permitir que os utilizadores web criem novos elementos e façam o upload de imagens"
 
 #: ../../source/publish/advanced_lizmap_config.rst:350
 msgid "Save and publish your project and Lizmap configuration"
-msgstr ""
+msgstr "Guarde e publique seu projeto com a configuração do Lizmap"
 
 #: ../../source/publish/advanced_lizmap_config.rst:355
 msgid "Creating simple themes"
