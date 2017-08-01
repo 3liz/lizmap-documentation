@@ -42,6 +42,7 @@ help:
 
 clean:
 	-rm -rf $(BUILDDIR)/*
+	-rm i18n/*/LC_MESSAGES/*.mo
 
 html:
 	sphinx-intl build -d i18n
