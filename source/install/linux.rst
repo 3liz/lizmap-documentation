@@ -30,6 +30,8 @@ Installing necessary packages
 
 .. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.4 installation)
 
+.. note:: At least the current version supports PHP 7, so it should be straight foreward to install it on current debian 9 or ubuntu 16.04.
+
 .. code-block:: bash
 
    sudo su # only necessary if you are not logged in as root
