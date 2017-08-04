@@ -533,8 +533,6 @@ For OpenStreetMap baselayers, it is possible to use an XML file for GDAL to expl
 
 By cons, if this layer has to replace an external baselayer, it must be accessible to QGIS-Server but should not be accessible to the user in Lizmap Web Client. So it must be hidden. See chapter :ref:`hide-layers`.
 
-With QGIS 2.18, you can solve this issue more simply by adding a TMS layer.
-
 Optimizing Lizmap
 =================
 
