@@ -474,7 +474,46 @@ Here is a very small example allowing you to disable right clic in Lizmap. Just 
 
 * If you want this code to be executed for all projects of your repository, you have to copy the file in the directory ``/home/data/rep1/media/js/default/`` rather than in ``/home/data/rep1/media/js/myproject/``.
 
-That's all.
+Here is a very useful example allowing you to send current login User-ID (and/or other user data) to PostgreSQL table column, using edition tool.
+
+.. code-block:: javascript
+
+   var formPrefix = 'jforms_view_edition';
+
+   // Name of the QGIS vector layer fields which must containt the user info
+   var userFields = {
+      login: 'lizmap_user_login',
+      firstname: 'lizmap_user_firstname',
+      lastname: 'lizmap_user_lastname',
+      organization: 'lizmap_user_organization'
+   };
+
+
+   lizMap.events.on({
+
+      'lizmapeditionformdisplayed': function(e){
+
+         // If user is logged in
+         if( $('#info-user-login').length ){
+               // Loop through the needed fields
+               for( var f in userFields ){
+                  // If the user has some data for this property
+                  if( $('#info-user-' + f).text() ){
+                     // If the field exists in the form
+                     var fi = $('#' + formPrefix + '_' + userFields[f]);
+                     if( fi.length ){
+                           // Set val from lizmap user data
+                           fi.val( $('#info-user-' + f).text() )
+                           // Set disabled
+                           fi.hide();
+                     }
+                  }
+               }
+         }
+
+      }
+
+   });
 
 In the directory ``lizmap-web-client/lizmap/install/qgis/media/js/`` you can find examples of suitable JavaScript code; just remove the extension ``.example`` and copy them to your media/js/default/ folder to activate them.
 
