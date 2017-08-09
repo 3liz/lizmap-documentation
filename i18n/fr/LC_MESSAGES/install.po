@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-09 14:55+0200\n"
-"PO-Revision-Date: 2017-08-09 12:56+0000\n"
+"POT-Creation-Date: 2017-08-09 15:08+0200\n"
+"PO-Revision-Date: 2017-08-09 13:28+0000\n"
 "Last-Translator: rldhont <rldhont@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/3liz-1/lizmap-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../source/install/index.rst:3
-msgid "Installing Lizmap"
-msgstr "Installation de Lizmap"
+msgid "Installing and upgarding Lizmap"
+msgstr "Installation et mise à jour de Lizmap"
 
 #: ../../source/install/linux.rst:3
 msgid "Installing Lizmap Web Client on Linux Debian or Ubuntu"
@@ -477,88 +477,205 @@ msgid ""
 "unique directory."
 msgstr "c'est pourquoi, si vous souhaitez installer Lizmap pour offrir un accès à plusieurs utilisateurs, nous vous conseillons de leur dire de toujours créer un répertoire bdd au même niveau que les projets QGIS dans le répertoire Lizmap. Cela facilitera le travail de l'administrateur qui pourra modifier les droits de cet unique répertoire."
 
-#: ../../source/install/linux.rst:580
-msgid "Version upgrade"
-msgstr "Montée de version"
+#: ../../source/install/upgrade.rst:3
+msgid "Upgrade Lizmap Web Client"
+msgstr "Mettre à jour Lizmap Web Client"
 
-#: ../../source/install/linux.rst:583
+#: ../../source/install/upgrade.rst:6
+msgid "Upgrading between 3.x versions"
+msgstr "Mise à jour entre versions 3.x"
+
+#: ../../source/install/upgrade.rst:8
+msgid "From 3.0 versions to upper, there is no need to backup data."
+msgstr "Entre les versions 3.0 et supérieur, il n'est pas nécessaire de faire des sauvegardes de données."
+
+#: ../../source/install/upgrade.rst:10
+msgid "Simply replace lizmap files and call:"
+msgstr "Remplacez simplement les fichiers Lizmap et lancez :"
+
+#: ../../source/install/upgrade.rst:19
+msgid "Upgrading to Lizmap 3.0"
+msgstr "Mise à jour vers Lizmap 3.0"
+
+#: ../../source/install/upgrade.rst:21
+msgid ""
+"First, be sure that your lizmap installation has been upgraded to the latest"
+" version of 2.x. The last one is 2.12."
+msgstr "Tout d'abord, assurez vous que votre installation de Lizmap a bien été mise à jour vers la dernière version 2.x. La dernière version est 2.12."
+
+#: ../../source/install/upgrade.rst:24
+msgid "Then you can upgrade to Lizmap 3.0."
+msgstr "Vous pouvez donc passer à Lizmap 3.0."
+
+#: ../../source/install/upgrade.rst:27
+msgid "Data backup"
+msgstr "Sauvegarde des données"
+
+#: ../../source/install/upgrade.rst:29
+msgid "Backup your data into a directory (ex: /tmp)."
+msgstr "Sauvegardez vos données dans un répertoire (par exemple : /tmp)."
+
+#: ../../source/install/upgrade.rst:31
+msgid "Lizmap 2.12.2 and higher has a lizmap/install/backup.sh script. Call"
+msgstr "Lizmap 2.12.2 et version supérieure ont un script lizmap/install/backup.sh. Lancez"
+
+#: ../../source/install/upgrade.rst:37
+msgid ""
+"If you don't have this script, backup by hand, copy these files somewhere, "
+"/tmp for instance:"
+msgstr "Si vous n'avez pas ce script, sauvegardez à la main, copiez ces fichiers quelque part, par exemple /tmp :"
+
+#: ../../source/install/upgrade.rst:39
+msgid "var/jauth.db"
+msgstr "var/jauth.db"
+
+#: ../../source/install/upgrade.rst:40
+msgid "var/logs.db"
+msgstr "var/logs.db"
+
+#: ../../source/install/upgrade.rst:41
+msgid "var/config/lizmapConfig.ini.php"
+msgstr "var/config/lizmapConfig.ini.php"
+
+#: ../../source/install/upgrade.rst:42
+msgid "var/config/installer.ini.php"
+msgstr "var/config/installer.ini.php"
+
+#: ../../source/install/upgrade.rst:43
+msgid "var/config/profiles.ini.php"
+msgstr "var/config/profiles.ini.php"
+
+#: ../../source/install/upgrade.rst:47
+msgid "Replace lizmap files"
+msgstr "Remplacez les fichiers Lizmap"
+
+#: ../../source/install/upgrade.rst:49
+msgid ""
+"Get the lizmap archive (by downloading an archive or by doing a git "
+"clone/pull)"
+msgstr "Récupérez l'archive Lizmap (en téléchargeant une archive ou en effectuant un git clone/pull)"
+
+#: ../../source/install/upgrade.rst:51
+msgid "You should"
+msgstr "Vous devriez"
+
+#: ../../source/install/upgrade.rst:53
+msgid "replace the lib/ directory by the new lib/ directory"
+msgstr "remplacez le répertoire lib/ par le nouveau répertoire lib/"
+
+#: ../../source/install/upgrade.rst:54
+msgid "replace the lizmap/ directory by new lizmap/"
+msgstr "remplacez le répertoire lizmap/ par le nouveau répertoire lizmap/"
+
+#: ../../source/install/upgrade.rst:58
+msgid "Restore data and clean installation"
+msgstr "Restaurer les données et nettoyer l'installation"
+
+#: ../../source/install/upgrade.rst:60
+msgid ""
+"Restore rights and owner on some directories. Here is an example where "
+"\"myuser\" is the user owning the application file, and \"www-data\", the "
+"group of the web server."
+msgstr "Restaurer les droits et le propriétaire sur certains répertoires. Voici un exemple où \"myuser\" est l'utilisateur propriétaire du fichier d'application, et \"www-data\", le groupe du serveur web."
+
+#: ../../source/install/upgrade.rst:68
+msgid ""
+"Then you can restore the backup, by giving the path where the backuped file "
+"where previously saved:"
+msgstr "Ensuite, vous pouvez restaurer la sauvegarde, en précisant le chemin où les fichiers sauvegardés ont été précédemment enregistrés :"
+
+#: ../../source/install/upgrade.rst:75
+msgid ""
+"Note: Lizmap 3.0 requires that \"*.db\" files should be stored in var/db/, "
+"not in var/ as in 2.x"
+msgstr "Note: Lizmap 3.0 nécessite que les fichiers \"* .db\" soient stockés dans var/db/, pas dans var/ comme dans les versions 2.x"
+
+#: ../../source/install/upgrade.rst:78
+msgid "Last step: launch the upgrade script"
+msgstr "Dernière étape : lancé le script de mise à jour"
+
+#: ../../source/install/upgrade.rst:86
+msgid "Upgrading between 2.x versions"
+msgstr "Mettre à jour entre versions 2.x"
+
+#: ../../source/install/upgrade.rst:89
 msgid "Preliminary backup"
 msgstr "Sauvegarde préalable"
 
-#: ../../source/install/linux.rst:585
+#: ../../source/install/upgrade.rst:91
 msgid ""
 "Before update, make a backup of the configuration data: "
 "*lizmap/var/config/lizmapConfig.ini.php*, *lizmap/var/jauth.db* and the log "
 "file (from 2.8) *lizmap/var/logs.db*"
 msgstr "Avant de mettre à jour, faites une sauvegarde des données de configuration : lizmap/var/jauth.db and lizmap/var/config/lizmapConfig.ini.php et du fichier de log (à partir de la 2.8) lizmap/var/logs.db"
 
-#: ../../source/install/linux.rst:597
+#: ../../source/install/upgrade.rst:103
 msgid ""
 "Then do a typical installation of the new version (see above), which will "
 "create a new folder in the directory */var/www/*"
 msgstr "Puis faites une installation classique de la nouvelle version (voir ci-dessus), ce qui crééra un nouveau dossier dans le répertoire /var/www/"
 
-#: ../../source/install/linux.rst:600
+#: ../../source/install/upgrade.rst:106
 msgid "Copy the files saved in the folder of the new version"
 msgstr "Copier les fichiers sauvegardés dans le dossier de la nouvelle version"
 
-#: ../../source/install/linux.rst:609
+#: ../../source/install/upgrade.rst:115
 msgid ""
 "In some versions, it is also necessary to update the database that stores "
 "the rights. See the following for more details."
 msgstr "Pour certaines versions, il est aussi nécessaire de mettre à jour la base de données qui stocke les droits. Voir les points suivants pour plus de détail."
 
-#: ../../source/install/linux.rst:612
+#: ../../source/install/upgrade.rst:118
 msgid "From version 2.3 or lower to version 2.4 or upper"
 msgstr "De la version 2.3.0 ou inférieure à la 2.4.0 ou supérieure"
 
-#: ../../source/install/linux.rst:614
+#: ../../source/install/upgrade.rst:120
 msgid ""
 "The Jelix framework (tool with which Lizmap Web Client is built) has been "
 "updated. It is necessary to change the rights management SQLite database:"
 msgstr "Le framework Jelix (outil avec lequel est construit Lizmap Web Client) a été mis à jour. Il faut modifier la base de données sqlite de gestion des droits :"
 
-#: ../../source/install/linux.rst:622
+#: ../../source/install/upgrade.rst:128
 msgid "From version 2.6 or lower to version 2.7"
 msgstr "De la version 2.6 ou inférieure à la version 2.7"
 
-#: ../../source/install/linux.rst:624
+#: ../../source/install/upgrade.rst:130
 msgid ""
 "Support for annotations and management of related rights was added to Lizmap"
 " Web Client. It is necessary to change the rights management SQLite database"
 " to upgrade it:"
 msgstr "Le support des annotations a été ajouté à Lizmap, ainsi que la gestion des droits liée. Il faut donc modifier la base de données des droits pour mettre à niveau :"
 
-#: ../../source/install/linux.rst:633
+#: ../../source/install/upgrade.rst:139
 msgid "From version 2.7.*  to version 2.8"
 msgstr "De la version 2.7.*  à la version 2.8"
 
-#: ../../source/install/linux.rst:635
+#: ../../source/install/upgrade.rst:141
 msgid ""
 "The editing tool replaced the annotation tool and fields to describe each "
 "Lizmap Web Client user has been added. It is necessary to upgrade the rights"
 " management SQLite database:"
 msgstr "L'outil d'édition a remplacé l'outil d'annotation et nous avons ajouté des champs pour décrire chaque utilisateur Lizmap. Il faut mettre à jour la base de donnée de gestion des droits :"
 
-#: ../../source/install/linux.rst:643
+#: ../../source/install/upgrade.rst:149
 msgid "From version 2.8.*  to version 2.9"
 msgstr "De la version 2.8.*  à la version 2.9"
 
-#: ../../source/install/linux.rst:645 ../../source/install/linux.rst:655
+#: ../../source/install/upgrade.rst:151 ../../source/install/upgrade.rst:161
 msgid ""
 "The functionality of layers data filtering based on the connected user "
 "requires the addition of rights related to the user data base:"
 msgstr "La fonctionnalité de filtrage des données des couches en fonction de l'utilisateur connecté nécessite l'ajout des droits liés dans la base de données des utilisateurs :"
 
-#: ../../source/install/linux.rst:653
+#: ../../source/install/upgrade.rst:159
 msgid "From version 2.9.*  to version 2.10"
 msgstr "De la version 2.9.*  à la version 2.10"
 
-#: ../../source/install/linux.rst:663
+#: ../../source/install/upgrade.rst:169
 msgid "Delete Jelix temporary files"
 msgstr "Supprimer les fichiers temporaires de Jelix"
 
-#: ../../source/install/linux.rst:670
+#: ../../source/install/upgrade.rst:176
 msgid "Redefine the rights to the application files"
 msgstr "Redéfinir les droits sur les fichiers de l'application"
 
