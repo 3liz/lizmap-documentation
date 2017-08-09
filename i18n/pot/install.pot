@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Lizmap 3.0.12\n"
+"Project-Id-Version: Lizmap 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-09 14:55+0200\n"
+"POT-Creation-Date: 2017-08-09 15:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../source/install/index.rst:3
-msgid "Installing Lizmap"
+msgid "Installing and upgarding Lizmap"
 msgstr ""
 
 #: ../../source/install/linux.rst:3
@@ -374,72 +374,176 @@ msgstr ""
 msgid "so if you want to install Lizmap to provide access to multiple map publishers, you should tell them to always create a **db** directory at the same level as the QGIS projects in the Lizmap Web Client directory. This will facilitate the admin work that just have to change the rights of this unique directory."
 msgstr ""
 
-#: ../../source/install/linux.rst:580
-msgid "Version upgrade"
+#: ../../source/install/upgrade.rst:3
+msgid "Upgrade Lizmap Web Client"
 msgstr ""
 
-#: ../../source/install/linux.rst:583
+#: ../../source/install/upgrade.rst:6
+msgid "Upgrading between 3.x versions"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:8
+msgid "From 3.0 versions to upper, there is no need to backup data."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:10
+msgid "Simply replace lizmap files and call:"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:19
+msgid "Upgrading to Lizmap 3.0"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:21
+msgid "First, be sure that your lizmap installation has been upgraded to the latest version of 2.x. The last one is 2.12."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:24
+msgid "Then you can upgrade to Lizmap 3.0."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:27
+msgid "Data backup"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:29
+msgid "Backup your data into a directory (ex: /tmp)."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:31
+msgid "Lizmap 2.12.2 and higher has a lizmap/install/backup.sh script. Call"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:37
+msgid "If you don't have this script, backup by hand, copy these files somewhere, /tmp for instance:"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:39
+msgid "var/jauth.db"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:40
+msgid "var/logs.db"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:41
+msgid "var/config/lizmapConfig.ini.php"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:42
+msgid "var/config/installer.ini.php"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:43
+msgid "var/config/profiles.ini.php"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:47
+msgid "Replace lizmap files"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:49
+msgid "Get the lizmap archive (by downloading an archive or by doing a git clone/pull)"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:51
+msgid "You should"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:53
+msgid "replace the lib/ directory by the new lib/ directory"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:54
+msgid "replace the lizmap/ directory by new lizmap/"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:58
+msgid "Restore data and clean installation"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:60
+msgid "Restore rights and owner on some directories. Here is an example where \"myuser\" is the user owning the application file, and \"www-data\", the group of the web server."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:68
+msgid "Then you can restore the backup, by giving the path where the backuped file where previously saved:"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:75
+msgid "Note: Lizmap 3.0 requires that \"*.db\" files should be stored in var/db/, not in var/ as in 2.x"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:78
+msgid "Last step: launch the upgrade script"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:86
+msgid "Upgrading between 2.x versions"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:89
 msgid "Preliminary backup"
 msgstr ""
 
-#: ../../source/install/linux.rst:585
+#: ../../source/install/upgrade.rst:91
 msgid "Before update, make a backup of the configuration data: *lizmap/var/config/lizmapConfig.ini.php*, *lizmap/var/jauth.db* and the log file (from 2.8) *lizmap/var/logs.db*"
 msgstr ""
 
-#: ../../source/install/linux.rst:597
+#: ../../source/install/upgrade.rst:103
 msgid "Then do a typical installation of the new version (see above), which will create a new folder in the directory */var/www/*"
 msgstr ""
 
-#: ../../source/install/linux.rst:600
+#: ../../source/install/upgrade.rst:106
 msgid "Copy the files saved in the folder of the new version"
 msgstr ""
 
-#: ../../source/install/linux.rst:609
+#: ../../source/install/upgrade.rst:115
 msgid "In some versions, it is also necessary to update the database that stores the rights. See the following for more details."
 msgstr ""
 
-#: ../../source/install/linux.rst:612
+#: ../../source/install/upgrade.rst:118
 msgid "From version 2.3 or lower to version 2.4 or upper"
 msgstr ""
 
-#: ../../source/install/linux.rst:614
+#: ../../source/install/upgrade.rst:120
 msgid "The Jelix framework (tool with which Lizmap Web Client is built) has been updated. It is necessary to change the rights management SQLite database:"
 msgstr ""
 
-#: ../../source/install/linux.rst:622
+#: ../../source/install/upgrade.rst:128
 msgid "From version 2.6 or lower to version 2.7"
 msgstr ""
 
-#: ../../source/install/linux.rst:624
+#: ../../source/install/upgrade.rst:130
 msgid "Support for annotations and management of related rights was added to Lizmap Web Client. It is necessary to change the rights management SQLite database to upgrade it:"
 msgstr ""
 
-#: ../../source/install/linux.rst:633
+#: ../../source/install/upgrade.rst:139
 msgid "From version 2.7.*  to version 2.8"
 msgstr ""
 
-#: ../../source/install/linux.rst:635
+#: ../../source/install/upgrade.rst:141
 msgid "The editing tool replaced the annotation tool and fields to describe each Lizmap Web Client user has been added. It is necessary to upgrade the rights management SQLite database:"
 msgstr ""
 
-#: ../../source/install/linux.rst:643
+#: ../../source/install/upgrade.rst:149
 msgid "From version 2.8.*  to version 2.9"
 msgstr ""
 
-#: ../../source/install/linux.rst:645
-#: ../../source/install/linux.rst:655
+#: ../../source/install/upgrade.rst:151
+#: ../../source/install/upgrade.rst:161
 msgid "The functionality of layers data filtering based on the connected user requires the addition of rights related to the user data base:"
 msgstr ""
 
-#: ../../source/install/linux.rst:653
+#: ../../source/install/upgrade.rst:159
 msgid "From version 2.9.*  to version 2.10"
 msgstr ""
 
-#: ../../source/install/linux.rst:663
+#: ../../source/install/upgrade.rst:169
 msgid "Delete Jelix temporary files"
 msgstr ""
 
-#: ../../source/install/linux.rst:670
+#: ../../source/install/upgrade.rst:176
 msgid "Redefine the rights to the application files"
 msgstr ""
 
