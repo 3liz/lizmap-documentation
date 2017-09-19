@@ -1,5 +1,5 @@
 ==================================
-Installing and upgarding Lizmap
+Installing and upgrading Lizmap
 ==================================
 
 .. toctree::
