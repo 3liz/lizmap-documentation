@@ -41,8 +41,7 @@ Using FTP tab in Lizmap plugin
 The FTP tab in Lizmap plugin allows you to configure the use of the FTP protocol directly into QGIS, in order to make a mirrored synchronization directly from the plugin. To integrate FTP synchronization in the plugin, we relied on two free tools that have proven reliable:
 
 * **WinSCP** on Windows: http://winscp.net/
-* **lftp** on Linux: http://lftp.yar.ru/
-* We have not yet found an equivalent for Mac OS (contributions are welcome)
+* **lftp** on Mac and Linux: http://lftp.yar.ru/
 
 To use FTP synchronization from the Lizmap plugin, install an FTP client above.
 
@@ -57,6 +56,16 @@ To use FTP synchronization from the Lizmap plugin, install an FTP client above.
 .. code-block:: bash
 
    sudo apt-get install lftp # on debian or ubuntu. For others replace with equivalent
+
+* On Mac : LFTP
+
+   * First install homebrew from here : https://brew.sh/index_fr.html then install lfpt from command line.
+
+.. code-block:: bash
+
+         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+         
+         brew install lftp
 
 In the FTP tab, you configure the following settings:
 
