@@ -25,7 +25,7 @@ To see if the Apache can start, open the command-line with :kbd:`Windows+R` and 
 After you type the instruction click enter and you will see a notice of windows firewall and you need to **Allow Access For all**.
 Then open the browser and write http://localhost and press enter this will open the page with the **"It Works"**.
 
-.. warning:: If don't popup  the firewall windows this means that you probably have an anti-virus software managing your firewall. In this case, you need to check the configurations and allow manually the apache service. Another import tip if Windows Firewall don't show the previous dialog you need to add manually the port 80 as inbound/outbound port in Advanced Windows Firewall properties (Control Planel>Administrative Tools>Windows Firewall with Advanced Security). 
+.. warning:: If don't popup  the firewall windows this means that you probably have an anti-virus software managing your firewall. In this case, you need to check the configurations and allow manually the apache service. Another import tip if Windows Firewall don't show the previous dialog you need to add manually the port 80 as inbound/outbound port in Advanced Windows Firewall properties (Control Planel>Administrative Tools>Windows Firewall with Advanced Security).
 
 Open the :kbd:`cmd` where you run the previous command and press :kbd:`Ctrl+C` to stop Apache. Then add the Apache to your Windows System Path allowing to you call the apache directly in the :kbd:`cmd`. So for this task, you hold the :kbd:`Windows` and press :kbd:`Pause`. Then, click in *Advanced System Settings* and then in :kbd:`Environment Variables`. The next step is to append (not replace!) **;C:\\webserver\\Apache24\\bin** to the *Path* variable (double-click in "Path" line). After this step, close :kbd:`cmd` , reopen :kbd:`cmd` and check Apache is correctly declare in the *System path*. In :kbd:`cmd` type :kbd:`httpd` then hit enter this will run Apache, if Yes you can stop pressing :kbd:`Ctrl+C`.
 
@@ -205,7 +205,7 @@ After this modification go to the file **C:\\webserver\\Apache24\\conf\\extra\\p
         FcgidInitialEnv QGIS_SERVER_LOG_FILE "C:\\webserver\Apache24\logs\\qgis_server.log"
         FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
         FcgidInitialEnv QGIS_PLUGINPATH "C:\OSGeo4W64\apps\qgis-ltr\python\plugins"
-		
+
   SetEnvIf Request_URI ^/qgis QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis-ltr"
   SetEnvIf Request_URI ^/qgis TEMP "C:\Windows\Temp"
 
@@ -304,12 +304,12 @@ In case of lizmap version >= 3.0, you must use some scripts to install it proper
 
 .. code-block:: bat
 
-   cd C:\\webserver\\lizmap\\prod\\master\\
-   cd lizmap/var/config
+   cd C:\webserver\lizmap\prod\master\
+   cd lizmap\var\config
    copy lizmapConfig.ini.php.dist lizmapConfig.ini.php
    copy localconfig.ini.php.dist localconfig.ini.php
    copy profiles.ini.php.dist profiles.ini.php
-   cd ../../..
+   cd ..\..\..
 
 If you want to enable the demo repositories, just add to localconfig.ini.php the following code:
 
@@ -323,7 +323,7 @@ And then you can launch the installer in the command-line (:kbd:`cmd`):
 .. code-block:: bat
 
    cd C:\webserver\lizmap\prod\master\
-   php lizmap/install/installer.php
+   php lizmap\install\installer.php
 
 Using PostgreSQL as administrator database (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -372,7 +372,7 @@ Remove :kbd:`;` and fill with PostgreSQL credentials:
    host="localhost"
    user="Admin_user_postgreSQL"
    password="put_here_the_password"
-   
+
    [jdb:lizlog]
    driver="pgsql"
    database="name_of_database"
