@@ -93,7 +93,7 @@ Inside QGIS:
 
 .. note:: Only **WKT** or **Extent** formats for geometry storage are working, since binary format (WKB) can not be decoded by LWC.
 
-Inside LWC:
+Inside LWC (available since version 3.1):
 
 * put the database file beside the QGIS project, use the Search tool (input) and zoom to the chosen feature.
 
