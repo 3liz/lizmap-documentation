@@ -652,10 +652,10 @@ To optimize your application as much as possible, we suggest you to:
 
 * Upgrade your server. This is always an option, but is often useless if you did not optimize your project as described above. In any case, a low end server (e.g. 2 Gb RAM, 2 cores at 2.2 GHz) is unsuitable. A fast quad-core with 8 Gb RAM is a reasonable minimum. Avoid installing QGIS server and Lizmap on Windows, it's more complex and slower.
 
-.. note:: Lizmap 3: On the upcoming Lizmap 3 you'll find several improvements that will help optimizing your installation:
-    * a tool for the preparation of the server cache, through the use of a WMTS protocol. In addition, this will allow to use the cached layers as WMTS layers in QGIS desktop
-    * avoiding the automatic download of the legends at startup, and at every zoom level; this will be done exclusively on demand, if the legend is displayed, thus saving one request per layer for each zoom
-    * code optimization.
+.. note:: In Lizmap 3 you'll find several improvements that will help optimizing your installation::
+            * a tool for the preparation of the server cache, through the use of a WMTS protocol. In addition, this will allow to use the cached layers as WMTS layers in QGIS desktop
+            * avoiding the automatic download of the legends at startup, and at every zoom level; this will be done exclusively on demand, if the legend is displayed, thus saving one request per layer for each zoom
+            * code optimization.
 
 In detail: how to activate the caches
 -------------------------------------
