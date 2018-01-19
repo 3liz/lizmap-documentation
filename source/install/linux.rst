@@ -474,7 +474,7 @@ The advantage of using LDAP is that all the users and groups information can be 
 
 In order to enable the LDAP support, you have to change the authentication method in the files as follows:
 
-See ldapdao-module project at https://github.com/jelix/ldapdao-module for downloading, installing, and configuring module
+See ldapdao-module project at https://github.com/jelix/ldapdao-module for downloading, installing and configuring module
 
 Install the php ldap extension on your linux system
 
@@ -486,7 +486,7 @@ or
 
 .. code-block:: bash
    
-   apt-get install php7.1-ldap
+   apt-get install php7.x-ldap
 
 Declare the ldapdao module into the *lizmap/var/config/localconfig.ini.php* file
 
@@ -495,13 +495,17 @@ Declare the ldapdao module into the *lizmap/var/config/localconfig.ini.php* file
    [modules]
    ldapdao.access=1
 
-Check the following modules state into the *lizmap/var/config/localconfig.ini.php* file
+Check the following modules state into the *lizmap/var/config/mainconfig.ini.php* file
 
 .. code-block:: bash
 
    jacl2.access=1
    jauth.access=2
    jauthdb.access=1
+   
+Run *php lizmap/install/installer.php*
+
+Run *lizmap/install/set_rights.sh www-data www-data*
  
 Redefine the path of the auth config into the *lizmap/var/config/admin/config.ini.php* and *lizmap/var/config/index/config.ini.php* files
 
@@ -514,13 +518,11 @@ Create a profile like this according to your ldap settings into the *lizmap/var/
 
 .. code-block:: bash
 
-   [ldap:myldapdao]
+   [ldap:myldap]
    hostname=localhost
    port=389
    adminUserDn="cn=admin,ou=admins,dc=acme"
    adminPassword="Sup3rP4ssw0rd"
-
-Run *php lizmap/install/installer.php*
 
 Indicate the new configuration file into the *lizmap/var/config/mainconfig.ini.php* file
 
