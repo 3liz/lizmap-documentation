@@ -371,8 +371,14 @@ In Lizmap plugin:
 * You can optionally activate editing for the two layers, to allow the web users to create new features and upload pictures
 * Save and publish your project and Lizmap configuration
 
+Link of an element for layers with an atlas
+____________________________________________
+
+Every element of a layer with an atlas configured will have a link at the end of his popup which open a pdf of the atlas for this particular element.
+To make it work you will need to download the "atlas_print" plugin, for that you have to get it from his Github at : https://github.com/3liz/qgis-atlasprint
+
 Display children in a compact way
-----------------------------------
+__________________________________
 
 You can change the way children are displayed and make them look like a table. For that, you will need to adapt the HTML of your children layer and use a few classes to manipulate it.
 * "lizmap_merged" : You need to attribute this class to your table
