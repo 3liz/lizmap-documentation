@@ -237,21 +237,9 @@ If you want to restart drawing the geometry, you should click *Cancel*.
 
 If the geometry is right for you and you have entered the required information, you can *Save*. The new object will be added. You will be able to update it by selecting it.
 
-To select an object to update, you can click on the button *Select*.
+To select an object to update, you will need to click on it on the map then click on the button *Edit*.
 
 .. image:: /images//user-guide-23-edition-select.png
-   :align: center
-   :scale: 80%
-
-Once the selection tool is activated, you must click on the map to identify the object you want to edit.
-
-.. image:: /images//user-guide-24-edition-select-click.png
-   :align: center
-   :scale: 80%
-
-The list of editable objects below the location of the clicks will appear. You will be able to select exactly the object to modify.
-
-.. image:: /images//user-guide-25-edition-select-list.png
    :align: center
    :scale: 80%
 
@@ -261,13 +249,13 @@ The selected object appears on the map and its geometry may be changed immediatl
    :align: center
    :scale: 80%
 
-You can undo geometry changes using the "Undo" button.
+You can undo geometry changes using the *Cancel* button.
 
 .. image:: /images//user-guide-27-edition-select-draw-undo.png
    :align: center
    :scale: 80%
 
-To validate your geometry modifications or simply access the editing form for fields, you must click *Edit*.
+To validate your geometry modifications or simply access the editing form for fields, you must click *Save*.
 
 .. image:: /images//user-guide-28-edition-select-draw-validate.png
    :align: center
@@ -283,7 +271,7 @@ The *Save* button saves the geometry and attributes changes.
 
 If you want to remove the object you selected, you must click *Del*.
 
-Finally, to disable editing tool, simply click on *Stop*.
+Finally, to disable editing tool, simply click on *Close* or click again on the Edition icon.
 
 .. image:: /images//user-guide-30-edition-stop.png
    :align: center
@@ -297,6 +285,10 @@ Attribute layers
 When this feature has been enabled by the map publisher for one or many vector layers, a new menu entry will be visible at the bottom of the menu bar, labelled as **Data**.
 
 Clicking on this icon will open a new panel situated at the bottom of the interface, containing one single **Data** tab with a list of published vector layers.
+
+.. image:: /images//user-guide-31-attribute-menu.png
+   :align: center
+   :scale: 80%
 
 Attribute table panel behaviour
 -------------------------------
@@ -315,6 +307,10 @@ You can click back on any of these 2 **Pin** and **Maximise** button to get back
 
 The **Close** button closes the attribute table tool completely (as if you clicked in the menu bar icon).
 
+.. image:: /images//user-guide-32-attribute-menu-tools.png
+   :align: center
+   :scale: 80%
+
 Open an attribute table for a layer
 -----------------------------------
 
@@ -322,12 +318,22 @@ Once the attribute table panel is displayed, you can open the attribute table of
 
 *Opening an attribute table can take some time depending on the data size and complexity.*
 
+.. image:: /images//user-guide-33-attribute-menu-visualize-layer.png
+   :align: center
+   :scale: 80%
+
+
 Description of the attribute table functionality
 ------------------------------------------------
 
 The layer data is shown in a **paginated table**. By default, the table shows 100 lines at a time. You can change this behaviour by using the list situated in the bottom left side of the tab content.
 
 The table of data can be **ordered by a field** by clicking on the column corresponding to . If you click again on the column, the order will be reversed.
+
+.. image:: /images//user-guide-34-attribute-order-line.png
+   :align: center
+   :scale: 80%
+
 
 Actions on lines
 ~~~~~~~~~~~~~~~~
@@ -345,14 +351,26 @@ Each line of the table shows some buttons at the left side:
 * **Zoom** button : clicking on this button will zoom to the corresponding geometry in the map. The scale will be chosen so that the feature geometry uses most of the available space.
 * **Center** button : clicking on this button will just pan the map to the corresponding feature, without changing scale.
 
+.. image:: /images//user-guide-35-attribute-panel-options.png
+   :align: center
+   :scale: 80%
+
 More about selection tools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can also select a layer object by **displaying the popup** for this object (if the map publisher has enabled the popup for the layer, a click on the map will show a popup window containing detailed information on the clicked feature). Inside the popup, if you can see the select button, you can use it to select only this object. Previous selection will be replaced by only this object.
 
+.. image:: /images//user-guide-36-attribute-popup-selection.png
+   :align: center
+   :scale: 80%
+
 When one or more lines have been selected in the attribute table (they become yellow), you can use the black "arrow up" button situated above the table to **move the selected lines at the top of the table**.
 
 You can **unselect all the selected objects** by clicking on the "white star" button situated above the table.
+
+.. image:: /images//user-guide-37-attribute-select-top.png
+   :align: center
+   :scale: 80%
 
 Quickly search through data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -364,6 +382,10 @@ The text entered in the search field launches a search among the data for **all 
 Note that only the content of the table will be restricted to the lines matching your textual search. **The objects on the map will not be filtered dynamically** (but you could use select and filter to do so, see below)
 
 Once you have filtered some data in the attribute table by entering some text in it, **you can easily select them all** by clicking on the "black star" button labelled "Select searched lines". This will select all the corresponding objects in the attribute table (display them in yellow) and also change their color in the map (usually in yellow too, depending on the configuration done by the map publisher)
+
+.. image:: /images//user-guide-38-attribute-search.png
+   :align: center
+   :scale: 80%
 
 Filter data
 ~~~~~~~~~~~
@@ -383,9 +405,14 @@ You can cancel the filter to go back to previous state:
 * by clicking on the orange "Funnel" button at the top of the legend in Lizmap left panel
 * by clicking back on the filter button just above the attribute table concerned by the filter
 
+.. image:: /images//user-guide-39-attribute-filter.png
+   :align: center
+   :scale: 80%
 
 When exporting the map view with the permalink tool (situated in the menu bar), **the filter will be activated** in the linked map and the users won't be able to easily unfilter the data : the unfilter button will not be displayed in Lizmap interface
 The only way would be to remove the filter parameters from the permalink URL. **This is not a safe way to protect some data, but a way to focus on some data only**.
+
+
 
 More complex scenarios : relations between layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
