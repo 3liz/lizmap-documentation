@@ -849,7 +849,7 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
   - **QGIS 2 evolutions** :
 
     + To hide columns in the Lizmap popup, you must now uncheck the box in the *WMS* for each field to hide (this column is just after *Alias*)
-    + Lizmap Web Client does not know yet use the "Drag and drop designer" for form generation. Therefore only use the *Autogenerate* mode for editing layers.
+    + Lizmap Web Client does not know the "QT Designer UI file" for form generation. Therefore only use the *Autogenerate* mode or *Drag and drop* mode for editing layers.
 
 .. note:: All the editing tools are not yet managed by Lizmap Web Client. Only the following tools are supported: Text edit, Classification, Range, Value Map, Hidden, Check Box, Date/Time, Value Relation. If the tool is not supported, the web form displays a text input field.
 
