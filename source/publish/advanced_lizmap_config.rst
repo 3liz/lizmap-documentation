@@ -557,7 +557,9 @@ you can add :
 * a location map, a map for which you have enabled and configured the function of *Overview*
 * labels
 
-You can allow the user to modify the contents of certain labels (title, description, comment, etc). To do this you simply have to add an identifier to your labels.
+You can allow the user to modify the contents of certain labels (title, description, comment, etc).
+To do this you need to add a identifier to your label in the composer. Lizmap will automatically ask you in the webbrowser to fill each fields.
+If your label is pre-populated in QGIS, the field will be pre-populated too in the webbrowser.
 
 Finally the print function will be based on the map scales that you set in the plugin *Map* (:ref:`lizmap-config-map`).
 
