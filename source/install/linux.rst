@@ -21,7 +21,7 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
    dpkg-reconfigure locales
    # define your timezone [useful for logs]
    dpkg-reconfigure tzdata
-   apt-get install ntp ntpdate
+   apt install ntp ntpdate
 
 .. note:: It is also necessary configure the other software so that they are using this default encoding if this is not the case.
 
@@ -35,10 +35,11 @@ Installing necessary packages
 .. code-block:: bash
 
    sudo su # only necessary if you are not logged in as root
-   apt-get update # update package lists
+   apt update # update package lists
    # On Ubuntu 14.04 LTS install the following packages
-   # (on newer versions of Ubuntu or Debian php7 will have to be installed)
    apt-get install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php5 php5-cgi php5-gd php5-sqlite php5-curl php5-xmlrpc python-simplejson python-software-properties
+   # On Ubuntu 18.04 LTS
+   apt install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php7.2 php7.2-cgi php7.2-gd php7.2-sqlite php7.2-curl php7.2-xmlrpc python-simplejson software-properties-common
 
 .. todo:: Check this: still necessary?
    a2dismod php5
@@ -52,7 +53,7 @@ Installing necessary packages
 
 Then go to the *www* default Apache directory (modify as needed).
 
-php5 configuration
+php7 configuration
 ------------------
 
 .. todo:: Check this: still necessary?

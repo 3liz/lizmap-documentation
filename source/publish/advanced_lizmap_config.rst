@@ -557,7 +557,9 @@ you can add :
 * a location map, a map for which you have enabled and configured the function of *Overview*
 * labels
 
-You can allow the user to modify the contents of certain labels (title, description, comment, etc). To do this you simply have to add an identifier to your labels.
+You can allow the user to modify the contents of certain labels (title, description, comment, etc).
+To do this you need to add a identifier to your label in the composer. Lizmap will automatically ask you in the webbrowser to fill each fields.
+If your label is pre-populated in QGIS, the field will be pre-populated too in the webbrowser.
 
 Finally the print function will be based on the map scales that you set in the plugin *Map* (:ref:`lizmap-config-map`).
 
@@ -849,7 +851,7 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
   - **QGIS 2 evolutions** :
 
     + To hide columns in the Lizmap popup, you must now uncheck the box in the *WMS* for each field to hide (this column is just after *Alias*)
-    + Lizmap Web Client does not know yet use the "Drag and drop designer" for form generation. Therefore only use the *Autogenerate* mode for editing layers.
+    + Lizmap Web Client does not know the "QT Designer UI file" for form generation. Therefore only use the *Autogenerate* mode or *Drag and drop* mode for editing layers.
 
 .. note:: All the editing tools are not yet managed by Lizmap Web Client. Only the following tools are supported: Text edit, Classification, Range, Value Map, Hidden, Check Box, Date/Time, Value Relation. If the tool is not supported, the web form displays a text input field.
 
