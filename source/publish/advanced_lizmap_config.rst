@@ -766,7 +766,7 @@ In QGIS, you can configure **relations** between layers, in the **project proper
 
 For example, you could have a layer of cities, and a child layer of public building. Clicking on one city in the attribute table will make the public building child table refresh its content with only the public buildings of the clicked city.
 
-Relations in QGIS is a great tool. But at the moment, you cannot configure "many-to-many" (N:M) relations. You can only create "one-to-many" (1:N) relations. In many cases, N:M relations are very handy. For example, you can have the three following vector layers in your project:
+You can use "many-to-many" (N:M) relations in QGIS since version 2.14 but Lizmap doesn't use it automatically yet. You have to define the relations in the Lizmap plugin too. In many cases, N:M relations are very handy. For example, you can have the three following vector layers in your project:
 
 * **Tramway lines**: this layers name "Lines" contains one feature per tram line, and has a unique ID field *tram_id*
 * **Tramway stops**: this layer named "Stops" contains one feature per tram stop, with a unique ID field called *stop_id*
