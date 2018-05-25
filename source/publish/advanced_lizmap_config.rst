@@ -471,16 +471,16 @@ The Javascript code can use many events fired by Lizmap Web Client. Here is a li
    "lizmapeditionfeaturemodified","Fired when a layer feature has been modified with the edition tool","layerId"
    "lizmapeditionfeaturedeleted","Fired when a layer feature has been deleted with the edition tool","layerId | featureId"
    "attributeLayersReady","Fired when all layers to be displayed in the attribute layers tool have been set","layers"
-   "attributeLayerContentReady","Fired when a table for a layer has been displayed in the bottom dock","featureType"   
+   "attributeLayerContentReady","Fired when a table for a layer has been displayed in the bottom dock","featureType"
    "layerfeaturehighlighted","Fired when a feature has been highlighted in the attribute table ( grey rectangle ). Firing this event manually forces a refresh of child tables if any exist for the layer","sourceTable | featureType | fid"
    "layerfeatureselected","Fire this event to trigger the selection of a feature for a layer, by passing feature id. Once the selection is done, the event layerSelectionChanged is fired in return.","featureType | fid | updateDrawing"
    "layerfeaturefilterselected","Fire this event to trigger the filtering of a layer for the selected features. You must select some features before firing this event. Once the filter is applied, Lizmap fires the event layerFilteredFeaturesChanged in return.","featureType"
    "layerFilteredFeaturesChanged","Fired when a filter has been applied to the map for a layer. This event also trigger the redrawing of the map and the attribute tables content.","featureType | featureIds | updateDrawing"
    "layerFilterParamChanged","Fired when the WMS requests parameters have changed for a layer. For example when a STYLE or a FILTER has been modified for the layer.","featureType | filter | updateDrawing"
    "layerfeatureremovefilter","Fire this event to remove any filter applied to the map. Once done, the event layerFilteredFeaturesChanged is fired back, and the map content and attribute tables content are refreshed.","featureType"
-   "layerSelectionChanged","Fired when the selection have been changed for a layer. This also trigger the redrawing of attribute table content and map content","featureType | featureIds | updateDrawing"   
+   "layerSelectionChanged","Fired when the selection have been changed for a layer. This also trigger the redrawing of attribute table content and map content","featureType | featureIds | updateDrawing"
    "layerfeatureselectsearched","Fire this event to select all the features corresponding to the displayed lines of the attribute table, which can be visually filterd by the user by entering some characters in the search text input.","featureType | updateDrawing"
-   "layerfeatureunselectall","Fire this event to remove all features from selection for a layer. Once done, Lizmap responds with the event layerSelectionChanged","featureType | updateDrawing"  
+   "layerfeatureunselectall","Fire this event to remove all features from selection for a layer. Once done, Lizmap responds with the event layerSelectionChanged","featureType | updateDrawing"
 
 
 Examples
@@ -786,7 +786,7 @@ Lizmap Web Client will then handle the relation as a N:M relation:
 * The filter feature based on the attribute layers will trigger the cascading filter of the pivot and the other parent. For example, if the user uses the filter to show only one tramway line, Lizmap will also only show the corresponding stops in the map and in the Stops attribute tables
 
 
-Attribute layers and edition
+Attribute table and edition
 ----------------------------
 
 todo
