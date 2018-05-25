@@ -6,13 +6,13 @@
 # Bobo Plateau <bobo-romania@users.noreply.github.com>, 2017
 # Laurent Jouanneau <dev@ljouanneau.com>, 2016
 # Nicolas Boisteault <nboisteault@gmail.com>, 2017-2018
-# rldhont <rldhont@gmail.com>, 2016-2017
+# rldhont <rldhont@gmail.com>, 2016-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-25 16:54+0200\n"
-"PO-Revision-Date: 2018-05-25 15:04+0000\n"
+"POT-Creation-Date: 2018-05-25 17:17+0200\n"
+"PO-Revision-Date: 2018-05-25 15:21+0000\n"
 "Last-Translator: rldhont <rldhont@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/3liz-1/lizmap-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1513,7 +1513,7 @@ msgid ""
 "baselayers (:ref:`lizmap-config-baselayers`). These external baselayers are "
 "not part of the QGIS project, default print function does not integrate "
 "them."
-msgstr "L'onglet *Fonds* du plugin Lizmap permet de sélectionner et d'ajouter des fonds externes (:ref:`lizmap-config-baselayers`). Ces fonds externes ne faisant pas partie du projet QGIS, par défaut la fonction d'impression ne les intègrera pas."
+msgstr "L'onglet *Fonds* du plugin Lizmap permet de sélectionner et d'ajouter des fonds externes (:ref:`lizmap-config-baselayers`). Ces fonds externes ne faisant pas partie du projet QGIS, la fonction d'impression ne les intègrera pas par défaut."
 
 #: ../../source/publish/advanced_lizmap_config.rst:575
 msgid ""
@@ -2183,13 +2183,13 @@ msgid ""
 "has not one yet. Usually the unique ID field contains **integers**. If the "
 "layer do not have this kind of field, you can easily create it with the "
 "*Field calculator*. Choose the correct field with the combo box."
-msgstr ""
+msgstr "**Identifiant unique** : L'outil table attributaire nécessite de définir chaque objet comme unique. Nous vous recommandons fortement d'ajouter un champ avec des valeurs uniques si votre couche n'en possède pas encore. En général le champ avec valeur unique contient des **entiers**. Si la couche ne possède pas ce type de champs, vous pouvez aisément le créer avec la **Calculatrice de champ**. Choisissez le champ qui convient avec la liste déroulante."
 
 #: ../../source/publish/advanced_lizmap_config.rst:757
 msgid ""
 "**Fields to hide**: You have 2 ways of hiding fields in the published "
 "attribute table."
-msgstr ""
+msgstr "**Champs à masquer** : Il existe 2 façons de masquer des champs dans la table attributaire publiée."
 
 #: ../../source/publish/advanced_lizmap_config.rst:759
 msgid ""
@@ -2309,7 +2309,7 @@ msgid ""
 msgstr "La fonction de filtre basée sur l'attribut des couches déclenchera les filtres en cascade sur le pivot et les autres parents. Par exemple, si l'utilisateur utilise le filtre pour n'afficher qu'une ligne de tramway, Lizmap n'affichera aussi que les arrêts correspondants sur la carte et dans la table attributaire pour Arrêts."
 
 #: ../../source/publish/advanced_lizmap_config.rst:790
-msgid "Attribute layers and edition"
+msgid "Attribute table and edition"
 msgstr "Tables attributaires et édition"
 
 #: ../../source/publish/advanced_lizmap_config.rst:792
