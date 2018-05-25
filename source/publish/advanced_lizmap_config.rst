@@ -752,9 +752,9 @@ Lizmap Web Client uses the **Web Feature Service** (WFS) to get data from a QGIS
 
 Once the layer is published through WFS, you can add it in the attribute layers table. Some options are available to finely tune the features provided to the user:
 
-* **Layer** : Choose one of the vector layers (spatial or not). This can be any vector layer format : GeoJSON, Shapefile, PostGIS, CSV, etc.
-* **Unique ID** : The attribute table tool needs to be able to defined each feature as unique. We strongly advise you to add such a field if your layer has not one yet. Usually the unique ID field contains **integers**. If the layer do not have this kind of field, you can easily create it with the *Field calculator*. Choose the correct field with the combo box.
-* **Fields to hide** You have 2 ways of hiding fields in the published attribute table.
+* **Layer**: Choose one of the vector layers (spatial or not). This can be any vector layer format : GeoJSON, Shapefile, PostGIS, CSV, etc.
+* **Unique ID**: The attribute table tool needs to be able to defined each feature as unique. We strongly advise you to add such a field if your layer has not one yet. Usually the unique ID field contains **integers**. If the layer do not have this kind of field, you can easily create it with the *Field calculator*. Choose the correct field with the combo box.
+* **Fields to hide**: You have 2 ways of hiding fields in the published attribute table.
 
   -  In the *vector layer properties dialog* of the QGIS vector layer, in the *Fields* tab, you can uncheck the checkbox of the column **WFS** for the fields to unpublish. This means this fields will not be published via the WFS protocol. This is the **simplest and safiest way** to restrict the publication to some fields (for example to get rid of sensitive fields)
   - You can use this **Fields to hide** option to **hide** the given fields in the attribute table display. The hidden fields won't be visible for the end user, but will still be available for Lizmap Web Client. **You must use this option to hide the Unique ID field**. If you use the first way (uncheck WFS column), the unique ID won't be usable by Lizmap, and some of the attribute table features will not work properly.
@@ -832,7 +832,7 @@ Here are the detailed steps:
 
   - think about adding a **primary key**: this is essential!
   - the primary key column must be of type **auto-increment**. For example *serial* to PostgreSQL.
-  - think about adding a **spatial index** : this is important for performance
+  - think about adding a **spatial index**: this is important for performance
   - *create as many fields as you need for attributes*: if possible, use simple field names!
 
 Please refer to the QGIS documentation to see how to create a spatial layer in a PostGIS or Spatialite database: http://docs.qgis.org/html/en/docs/user_manual/index.html
@@ -848,7 +848,7 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
     + Special case of the option *Value Relation*. You can use this option for a Lizmap map. For users to have access to information of the outer layer that contains the data, you must enable the publication of the layer as a WFS layer in the *OWS Server* tab of the QGIS *project properties*.
     + etc.
 
-  - **QGIS 2 evolutions** :
+  - **QGIS 2 evolutions**:
 
     + To hide columns in the Lizmap popup, you must now uncheck the box in the *WMS* for each field to hide (this column is just after *Alias*)
     + Lizmap Web Client does not know the "QT Designer UI file" for form generation. Therefore only use the *Autogenerate* mode or *Drag and drop* mode for editing layers.
