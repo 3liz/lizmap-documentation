@@ -28,7 +28,7 @@ have higher priority that those into ``localconfig.ini.pp``, which in turn,
 have parameters having higher priority over parameters of ``mainconfig.ini.php``.
 
 .. note:: ``liveconfig.ini.php`` and ``localconfig.ini.pp`` may not exists
-on old releases.
+          on old releases.
 
 Other framework configuration files:
 
