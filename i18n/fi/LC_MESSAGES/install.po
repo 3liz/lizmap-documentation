@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-29 15:46+0200\n"
+"POT-Creation-Date: 2018-05-29 16:46+0200\n"
 "PO-Revision-Date: 2018-05-25 15:04+0000\n"
 "Last-Translator: rldhont <rldhont@gmail.com>\n"
 "Language: fi\n"
@@ -221,6 +221,53 @@ msgid ""
 "``liveconfig.ini.php``, ``lizmapConfig.ini.php``, ``profiles.ini.php``, "
 "``lizmapLogConfig.ini.php`` and  ``installer.ini.php``. They are all "
 "modified during the life or the installation of the application."
+msgstr ""
+
+#: ../../source/install/configuration.rst:53
+msgid "Setting language"
+msgstr ""
+
+#: ../../source/install/configuration.rst:55
+msgid ""
+"Lizmap detects automatically the language of the user (given by his "
+"browser), and it supports many languages."
+msgstr ""
+
+#: ../../source/install/configuration.rst:58
+msgid ""
+"Available language into Lizmap are: fr_FR, en_US, it_IT, es_ES, eu_ES, "
+"pt_PT, el_GR, de_DE, pl_PL, ru_RU, fi_FI, gl_ES, sv_SE, nl_NL, ro_RO, "
+"hu_HU."
+msgstr ""
+
+#: ../../source/install/configuration.rst:61
+msgid ""
+"If the browser of the user indicates an unsupported language code, the "
+"default language of Lizmap is used, and is en_US."
+msgstr ""
+
+#: ../../source/install/configuration.rst:64
+msgid ""
+"You can change the default language of Lizmap by setting the parameter "
+"``locale`` Into localconfig.ini.php, with your prefered language code."
+msgstr ""
+
+#: ../../source/install/configuration.rst:67
+msgid ""
+"You can also limit available language by changing the "
+"``availableLocales`` option."
+msgstr ""
+
+#: ../../source/install/configuration.rst:69
+msgid ""
+"In this example, only 3 languages are available and the default language "
+"is italian:"
+msgstr ""
+
+#: ../../source/install/configuration.rst:76
+msgid ""
+"There is also a ``fallbackLocale`` option but it is not recommended to "
+"change it."
 msgstr ""
 
 #: ../../source/install/index.rst:3
@@ -799,7 +846,7 @@ msgstr ""
 
 #: ../../source/install/upgrade.rst:75
 msgid ""
-"Lizmap 3.0 requires that \"*.db\" files should be stored in var/db/, not "
+"Lizmap 3.0 requires that ``*.db`` files should be stored in var/db/, not "
 "in var/ as in 2.x"
 msgstr ""
 
@@ -1541,5 +1588,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "on old releases."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Lizmap 3.0 requires that \"*.db\" files"
+#~ " should be stored in var/db/, not "
+#~ "in var/ as in 2.x"
 #~ msgstr ""
 
