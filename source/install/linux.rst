@@ -319,14 +319,14 @@ Install
 .. note:: See http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html for more information on QGIS Server.
 
 Retrieve and install Lizmap Web Client
---------------------------------------------------------------
+=======================================
 
 .. code-block:: bash
 
    cd /var/www/
 
 With ZIP file
-~~~~~~~~~~~~~~~~~~~~~~~~
+--------------
 
 Retrieve the latest available stable version from https://github.com/3liz/lizmap-web-client/releases/
 
@@ -393,7 +393,7 @@ In case you get a ``500 - internal server error``, run again:
 
 
 Development version with git
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 .. warning:: The development version is always changing, and bugs can occur. Do not use it in production.
 

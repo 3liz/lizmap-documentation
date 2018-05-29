@@ -72,7 +72,7 @@ Then you can restore the backup, by giving the path where the backuped file wher
    lizmap/install/restore.sh /tmp
 
 
-.. note:: Lizmap 3.0 requires that "*.db" files should be stored in var/db/, not in var/ as in 2.x
+.. note:: Lizmap 3.0 requires that ``*.db`` files should be stored in var/db/, not in var/ as in 2.x
 
 
 Last step: launch the upgrade script
