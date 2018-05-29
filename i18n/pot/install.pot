@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-25 16:56+0200\n"
+"POT-Creation-Date: 2018-05-29 15:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,72 +20,136 @@ msgstr ""
 msgid "Advanced installation configuration"
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:5
-msgid "In some server, additionnal settings should be done into Lizmap. Settings should be set into the ``lizmap/var/config/`` directory."
-msgstr ""
-
-#: ../../source/install/advanced_install.rst:10
+#: ../../source/install/advanced_install.rst:6
 msgid "Lizmap behind a proxy/reverse proxy"
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:12
+#: ../../source/install/advanced_install.rst:8
 msgid "Sometimes, some URL in Lizmap may not what you wanted. For example, there are using the \"http\" protocol instead of the \"https\" protocol. Or it may content an unwanted port ( ``http://mydomain:5468/`` instead of ``http://mydomain/`` ). Or url may not contain the real domain name."
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:17
+#: ../../source/install/advanced_install.rst:13
 msgid "In most of case, this is because the web server or PHP-fpm is behind a master web server (which act as a proxy or reverse proxy), and then environment parameters given by PHP or the backend web server to Lizmap are wrong."
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:21
+#: ../../source/install/advanced_install.rst:17
 msgid "You can tell to Lizmap to force to HTTPS, to use the right domain or to use the right port."
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:23
+#: ../../source/install/advanced_install.rst:19
 msgid "In ``localconfig.ini.php``, you can use these following configuration parameters."
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:26
+#: ../../source/install/advanced_install.rst:22
 msgid "To force to use the port 80 (true) or the 8080 for example with the http protocol:"
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:34
+#: ../../source/install/advanced_install.rst:30
 msgid "To force to use the port 443 (true) or the 8443 for example with the https protocol:"
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:42
+#: ../../source/install/advanced_install.rst:38
 msgid "To specify the domain name of your lizmap application, if Lizmap cannot guess it:"
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:49
+#: ../../source/install/advanced_install.rst:45
 msgid "If the URL path of the backend web server does not correspond to the URL path of the frontal web server (ex: the proxy redirects urls like ``http://example.com/index.php`` to your web server ``http://backend.example.com/foo/bar/index.php``, You have to indicate the \"public\" URL path (basePath) and the backend URL Path (backendBasePath):"
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:60
+#: ../../source/install/advanced_install.rst:56
 msgid "If the reverse proxy redirect HTTPS request to HTTP, you must deactivate the HTTPS check:"
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:67
+#: ../../source/install/advanced_install.rst:63
 msgid "Starting with Lizmap 3.0.18 and 3.1.6, you can indicate to force all generated URL with the HTTPS protocol, when Lizmap doesn't know what is the protocol used by requests on the reverse proxy:"
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:79
+#: ../../source/install/advanced_install.rst:75
 msgid "Using environment variables"
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:81
+#: ../../source/install/advanced_install.rst:77
 msgid "If some credentials or parameters are available in environment variables, you can indicate use them into the ``localconfig.ini.php`` or ``profiles.ini.php`` files. Be sure the environment variables are available to the PHP-FPM process or the APACHE/NGINX process."
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:85
+#: ../../source/install/advanced_install.rst:81
 msgid "Into this files, use the syntax ``${VARIABLE_NAME}``."
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:87
+#: ../../source/install/advanced_install.rst:83
 msgid "For example, to indicate postgresql credentials stored into these variables :"
 msgstr ""
 
-#: ../../source/install/advanced_install.rst:96
+#: ../../source/install/advanced_install.rst:92
 msgid "You write this configuration into profiles.ini.php:"
+msgstr ""
+
+#: ../../source/install/configuration.rst:3
+msgid "Configuration of Lizmap"
+msgstr ""
+
+#: ../../source/install/configuration.rst:5
+msgid "In some server, additionnal settings should be done into Lizmap. Settings should be set into the ``lizmap/var/config/`` directory."
+msgstr ""
+
+#: ../../source/install/configuration.rst:9
+msgid "Configuration files"
+msgstr ""
+
+#: ../../source/install/configuration.rst:11
+msgid "There are several configuration files for Lizmap. There are into lizmap/var/config/."
+msgstr ""
+
+#: ../../source/install/configuration.rst:13
+msgid "Framework configuration files:"
+msgstr ""
+
+#: ../../source/install/configuration.rst:15
+msgid "``mainconfig.ini.php`` contains many configuration parameters, mainly for the framework used by Lizmap. You may want to modify some of them, like the available languages etc. **DON'T MODIFY mainconfig.ini.php**. Put parameters with their new values into ``localconfig.ini.pp`` instead!"
+msgstr ""
+
+#: ../../source/install/configuration.rst:19
+msgid "``localconfig.ini.php`` contains configuration parameters that are specific to your installation. So you put into it any parameters you can find into ``mainconfig.ini.php`` and you want to change."
+msgstr ""
+
+#: ../../source/install/configuration.rst:22
+msgid "``liveconfig.ini.php`` is containing parameters from ``mainconfig.ini.php`` that are changed during the live of the application."
+msgstr ""
+
+#: ../../source/install/configuration.rst:25
+msgid "During the execution of Lizmap, ``mainconfig.ini.php``, ``localconfig.ini.pp``, and ``liveconfig.ini.php`` are merged in this order. So parameters into ``liveconfig.ini.pp`` have higher priority that those into ``localconfig.ini.pp``, which in turn, have parameters having higher priority over parameters of ``mainconfig.ini.php``."
+msgstr ""
+
+#: ../../source/install/configuration.rst:30
+msgid "``liveconfig.ini.php`` and ``localconfig.ini.pp`` may not exists on old releases."
+msgstr ""
+
+#: ../../source/install/configuration.rst:33
+msgid "Other framework configuration files:"
+msgstr ""
+
+#: ../../source/install/configuration.rst:35
+msgid "``profiles.ini.php`` contains all credentials to access to databases, smtp servers, ldap etc. You should modify it to set these access parameters."
+msgstr ""
+
+#: ../../source/install/configuration.rst:37
+msgid "``installer.ini.php`` contains informations about Lizmap modules and their state. Don't touch it, and don't erase it between upgrades. You can delete it only if you want to reinstall Lizmap."
+msgstr ""
+
+#: ../../source/install/configuration.rst:41
+msgid "Lizmap configuration files:"
+msgstr ""
+
+#: ../../source/install/configuration.rst:43
+msgid "``lizmapConfig.ini.php`` contains configuration parameters specific to Lizmap."
+msgstr ""
+
+#: ../../source/install/configuration.rst:45
+msgid "``lizmapLogConfig.ini.php`` contains configuration for the Lizmap logger"
+msgstr ""
+
+#: ../../source/install/configuration.rst:47
+msgid "For backups and upgrades, you should keep ``localconfig.ini.pp``,  ``liveconfig.ini.php``, ``lizmapConfig.ini.php``, ``profiles.ini.php``, ``lizmapLogConfig.ini.php`` and  ``installer.ini.php``. They are all modified during the life or the installation of the application."
 msgstr ""
 
 #: ../../source/install/index.rst:3
@@ -208,7 +272,7 @@ msgstr ""
 #: ../../source/install/linux.rst:185
 #: ../../source/install/linux.rst:240
 #: ../../source/install/linux.rst:472
-#: ../../source/install/linux.rst:538
+#: ../../source/install/linux.rst:540
 msgid "This section is optional"
 msgstr ""
 
@@ -386,75 +450,75 @@ msgstr ""
 msgid "Check the following modules state into the *lizmap/var/config/mainconfig.ini.php* file"
 msgstr ""
 
-#: ../../source/install/linux.rst:507
+#: ../../source/install/linux.rst:509
 msgid "Run *php lizmap/install/installer.php*"
 msgstr ""
 
-#: ../../source/install/linux.rst:509
+#: ../../source/install/linux.rst:511
 msgid "Run *lizmap/install/set_rights.sh www-data www-data*"
 msgstr ""
 
-#: ../../source/install/linux.rst:511
+#: ../../source/install/linux.rst:513
 msgid "Redefine the path of the auth config into the *lizmap/var/config/admin/config.ini.php* and *lizmap/var/config/index/config.ini.php* files"
 msgstr ""
 
-#: ../../source/install/linux.rst:518
+#: ../../source/install/linux.rst:520
 msgid "Create a profile like this according to your ldap settings into the *lizmap/var/config/profiles.ini.php* file"
 msgstr ""
 
-#: ../../source/install/linux.rst:528
-msgid "Indicate the new configuration file into the *lizmap/var/config/mainconfig.ini.php* file"
+#: ../../source/install/linux.rst:530
+msgid "Indicate the new configuration file into the *lizmap/var/config/localconfig.ini.php* file"
 msgstr ""
 
-#: ../../source/install/linux.rst:536
+#: ../../source/install/linux.rst:538
 msgid "Editing tool: Configure the server with the database support"
 msgstr ""
 
-#: ../../source/install/linux.rst:541
+#: ../../source/install/linux.rst:543
 msgid "PostgreSQL"
 msgstr ""
 
-#: ../../source/install/linux.rst:543
+#: ../../source/install/linux.rst:545
 msgid "For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreSQL support for PHP."
 msgstr ""
 
-#: ../../source/install/linux.rst:550
+#: ../../source/install/linux.rst:552
 msgid "For editing, we strongly recommend using a PostgreSQL database. This greatly simplifies installation and retrieval of data entered by users."
 msgstr ""
 
-#: ../../source/install/linux.rst:553
+#: ../../source/install/linux.rst:555
 msgid "Spatialite"
 msgstr ""
 
-#: ../../source/install/linux.rst:556
+#: ../../source/install/linux.rst:558
 msgid "Enable Spatialite extension"
 msgstr ""
 
-#: ../../source/install/linux.rst:558
+#: ../../source/install/linux.rst:560
 msgid "To use editing on layers spatiatlite,you have to add the spatialite extension in PHP. You can follow these instructions to do so: http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html"
 msgstr ""
 
-#: ../../source/install/linux.rst:561
+#: ../../source/install/linux.rst:563
 msgid "Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it is not, then spatialities layers will not be used in the editing tool. You can always use PostgreSQL data for editing."
 msgstr ""
 
-#: ../../source/install/linux.rst:564
+#: ../../source/install/linux.rst:566
 msgid "Give the appropriate rights to the directory containing Spatialite databases"
 msgstr ""
 
-#: ../../source/install/linux.rst:566
+#: ../../source/install/linux.rst:568
 msgid "So that Lizmap Web Client can modify the data contained in databases Spatialite, we must ensure that **the Apache user (www-data) has well write access to the directory containing each Spatialite file**"
 msgstr ""
 
-#: ../../source/install/linux.rst:568
+#: ../../source/install/linux.rst:570
 msgid "For example, if a directory contains a QGIS project, which uses a Spatialite database placed in a **db** directory at the same level as the QGIS project:"
 msgstr ""
 
-#: ../../source/install/linux.rst:577
+#: ../../source/install/linux.rst:579
 msgid "So you have to give the rights in this way:"
 msgstr ""
 
-#: ../../source/install/linux.rst:584
+#: ../../source/install/linux.rst:586
 msgid "so if you want to install Lizmap to provide access to multiple map publishers, you should tell them to always create a **db** directory at the same level as the QGIS projects in the Lizmap Web Client directory. This will facilitate the admin work that just have to change the rights of this unique directory."
 msgstr ""
 
