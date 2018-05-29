@@ -2,10 +2,6 @@
 Advanced installation configuration
 ===============================================================
 
-In some server, additionnal settings should be done into Lizmap.
-Settings should be set into the ``lizmap/var/config/`` directory.
-
-
 Lizmap behind a proxy/reverse proxy
 ===================================
 

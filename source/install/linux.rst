@@ -500,6 +500,8 @@ Check the following modules state into the *lizmap/var/config/mainconfig.ini.php
 
 .. code-block:: bash
 
+   [modules]
+   ;...
    jacl2.access=1
    jauth.access=2
    jauthdb.access=1
@@ -525,7 +527,7 @@ Create a profile like this according to your ldap settings into the *lizmap/var/
    adminUserDn="cn=admin,ou=admins,dc=acme"
    adminPassword="Sup3rP4ssw0rd"
 
-Indicate the new configuration file into the *lizmap/var/config/mainconfig.ini.php* file
+Indicate the new configuration file into the *lizmap/var/config/localconfig.ini.php* file
 
 .. code-block:: bash
 

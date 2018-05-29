@@ -8,6 +8,7 @@ Installing and upgrading Lizmap
   upgrade
   linux
   windows
+  configuration
   advanced_install
 
 
