@@ -33,7 +33,7 @@ make gettext
 sphinx-intl update -d i18n
 ```
 
-Then you can improve po files by opening them with QtLinguist.
+Then you can improve po files by opening them with QtLinguist or Poedit.
 
 Build documentation
 ===================
