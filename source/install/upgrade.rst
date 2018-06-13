@@ -5,9 +5,46 @@ Upgrade Lizmap Web Client
 Upgrading between 3.x versions
 ===============================================================
 
-From 3.0 versions to upper, there is no need to backup data.
+From 3.0 versions to upper, here is how to upgrade.
 
-Simply replace lizmap files and call:
+Data backup
+--------------------------------------------------------------
+
+Backup your data into a directory (ex: /tmp) with the lizmap/install/backup.sh
+script, so you could reinstall them if the installation failed.
+
+.. code-block:: bash
+
+   lizmap/install/backup.sh /tmp
+
+If you want to backup by hand, you should backup at least these files:
+
+- var/jauth.db
+- var/logs.db
+- var/config/installer.ini.php
+- var/config/liveConfig.ini.php (if it exists)
+- var/config/lizmapConfig.ini.php
+- var/config/localconfig.ini.php
+- var/config/profiles.ini.php
+
+
+Replace lizmap files
+--------------------------------------------------------------
+
+Get the lizmap archive (by downloading an archive or by doing a git clone/pull)
+
+You should
+
+- replace the lib/ directory by the new lib/ directory
+- replace files into lizmap/ directory by the new lizmap/ files
+- If the replacement has erased some files that you've been backuped, restore
+  them with ``lizmap/install/restore.sh /tmp``
+
+Launch the installer
+--------------------------------------------------------------
+
+You have to launch the installer, it will upgrade some stuff: database tables,
+configuration etc..
 
 .. code-block:: bash
 
@@ -15,7 +52,16 @@ Simply replace lizmap files and call:
    php lizmap/install/installer.php
    sudo lizmap/install/clean_vartmp.sh
 
-Upgrading to Lizmap 3.0
+.. note::
+   if you upgrade from 3.0 or 3.1 to Lizmap 3.2, and if you are using the ldap
+   authentication with the ldapdao module, you have to know that this module
+   is included into Lizmap 3.2 and is pre-configured. So, before launching the
+   installer, you have to remove the ldapdao module you've installed, and you
+   have to configure the ldapdao module in a little different manner than when
+   installing it by hand. See the ldap configuration section in this manual.
+
+
+Upgrading from Lizmap 2.x to Lizmap 3.0
 ===============================================================
 
 First, be sure that your lizmap installation has been upgraded to the latest version
@@ -72,7 +118,7 @@ Then you can restore the backup, by giving the path where the backuped file wher
    lizmap/install/restore.sh /tmp
 
 
-.. note:: Lizmap 3.0 requires that ``*.db`` files should be stored in var/db/, not in var/ as in 2.x
+.. note:: Lizmap 3.x requires that ``*.db`` files should be stored in var/db/, not in var/ as in 2.x
 
 
 Last step: launch the upgrade script

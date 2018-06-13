@@ -9,6 +9,7 @@ Installing and upgrading Lizmap
   linux
   windows
   configuration
+  ldap
   advanced_install
 
 

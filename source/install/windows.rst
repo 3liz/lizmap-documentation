@@ -1,6 +1,7 @@
 =======================================
 Installing Lizmap Web Client on Windows
 =======================================
+
 This documentation shows the progress of the installation Lizmap Web Client on a Windows 10 environment. The other versions of Windows should not be a problem.
 
 .. note:: In this document, the version 3.0 of Lizmap Web Client is used. Be sure to adapt it according to the version you want to install (the latter is recommended).

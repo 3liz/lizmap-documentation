@@ -334,14 +334,13 @@ Retrieve the latest available stable version from https://github.com/3liz/lizmap
 
    cd /var/www/
    # Options
-   MYAPP=lizmap-web-client
-   VERSION=3.0.14
+   VERSION=3.1.12
    # Archive recovery with wget
-   wget https://github.com/3liz/$MYAPP/archive/$VERSION.zip
+   wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
    # Unzip archive
    unzip $VERSION.zip
    # virtual link for http://localhost/lm
-   ln -s /var/www/$MYAPP-$VERSION/lizmap/www/ /var/www/html/lm
+   ln -s /var/www/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lm
    # Remove archive
    rm $VERSION.zip
 
@@ -350,7 +349,7 @@ Set rights for Apache, so php scripts could write some temporary files or do cha
 
 .. code-block:: bash
 
-   cd /var/www/$MYAPP-$VERSION/
+   cd /var/www/lizmap-web-client--$VERSION/
    lizmap/install/set_rights.sh www-data www-data
 
 
@@ -388,7 +387,7 @@ In case you get a ``500 - internal server error``, run again:
 
 .. code-block:: bash
 
-   cd /var/www/$MYAPP-$VERSION/
+   cd /var/www/lizmap-web-client-$VERSION/
    lizmap/install/set_rights.sh www-data www-data
 
 
@@ -403,12 +402,11 @@ Development version with git
 
    apt-get install git
    cd /var/www/
-   MYAPP=lizmap-web-client
    VERSION=master
    # Clone the master branch
-   git clone https://github.com/3liz/lizmap-web-client.git $MYAPP-$VERSION
+   git clone https://github.com/3liz/lizmap-web-client.git lizmap-web-client-$VERSION
    # Go into the git repository
-   cd $MYAPP-$VERSION
+   cd lizmap-web-client-$VERSION
    # Create a personal branch for your changes
    git checkout -b mybranch
 
@@ -416,7 +414,7 @@ Development version with git
 
 .. code-block:: bash
 
-   cd /var/www/$MYAPP-$VERSION
+   cd /var/www/lizmap-web-client-$VERSION
    # Check that you are on the branch: mybranch
    git checkout mybranch
 
@@ -425,7 +423,7 @@ Development version with git
    git commit -am "Your commit message"
 
    # Save your configuration files!
-   cp lizmap/var/jauth.db /tmp/jauth.db && cp lizmap/var/logs.db /tmp/logs.db && cp lizmap/var/config/lizmapConfig.ini.php /tmp/lizmapConfig.ini.php
+   lizmap/install/backup.sh /tmp
 
    # Update your master branch
    git checkout master && git fetch origin && git merge origin/master
@@ -442,7 +440,7 @@ Give the appropriate rights to directories and files
 
 .. code-block:: bash
 
-   cd /var/www/$MYAPP-$VERSION
+   cd /var/www/lizmap-web-client-$VERSION
    chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
    chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
 
@@ -467,73 +465,7 @@ http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=mon
 
 .. note:: Access to the WMS and WFS servers can be limited by assigning privileges to specific repositories, see the administration section.
 
-LDAP authentication
---------------------------------------------------------------
-.. note:: This section is optional
 
-The advantage of using LDAP is that all the users and groups information can be held on one server which is centrally managed.
-
-In order to enable the LDAP support, you have to change the authentication method in the files as follows:
-
-See ldapdao-module project at https://github.com/jelix/ldapdao-module for downloading, installing and configuring module
-
-Install the php ldap extension on your linux system
-
-.. code-block:: bash
-
-   apt-get install php5.6-ldap
-   
-or
-
-.. code-block:: bash
-   
-   apt-get install php7.x-ldap
-
-Declare the ldapdao module into the *lizmap/var/config/localconfig.ini.php* file
-
-.. code-block:: bash
-
-   [modules]
-   ldapdao.access=1
-
-Check the following modules state into the *lizmap/var/config/mainconfig.ini.php* file
-
-.. code-block:: bash
-
-   [modules]
-   ;...
-   jacl2.access=1
-   jauth.access=2
-   jauthdb.access=1
-   
-Run *php lizmap/install/installer.php*
-
-Run *lizmap/install/set_rights.sh www-data www-data*
- 
-Redefine the path of the auth config into the *lizmap/var/config/admin/config.ini.php* and *lizmap/var/config/index/config.ini.php* files
-
-.. code-block:: bash
-
-   [coordplugins]
-   auth="authldap.coord.ini.php"
-   
-Create a profile like this according to your ldap settings into the *lizmap/var/config/profiles.ini.php* file
-
-.. code-block:: bash
-
-   [ldap:myldap]
-   hostname=localhost
-   port=389
-   adminUserDn="cn=admin,ou=admins,dc=acme"
-   adminPassword="Sup3rP4ssw0rd"
-
-Indicate the new configuration file into the *lizmap/var/config/localconfig.ini.php* file
-
-.. code-block:: bash
-
-   [coordplugins]
-   auth="authldap.coord.ini.php"
-   
 Editing tool: Configure the server with the database support
 =============================================================================
 
