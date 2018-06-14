@@ -210,7 +210,15 @@ In the web application Lizmap Web Client, a click on a map object will trigger t
 * the popup **has been activated** through the plugin for the layer or the group
 * the user has clicked on an **area of the canvas** where data for the layer with active popups are displayed.
 
-.. note:: For point layers you need to click in the middle of the point to display the popup.
+.. note:: For point layers you need to click in the middle of the point to display the popup. The tolerance can be setup in tab *Map options* then **Map tools**.
+
+You can update where the popup is displayed in the web interface in *Map options* then **Map interface**. You can choose between:
+* *dock*
+* *minidock*
+* *map*
+* *bottomdock*
+* *right-dock*
+
 
 Auto popup
 -----------
