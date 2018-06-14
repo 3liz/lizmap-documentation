@@ -10,7 +10,7 @@ Update local
 
 ```
 cd source
-sphinx-intl -l fr
+sphinx-intl update --language=fr
 ```
 
 * Translate the updated \*.po files with your favorite localize software

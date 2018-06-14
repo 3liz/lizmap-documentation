@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 23:50+0200\n"
-"PO-Revision-Date: 2018-06-04 08:29+0000\n"
-"Last-Translator: João Gaspar <joao.f.r.gaspar@gmail.com>\n"
+"POT-Creation-Date: 2018-06-14 10:46+0200\n"
+"PO-Revision-Date: 2018-06-14 07:15+0000\n"
+"Last-Translator: rldhont <rldhont@gmail.com>\n"
 "Language: pt\n"
 "Language-Team: Portuguese (http://www.transifex.com/3liz-1/lizmap-"
 "documentation/language/pt/)\n"
@@ -168,7 +168,7 @@ msgstr ""
 #: ../../source/install/configuration.rst:22
 msgid ""
 "``liveconfig.ini.php`` is containing parameters from "
-"``mainconfig.ini.php`` that are changed during the live of the "
+"``mainconfig.ini.php`` that are changed during the life of the "
 "application."
 msgstr ""
 
@@ -291,29 +291,24 @@ msgstr ""
 "grupos podem estar armazenadas num servidor gerido a nível central."
 
 #: ../../source/install/ldap.rst:7
-#, fuzzy
 msgid ""
 "The first thing to do is to install the php ldap extension on your linux "
 "system:"
-msgstr "Instalar a extensão ldap do php no seu sistema Linux"
+msgstr ""
 
 #: ../../source/install/ldap.rst:13
 msgid "or"
 msgstr "ou"
 
 #: ../../source/install/ldap.rst:20
-#, fuzzy
 msgid ""
 "Then, in order to enable the LDAP support Lizmap, you have to change the "
 "authentication method in the configuration as follows."
 msgstr ""
-"Para ativar o suporte LDAP, deverá alterar o método de autenticação da "
-"seguinte maneira:"
 
 #: ../../source/install/ldap.rst:24
-#, fuzzy
 msgid "Enabling ldap into Lizmap 3.2"
-msgstr "Atualização para o Lizmap 3.0"
+msgstr ""
 
 #: ../../source/install/ldap.rst:26
 msgid "In the localconfig.ini.php, you have to set these parameters:"
@@ -390,15 +385,11 @@ msgid "Run *lizmap/install/set_rights.sh www-data www-data*"
 msgstr "Execute *lizmap/install/set_rights.sh www-data www-data*"
 
 #: ../../source/install/ldap.rst:99
-#, fuzzy
 msgid ""
 "Redefine the path of the authentication config file into the "
 "*lizmap/var/config/admin/config.ini.php* and "
 "*lizmap/var/config/index/config.ini.php* files:"
 msgstr ""
-"Redefinir o caminho para auth config nos ficheiros "
-"*lizmap/var/config/admin/config.ini.php* e "
-"*lizmap/var/config/index/config.ini.php*"
 
 #: ../../source/install/ldap.rst:108
 msgid ""
@@ -1143,11 +1134,8 @@ msgid "Upgrading between 3.x versions"
 msgstr "Atualização entre versões 3.x"
 
 #: ../../source/install/upgrade.rst:8
-#, fuzzy
 msgid "From 3.0 versions to upper, here is how to upgrade."
 msgstr ""
-"A partir da versões 3.0 e superiores, não há necessidade de proceder ao "
-"backup dos dados."
 
 #: ../../source/install/upgrade.rst:11 ../../source/install/upgrade.rst:73
 msgid "Data backup"
@@ -1248,9 +1236,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/install/upgrade.rst:65
-#, fuzzy
 msgid "Upgrading from Lizmap 2.x to Lizmap 3.0"
-msgstr "Atualização para o Lizmap 3.0"
+msgstr ""
 
 #: ../../source/install/upgrade.rst:67
 msgid ""
@@ -2347,9 +2334,32 @@ msgstr ""
 "da cache\" em **C:\\\\webserver\\\\cache\\\\preprod**."
 
 #~ msgid ""
+#~ "``liveconfig.ini.php`` is containing parameters "
+#~ "from ``mainconfig.ini.php`` that are changed"
+#~ " during the live of the application."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order to enable the LDAP "
+#~ "support, you have to change the "
+#~ "authentication method in the files as"
+#~ " follows:"
+#~ msgstr ""
+
+#~ msgid ""
 #~ "See ldapdao-module project at "
 #~ "https://github.com/jelix/ldapdao-module for "
 #~ "downloading, installing and configuring module"
+#~ msgstr ""
+
+#~ msgid "Install the php ldap extension on your linux system"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Redefine the path of the auth "
+#~ "config into the "
+#~ "*lizmap/var/config/admin/config.ini.php* and "
+#~ "*lizmap/var/config/index/config.ini.php* files"
 #~ msgstr ""
 
 #~ msgid ""
@@ -2357,173 +2367,18 @@ msgstr ""
 #~ " the *lizmap/var/config/localconfig.ini.php* file"
 #~ msgstr ""
 
+#~ msgid "From 3.0 versions to upper, there is no need to backup data."
+#~ msgstr ""
+
 #~ msgid "Simply replace lizmap files and call:"
-#~ msgstr "Basta substituir os ficheiros lizmap e correr:"
+#~ msgstr ""
+
+#~ msgid "Upgrading to Lizmap 3.0"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Lizmap 3.0 requires that ``*.db`` files"
 #~ " should be stored in var/db/, not "
 #~ "in var/ as in 2.x"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You indicate such informations into the"
-#~ " `searchAttributes` property. It is a "
-#~ "pair of names, `<ldap attribute>:<table "
-#~ "field>`, separated by a comma."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In this example, "
-#~ "`searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"`:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "the value of the `firstname` ldap "
-#~ "attribute will be stored into a "
-#~ "field that have the same name, as"
-#~ " there is no field name nor "
-#~ "`:`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "there will not be mapping for the"
-#~ " `dn` property. There is a `:` "
-#~ "without field name. It will be "
-#~ "readed from ldap, and can be used"
-#~ " into the `bindUserDN` DN template. "
-#~ "(see below)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The `searchUserFilter` should contain the "
-#~ "ldap query, and a `%%LOGIN%%` "
-#~ "placeholder that will be replaced by "
-#~ "the login given by the user."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Example: "
-#~ "`searchUserFilter=\"(&(objectClass=posixAccount)(uid=%%LOGIN%%))\"`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You may also indicate the base DN"
-#~ " for the search, into `searchUserBaseDN`."
-#~ " Example: `searchUserBaseDN=\"ou=ADAM "
-#~ "users,o=Microsoft,c=US\"`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that you can indicate several "
-#~ "search filters, if you have complex "
-#~ "ldap structure. Use `[]` to indicate "
-#~ "an item list:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "``` "
-#~ "searchUserFilter[]=\"(&(objectClass=posixAccount)(uid=%%LOGIN%%))\""
-#~ " searchUserFilter[]=\"(&(objectClass=posixAccount)(cn=%%LOGIN%%))\""
-#~ " ```"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "*Building the DN from the login "
-#~ "given by the user*: bindUserDN should"
-#~ " contain a DN, with a `%%LOGIN%%` "
-#~ "placeholder that will be replaced by "
-#~ "the login."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Example: `bindUserDN=\"uid=%%LOGIN%%,ou=users,dc=XY,dc=fr\"`."
-#~ " If the user give `john.smith` as "
-#~ "a login, the authentication will be "
-#~ "made with the DN "
-#~ "`bindUserDN=\"uid=john.smith,ou=users,dc=XY,dc=fr\"`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For some LDAP, the DN could be "
-#~ "a simple string, for example an "
-#~ "email. You could then set "
-#~ "`bindUserDN=\"%%LOGIN%%@company.local\"`. Or even "
-#~ "`bindUserDN=\"%%LOGIN%%\"` if the login can"
-#~ " type the full value of the DN"
-#~ " or an email or else.. (Probably "
-#~ "it's not recommended to allow a "
-#~ "user to type himself its full DN,"
-#~ " it can be a security issue)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For the first case, bindUserDn should"
-#~ " contain a DN, with some `%?%` "
-#~ "placeholders that will be replaced by"
-#~ " corresponding attributes value. Example: "
-#~ "`bindUserDN=\"uid=%?%,ou=users,dc=XY,dc=fr\"`. Here it "
-#~ "replaces the `%?%` by the value of"
-#~ " the `uid` attribute readed from the"
-#~ " user's attributes. The attribute name "
-#~ "should be present into the "
-#~ "`searchAttributes` configuration property, even "
-#~ "with no field mapping. Ex: "
-#~ "`...,uid:,...`. See above."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For the second case, just indicate "
-#~ "the attribute name, prefixed with a "
-#~ "`$`. Example: `bindUserDN=\"$dn\"`. Here it"
-#~ " takes the `dn` attribute readed from"
-#~ " the search, and use its full "
-#~ "value as the DN to login against"
-#~ " the ldap server. It is useful "
-#~ "for some LDAP server like sometimes "
-#~ "Active Directory that need a full "
-#~ "DN specific for each user. The "
-#~ "attribute name should be present into"
-#~ " the `searchAttributes` configuration property,"
-#~ " even with no field mapping. Ex: "
-#~ "`...,dn:,...`. See above."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that you can indicate several "
-#~ "dn templates, if you have complex "
-#~ "ldap structure. Use `[]` to indicate "
-#~ "an item list:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "``` bindUserDN[]=\"uid=%?%,ou=users,dc=XY,dc=fr\" "
-#~ "bindUserDN[]=\"cn=%?%,ou=users,dc=XY,dc=fr\" ```"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Example: "
-#~ "`searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%USERDN%%))\"`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "`%%USERDN%%` is replaced by the user "
-#~ "dn.`%%LOGIN%%` is replaced by the login."
-#~ " You can also use any ldap "
-#~ "attributes you indicate into "
-#~ "`searchAttributes`, between `%%`. Example: "
-#~ "`searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%givenName%%))\"`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "With `searchGroupProperty`, you must indicate"
-#~ " the ldap attribute that contains the"
-#~ " group name. Ex: `searchGroupProperty=\"cn\"`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You may also indicate the base DN"
-#~ " for the search, into `searchGroupBaseDN`."
-#~ " Example: `searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"`."
 #~ msgstr ""
 

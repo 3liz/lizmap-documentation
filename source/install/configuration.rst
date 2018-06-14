@@ -20,7 +20,7 @@ Framework configuration files:
   your installation. So you put into it any parameters you can find into
   ``mainconfig.ini.php`` and you want to change.
 * ``liveconfig.ini.php`` is containing parameters from ``mainconfig.ini.php``
-  that are changed during the live of the application.
+  that are changed during the life of the application.
 
 During the execution of Lizmap, ``mainconfig.ini.php``, ``localconfig.ini.pp``,
 and ``liveconfig.ini.php`` are merged in this order. So parameters into ``liveconfig.ini.pp``

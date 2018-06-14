@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 23:50+0200\n"
-"PO-Revision-Date: 2018-05-29 18:38+0000\n"
-"Last-Translator: rldhont <rldhont@gmail.com>\n"
+"POT-Creation-Date: 2018-06-14 10:46+0200\n"
+"PO-Revision-Date: 2018-06-14 08:40+0000\n"
+"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>\n"
 "Language: fr\n"
 "Language-Team: French (http://www.transifex.com/3liz-1/lizmap-"
 "documentation/language/fr/)\n"
@@ -43,6 +43,11 @@ msgid ""
 " may content an unwanted port ( ``http://mydomain:5468/`` instead of "
 "``http://mydomain/`` ). Or url may not contain the real domain name."
 msgstr ""
+"Parfois, certaines URLs dans Lizmap peuvent ne pas être celles que vous "
+"attendez. Par exemple, elles sont utilisées avec le protocole \"http\" au"
+" lieu du protocol \"https\". Ou elles peuvent contenir un numéro de port "
+"non désiré ( ``http://mydomain:5468/`` au lieu de ``http://mydomain/`` )."
+" Ou encore elles peuvent ne pas contenir le bon nom de domaine."
 
 #: ../../source/install/advanced_install.rst:13
 msgid ""
@@ -51,36 +56,50 @@ msgid ""
 "environment parameters given by PHP or the backend web server to Lizmap "
 "are wrong."
 msgstr ""
+"Dans la plupart des cas, c'est à cause du serveur web ou PHP-fpm qui sont"
+" derrière un serveur web maître (qui joue le rôle d'un proxy ou reverse-"
+"proxy), et donc les paramètres d'environnement donnés par PHP ou par le "
+"serveur web applicatif à Lizmap ne sont pas bons."
 
 #: ../../source/install/advanced_install.rst:17
 msgid ""
 "You can tell to Lizmap to force to HTTPS, to use the right domain or to "
 "use the right port."
 msgstr ""
+"Vous pouvez dire à Lizmap de forcer les urls en HTTPS, d'utiliser le bon "
+"domaine, ou d'utiliser le bon port."
 
 #: ../../source/install/advanced_install.rst:19
 msgid ""
 "In ``localconfig.ini.php``, you can use these following configuration "
 "parameters."
 msgstr ""
+"Dans ``localconfig.ini.php``, vous pouvez utiliser ces paramètres de "
+"configuration suivants."
 
 #: ../../source/install/advanced_install.rst:22
 msgid ""
 "To force to use the port 80 (true) or the 8080 for example with the http "
 "protocol:"
 msgstr ""
+"Pour forcer à indiquer le port 80 (true) ou le port 8080 par exemple avec"
+" le protocol http :"
 
 #: ../../source/install/advanced_install.rst:30
 msgid ""
 "To force to use the port 443 (true) or the 8443 for example with the "
 "https protocol:"
 msgstr ""
+"Pour forcer à indiquer le port 443 (true) ou le port 8443 par exemple "
+"avec le protocol https :"
 
 #: ../../source/install/advanced_install.rst:38
 msgid ""
 "To specify the domain name of your lizmap application, if Lizmap cannot "
 "guess it:"
 msgstr ""
+"Pour spécifier le nom de domaine de votre application Lizmap, si Lizmap "
+"n'arrive pas à le deviner :"
 
 #: ../../source/install/advanced_install.rst:45
 msgid ""
@@ -91,12 +110,20 @@ msgid ""
 "the \"public\" URL path (basePath) and the backend URL Path "
 "(backendBasePath):"
 msgstr ""
+"Si le chemin de l'URL du serveur web backend ne correspond pas au chemin "
+"de l'URL du serveur web frontal (ex : le proxy redirige les urls comme "
+"``http://example.com/index.php`` vers votre serveur web "
+"``http://backend.example.com/foo/bar/index.php``), vous devez indiquer le"
+" chemin d'URL \"publique\" (basePath) et le chemin d'URL privée "
+"(backendBasePath) :"
 
 #: ../../source/install/advanced_install.rst:56
 msgid ""
 "If the reverse proxy redirect HTTPS request to HTTP, you must deactivate "
 "the HTTPS check:"
 msgstr ""
+"Si le reverse proxy redirige les requêtes HTTPS vers HTTP, vous devez "
+"désactiver la vérification HTTPS:"
 
 #: ../../source/install/advanced_install.rst:63
 msgid ""
@@ -104,10 +131,13 @@ msgid ""
 "generated URL with the HTTPS protocol, when Lizmap doesn't know what is "
 "the protocol used by requests on the reverse proxy:"
 msgstr ""
+"Depuis Lizmap 3.0.18 et 3.1.6, vous pouvez indiquer de forcer toutes les "
+"urls vers le protocole HTTPS, quand Lizmap ne sait pas quel est le "
+"protocol utilisé pour accéder au serveur frontal."
 
 #: ../../source/install/advanced_install.rst:75
 msgid "Using environment variables"
-msgstr ""
+msgstr "Utiliser les variables d'environnements"
 
 #: ../../source/install/advanced_install.rst:77
 msgid ""
@@ -116,44 +146,56 @@ msgid ""
 "``profiles.ini.php`` files. Be sure the environment variables are "
 "available to the PHP-FPM process or the APACHE/NGINX process."
 msgstr ""
+"Si des informations d'accès ou des paramètres sont disponibles dans des "
+"variables d'environnement, vous pouvez les indiquer dans les fichiers "
+"``localconfig.ini.php`` ou ``profiles.ini.php``. Soyez certains que ces "
+"variables d'environnements existent dans le contexte du processus PHP-FPM"
+" ou Apache/Nginx."
 
 #: ../../source/install/advanced_install.rst:81
 msgid "Into this files, use the syntax ``${VARIABLE_NAME}``."
-msgstr ""
+msgstr "Dabs ces fichiers, utilisez la syntaxe ``${VARIABLE_NAME}``."
 
 #: ../../source/install/advanced_install.rst:83
 msgid ""
 "For example, to indicate postgresql credentials stored into these "
 "variables :"
 msgstr ""
+"Par exemple, pour indiquer les paramètres d’accès à Postgresql qui sont "
+"stockés dans ces variables :"
 
 #: ../../source/install/advanced_install.rst:92
 msgid "You write this configuration into profiles.ini.php:"
-msgstr ""
+msgstr "Vous écrivez cette configuration dans profiles.ini.php :"
 
 #: ../../source/install/configuration.rst:3
 msgid "Configuration of Lizmap"
-msgstr ""
+msgstr "Configuration de Lizmap"
 
 #: ../../source/install/configuration.rst:5
 msgid ""
 "In some server, additionnal settings should be done into Lizmap. Settings"
 " should be set into the ``lizmap/var/config/`` directory."
 msgstr ""
+"Sur certains serveurs, des paramètrages supplémentaires doivent être fait"
+" dans Lizmap. Leurs valeurs doivent être indiquées dans le répertoire "
+"``lizmap/var/config/``."
 
 #: ../../source/install/configuration.rst:9
 msgid "Configuration files"
-msgstr ""
+msgstr "Fichiers de configuration"
 
 #: ../../source/install/configuration.rst:11
 msgid ""
 "There are several configuration files for Lizmap. There are into "
 "lizmap/var/config/."
 msgstr ""
+"Il y a plusieurs fichiers de configuration dans lizmap. Ils sont dans "
+"lizmap/var/config/."
 
 #: ../../source/install/configuration.rst:13
 msgid "Framework configuration files:"
-msgstr ""
+msgstr "Fichiers de configuration du framework :"
 
 #: ../../source/install/configuration.rst:15
 msgid ""
@@ -162,6 +204,11 @@ msgid ""
 "the available languages etc. **DON'T MODIFY mainconfig.ini.php**. Put "
 "parameters with their new values into ``localconfig.ini.pp`` instead!"
 msgstr ""
+"``mainconfig.ini.php`` contient beaucoup de paramètres de configuration, "
+"principalement pour le framework utilisé par Lizmap. Vous voudriez "
+"probablement en modifier certaine, comme la liste des langues disponibles"
+" etc. **NE MODIFIEZ PAS mainconfig.ini.php**. Mettez les paramètres avec "
+"leurs nouvelles valeurs plutôt dans ``localconfig.ini.pp`` !"
 
 #: ../../source/install/configuration.rst:19
 msgid ""
@@ -169,13 +216,19 @@ msgid ""
 "specific to your installation. So you put into it any parameters you can "
 "find into ``mainconfig.ini.php`` and you want to change."
 msgstr ""
+"``localconfig.ini.php`` contient des paramètres de configuration qui sont"
+" spécifiques à votre installation. Ainsi mettez-y tous les paramètres de "
+"``mainconfig.ini.php`` que vous voulez modifier."
 
 #: ../../source/install/configuration.rst:22
+#, fuzzy
 msgid ""
 "``liveconfig.ini.php`` is containing parameters from "
-"``mainconfig.ini.php`` that are changed during the live of the "
+"``mainconfig.ini.php`` that are changed during the life of the "
 "application."
 msgstr ""
+"``liveconfig.ini.php`` contient des paramètres de ``mainconfig.ini.php`` "
+"qui sont changés durant l'execution de l'application."
 
 #: ../../source/install/configuration.rst:25
 msgid ""
@@ -185,16 +238,23 @@ msgid ""
 " those into ``localconfig.ini.pp``, which in turn, have parameters having"
 " higher priority over parameters of ``mainconfig.ini.php``."
 msgstr ""
+"Durant l'execution de Lizmap, ``mainconfig.ini.php``, "
+"``localconfig.ini.pp``, et ``liveconfig.ini.php`` sont fusionnés dans cet"
+" ordre. Ainsi les paramètres dans ``liveconfig.ini.pp`` ont la priority "
+"sur ceux de ``localconfig.ini.pp``, qui a son tour a des paramètres qui "
+"ont la priorité sur les paramètres de ``mainconfig.ini.php``."
 
 #: ../../source/install/configuration.rst:30
 msgid ""
 "``liveconfig.ini.php`` and ``localconfig.ini.pp`` may not exists on old "
 "releases."
 msgstr ""
+"``liveconfig.ini.php`` et ``localconfig.ini.pp`` n'existent pas dans des "
+"vieilles versions."
 
 #: ../../source/install/configuration.rst:33
 msgid "Other framework configuration files:"
-msgstr ""
+msgstr "Autres fichiers de configuration du framework :"
 
 #: ../../source/install/configuration.rst:35
 msgid ""
@@ -202,6 +262,9 @@ msgid ""
 "smtp servers, ldap etc. You should modify it to set these access "
 "parameters."
 msgstr ""
+"``profiles.ini.php`` contient tous les paramètres d’accès aux base de "
+"données, au serveur SMTP, au ldap etc. Vous devez le modifier pour "
+"définir ces paramètres d’accès."
 
 #: ../../source/install/configuration.rst:37
 msgid ""
@@ -209,20 +272,26 @@ msgid ""
 "their state. Don't touch it, and don't erase it between upgrades. You can"
 " delete it only if you want to reinstall Lizmap."
 msgstr ""
+"``installer.ini.php`` contient des informations sur les modules Lizmap et"
+" leur état. Ne modifiez pas ce fichier, et ne l'effacez pas entre deux "
+"mises à jour. Vous pouvez le supprimer uniquement si vous réinstallez "
+"Lizmap."
 
 #: ../../source/install/configuration.rst:41
 msgid "Lizmap configuration files:"
-msgstr ""
+msgstr "Fichiers de configuration de Lizmap :"
 
 #: ../../source/install/configuration.rst:43
 msgid ""
 "``lizmapConfig.ini.php`` contains configuration parameters specific to "
 "Lizmap."
 msgstr ""
+"``lizmapConfig.ini.php`` contient les paramètres de configuration "
+"spécifiques à Lizmap."
 
 #: ../../source/install/configuration.rst:45
 msgid "``lizmapLogConfig.ini.php`` contains configuration for the Lizmap logger"
-msgstr ""
+msgstr "``lizmapLogConfig.ini.php`` contient la configuration du logger de Lizmap."
 
 #: ../../source/install/configuration.rst:47
 msgid ""
@@ -231,16 +300,23 @@ msgid ""
 "``lizmapLogConfig.ini.php`` and  ``installer.ini.php``. They are all "
 "modified during the life or the installation of the application."
 msgstr ""
+"Pour les sauvegardes et les mises à jour, vous devez préserver les "
+"fichiers ``localconfig.ini.pp``, ``liveconfig.ini.php``, "
+"``lizmapConfig.ini.php``, ``profiles.ini.php``, "
+"``lizmapLogConfig.ini.php`` et ``installer.ini.php``. Ils sont tous "
+"modifiés durant la vie ou l'installation de l'application."
 
 #: ../../source/install/configuration.rst:53
 msgid "Setting language"
-msgstr ""
+msgstr "Configuration de la langue"
 
 #: ../../source/install/configuration.rst:55
 msgid ""
 "Lizmap detects automatically the language of the user (given by his "
 "browser), and it supports many languages."
 msgstr ""
+"Lizmap détecte automatiquement la langue de l'utilisateur (donnée par son"
+" navigateur), et supporte plusieurs langues."
 
 #: ../../source/install/configuration.rst:58
 msgid ""
@@ -248,36 +324,50 @@ msgid ""
 "pt_PT, el_GR, de_DE, pl_PL, ru_RU, fi_FI, gl_ES, sv_SE, nl_NL, ro_RO, "
 "hu_HU."
 msgstr ""
+"Les langues disponibles dans Lizmap sont : fr_FR, en_US, it_IT, es_ES, "
+"eu_ES, pt_PT, el_GR, de_DE, pl_PL, ru_RU, fi_FI, gl_ES, sv_SE, nl_NL, "
+"ro_RO, hu_HU."
 
 #: ../../source/install/configuration.rst:61
 msgid ""
 "If the browser of the user indicates an unsupported language code, the "
 "default language of Lizmap is used, and is en_US."
 msgstr ""
+"Si le navigateur de l'utilisateur indique une langue non prise en charge,"
+" la langue par défaut de Lizmap, en_US, est utilisée."
 
 #: ../../source/install/configuration.rst:64
 msgid ""
 "You can change the default language of Lizmap by setting the parameter "
 "``locale`` Into localconfig.ini.php, with your prefered language code."
 msgstr ""
+"Vous pouvez changer la langue par défaut de Lizmap en modifiant le "
+"paramètre de configuration ``locale`` dans localconfig.ini.php, qui doit "
+"contenir le code de votre langue préférée."
 
 #: ../../source/install/configuration.rst:67
 msgid ""
 "You can also limit available language by changing the "
 "``availableLocales`` option."
 msgstr ""
+"Vous pouvez aussi limiter le nombre de langue prise en charge, en "
+"modifiant l'option ``availableLocales``."
 
 #: ../../source/install/configuration.rst:69
 msgid ""
 "In this example, only 3 languages are available and the default language "
 "is italian:"
 msgstr ""
+"Dans cet exemple, seulement 3 langues sont disponibles et la langue par "
+"défaut est l'italien :"
 
 #: ../../source/install/configuration.rst:76
 msgid ""
 "There is also a ``fallbackLocale`` option but it is not recommended to "
 "change it."
 msgstr ""
+"Il y a aussi l'option ``fallbackLocale`` mais il n'est pas recommandé de "
+"la modifier."
 
 #: ../../source/install/index.rst:3
 msgid "Installing and upgrading Lizmap"
@@ -301,7 +391,7 @@ msgstr ""
 msgid ""
 "The first thing to do is to install the php ldap extension on your linux "
 "system:"
-msgstr "Installez l'extension PHP LDAP sur votre système linux"
+msgstr "Installer l'extension ldap pour PHP sur votre système Linux"
 
 #: ../../source/install/ldap.rst:13
 msgid "or"
@@ -313,17 +403,20 @@ msgid ""
 "Then, in order to enable the LDAP support Lizmap, you have to change the "
 "authentication method in the configuration as follows."
 msgstr ""
-"Pour activer le support LDAP, vous devez modifier la méthode "
-"d'authentification dans les fichiers comme suit:"
+"Pour activer le support LDAP, vous devez changer la méthode "
+"d'authentification dans les fichiers comme ci-dessous :"
 
 #: ../../source/install/ldap.rst:24
 #, fuzzy
 msgid "Enabling ldap into Lizmap 3.2"
-msgstr "Mise à jour vers Lizmap 3.0"
+msgstr "Mettre à jour vers Lizmap 3.0"
 
 #: ../../source/install/ldap.rst:26
+#, fuzzy
 msgid "In the localconfig.ini.php, you have to set these parameters:"
 msgstr ""
+"Dans ``localconfig.ini.php``, vous pouvez utiliser ces paramètres de "
+"configuration suivants."
 
 #: ../../source/install/ldap.rst:36
 msgid ""
@@ -386,6 +479,8 @@ msgid ""
 "Check the following modules state into the "
 "*lizmap/var/config/mainconfig.ini.php* file"
 msgstr ""
+"Vérifier le statut des modules suivant dans le fichier "
+"*lizmap/var/config/mainconfig.ini.php*"
 
 #: ../../source/install/ldap.rst:95
 msgid "Run *php lizmap/install/installer.php*"
@@ -393,7 +488,7 @@ msgstr "Lancer *php lizmap/install/installer.php*"
 
 #: ../../source/install/ldap.rst:97
 msgid "Run *lizmap/install/set_rights.sh www-data www-data*"
-msgstr ""
+msgstr "Lancer *lizmap/install/set_rights.sh www-data www-data*"
 
 #: ../../source/install/ldap.rst:99
 #, fuzzy
@@ -402,9 +497,9 @@ msgid ""
 "*lizmap/var/config/admin/config.ini.php* and "
 "*lizmap/var/config/index/config.ini.php* files:"
 msgstr ""
-"Redéfinir le chemin de l'auth config dans les fichiers "
-"*lizmap/var/config/admin/config.ini.php* et "
-"*lizmap/var/config/index/config.ini.php*"
+"Redefinissez le chemin du fichier de configuration de l'authentification "
+"dans les fichiers *lizmap/var/config/admin/config.ini.php* et "
+"*lizmap/var/config/index/config.ini.php*."
 
 #: ../../source/install/ldap.rst:108
 msgid ""
@@ -723,7 +818,7 @@ msgstr ""
 
 #: ../../source/install/linux.rst:57
 msgid "php7 configuration"
-msgstr ""
+msgstr "Configuration php7"
 
 #: ../../source/install/linux.rst:61
 msgid ""
@@ -1147,11 +1242,8 @@ msgid "Upgrading between 3.x versions"
 msgstr "Mise à jour entre versions 3.x"
 
 #: ../../source/install/upgrade.rst:8
-#, fuzzy
 msgid "From 3.0 versions to upper, here is how to upgrade."
 msgstr ""
-"Entre les versions 3.0 et supérieur, il n'est pas nécessaire de faire des"
-" sauvegardes de données."
 
 #: ../../source/install/upgrade.rst:11 ../../source/install/upgrade.rst:73
 msgid "Data backup"
@@ -1254,7 +1346,7 @@ msgstr ""
 #: ../../source/install/upgrade.rst:65
 #, fuzzy
 msgid "Upgrading from Lizmap 2.x to Lizmap 3.0"
-msgstr "Mise à jour vers Lizmap 3.0"
+msgstr "Mettre à jour vers Lizmap 3.0"
 
 #: ../../source/install/upgrade.rst:67
 msgid ""
@@ -1989,21 +2081,23 @@ msgstr ""
 
 #: ../../source/install/windows.rst:432
 msgid "**id** = rep1"
-msgstr ""
+msgstr "**id** = rep1"
 
 #: ../../source/install/windows.rst:433
 msgid "**label** = A repository label (you will be able to change it afterwards)"
-msgstr ""
+msgstr "**label** = Un nom pour le dépôt (vous pourrez le changer plus tard)"
 
 #: ../../source/install/windows.rst:434
 msgid "**path** = /webserver/data/prod/rep1/"
-msgstr ""
+msgstr "**path** = /webserver/data/prod/rep1/"
 
 #: ../../source/install/windows.rst:436
 msgid ""
 "IMPORTANT FOR THE REPOSITORY PATH -> DO NOT USE: "
 "**C:\\\\webserver\\\\data\\\\prod\\\\rep1**"
 msgstr ""
+"IMPORTANT POUR LE CHEMIN DU DÉPÔT, NE PAS UTILISER : "
+"**C:\\\\webserver\\\\data\\\\prod\\\\rep1**"
 
 #: ../../source/install/windows.rst:438
 msgid ""
@@ -2144,179 +2238,27 @@ msgstr ""
 #~ "https://github.com/jelix/ldapdao-module for "
 #~ "downloading, installing and configuring module"
 #~ msgstr ""
+#~ "Voyez le projet  ldapdao-module sur "
+#~ "https://github.com/jelix/ldapdao-module pour "
+#~ "télécharger, installer et configurer le "
+#~ "module."
 
 #~ msgid ""
 #~ "Indicate the new configuration file into"
 #~ " the *lizmap/var/config/localconfig.ini.php* file"
 #~ msgstr ""
+#~ "Indiquez le nouveau fichier de "
+#~ "configuration dans *lizmap/var/config/localconfig.ini.php*"
+
+#~ msgid "From 3.0 versions to upper, there is no need to backup data."
+#~ msgstr ""
 
 #~ msgid "Simply replace lizmap files and call:"
-#~ msgstr "Remplacez simplement les fichiers Lizmap et lancez :"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Lizmap 3.0 requires that ``*.db`` files"
 #~ " should be stored in var/db/, not "
 #~ "in var/ as in 2.x"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You indicate such informations into the"
-#~ " `searchAttributes` property. It is a "
-#~ "pair of names, `<ldap attribute>:<table "
-#~ "field>`, separated by a comma."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In this example, "
-#~ "`searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"`:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "the value of the `firstname` ldap "
-#~ "attribute will be stored into a "
-#~ "field that have the same name, as"
-#~ " there is no field name nor "
-#~ "`:`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "there will not be mapping for the"
-#~ " `dn` property. There is a `:` "
-#~ "without field name. It will be "
-#~ "readed from ldap, and can be used"
-#~ " into the `bindUserDN` DN template. "
-#~ "(see below)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The `searchUserFilter` should contain the "
-#~ "ldap query, and a `%%LOGIN%%` "
-#~ "placeholder that will be replaced by "
-#~ "the login given by the user."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Example: "
-#~ "`searchUserFilter=\"(&(objectClass=posixAccount)(uid=%%LOGIN%%))\"`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You may also indicate the base DN"
-#~ " for the search, into `searchUserBaseDN`."
-#~ " Example: `searchUserBaseDN=\"ou=ADAM "
-#~ "users,o=Microsoft,c=US\"`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that you can indicate several "
-#~ "search filters, if you have complex "
-#~ "ldap structure. Use `[]` to indicate "
-#~ "an item list:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "``` "
-#~ "searchUserFilter[]=\"(&(objectClass=posixAccount)(uid=%%LOGIN%%))\""
-#~ " searchUserFilter[]=\"(&(objectClass=posixAccount)(cn=%%LOGIN%%))\""
-#~ " ```"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "*Building the DN from the login "
-#~ "given by the user*: bindUserDN should"
-#~ " contain a DN, with a `%%LOGIN%%` "
-#~ "placeholder that will be replaced by "
-#~ "the login."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Example: `bindUserDN=\"uid=%%LOGIN%%,ou=users,dc=XY,dc=fr\"`."
-#~ " If the user give `john.smith` as "
-#~ "a login, the authentication will be "
-#~ "made with the DN "
-#~ "`bindUserDN=\"uid=john.smith,ou=users,dc=XY,dc=fr\"`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For some LDAP, the DN could be "
-#~ "a simple string, for example an "
-#~ "email. You could then set "
-#~ "`bindUserDN=\"%%LOGIN%%@company.local\"`. Or even "
-#~ "`bindUserDN=\"%%LOGIN%%\"` if the login can"
-#~ " type the full value of the DN"
-#~ " or an email or else.. (Probably "
-#~ "it's not recommended to allow a "
-#~ "user to type himself its full DN,"
-#~ " it can be a security issue)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For the first case, bindUserDn should"
-#~ " contain a DN, with some `%?%` "
-#~ "placeholders that will be replaced by"
-#~ " corresponding attributes value. Example: "
-#~ "`bindUserDN=\"uid=%?%,ou=users,dc=XY,dc=fr\"`. Here it "
-#~ "replaces the `%?%` by the value of"
-#~ " the `uid` attribute readed from the"
-#~ " user's attributes. The attribute name "
-#~ "should be present into the "
-#~ "`searchAttributes` configuration property, even "
-#~ "with no field mapping. Ex: "
-#~ "`...,uid:,...`. See above."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For the second case, just indicate "
-#~ "the attribute name, prefixed with a "
-#~ "`$`. Example: `bindUserDN=\"$dn\"`. Here it"
-#~ " takes the `dn` attribute readed from"
-#~ " the search, and use its full "
-#~ "value as the DN to login against"
-#~ " the ldap server. It is useful "
-#~ "for some LDAP server like sometimes "
-#~ "Active Directory that need a full "
-#~ "DN specific for each user. The "
-#~ "attribute name should be present into"
-#~ " the `searchAttributes` configuration property,"
-#~ " even with no field mapping. Ex: "
-#~ "`...,dn:,...`. See above."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that you can indicate several "
-#~ "dn templates, if you have complex "
-#~ "ldap structure. Use `[]` to indicate "
-#~ "an item list:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "``` bindUserDN[]=\"uid=%?%,ou=users,dc=XY,dc=fr\" "
-#~ "bindUserDN[]=\"cn=%?%,ou=users,dc=XY,dc=fr\" ```"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Example: "
-#~ "`searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%USERDN%%))\"`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "`%%USERDN%%` is replaced by the user "
-#~ "dn.`%%LOGIN%%` is replaced by the login."
-#~ " You can also use any ldap "
-#~ "attributes you indicate into "
-#~ "`searchAttributes`, between `%%`. Example: "
-#~ "`searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%givenName%%))\"`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "With `searchGroupProperty`, you must indicate"
-#~ " the ldap attribute that contains the"
-#~ " group name. Ex: `searchGroupProperty=\"cn\"`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You may also indicate the base DN"
-#~ " for the search, into `searchGroupBaseDN`."
-#~ " Example: `searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"`."
 #~ msgstr ""
 
