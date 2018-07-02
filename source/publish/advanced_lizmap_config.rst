@@ -865,6 +865,8 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
 
 .. note:: To make the field compulsory you have to define it as `NOT NULL` in the properties of the table, at the database level.
 
+.. note:: Be careful if your layer contains some Z or M values, unfortunately Lizmap will set them to "0" which is the default value when saving to the database.
+
 * Add the layer in the table "Layer Editing" located in the plugin Lizmap "Tools" tab:
 
   - *Select the layer* in the drop-down list
