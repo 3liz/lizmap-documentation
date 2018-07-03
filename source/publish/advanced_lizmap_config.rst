@@ -559,7 +559,7 @@ you can add :
 
 You can allow the user to modify the contents of certain labels (title, description, comment, etc).
 To do this you need to add a identifier to your label in the composer. Lizmap will automatically ask you in the webbrowser to fill each fields.
-If your label is pre-populated in QGIS, the field will be pre-populated too in the webbrowser.
+If your label is pre-populated in QGIS, the field will be pre-populated too in the webbrowser. If you check 'Render as HTML' for your label in QGIS, you will have a multiline label in Lizmap.
 
 Finally the print function will be based on the map scales that you set in the plugin *Map* (:ref:`lizmap-config-map`).
 
