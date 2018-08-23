@@ -381,6 +381,41 @@ In Lizmap plugin:
 * You can optionally activate editing for the two layers, to allow the web users to create new features and upload pictures
 * Save and publish your project and Lizmap configuration
 
+Link of an element for layers with an atlas
+____________________________________________
+
+Every element of a layer with an atlas configured will have a link at the end of his popup which open a pdf of the atlas for this particular element.
+To make it work you will need to download the "atlas_print" plugin, for that you have to get it from his Github at : https://github.com/3liz/qgis-atlasprint
+
+Display children in a compact way
+__________________________________
+
+You can change the way children are displayed and make them look like a table. For that, you will need to adapt the HTML of your children layer and use a few classes to manipulate it.
+* "lizmap_merged" : You need to attribute this class to your table
+* lizmapPopupHeader : If you want to have a better display of your headers, you will need to put this class in the '<tr>' who contains them
+* lizmapPopupHidden : This class permit you to hide some elements of your children that you want to hide when there are used as a child but you still want to see them if you display their popup as a main Popup
+Here an example:
+
+.. code-block:: html
+
+<table class="lizmap_merged">
+
+ <tr class="lizmapPopupHeader"> 
+      <th class="lizmapPopupHidden"><center> Idu </center></th>
+      <th> <center> Type </center> </th>
+      <th> <center> Surface</center> </th>
+</tr>	
+  <tr>
+       <td class="lizmapPopupHidden"><center>[% "idu" %]</center></td>
+       <td><center>[% "typezone" %]</center></td>
+       <td><center>[% "surface" %]</center></td>	
+   </tr>
+</table>
+
+.. image:: /images/popup_display_children.png
+   :align: center
+   :width: 80%
+
 .. _lizmap-simples-themes:
 
 Creating simple themes
