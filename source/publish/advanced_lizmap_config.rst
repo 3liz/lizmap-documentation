@@ -213,6 +213,7 @@ In the web application Lizmap Web Client, a click on a map object will trigger t
 .. note:: For point layers you need to click in the middle of the point to display the popup. The tolerance can be setup in tab *Map options* then **Map tools**.
 
 You can update where the popup is displayed in the web interface in *Map options* then **Map interface**. You can choose between:
+
 * *dock*
 * *minidock*
 * *map*
@@ -391,26 +392,27 @@ Display children in a compact way
 __________________________________
 
 You can change the way children are displayed and make them look like a table. For that, you will need to adapt the HTML of your children layer and use a few classes to manipulate it.
+
 * "lizmap_merged" : You need to attribute this class to your table
 * lizmapPopupHeader : If you want to have a better display of your headers, you will need to put this class in the '<tr>' who contains them
 * lizmapPopupHidden : This class permit you to hide some elements of your children that you want to hide when there are used as a child but you still want to see them if you display their popup as a main Popup
+
 Here an example:
 
 .. code-block:: html
 
-<table class="lizmap_merged">
-
- <tr class="lizmapPopupHeader"> 
+ <table class="lizmap_merged">
+  <tr class="lizmapPopupHeader">
       <th class="lizmapPopupHidden"><center> Idu </center></th>
       <th> <center> Type </center> </th>
       <th> <center> Surface</center> </th>
-</tr>	
-  <tr>
-       <td class="lizmapPopupHidden"><center>[% "idu" %]</center></td>
-       <td><center>[% "typezone" %]</center></td>
-       <td><center>[% "surface" %]</center></td>	
    </tr>
-</table>
+   <tr>
+      <td class="lizmapPopupHidden"><center>[% "idu" %]</center></td>
+      <td><center>[% "typezone" %]</center></td>
+      <td><center>[% "surface" %]</center></td>
+   </tr>
+ </table>
 
 .. image:: /images/popup_display_children.png
    :align: center
@@ -1024,19 +1026,19 @@ Demonstration site: http://demo.lizmap.3liz.com/index.php/view/?repository=rep6
 Statictics with Dataviz
 =======================
 
-In the 3.2 version of Lizmap, a way to show charts in Lizmap is implemented. You will be able to create a few kinds of graph (scatter, pie, histogram, box, bar histogram2d, polar) with only a few clicks. 
+In the 3.2 version of Lizmap, a way to show charts in Lizmap is implemented. You will be able to create a few kinds of graph (scatter, pie, histogram, box, bar histogram2d, polar) with only a few clicks.
 
 .. image:: /images//publish-01-dataviz-interface.png
    :align: center
    :scale: 80%
 
 
- You can easily configure it with the plugin Lizmap in Qgis in the Dataviz panel.
+You can easily configure it with the plugin Lizmap in Qgis in the Dataviz panel.
 
 .. image:: /images//publish-02-dataviz-interface-plugin.png
     :align: center
-    :scale: 80% 
-    
+    :scale: 80%
+
 **1** :
 You have the possibility to change the value to **dock**, **bottomdock** or **right-dock** these options change where your dataviz panel will be located in your Lizmap's project. You have 3 positions available, at the right of the screen, bottom and right.
 
@@ -1045,13 +1047,14 @@ Here, you have the possibility to write in HTML to change the style of the conta
 
 .. image:: /images//publish-03-dataviz-html-example.png
    :align: center
-   :scale: 80% 
+   :scale: 80%
 
 **3**:
 This table contains all the layers you have configured to be able to show statistics in your Lizmap project. All details about the configuration are shown in this table. You have to use it if you want to remove a layer, you will need to click on a line of the table then click on the button **remove a layer** at the bottom on the panel.
 
 **4**:
 To add a graph, you have to configure it in this part of the panel.
+
    * **Type** :    You can choose the type of your graph, the available options are - scatter, box, bar, histogram, histogram2d, pie and polar.
    * **Title** : Here you can write the title you want for your graph.
    * **Layer** : You chose which layer you want to make a graph with.
@@ -1063,7 +1066,7 @@ To add a graph, you have to configure it in this part of the panel.
    * **Color field 2 ?** : You can chose the color of the second Y field the same way you chose the one for his first Y field.
    * **Display filtered plot in popups of parent layer** : if you check this checkbox, the children of your layer will get the same graph as the parent plot but filtered only for them. It's useful if you want to see the statistics of one entity instead of all.
    * **Only show child** : The main graph will not be shown in the main container and only the filtered graph of the relation of the layer will be displayed in the popup when you select the element.
-    
+
 When all the configuration is done, you have to click on the button **add a layer** at the bottom of the window.
 
 Atlas - sequence of entities of a chosen layer
@@ -1085,7 +1088,7 @@ Layer options :
 * you can chose to highlight the feature selected by the atlas, it will change every time it's switching to a new feature
 * chose between a zoom on the feature or to make it the center of your map
 * you can chose to display the popup in the feature in the atlas container or not
-* check if you want to activate filter on the feature selected by the atlas, it will hide all other features of the layer and only show the one selected 
+* check if you want to activate filter on the feature selected by the atlas, it will hide all other features of the layer and only show the one selected
 
 Atlas options:
 * check if you want to open the atlas tool when you open your project
