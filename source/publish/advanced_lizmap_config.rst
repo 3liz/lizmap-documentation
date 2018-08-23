@@ -210,7 +210,15 @@ In the web application Lizmap Web Client, a click on a map object will trigger t
 * the popup **has been activated** through the plugin for the layer or the group
 * the user has clicked on an **area of the canvas** where data for the layer with active popups are displayed.
 
-.. note:: For point layers you need to click in the middle of the point to display the popup.
+.. note:: For point layers you need to click in the middle of the point to display the popup. The tolerance can be setup in tab *Map options* then **Map tools**.
+
+You can update where the popup is displayed in the web interface in *Map options* then **Map interface**. You can choose between:
+* *dock*
+* *minidock*
+* *map*
+* *bottomdock*
+* *right-dock*
+
 
 Auto popup
 -----------
@@ -856,6 +864,8 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
 .. note:: All the editing tools are not yet managed by Lizmap Web Client. Only the following tools are supported: Text edit, Classification, Range, Value Map, Hidden, Check Box, Date/Time, Value Relation. If the tool is not supported, the web form displays a text input field.
 
 .. note:: To make the field compulsory you have to define it as `NOT NULL` in the properties of the table, at the database level.
+
+.. note:: Be careful if your layer contains some Z or M values, unfortunately Lizmap will set them to "0" which is the default value when saving to the database.
 
 * Add the layer in the table "Layer Editing" located in the plugin Lizmap "Tools" tab:
 
