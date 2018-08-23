@@ -89,6 +89,8 @@ The map publisher can add some features depending on the desired user experience
 * distance, area and perimeter measurements
 * printing the map
 * editing data
+* statictics 
+
 
 .. image:: /images//user-guide-07-advanced-features.png
    :align: center
@@ -418,4 +420,6 @@ More complex scenarios : relations between layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 todo
+
+
 
