@@ -307,8 +307,8 @@ Install
    deb-src http://qgis.org/debian trusty main
 
    # Add keys
-   sudo gpg --recv-key DD45F6C3
-   sudo gpg --export --armor DD45F6C3 | sudo apt-key add -
+   sudo gpg --recv-key CAEB3DC3BDF7FB45
+   sudo gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
 
    # Update package list
    sudo apt-get update
