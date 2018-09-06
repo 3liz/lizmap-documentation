@@ -15,6 +15,7 @@ Contribution
 You can use Transifex: https://www.transifex.com/3liz-1/lizmap-documentation/
 
 Or:
+
 * Update documentation by updating **source** files
 * Localize documentation by updating your langage in **i18n** or adding ones.
 
