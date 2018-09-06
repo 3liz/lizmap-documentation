@@ -51,8 +51,6 @@ Installing necessary packages
    a2enmod deflate
    service apache2 restart # restart Apache server
 
-Then go to the *www* default Apache directory (modify as needed).
-
 php7 configuration
 ------------------
 
