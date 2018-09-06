@@ -2,7 +2,7 @@
 Upgrade Lizmap Web Client
 ===============================================================
 
-Upgrading between 3.x versions
+Upgrading from 3.0 to the 3.1 version
 ===============================================================
 
 From 3.0 versions to upper, here is how to upgrade.
@@ -51,14 +51,6 @@ configuration etc..
    sudo lizmap/install/clean_vartmp.sh
    php lizmap/install/installer.php
    sudo lizmap/install/clean_vartmp.sh
-
-.. note::
-   if you upgrade from 3.0 or 3.1 to Lizmap 3.2, and if you are using the ldap
-   authentication with the ldapdao module, you have to know that this module
-   is included into Lizmap 3.2 and is pre-configured. So, before launching the
-   installer, you have to remove the ldapdao module you've installed, and you
-   have to configure the ldapdao module in a little different manner than when
-   installing it by hand. See the ldap configuration section in this manual.
 
 
 Upgrading from Lizmap 2.x to Lizmap 3.0

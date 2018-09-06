@@ -20,60 +20,14 @@ or
 Then, in order to enable the LDAP support Lizmap, you have to change the
 authentication method in the configuration as follows.
 
-Enabling ldap into Lizmap 3.2
-==============================
-
-In the localconfig.ini.php, you have to set these parameters:
-
-.. code-block:: ini
-
-    [modules]
-    ldapdao.access=1
-
-    [coordplugin_auth]
-    driver=ldapdao
-
-These parameters enable the ldapdao module of Lizmap. If you copied localconfig.ini.php
-from localconfig.ini.php.dist, you have already this parameters but they are
-commented.
-
-Then you have to add a section `[ldap:lizmapldap]` into your profiles.ini.php,
-with some settings that allow to connect to your ldap server, and to search
-users into the ldap. The section may already exist if you copied profiles.ini.php
-from the profiles.ini.php.dist.
-
-.. code-block:: ini
-
-    [ldap:lizmapldap]
-    hostname=localhost
-    port=389
-    adminUserDn="cn=admin,ou=lizmap,dc=com"
-    adminPassword=""
-    searchUserBaseDN="dc=XY,dc=fr"
-    searchUserFilter="(&(objectClass=posixAccount)(uid=%%LOGIN%%))"
-    bindUserDN="uid=%?%,ou=users,dc=XY,dc=fr"
-    searchAttributes="uid:login,givenName:firstname,sn:lastname,mail:email"
-    searchGroupFilter=
-    searchGroupProperty="cn"
-    searchGroupBaseDN=""
-
-See details about how to set these parameters in a section below.
-
-.. note:: these parameters could be in the ldapdao section of auth.coord.ini.php
-          configuration files, but it is not recommended to modify these files,
-          as when you do upgrade, you should do modification again in them.
-
-To finish to enable the module, run *php lizmap/install/installer.php*
-
 Enabling ldap into Lizmap 3.0 and 3.1
 ======================================
 
-Lizmap 3.2 embed the `ldaodao module <https://github.com/jelix/ldapdao-module>`_
-but not Lizmap 3.0 and 3.1, so you should install it by hand.
+In Lizmap 3.0 and 3.1, you should install the `ldaodao module <https://github.com/jelix/ldapdao-module>`_.
 
 So download it from https://github.com/jelix/ldapdao-module , and copy the ldapdao
 directory into you lizmap/lizmap-modules/ directory (you should use at least
-the 2.0.0 version)
+the 2.0.0 version of ldap-dao)
 
 Declare the ldapdao module into the *lizmap/var/config/localconfig.ini.php* file
 
@@ -127,7 +81,7 @@ Now you have to change these settings.
 
 
 ldap settings
-====================
+=============
 
 
 Configuration properties for user data
