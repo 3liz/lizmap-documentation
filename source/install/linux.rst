@@ -39,7 +39,7 @@ Installing necessary packages
    # On Ubuntu 14.04 LTS install the following packages
    apt-get install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php5 php5-cgi php5-gd php5-sqlite php5-curl php5-xmlrpc python-simplejson python-software-properties
    # On Ubuntu 18.04 LTS
-   apt install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php7.2 php7.2-cgi php7.2-gd php7.2-sqlite php7.2-curl php7.2-xmlrpc python-simplejson software-properties-common
+   apt install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php7.2 php7.2-cgi php7.2-gd php7.2-sqlite php7.2-curl php7.2-xmlrpc php7.2-xml python-simplejson software-properties-common
 
 .. todo:: Check this: still necessary?
    a2dismod php5
