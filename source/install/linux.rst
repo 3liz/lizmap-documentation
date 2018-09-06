@@ -349,7 +349,7 @@ Set rights for Apache, so php scripts could write some temporary files or do cha
 
 .. code-block:: bash
 
-   cd /var/www/lizmap-web-client--$VERSION/
+   cd /var/www/lizmap-web-client-$VERSION/
    lizmap/install/set_rights.sh www-data www-data
 
 
