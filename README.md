@@ -1,43 +1,56 @@
 Lizmap - Documentation
 =======================
 
-This repository contains the complete documentation of the Lizmap application to 
-publish online QGIS maps: the QGIS plugin and Lizmap Web Client application.
+This repository contains the complete documentation of the Lizmap application.
 
-This documentation uses **Sphinx** (http://sphinx-doc.org) and its 
-internationalization mechanism (http://sphinx-doc.org/intl.html):
-* **source** contains the documentation in \*.rst format
-* **i18n** contains the locales
+Lizmap allows to publish online QGIS maps.
 
-Contribution
-=============
+The documentation is localized into several language. The main language is
+the english. 
 
-You can use Transifex: https://www.transifex.com/3liz-1/lizmap-documentation/
+Contributing to the english documentation
+=========================================
 
-Or:
+Clone the repository and edit files into `sources/`.
 
-* Update documentation by updating **source** files
-* Localize documentation by updating your langage in **i18n** or adding ones.
+The format is the ReStructured Text format. 
 
-Update localized files
-=======================
+See below to build the documentation into HTML to see the result.
 
-* Update pot files from source files
+
+Contributing by translating the doc into other languages
+=========================================================
+
+We are using [Transifex](https://www.transifex.com/3liz-1/lizmap-documentation/)
+to translate the documentation. So if you want to contribute to the translation,
+create an account on the Transifex web site, and translate different strings.
+
+We retrieve regurlarly translation and store them into the `i18n/` directory. 
+
+We don't recommend to contribute on translations by doing Pull Request on
+github, as it may be difficult to merge content coming from Transifex and your
+changes.
+
+Building the documentation
+===========================
+
+We are using the tool [Sphinx](http://sphinx-doc.org)  and its 
+internationalization mechanism [sphinx-intl](http://sphinx-doc.org/intl.html) to 
+generate the HTML content in all languages.
+
+So install these tools. On Linux / MacOs, install Python, Pip and then:
 
 ```
-make gettext
+sudo pip install -U sphinx
+sudo pip install -U sphinx-intl
 ```
 
-* Update localized files (*.po)
+Then run `make gettext && make html`. It will build the docs in all available 
+languages.
 
-```
-sphinx-intl update -d i18n
-```
+For core contributor
+--------------------
 
-Then you can improve po files by opening them with QtLinguist or Poedit.
+See DEV.md to see instructions to push and pull translated files to/from Transifex.
 
-Build documentation
-===================
 
-We advise to use the **make** command to build Sphinx documentation. By default,
-`make html` will build the docs in all available languages.
