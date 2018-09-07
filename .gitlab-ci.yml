@@ -28,6 +28,10 @@ retrieve_po_and_build:
   script:
     - tx pull -l es,fi,fr,it,pt,ru --branch $TX_BRANCH
     - make clean html
+  artifacts:
+    paths:
+      - build/html/
+    name: "lizmapdoc_$CI_COMMIT_REF_SLUG"
 
 build_html:
   except:
