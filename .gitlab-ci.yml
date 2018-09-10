@@ -8,7 +8,7 @@ stages:
 before_script:
   - export VERSION=$(echo -n $CI_COMMIT_REF_NAME | sed 's/^lizmap\_\([0-9][0-9]*\)\_\([0-9][0-9]*\)$/\1.\2/g')
   - if [ "$VERSION" == "master" ]; then export VERSION="next"; fi
-  - if [ "$CI_COMMIT_REF_NAME" == "master" ]; then export TX_BRANCH="next"; else  export TX_BRANCH="$CI_COMMIT_REF_NAME"; fi
+  - export TX_BRANCH="$CI_COMMIT_REF_NAME"
   - echo "VERSION=$VERSION TX_BRANCH=$TX_BRANCH"
 
 build_pot:
