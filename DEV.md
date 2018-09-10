@@ -43,6 +43,8 @@ Then you push them to Transifex, by indicating the branch (indicate the good bra
 
 ```
 tx push -s --branch master
+#or 
+tx push -s --branch lizmap_3_1
 ```
 
 Note: our continuous integration system Gitlab-CI generates and pushes pot files to
@@ -57,7 +59,9 @@ translate strings into Transifex.
 To retrieve translated string:
 
 ```
-tx pull -l es,fi,fr,it,pt,ru
+tx pull -l es,fi,fr,it,pt,ru --branch master
+#or 
+tx pull -l es,fi,fr,it,pt,ru --branch lizmap_3_1
 ```
 
 You can then commit them.
@@ -69,12 +73,6 @@ Adding a new language
 ----------------------
 
 The language should be created into Transifex. When there are enough translated
-string, you can download translated files. See above.
+strings, you can download translated files with `tx pull`. See above.
 
-
-Continuous integration
------------------------
-
-The deployment processus that publish the documentation on the official
-website does not rely on 
 
