@@ -3,6 +3,11 @@ stages:
   - build_html
   - deploy
 
+before_script:
+  - export VERSION=$(echo -n $CI_COMMIT_REF_NAME | sed 's/^lizmap\_\([0-9][0-9]*\)\_\([0-9][0-9]*\)$/\1.\2/g')
+  - if [ "$VERSION" == "master" ]; then export VERSION="next"; fi
+  - if [ "$CI_COMMIT_REF_NAME" == "master" ]; then export TX_BRANCH2="next"; else  export TX_BRANCH2="$CI_COMMIT_REF_NAME"; fi
+
 variables:
   TX_BRANCH: lizmap_3_1
 
@@ -50,6 +55,7 @@ deploy_snap:
     - retrieve_po_and_build
     - build_html
   script:
+    - echo "VERSION=$VERSION TX_BRANCH2=$TX_BRANCH2"
     - rsync -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/$(cat VERSION)/
   environment:
     name: snap
