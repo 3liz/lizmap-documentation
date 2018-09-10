@@ -53,9 +53,7 @@
         <link href="{{ lizmap_path_to_root }}../{{ lang }}/" rel="alternate" hreflang="{{ lang }}"/>
         {% endif %}
     {%- endfor %}
-    {% if lizmap_versions.stable_version != version -%}
-        <link href="{{ lizmap_path_to_root }}../../{{ lizmap_versions.stable_version}}" rel="canonical"/>
-    {% endif %}
+    <link href="https://docs.lizmap.com/current/{{ language }}/" rel="canonical"/>
 {% endblock %}
 
 {% block bodyheader %}
