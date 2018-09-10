@@ -37,7 +37,7 @@ retrieve_po_and_build:
   artifacts:
     paths:
       - build/html/
-    name: "lizmapdoc-$VERSION"
+    name: "lizmapdoc-$CI_COMMIT_REF_NAME"
 
 build_html:
   except:
@@ -49,7 +49,7 @@ build_html:
   artifacts:
     paths:
       - build/html/
-    name: "lizmapdoc-$VERSION"
+    name: "lizmapdoc-$CI_COMMIT_REF_NAME"
 
 deploy_snap:
   stage: deploy
