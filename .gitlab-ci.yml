@@ -3,13 +3,12 @@ stages:
   - build_html
   - deploy
 
+# CI_COMMIT_REF_NAME could be a tag name, and in this case VERSION and TX_BRANCH
+# cannot be set correctly, so we don't build and deploy on tags
 before_script:
   - export VERSION=$(echo -n $CI_COMMIT_REF_NAME | sed 's/^lizmap\_\([0-9][0-9]*\)\_\([0-9][0-9]*\)$/\1.\2/g')
   - if [ "$VERSION" == "master" ]; then export VERSION="next"; fi
-  - if [ "$CI_COMMIT_REF_NAME" == "master" ]; then export TX_BRANCH2="next"; else  export TX_BRANCH2="$CI_COMMIT_REF_NAME"; fi
-
-variables:
-  TX_BRANCH: master
+  - if [ "$CI_COMMIT_REF_NAME" == "master" ]; then export TX_BRANCH="next"; else  export TX_BRANCH="$CI_COMMIT_REF_NAME"; fi
 
 build_pot:
   only:
@@ -21,6 +20,7 @@ build_pot:
 build_and_publish_pot:
   except:
     - schedules
+    - tags
   stage: build_pot
   script:
     - make gettext
@@ -36,27 +36,29 @@ retrieve_po_and_build:
   artifacts:
     paths:
       - build/html/
-    name: "lizmapdoc_$CI_COMMIT_REF_SLUG"
+    name: "lizmapdoc-$VERSION"
 
 build_html:
   except:
     - schedules
+    - tags
   stage: build_html
   script:
     - make clean html
   artifacts:
     paths:
       - build/html/
-    name: "lizmapdoc_$CI_COMMIT_REF_SLUG"
+    name: "lizmapdoc-$VERSION"
 
 deploy_snap:
   stage: deploy
+  except:
+    - tags
   dependencies:
     - retrieve_po_and_build
     - build_html
   script:
-    - echo "VERSION=$VERSION TX_BRANCH2=$TX_BRANCH2"
-    - rsync -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/$(cat VERSION)/
+    - rsync -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/$VERSION/
   environment:
     name: snap
 
@@ -67,7 +69,7 @@ deploy_production:
   dependencies:
     - retrieve_po_and_build
   script:
-    - rsync -e "$DEPLOYDOC_PROD_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_PROD_HOST:$DEPLOYDOC_PROD_PATH/$(cat VERSION)/
+    - rsync -e "$DEPLOYDOC_PROD_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_PROD_HOST:$DEPLOYDOC_PROD_PATH/$VERSION/
   environment:
     name: production
   when: manual
