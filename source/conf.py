@@ -12,6 +12,7 @@
 # serve to show the default.
 
 import sys, os
+import json
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -120,8 +121,11 @@ html_title = ""
 #html_logo = None
 html_logo = 'images/logo.png'
 
+lizmap_versions = json.load(file('lizmap_versions.json'))
+
 html_context = {
-        'theme_logo_only': True
+        'theme_logo_only': True,
+        'lizmap_versions': lizmap_versions
 }
 
 html_style = 'css/custom.css'

@@ -58,5 +58,25 @@ select#languages option {
   padding: 2px;
 }
 
+#versions-links {
+    float:right;
+    display:inline-block;
+    margin: 10px 1em 0 4px;
+    color: white;
+}
 
+#versions-links-list {
 
+}
+#versions-links-list  a {
+    /*color: white;*/
+}
+#versions-links-list > a::before,
+#versions-links-list > strong::before
+{
+    content: " - "
+}
+
+#versions-links-list :first-child::before {
+    content: ""
+}
