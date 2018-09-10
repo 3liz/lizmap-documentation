@@ -74,5 +74,28 @@ Adding a new language
 
 The language should be created into Transifex. When there are enough translated
 strings, you can download translated files with `tx pull`. See above.
+Update the list of available language into the Makefile file (in the TRANSLATIONS variable).
+
+Releasing a new version 
+------------------------
+
+When a new major version of lizmap has been released, be sure the documentation
+is updated into the master branch.
+
+When the documentation is ready, 
+
+- set the version number into source/conf.py 
+- update the file source/lizmap_versions.json
+- create a new branch `lizmap_X_Y` (replace X and Y).
+- configure a new schedule in the CI configuration for this new branch
+- on the master branch, set the next version into source/conf.py and source/lizmap_versions.json
+- push the new branch and the master branch
+- in the server configuration, change the target of the symbolic link 'current'
+- copy the source/lizmap_versions.json into all other branches, it should be the
+  same for all.
+
+
+
+
 
 
