@@ -25,7 +25,6 @@ The plugin is organized in 6 tabs:
 * *Map*: the general options of the map
 * *Baselayers*: the baselayers used on the Web
 * *Tools* : the Web map tools
-* *FTP*: The configuration for synchronization through the plugin
 * *Log*: displays information of performed actions
 
 And it has 4 action buttons:
