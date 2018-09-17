@@ -30,8 +30,7 @@ The plugin is organized in 6 tabs:
 And it has 4 action buttons:
 
 * Help
-* Save
-* Save and synchronize
+* Apply
 * Close
 
 Configure layers and groups
