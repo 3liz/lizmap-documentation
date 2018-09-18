@@ -111,7 +111,7 @@ It is possible to provide documents through Lizmap. To do this, you simply:
 
 * create a directory called **media** (in lower case and without accents) *at the same level as the QGIS project*
 * **place documents in it**: pictures, reports, pdfs, videos, HTML or text files
-* the documents contained in this **media** directory are **synchronized as other data** with the plugin FTP synchronisation
+* the documents contained in this **media** directory must be **synchronized as other data**
 * you can use subdirectories per layer or theme: the organization of **media** directory content is free.
 
 Then in Lizmap Web Client you can provide access to these documents for 2 things:
