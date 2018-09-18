@@ -1079,6 +1079,7 @@ This feature let you chose and configure a layer to make her into an atlas in yo
    :width: 80%
 
 Layer options :
+
 * the atlas is enabled or not in your project
 * you need to chose the layer you want your atlas on
 * select the primary key field, it must be an integer
@@ -1091,6 +1092,7 @@ Layer options :
 * check if you want to activate filter on the feature selected by the atlas, it will hide all other features of the layer and only show the one selected
 
 Atlas options:
+
 * check if you want to open the atlas tool when you open your project
 * you can chose the size of the atlas dock (20%-50%)
 * you can select the duration between each step when your atlas is in auto-play mode
