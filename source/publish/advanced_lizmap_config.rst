@@ -720,11 +720,11 @@ To activate it you must:
 * check the box *Server cache?*
 * specify the expiration time of the cache server in seconds: **Expiration (seconds)**
 
-The **Metatile** option allows you to specify image size in addition for generating a tile. The principle of **Metatile** is to request the server for a bigger image than hoped, to cut it to the size of the request and return it to the Web client. This method avoids truncated labels at the edges and discontinuities between tiles, but is more resource intensive. The default value is *5,5*, an image whose width and height are equal to 5 times the width and height request.
+The **Metatile** option allows you to specify image size in addition for generating a tile. The principle of **Metatile** is to request the server for a bigger image than hoped, to cut it to the size of the request and return it to the Web client. This method avoids truncated labels at the edges and discontinuities between tiles, but is more resource intensive. The default value is *5,5*, an image whose width and height are equal to 5 times the width and height request. This option is useless for rasters.
 
 * Activating the cache client side
 
-The **Browser client cache** option allows you to specify an expiration time for the tiles in the Web browser (Mozilla Firefox, Chrome, Internet Explorer, Opera, etc.) cache in seconds. When browsing the Lizmap map with the browser, it stores displayed tiles in its cache. Enable client cache can greatly optimize Lizmap because the browser does not re-request the server for tiles already in cache that are not expired.
+The **Browser client cache** option allows you to specify an expiration time for the tiles in the Web browser (Mozilla Firefox, Chrome, Internet Explorer, Opera, etc.) cache in seconds. When browsing the Lizmap map with the browser, it stores displayed tiles in its cache. Enable client cache can greatly optimize Lizmap because the browser does not re-request the server for tiles already in cache that are not expired. Values 0,0 and 1,1 are equivalent, and do not activate the option.
 
 We suggest to set to the maximum value (1 month equals to 24 x 3600 x 30 = 2,592,000 seconds), except of course for layers whose data changes often.
 
