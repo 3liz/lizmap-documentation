@@ -464,6 +464,10 @@ Once downloaded the zipfile, you can:
 * replace the images
 * edit the CSS files
 
+.. warning:: The files and directories must be readable (755:644)
+
+To preview your results just add ``&theme=yourtheme`` at the end of your URL (e.g. ``https://demo.lizmap.3liz.com/index.php/view/map/?repository=montpellier&project=montpellier&theme=yourtheme``).
+
 Once your theme is ready, you can just publish it copying it in the directory ``media``.
 
 Adding your own JavaScript
