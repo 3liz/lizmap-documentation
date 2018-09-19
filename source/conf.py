@@ -121,7 +121,12 @@ html_title = ""
 #html_logo = None
 html_logo = 'images/logo.png'
 
-lizmap_versions = json.load(file('lizmap_versions.json'))
+try:
+    #python3
+    lizmap_versions = json.load(open('lizmap_versions.json'))
+except Error:
+    #python2
+    lizmap_versions = json.load(file('lizmap_versions.json'))
 
 html_context = {
         'theme_logo_only': True,
