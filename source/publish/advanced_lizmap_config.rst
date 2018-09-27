@@ -954,7 +954,7 @@ With Lizmap 3, it is now possible to upload your files, including images, for ea
 
    chmod 775 -R media/upload && chown :www-data -R media/upload
 
-* Check you ``php.ini`` to see if the variables ``post_max_size`` and ``max_upload_size`` are correctly set (by default, php only allows uploading files up to 2 Mbyte)
+* Check you ``php.ini`` to see if the variables ``post_max_size`` and ``upload_max_filesize`` are correctly set (by default, php only allows uploading files up to 2 Mbyte)
 
 Lizmap will then create folders to store the data, depending on the layer name, field name, etc. For example, a file would be stored in the folder ``media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT`` and an image in ``media/upload/environment/observations/species_picture/my_picture.png``.
 
