@@ -80,9 +80,9 @@ You should check the checkbox "Use a proxy server" and fill these fields:
   It is only supported when curl is used.
 * **Login** and **password**: sometimes an authentication is needed to access to the proxy
 * **Domains for which the proxy will not be used**: there are some requests that
- should no go to the proxy, typically requests to your QGIS server, or requests
- to a local server that serves map backgrounds etc... You have at least to set
- it with "localhost,127.0.0.1".
+  should not go to the proxy, typically requests to your QGIS server, or requests
+  to a local server that serves map backgrounds etc... You have at least to set
+  it with "localhost,127.0.0.1".
 
 
 Repositories
