@@ -36,6 +36,7 @@ To configure **Services**, click the *Modify* button under the summary.
 
   - *file*: Tiles cached are stored in a server directory by layer
   - *sqlite*: The tiles are stored in a sqlite database by layer
+  - *redis*: the tiles are stored into a Redis database
 
 * **Cache root directory**: the folder where the cache is stored. It must be writable by the Apache server.
 
@@ -45,16 +46,44 @@ To configure **Services**, click the *Modify* button under the summary.
   - A value of 0 means that the tiles do not expire.
   - The expiration time must be adapted to changing data.
 
-* **Send request to QGIS Server with**: 2 methods *php or curl*. Use first if curl is not installed on the server.
+* **Send request to QGIS Server or external service with**: 2 methods *php* or
+  *curl*. Use first if curl is not installed on the server.
 
 * **Debug mode**: saves some queries to a log file: *lizmap/var/log/messages.log*
 
 * **Allow visitors to request an account**: If this option is enabled, a new link 'Registration' will be added in the public menu. By clicking on this link, the visitor displays a form that allows it to request an account to administrator. He must complete some fields (name, email, due to demand) then validates the form to send the request.
 
-* **Administrator e-mail** If a valid e-mail address is given, then the Lizmap Web Client notifications will be sent. For example, each account creation request via the registration form generates an email sent to this address.
+* **Administrator e-mail**: If a valid e-mail address is given, then the Lizmap
+  Web Client notifications will be sent. For example, each account creation
+  request via the registration form generates an email sent to this address.
+
+* **sender e-mail** and **sender name**: when Lizmap sends an e-mail like
+  notifications or for password reset, if needs the email address and the name
+  of a sender.
+
 
 .. image:: /images/administration-modify-services.png
    :align: center
+
+proxy for External requests
+---------------------------
+
+Lizmap may need to access to some internet services. So, if it is installed
+behind a web proxy (typically in an intranet), you need to indicate what is
+the proxy.
+
+You should check the checkbox "Use a proxy server" and fill these fields:
+
+* **Host of the proxy server**: the address of the proxy
+* **Port of the proxy server**: the tcp port of the proxy
+* **Type of the proxy**: the protocol used to access to the proxy: http or socks5.
+  It is only supported when curl is used.
+* **Login** and **password**: sometimes an authentication is needed to access to the proxy
+* **Domains for which the proxy will not be used**: there are some requests that
+ should no go to the proxy, typically requests to your QGIS server, or requests
+ to a local server that serves map backgrounds etc... You have at least to set
+ it with "localhost,127.0.0.1".
+
 
 Repositories
 ============
