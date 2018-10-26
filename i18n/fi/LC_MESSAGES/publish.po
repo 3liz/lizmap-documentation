@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-07 15:30+0200\n"
+"POT-Creation-Date: 2018-09-19 19:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kari Salovaara <kari.salovaara@pp1.inet.fi>, 2018\n"
 "Language-Team: Finnish (https://www.transifex.com/3liz-1/teams/62012/fi/)\n"
@@ -268,8 +268,8 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:114
 msgid ""
-"the documents contained in this **media** directory are **synchronized as "
-"other data** with the plugin FTP synchronisation"
+"the documents contained in this **media** directory must be **synchronized "
+"as other data**"
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:115
@@ -356,8 +356,8 @@ msgid "Use in popups"
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:150
-#: ../../source/publish/advanced_lizmap_config.rst:785
-#: ../../source/publish/advanced_lizmap_config.rst:845
+#: ../../source/publish/advanced_lizmap_config.rst:789
+#: ../../source/publish/advanced_lizmap_config.rst:849
 msgid "Principle"
 msgstr ""
 
@@ -1056,63 +1056,74 @@ msgid "edit the CSS files"
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:467
+msgid "The files and directories must be readable (755:644)"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:469
+msgid ""
+"To preview your results just add ``&theme=yourtheme`` at the end of your URL"
+" (e.g. "
+"``https://demo.lizmap.3liz.com/index.php/view/map/?repository=montpellier&project=montpellier&theme=yourtheme``)."
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:471
 msgid ""
 "Once your theme is ready, you can just publish it copying it in the "
 "directory ``media``."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:470
+#: ../../source/publish/advanced_lizmap_config.rst:474
 msgid "Adding your own JavaScript"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:473
+#: ../../source/publish/advanced_lizmap_config.rst:477
 msgid "Purpose"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:475
+#: ../../source/publish/advanced_lizmap_config.rst:479
 msgid ""
 "This is useful for a variety of advanced usage. For instance, you can avoid "
 "people being able to download elements of the page by right clicking on "
 "them, and of course much more."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:477
+#: ../../source/publish/advanced_lizmap_config.rst:481
 msgid ""
 "This is available starting with Lizmap 2.11. For earlier versions, you must "
 "add your code directly to file ``lizmap/www/js/map.js``."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:479
+#: ../../source/publish/advanced_lizmap_config.rst:483
 msgid ""
 "In your repository (e.g. ``/home/data/repo1/myproject.qgs`` you should have "
 "these directories::"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:485
+#: ../../source/publish/advanced_lizmap_config.rst:489
 msgid ""
 "All the Javascript code you copy in the "
 "``/home/data/rep1/media/js/myproject/`` directory will be executed by "
 "Lizmap, provided that:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:486
+#: ../../source/publish/advanced_lizmap_config.rst:490
 msgid ""
 "you allow it, through the Lizmap admin interface, adding the privilege "
 "\"Allow themes for this repository\" in the form for the modification of the"
 " repository"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:490
+#: ../../source/publish/advanced_lizmap_config.rst:494
 msgid "Available Javascript events"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:492
+#: ../../source/publish/advanced_lizmap_config.rst:496
 msgid ""
 "The Javascript code can use many events fired by Lizmap Web Client. Here is "
 "a list of all the events available, with the returned properties."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:494
+#: ../../source/publish/advanced_lizmap_config.rst:498
 msgid "Lizmap Web Client available events"
 msgstr ""
 
@@ -1471,17 +1482,17 @@ msgid ""
 "done, Lizmap responds with the event layerSelectionChanged"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:532
+#: ../../source/publish/advanced_lizmap_config.rst:536
 msgid "Examples"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:534
+#: ../../source/publish/advanced_lizmap_config.rst:538
 msgid ""
 "Here is a very small example allowing you to disable right clic in Lizmap. "
 "Just add a file named e.g. ``disableRightClick.js`` with the following code:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:544
+#: ../../source/publish/advanced_lizmap_config.rst:548
 msgid ""
 "If you want this code to be executed for all projects of your repository, "
 "you have to copy the file in the directory "
@@ -1489,13 +1500,13 @@ msgid ""
 "``/home/data/rep1/media/js/myproject/``."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:546
+#: ../../source/publish/advanced_lizmap_config.rst:550
 msgid ""
 "Here is a very useful example allowing you to send current login User-ID "
 "(and/or other user data) to PostgreSQL table column, using edition tool."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:587
+#: ../../source/publish/advanced_lizmap_config.rst:591
 msgid ""
 "In the directory ``lizmap-web-client/lizmap/install/qgis/media/js/`` you can"
 " find examples of suitable JavaScript code; just remove the extension "
@@ -1503,52 +1514,52 @@ msgid ""
 "them."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:590
+#: ../../source/publish/advanced_lizmap_config.rst:594
 msgid "Printing configuration"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:592
+#: ../../source/publish/advanced_lizmap_config.rst:596
 msgid ""
 "To add print capabilities in the online map, you have to enbale the printing"
 " tool in the plugin *Map* tab (:ref:`lizmap-config-map`) and the QGIS "
 "project has at least one print composition."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:594
+#: ../../source/publish/advanced_lizmap_config.rst:598
 msgid "The print composition must contain **at least one map**."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:596
+#: ../../source/publish/advanced_lizmap_config.rst:600
 msgid "you can add :"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:598
+#: ../../source/publish/advanced_lizmap_config.rst:602
 msgid "an image to North arrow"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:599
+#: ../../source/publish/advanced_lizmap_config.rst:603
 msgid "an image for the logo of your organization"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:600
+#: ../../source/publish/advanced_lizmap_config.rst:604
 msgid "a legend that will be fixed for all printing (before version 2.6)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:601
+#: ../../source/publish/advanced_lizmap_config.rst:605
 msgid "a scale, preferably digital for display"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:602
+#: ../../source/publish/advanced_lizmap_config.rst:606
 msgid ""
 "a location map, a map for which you have enabled and configured the function"
 " of *Overview*"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:603
+#: ../../source/publish/advanced_lizmap_config.rst:607
 msgid "labels"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:605
+#: ../../source/publish/advanced_lizmap_config.rst:609
 msgid ""
 "You can allow the user to modify the contents of certain labels (title, "
 "description, comment, etc). To do this you need to add a identifier to your "
@@ -1558,13 +1569,13 @@ msgid ""
 "your label in QGIS, you will have a multiline label in Lizmap."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:609
+#: ../../source/publish/advanced_lizmap_config.rst:613
 msgid ""
 "Finally the print function will be based on the map scales that you set in "
 "the plugin *Map* (:ref:`lizmap-config-map`)."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:611
+#: ../../source/publish/advanced_lizmap_config.rst:615
 msgid ""
 "It is possible to exclude printing compositions for the web. For example, if"
 " the QGIS project contains 4 compositions, the project administrator can "
@@ -1572,11 +1583,11 @@ msgid ""
 "So only the published compositions will be presented in Lizmap."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:616
+#: ../../source/publish/advanced_lizmap_config.rst:620
 msgid "Allow printing of external baselayers"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:618
+#: ../../source/publish/advanced_lizmap_config.rst:622
 msgid ""
 "The Lizmap plugin *Baselayers* tab allows you to select and add external "
 "baselayers (:ref:`lizmap-config-baselayers`). These external baselayers are "
@@ -1584,82 +1595,82 @@ msgid ""
 "them."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:620
+#: ../../source/publish/advanced_lizmap_config.rst:624
 msgid ""
 "To overcome this lack Lizmap offers an easy way to print a group or layer "
 "instead of the external baselayer."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:622
+#: ../../source/publish/advanced_lizmap_config.rst:626
 msgid ""
 "To add to printing a layer that replaces an external baselayer, simply add "
 "to the QGIS project a group or layer whose name is part of the following "
 "list:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:624
+#: ../../source/publish/advanced_lizmap_config.rst:628
 msgid "*osm-mapnik* for OpenStreetMap"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:625
+#: ../../source/publish/advanced_lizmap_config.rst:629
 msgid "*osm-mapquest* for MapQuest OSM"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:626
+#: ../../source/publish/advanced_lizmap_config.rst:630
 msgid "*osm-cyclemap* for OSM CycleMap"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:627
+#: ../../source/publish/advanced_lizmap_config.rst:631
 msgid "*google-satellite* for Google Satellite"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:628
+#: ../../source/publish/advanced_lizmap_config.rst:632
 msgid "*google-hybrid* for Google Hybrid"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:629
+#: ../../source/publish/advanced_lizmap_config.rst:633
 msgid "*google-terrain* for Google Terrain"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:630
+#: ../../source/publish/advanced_lizmap_config.rst:634
 msgid "*google-street* for Google Streets"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:631
+#: ../../source/publish/advanced_lizmap_config.rst:635
 msgid "*bing-road* for Bing Road"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:632
+#: ../../source/publish/advanced_lizmap_config.rst:636
 msgid "*bing-aerial* for Bing Aerial"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:633
+#: ../../source/publish/advanced_lizmap_config.rst:637
 msgid "*bing-hybrid* for Bing Hybrid"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:634
+#: ../../source/publish/advanced_lizmap_config.rst:638
 msgid "*ign-scan* for IGN Scan"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:635
+#: ../../source/publish/advanced_lizmap_config.rst:639
 msgid "*ign-plan* for IGN Plan"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:636
+#: ../../source/publish/advanced_lizmap_config.rst:640
 msgid "*ign-photo* for IGN Photos"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:638
+#: ../../source/publish/advanced_lizmap_config.rst:642
 msgid "and then add your layer(s) you want to print as base."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:640
+#: ../../source/publish/advanced_lizmap_config.rst:644
 msgid ""
 "The use of this method must be in compliance with the licensing of external "
 "baselayers used (:ref:`lizmap-config-baselayers`)."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:642
+#: ../../source/publish/advanced_lizmap_config.rst:646
 msgid ""
 "For OpenStreetMap baselayers, it is possible to use an XML file for GDAL to "
 "exploit the OpenStreetMap tile services. Its use is described in the GDAL "
@@ -1668,45 +1679,45 @@ msgid ""
 "Tiles-in-QGIS (beware, EPSG code should be 3857)."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:644
+#: ../../source/publish/advanced_lizmap_config.rst:648
 msgid ""
 "By cons, if this layer has to replace an external baselayer, it must be "
 "accessible to QGIS-Server but should not be accessible to the user in Lizmap"
 " Web Client. So it must be hidden. See chapter :ref:`hide-layers`."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:647
+#: ../../source/publish/advanced_lizmap_config.rst:651
 msgid "Optimizing Lizmap"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:650
+#: ../../source/publish/advanced_lizmap_config.rst:654
 msgid "General concepts"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:652
+#: ../../source/publish/advanced_lizmap_config.rst:656
 msgid ""
 "Rendering speed is crucial for a webGIS, much more so than for a desktop "
 "application:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:654
+#: ../../source/publish/advanced_lizmap_config.rst:658
 msgid "web users expect to have everything available almost immediately"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:655
+#: ../../source/publish/advanced_lizmap_config.rst:659
 msgid ""
 "each user can sends requests to the same application; if you have tens or "
 "hundreds of users, you can easy understand that optimising your web "
 "application is an important task."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:657
+#: ../../source/publish/advanced_lizmap_config.rst:661
 msgid ""
 "You have to think to a web publication for many users rather than the "
 "display of a map to a single user."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:659
+#: ../../source/publish/advanced_lizmap_config.rst:663
 msgid ""
 "By default, for each QGIS layer you add to your Lizmap project, you can "
 "choose from the Lizmap plugin whether to toggle the layer visibility on "
@@ -1722,7 +1733,7 @@ msgid ""
 "systems:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:661
+#: ../../source/publish/advanced_lizmap_config.rst:665
 msgid ""
 "*server side*, on the machine where QGIS server and Lizmap are installed. If"
 " the tile has been requested and generated earlier, and not expired, Lizmap "
@@ -1730,14 +1741,14 @@ msgid ""
 "server"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:662
+#: ../../source/publish/advanced_lizmap_config.rst:666
 msgid ""
 "*client side*: the tiles will be saved in the browser cache, and reused "
 "until they expire. This avoid both the request to QGIS server and the "
 "internet traffic."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:664
+#: ../../source/publish/advanced_lizmap_config.rst:668
 msgid ""
 "The server cache has to be generated. In Lizmap <3, the only way of creating"
 " the tiles is to zoom and pan the whole map, and wait until all the tiles "
@@ -1746,13 +1757,13 @@ msgid ""
 " line tool to generate all the tiles, or a selection of them."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:666
+#: ../../source/publish/advanced_lizmap_config.rst:670
 msgid ""
 "To optimize the performance, is therefore important to understand how Lizmap"
 " uses the tiles to be displayed."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:668
+#: ../../source/publish/advanced_lizmap_config.rst:672
 msgid ""
 "Let's say you have a screen of 1280 by 768 pixels. If you have all your "
 "layers tiled, Lizmap has therefore to show about 5 by 3= 15 tiles (256 by "
@@ -1768,20 +1779,20 @@ msgid ""
 "complexity of the project."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:670
+#: ../../source/publish/advanced_lizmap_config.rst:674
 msgid "The size of each tile will depend on:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:672
+#: ../../source/publish/advanced_lizmap_config.rst:676
 msgid ""
 "the type of data (single raster or vector, or combination of several layers)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:673
+#: ../../source/publish/advanced_lizmap_config.rst:677
 msgid "the image format chosen (PNG, JPEG)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:675
+#: ../../source/publish/advanced_lizmap_config.rst:679
 msgid ""
 "A typical tile could be around 30 Kb. In our example, the client will "
 "therefore download about 20 by 30= 600 Kb per layer, which, for 30 layers, "
@@ -1790,13 +1801,13 @@ msgid ""
 "with a reasonably fast connection)."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:677
+#: ../../source/publish/advanced_lizmap_config.rst:681
 msgid ""
 "These calculations show clearly that to achieve good performances in "
 "webmapping you have to make choices, and simplify as much as possible."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:679
+#: ../../source/publish/advanced_lizmap_config.rst:683
 msgid ""
 "If one looks, for instance, at the approach taken by Google Maps or similar "
 "services, it is quite obvious that, besides having powerful servers, they "
@@ -1807,7 +1818,7 @@ msgid ""
 " compromises are acceptable for your users."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:681
+#: ../../source/publish/advanced_lizmap_config.rst:685
 msgid ""
 "If your project has 50 layers to be switched on and off, the vast majority "
 "of your users will never select most of them. Of course, there are real use "
@@ -1816,11 +1827,11 @@ msgid ""
 "displayed."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:683
+#: ../../source/publish/advanced_lizmap_config.rst:687
 msgid "To optimize your application as much as possible, we suggest you to:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:685
+#: ../../source/publish/advanced_lizmap_config.rst:689
 msgid ""
 "Create separate QGIS projects, and therefore different Lizmap maps, for "
 "different aims, thus grouping data in logical themes. For instance, a map "
@@ -1832,7 +1843,7 @@ msgid ""
 "mechanism in QGIS."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:686
+#: ../../source/publish/advanced_lizmap_config.rst:690
 msgid ""
 "Use the option *Maps only* in the administrator web interface. This option "
 "allows the user to switch automatically from one map to another, through the"
@@ -1842,7 +1853,7 @@ msgid ""
 "automatically to one of the projects, at the administrator choice."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:687
+#: ../../source/publish/advanced_lizmap_config.rst:691
 msgid ""
 "Do not show all the layers at startup (deactivate the checkbox *Toggled?* as"
 " described above). Only very important layers should be visible by default, "
@@ -1850,7 +1861,7 @@ msgid ""
 "reduction in the number of requests, and of the total network traffic."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:688
+#: ../../source/publish/advanced_lizmap_config.rst:692
 msgid ""
 "Create groups of layers, and use the option *Group as layer?* in Lizmap "
 "plugin. Generally a series of layers of the same general theme can be "
@@ -1861,7 +1872,7 @@ msgid ""
 " downloaded. The legend of the group will be displayed."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:689
+#: ../../source/publish/advanced_lizmap_config.rst:693
 msgid ""
 "Use the option *Single Tile?* for some layers. In this case, Lizmap will "
 "request only one image per layer, of about the size of the screen, instead "
@@ -1879,7 +1890,7 @@ msgid ""
 "series of bus lines, can be displayed as a single tile."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:690
+#: ../../source/publish/advanced_lizmap_config.rst:694
 msgid ""
 "Use the option *Hide checkboxes for groups*: this avoids the users to click "
 "on a group with e.g. 20 layers without really needing it, thus firing a big "
@@ -1887,7 +1898,7 @@ msgid ""
 "5-10 layers is usually good practice."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:691
+#: ../../source/publish/advanced_lizmap_config.rst:695
 msgid ""
 "Optimize the data and the QGIS project. As mentioned above, publishing a map"
 " over the internet will change your point of view: as said, you have to "
@@ -1895,22 +1906,22 @@ msgid ""
 "overload it is crucial to:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:693
+#: ../../source/publish/advanced_lizmap_config.rst:697
 msgid "create a spatial index for all your vector layers"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:694
+#: ../../source/publish/advanced_lizmap_config.rst:698
 msgid "pyramidize all your raster layers (except the very small ones)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:695
+#: ../../source/publish/advanced_lizmap_config.rst:699
 msgid ""
 "only display data at appropriate scale: for instance, displaying a detailed "
 "building layer at 1:500,000 is meaningless, as the image is almost "
 "unreadable, and puts a lot of stress on the server"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:696
+#: ../../source/publish/advanced_lizmap_config.rst:700
 msgid ""
 "use simplified version of a layer to display it at different scales. You can"
 " then group the original layer (to be displayed e.g. around 1:1,000) with "
@@ -1919,7 +1930,7 @@ msgid ""
 "using the most appropriate data at each scale"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:697
+#: ../../source/publish/advanced_lizmap_config.rst:701
 msgid ""
 "be careful about On The Fly (OTF) reprojection. If, for instance, you "
 "display data in Lambert 93 (EPSG:2154) on a base map from OpenStreetmap or "
@@ -1929,13 +1940,13 @@ msgid ""
 "reprojection by using the base map from IGN Géoportail directly in EPSG:2154"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:698
+#: ../../source/publish/advanced_lizmap_config.rst:702
 msgid ""
 "be aware of the fact that certain rendering options (e.g. labels, "
 "expressions, etc.) can be very demanding from the server"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:699
+#: ../../source/publish/advanced_lizmap_config.rst:703
 msgid ""
 "if you use PostGIS, optimize it: always add spatial indexes, indexes for "
 "filtered fields, for foreign keys, appropriate parameters for the "
@@ -1943,7 +1954,7 @@ msgid ""
 "instead of TCP/IP (you can do this through the use of services), etc."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:700
+#: ../../source/publish/advanced_lizmap_config.rst:704
 msgid ""
 "use an appropriate image format. For the base layers, where you do not need "
 "transparency JPEG is usually the best option: the tiles will be smaller, and"
@@ -1953,7 +1964,7 @@ msgid ""
 "your case"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:702
+#: ../../source/publish/advanced_lizmap_config.rst:706
 msgid ""
 "Upgrade your server. This is always an option, but is often useless if you "
 "did not optimize your project as described above. In any case, a low end "
@@ -1962,7 +1973,7 @@ msgid ""
 "Lizmap on Windows, it's more complex and slower."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:704
+#: ../../source/publish/advanced_lizmap_config.rst:708
 msgid ""
 "In Lizmap 3 you'll find several improvements that will help optimizing your "
 "installation:: * a tool for the preparation of the server cache, through the"
@@ -1973,22 +1984,22 @@ msgid ""
 "per layer for each zoom * code optimization."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:710
+#: ../../source/publish/advanced_lizmap_config.rst:714
 msgid "In detail: how to activate the caches"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:712
+#: ../../source/publish/advanced_lizmap_config.rst:716
 msgid ""
 "The Lizmap plugin *Layers* tab allows you to enable for each layer or group "
 "as a layer the cache for generated images. This feature is not compatible "
 "with the option *not tiled image*."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:714
+#: ../../source/publish/advanced_lizmap_config.rst:718
 msgid "Activating the cache server side"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:716
+#: ../../source/publish/advanced_lizmap_config.rst:720
 msgid ""
 "Lizmap Web Client can dynamically create a cache tiles on the server. This "
 "cache is the storage of the images already generated by QGIS-Server on the "
@@ -1998,21 +2009,21 @@ msgid ""
 "been made."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:718
+#: ../../source/publish/advanced_lizmap_config.rst:722
 msgid "To activate it you must:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:720
+#: ../../source/publish/advanced_lizmap_config.rst:724
 msgid "check the box *Server cache?*"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:721
+#: ../../source/publish/advanced_lizmap_config.rst:725
 msgid ""
 "specify the expiration time of the cache server in seconds: **Expiration "
 "(seconds)**"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:723
+#: ../../source/publish/advanced_lizmap_config.rst:727
 msgid ""
 "The **Metatile** option allows you to specify image size in addition for "
 "generating a tile. The principle of **Metatile** is to request the server "
@@ -2020,49 +2031,50 @@ msgid ""
 "return it to the Web client. This method avoids truncated labels at the "
 "edges and discontinuities between tiles, but is more resource intensive. The"
 " default value is *5,5*, an image whose width and height are equal to 5 "
-"times the width and height request."
+"times the width and height request. This option is useless for rasters."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:725
+#: ../../source/publish/advanced_lizmap_config.rst:729
 msgid "Activating the cache client side"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:727
+#: ../../source/publish/advanced_lizmap_config.rst:731
 msgid ""
 "The **Browser client cache** option allows you to specify an expiration time"
 " for the tiles in the Web browser (Mozilla Firefox, Chrome, Internet "
 "Explorer, Opera, etc.) cache in seconds. When browsing the Lizmap map with "
 "the browser, it stores displayed tiles in its cache. Enable client cache can"
 " greatly optimize Lizmap because the browser does not re-request the server "
-"for tiles already in cache that are not expired."
+"for tiles already in cache that are not expired. Values 0,0 and 1,1 are "
+"equivalent, and do not activate the option."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:729
+#: ../../source/publish/advanced_lizmap_config.rst:733
 msgid ""
 "We suggest to set to the maximum value (1 month equals to 24 x 3600 x 30 = "
 "2,592,000 seconds), except of course for layers whose data changes often."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:732
+#: ../../source/publish/advanced_lizmap_config.rst:736
 msgid ""
 "**The cache must be activated only once mastered rendering**, when you want "
 "to move the project into production."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:733
+#: ../../source/publish/advanced_lizmap_config.rst:737
 msgid ""
 "**The 2 cache modes, Server and Client, are completely independent** of one "
 "another. But of course, it is interesting to use the two together to "
 "optimize the application and free server resources."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:738
+#: ../../source/publish/advanced_lizmap_config.rst:742
 msgid ""
 "Centralizing the cache with the integration of groups and layers from a "
 "master project"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:740
+#: ../../source/publish/advanced_lizmap_config.rst:744
 msgid ""
 "In QGIS, it is possible to integrate in a project, groups or layers from "
 "another project (which will be called \"parent\"). This technique is "
@@ -2072,7 +2084,7 @@ msgid ""
 "change the properties)."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:742
+#: ../../source/publish/advanced_lizmap_config.rst:746
 msgid ""
 "Lizmap uses this feature to centralize the tiles cache. For all son projects"
 " using integrated layers of the parent project, Lizmap requests QGIS-Server "
@@ -2081,76 +2093,76 @@ msgid ""
 "benefit shared cache."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:744
+#: ../../source/publish/advanced_lizmap_config.rst:748
 msgid "To use this feature, you must:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:746
+#: ../../source/publish/advanced_lizmap_config.rst:750
 msgid "publish the parent QGIS project with Lizmap"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:748
+#: ../../source/publish/advanced_lizmap_config.rst:752
 msgid ""
 "you must **choose the right announced extent** in the *OWS Server* tab from "
 "project properties, because this **extent will be reused identically in son "
 "projects**."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:749
+#: ../../source/publish/advanced_lizmap_config.rst:753
 msgid ""
 "you must **configure the cache** for the layers to integrate. Also, note the"
 " options chosen here (image format, metatile, expiration) for use as such in"
 " the son projects."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:750
+#: ../../source/publish/advanced_lizmap_config.rst:754
 msgid ""
 "It is possible to hide the project from the main page of Lizmap with the "
 "check box *Hide the project Web Client Lizmap* in the plugin 'Map' tab."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:752
+#: ../../source/publish/advanced_lizmap_config.rst:756
 msgid ""
 "open the son project, and integrate layers or groups in this project, for "
 "example orthophoto. Then you must:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:754
+#: ../../source/publish/advanced_lizmap_config.rst:758
 msgid ""
 "verify that the **announced extent** in the QGIS project properties / OWS "
 "Server is **exactely the same as the parent project**."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:755
+#: ../../source/publish/advanced_lizmap_config.rst:759
 msgid ""
 "you must **configure the cache** for the integrated layer **with exactly the"
 " same options as those selected from the parent project**: image size, "
 "expiration, metatile."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:756
+#: ../../source/publish/advanced_lizmap_config.rst:760
 msgid ""
 "you must set the Lizmap id of the **Source repository** of the parent "
 "project (The one configured in the Lizmap Web Client administration "
 "interface)."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:757
+#: ../../source/publish/advanced_lizmap_config.rst:761
 msgid ""
 "the code of the \"Source project\" (the name of the parent QGIS project "
 "without the .qgs extension) is automatically entered for layers and "
 "integrated groups."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:759
+#: ../../source/publish/advanced_lizmap_config.rst:763
 msgid "Publish the son project to the Lizmap Web Client as usual."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:764
+#: ../../source/publish/advanced_lizmap_config.rst:768
 msgid "Masking individual layers"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:766
+#: ../../source/publish/advanced_lizmap_config.rst:770
 msgid ""
 "You can exclude layers of your publication with the *OWS Server* tab of the "
 "*QGIS project properties*. In this case the layers will not be available in "
@@ -2158,39 +2170,39 @@ msgid ""
 "function and not display in the map."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:768
+#: ../../source/publish/advanced_lizmap_config.rst:772
 msgid ""
 "To overcome this lack Lizmap offers a simple way to not display some layers."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:770
+#: ../../source/publish/advanced_lizmap_config.rst:774
 msgid ""
 "Not to display one or more layers of QGIS project in the legend of the Web "
 "map, just put these layers in a group called \"hidden\". All the layers in "
 "this group will not be visible in the Web application."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:772
+#: ../../source/publish/advanced_lizmap_config.rst:776
 msgid "This feature can be used for:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:774
+#: ../../source/publish/advanced_lizmap_config.rst:778
 msgid "hide a layer used in the locate by layer (:ref:`locate-by-layer`)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:775
+#: ../../source/publish/advanced_lizmap_config.rst:779
 msgid "hide a simple layer for adding data rendered with a view"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:776
+#: ../../source/publish/advanced_lizmap_config.rst:780
 msgid "hide a layer for printing (:ref:`print-external-baselayer`)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:782
+#: ../../source/publish/advanced_lizmap_config.rst:786
 msgid "Show attribute table for Lizmap layers"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:787
+#: ../../source/publish/advanced_lizmap_config.rst:791
 msgid ""
 "Lizmap is designed to show spatial data in the main map, and you can propose"
 " users to see an object data through the \"popup\" feature (a small popup "
@@ -2198,7 +2210,7 @@ msgid ""
 "See :ref:`popups-in-lizmap`"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:789
+#: ../../source/publish/advanced_lizmap_config.rst:793
 msgid ""
 "Sometimes this is not enough, and as a map editor, you would like the user "
 "to see all the data of a specific layer, as you can do in QGIS by opening "
@@ -2208,18 +2220,18 @@ msgid ""
 "available for Lizmap 3.0 )"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:792
+#: ../../source/publish/advanced_lizmap_config.rst:796
 msgid "Activate the attribute table tool for a vector layer"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:794
+#: ../../source/publish/advanced_lizmap_config.rst:798
 msgid ""
 "In the **Tools** tab of Lizmap plugin dialog, there is a group called "
 "\"Attribute layers\" which shows a table and some form fields dedicated to "
 "add or remove vector layers."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:796
+#: ../../source/publish/advanced_lizmap_config.rst:800
 msgid ""
 "Lizmap Web Client uses the **Web Feature Service** (WFS) to get data from a "
 "QGIS vector layer and display it in the web interface. This is why the first"
@@ -2232,20 +2244,20 @@ msgid ""
 "for a map published in degrees, and keep 1 for map projections in meters )"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:798
+#: ../../source/publish/advanced_lizmap_config.rst:802
 msgid ""
 "Once the layer is published through WFS, you can add it in the attribute "
 "layers table. Some options are available to finely tune the features "
 "provided to the user:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:800
+#: ../../source/publish/advanced_lizmap_config.rst:804
 msgid ""
 "**Layer**: Choose one of the vector layers (spatial or not). This can be any"
 " vector layer format : GeoJSON, Shapefile, PostGIS, CSV, etc."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:801
+#: ../../source/publish/advanced_lizmap_config.rst:805
 msgid ""
 "**Unique ID**: The attribute table tool needs to be able to defined each "
 "feature as unique. We strongly advise you to add such a field if your layer "
@@ -2254,13 +2266,13 @@ msgid ""
 "*Field calculator*. Choose the correct field with the combo box."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:802
+#: ../../source/publish/advanced_lizmap_config.rst:806
 msgid ""
 "**Fields to hide**: You have 2 ways of hiding fields in the published "
 "attribute table."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:804
+#: ../../source/publish/advanced_lizmap_config.rst:808
 msgid ""
 "In the *vector layer properties dialog* of the QGIS vector layer, in the "
 "*Fields* tab, you can uncheck the checkbox of the column **WFS** for the "
@@ -2269,7 +2281,7 @@ msgid ""
 "publication to some fields (for example to get rid of sensitive fields)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:805
+#: ../../source/publish/advanced_lizmap_config.rst:809
 msgid ""
 "You can use this **Fields to hide** option to **hide** the given fields in "
 "the attribute table display. The hidden fields won't be visible for the end "
@@ -2279,11 +2291,11 @@ msgid ""
 " table features will not work properly."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:808
+#: ../../source/publish/advanced_lizmap_config.rst:812
 msgid "Using relations with the attribute layers tool"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:810
+#: ../../source/publish/advanced_lizmap_config.rst:814
 msgid ""
 "In QGIS, you can configure **relations** between layers, in the **project "
 "properties** dialog. If you publish in Lizmap more than one layers in the "
@@ -2293,7 +2305,7 @@ msgid ""
 "tables content."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:812
+#: ../../source/publish/advanced_lizmap_config.rst:816
 msgid ""
 "For example, you could have a layer of cities, and a child layer of public "
 "building. Clicking on one city in the attribute table will make the public "
@@ -2301,7 +2313,7 @@ msgid ""
 "the clicked city."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:814
+#: ../../source/publish/advanced_lizmap_config.rst:818
 msgid ""
 "You can use \"many-to-many\" (N:M) relations in QGIS since version 2.14 but "
 "Lizmap doesn't use it automatically yet. You have to define the relations in"
@@ -2309,19 +2321,19 @@ msgid ""
 "example, you can have the three following vector layers in your project:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:816
+#: ../../source/publish/advanced_lizmap_config.rst:820
 msgid ""
 "**Tramway lines**: this layers name \"Lines\" contains one feature per tram "
 "line, and has a unique ID field *tram_id*"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:817
+#: ../../source/publish/advanced_lizmap_config.rst:821
 msgid ""
 "**Tramway stops**: this layer named \"Stops\" contains one feature per tram "
 "stop, with a unique ID field called *stop_id*"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:818
+#: ../../source/publish/advanced_lizmap_config.rst:822
 msgid ""
 "**Correspondance table between lines and stops**: this layer named \"Pivot\""
 " is a pivot table between tram lines and stops, since a stop can be used for"
@@ -2330,46 +2342,46 @@ msgid ""
 " in the line."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:820
+#: ../../source/publish/advanced_lizmap_config.rst:824
 msgid ""
 "You can add 2 relations in QGIS project properties : one between Lines and "
 "Pivot using the tram_id field, and one between Stops and Pivot using the "
 "stop_id field."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:822
+#: ../../source/publish/advanced_lizmap_config.rst:826
 msgid ""
 "In Lizmap, we added a simple way to configure the N:M relation. You can "
 "simply"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:824
+#: ../../source/publish/advanced_lizmap_config.rst:828
 msgid ""
 "Create the two relations described above in QGIS project properties dialog, "
 "tab **Relations**"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:825
+#: ../../source/publish/advanced_lizmap_config.rst:829
 msgid "Add the Lines and Stops layers in the attribute layers tool"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:826
+#: ../../source/publish/advanced_lizmap_config.rst:830
 msgid ""
 "Add the Pivot layer in the attribute layers tool with the option **Pivot "
 "table** checked"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:828
+#: ../../source/publish/advanced_lizmap_config.rst:832
 msgid "Lizmap Web Client will then handle the relation as a N:M relation:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:830
+#: ../../source/publish/advanced_lizmap_config.rst:834
 msgid ""
 "The pivot table will be displayed under each parent attribute table and show"
 " only the corresponding children."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:831
+#: ../../source/publish/advanced_lizmap_config.rst:835
 msgid ""
 "The filter feature based on the attribute layers will trigger the cascading "
 "filter of the pivot and the other parent. For example, if the user uses the "
@@ -2377,19 +2389,19 @@ msgid ""
 "corresponding stops in the map and in the Stops attribute tables"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:835
+#: ../../source/publish/advanced_lizmap_config.rst:839
 msgid "Attribute table and edition"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:837
+#: ../../source/publish/advanced_lizmap_config.rst:841
 msgid "todo"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:842
+#: ../../source/publish/advanced_lizmap_config.rst:846
 msgid "Editing data in Lizmap"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:847
+#: ../../source/publish/advanced_lizmap_config.rst:851
 msgid ""
 "Since version 2.8, it is possible to allow users to **edit spatial and "
 "attribute data** from the Lizmap Web Client interface for **PostgreSQL or "
@@ -2398,23 +2410,23 @@ msgid ""
 " web interface:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:849
+#: ../../source/publish/advanced_lizmap_config.rst:853
 msgid "creating elements"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:850
+#: ../../source/publish/advanced_lizmap_config.rst:854
 msgid "modifying attributes"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:851
+#: ../../source/publish/advanced_lizmap_config.rst:855
 msgid "modifying the geometry"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:852
+#: ../../source/publish/advanced_lizmap_config.rst:856
 msgid "deleting elements"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:854
+#: ../../source/publish/advanced_lizmap_config.rst:858
 msgid ""
 "The **Web form** presented to the user to populate the **attribute table** "
 "supports **editing tools** available in the *fields* tab of the QGIS Vector "
@@ -2423,18 +2435,18 @@ msgid ""
 "with the mouse, in QGIS and the Lizmap plugin."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:856
+#: ../../source/publish/advanced_lizmap_config.rst:860
 msgid ""
 "In addition, Lizmap Web Client automatically detects the column type "
 "(integer, real, string, etc.) and adds the necessary checks and controls on "
 "the fields."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:859
+#: ../../source/publish/advanced_lizmap_config.rst:863
 msgid "Usage examples"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:861
+#: ../../source/publish/advanced_lizmap_config.rst:865
 msgid ""
 "**A town** wish that citizens identify visible problems on the road: "
 "uncollected trash, broken street lights, wrecks to remove. The QGIS project "
@@ -2442,107 +2454,107 @@ msgid ""
 " all."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:863
+#: ../../source/publish/advanced_lizmap_config.rst:867
 msgid ""
 "**An engineering office** wants to allow project partners to trace remarks "
 "on the project areas. It allows the addition of polygons in a dedicated "
 "layer."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:866
+#: ../../source/publish/advanced_lizmap_config.rst:870
 msgid "Configuring the edition tool"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:868
+#: ../../source/publish/advanced_lizmap_config.rst:872
 msgid "To allow data editing in Lizmap Web Client, you must:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:870
+#: ../../source/publish/advanced_lizmap_config.rst:874
 msgid ""
 "**At least one vector layer with PostGIS or Spatialite type** in the QGIS "
 "project."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:871
+#: ../../source/publish/advanced_lizmap_config.rst:875
 msgid ""
 "**Configure editing tools** for this layer in the *fields* tab of the layer "
 "properties. This is not required but recommended to control the data entered"
 " by users."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:872
+#: ../../source/publish/advanced_lizmap_config.rst:876
 msgid "**Add the layer in the tool with the plugin**"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:874
+#: ../../source/publish/advanced_lizmap_config.rst:878
 msgid "Here are the detailed steps:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:876
+#: ../../source/publish/advanced_lizmap_config.rst:880
 msgid ""
 "If necessary, **create a layer** in your database with the desired geometry "
 "type (point, line, polygon, etc.)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:878
+#: ../../source/publish/advanced_lizmap_config.rst:882
 msgid "think about adding a **primary key**: this is essential!"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:879
+#: ../../source/publish/advanced_lizmap_config.rst:883
 msgid ""
 "the primary key column must be of type **auto-increment**. For example "
 "*serial* to PostgreSQL."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:880
+#: ../../source/publish/advanced_lizmap_config.rst:884
 msgid ""
 "think about adding a **spatial index**: this is important for performance"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:881
+#: ../../source/publish/advanced_lizmap_config.rst:885
 msgid ""
 "*create as many fields as you need for attributes*: if possible, use simple "
 "field names!"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:883
+#: ../../source/publish/advanced_lizmap_config.rst:887
 msgid ""
 "Please refer to the QGIS documentation to see how to create a spatial layer "
 "in a PostGIS or Spatialite database: "
 "http://docs.qgis.org/html/en/docs/user_manual/index.html"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:885
+#: ../../source/publish/advanced_lizmap_config.rst:889
 msgid "**Set the editing tools** for your layer fields"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:887
+#: ../../source/publish/advanced_lizmap_config.rst:891
 msgid ""
 "*Open the layer properties* by double-clicking on the layer name in the "
 "legend."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:888
+#: ../../source/publish/advanced_lizmap_config.rst:892
 msgid "Go to *Fields* tab."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:889
+#: ../../source/publish/advanced_lizmap_config.rst:893
 msgid ""
 "Select the *Editing tool* in the *Edit widget* column for each field of the "
 "layer:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:891
+#: ../../source/publish/advanced_lizmap_config.rst:895
 msgid ""
 "To hide a field, choose *Hidden*. The user will not see the field in the "
 "form. There will be no content inserting. *Use it for the primary key*."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:892
+#: ../../source/publish/advanced_lizmap_config.rst:896
 msgid "To add a read-only field, unchecked *Editable* checkbox."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:893
+#: ../../source/publish/advanced_lizmap_config.rst:897
 msgid ""
 "Special case of the option *Value Relation*. You can use this option for a "
 "Lizmap map. For users to have access to information of the outer layer that "
@@ -2550,28 +2562,28 @@ msgid ""
 "layer in the *OWS Server* tab of the QGIS *project properties*."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:894
+#: ../../source/publish/advanced_lizmap_config.rst:898
 msgid "etc."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:896
+#: ../../source/publish/advanced_lizmap_config.rst:900
 msgid "**QGIS 2 evolutions**:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:898
+#: ../../source/publish/advanced_lizmap_config.rst:902
 msgid ""
 "To hide columns in the Lizmap popup, you must now uncheck the box in the "
 "*WMS* for each field to hide (this column is just after *Alias*)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:899
+#: ../../source/publish/advanced_lizmap_config.rst:903
 msgid ""
 "Lizmap Web Client does not know the \"QT Designer UI file\" for form "
 "generation. Therefore only use the *Autogenerate* mode or *Drag and drop* "
 "mode for editing layers."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:901
+#: ../../source/publish/advanced_lizmap_config.rst:905
 msgid ""
 "All the editing tools are not yet managed by Lizmap Web Client. Only the "
 "following tools are supported: Text edit, Classification, Range, Value Map, "
@@ -2579,70 +2591,70 @@ msgid ""
 "the web form displays a text input field."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:903
+#: ../../source/publish/advanced_lizmap_config.rst:907
 msgid ""
 "To make the field compulsory you have to define it as `NOT NULL` in the "
 "properties of the table, at the database level."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:905
+#: ../../source/publish/advanced_lizmap_config.rst:909
 msgid ""
 "Be careful if your layer contains some Z or M values, unfortunately Lizmap "
 "will set them to \"0\" which is the default value when saving to the "
 "database."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:907
+#: ../../source/publish/advanced_lizmap_config.rst:911
 msgid ""
 "Add the layer in the table \"Layer Editing\" located in the plugin Lizmap "
 "\"Tools\" tab:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:909
+#: ../../source/publish/advanced_lizmap_config.rst:913
 msgid "*Select the layer* in the drop-down list"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:910
+#: ../../source/publish/advanced_lizmap_config.rst:914
 msgid "Check the actions you want to activate from:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:912
+#: ../../source/publish/advanced_lizmap_config.rst:916
 msgid "Create"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:913
+#: ../../source/publish/advanced_lizmap_config.rst:917
 msgid "Modify attributes"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:914
+#: ../../source/publish/advanced_lizmap_config.rst:918
 msgid "Modify geometry"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:915
+#: ../../source/publish/advanced_lizmap_config.rst:919
 msgid "Delete"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:917
+#: ../../source/publish/advanced_lizmap_config.rst:921
 msgid "Add the layer in the list with the \"Add layer\" button."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:924
+#: ../../source/publish/advanced_lizmap_config.rst:928
 msgid "Reusing data of edition layers"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:926
+#: ../../source/publish/advanced_lizmap_config.rst:930
 msgid ""
 "The layers that you have selected for the editing tool are \"layers like the"
 " others\", which means:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:928
+#: ../../source/publish/advanced_lizmap_config.rst:932
 msgid ""
 "**QGIS styles and labels are applied to these layers.** You can create "
 "styles and labels that depend on a value of a layer column."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:930
+#: ../../source/publish/advanced_lizmap_config.rst:934
 msgid ""
 "If you want to propose the editing tool, but does not allow users to view "
 "data from the online layer (and therefore the additions of other users): "
@@ -2650,17 +2662,17 @@ msgid ""
 "directory. See :ref:`hide-layers`"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:932
+#: ../../source/publish/advanced_lizmap_config.rst:936
 msgid "**The layers are printable** if they are not masked."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:934
+#: ../../source/publish/advanced_lizmap_config.rst:938
 msgid ""
 "**The data are stored in a layer of the project**. The administrator can "
 "retrieve this data and use them thereafter."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:936
+#: ../../source/publish/advanced_lizmap_config.rst:940
 msgid ""
 "PostGIS or Spatialite? To centralize things, we recommend using a PostGIS "
 "database to store data. For Spatialite layers, be careful not to overwrite "
@@ -2669,7 +2681,7 @@ msgid ""
 "before a new sync your local directory."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:938
+#: ../../source/publish/advanced_lizmap_config.rst:942
 msgid ""
 "Using the cache: whether to use the server or client cache for editing "
 "layers, do so by knowingly: the data will not be visible to users until the "
@@ -2677,48 +2689,48 @@ msgid ""
 "layers."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:940
+#: ../../source/publish/advanced_lizmap_config.rst:944
 msgid "Lizmap 3 only"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:943
+#: ../../source/publish/advanced_lizmap_config.rst:947
 msgid "Adding files and images for features"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:945
+#: ../../source/publish/advanced_lizmap_config.rst:949
 msgid ""
 "With Lizmap 3, it is now possible to upload your files, including images, "
 "for each feature, during online editing; to achieve this, you need to:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:947
+#: ../../source/publish/advanced_lizmap_config.rst:951
 msgid ""
 "Configure edition for the layer, with one or more fields with the **edit "
 "type** \"Photo\" or \"File\". For example, let say the field name is "
 "\"photo\""
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:948
+#: ../../source/publish/advanced_lizmap_config.rst:952
 msgid ""
 "Create a folder at the root of the QGIS project file : **media/** and a "
 "subfolder **media/upload** (obviously you need to do that locally in your "
 "computer and server side )."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:949
+#: ../../source/publish/advanced_lizmap_config.rst:953
 msgid ""
 "Give Apache user (usually www-data) **write permission** on the upload "
 "folder, so that it can create files and folders in media/upload::"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:953
+#: ../../source/publish/advanced_lizmap_config.rst:957
 msgid ""
 "Check you ``php.ini`` to see if the variables ``post_max_size`` and "
 "``max_upload_size`` are correctly set (by default, php only allows uploading"
 " files up to 2 Mbyte)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:955
+#: ../../source/publish/advanced_lizmap_config.rst:959
 msgid ""
 "Lizmap will then create folders to store the data, depending on the layer "
 "name, field name, etc. For example, a file would be stored in the folder "
@@ -2727,21 +2739,21 @@ msgid ""
 "``media/upload/environment/observations/species_picture/my_picture.png``."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:957
+#: ../../source/publish/advanced_lizmap_config.rst:961
 msgid ""
 "Obviously you will be able to display this image (or any other file) in the "
 "popup, as it will be stored in the media folder. See :ref:`use-in-popups`"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:962
+#: ../../source/publish/advanced_lizmap_config.rst:966
 msgid "Filtered layers - Filtering data in function of users"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:965
+#: ../../source/publish/advanced_lizmap_config.rst:969
 msgid "Presentation of the function"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:967
+#: ../../source/publish/advanced_lizmap_config.rst:971
 msgid ""
 "Usually, the management of projects Lizmap access rights is via directory. "
 "Configuration is done in this case in the Lizmap Web Client administration "
@@ -2750,7 +2762,7 @@ msgid ""
 "management."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:969
+#: ../../source/publish/advanced_lizmap_config.rst:973
 msgid ""
 "Instead, the filtering feature presented here allows you to publish a single"
 " project QGIS, and filter the data displayed on the map based on the logged "
@@ -2758,60 +2770,60 @@ msgid ""
 "column in the attribute table."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:971
+#: ../../source/publish/advanced_lizmap_config.rst:975
 msgid ""
 "Filtering currently uses the ID of the user group connected to the Web "
 "application. He is active for all requests to the QGIS server, and thus "
 "concerns:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:973
+#: ../../source/publish/advanced_lizmap_config.rst:977
 msgid "the vector layers images displayed on the map"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:974
+#: ../../source/publish/advanced_lizmap_config.rst:978
 msgid "the popups"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:975
+#: ../../source/publish/advanced_lizmap_config.rst:979
 msgid "the *Locate by layer* feature lists. See :ref:`locate-by-layer`"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:976
+#: ../../source/publish/advanced_lizmap_config.rst:980
 msgid ""
 "drop-down lists of *Editing forms* from *Value relation*. See :ref:`lizmap-"
 "config-edition`"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:977
+#: ../../source/publish/advanced_lizmap_config.rst:981
 msgid "upcoming features (the attribute table display, search features, etc.)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:979
+#: ../../source/publish/advanced_lizmap_config.rst:983
 msgid "A video tutorial is available at: https://vimeo.com/83966790"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:982
+#: ../../source/publish/advanced_lizmap_config.rst:986
 msgid "Configuration of the data filter tool"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:984
+#: ../../source/publish/advanced_lizmap_config.rst:988
 msgid "To use data filtering tool in Lizmap Web Client, you must:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:986
+#: ../../source/publish/advanced_lizmap_config.rst:990
 msgid "use **QGIS 2 and above** on the server"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:987
+#: ../../source/publish/advanced_lizmap_config.rst:991
 msgid "have **access to the administration interface** of Lizmap Web Client"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:989
+#: ../../source/publish/advanced_lizmap_config.rst:993
 msgid "Here are the detailed steps to configure this feature:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:991
+#: ../../source/publish/advanced_lizmap_config.rst:995
 msgid ""
 "**Knowing the identifiers of user groups** configured in the Lizmap Web "
 "Client adminstration interface. For this, you must go to the administration "
@@ -2820,103 +2832,103 @@ msgid ""
 " users*)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:995
+#: ../../source/publish/advanced_lizmap_config.rst:999
 msgid ""
 "For all vector layers which is desired filter data, just add a text column "
 "that will hold the group ID for each line (not the name !!) who has the "
 "right to display this line."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:993
+#: ../../source/publish/advanced_lizmap_config.rst:997
 msgid ""
 "*Fill this column* for each line of the attribute table with the identifier "
 "of the group who has the right to see the line (using the calculator, for "
 "example)."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:994
+#: ../../source/publish/advanced_lizmap_config.rst:998
 msgid ""
 "It is possible to set **all** as the value in some lines to disable the "
 "filter: All users will see the data from these lines."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:995
+#: ../../source/publish/advanced_lizmap_config.rst:999
 msgid ""
 "If the value in this column for a row does not correspond to a user group, "
 "then the data will be displayed for no user."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:997
+#: ../../source/publish/advanced_lizmap_config.rst:1001
 msgid ""
 "Add the layer in the table **Filter Data by User** located in the plugin "
 "Lizmap *Tools* tab:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:999
+#: ../../source/publish/advanced_lizmap_config.rst:1003
 msgid "*Select layer* from the dropdown list"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1000
+#: ../../source/publish/advanced_lizmap_config.rst:1004
 msgid "Select the field that contains the *group identifier* for the layer"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1001
+#: ../../source/publish/advanced_lizmap_config.rst:1005
 msgid "Add the layer in the list with the button *Add layer*"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1002
+#: ../../source/publish/advanced_lizmap_config.rst:1006
 msgid ""
 "To remove a layer of the table, click on it and click the button *Delete the"
 " layer*"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1004
+#: ../../source/publish/advanced_lizmap_config.rst:1008
 msgid ""
 "**Disable the client cache and cache server** for all filtered layers. "
 "Otherwise, the data displayed will not be updated between each connection or"
 " user logout!"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1007
+#: ../../source/publish/advanced_lizmap_config.rst:1011
 msgid "Time Manager - Animation of temporal vector layers"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1009
+#: ../../source/publish/advanced_lizmap_config.rst:1013
 msgid ""
 "You can create animations of your vectors, provided you have at least a "
 "layer with a column with a valid date/time. You should select from the "
 "plugin:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1011
+#: ../../source/publish/advanced_lizmap_config.rst:1015
 msgid "at least one layer with the date/time"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1012
+#: ../../source/publish/advanced_lizmap_config.rst:1016
 msgid "the column with the date/time"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1013
+#: ../../source/publish/advanced_lizmap_config.rst:1017
 msgid "the number and type of time units for each step of the animation"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1014
+#: ../../source/publish/advanced_lizmap_config.rst:1018
 msgid ""
 "the duration, in milliseconds, of each step (the default is to display each "
 "10 days block for one second)"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1015
+#: ../../source/publish/advanced_lizmap_config.rst:1019
 msgid ""
 "one field to display as a label when hovering with the mouse over the "
 "objects"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1016
+#: ../../source/publish/advanced_lizmap_config.rst:1020
 msgid "optionally, an ID and a title for groups of objects."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1018
+#: ../../source/publish/advanced_lizmap_config.rst:1022
 msgid ""
 "When ready, your web application will display the symbol of a watch; "
 "clicking on it will open a small panel that will allow you to move between "
@@ -2925,43 +2937,43 @@ msgid ""
 "for several seconds before the application is available."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1020
+#: ../../source/publish/advanced_lizmap_config.rst:1024
 msgid ""
 "A video tutorial is available here: https://vimeo.com/83845949. It shows all"
 " the steps to use the functionality."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1022
+#: ../../source/publish/advanced_lizmap_config.rst:1026
 msgid ""
 "Demonstration site: "
 "http://demo.lizmap.3liz.com/index.php/view/?repository=rep6"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1024
+#: ../../source/publish/advanced_lizmap_config.rst:1028
 msgid ""
 "Several different formats for date/time are acceptable (those supported by "
 "the JavaScript library `DateJS`). You can check whether your format is "
 "supported by entering it in this page: http://www.datejs.com/"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1027
+#: ../../source/publish/advanced_lizmap_config.rst:1031
 msgid "Statictics with Dataviz"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1029
+#: ../../source/publish/advanced_lizmap_config.rst:1033
 msgid ""
 "In the 3.2 version of Lizmap, a way to show charts in Lizmap is implemented."
 " You will be able to create a few kinds of graph (scatter, pie, histogram, "
 "box, bar histogram2d, polar) with only a few clicks."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1036
+#: ../../source/publish/advanced_lizmap_config.rst:1040
 msgid ""
 "You can easily configure it with the plugin Lizmap in Qgis in the Dataviz "
 "panel."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1042
+#: ../../source/publish/advanced_lizmap_config.rst:1046
 msgid ""
 "**1** : You have the possibility to change the value to **dock**, "
 "**bottomdock** or **right-dock** these options change where your dataviz "
@@ -2969,7 +2981,7 @@ msgid ""
 "available, at the right of the screen, bottom and right."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1045
+#: ../../source/publish/advanced_lizmap_config.rst:1049
 msgid ""
 "**2**: Here, you have the possibility to write in HTML to change the style "
 "of the container of your charts. If you are proficient in the HTML language,"
@@ -2977,7 +2989,7 @@ msgid ""
 "way you want."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1052
+#: ../../source/publish/advanced_lizmap_config.rst:1056
 msgid ""
 "**3**: This table contains all the layers you have configured to be able to "
 "show statistics in your Lizmap project. All details about the configuration "
@@ -2986,41 +2998,41 @@ msgid ""
 "**remove a layer** at the bottom on the panel."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1055
+#: ../../source/publish/advanced_lizmap_config.rst:1059
 msgid ""
 "**4**: To add a graph, you have to configure it in this part of the panel."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1058
+#: ../../source/publish/advanced_lizmap_config.rst:1062
 msgid ""
 "**Type** :    You can choose the type of your graph, the available options "
 "are - scatter, box, bar, histogram, histogram2d, pie and polar."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1059
+#: ../../source/publish/advanced_lizmap_config.rst:1063
 msgid "**Title** : Here you can write the title you want for your graph."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1060
+#: ../../source/publish/advanced_lizmap_config.rst:1064
 msgid "**Layer** : You chose which layer you want to make a graph with."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1061
+#: ../../source/publish/advanced_lizmap_config.rst:1065
 msgid "**X field** : The X field of your graph."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1062
+#: ../../source/publish/advanced_lizmap_config.rst:1066
 msgid "**Y field** : The Y field of your graph."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1063
+#: ../../source/publish/advanced_lizmap_config.rst:1067
 msgid ""
 "**Group?** : For a few types of charts like 'bar' or 'pie', you can chose to"
 " aggregate the data in the graph. There are a few aggregate functions "
 "available - average(avg), sum, count, median, stddev, min, max, first, last"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1064
+#: ../../source/publish/advanced_lizmap_config.rst:1068
 msgid ""
 "**Color field** : you can choose or not a color field to customize the color"
 " of each category of your chart. If you want to do it, you need to check the"
@@ -3029,19 +3041,19 @@ msgid ""
 "HTML color code like '#01DFD7' for example."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1065
+#: ../../source/publish/advanced_lizmap_config.rst:1069
 msgid ""
 "**2nd Y field** : You can add a second Y field, it does not work for every "
 "type of graph, it's only working for histogram2d."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1066
+#: ../../source/publish/advanced_lizmap_config.rst:1070
 msgid ""
 "**Color field 2 ?** : You can chose the color of the second Y field the same"
 " way you chose the one for his first Y field."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1067
+#: ../../source/publish/advanced_lizmap_config.rst:1071
 msgid ""
 "**Display filtered plot in popups of parent layer** : if you check this "
 "checkbox, the children of your layer will get the same graph as the parent "
@@ -3049,64 +3061,117 @@ msgid ""
 "statistics of one entity instead of all."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1068
+#: ../../source/publish/advanced_lizmap_config.rst:1072
 msgid ""
 "**Only show child** : The main graph will not be shown in the main container"
 " and only the filtered graph of the relation of the layer will be displayed "
 "in the popup when you select the element."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1070
+#: ../../source/publish/advanced_lizmap_config.rst:1074
 msgid ""
 "When all the configuration is done, you have to click on the button **add a "
 "layer** at the bottom of the window."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1073
+#: ../../source/publish/advanced_lizmap_config.rst:1077
 msgid "Atlas - sequence of entities of a chosen layer"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1075
+#: ../../source/publish/advanced_lizmap_config.rst:1079
 msgid ""
 "This feature let you chose and configure a layer to make her into an atlas "
 "in your Lizmap project."
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1081
+#: ../../source/publish/advanced_lizmap_config.rst:1085
+msgid "Layer options :"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1087
+msgid "the atlas is enabled or not in your project"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1088
+msgid "you need to chose the layer you want your atlas on"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1089
+msgid "select the primary key field, it must be an integer"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1090
 msgid ""
-"Layer options : * the atlas is enabled or not in your project * you need to "
-"chose the layer you want your atlas on * select the primary key field, it "
-"must be an integer * check if you want to display the layer description in "
-"the dock of your atlas * chose the field who contains the name of your "
-"features, it will be shown instead of the primary key in the list of "
-"features * your atlas will be sorted according to this field * you can chose"
-" to highlight the feature selected by the atlas, it will change every time "
-"it's switching to a new feature * chose between a zoom on the feature or to "
-"make it the center of your map * you can chose to display the popup in the "
-"feature in the atlas container or not * check if you want to activate filter"
-" on the feature selected by the atlas, it will hide all other features of "
-"the layer and only show the one selected"
+"check if you want to display the layer description in the dock of your atlas"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1091
+msgid ""
+"chose the field who contains the name of your features, it will be shown "
+"instead of the primary key in the list of features"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1092
+msgid "your atlas will be sorted according to this field"
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1093
 msgid ""
-"Atlas options: * check if you want to open the atlas tool when you open your"
-" project * you can chose the size of the atlas dock (20%-50%) * you can "
-"select the duration between each step when your atlas is in auto-play mode *"
-" check if you want to launch the auto-play mode when you open your project"
+"you can chose to highlight the feature selected by the atlas, it will change"
+" every time it's switching to a new feature"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1094
+msgid ""
+"chose between a zoom on the feature or to make it the center of your map"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1095
+msgid ""
+"you can chose to display the popup in the feature in the atlas container or "
+"not"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1096
+msgid ""
+"check if you want to activate filter on the feature selected by the atlas, "
+"it will hide all other features of the layer and only show the one selected"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1098
+msgid "Atlas options:"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1100
+msgid "check if you want to open the atlas tool when you open your project"
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1101
+msgid "you can chose the size of the atlas dock (20%-50%)"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1102
+msgid ""
+"you can select the duration between each step when your atlas is in auto-"
+"play mode"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1103
+msgid ""
+"check if you want to launch the auto-play mode when you open your project"
+msgstr ""
+
+#: ../../source/publish/advanced_lizmap_config.rst:1107
 msgid ""
 "Changing the default image of a project in the repositories and projects "
 "site"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1103
+#: ../../source/publish/advanced_lizmap_config.rst:1109
 msgid "By default the following image is displayed for a project:"
 msgstr ""
 
-#: ../../source/publish/advanced_lizmap_config.rst:1110
+#: ../../source/publish/advanced_lizmap_config.rst:1116
 msgid ""
 "You can change this default image by adding in the same project folder a "
 ".png image with the exact project name and extension. Example: If the "
@@ -3173,42 +3238,34 @@ msgid "*Tools* : the Web map tools"
 msgstr ""
 
 #: ../../source/publish/lizmap_configuration.rst:28
-msgid "*FTP*: The configuration for synchronization through the plugin"
-msgstr ""
-
-#: ../../source/publish/lizmap_configuration.rst:29
 msgid "*Log*: displays information of performed actions"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:31
+#: ../../source/publish/lizmap_configuration.rst:30
 msgid "And it has 4 action buttons:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:33
+#: ../../source/publish/lizmap_configuration.rst:32
 msgid "Help"
 msgstr ""
 
+#: ../../source/publish/lizmap_configuration.rst:33
+msgid "Apply"
+msgstr ""
+
 #: ../../source/publish/lizmap_configuration.rst:34
-msgid "Save"
-msgstr ""
-
-#: ../../source/publish/lizmap_configuration.rst:35
-msgid "Save and synchronize"
-msgstr ""
-
-#: ../../source/publish/lizmap_configuration.rst:36
 msgid "Close"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:39
+#: ../../source/publish/lizmap_configuration.rst:37
 msgid "Configure layers and groups"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:41
+#: ../../source/publish/lizmap_configuration.rst:39
 msgid "The layer configuration is done in the *Layers* tab."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:43
+#: ../../source/publish/lizmap_configuration.rst:41
 msgid ""
 "This tab shows the layers tree of the project with the same organization "
 "that is defined in the Layers panel. You can select one of the tree "
@@ -3216,96 +3273,96 @@ msgid ""
 "group or layer."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:49
+#: ../../source/publish/lizmap_configuration.rst:47
 msgid "Information about groups and layers:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:51
+#: ../../source/publish/lizmap_configuration.rst:49
 msgid ""
 "*Title*: It will be used in the Web layers tree instead of the name. For "
 "layers, the *Title* Field is linked to that of the *Metadata* tab in the "
 "layer properties window"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:52
+#: ../../source/publish/lizmap_configuration.rst:50
 msgid ""
 "*Abstract*: It allows to describe the layer or group. It is displayed in the"
 " mouseover. For layers, the *Abstract* Field is linked to that of the "
 "*Metadata* tab in the layer properties window"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:53
+#: ../../source/publish/lizmap_configuration.rst:51
 msgid ""
 "*Link*: The web address of a document or a Web page describing the layer or "
 "group. An icon (i) appears in the legend if the link has been submitted. You"
 " can use the *media* folder, see :ref:`media-in-lizmap`."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:55
+#: ../../source/publish/lizmap_configuration.rst:53
 msgid "Layers options:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:57
+#: ../../source/publish/lizmap_configuration.rst:55
 msgid ""
 "*Toggled*: allows you to specify whether a layer is displayed by default"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:58
+#: ../../source/publish/lizmap_configuration.rst:56
 msgid ""
 "*Activate popup*: enables information popups on map's interrogation by "
 "clicking. See :ref:`popups-in-lizmap`"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:59
+#: ../../source/publish/lizmap_configuration.rst:57
 msgid ""
 "*Hide legend image*: allows you to hide the legend of the layer in the web "
 "interface"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:60
+#: ../../source/publish/lizmap_configuration.rst:58
 msgid ""
 "*Display in legend tree*: toggles visibility of the layer in the layers "
 "tree; when toggled off, it does not allow the user to manage the display of "
 "it"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:61
+#: ../../source/publish/lizmap_configuration.rst:59
 msgid ""
 "*Base layer*: sets the layer as a base map. This will be accessible via the "
 "list of basemap"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:62
+#: ../../source/publish/lizmap_configuration.rst:60
 msgid ""
 "*Single Tile*: selects the layer display mode. It can be displayed as "
 "multiple images, tiles, or a single image generated by the server"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:63
+#: ../../source/publish/lizmap_configuration.rst:61
 msgid "*Image format*:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:65
+#: ../../source/publish/lizmap_configuration.rst:63
 msgid "`png`: full image format, full range of colors with transparency"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:66
+#: ../../source/publish/lizmap_configuration.rst:64
 msgid ""
 "`png; mode=16bit`: lighter image format, panel color restricted with "
 "transparency"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:67
+#: ../../source/publish/lizmap_configuration.rst:65
 msgid ""
 "`png; mode=8bit`: very light image format, color panel restricts to the "
 "maximum with transparency, possible degradation of the image"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:68
+#: ../../source/publish/lizmap_configuration.rst:66
 msgid "`jpeg`: light image format without transparency with loss of quality"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:74
+#: ../../source/publish/lizmap_configuration.rst:72
 msgid ""
 "If the layer is provided by a WMS service and that it supports the Web map "
 "Coordinate Reference System, it is possible to *Directly Request images to "
@@ -3313,309 +3370,309 @@ msgid ""
 " option is available in the **Third Party WMS layers** group."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:76
+#: ../../source/publish/lizmap_configuration.rst:74
 msgid "The group options:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:78
+#: ../../source/publish/lizmap_configuration.rst:76
 msgid "Group as layer:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:80
+#: ../../source/publish/lizmap_configuration.rst:78
 msgid "transforms a group in a single layer in the web interface"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:81
+#: ../../source/publish/lizmap_configuration.rst:79
 msgid "used to group layers with scale dependent  visibility"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:82
+#: ../../source/publish/lizmap_configuration.rst:80
 msgid "simplifies the interface to the users of the Web map"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:83
+#: ../../source/publish/lizmap_configuration.rst:81
 msgid "to create a base map from multiple layers"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:85
+#: ../../source/publish/lizmap_configuration.rst:83
 msgid "if the group is a layer other options apply to it."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:90
+#: ../../source/publish/lizmap_configuration.rst:88
 msgid "Configure the map"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:92
+#: ../../source/publish/lizmap_configuration.rst:90
 msgid ""
 "The tab *Map* allows you to enable or disable basic Lizmap tools, choosing "
 "scales and the intial extent."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:98
+#: ../../source/publish/lizmap_configuration.rst:96
 msgid "The generic options:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:100
+#: ../../source/publish/lizmap_configuration.rst:98
 msgid "hide the project in Lizmap Web Client:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:102
+#: ../../source/publish/lizmap_configuration.rst:100
 msgid ""
 "if this option is checked, the project will be hidden in the Lizmap home "
 "page that shows thumbnails for all directories and project of the "
 "application. You can use this option to hide the project"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:103
+#: ../../source/publish/lizmap_configuration.rst:101
 msgid ""
 "the project will still be accessible for WMS or WFS clients based on "
 "directories rights"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:104
+#: ../../source/publish/lizmap_configuration.rst:102
 msgid ""
 "this feature is interesting  in the case of using this project as an "
 "external project for other ones."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:106
+#: ../../source/publish/lizmap_configuration.rst:104
 msgid "The map tools:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:108
+#: ../../source/publish/lizmap_configuration.rst:106
 msgid "*Print*: enables the use of QGIS compositions for PDF generation map"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:109
+#: ../../source/publish/lizmap_configuration.rst:107
 msgid ""
 "*Measure tools*: enables the measurement tools in the map (length, area, "
 "perimeter)"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:110
+#: ../../source/publish/lizmap_configuration.rst:108
 msgid ""
 "*Zoom history*: enables the navigation buttons in the history of zoom and "
 "move in the map"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:111
+#: ../../source/publish/lizmap_configuration.rst:109
 msgid ""
 "*Automatic geolocation*: enables the functions to use the HTML5 geolocation "
 "based on Wifi and/or GPS"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:112
+#: ../../source/publish/lizmap_configuration.rst:110
 msgid ""
 "*Address search*: to add an address search engine that is based on one of "
 "these services:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:114
+#: ../../source/publish/lizmap_configuration.rst:112
 msgid "Nominatim (OpenStreetMap)"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:115
+#: ../../source/publish/lizmap_configuration.rst:113
 msgid "Google"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:116
+#: ../../source/publish/lizmap_configuration.rst:114
 msgid "IGN France (Géoportail)"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:118
+#: ../../source/publish/lizmap_configuration.rst:116
 msgid "The scales :"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:120
+#: ../../source/publish/lizmap_configuration.rst:118
 msgid ""
 "a list of integer values separated by commas (and optional whitespace), eg: "
 "*250000, 100000, 50000*."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:121
+#: ../../source/publish/lizmap_configuration.rst:119
 msgid ""
 "Lizmap also used these scales to restrict the display between the minimum "
 "and maximum data scales. This is why **it is mandatory to enter at least 2 "
 "scales** in the list."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:123
+#: ../../source/publish/lizmap_configuration.rst:121
 msgid "The initial map extent:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:125
+#: ../../source/publish/lizmap_configuration.rst:123
 msgid ""
 "a list of coordinates in the Reference Coordinate System map in the format: "
 "``xmin, ymin, xmax, ymax``, setting the initial map extent"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:126
+#: ../../source/publish/lizmap_configuration.rst:124
 msgid ""
 "the maximal map extent is specified in the *OWS server* tab of *Project "
 "Properties* window. The data will not be displayed if they are outside it"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:127
+#: ../../source/publish/lizmap_configuration.rst:125
 msgid "by default, the initial extent is the maximal one."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:132
+#: ../../source/publish/lizmap_configuration.rst:130
 msgid "Configure the base layers"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:134
+#: ../../source/publish/lizmap_configuration.rst:132
 msgid ""
 "It is often useful to separate base layers as a reference and thematic "
 "layers in a Web map. In Lizmap, you can use groups or layers as base layers."
 " It is also possible to use external services in the Web map."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:136
+#: ../../source/publish/lizmap_configuration.rst:134
 msgid ""
 "The base layers are not part of the legend and are presented as a list."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:138
+#: ../../source/publish/lizmap_configuration.rst:136
 msgid ""
 "If a single base layer is configured (project layer, external service or "
 "empty base layer), then Lizmap Web Client interface does not show the box "
 "*Base layers*, but the layer will be however visible below the other layers."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:140
+#: ../../source/publish/lizmap_configuration.rst:138
 msgid ""
 "The *Base layers* tab lets you add external services as base layer and an "
 "empty base layer. The empty base layer will display thematic layers over the"
 " project background color."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:147
+#: ../../source/publish/lizmap_configuration.rst:145
 msgid "The available base layers"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:149
+#: ../../source/publish/lizmap_configuration.rst:147
 msgid "*OpenStreetMap*, mapping project under free and open licenses:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:151
+#: ../../source/publish/lizmap_configuration.rst:149
 msgid "OSM Mapnik: service available on openstreetmap.org"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:152
+#: ../../source/publish/lizmap_configuration.rst:150
 msgid "OSM Mapquest: service provided by Mapquest company"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:153
+#: ../../source/publish/lizmap_configuration.rst:151
 msgid ""
 "Cycle Map: promotion map of OpenStreetMap cycling data including altitude "
 "information"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:155
+#: ../../source/publish/lizmap_configuration.rst:153
 msgid "*Google*, requires compliance to use licence agreement:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:157
+#: ../../source/publish/lizmap_configuration.rst:155
 msgid "Streets: the default Google Maps background layer"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:158
-#: ../../source/publish/lizmap_configuration.rst:165
+#: ../../source/publish/lizmap_configuration.rst:156
+#: ../../source/publish/lizmap_configuration.rst:163
 msgid ""
 "Satellite: the background map incorporating aerial and satellite images"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:159
-#: ../../source/publish/lizmap_configuration.rst:166
+#: ../../source/publish/lizmap_configuration.rst:157
+#: ../../source/publish/lizmap_configuration.rst:164
 msgid "Hybrid: the background map mixing streets and satellite"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:160
+#: ../../source/publish/lizmap_configuration.rst:158
 msgid "Terrain"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:162
+#: ../../source/publish/lizmap_configuration.rst:160
 msgid ""
 "*Bing Map*, requires compliance with the Microsoft license agreement and "
 "therefore a key:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:164
+#: ../../source/publish/lizmap_configuration.rst:162
 msgid "Streets: the default Bing Map background layer"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:168
+#: ../../source/publish/lizmap_configuration.rst:166
 msgid ""
 "*IGN Géoportail*, requires compliance with the IGN license agreement and "
 "therefore a key:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:170
+#: ../../source/publish/lizmap_configuration.rst:168
 msgid "Plan: The IGN rendering for the Web"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:171
+#: ../../source/publish/lizmap_configuration.rst:169
 msgid ""
 "Satellite: the background map incorporating IGN aerial and satellite images"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:172
+#: ../../source/publish/lizmap_configuration.rst:170
 msgid "Scan: the background map mixing the various IGN scan"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:174
+#: ../../source/publish/lizmap_configuration.rst:172
 msgid "The licenses are available at the following URLs:"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:176
+#: ../../source/publish/lizmap_configuration.rst:174
 msgid "*OpenStreetMap*: http://wiki.openstreetmap.org/wiki/Tile_usage_policy"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:177
+#: ../../source/publish/lizmap_configuration.rst:175
 msgid "*Mapquest*: http://developer.mapquest.com/web/products/open/map#terms"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:178
+#: ../../source/publish/lizmap_configuration.rst:176
 msgid "*Google*: https://developers.google.com/maps/terms"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:179
+#: ../../source/publish/lizmap_configuration.rst:177
 msgid "*Bing*: https://www.microsoft.com/maps/product/terms.html"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:180
+#: ../../source/publish/lizmap_configuration.rst:178
 msgid "*IGN*: http://api.ign.fr/services#web"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:182
+#: ../../source/publish/lizmap_configuration.rst:180
 msgid ""
 "If you choose an external base layer, the map will be displayed in Google "
 "Mercator (EPSG: 3857 or EPSG: 900913), the scales are those of external "
 "services and QGIS-Server will perform on the fly reprojection."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:184
+#: ../../source/publish/lizmap_configuration.rst:182
 msgid "It is therefore necessary to prepare the QGIS project accordingly."
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:186
+#: ../../source/publish/lizmap_configuration.rst:184
 msgid ""
 "The *Google Mercator* coordinate reference system must be added in the Web "
 "Services CRSs list with the *OWS Server* tab in the *Project Properties* "
 "window. For now, all the proposed base layers use the projection::"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:191
+#: ../../source/publish/lizmap_configuration.rst:189
 msgid ""
 "Here are the approximate integer scales of the current external base "
 "layers::"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:214
+#: ../../source/publish/lizmap_configuration.rst:212
 msgid "External Lizmap layers"
 msgstr ""
 
-#: ../../source/publish/lizmap_configuration.rst:216
+#: ../../source/publish/lizmap_configuration.rst:214
 msgid ""
 "This feature has been removed. It's replaced by the possibility of using the"
 " menu  :menuselection:`Layer --> Embed Layers and Groups`, and in the plugin"
@@ -3911,101 +3968,4 @@ msgstr ""
 msgid ""
 "**overwrite files manually**: QGIS project (``.qgs``) and Lizmap "
 "configuration (``.qgs.cfg``)."
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:39
-msgid "Using FTP tab in Lizmap plugin"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:41
-msgid ""
-"The FTP tab in Lizmap plugin allows you to configure the use of the FTP "
-"protocol directly into QGIS, in order to make a mirrored synchronization "
-"directly from the plugin. To integrate FTP synchronization in the plugin, we"
-" relied on two free tools that have proven reliable:"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:43
-msgid "**WinSCP** on Windows: http://winscp.net/"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:44
-msgid "**lftp** on Mac and Linux: http://lftp.yar.ru/"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:46
-msgid ""
-"To use FTP synchronization from the Lizmap plugin, install an FTP client "
-"above."
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:48
-msgid "On Windows: WinSCP"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:50
-msgid "Download **portable version**: http://winscp.net/eng/download.php"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:51
-msgid "**Unzip to a directory**: for example ``C:\\\\winscp\\\\``"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:52
-msgid ""
-"**FTP tab in the plugin**: specify the directory where you unzipped WinSCP "
-"with the button `...`"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:54
-msgid "On Linux : LFTP"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:60
-msgid "On Mac : LFTP"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:62
-msgid ""
-"First install homebrew from here : https://brew.sh/index_fr.html then "
-"install lfpt from command line."
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:70
-msgid "In the FTP tab, you configure the following settings:"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:72
-msgid ""
-"**Host**: the FTP host, for the server on which Qgis server and Lizmap Web "
-"Client are installed (IP address or domain name)"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:73
-msgid "**Port**: the FTP port, 21 by default"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:74
-msgid "**User**: the FTP user"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:75
-msgid "**Password**: the FTP password"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:76
-msgid ""
-"**Remote directory**: directory path in which the Qgis projects are stored "
-"on the server, relative to the root of your FTP access. For example: "
-"/qgis/public/"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:77
-msgid "**Local directory**: reminder of the full path to the QGIS project"
-msgstr ""
-
-#: ../../source/publish/publish_with_ftp.rst:79
-msgid ""
-"Be careful to check the configuration with the server administrator on which"
-" Lizmap Web Client is installed before your tests!"
 msgstr ""
