@@ -61,7 +61,7 @@ To retrieve translated string:
 ```
 tx pull -l es,fi,fr,it,pt,ru --branch master
 #or 
-tx pull -l es,fi,fr,it,pt,ru --branch lizmap_3_1
+tx pull -l es,fi,fr,it,pt,ru --branch lizmap_3_2
 ```
 
 You can then commit them.
