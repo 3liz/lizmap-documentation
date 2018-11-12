@@ -180,6 +180,7 @@ ____________
 * We strongly advise you to add a trigram index on the unaccentuated **item_label** field, to speed up the search query:
 
 .. code-block:: sql
+
    -- Add the extension pg_trgm
    CREATE EXTENSION IF NOT EXISTS pg_trgm;
 
