@@ -134,6 +134,7 @@ _____________
    SELECT public.unaccent('public.unaccent', $1)  -- schema-qualify function and dictionary
    $func$  LANGUAGE sql IMMUTABLE;
 
+.. note:: We choose to use the pg_trgm extension and this custom f_unaccent function instead of the Full Text Search (FTS) tool of PostgreSQL, to keep the tool as simple as possible and avoid the need to create FTS "vectors" in your search data.
 
 Create the lizmap_search table or view
 _______________________________________
@@ -195,8 +196,11 @@ ____________
    $func$ LANGUAGE sql IMMUTABLE;
 
    --Then create the index on the unaccentuated item_label column:
-   DROP INDEX IF EXISTS lizmap_search_idx
+   DROP INDEX IF EXISTS lizmap_search_idx;
    CREATE INDEX lizmap_search_idx ON lizmap_search USING GIN (f_unaccent(item_label) gin_trgm_ops);
+
+   -- You can refresh the materialized view at any time (for example in a cron job) with:
+   REFRESH MATERIALIZED VIEW lizmap_search;
 
 
 Configure access
