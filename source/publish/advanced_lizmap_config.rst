@@ -124,6 +124,16 @@ _____________
 
 * a PostgreSQL database, accessible from Lizmap Web Client
 * PostgreSQL extensions activated in this database : **unaccent** and **pg_trgm** (for effective LIKE queries)
+* A custom function **f_unaccent** which can be used in an index. See this `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_ for explanation
+
+.. code-block:: sql
+
+   CREATE OR REPLACE FUNCTION public.f_unaccent(text)
+   RETURNS text AS
+   $func$
+   SELECT public.unaccent('public.unaccent', $1)  -- schema-qualify function and dictionary
+   $func$  LANGUAGE sql IMMUTABLE;
+
 
 Create the lizmap_search table or view
 _______________________________________
@@ -170,22 +180,23 @@ ____________
 * We strongly advise you to add a trigram index on the unaccentuated **item_label** field, to speed up the search query:
 
 .. code-block:: sql
-
+   -- Add the extension pg_trgm
    CREATE EXTENSION IF NOT EXISTS pg_trgm;
 
-
-* You should also install the extension unaccent, available with PostgreSQL contrib tools. This is needed to provide searches wich are not sensitive to accentuated characters.
-
-.. code-block:: sql
-
+   -- Add the extension unaccent, available with PostgreSQL contrib tools. This is needed to provide searches wich are not sensitive to accentuated characters.
    CREATE EXTENSION IF NOT EXISTS unaccent;
 
+   -- Add the f_unaccent function to be used in the index
+   CREATE OR REPLACE FUNCTION public.f_unaccent(text)
+   RETURNS text AS
+   $func$
+   SELECT public.unaccent('public.unaccent', $1)  -- schema-qualify function and dictionary
+   $func$ LANGUAGE sql IMMUTABLE;
 
-* Then create the index on the **item_label** column:
+   --Then create the index on the unaccentuated item_label column:
+   DROP INDEX IF EXISTS lizmap_search_idx
+   CREATE INDEX lizmap_search_idx ON lizmap_search USING GIN (f_unaccent(item_label) gin_trgm_ops);
 
-.. code-block:: sql
-
-   CREATE INDEX lizmap_search_idx ON lizmap_search USING GIN (unaccent(item_label) gin_trgm_ops);
 
 Configure access
 _________________
