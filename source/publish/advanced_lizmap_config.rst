@@ -128,9 +128,9 @@ _____________
 Create the lizmap_search table or view
 _______________________________________
 
-The database admin must create a table, view or materialized view called **lizmap_fts**. This relation must be accessible in the search_path (you can put it in the public schema, or configure the search_path variable for the database or the user which connects to the database).
+The database admin must create a table, view or materialized view called **lizmap_search**. This relation must be accessible in the search_path (you can put it in the public schema, or configure the search_path variable for the database or the user which connects to the database).
 
-The relation "lizmap_fts" must contain the following columns:
+The relation "lizmap_search" must contain the following columns:
 
 * **item_layer** (text). Name of the layer. For example "Countries"
 * **item_label** (text). Label to display the results, which is the data to search among. Ex: "France" or "John Doe - Australia". You can build it from a concatenation of serveral fields values.
@@ -185,7 +185,7 @@ ____________
 
 .. code-block:: sql
 
-   CREATE INDEX lizmap_search_idx ON lizmap_fts USING GIN (unaccent(item_label) gin_trgm_ops);
+   CREATE INDEX lizmap_search_idx ON lizmap_search USING GIN (unaccent(item_label) gin_trgm_ops);
 
 Configure access
 _________________
