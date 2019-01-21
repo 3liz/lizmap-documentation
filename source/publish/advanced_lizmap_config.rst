@@ -144,7 +144,7 @@ The database admin must create a table, view or materialized view called **lizma
 The relation "lizmap_search" must contain the following columns:
 
 * **item_layer** (text). Name of the layer. For example "Countries"
-* **item_label** (text). Label to display the results, which is the data to search among. Ex: "France" or "John Doe - Australia". You can build it from a concatenation of serveral fields values.
+* **item_label** (text). Label to display the results, which is the data to search among. Ex: "France" or "John Doe - Australia". You can build it from a concatenation of several fields values.
 * **item_project** (text). List of Lizmap projects separated by commas. Optionnal. When set, the search will be done only for the specified Lizmap projects
 * **item_filter** (text). Username or group name. When given, the results will be filtered by authenticated user login and groups. For example, 'admins'
 * **geom** (geometry). We advise to store all the geometries with the same SRID.
@@ -185,7 +185,7 @@ ____________
    -- Add the extension pg_trgm
    CREATE EXTENSION IF NOT EXISTS pg_trgm;
 
-   -- Add the extension unaccent, available with PostgreSQL contrib tools. This is needed to provide searches wich are not sensitive to accentuated characters.
+   -- Add the extension unaccent, available with PostgreSQL contrib tools. This is needed to provide searches which are not sensitive to accentuated characters.
    CREATE EXTENSION IF NOT EXISTS unaccent;
 
    -- Add the f_unaccent function to be used in the index
@@ -222,7 +222,11 @@ If not, or if you need to put the search data in another database (or connect wi
    password=DATABASE_PASSWORD
    ; search_path=DATABASE_SCHEMA_WITH_LIZMAP_SEARCH,public
 
+You don't need to configure the **locate by layer** tool. You can now use the default search bar in lizmap.
 
+.. image:: /images/interface-postgresql-search.png
+   :align: center
+   :width: 80%
 
 .. _media-in-lizmap:
 
