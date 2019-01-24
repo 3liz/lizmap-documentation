@@ -660,6 +660,14 @@ The Javascript code can use many events fired by Lizmap Web Client. Here is a li
    "layerfeatureselectsearched","Fire this event to select all the features corresponding to the displayed lines of the attribute table, which can be visually filterd by the user by entering some characters in the search text input.","featureType | updateDrawing"
    "layerfeatureunselectall","Fire this event to remove all features from selection for a layer. Once done, Lizmap responds with the event layerSelectionChanged","featureType | updateDrawing"
 
+There are also some variables which are available.
+
+.. csv-table:: Lizmap Web Client available variables
+   :header: "Variable name", "Description"
+
+   "lizUrls.media","URL to get a media"
+   "lizUrls.params.repository","Name of the current repository"
+   "lizUrls.params.project","Name of the current project"
 
 Examples
 --------
@@ -718,6 +726,20 @@ Here is a very useful example allowing you to send current login User-ID (and/or
    });
 
 In the directory ``lizmap-web-client/lizmap/install/qgis/media/js/`` you can find examples of suitable JavaScript code; just remove the extension ``.example`` and copy them to your media/js/default/ folder to activate them.
+
+If you want to get the URL of a static file.
+
+.. code-block:: javascript
+
+   var mediaUrl = OpenLayers.Util.urlAppend(
+        lizUrls.media,
+        OpenLayers.Util.getParameterString({
+            "repository": lizUrls.params.repository,
+            "project": lizUrls.params.project,
+            "path": "picture.png"
+        })
+   );
+
 
 Printing configuration
 ======================
