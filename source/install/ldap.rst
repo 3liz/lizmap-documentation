@@ -255,3 +255,22 @@ contains the group name. Ex: ``searchGroupProperty="cn"``.
 You may also indicate the base DN for the search, into `searchGroupBaseDN`. Example:
 ``searchGroupBaseDN="ou=Groups,dc=Acme,dc=pt"``.
 
+Debugging
+----------
+
+If the authentication does not working, you can have more details on what is
+wrong. To see these details, you should activate the traces for ldapdao.
+
+In your var/config/localconfig.ini.php, set these parameters
+
+.. code-block:: ini
+
+    [logger]
+    auth=file
+
+    [fileLogger]
+    auth=auth.log
+
+Then, in var/log/auth.log, you will have some messages from the ldap connector.
+Remove these settings when you don't need them, to avoid a huge auth.log file.
+
