@@ -1112,6 +1112,27 @@ Lizmap will then create folders to store the data, depending on the layer name, 
 
 Obviously you will be able to display this image (or any other file) in the popup, as it will be stored in the media folder. See :ref:`use-in-popups`
 
+Since Lizmap 3.2, you can override the default destination folder ``media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT`` by manually setting the path where to store the media, relatively to the project. To do so, you must use the **External resource** field edit widget, and configure it with:
+
+* a **Default path** written relative to the project. For example ``../media/images/`` if you want to store this field files in a folder media situated alongside the project folder. You can also choose set a path inside the project media folder. For example ``media/my_target_folder/``.
+* chek the **Relative path** checkbox, with the default **Relative to project path** option
+* if the field should store a image, you should also check the **Integrated document viewer** checkbox, with the type **Image**
+
+This allow to store the sent media files and images in a centralized folder, for example a directory **media** at the same level than the Lizmap repositories folders:
+
+* media
+
+  - images <-- to store images in this folder, use: ``../media/images/``
+  - pdf
+
+* environment
+
+  - trees.qgs
+  - trees.qgs.cfg
+  - media
+
+    * tree_pictures/ <-- to store images in this folder, use: ``media/tree_pictures/``
+
 .. _filter-layer-data-by-group:
 
 Filtered layers - Filtering data in function of users
