@@ -17,6 +17,8 @@ build_pot:
   stage: build_pot
   script:
     - make gettext
+  tags:
+    - infrav2
 
 build_and_publish_pot:
   except:
@@ -26,6 +28,8 @@ build_and_publish_pot:
   script:
     - make gettext
     - tx push -s --no-interactive --branch $TX_BRANCH
+  tags:
+    - infrav2
 
 retrieve_po_and_build:
   only:
@@ -38,6 +42,8 @@ retrieve_po_and_build:
     paths:
       - build/html/
     name: "lizmapdoc-$CI_COMMIT_REF_NAME"
+  tags:
+    - infrav2
 
 build_html:
   except:
@@ -50,6 +56,8 @@ build_html:
     paths:
       - build/html/
     name: "lizmapdoc-$CI_COMMIT_REF_NAME"
+  tags:
+    - infrav2
 
 deploy_snap:
   stage: deploy
@@ -62,6 +70,8 @@ deploy_snap:
     - rsync -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/$VERSION
   environment:
     name: snap
+  tags:
+    - infrav2
 
 deploy_production:
   only:
@@ -74,3 +84,6 @@ deploy_production:
   environment:
     name: production
   when: manual
+  tags:
+    - infrav2
+

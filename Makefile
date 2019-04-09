@@ -56,7 +56,7 @@ html:
 htmlen:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS)  -D language=en $(BUILDDIR)/html/en/
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/e,."
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/."
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
