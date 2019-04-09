@@ -1098,6 +1098,9 @@ The layers that you have selected for the editing tool are "layers like the othe
 Adding files and images for features
 ===================================================================
 
+Use the media/upload folder relative to the project
+---------------------------------------------------
+
 With Lizmap 3, it is now possible to upload your files, including images, for each feature, during online editing; to achieve this, you need to:
 
 * Configure edition for the layer, with one or more fields with the **edit type** "Photo" or "File". For example, let say the field name is "photo"
@@ -1111,6 +1114,9 @@ With Lizmap 3, it is now possible to upload your files, including images, for ea
 Lizmap will then create folders to store the data, depending on the layer name, field name, etc. For example, a file would be stored in the folder ``media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT`` and an image in ``media/upload/environment/observations/species_picture/my_picture.png``.
 
 Obviously you will be able to display this image (or any other file) in the popup, as it will be stored in the media folder. See :ref:`use-in-popups`
+
+Use a specific destination folder
+----------------------------------
 
 Since Lizmap 3.2, you can override the default destination folder ``media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT`` by manually setting the path where to store the media, relatively to the project. To do so, you must use the **External resource** field edit widget, and configure it with:
 
