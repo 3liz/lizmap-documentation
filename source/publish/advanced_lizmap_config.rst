@@ -82,7 +82,7 @@ For this, there are 2 methods:
 Spatial searching
 ==================
 
-In the map options, you can configure the address search based on external web services (nominatim, googke, french IGN). See :ref:`lizmap-config-map` .
+In the map options, you can activate and configure the address search bar, based on external web services (nominatim, google or french IGN). See :ref:`lizmap-config-map` .
 Additonaly, you can add spatial searching capability to Lizmap. This means you will allow the users to search within spatial data, such as countries, points of interests, etc. You have two ways to add searching capability in Lizmap:
 
 * since version 3.1, you can use the plugin **QuickFinder** to configure a data search per QGIS project.
