@@ -127,12 +127,18 @@ _____________
 * A custom function **f_unaccent** which can be used in an index. See this `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_ for explanation
 
 .. code-block:: sql
+   -- Add the extension pg_trgm
+   CREATE EXTENSION IF NOT EXISTS pg_trgm;
 
+   -- Add the extension unaccent, available with PostgreSQL contrib tools. This is needed to provide searches which are not sensitive to accentuated characters.
+   CREATE EXTENSION IF NOT EXISTS unaccent;
+
+   -- Add the f_unaccent function to be used in the index
    CREATE OR REPLACE FUNCTION public.f_unaccent(text)
    RETURNS text AS
    $func$
    SELECT public.unaccent('public.unaccent', $1)  -- schema-qualify function and dictionary
-   $func$  LANGUAGE sql IMMUTABLE;
+   $func$ LANGUAGE sql IMMUTABLE;
 
 .. note:: We choose to use the pg_trgm extension and this custom f_unaccent function instead of the Full Text Search (FTS) tool of PostgreSQL, to keep the tool as simple as possible and avoid the need to create FTS "vectors" in your search data.
 
@@ -182,20 +188,7 @@ ____________
 
 .. code-block:: sql
 
-   -- Add the extension pg_trgm
-   CREATE EXTENSION IF NOT EXISTS pg_trgm;
-
-   -- Add the extension unaccent, available with PostgreSQL contrib tools. This is needed to provide searches which are not sensitive to accentuated characters.
-   CREATE EXTENSION IF NOT EXISTS unaccent;
-
-   -- Add the f_unaccent function to be used in the index
-   CREATE OR REPLACE FUNCTION public.f_unaccent(text)
-   RETURNS text AS
-   $func$
-   SELECT public.unaccent('public.unaccent', $1)  -- schema-qualify function and dictionary
-   $func$ LANGUAGE sql IMMUTABLE;
-
-   --Then create the index on the unaccentuated item_label column:
+   -- Create the index on the unaccentuated item_label column:
    DROP INDEX IF EXISTS lizmap_search_idx;
    CREATE INDEX lizmap_search_idx ON lizmap_search USING GIN (f_unaccent(item_label) gin_trgm_ops);
 
