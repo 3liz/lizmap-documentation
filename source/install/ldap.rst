@@ -52,7 +52,7 @@ from the profiles.ini.php.dist.
     searchUserBaseDN="dc=XY,dc=fr"
     searchUserFilter="(&(objectClass=posixAccount)(uid=%%LOGIN%%))"
     bindUserDN="uid=%?%,ou=users,dc=XY,dc=fr"
-    searchAttributes="uid:login,givenName:firstname,sn:lastname,mail:email"
+    searchAttributes="uid:login,givenName:firstname,sn:lastname,mail:email,organization:organization,street:street,postcode:postcode,city:city"
     searchGroupFilter=
     searchGroupProperty="cn"
     searchGroupBaseDN=""
