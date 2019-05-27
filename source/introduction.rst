@@ -124,7 +124,7 @@ The rest is done with the **Lizmap plugin**. This plugin allows to:
 .. image:: images/introduction-montpellier-map.png
    :align: center
    :scale: 80%
-   :target: http://demo.3liz.com/lizmap/index.php/view/map?repository=montpellier&project=montpellier
+   :target: https://demo.lizmap.com/lizmap_3_3/index.php/view/map?repository=montpellier&project=montpellier
 
 Configuring with the Web back-office
 ------------------------------------
