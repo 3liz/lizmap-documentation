@@ -3,7 +3,7 @@ Lizmap - Documentation
 ===============================================================
 
 :Author: Michaël Douchin - 3liz, René-Luc D'Hont - 3liz
-:Date:   2014-2018
+:Date:   2014-2019
 :Copyright: CC-BY-SA
 :Contact: info@3liz.com
 :Organization: 3Liz

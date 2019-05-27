@@ -1098,7 +1098,7 @@ With Lizmap 3, it is now possible to upload your files, including images, for ea
 
 * Configure edition for the layer, with one or more fields with the **edit type** "Photo" or "File". For example, let say the field name is "photo"
 * Create a folder at the root of the QGIS project file : **media/** and a subfolder **media/upload** (obviously you need to do that locally in your computer and server side ).
-* Give Apache user (usually www-data) **write permission** on the upload folder, so that it can create files and folders in media/upload::
+* Give webserver user (usually www-data) **write permission** on the upload folder, so that it can create files and folders in media/upload::
 
    chmod 775 -R media/upload && chown :www-data -R media/upload
 

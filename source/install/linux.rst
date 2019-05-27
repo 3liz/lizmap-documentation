@@ -5,9 +5,9 @@ Installing Lizmap Web Client on Linux Debian or Ubuntu
 Generic Server Configuration
 ===============================================================
 
-This documentation provides an example for configuring a server with the Debian or Ubuntu Server distribution. We assume you have base system installed and updated.
+This documentation provides an example for configuring a server with the Debian 9 distribution. We assume you have base system installed and updated.
 
-.. warning:: This page does not describe how to secure your Apache server.
+.. warning:: This page does not describe how to secure your Nginx server. It's just for a demonstration.
 
 Configure Locales
 --------------------------------------------------------------
@@ -26,126 +26,69 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 .. note:: It is also necessary configure the other software so that they are using this default encoding if this is not the case.
 
 Installing necessary packages
---------------------------------------------------------------
+-----------------------------
 
-.. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.4 installation)
+.. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.6** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.6/7.x installation)
 
-.. note:: At least the current version supports PHP 7, so it should be straight foreward to install it on current debian 9 or ubuntu 16.04.
+
+On debian 9, install these packages:
 
 .. code-block:: bash
 
    sudo su # only necessary if you are not logged in as root
    apt update # update package lists
-   # On Ubuntu 14.04 LTS install the following packages
-   apt-get install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php5 php5-cgi php5-gd php5-sqlite php5-curl php5-xmlrpc python-simplejson python-software-properties
-   # On Ubuntu 18.04 LTS
-   apt install xauth htop curl apache2 libapache2-mod-fcgid libapache2-mod-php7.2 php7.2-cgi php7.2-gd php7.2-sqlite php7.2-curl php7.2-xmlrpc php7.2-xml python-simplejson software-properties-common
+   apt-get install curl openssl libssl1.1 nginx-full nginx nginx-common
+   apt-get install php7.0-fpm php7.0-cli php7.0-bz2 php7.0-curl php7.0-gd php7.0-intl php7.0-json php7.0-mbstring php7.0-pgsql php7.0-sqlite3 php7.0-xml php7.0-ldap
 
-.. todo:: Check this: still necessary?
-   a2dismod php5
-   a2enmod actions
-   a2enmod fcgid
-   a2enmod ssl
-   a2enmod rewrite
-   a2enmod headers
-   a2enmod deflate
-   service apache2 restart # restart Apache server
+Web configuration
+-----------------------
 
-php7 configuration
-------------------
+Create a new file /etc/nginx/sites-available/lizmap.conf:
 
-.. todo:: Check this: still necessary?
+.. code-block:: nginx
 
-In this example, we use Apache mpm-worker. So we must manually configure the activation of php5.
+    server {
+        listen 80;
 
-.. code-block:: bash
+        server_name localhost;
+        root /var/www/html/lizmap;
+        index index.php index.html index.htm;
 
-   cat > /etc/apache2/conf-available/php.conf << EOF
-   <Directory /usr/share>
-     AddHandler fcgid-script .php
-     FCGIWrapper /usr/lib/cgi-bin/php5 .php
-     Options ExecCGI FollowSymlinks Indexes
-   </Directory>
+        # compression setting
+        gzip_vary on;
+        gzip_proxied any;
+        gzip_comp_level 5;
+        gzip_min_length 100;
+        gzip_http_version 1.1;
+        gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript text/json;
 
-   <Files ~ (\.php)>
-     AddHandler fcgid-script .php
-     FCGIWrapper /usr/lib/cgi-bin/php5 .php
-     Options +ExecCGI
-     allow from all
-   </Files>
-   EOF
+        location / {
+            try_files $uri $uri/ =404;
+        }
 
-.. note::
- In older versions of apache, the config for ``php-cgi`` is in ``/etc/apache2/conf.d/php.conf``. Copy the text above, then:
+        location ~ [^/]\.php(/|$) {
+           fastcgi_split_path_info ^(.+\.php)(/.*)$;
+           set $path_info $fastcgi_path_info; # because of bug http://trac.nginx.org/nginx/ticket/321
+           try_files $fastcgi_script_name =404;
+           include fastcgi_params;
 
-.. code-block:: bash
+           fastcgi_index index.php;
+           fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+           fastcgi_param PATH_INFO $path_info;
+           fastcgi_param PATH_TRANSLATED $document_root$path_info;
+           fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+           fastcgi_param SERVER_NAME $http_host;
+        }
+    }
 
-   a2enconf php
+You should declare the lizmap.local domain name somewhere (in your /etc/hosts,
+or into your DNS..), or replace it by your own domain name.
 
-mpm-worker configuration
-------------------------
-
-.. todo:: Check this: still necessary?
-
-We modify the Apache configuration file to adapt the options to mpm_worker server configuration.
+Enable the virtual host you just created:
 
 .. code-block:: bash
 
-   # configuring worker
-   nano /etc/apache2/apache2.conf # aller au worker et mettre par exemple
-   <IfModule mpm_worker_module>
-     StartServers       4
-     MinSpareThreads    25
-     MaxSpareThreads    100
-     ThreadLimit          64
-     ThreadsPerChild      25
-     MaxClients        150
-     MaxRequestsPerChild   0
-   </IfModule>
-
-mod_fcgid configuration
----------------------------
-
-QGIS Server runs fcgi mode. We must therefore configure the Apache mod_fcgid to suit to the server capabilities.
-
-.. code-block:: bash
-
-   # Open the mod_fcgid configuration file
-   nano /etc/apache2/mods-enabled/fcgid.conf
-   # Paste the following content and adapt it
-   <IfModule mod_fcgid.c>
-     AddHandler    fcgid-script .fcgi
-     FcgidConnectTimeout 300
-     FcgidIOTimeout 300
-     FcgidMaxProcessesPerClass 50
-     FcgidMinProcessesPerClass 20
-     FcgidMaxRequestsPerProcess 500
-     IdleTimeout   300
-     BusyTimeout   300
-   </IfModule>
-
-Setting the compression
--------------------------------
-
-.. code-block:: bash
-
-   nano /etc/apache2/conf-available/mod_deflate.conf # y ajouter
-   <Location />
-           # Insert filter
-           SetOutputFilter DEFLATE
-           # Netscape 4.x encounters some problems ...
-           BrowserMatch ^Mozilla/4 gzip-only-text/html
-           # Netscape 4.06-4.08 encounter even more problems
-           BrowserMatch ^Mozilla/4\.0[678] no-gzip
-           # MSIE pretends it is Netscape, but all is well
-           BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
-           # Do not compress images
-           SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
-           # Ensure that proxy servers deliver the right content
-           Header append Vary User-Agent env=!dont-vary
-   </Location>
-
-.. note:: In older versions of apache, the config for ``DEFLATE compression`` is in ``/etc/apache2/conf.d/mod_deflate.conf``.
+   ln -s /etc/nginx/sites-available/lizmap.conf /etc/nginx/sites-enabled/lizmap.conf
 
 Enable geolocation
 -------------------
@@ -156,17 +99,19 @@ https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-p
 
 https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
 
-Restart Apache
-------------------
+Restart Nginx
+--------------
 
-You must restart the Apache server to validate the configuration.
+You must restart the Nginx server to validate the configuration.
 
 .. code-block:: bash
 
-   service apache2 restart
+   service nginx restart
 
 Create directories for data
 ============================================
+
+Qgis files and other cache files will be stored into these directories.
 
 .. code-block:: bash
 
@@ -190,14 +135,14 @@ Install
 .. code-block:: bash
 
    # Install packages
-   apt-get install postgresql postgresql-contrib postgis pgtune php5-pgsql
+   apt-get install postgresql postgresql-contrib postgis pgtune
 
    # A cluster is created in order to specify the storage directory
    mkdir /home/data/postgresql
    service postgresql stop
-   pg_dropcluster --stop 9.5 main
+   pg_dropcluster --stop 9.6 main
    chown postgres:postgres /home/data/postgresql
-   pg_createcluster 9.5 main -d /home/data/postgresql --locale fr_FR.UTF8 -p 5678 --start
+   pg_createcluster 9.6 main -d /home/data/postgresql --locale fr_FR.UTF8 -p 5678 --start
 
    # Creating a "superuser" user
    su - postgres
@@ -217,10 +162,10 @@ We will use pgtune, an utility program that can automatically generate a Postgre
 .. code-block:: bash
 
    # PostgreSQL Tuning with pgtune
-   pgtune -i /etc/postgresql/9.5/main/postgresql.conf -o /etc/postgresql/9.5/main/postgresql.conf.pgtune --type Web
-   cp /etc/postgresql/9.5/main/postgresql.conf /etc/postgresql/9.5/main/postgresql.conf.backup
-   cp /etc/postgresql/9.5/main/postgresql.conf.pgtune /etc/postgresql/9.5/main/postgresql.conf
-   nano /etc/postgresql/9.5/main/postgresql.conf
+   pgtune -i /etc/postgresql/9.6/main/postgresql.conf -o /etc/postgresql/9.6/main/postgresql.conf.pgtune --type Web
+   cp /etc/postgresql/9.6/main/postgresql.conf /etc/postgresql/9.6/main/postgresql.conf.backup
+   cp /etc/postgresql/9.6/main/postgresql.conf.pgtune /etc/postgresql/9.6/main/postgresql.conf
+   nano /etc/postgresql/9.6/main/postgresql.conf
    # Restart to check any problems
    service postgresql restart
    # If error messages, increase the linux kernel configuration variables
@@ -294,19 +239,26 @@ Map server: QGIS Server
 
 .. note:: Details for the installation may differ for specific versions of the operating system. Please refer to http://qgis.org/en/site/forusers/download.html for up to date documentation.
 
-Install
----------------
+First declare the QGIS repository into a  /etc/apt/sources.list.d/debian-qgis.list file. Its content should be:
+
+.. code-block:: text
+
+    deb http://qgis.org/debian-ltr stretch main
+
+
+Install also the Qgis key for the package manager
 
 .. code-block:: bash
-
-   # Add the repository UbuntuGis
-   cat /etc/apt/sources.list.d/debian-gis.list
-   deb http://qgis.org/debian trusty main
-   deb-src http://qgis.org/debian trusty main
 
    # Add keys
    sudo gpg --recv-key CAEB3DC3BDF7FB45
    sudo gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
+
+
+Update the package repository and install the Qgis packages:
+
+
+.. code-block:: bash
 
    # Update package list
    sudo apt-get update
@@ -337,13 +289,13 @@ Retrieve the latest available stable version from https://github.com/3liz/lizmap
    wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
    # Unzip archive
    unzip $VERSION.zip
-   # virtual link for http://localhost/lm
-   ln -s /var/www/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lm
+   # virtual link for http://localhost/lizmap/
+   ln -s /var/www/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lizmap
    # Remove archive
    rm $VERSION.zip
 
 
-Set rights for Apache, so php scripts could write some temporary files or do changes.
+Set rights for Nginx, so php scripts could write some temporary files or do changes.
 
 .. code-block:: bash
 
@@ -379,7 +331,7 @@ Then you can launch the installer
    php lizmap/install/installer.php
 
 
-For testing launch: ``http://127.0.0.1/lm`` in your browser.
+For testing launch: ``http://127.0.0.1/lizmap`` in your browser.
 
 In case you get a ``500 - internal server error``, run again:
 
@@ -445,21 +397,21 @@ Give the appropriate rights to directories and files
 First test
 --------------------------------------------------------------
 
-Go to the Lizmap Web Client home to see if the installation was performed correctly: http://localhost/lm
+Go to the Lizmap Web Client home to see if the installation was performed correctly: http://localhost/lizmap
 
 .. note:: Replace ``localhost`` with the address or IP number of your server.
 
 Lizmap is accessible, without further configurations, also as WMS and WFS server from a browser:
 
-http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities
+http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities
 
-http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities
+http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities
 
 and from QGIS:
 
-http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&
+http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&
 
-http://localhost/lm/index.php/lizmap/service/?repository=montpellier&project=montpellier&
+http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&
 
 .. note:: Access to the WMS and WFS servers can be limited by assigning privileges to specific repositories, see the administration section.
 
@@ -476,8 +428,8 @@ For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreS
 
 .. code-block:: bash
 
-   sudo apt-get install php5-pgsql
-   sudo service apache2 restart
+   sudo apt-get install php7.0-pgsql
+   sudo service nginx restart
 
 .. note:: For editing, we strongly recommend using a PostgreSQL database. This greatly simplifies installation and retrieval of data entered by users.
 
@@ -495,7 +447,7 @@ Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it 
 Give the appropriate rights to the directory containing Spatialite databases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-So that Lizmap Web Client can modify the data contained in databases Spatialite, we must ensure that **the Apache user (www-data) has well write access to the directory containing each Spatialite file**
+So that Lizmap Web Client can modify the data contained in databases Spatialite, we must ensure that **the webserver user (www-data) has well write access to the directory containing each Spatialite file**
 
 For example, if a directory contains a QGIS project, which uses a Spatialite database placed in a **db** directory at the same level as the QGIS project:
 

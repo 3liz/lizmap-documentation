@@ -20,7 +20,7 @@ or
 Then, in order to enable the LDAP support Lizmap, you have to change the
 authentication method in the configuration as follows.
 
-Enabling ldap into Lizmap 3.2
+Enabling ldap into Lizmap 3.3
 ==============================
 
 In the localconfig.ini.php, you have to set these parameters:
@@ -64,66 +64,6 @@ See details about how to set these parameters in a section below.
           as when you do upgrade, you should do modification again in them.
 
 To finish to enable the module, run *php lizmap/install/installer.php*
-
-Enabling ldap into Lizmap 3.0 and 3.1
-======================================
-
-Lizmap 3.2 embed the `ldaodao module <https://github.com/jelix/ldapdao-module>`_
-but not Lizmap 3.0 and 3.1, so you should install it by hand.
-
-So download it from https://github.com/jelix/ldapdao-module , and copy the ldapdao
-directory into you lizmap/lizmap-modules/ directory (you should use at least
-the 2.0.0 version)
-
-Declare the ldapdao module into the *lizmap/var/config/localconfig.ini.php* file
-
-.. code-block:: ini
-
-   [modules]
-   ldapdao.access=1
-
-Check the following modules state into the *lizmap/var/config/mainconfig.ini.php* file
-
-.. code-block:: ini
-
-   [modules]
-   ;...
-   jacl2.access=1
-   jauth.access=2
-   jauthdb.access=1
-
-Run *php lizmap/install/installer.php*
-
-Run *lizmap/install/set_rights.sh www-data www-data*
-
-Redefine the path of the authentication config file into the *lizmap/var/config/admin/config.ini.php*
-and *lizmap/var/config/index/config.ini.php* files:
-
-.. code-block:: ini
-
-   [coordplugins]
-   auth="authldap.coord.ini.php"
-
-
-Create a profile like this according to your ldap settings into the *lizmap/var/config/profiles.ini.php* file
-
-.. code-block:: ini
-
-   [ldap:myldap]
-   hostname=localhost
-   port=389
-   adminUserDn="cn=admin,ou=admins,dc=acme"
-   adminPassword="Sup3rP4ssw0rd"
-   searchUserBaseDN="dc=XY,dc=fr"
-   searchUserFilter="(&(objectClass=posixAccount)(uid=%%LOGIN%%))"
-   bindUserDN="uid=%?%,ou=users,dc=XY,dc=fr"
-   searchAttributes="uid:login,givenName:firstname,sn:lastname,mail:email"
-   searchGroupFilter=
-   searchGroupProperty="cn"
-   searchGroupBaseDN=""
-
-
-Now you have to change these settings.
 
 
 ldap settings

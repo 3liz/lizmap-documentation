@@ -26,7 +26,7 @@ To configure **Services**, click the *Modify* button under the summary.
 
   + You must use a **list of subdomains** relative to the domain with which is used Lizmap Web Client. For example, if your main domain name is **maps.example.com**, then you can use **a.maps.example.com, b.maps.example.com, c.maps.example.com, d.maps.example.com**.
 
-  + Of course you must have configured the Apache server *virtual host* to take into account these subdomains, for example with the variable:
+  + Of course you must have configured the Apache/Nginx server *virtual host* to take into account these subdomains, for example with the variable:
   
     .. code:: bash
 
@@ -38,7 +38,7 @@ To configure **Services**, click the *Modify* button under the summary.
   - *sqlite*: The tiles are stored in a sqlite database by layer
   - *redis*: the tiles are stored into a Redis database
 
-* **Cache root directory**: the folder where the cache is stored. It must be writable by the Apache server.
+* **Cache root directory**: the folder where the cache is stored. It must be writable by the Apache/Nginx server.
 
 * **Server cache expiration time (s)**: the time in seconds during which each tile is retained. This is a default value for layers whose time has not been configured with the plugin.
 

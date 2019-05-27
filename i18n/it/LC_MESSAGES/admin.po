@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2018, 3liz
+# Copyright (C) 2014-2019, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,10 +11,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Lizmap 3.2\n"
+"Project-Id-Version: Lizmap 3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 18:14+0200\n"
-"PO-Revision-Date: 2018-09-10 15:50+0000\n"
+"POT-Creation-Date: 2019-05-27 17:11+0200\n"
+"PO-Revision-Date: 2018-09-07 13:31+0000\n"
 "Last-Translator: Nicla Maria Notarangelo <nicla_n@yahoo.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/3liz-1/teams/62012/it/)\n"
 "MIME-Version: 1.0\n"
@@ -92,9 +92,9 @@ msgstr ""
 "E' possibile pre-generare le tiles per ogni layer del progetto di QGIS che è"
 " stato configurato da essere copiato nella cache del server. Per fare ciò, "
 "si necessita il pieno accesso al server dove è installato Lizmap e "
-"utilizzare un terminale per connettersi. Si devono anche conoscere gli ids "
-"(identificativi) dei repository di Lizmap e il code name del progetto "
-"(sarebbe il progetto di QGIS senza estensione)."
+"utilizzare un terminale per connettersi. Si devono anche conoscere gli ids  "
+"dei repository di Lizmap e il code name del progetto (sarebbe il progetto di"
+" QGIS senza estensione)."
 
 #: ../../source/admin/cache.rst:23
 msgid ""
@@ -237,11 +237,9 @@ msgstr ""
 
 #: ../../source/admin/lizmap-configuration.rst:29
 msgid ""
-"Of course you must have configured the Apache server *virtual host* to take "
-"into account these subdomains, for example with the variable:"
+"Of course you must have configured the Apache/Nginx server *virtual host* to"
+" take into account these subdomains, for example with the variable:"
 msgstr ""
-"Ovviamente si deve configurare il server Apache \"virtual host\" per tener "
-"conto di questo sottodomini, per esempio con la variabile:"
 
 #: ../../source/admin/lizmap-configuration.rst:35
 msgid "**Server cache storage type**"
@@ -262,7 +260,7 @@ msgstr ""
 #: ../../source/admin/lizmap-configuration.rst:41
 msgid ""
 "**Cache root directory**: the folder where the cache is stored. It must be "
-"writable by the Apache server."
+"writable by the Apache/Nginx server."
 msgstr ""
 
 #: ../../source/admin/lizmap-configuration.rst:43
