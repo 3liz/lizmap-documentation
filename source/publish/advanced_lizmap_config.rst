@@ -127,6 +127,7 @@ _____________
 * A custom function **f_unaccent** which can be used in an index. See this `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_ for explanation
 
 .. code-block:: sql
+
    -- Add the extension pg_trgm
    CREATE EXTENSION IF NOT EXISTS pg_trgm;
 
@@ -195,6 +196,7 @@ ____________
    -- You can refresh the materialized view at any time (for example in a cron job) with:
    REFRESH MATERIALIZED VIEW lizmap_search;
 
+* At present, Lizmap PostgreSQL search cannot use 3D geometries, or geometries with Z or M values. You have to use the `ST_Force2D(geom)` function to convert geometries into 2D geometries.
 
 Configure access
 _________________
