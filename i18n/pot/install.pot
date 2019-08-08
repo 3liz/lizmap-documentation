@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2018, 3liz
+# Copyright (C) 2014-2019, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 18:11+0200\n"
+"POT-Creation-Date: 2019-08-08 15:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -406,6 +406,22 @@ msgstr ""
 
 #: ../../source/install/ldap.rst:255
 msgid "You may also indicate the base DN for the search, into `searchGroupBaseDN`. Example: ``searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"``."
+msgstr ""
+
+#: ../../source/install/ldap.rst:259
+msgid "Debugging"
+msgstr ""
+
+#: ../../source/install/ldap.rst:261
+msgid "If the authentication does not working, you can have more details on what is wrong. To see these details, you should activate the traces for ldapdao."
+msgstr ""
+
+#: ../../source/install/ldap.rst:264
+msgid "In your var/config/localconfig.ini.php, set these parameters"
+msgstr ""
+
+#: ../../source/install/ldap.rst:274
+msgid "Then, in var/log/auth.log, you will have some messages from the ldap connector. Remove these settings when you don't need them, to avoid a huge auth.log file."
 msgstr ""
 
 #: ../../source/install/linux.rst:3
