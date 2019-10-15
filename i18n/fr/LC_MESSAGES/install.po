@@ -6,9 +6,9 @@
 # Translators:
 # Bobo Plateau <bobo-romania@users.noreply.github.com>, 2019
 # AMEGAYIBO Kokou ELolo <amazanake@gmail.com>, 2019
-# Nicolas Boisteault <nboisteault@gmail.com>, 2019
 # rldhont <rldhont@gmail.com>, 2019
 # luckgentilpiron <luck.gentil@gmail.com>, 2019
+# Nicolas Boisteault <nboisteault@gmail.com>, 2019
 # Laurent Jouanneau <dev@ljouanneau.com>, 2019
 # 
 #, fuzzy
@@ -19,7 +19,7 @@ msgstr ""
 "POT-Creation-Date: 2019-08-08 15:29+0200\n"
 "PO-Revision-Date: 2019-05-27 15:16+0000\n"
 "Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2019\n"
-"Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
+"Language-Team: French (https://beta.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -401,7 +401,7 @@ msgstr ""
 
 #: ../../source/install/ldap.rst:24
 msgid "Enabling ldap into Lizmap 3.3"
-msgstr ""
+msgstr "Activer LDAP dans Lizmap 3.3"
 
 #: ../../source/install/ldap.rst:26
 msgid "In the localconfig.ini.php, you have to set these parameters:"
@@ -465,29 +465,40 @@ msgid ""
 "To verify password, or to register the user into Lizmap the first time he "
 "authenticate himself, the plugin needs some data about the user."
 msgstr ""
+"Pour vérifier le mot de passe, ou pour créer un compte utilisateur dans "
+"Lizmap la première que l'utilisateur s'authentifie, le plugin a besoin "
+"d'informations sur celui-ci."
 
 #: ../../source/install/ldap.rst:79
 msgid ""
 "You should indicate to it which ldap attributes it can retrieve, and which "
 "database fields that will receive the ldap attributes values."
 msgstr ""
+"Vous devez lui indiquer quels attributs ldap il doit récupérer, et quel "
+"champs de la base de donnée recevra les attributs ldap."
 
 #: ../../source/install/ldap.rst:82
 msgid ""
 "You indicate such informations into the `searchAttributes` property. It is a"
 " pair of names, ``<ldap attribute>:<table field>``, separated by a comma."
 msgstr ""
+"Vous indiquez ces informations dans la propriété 'searchAttributes'. Elle "
+"doit contenir une paire de noms, \"<ldap attribute>:<table field>\", séparé "
+"par une virgule"
 
 #: ../../source/install/ldap.rst:85
 msgid ""
 "In this example, "
 "``searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"``:"
 msgstr ""
+"Dans cet exemple, "
+"``searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"``:"
 
 #: ../../source/install/ldap.rst:87
 msgid ""
 "the value of the `uid` ldap attribute will be stored into the `login` field"
 msgstr ""
+"la valeur de l'attribut ldap 'uid' sera stockée dans le champs 'login'"
 
 #: ../../source/install/ldap.rst:88
 msgid ""
