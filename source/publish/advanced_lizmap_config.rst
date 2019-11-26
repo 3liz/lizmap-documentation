@@ -141,6 +141,7 @@ _____________
    SELECT public.unaccent('public.unaccent', $1)  -- schema-qualify function and dictionary
    $func$ LANGUAGE sql IMMUTABLE;
 
+
 .. note:: We choose to use the pg_trgm extension and this custom f_unaccent function instead of the Full Text Search (FTS) tool of PostgreSQL, to keep the tool as simple as possible and avoid the need to create FTS "vectors" in your search data.
 
 Create the lizmap_search table or view
@@ -1304,12 +1305,12 @@ The layer must be published in the WFS capabilities group of the Project propert
 You need to add a line in the plugin table for each field you need to add in the filter form. For each field, you need to configure some options:
 
 * **Layer**: the source layer.* **Title**: the title to give to the input, which will be displayed above the form input. For example "Choose a category" for a layer field called "category"
-* **Type**: the type of the form input, among one of the following: `Text`, `Unique Values`, `Date`, `Numeric`
+* **Type**: the type of the form input, among one of the following: **Text, Unique Values, Date, Numeric**
 * **Field**: the field name (in the database table). Only for the Text, Unique Values and Numeric types.
-* **Min date**: the field containing the start date of your object (ex: "start_date" of an event). This is only needed for the `Date` type. If you have only one date field in your data, you should select it in the Min Date field.
-* **Max date**: the field containing the end date of your data. If you have 2 fields containing dates, one for the start date and another for the end date, you can differentiate them. If not, you need to use the same field name for `Min date` and `Max date`.
-* **Format**: the format of the `Unique values` type only. It can be `select`, which will show a combo box, or `checkboxes` which will show one checkbox for each distinct value. The distinct values are dynamically queried by Lizmap Web Client.
-* **Splitter**: for tje `Unique values` type only. Use if you want to split the field values by a separator. Ex: `'culture, environment'` can be split into `'culture'` and `'environment'` with the splitter `', '`.
+* **Min date**: the field containing the start date of your object (ex: "start_date" of an event). This is only needed for the **Date** type. If you have only one date field in your data, you should select it in the Min Date field.
+* **Max date**: the field containing the end date of your data. If you have 2 fields containing dates, one for the start date and another for the end date, you can differentiate them. If not, you need to use the same field name for **Min date** and **Max date**.
+* **Format**: the format of the **Unique values** type only. It can be **select**, which will show a combo box, or **checkboxes** which will show one checkbox for each distinct value. The distinct values are dynamically queried by Lizmap Web Client.
+* **Splitter**: for tje **Unique values** type only. Use if you want to split the field values by a separator. Ex: **culture, environment** can be split into **culture** and **environment** with the splitter **', '**.
 
 The order of the lines in the configuration table is taken into account to show the field inputs in the form.
 
@@ -1325,7 +1326,7 @@ ___________
 
 This is the simplest type. With this type of input, the user will see a classical text input. You can type any text then validate. Autocompletion is enabled by default, which means Lizmap will retrieve the unique values for this field. This could be an option in the future if some datasets are too big and this autocompletion feature is too heavy.
 
-The filter built will be like: `"field" LIKE '%foo%'`
+The filter built will be like: **"field" LIKE '%foo%'**
 
 Date
 ___________
@@ -1336,30 +1337,210 @@ The date is "truncated" to a date (no time data such as hour, minutes or seconds
 
 The slider step is hard coded and equals to 86400 seconds, which means 1 day.
 
-The filter built will be like: ` ( ( "field_date" >= '2017-04-23' OR  "field_date" >= '2017-04-23' ) AND ( "field_date" <= '2018-06-24' OR  "field_date" <= '2018-06-24' ) ) "`
+The filter built will be like: ** ( ( "field_date" >= '2017-04-23' OR  "field_date" >= '2017-04-23' ) AND ( "field_date" <= '2018-06-24' OR  "field_date" <= '2018-06-24' ) ) **
 
 Numeric
 ___________
 
 This input type will show a slider with 2 handles to allow to search between the two selected values. Two text inputs are also shown and can be used to manually set the min and max values.
 
-The filter built will be like: ` ( ( "field" >= 100 ) AND ( "field_date" <= 200 ) ) "`
+The filter built will be like: ** ( ( "field" >= 100 ) AND ( "field_date" <= 200 ) ) **
 
 Unique values
 ___________
 
 Lizmap will query the data to get the distinct values of the field. You can choose two different input types: **select** or **checkboxes**.
 
-If you have specified a splitter text, for example `, `, Lizmap will find the unique values of the separated text values. Fo xample the value of one feature `'culture, environment'` will be split into `'culture'` and `'environment'` with the splitter `', '`. Selecting `culture` or `environment` in the form input will show this feature.
+If you have specified a splitter text, for example *, *, Lizmap will find the unique values of the separated text values. Fo xample the value of one feature **culture, environment** will be split into **culture** and **environment** with the splitter **', '**. Selecting **culture** or **environment** in the form input will show this feature.
 
 You can choose to show two different input types:
 
-* *Combo box*: this type will show a combo box with the list of distinct values for the field. The user will be able to choose only one item among the values.
-* *Checkboxes*: this type will show as many comboboxes as distinct values for the field. The data will be filtered with a UNION between checked items.
+* **Combo box**: this type will show a combo box with the list of distinct values for the field. The user will be able to choose only one item among the values.
+* **Checkboxes**: this type will show as many comboboxes as distinct values for the field. The data will be filtered with a UNION between checked items.
 
-The filter built will be like: `( \"field_thematique\" LIKE '%Cuisine%'  OR \"field_thematique\" LIKE '%Ecocitoyen%'  )`
+The filter built will be like: **( \"field_thematique\" LIKE '%Cuisine%'  OR \"field_thematique\" LIKE '%Ecocitoyen%'  )**
 
 
+Add action buttons in the popup
+===============================
+
+Concepts
+--------
+
+This module allows to add **action buttons in the popup** which will trigger PostgreSQL queries and return a **geometry** to display on the map.
+
+![](media/lizmap_pg_api_example.png "Example action")
+
+It reads a **JSON configuration file** which must be placed **aside the QGIS project**. This file lists the **PostgreSQL actions** to be added in the **popup** for one or many QGIS PostgreSQL vector layers.
+
+Each action is caracterized by a **layer**, a **name**, a **title**, an **icon**, some optional **options**, **style** and **callbacks**.
+
+Example of this JSON configuration file, name **myproject.qgs.action** if the QGIS project file is named **myproject.qgs**:
+
+.. code-block:: json
+
+   {
+       "points_a7e8943b_7138_4788_a775_f94cbd0ad8b6": [
+           {
+               "name": "liztest",
+               "title": "Tampon",
+               "icon": "icon-leaf",
+               "options": {
+                   "buffer_size": 5000
+               },
+               "style": {
+                   "graphicName": "circle",
+                   "pointRadius": 6,
+                   "fill": true,
+                   "fillColor": "lightblue",
+                   "fillOpacity": 0.3,
+                   "stroke": true,
+                   "strokeWidth": 4,
+                   "strokeColor": "blue",
+                   "strokeOpacity": 0.8
+               },
+               "callbacks": [
+                   {"method": "zoom"},
+                   {"method": "select", "layerId": "admin_level_8_fcfdc9e0_c9b9_4563_b803_e36f9e2eca6a"},
+                   {"method": "redraw", "layerId": "admin_level_8_fcfdc9e0_c9b9_4563_b803_e36f9e2eca6a"}
+               ]
+           }
+       ]
+   }
+
+The JSON configuration file lists the QGIS layers for which you want to declare actions. Each layer is defined by its **QGIS ID**, for example here **points_a7e8943b_7138_4788_a775_f94cbd0ad8b6**, and for each ID, a list of objects describing the actions to allow. Each **action** is an object defined by:
+
+* a **name** which is the action identifier.
+* a **title** which is used as a label in Lizmap interface
+* an **icon** which is displayed on the action button ( See https://getbootstrap.com/2.3.2/base-css.html#icons )
+* an **options** object, giving some additionnal parameters for this action.
+* a **style** object allowing to configure the returned geometry style. It follows OpenLayers styling attributes.
+* a **callbacks** object allows to trigger some actions after the generated geometry is returned. They are defined by a **method** name, which can at present be:
+
+    -  **zoom**: zoom to the returned geometry
+    -  **select**: select the features from a given layer intersecting the returned geometry. The target layer QGIS ID must be added in the **layerId** property
+    -  **redraw**: redraw a given layer. The target layer QGIS ID must be added in the **layerId** property.
+
+Lizmap detects the presence of this configuration file, and adds the needed logic when the map loads. When the users clicks on an object of one of this layer in the map, the **popup panel** shows the feature data. At the top of each popup item, **a toolbar will show one button per each layer action**.
+
+Each button **triggers the corresponding action**:
+
+* Lizmap backend checks if the action is well configured,
+* creates the **PostgreSQL query** and execute it in the layer PostgreSQL database.
+* This query returns a **GeoJSON** which is then displayed on the map.
+
+The created query is build up by Lizmap web client and uses the PostgreSQL function **lizmap_get_data(json)** wich **must be created beforehand in the PostgreSQL database**. This function also uses a more generic function **query_to_geojson(text)** which transforms any PostgreSQL query into a **GeoJSON output**. Here is an example below of the query executed by Lizmap, for the example configuration given above, when the users clicks on the **action** button **liztest**, for the **feature** with id **1** of the **layer** **points** corresponding to the PostgreSQL **table** **test.points**:
+
+.. code-block:: sql
+
+   SELECT public.lizmap_get_data('{"layer_name":"points","layer_schema":"test","layer_table":"points","feature_id":1,"action_name":"liztest","buffer_size":5000}') AS data
+
+
+You can see that Lizmap creates a JSON parameters with all needed information and run the PostgreSQL function **lizmap_get_data**. The following SQL code allows you to create the needed functions:
+
+.. code-block:: sql
+
+   -- Returns a valid GeoJSON from any query
+   CREATE OR REPLACE FUNCTION query_to_geojson(datasource text)
+   RETURNS json AS
+   $$
+   DECLARE
+       sqltext text;
+       ajson json;
+   BEGIN
+       sqltext:= format('
+           SELECT jsonb_build_object(
+               ''type'',  ''FeatureCollection'',
+               ''features'', jsonb_agg(features.feature)
+           )::json
+           FROM (
+             SELECT jsonb_build_object(
+               ''type'',       ''Feature'',
+               ''id'',         id,
+               ''geometry'',   ST_AsGeoJSON(ST_Transform(geom, 4326))::jsonb,
+               ''properties'', to_jsonb(inputs) - ''geom''
+             ) AS feature
+             FROM (
+                 SELECT * FROM (%s) foo
+             ) AS inputs
+           ) AS features
+       ', datasource);
+       RAISE NOTICE 'SQL = %s', sqltext;
+       EXECUTE sqltext INTO ajson;
+       RETURN ajson;
+   END;
+   $$
+   LANGUAGE 'plpgsql'
+   IMMUTABLE STRICT;
+   COMMENT ON FUNCTION query_to_geojson(text) IS 'Generate a valide GEOJSON from a given SQL query.';
+
+   -- Create a query depending on the action, layer and feature and returns a GeoJSON.
+   CREATE OR REPLACE FUNCTION lizmap_get_data(parameters json)
+   RETURNS json AS
+   $$
+   DECLARE
+       feature_id integer;
+       layer_name text;
+       layer_table text;
+       layer_schema text;
+       action_name text;
+       sqltext text;
+       datasource text;
+       ajson json;
+   BEGIN
+
+       action_name:= parameters->>'action_name';
+       feature_id:= (parameters->>'feature_id')::integer;
+       layer_name:= parameters->>'layer_name';
+       layer_schema:= parameters->>'layer_schema';
+       layer_table:= parameters->>'layer_table';
+
+       -- Action liztest
+       -- Written here as an example
+       -- Performs a buffer on the geometry
+       IF action_name = 'liztest' THEN
+           datasource:= format('
+               SELECT
+               %1$s AS id,
+               ST_Buffer(geom, %4$s) AS geom
+               FROM "%2$s"."%3$s"
+               WHERE id = %1$s
+           ',
+           feature_id,
+           layer_schema,
+           layer_table,
+           parameters->>'buffer_size'
+           );
+       ELSE
+       -- Default : return geometry
+           datasource:= format('
+               SELECT
+               %1$s AS id,
+               geom
+               FROM "%2$s"."%3$s"
+               WHERE id = %1$s
+           ',
+           feature_id,
+           layer_schema,
+           layer_table
+           );
+
+       END IF;
+
+       SELECT query_to_geojson(datasource)
+       INTO ajson
+       ;
+       RETURN ajson;
+   END;
+   $$
+   LANGUAGE 'plpgsql'
+   IMMUTABLE STRICT;
+   COMMENT ON FUNCTION lizmap_get_data(json) IS 'Generate a valide GEOJSON from an action described by a name, PostgreSQL schema and table name of the source data, a QGIS layer name, a feature id and additionnal options.';
+
+
+The function **lizmap_get_data(json)** is provided here as an example. Since it is the **key entry point**, you need to adapt it to fit your needs.
+
+You can use all the given parameters (action name, source data schema and table name, feature id, QGIS layer name) to create the appropriate query for your action(s), by using PostgreSQL **IF THEN ELSIF ELSE** clauses.
 
 
 
