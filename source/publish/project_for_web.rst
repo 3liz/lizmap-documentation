@@ -24,6 +24,9 @@ Add your data:
 * Geographic data base
 
   * PostgreSQL / PostGIS
+
+    * When you create your connection to PostGIS, use the checkbox `Use estimated metadata`. Be careful, changing this checkbox after you have already added a layer doesn't change layers already loaded.
+
   * MSSQL spatial
   * Oracle locator / spatial
 
@@ -95,3 +98,6 @@ In the window *Layer properties*, the *Metadata* tab allows you to configure a l
 .. image:: /images/qgis-montpellier-project-tram-layer-metadata.png
    :align: center
    :width: 60%
+
+In the window *Rendering properties*, enable the *Simplify geometry* and the *Simplify on the provider side if possible* checkbox too.
+Note this can be changed in your global settings for layers added later.
