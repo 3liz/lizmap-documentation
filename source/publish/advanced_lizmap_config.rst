@@ -1234,7 +1234,7 @@ This table contains all the layers you have configured to be able to show statis
 **4**:
 To add a graph, you have to configure it in this part of the panel.
 
-   * **Type** :    You can choose the type of your graph, the available options are - scatter, box, bar, histogram, histogram2d, pie and polar.
+   * **Type** : You can choose the type of your graph, the available options are - scatter, box, bar, histogram, histogram2d, pie and polar.
    * **Title** : Here you can write the title you want for your graph.
    * **Layer** : You chose which layer you want to make a graph with.
    * **X field** : The X field of your graph.
@@ -1298,19 +1298,20 @@ You can see a video with an example: https://vimeo.com/331395259
 Configuration
 -------------------------------------
 
-There is a new tab in the Lizmap plugin ( for QGIS 3 only) which lets you configure the filter inputs based on the layer fields. You can add one or more fields for one or more layer. If you add fields from 2 or more different layers, Lizmap Web Client will show a combo box to allow the user to choose the layer to filter. Selecting a layer will refresh the form and deactivate the current filter.
+There is a new tab in the Lizmap plugin (for QGIS 3 only) which lets you configure the filter inputs based on the layer fields. You can add one or more fields for one or more layer. If you add fields from 2 or more different layers, Lizmap Web Client will show a combo box to allow the user to choose the layer to filter. Selecting a layer will refresh the form and deactivate the current filter.
 
 The layer must be published in the WFS capabilities group of the Project properties OWS Server tab.
 
 You need to add a line in the plugin table for each field you need to add in the filter form. For each field, you need to configure some options:
 
-* **Layer**: the source layer.* **Title**: the title to give to the input, which will be displayed above the form input. For example "Choose a category" for a layer field called "category"
-* **Type**: the type of the form input, among one of the following: **Text, Unique Values, Date, Numeric**
+* **Layer**: the source layer.
+* **Title**: the title to give to the input, which will be displayed above the form input. For example "Choose a category" for a layer field called "category".
+* **Type**: the type of the form input, among one of the following: **Text, Unique Values, Date, Numeric**.
 * **Field**: the field name (in the database table). Only for the Text, Unique Values and Numeric types.
 * **Min date**: the field containing the start date of your object (ex: "start_date" of an event). This is only needed for the **Date** type. If you have only one date field in your data, you should select it in the Min Date field.
 * **Max date**: the field containing the end date of your data. If you have 2 fields containing dates, one for the start date and another for the end date, you can differentiate them. If not, you need to use the same field name for **Min date** and **Max date**.
 * **Format**: the format of the **Unique values** type only. It can be **select**, which will show a combo box, or **checkboxes** which will show one checkbox for each distinct value. The distinct values are dynamically queried by Lizmap Web Client.
-* **Splitter**: for tje **Unique values** type only. Use if you want to split the field values by a separator. Ex: **culture, environment** can be split into **culture** and **environment** with the splitter **', '**.
+* **Splitter**: for the **Unique values** type only. Use if you want to split the field values by a separator. Ex: **culture, environment** can be split into **culture** and **environment** with the splitter **', '**.
 
 The order of the lines in the configuration table is taken into account to show the field inputs in the form.
 
