@@ -34,7 +34,7 @@ Add your data:
    :align: center
    :width: 60%
 
-Organize and manipulate the layes in the legend:
+Organize and manipulate the layers in the legend:
 
 * *Add groups* with a right click in the empty part of the legend: *Add a new group*
 * *Move* layers and groups with *drag-and-drop*
@@ -59,15 +59,15 @@ Configure the coordinates reference system, CRS, of your project:
   * EPSG:2154 for Lambert 93
   * etc
 
-* Enable *on the fly CRS transformation*. QGIS can reproject raster and vector data.
+* QGIS can reproject raster and vector data.
 
 .. image:: /images/qgis-montpellier-project-crs.png
    :align: center
    :width: 60%
 
-Configure the Web Geographics Services parameters with the *OWS Server* tab:
+Configure the Web Geographics Services parameters with the *QGIS Server* tab:
 
-* Set the title of your Web Geographics Services
+* Set the title of your Web Geographics Services. This title is used in the Lizmap landing page.
 * Add informations like your organization, the owner of the publication, the abstract, etc
 * Set the maximum extent of your WMS service
 * Restrict the CRSs list of your WMS service:
@@ -89,7 +89,7 @@ Check that the paths are saved *relative* in the general tab of the project prop
 Configure your layers for the Web
 =================================
 
-In the window *Layer properties*, the *Metadata* tab allows you to configure a lot of information for Web Geographic Services:
+In the window *Layer properties*, the *QGIS Server* tab allows you to configure a lot of information for Web Geographic Services:
 
 * Provide a title, a description and keywords
 * Specify the attribution to respect the data license

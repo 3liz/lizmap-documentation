@@ -2,6 +2,19 @@
 Advanced Configuration
 ======================
 
+Changing the default image of a project in the repositories and projects site
+=============================================================================
+
+By default the following image is displayed for a project:
+
+.. image:: /images/mapmonde.png
+   :align: left
+   :width: 15%
+
+
+You can change this default image by adding in the same project folder a .png image with the exact project name and extension. Example: If the project is called montpellier.qgs you can add an image named montpellier.qgs.png. Note that the image has the project extension too.
+
+
 Create an overview map
 ======================
 
@@ -1542,17 +1555,3 @@ You can see that Lizmap creates a JSON parameters with all needed information an
 The function **lizmap_get_data(json)** is provided here as an example. Since it is the **key entry point**, you need to adapt it to fit your needs.
 
 You can use all the given parameters (action name, source data schema and table name, feature id, QGIS layer name) to create the appropriate query for your action(s), by using PostgreSQL **IF THEN ELSIF ELSE** clauses.
-
-
-
-Changing the default image of a project in the repositories and projects site
-=============================================================================
-
-By default the following image is displayed for a project:
-
-.. image:: /images/mapmonde.png
-   :align: left
-   :width: 15%
-
-
-You can change this default image by adding in the same project folder a .png image with the exact project name and extension. Example: If the project is called montpellier.qgs you can add an image named montpellier.qgs.png. Note that the image has the project extension too.
