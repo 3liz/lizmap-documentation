@@ -285,6 +285,7 @@ Attribute layers
 ================
 
 When this feature has been enabled by the map publisher for one or many vector layers, a new menu entry will be visible at the bottom of the menu bar, labelled as **Data**.
+Another entry labelled **Selection** with a star icon will also be displayed for a layer for which the attribute table has been activated.
 
 Clicking on this icon will open a new panel situated at the bottom of the interface, containing one single **Data** tab with a list of published vector layers.
 
@@ -346,6 +347,7 @@ If the publisher has enabled the **popup** for the layer, you will be able to se
 
 * Clicking on another line will refresh the right panel content with the new highlighted feature.
 * Clicking back on the (i) button or on the cross situated at the top right side of the information panel will hide the panel.
+To have the (i) button, you need to have activated the popup for the current layer.
 
 Each line of the table shows some buttons at the left side:
 
