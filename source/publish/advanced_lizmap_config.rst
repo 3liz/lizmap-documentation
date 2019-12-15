@@ -1180,7 +1180,9 @@ To use data filtering tool in Lizmap Web Client, you must:
 
 Here are the detailed steps to configure this feature:
 
-* **Knowing the identifiers of user groups** configured in the Lizmap Web Client adminstration interface. For this, you must go to the administration interface :menuselection:`SYSTEM --> Groups of users for rights`: ID appears in parentheses after the name of each group (under the title *Groups of new users*)
+* **Knowing the identifiers of user groups** configured in the Lizmap Web Client administration interface. For this, you must go to the administration interface :menuselection:`SYSTEM --> Groups of users for rights`: ID appears in parentheses after the name of each group (under the title *Groups of new users*)
+* In Lizmap Web Client administration, in the repository properties, be sure that *anonymous* and other relevant groups are not checked
+for *Always see complete layers data, even if filtered by login*. See :ref:`define-group-rights`.
 * For all vector layers which is desired filter data, just add a text column that will hold the group ID for each line (not the name !!) who has the right to display this line.
    - *Fill this column* for each line of the attribute table with the identifier of the group who has the right to see the line (using the calculator, for example).
    - It is possible to set **all** as the value in some lines to disable the filter: All users will see the data from these lines.
