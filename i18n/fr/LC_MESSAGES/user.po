@@ -4,20 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Arnaudkoch, 2019
-# Nicolas Boisteault <nboisteault@gmail.com>, 2019
-# rldhont <rldhont@gmail.com>, 2019
-# Laurent Jouanneau <dev@ljouanneau.com>, 2019
+# Arnaudkoch, 2018
+# Nicolas Boisteault <nboisteault@gmail.com>, 2018
+# rldhont <rldhont@gmail.com>, 2018
+# Laurent Jouanneau <dev@ljouanneau.com>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Lizmap 3.3\n"
+"Project-Id-Version: Lizmap 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-08 15:15+0200\n"
-"PO-Revision-Date: 2019-05-27 15:16+0000\n"
-"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2019\n"
-"Language-Team: French (https://beta.transifex.com/3liz-1/teams/62012/fr/)\n"
+"POT-Creation-Date: 2019-12-15 10:44+0000\n"
+"PO-Revision-Date: 2018-09-07 13:32+0000\n"
+"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2018\n"
+"Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -519,13 +519,12 @@ msgstr "Table attributaire"
 msgid ""
 "When this feature has been enabled by the map publisher for one or many "
 "vector layers, a new menu entry will be visible at the bottom of the menu "
-"bar, labelled as **Data**."
+"bar, labelled as **Data**. Another entry labelled **Selection** with a star "
+"icon will also be displayed for a layer for which the attribute table has "
+"been activated."
 msgstr ""
-"Quand cette fonctionnalité a été activée par l'éditeur de la carte pour une "
-"ou plusieurs couches vectorielles, une nouvelle entrée du menu sera "
-"disponible en bas de la barre de menu, labellisée **Données**. "
 
-#: ../../source/user/user_guide.rst:289
+#: ../../source/user/user_guide.rst:290
 msgid ""
 "Clicking on this icon will open a new panel situated at the bottom of the "
 "interface, containing one single **Data** tab with a list of published "
@@ -535,11 +534,11 @@ msgstr ""
 "l'interface, contenant un seul onglet de **Données** avec une liste des "
 "couches vectorielles dont la table attributaire est publiée. "
 
-#: ../../source/user/user_guide.rst:296
+#: ../../source/user/user_guide.rst:297
 msgid "Attribute table panel behaviour"
 msgstr "Comportement du panneau de table attributaire"
 
-#: ../../source/user/user_guide.rst:298
+#: ../../source/user/user_guide.rst:299
 msgid ""
 "Since this panel is situated above the map, some default behaviours have "
 "been proposed to ease the consultation of the data in the map and in the "
@@ -549,12 +548,12 @@ msgstr ""
 "ont été proposés pour faciliter la consultation de données dans la carte et "
 "dans la table en même temps. "
 
-#: ../../source/user/user_guide.rst:300
+#: ../../source/user/user_guide.rst:301
 msgid "The attribute table panel takes half the size of the screen"
 msgstr ""
 "Le panneau de table attributaire mobilise la moitié de la hauteur de l'écran"
 
-#: ../../source/user/user_guide.rst:301
+#: ../../source/user/user_guide.rst:302
 msgid ""
 "It is automatically reduced at the bottom when the mouse is out of it, and "
 "automatically displayed back when the user moves the mouse over the bottom "
@@ -564,7 +563,7 @@ msgstr ""
 "curseur de la souris sort du panneau, et automatiquement affiché si "
 "l'utilisateur déplace le curseur de la souris au-dessus du bas de la carte. "
 
-#: ../../source/user/user_guide.rst:303
+#: ../../source/user/user_guide.rst:304
 msgid ""
 "You can change the default behaviour by using the buttons displayed at the "
 "bottom of the attribute table panel"
@@ -572,7 +571,7 @@ msgstr ""
 "Vous pouvez modifier le comportement par défaut en utilisant les boutons "
 "affichés en bas du panneau de table attributaire."
 
-#: ../../source/user/user_guide.rst:305
+#: ../../source/user/user_guide.rst:306
 msgid ""
 "The **Pin** button deactivates the automatic reduction of the panel when the"
 " user mouse leaves it. But in this case, the whole panel will be displayed "
@@ -583,7 +582,7 @@ msgstr ""
 "affiché de façon transparente pour permettre à l'utilisateur de visualiser "
 "la carte derrière. "
 
-#: ../../source/user/user_guide.rst:306
+#: ../../source/user/user_guide.rst:307
 msgid ""
 "The **Maximise** button expands the panel so that it occupies the total "
 "place left between the left panel and the map header. This is handy when you"
@@ -603,7 +602,7 @@ msgstr ""
 "table des attributs va changer afin que vous puissiez voir la carte ci-"
 "dessous."
 
-#: ../../source/user/user_guide.rst:308
+#: ../../source/user/user_guide.rst:309
 msgid ""
 "You can click back on any of these 2 **Pin** and **Maximise** button to get "
 "back to the default behaviour."
@@ -611,7 +610,7 @@ msgstr ""
 "Vous pouvez cliquer sur n'importe laquelle de ces 2 icônes **Epingle** et "
 "**Maximiser** pour revenir au comportement par défaut. "
 
-#: ../../source/user/user_guide.rst:310
+#: ../../source/user/user_guide.rst:311
 msgid ""
 "The **Close** button closes the attribute table tool completely (as if you "
 "clicked in the menu bar icon)."
@@ -619,11 +618,11 @@ msgstr ""
 "Le bouton **Fermer** ferme complètement l'outil de table attributaire (comme"
 " si vous cliquiez sur l'icône du menu)."
 
-#: ../../source/user/user_guide.rst:317
+#: ../../source/user/user_guide.rst:318
 msgid "Open an attribute table for a layer"
 msgstr "Ouvre la table d'attribut pour une couche vectorielle"
 
-#: ../../source/user/user_guide.rst:319
+#: ../../source/user/user_guide.rst:320
 msgid ""
 "Once the attribute table panel is displayed, you can open the attribute "
 "table of each vector layer by clicking on the button situated right to the "
@@ -636,7 +635,7 @@ msgstr ""
 "avec le titre de la couche qui montrera la table attributaire pour la couche"
 " choisie."
 
-#: ../../source/user/user_guide.rst:321
+#: ../../source/user/user_guide.rst:322
 msgid ""
 "*Opening an attribute table can take some time depending on the data size "
 "and complexity.*"
@@ -644,11 +643,11 @@ msgstr ""
 "*L'ouverture d'une table attributaire peut prendre du temps, en fonction de "
 "la taille et de la complexité du jeu de données.*"
 
-#: ../../source/user/user_guide.rst:329
+#: ../../source/user/user_guide.rst:330
 msgid "Description of the attribute table functionality"
 msgstr "Description de la fonctionnalité d'affichage de la table attributaire"
 
-#: ../../source/user/user_guide.rst:331
+#: ../../source/user/user_guide.rst:332
 msgid ""
 "The layer data is shown in a **paginated table**. By default, the table "
 "shows 100 lines at a time. You can change this behaviour by using the list "
@@ -659,7 +658,7 @@ msgstr ""
 "fonctionnement en utilisant la liste située en bas à gauche de l'onglet de "
 "contenu. "
 
-#: ../../source/user/user_guide.rst:333
+#: ../../source/user/user_guide.rst:334
 msgid ""
 "The table of data can be **ordered by a field** by clicking on the column "
 "corresponding to . If you click again on the column, the order will be "
@@ -669,11 +668,11 @@ msgstr ""
 "colonne correspondante. Si vous cliquez à nouveau sur la colonne, l'ordre "
 "d'affichage sera inversée."
 
-#: ../../source/user/user_guide.rst:341
+#: ../../source/user/user_guide.rst:342
 msgid "Actions on lines"
 msgstr "Actions sur les lignes"
 
-#: ../../source/user/user_guide.rst:343
+#: ../../source/user/user_guide.rst:344
 msgid ""
 "When you **click on a table line**, the line will be displayed with a border"
 " to help viewing which line is **highlighted**."
@@ -681,7 +680,7 @@ msgstr ""
 "Quand vous **cliquez sur une ligne du tableau**, la ligne va être affichée "
 "avec une bordure pour aider à repérer quelle ligne est **surlignée**. "
 
-#: ../../source/user/user_guide.rst:345
+#: ../../source/user/user_guide.rst:346
 msgid ""
 "If the publisher has enabled the **popup** for the layer, you will be able "
 "to see the content of the popup for the highlighted feature by clicking on "
@@ -696,7 +695,7 @@ msgstr ""
 "affichera les informations détaillées sur la ligne du tableau en "
 "surbrillance. En outre:"
 
-#: ../../source/user/user_guide.rst:347
+#: ../../source/user/user_guide.rst:348
 msgid ""
 "Clicking on another line will refresh the right panel content with the new "
 "highlighted feature."
@@ -704,7 +703,7 @@ msgstr ""
 "Un clic sur une autre ligne va rafraîchir le panneau de contenu à droite "
 "avec le nouvel objet mis en valeur. "
 
-#: ../../source/user/user_guide.rst:348
+#: ../../source/user/user_guide.rst:349
 msgid ""
 "Clicking back on the (i) button or on the cross situated at the top right "
 "side of the information panel will hide the panel."
@@ -713,10 +712,16 @@ msgstr ""
 "d'information masquera ce panneau."
 
 #: ../../source/user/user_guide.rst:350
+msgid ""
+"To have the (i) button, you need to have activated the popup for the current"
+" layer."
+msgstr ""
+
+#: ../../source/user/user_guide.rst:352
 msgid "Each line of the table shows some buttons at the left side:"
 msgstr "Chaque ligne du tableau montre des icônes à gauche: "
 
-#: ../../source/user/user_guide.rst:352
+#: ../../source/user/user_guide.rst:354
 msgid ""
 "**Select** button : when clicked, the corresponding feature is selected. You"
 " can select many lines by using this button on different lines. The selected"
@@ -732,7 +737,7 @@ msgstr ""
 "bouton \"Sélectionner\" pour désélectionner un objet géographique "
 "sélectionné."
 
-#: ../../source/user/user_guide.rst:353
+#: ../../source/user/user_guide.rst:355
 msgid ""
 "**Zoom** button : clicking on this button will zoom to the corresponding "
 "geometry in the map. The scale will be chosen so that the feature geometry "
@@ -742,7 +747,7 @@ msgstr ""
 "correspondante sur la carte. L'échelle sera adaptée pour que l'objet "
 "géométrique occupe l'espace maximal."
 
-#: ../../source/user/user_guide.rst:354
+#: ../../source/user/user_guide.rst:356
 msgid ""
 "**Center** button : clicking on this button will just pan the map to the "
 "corresponding feature, without changing scale."
@@ -750,11 +755,11 @@ msgstr ""
 "Bouton **Centrer** : un clic sur ce bouton va centrer la carte sur l'objet "
 "correspondant, sans changer l'échelle."
 
-#: ../../source/user/user_guide.rst:361
+#: ../../source/user/user_guide.rst:363
 msgid "More about selection tools"
 msgstr "En savoir plus à propos des outils de sélection"
 
-#: ../../source/user/user_guide.rst:363
+#: ../../source/user/user_guide.rst:365
 msgid ""
 "You can also select a layer object by **displaying the popup** for this "
 "object (if the map publisher has enabled the popup for the layer, a click on"
@@ -771,7 +776,7 @@ msgstr ""
 "vous pouvez l'utiliser pour sélectionner uniquement cet objet. La sélection "
 "précédente sera remplacée par seulement cet objet."
 
-#: ../../source/user/user_guide.rst:369
+#: ../../source/user/user_guide.rst:371
 msgid ""
 "When one or more lines have been selected in the attribute table (they "
 "become yellow), you can use the black \"arrow up\" button situated above the"
@@ -782,7 +787,7 @@ msgstr ""
 "\"flèche vers le haut\" situé au-dessus du tableau pour **déplacer les "
 "lignes sélectionnées en haut de la table**."
 
-#: ../../source/user/user_guide.rst:371
+#: ../../source/user/user_guide.rst:373
 msgid ""
 "You can **unselect all the selected objects** by clicking on the \"white "
 "star\" button situated above the table."
@@ -790,11 +795,11 @@ msgstr ""
 "Vous pouvez ** désélectionner tous les objets sélectionnés** en cliquant sur"
 " le bouton \"étoile blanche\" située au-dessus de la table. "
 
-#: ../../source/user/user_guide.rst:378
+#: ../../source/user/user_guide.rst:380
 msgid "Quickly search through data"
 msgstr "Chercher rapidement parmi les données"
 
-#: ../../source/user/user_guide.rst:380
+#: ../../source/user/user_guide.rst:382
 msgid ""
 "You can **filter the lines displayed** in the table by entering some letters"
 " in the **Search field** situated at the top left side of the tab content. "
@@ -808,7 +813,7 @@ msgstr ""
 "simplement le contenu du champ de recherche manuellement ou en cliquant sur "
 "le bouton en croix situé à l'intérieur du champ."
 
-#: ../../source/user/user_guide.rst:382
+#: ../../source/user/user_guide.rst:384
 msgid ""
 "The text entered in the search field launches a search among the data for "
 "**all the fields of the table.**"
@@ -816,7 +821,7 @@ msgstr ""
 "Le texte saisi dans la zone de recherche lance une recherche parmi les "
 "données pour **tous les champs de la table**"
 
-#: ../../source/user/user_guide.rst:384
+#: ../../source/user/user_guide.rst:386
 msgid ""
 "Note that only the content of the table will be restricted to the lines "
 "matching your textual search. **The objects on the map will not be filtered "
@@ -827,7 +832,7 @@ msgstr ""
 "seront pas filtrés dynamiquement** (mais vous pourriez utiliser "
 "\"sélectionner et filtrer\" pour faire cela, voir plus bas)"
 
-#: ../../source/user/user_guide.rst:386
+#: ../../source/user/user_guide.rst:388
 msgid ""
 "Once you have filtered some data in the attribute table by entering some "
 "text in it, **you can easily select them all** by clicking on the \"black "
@@ -844,11 +849,11 @@ msgstr ""
 "couleur dans la carte (généralement en jaune aussi, selon la configuration "
 "effectuée par l'éditeur de carte)"
 
-#: ../../source/user/user_guide.rst:393
+#: ../../source/user/user_guide.rst:395
 msgid "Filter data"
 msgstr "Filtrer les données"
 
-#: ../../source/user/user_guide.rst:395
+#: ../../source/user/user_guide.rst:397
 msgid ""
 "When you have selected one or more objects in the layer attribute table, you"
 " can then **filter the data displayed in Lizmap** for this layer. To do so, "
@@ -861,26 +866,26 @@ msgstr ""
 "cliquer sur le bouton \"Entonnoir\" marqué \"Filtre\" situé au-dessus de la "
 "table (uniquement disponible si la sélection contient au moins un objet)."
 
-#: ../../source/user/user_guide.rst:397
+#: ../../source/user/user_guide.rst:399
 msgid "Filtering will have the following consequences:"
 msgstr "Le filtrage aura les conséquences suivantes : "
 
-#: ../../source/user/user_guide.rst:399
+#: ../../source/user/user_guide.rst:401
 msgid "The attribute table will **show only the filtered data**"
 msgstr "La table d'attributs va **montrer seulement les données filtrées**"
 
-#: ../../source/user/user_guide.rst:400
+#: ../../source/user/user_guide.rst:402
 msgid ""
 "The Search input field will allow to **search only among filtered data**"
 msgstr ""
 "Le champs de Recherche va permettre de **rechercher seulement parmi les "
 "données filtrées**"
 
-#: ../../source/user/user_guide.rst:401
+#: ../../source/user/user_guide.rst:403
 msgid "The map will show **only the filtered objects**"
 msgstr "La carte ne montrera **que les objets filtrés**"
 
-#: ../../source/user/user_guide.rst:402
+#: ../../source/user/user_guide.rst:404
 msgid ""
 "The child layers linked with relations (and also published in the attribute "
 "table tool) will be filtered too. We call it \"cascading filtering\". For "
@@ -894,7 +899,7 @@ msgstr ""
 "une ligne de bus spécifique, pour montrer seulement les arrêts desservis par"
 " la ligne de bus filtrée. "
 
-#: ../../source/user/user_guide.rst:403
+#: ../../source/user/user_guide.rst:405
 msgid ""
 "The filtered layers will be marked in the left panel legend with an orange "
 "background, and a new orange \"Funnel\" button will be displayed above the "
@@ -904,11 +909,11 @@ msgstr ""
 "avec un fond orange, et un nouveau bouton \"Entonnoir\" orange sera affiché "
 "au-dessus de la légende."
 
-#: ../../source/user/user_guide.rst:405
+#: ../../source/user/user_guide.rst:407
 msgid "You can cancel the filter to go back to previous state:"
 msgstr "Vous pouvez annuler le filtre pour revenir à l'état précédent :"
 
-#: ../../source/user/user_guide.rst:407
+#: ../../source/user/user_guide.rst:409
 msgid ""
 "by clicking on the orange \"Funnel\" button at the top of the legend in "
 "Lizmap left panel"
@@ -916,7 +921,7 @@ msgstr ""
 "en cliquant sur l'icône orange \"Entonnoir\" au sommet du panneau de légende"
 " à gauche dans Lizmap"
 
-#: ../../source/user/user_guide.rst:408
+#: ../../source/user/user_guide.rst:410
 msgid ""
 "by clicking back on the filter button just above the attribute table "
 "concerned by the filter"
@@ -924,7 +929,7 @@ msgstr ""
 "En cliquant sur le bouton de filtre juste au-dessus de la table attributaire"
 " concernée par le filtre"
 
-#: ../../source/user/user_guide.rst:414
+#: ../../source/user/user_guide.rst:416
 msgid ""
 "When exporting the map view with the permalink tool (situated in the menu "
 "bar), **the filter will be activated** in the linked map and the users won't"
@@ -941,10 +946,10 @@ msgstr ""
 "permalien. **Ce n'est pas un moyen sûr pour protéger certaines données, mais"
 " un moyen de se concentrer uniquement sur certaines données**."
 
-#: ../../source/user/user_guide.rst:420
+#: ../../source/user/user_guide.rst:422
 msgid "More complex scenarios : relations between layers"
 msgstr "Scénarios plus complexes : relations entre les couches"
 
-#: ../../source/user/user_guide.rst:422
+#: ../../source/user/user_guide.rst:424
 msgid "todo"
 msgstr "A faire"
