@@ -31,6 +31,7 @@ Installing necessary packages
 .. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.6** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.6/7.x installation)
 
 .. code-block:: bash
+
    sudo su # only necessary if you are not logged in as root
    apt update # update package lists
    apt-get install curl openssl libssl1.1 nginx-full nginx nginx-common
@@ -38,11 +39,13 @@ Installing necessary packages
 On debian 9, install these packages:
 
 .. code-block:: bash
+
    apt-get install php7.0-fpm php7.0-cli php7.0-bz2 php7.0-curl php7.0-gd php7.0-intl php7.0-json php7.0-mbstring php7.0-pgsql php7.0-sqlite3 php7.0-xml php7.0-ldap
 
 On Ubuntu 18.04 or later, install these packages:
 
 .. code-block:: bash
+
    apt-get install php7.3-fpm php7.3-cli php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-pgsql php7.3-sqlite3 php7.3-xml php7.3-ldap
 
 Web configuration

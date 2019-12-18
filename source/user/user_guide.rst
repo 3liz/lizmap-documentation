@@ -347,7 +347,7 @@ If the publisher has enabled the **popup** for the layer, you will be able to se
 
 * Clicking on another line will refresh the right panel content with the new highlighted feature.
 * Clicking back on the (i) button or on the cross situated at the top right side of the information panel will hide the panel.
-To have the (i) button, you need to have activated the popup for the current layer.
+  To have the (i) button, you need to have activated the popup for the current layer.
 
 Each line of the table shows some buttons at the left side:
 

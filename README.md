@@ -46,7 +46,7 @@ sudo pip install -U sphinx-intl
 ```
 
 Then run `make gettext && make html`. It will build the docs in all available 
-languages.
+languages. To run only in English, you can use `make htmlen`.
 
 For core contributor
 --------------------

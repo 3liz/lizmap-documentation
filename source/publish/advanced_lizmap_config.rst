@@ -139,7 +139,7 @@ _____________
 * PostgreSQL extensions activated in this database : **unaccent** and **pg_trgm** (for effective LIKE queries)
 * A custom function **f_unaccent** which can be used in an index. See this `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_ for explanation
 
-.. code-block:: sql
+.. code-block:: postgresql
 
    -- Add the extension pg_trgm
    CREATE EXTENSION IF NOT EXISTS pg_trgm;
@@ -219,7 +219,8 @@ Once this table (or view, or materialized view) is created in your database, you
 
 If your Lizmap instance uses PostgreSQL to store the users, groups and rights, a connection profile already exists for your database. Then you can just add the **lizmap_search** relation inside this database (in the public schema).
 
-If not, or if you need to put the search data in another database (or connect with another PostgreSQL user), you need to add a new **database connection profile** in Lizmap configuration file **lizmap/var/config/profiles.ini.php**. The new profile is a new jdb prefixed section, called **jdb:search**. For example, add the following section (please replace the DATABASE_ variables by the correct values):
+If not, or if you need to put the search data in another database (or connect with another PostgreSQL user), you need to add a new **database connection profile** in Lizmap configuration file **lizmap/var/config/profiles.ini.php**.
+The new profile is a new jdb prefixed section, called **jdb:search**. For example, add the following section (please replace the DATABASE_ variables by the correct values):
 
 .. code-block:: ini
 
@@ -887,7 +888,7 @@ To activate it, you must:
 
 * check the box *Server tile cache*
 * specify the expiration time of the cache server in seconds: **Expiration (seconds)**.
-0 means no expiration on the server, the tile will be kept on the server until the cache is cleared.
+  0 means no expiration on the server, the tile will be kept on the server until the cache is cleared.
 
 The **Metatile** option allows you to specify image size in addition for generating a tile.
 The principle of **Metatile** is to request the server for a bigger image than hoped, to cut it to the size of the request and return it to the Web client.
@@ -1193,7 +1194,7 @@ Here are the detailed steps to configure this feature:
 
 * **Knowing the identifiers of user groups** configured in the Lizmap Web Client administration interface. For this, you must go to the administration interface :menuselection:`SYSTEM --> Groups of users for rights`: ID appears in parentheses after the name of each group (under the title *Groups of new users*)
 * In Lizmap Web Client administration, in the repository properties, be sure that *anonymous* and other relevant groups are not checked
-for *Always see complete layers data, even if filtered by login*. See :ref:`define-group-rights`.
+  for *Always see complete layers data, even if filtered by login*. See :ref:`define-group-rights`.
 * For all vector layers which is desired filter data, just add a text column that will hold the group ID for each line (not the name !!) who has the right to display this line.
    - *Fill this column* for each line of the attribute table with the identifier of the group who has the right to see the line (using the calculator, for example).
    - It is possible to set **all** as the value in some lines to disable the filter: All users will see the data from these lines.
@@ -1374,7 +1375,7 @@ This input type will show a slider with 2 handles to allow to search between the
 The filter built will be like: ** ( ( "field" >= 100 ) AND ( "field_date" <= 200 ) ) **
 
 Unique values
-___________
+_____________
 
 Lizmap will query the data to get the distinct values of the field. You can choose two different input types: **select** or **checkboxes**.
 
@@ -1458,14 +1459,14 @@ Each button **triggers the corresponding action**:
 
 The created query is build up by Lizmap web client and uses the PostgreSQL function **lizmap_get_data(json)** wich **must be created beforehand in the PostgreSQL database**. This function also uses a more generic function **query_to_geojson(text)** which transforms any PostgreSQL query into a **GeoJSON output**. Here is an example below of the query executed by Lizmap, for the example configuration given above, when the users clicks on the **action** button **liztest**, for the **feature** with id **1** of the **layer** **points** corresponding to the PostgreSQL **table** **test.points**:
 
-.. code-block:: sql
+.. code-block:: postgresql
 
    SELECT public.lizmap_get_data('{"layer_name":"points","layer_schema":"test","layer_table":"points","feature_id":1,"action_name":"liztest","buffer_size":5000}') AS data
 
 
 You can see that Lizmap creates a JSON parameters with all needed information and run the PostgreSQL function **lizmap_get_data**. The following SQL code allows you to create the needed functions:
 
-.. code-block:: sql
+.. code-block:: postgresql
 
    -- Returns a valid GeoJSON from any query
    CREATE OR REPLACE FUNCTION query_to_geojson(datasource text)
