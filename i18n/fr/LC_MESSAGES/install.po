@@ -9,7 +9,7 @@
 # Bobo Plateau <bobo-romania@users.noreply.github.com>, 2018
 # rldhont <rldhont@gmail.com>, 2018
 # luckgentilpiron <luck.gentil@gmail.com>, 2018
-# Laurent Jouanneau <dev@ljouanneau.com>, 2018
+# Laurent Jouanneau <dev@ljouanneau.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-08 15:15+0200\n"
 "PO-Revision-Date: 2018-09-10 15:50+0000\n"
-"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2018\n"
+"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2019\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -530,41 +530,55 @@ msgid ""
 "To verify password, or to register the user into Lizmap the first time he "
 "authenticate himself, the plugin needs some data about the user."
 msgstr ""
+"Pour vérifier le mot de passe, ou pour créer un compte utilisateur dans "
+"Lizmap la première que l'utilisateur s'authentifie, le plugin a besoin "
+"d'informations sur celui-ci."
 
 #: ../../source/install/ldap.rst:139
 msgid ""
 "You should indicate to it which ldap attributes it can retrieve, and which "
 "database fields that will receive the ldap attributes values."
 msgstr ""
+"Vous devez lui indiquer quels attributs ldap il doit récupérer, et quel "
+"champs de la base de donnée recevra les attributs ldap."
 
 #: ../../source/install/ldap.rst:142
 msgid ""
 "You indicate such informations into the `searchAttributes` property. It is a"
 " pair of names, ``<ldap attribute>:<table field>``, separated by a comma."
 msgstr ""
+"Vous indiquez ces informations dans la propriété 'searchAttributes'. Elle "
+"doit contenir une paire de noms, \"<ldap attribute>:<table field>\", séparé "
+"par une virgule"
 
 #: ../../source/install/ldap.rst:145
 msgid ""
 "In this example, "
 "``searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"``:"
 msgstr ""
+"Dans cet exemple, "
+"``searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"``:"
 
 #: ../../source/install/ldap.rst:147
 msgid ""
 "the value of the `uid` ldap attribute will be stored into the `login` field"
 msgstr ""
+"la valeur de l'attribut ldap 'uid' sera stockée dans le champs 'login'"
 
 #: ../../source/install/ldap.rst:148
 msgid ""
 "the value of the `sn` ldap attribute will be stored into the `lastname` "
 "field"
 msgstr ""
+"la valeur de l'attribut ldap `sn` sera stocké dans le champs `lastname`"
 
 #: ../../source/install/ldap.rst:149
 msgid ""
 "the value of the `firstname` ldap attribute will be stored into a field that"
 " have the same name, as there is no field name nor ``:``."
 msgstr ""
+"la valeur de l'attribut ldap  `firstname` sera stocké dans le champs de même"
+" nom, comme il n'y pas de nom de champs ou de ``:``."
 
 #: ../../source/install/ldap.rst:151
 msgid ""
@@ -572,6 +586,9 @@ msgid ""
 "field name. It will be readed from ldap, and can be used into the "
 "`bindUserDN` DN template. (see below)."
 msgstr ""
+"Il n'y aura pas de correspondance pour la propriété `dn` parce qu'il y a un "
+"\":\" sans de nom de champs. Elle sera cependant quand même récupérée, et "
+"peut être utilisée dans le template `bindUserDN`  (voir ci-dessous)."
 
 #: ../../source/install/ldap.rst:155
 msgid ""
@@ -579,10 +596,14 @@ msgid ""
 "`lastname`,  `organization`,  `phonenumber`, `street`, `postcode`, `city`, "
 "`country`. Only  `login` and `email` are required. Others are optional."
 msgstr ""
+"La liste des champs possible dans Lizmap sont :  `login`, `email`, "
+"`firstname`, `lastname`, `organization`, `phonenumber`, `street`, "
+"`postcode`, `city`, `country`. Seul  `login` et `email` sont obligatoires, "
+"les autres sont optionnels."
 
 #: ../../source/install/ldap.rst:161
 msgid "Configuration properties for authentication"
-msgstr ""
+msgstr "Propriétés de configuration pour l'authentification"
 
 #: ../../source/install/ldap.rst:163
 msgid ""
@@ -590,30 +611,43 @@ msgid ""
 "retrieves user properties. It uses two configuration parameters : "
 "`searchUserFilter` and `searchAttributes`."
 msgstr ""
+"Avant d'essayer d'authentifier l'utilisateur avec le ldap, le plugin "
+"récupére les propriétés de l'utilisateur. Il utilise deux paramètres de "
+"configuration : `searchUserFilter` et `searchAttributes`."
 
 #: ../../source/install/ldap.rst:167
 msgid ""
 "The `searchUserFilter` should contain the ldap query, and a ``%%LOGIN%%`` "
 "placeholder that will be replaced by the login given by the user."
 msgstr ""
+"La propriété `searchUserFilter` doit contenir la requête ldap, et un masque "
+"\"%%LOGIN%%\" qui sera remplacé par le login donné par l'utilisateur."
 
 #: ../../source/install/ldap.rst:170
 msgid ""
 "Example: "
 "``searchUserFilter=\"(&(objectClass=posixAccount)(uid=%%LOGIN%%))\"``"
 msgstr ""
+"Exemple : "
+"``searchUserFilter=\"(&(objectClass=posixAccount)(uid=%%LOGIN%%))\"``"
 
 #: ../../source/install/ldap.rst:172
 msgid ""
 "You may also indicate the base DN for the search, into `searchUserBaseDN`. "
 "Example: ``searchUserBaseDN=\"ou=ADAM users,o=Microsoft,c=US\"``."
 msgstr ""
+"Vous pourriez aussi indiquer le DN de base pour la recherche, dans  "
+"`searchUserBaseDN`. Exemple : ``searchUserBaseDN=\"ou=ADAM "
+"users,o=Microsoft,c=US\"``."
 
 #: ../../source/install/ldap.rst:175
 msgid ""
 "Note that you can indicate several search filters, if you have complex ldap "
 "structure. Use ``[]`` to indicate an item list:"
 msgstr ""
+"Notez que vous pouvez indiquer plusieurs filtres de recherche, si vous avec "
+"une structure ldap complexe. Utilisez \"[]\" pour indiquer une liste "
+"d’élément :"
 
 #: ../../source/install/ldap.rst:184
 msgid ""
@@ -622,6 +656,10 @@ msgid ""
 "into the `bindUserDN` property, and from various data. These data can be the"
 " given login or one of the ldap attributes of the user."
 msgstr ""
+"Pour vérifier le mot de passe, le plugin a besoin du DN  (Distinguished "
+"Name) correspond à l'utilisateur. Il forge le DN à partir d'un \"template\" "
+"indiqué dans la propriété  `bindUserDN` et de données variées. Ces données "
+"peuvent être le login ou l'un des attributs ldap de l'utilisateur."
 
 #: ../../source/install/ldap.rst:189
 msgid ""
@@ -629,6 +667,9 @@ msgid ""
 "contain a DN, with a ``%%LOGIN%%`` placeholder that will be replaced by the "
 "login."
 msgstr ""
+"*construction du DN à partir du login donné par l'utilisateur* : bindUserDN "
+"doit contenir un DN, avec le masque \"%%LOGIN%%\" qui sera remplacé par le "
+"login."
 
 #: ../../source/install/ldap.rst:192
 msgid ""
@@ -636,6 +677,9 @@ msgid ""
 "give `john.smith` as a login, the authentication will be made with the DN "
 "``bindUserDN=\"uid=john.smith,ou=users,dc=XY,dc=fr\"``."
 msgstr ""
+"Exemple : ``bindUserDN=\"uid=%%LOGIN%%,ou=users,dc=XY,dc=fr\"``. Si "
+"l'utilisateur donne `john.smith` comme login, l'authentification se fera "
+"avec le DN ``bindUserDN=\"uid=john.smith,ou=users,dc=XY,dc=fr\"``."
 
 #: ../../source/install/ldap.rst:196
 msgid ""
@@ -645,6 +689,12 @@ msgid ""
 "or an email or else.. (Probably it's not recommended to allow a user to type"
 " himself its full DN, it can be a security issue)"
 msgstr ""
+"Pour certains LDAP, le DN peut être une simple chaîne, comme par exemple un "
+"email. Vous pouvez alors mettre ``bindUserDN=\"%%LOGIN%%@company.local\"``. "
+"Ou même ``bindUserDN=\"%%LOGIN%%\"``  si l'utilisateur peut mettre la valeur"
+" complète du DN ou un email etc. (Ce n'est pas vraiment recommandé de "
+"permettre à l'utilisateur d'indiquer lui même le DN complet, cela peut avoir"
+" des problèmes de sécurité)."
 
 #: ../../source/install/ldap.rst:202
 msgid ""
@@ -655,6 +705,13 @@ msgid ""
 " or you can indicate a single attribute name, corresponding to an attribute "
 "that contain the full DN of the user."
 msgstr ""
+"*construction du DN à partir des attributs ldap de l'utilisateur*. Dans ce "
+"cas, le plugin va d'abord faire une première requête ldap avec le filtre "
+"`searchUserFilter`, pour récupérer les attributs ldap. Ensuite, dans "
+"bindUserDN, vous pouvez indiquer un DN avec des valeurs qui seront "
+"remplacées par des valeurs d'attributs, ou vous pouvez indiquer un seul nom "
+"d'attribut, correspondant à un attribut contenant le DN complet d'un "
+"utilisateur."
 
 #: ../../source/install/ldap.rst:209
 msgid ""
@@ -666,6 +723,13 @@ msgid ""
 " configuration property, even with no field mapping. Ex: ``...,uid:,...``. "
 "See above."
 msgstr ""
+"Pour le premier cas, bindUserDn doit contenir un DN, avec des masques  "
+"``%?%`` qui seront remplacés par les valeur d'attributs correspondant. "
+"Exemple: ``bindUserDN=\"uid=%?%,ou=users,dc=XY,dc=fr\"``. Ici il remplace le"
+" ``%?%`` par la valeur d'un attribut `uid` lu dans les attributs de "
+"l'utilisateur. Le nom d'attribut doit être présent dans la propriété de "
+"configuration `searchAttributes` , même si il n'est pas assigné à un champs."
+" Ex : ``...,uid:,...``. Voir plus haut."
 
 #: ../../source/install/ldap.rst:216
 msgid ""
@@ -677,16 +741,26 @@ msgid ""
 "present into the `searchAttributes` configuration property, even with no "
 "field mapping. Ex: ``...,dn:,...``. See above."
 msgstr ""
+"Pour le second cas, indiquez juste le nom d'attribut, préfixé avec un `$`. "
+"Exemple : ``bindUserDN=\"$dn\"``. Ici il prend l'attribut `dn` lu dans le "
+"résultat de recherche, et utilise sa valeur complète comme le DN pour se "
+"connecter au serveur ldap. C'est utile pour certain serveur ldap, comme "
+"parfois Active Directory qui ont besoin d'un DN complet spécifique pour "
+"chaque utilisateur. Le nom d'attribut doit être présent dans le paramètre de"
+" configuration `searchAttributes`, même si il n'est pas assigné à un champs."
+" Ex : ``...,dn:,...``.  Voir plus haut."
 
 #: ../../source/install/ldap.rst:224
 msgid ""
 "Note that you can indicate several dn templates, if you have complex ldap "
 "structure. Use ``[]`` to indicate an item list:"
 msgstr ""
+"Notez que vous pouvez indiquer plusieurs template de DN, si vous avez une "
+"structure ldap complexe. Utilisez \"[]\" pour indiquer une liste d’élément :"
 
 #: ../../source/install/ldap.rst:233
 msgid "Configuration properties for user rights"
-msgstr ""
+msgstr "Paramètres de configuration pour les droits utilisateurs"
 
 #: ../../source/install/ldap.rst:235
 msgid ""
@@ -694,18 +768,26 @@ msgid ""
 "your ldap groups, you can indicate to the plugin to automatically put the "
 "user into the application groups, according to the user ldap groups."
 msgstr ""
+"Si vous avez configuré des groupes de droits dans Lizmap, et si les noms de "
+"ces groupes correspondent à des groupes ldap, vous pouvez indiquer au plugin"
+" de mettre automatiquement l'utilisateur dans les groupes de lizmap "
+"correspondant aux groupes ldap dans lequel il est."
 
 #: ../../source/install/ldap.rst:239
 msgid ""
 "You should then indicate into `searchGroupFilter` the ldap query that will "
 "retrieve the groups of the user."
 msgstr ""
+"Vous devez alors indiquer dans  `searchGroupFilter`, la requête ldap qui "
+"permet de récupérer les groupes de l'utilisateur."
 
 #: ../../source/install/ldap.rst:242
 msgid ""
 "Example: "
 "``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%USERDN%%))\"``"
 msgstr ""
+"Exemple : "
+"``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%USERDN%%))\"``"
 
 #: ../../source/install/ldap.rst:244
 msgid ""
@@ -714,6 +796,10 @@ msgid ""
 "`searchAttributes`, between `%%`. Example: "
 "``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%givenName%%))\"``"
 msgstr ""
+"``%%USERDN%%`` est remplacé par le DN de l'utilisateur. ``%%LOGIN%%`` est "
+"remplacé par le login. Vous pouvez aussi utiliser n'importe quel attribut "
+"ldap indiqué dans `searchAttributes`, entre `%%`. Exemple : "
+"``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%givenName%%))\"``"
 
 #: ../../source/install/ldap.rst:248
 msgid ""
@@ -721,6 +807,10 @@ msgid ""
 "application groups that don't match the ldap group. If you don't want a "
 "groups synchronization, leave `searchGroupFilter` empty."
 msgstr ""
+"Attention : utiliser `searchGroupFilter`  supprimera l'utilisateur de tous "
+"les autres groupes de Lizmap, qui ne correspondent aux groupes ldap. Si vous"
+" ne voulez pas de synchronisation des groupes, laissez  `searchGroupFilter` "
+"vide."
 
 #: ../../source/install/ldap.rst:252
 msgid ""
@@ -736,7 +826,7 @@ msgstr ""
 
 #: ../../source/install/ldap.rst:259
 msgid "Debugging"
-msgstr ""
+msgstr "Déboggage"
 
 #: ../../source/install/ldap.rst:261
 msgid ""
@@ -1244,7 +1334,7 @@ msgstr "Mettre à jour Lizmap Web Client"
 
 #: ../../source/install/upgrade.rst:6
 msgid "Upgrading from Lizmap 2.x"
-msgstr ""
+msgstr "Mettre à jour depuis Lizmap 2.x"
 
 #: ../../source/install/upgrade.rst:8
 msgid ""
@@ -1254,7 +1344,7 @@ msgstr ""
 
 #: ../../source/install/upgrade.rst:11
 msgid "Upgrading from Lizmap 3.x versions"
-msgstr ""
+msgstr "Mettre à jour depuis une version Lizmap 3.x"
 
 #: ../../source/install/upgrade.rst:13
 msgid "From 3.0 versions to upper, here is how to upgrade."
