@@ -7,16 +7,17 @@
 # Nicolas Boisteault <nboisteault@gmail.com>, 2019
 # rldhont <rldhont@gmail.com>, 2019
 # Laurent Jouanneau <dev@ljouanneau.com>, 2019
+# Arnaud HANRY <arnaud.hanry@le64.fr>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-15 10:24+0000\n"
+"POT-Creation-Date: 2019-11-26 13:40+0000\n"
 "PO-Revision-Date: 2019-05-27 15:16+0000\n"
-"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2019\n"
-"Language-Team: French (https://beta.transifex.com/3liz-1/teams/62012/fr/)\n"
+"Last-Translator: Arnaud HANRY <arnaud.hanry@le64.fr>, 2019\n"
+"Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -262,7 +263,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:83
 msgid "Spatial searching"
-msgstr ""
+msgstr "Requête spatiale"
 
 #: ../../source/publish/advanced_lizmap_config.rst:85
 msgid ""
@@ -279,16 +280,21 @@ msgid ""
 "since version 3.1, you can use the plugin **QuickFinder** to configure a "
 "data search per QGIS project."
 msgstr ""
+"Depuis la version 3.1, vous pouvez utilisez le plugin \"Quickfinder\" pour "
+"configurer une recherche de données par projet Qgis."
 
 #: ../../source/publish/advanced_lizmap_config.rst:89
 msgid ""
 "since version 3.2, you can create a table or view **lizmap_search** in your "
 "PostgreSQL database to store the search data for all your Lizmap projects."
 msgstr ""
+"Depuis la version 3.2, vous pouvez créer une table ou une vue \"Recherche "
+"Lizmap\" dans votre base de données PostgreSQL pour stocker les données de "
+"recherches pour tous vos projets Lizmap."
 
 #: ../../source/publish/advanced_lizmap_config.rst:92
 msgid "QuickFinder Plugin"
-msgstr ""
+msgstr "Plugin QuickFinder"
 
 #: ../../source/publish/advanced_lizmap_config.rst:94
 msgid ""
@@ -304,15 +310,17 @@ msgid ""
 "You must have install at least the **7.x** version of **PHP** in your Lizmap"
 " server."
 msgstr ""
+"Vous devez avoir installé a minima la version \"7.x\" de PHP sur votre "
+"serveur Lizmap."
 
 #: ../../source/publish/advanced_lizmap_config.rst:100
 msgid "It is available only since version 3.1 of Lizmap Web Client."
-msgstr ""
+msgstr "Cela est disponible depuis la version 3.1 de Lizmap Web Client."
 
 #: ../../source/publish/advanced_lizmap_config.rst:103
 #: ../../source/publish/advanced_lizmap_config.rst:1298
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../source/publish/advanced_lizmap_config.rst:105
 msgid "Inside QGIS:"
@@ -320,7 +328,7 @@ msgstr "Depuis QGIS :"
 
 #: ../../source/publish/advanced_lizmap_config.rst:107
 msgid "install QuickFinder Plugin"
-msgstr ""
+msgstr "Installer le plugin QuickFinder"
 
 #: ../../source/publish/advanced_lizmap_config.rst:108
 msgid ""
@@ -354,7 +362,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:118
 msgid "PostgreSQL search"
-msgstr ""
+msgstr "recherche Postgresql"
 
 #: ../../source/publish/advanced_lizmap_config.rst:120
 msgid ""
@@ -363,10 +371,15 @@ msgid ""
 "database. Since version 3.2, Lizmap allows to use a PostgreSQL database to "
 "store the search data."
 msgstr ""
+"Quand vous avez plusieurs projets et données, la meilleure solution pour "
+"fournir des fonctionnalités de recherche est de configurer une relation "
+"dédiée (table ou vue) dans votre base de données. Depuis la version 3.2, "
+"Lizmap permet d'utiliser une base de données PostgreSQL pour stocker les "
+"données de recherche."
 
 #: ../../source/publish/advanced_lizmap_config.rst:125
 msgid "a PostgreSQL database, accessible from Lizmap Web Client"
-msgstr ""
+msgstr "une base de données PostgreSQL, accessible depuis Lizmap Web Client"
 
 #: ../../source/publish/advanced_lizmap_config.rst:126
 msgid ""
@@ -392,7 +405,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:147
 msgid "Create the lizmap_search table or view"
-msgstr ""
+msgstr "Créer la table de recherche Lizmap ou la vue"
 
 #: ../../source/publish/advanced_lizmap_config.rst:149
 msgid ""
@@ -404,7 +417,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:151
 msgid "The relation \"lizmap_search\" must contain the following columns:"
-msgstr ""
+msgstr "La relation \"lizmap_search\" doit contenir les colonnes suivantes :"
 
 #: ../../source/publish/advanced_lizmap_config.rst:153
 msgid "**item_layer** (text). Name of the layer. For example \"Countries\""
@@ -435,6 +448,8 @@ msgid ""
 "**geom** (geometry). We advise to store all the geometries with the same "
 "SRID."
 msgstr ""
+"\"geom\" (géométrie). Nous attirons votre attention sur le fait de stocker "
+"toutes les géométries avec le même SRID."
 
 #: ../../source/publish/advanced_lizmap_config.rst:159
 msgid ""
@@ -442,16 +457,22 @@ msgid ""
 "spatial tables into lizmap_search (here as a materialized view to ease "
 "further maintenance)"
 msgstr ""
+"Voici un exemple de code SQL que vous pouvez utiliser, pour ajouter des "
+"données issues de deux tables spatiales différentes dans la recherche lizmap"
+" (ici en tant que vue matérialisée pour faciliter une maintenance "
+"ultérieure)"
 
 #: ../../source/publish/advanced_lizmap_config.rst:184
 msgid "Optimisation"
-msgstr ""
+msgstr "Optimisation"
 
 #: ../../source/publish/advanced_lizmap_config.rst:186
 msgid ""
 "You should use a table, or a materialized view, on which you can add indexes"
 " to speed up the search queries."
 msgstr ""
+"Vous devriez utiliser une table, ou une vue matérialisée sur laquelle vous "
+"pouvez ajouter des index pour accélérer les requêtes de recherche."
 
 #: ../../source/publish/advanced_lizmap_config.rst:188
 msgid ""
@@ -468,13 +489,16 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:202
 msgid "Configure access"
-msgstr ""
+msgstr "Configurer l'accès"
 
 #: ../../source/publish/advanced_lizmap_config.rst:204
 msgid ""
 "Once this table (or view, or materialized view) is created in your database,"
 " you need to check that Lizmap can have a read access on it."
 msgstr ""
+"Une fois que cette table (ou vue ou vue matérialisée) est créée dans votre "
+"base de données, vous devez vérifier que Lizmap a un accès en lecture "
+"dessus."
 
 #: ../../source/publish/advanced_lizmap_config.rst:206
 msgid ""
@@ -483,6 +507,10 @@ msgid ""
 "just add the **lizmap_search** relation inside this database (in the public "
 "schema)."
 msgstr ""
+"Si votre instance Lizmap utilise PostgreSQL pour stocker les utilisateurs, "
+"groupes et droits, un profil de connexion existe déjà dans votre base de "
+"données.Vous pouvez alors seulement ajouter la relation \"Lizmap_search\" "
+"dans cette base de données (dans le schéma public)."
 
 #: ../../source/publish/advanced_lizmap_config.rst:208
 msgid ""
@@ -499,6 +527,8 @@ msgid ""
 "You don't need to configure the **locate by layer** tool. You can now use "
 "the default search bar in lizmap."
 msgstr ""
+"Vous n'avez pas besoin de configurer l'outil \"Localiser par couche\". Vous "
+"pouvez désormais utiliser la barre de recherche par défaut dans Lizmap."
 
 #: ../../source/publish/advanced_lizmap_config.rst:229
 msgid "Media in Lizmap"
@@ -536,6 +566,8 @@ msgid ""
 "the documents contained in this **media** directory must be **synchronized "
 "as other data**"
 msgstr ""
+"Les documents contenus dans ce répertoire \"media\" doivent être "
+"\"synchronisés comme toutes les autres données\"."
 
 #: ../../source/publish/advanced_lizmap_config.rst:239
 msgid ""
@@ -909,32 +941,37 @@ msgid ""
 "For point layers you need to click in the middle of the point to display the"
 " popup. The tolerance can be setup in tab *Map options* then **Map tools**."
 msgstr ""
+"Pour les couches ponctuelles, vous devez cliquer au milieu du point pour "
+"afficher la popup.La tolérance peut être réglée dans l'onglet \"Options de "
+"carte\" puis \"Outils de la carte\"."
 
 #: ../../source/publish/advanced_lizmap_config.rst:339
 msgid ""
 "You can update where the popup is displayed in the web interface in *Map "
 "options* then **Map interface**. You can choose between:"
 msgstr ""
+"Vous pouvez mettre à jour où la popup est affichée dans l'interface web dans"
+" \"Options de carte\" puis \"Interface\". Vous pouvez choisir entre :"
 
 #: ../../source/publish/advanced_lizmap_config.rst:341
 msgid "*dock*"
-msgstr ""
+msgstr "*dock*"
 
 #: ../../source/publish/advanced_lizmap_config.rst:342
 msgid "*minidock*"
-msgstr ""
+msgstr "*minidock*"
 
 #: ../../source/publish/advanced_lizmap_config.rst:343
 msgid "*map*"
-msgstr ""
+msgstr "*map*"
 
 #: ../../source/publish/advanced_lizmap_config.rst:344
 msgid "*bottomdock*"
-msgstr ""
+msgstr "*bottomdock*"
 
 #: ../../source/publish/advanced_lizmap_config.rst:345
 msgid "*right-dock*"
-msgstr ""
+msgstr "*right-dock*"
 
 #: ../../source/publish/advanced_lizmap_config.rst:349
 msgid "Auto popup"
@@ -1411,7 +1448,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:524
 msgid "Here an example:"
-msgstr ""
+msgstr "Voici un exemple :"
 
 #: ../../source/publish/advanced_lizmap_config.rst:548
 msgid "Creating simple themes"
@@ -1991,39 +2028,39 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:659
 msgid "There are also some variables which are available."
-msgstr ""
+msgstr "Certaines variables sont également disponibles."
 
 #: ../../source/publish/advanced_lizmap_config.rst:661
 msgid "Lizmap Web Client available variables"
-msgstr ""
+msgstr "Variables Lizmap Web Client disponibles"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1
 msgid "Variable name"
-msgstr ""
+msgstr "Nom de la variable"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1
 msgid "lizUrls.media"
-msgstr ""
+msgstr "lizUrls.media"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1
 msgid "URL to get a media"
-msgstr ""
+msgstr "URL pour pointer sur un media"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1
 msgid "lizUrls.params.repository"
-msgstr ""
+msgstr "lizUrls.params.repository"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1
 msgid "Name of the current repository"
-msgstr ""
+msgstr "Nom du répertoire courant"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1
 msgid "lizUrls.params.project"
-msgstr ""
+msgstr "lizUrls.params.project"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1
 msgid "Name of the current project"
-msgstr ""
+msgstr "Nom du projet en cours"
 
 #: ../../source/publish/advanced_lizmap_config.rst:669
 msgid "Examples"
@@ -2067,6 +2104,11 @@ msgid ""
 "them. You can also find some examples in the repository "
 "https://github.com/3liz/lizmap-javascript-scripts"
 msgstr ""
+"Dans le répertoire ``lizmap-web-client/lizmap/install/qgis/media/js/`` vous "
+"trouverez des exemples de code JavaScript adaptables ; enlevez l'extension "
+"\".example\" and copiez-les dans votre répertoire \"media/js/default/\" pour"
+" l'activer. Vous pouvez également trouver des exemples dans le dépôt "
+"https://github.com/3liz/lizmap-javascript-scripts"
 
 #: ../../source/publish/advanced_lizmap_config.rst:726
 msgid "If you want to get the URL of a static file."
@@ -3846,11 +3888,11 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1131
 msgid "trees.qgs"
-msgstr ""
+msgstr "trees.qgs"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1132
 msgid "trees.qgs.cfg"
-msgstr ""
+msgstr "trees.qgs.cfg"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1135
 msgid ""
@@ -4228,12 +4270,17 @@ msgid ""
 "**2nd Y field** : You can add a second Y field, it does not work for every "
 "type of graph, it's only working for histogram2d."
 msgstr ""
+"\"Champ Y secondaire\" : Vous pouvez ajouter une champ Y secondaire, cela ne"
+" fonctionne pas avec tous les types de graphiques, seulement les "
+"histogrammes 2D."
 
 #: ../../source/publish/advanced_lizmap_config.rst:1244
 msgid ""
 "**Color field 2 ?** : You can chose the color of the second Y field the same"
 " way you chose the one for his first Y field."
 msgstr ""
+"\"Champ couleur2 ?\" : Vous pouvez choisir la couleur du 2nd champ Y de la "
+"même manière que vous avez choisi celle du 1er champ Y."
 
 #: ../../source/publish/advanced_lizmap_config.rst:1245
 msgid ""
@@ -4255,6 +4302,8 @@ msgid ""
 "When all the configuration is done, you have to click on the button **add a "
 "layer** at the bottom of the window."
 msgstr ""
+"Lorsque tout est configuré, vous devez cliquer sur le bouton \"Ajouter la "
+"couche\" situé en bas de la fenêtre."
 
 #: ../../source/publish/advanced_lizmap_config.rst:1251
 msgid "Atlas - sequence of entities of a chosen layer"
@@ -4268,45 +4317,53 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1259
 msgid "Layer options :"
-msgstr ""
+msgstr "Options de la couche"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1261
 msgid "the atlas is enabled or not in your project"
-msgstr ""
+msgstr "l'atlas est actif ou non dans votre projet"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1262
 msgid "you need to chose the layer you want your atlas on"
 msgstr ""
+"vous devez choisir la couche sur laquelle vous voulez réaliser votre atlas"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1263
 msgid "select the primary key field, it must be an integer"
-msgstr ""
+msgstr "sélectionnez le champ de clé primaire, ce doit être un entier"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1264
 msgid ""
 "check if you want to display the layer description in the dock of your atlas"
 msgstr ""
+"cochez si vous voulez afficher la description de la couche dans le dock de "
+"votre atlas"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1265
 msgid ""
 "chose the field who contains the name of your features, it will be shown "
 "instead of the primary key in the list of features"
 msgstr ""
+"choisissez le champ qui contient le nom de vos entités, il sera affiché à la"
+" place de la clé primaire dans la liste des entités"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1266
 msgid "your atlas will be sorted according to this field"
-msgstr ""
+msgstr "votre atlas sera trié en fonction de ce champ"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1267
 msgid ""
 "you can chose to highlight the feature selected by the atlas, it will change"
 " every time it's switching to a new feature"
 msgstr ""
+"Vous pouvez choisir de mettre en surbrillance l'entité sélectionnée par "
+"l'atlas, elle changera chaque fois qu'elle passe à une nouvelle entité"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1268
 msgid ""
 "chose between a zoom on the feature or to make it the center of your map"
 msgstr ""
+"Choisissez entre un zoom sur l'entité ou en faire le centre de votre carte"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1269
 msgid ""
@@ -4319,14 +4376,19 @@ msgid ""
 "check if you want to activate filter on the feature selected by the atlas, "
 "it will hide all other features of the layer and only show the one selected"
 msgstr ""
+"cochez si vous voulez activer le filtre sur l'entité sélectionnée par "
+"l'atlas, cela masquera toutes les autres entités de la couche et affichera "
+"uniquement celle sélectionnée"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1272
 msgid "Atlas options:"
-msgstr ""
+msgstr "Options de l'atlas : "
 
 #: ../../source/publish/advanced_lizmap_config.rst:1274
 msgid "check if you want to open the atlas tool when you open your project"
 msgstr ""
+"Vérifiez si vous voulez ouvrir l'outil Atlas lorsque vous ouvrez votre "
+"projet"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1275
 msgid "you can chose the size of the atlas dock (20%-50%)"
@@ -4337,11 +4399,15 @@ msgid ""
 "you can select the duration between each step when your atlas is in auto-"
 "play mode"
 msgstr ""
+"Vous pouvez sélectionner la durée entre chaque étape lorsque votre atlas est"
+" en mode de lecture automatique"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1277
 msgid ""
 "check if you want to launch the auto-play mode when you open your project"
 msgstr ""
+"cochez si vous voulez lancer le mode de lecture automatique quand vous "
+"ouvrez le projet"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1281
 msgid "Form filtering - Filter layer data based on field values"
