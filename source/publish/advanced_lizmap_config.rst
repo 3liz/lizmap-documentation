@@ -160,7 +160,9 @@ _____________
 Create the lizmap_search table or view
 _______________________________________
 
-The database admin must create a table, view or materialized view called **lizmap_search**. This relation must be accessible in the search_path (you can put it in the public schema, or configure the search_path variable for the database or the user which connects to the database).
+The database admin must create a table, view or materialized view called **lizmap_search**.
+This relation must be accessible in the *search_path* (you can put it in the public schema,
+or configure the search_path variable for the database or the user which connects to the database).
 
 The relation "lizmap_search" must contain the following columns:
 
@@ -231,11 +233,19 @@ If not, or if you need to put the search data in another database (or connect wi
    password=DATABASE_PASSWORD
    ; search_path=DATABASE_SCHEMA_WITH_LIZMAP_SEARCH,public
 
-You don't need to configure the **locate by layer** tool. You can now use the default search bar in lizmap.
+You don't need to configure the **locate by layer** tool.
+The link with Lizmap Web Client is done automatically if you can run the query below successfully in PgAdmin using the same credentials as the Lizmap application.
+You **mustn't** specify the schema where the lizmap_search table is located.
+
+.. code-block:: sql
+
+   SELECT * FROM lizmap_search LIMIT 1;
+
+You can now use the default search bar in Lizmap which is located on top right corner.
 
 .. image:: /images/interface-postgresql-search.png
    :align: center
-   :width: 80%
+   :width: 300
 
 .. _media-in-lizmap:
 
