@@ -2,6 +2,8 @@
 Administrator guide
 ===================
 
+This guide is for the system administrator on the server.
+
 .. toctree::
   :maxdepth: 2
 	

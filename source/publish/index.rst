@@ -2,10 +2,12 @@
 Publisher guide
 ===============
 
+This guide is for the GIS technician who want to publish some data in Lizmap web client.
+
 .. toctree::
   :maxdepth: 2
 	
-  project_for_web
-  lizmap_configuration
-  publish_with_ftp
-  advanced_lizmap_config
+  quick_start/index
+  lizmap_plugin/index
+  configuration/index
+  customization/index
