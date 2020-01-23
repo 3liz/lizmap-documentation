@@ -286,15 +286,15 @@ Retrieve and install Lizmap Web Client
 With ZIP file
 --------------
 
-Retrieve the latest available stable version from https://github.com/3liz/lizmap-web-client/releases/
+Retrieve the latest available stable version from https://packages.3liz.org/pub/lizmap/release/
 
 .. code-block:: bash
 
    cd /var/www/
    # Options
-   VERSION=3.3.0
+   VERSION=3.4.0
    # Archive recovery with wget
-   wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
+   wget https://packages.3liz.org/pub/lizmap/release/3.4/lizmap-web-client-$VERSION.zip
    # Unzip archive
    unzip $VERSION.zip
    # virtual link for http://localhost/lizmap/
@@ -349,12 +349,14 @@ In case you get a ``500 - internal server error``, run again:
    lizmap/install/set_rights.sh www-data www-data
 
 
-Development version with git
+Development version with Git
 ----------------------------
 
 .. warning:: The development version is always changing, and bugs can occur. Do not use it in production.
 
-* The first time
+* Source code in the Git repository is missing external PHP packages.
+You need to install first `PHP Composer` first following its documentation https://getcomposer.org/download/
+and then run these following commands.
 
 .. code-block:: bash
 
@@ -365,6 +367,8 @@ Development version with git
    git clone https://github.com/3liz/lizmap-web-client.git lizmap-web-client-$VERSION
    # Go into the git repository
    cd lizmap-web-client-$VERSION
+   # Launch PHP Composer to install external dependencies
+   make build
    # Create a personal branch for your changes
    git checkout -b mybranch
 
