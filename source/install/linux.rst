@@ -251,7 +251,7 @@ First declare the QGIS repository into a  /etc/apt/sources.list.d/debian-qgis.li
 
 .. code-block:: text
 
-    deb http://qgis.org/debian-ltr stretch main
+    deb https://qgis.org/debian-ltr stretch main
 
 
 Install also the Qgis key for the package manager

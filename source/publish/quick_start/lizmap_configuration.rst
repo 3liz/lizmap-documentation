@@ -6,7 +6,7 @@ Install the Lizmap plugin
 =========================
 
 The Lizmap plugin is available through the official QGIS project repository:
-http://plugins.qgis.org/plugins/lizmap/
+https://plugins.qgis.org/plugins/lizmap/
 
 To install it, just do it like any QGIS plugin:
 
@@ -184,10 +184,10 @@ The available base layers
 
 The licenses are available at the following URLs:
 
-* *OpenStreetMap*: http://wiki.openstreetmap.org/wiki/Tile_usage_policy
+* *OpenStreetMap*: https://wiki.openstreetmap.org/wiki/Tile_usage_policy
 * *Google*: https://developers.google.com/maps/terms
 * *Bing*: https://www.microsoft.com/maps/product/terms.html
-* *IGN*: http://api.ign.fr/services#web
+* *IGN*: https://api.ign.fr/services#web
 
 .. note:: If you choose an external base layer, the map will be displayed in Google Mercator (EPSG: 3857 or EPSG: 900913), the scales are those of external services and QGIS-Server will perform on the fly reprojection.
 

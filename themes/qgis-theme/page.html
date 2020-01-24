@@ -30,19 +30,19 @@ we then can use this language to build language dependent switches #}
           <ul class="unstyled inline" id="social">
             <li id="twitter"><a href="https://twitter.com/hashtag/Lizmap?src=hash" class="external" title="Lizmap"><div></div></a></li>
             <li id="facebook"><a href="https://www.facebook.com/3LizMontpellier" class="external" title="3Liz"><div></div></a></li>
-            <!--li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li-->
+            <!--li id="gplus"><a href="https://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li-->
             <li id="github"><a href="https://github.com/3liz/lizmap-web-client/" class="external" title="Lizmap Web Client"><div></div></a></li>
             <li id="github"><a href="https://github.com/3liz/lizmap-plugin/" class="external" title="Lizmap plugin"><div></div></a></li>
             <!--<li id="aboutcontact"><a href="{{ pathto('site/getinvolved/about') }}"><div></div></a></li>-->
-            <!--li id="aboutcontact"><a href="http://www.qgis.org/{{language}}/site/getinvolved/about.html"><div></div></a></li-->
+            <!--li id="aboutcontact"><a href="https://www.qgis.org/{{language}}/site/getinvolved/about.html"><div></div></a></li-->
           </ul>
         </div>
 
-        <p class="credit">{{ _('If not stated otherwise, all content is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a>') }}</p>
+        <p class="credit">{{ _('If not stated otherwise, all content is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a>') }}</p>
     </div>
     <div class="container">
       <p class="credit">
-        {{ _('Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>') }}
+        {{ _('Select graphics from <a href="https://thenounproject.com" target="_blank">The Noun Project collection</a>') }}
         {# only on the frontpage (both of docs and site) we show the 'last updated'-message, making it possible to rsync the sites #}
         {% if (pagename == 'site/index' or pagename == 'docs/index') and last_updated %}
             {# % trans last_updated=last_updated|e %} - Last updated on {{ last_updated }}{% endtrans % #}
@@ -76,7 +76,7 @@ we then can use this language to build language dependent switches #}
         this makes it possible for us to use those templates as translatable
         static html pages #}
 {# this is actually a little 'hack', see: 
-http://stackoverflow.com/questions/13209597/override-html-page-template-for-a-specific-sphinx-document #}
+https://stackoverflow.com/questions/13209597/override-html-page-template-for-a-specific-sphinx-document #}
     {% if pagename == 'site/index' %}
         {% include 'index.html' %}
     {% elif pagename == 'site/forusers/download' %}

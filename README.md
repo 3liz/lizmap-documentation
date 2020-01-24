@@ -34,8 +34,8 @@ changes.
 Building the documentation
 ===========================
 
-We are using the tool [Sphinx](http://sphinx-doc.org)  and its 
-internationalization mechanism [sphinx-intl](http://sphinx-doc.org/intl.html) to 
+We are using the tool [Sphinx](https://sphinx-doc.org)  and its 
+internationalization mechanism [sphinx-intl](https://sphinx-doc.org/intl.html) to 
 generate the HTML content in all languages.
 
 So install these tools. On Linux / MacOs, install Python, Pip and then:

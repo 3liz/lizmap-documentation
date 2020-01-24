@@ -13,7 +13,7 @@ Requirements
 
 * Text Editor (e.g. `Notepad++ <https://notepad-plus-plus.org/>`_ , `Visual Studio Code <https://code.visualstudio.com/>`_ )
 * Microsoft Visual C++ Redistributable 64-bits (this installation need to respect the compiling version of Apache and PHP) ( `Microsoft VCs C++ <https://support.microsoft.com/pt-pt/help/2977003/the-latest-supported-visual-c-downloads>`_ )
-* Web Server (`Apache 24 64-bits <http://www.apachelounge.com/download>`_ )
+* Web Server (`Apache 24 64-bits <https://www.apachelounge.com/download>`_ )
 * PHP 7.3.10 (`Non Thread Safe <https://windows.php.net/download/>`_ )
 * QGIS Server 3 64-bits (`OSGeo4W Network Installer (64 bit) <https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_)
 * Lizmap Web Client 3.x (`Github Lizmap releases <https://www.github.com/3liz/lizmap-web-client>`_ )
@@ -195,7 +195,7 @@ php 7.3.10 Configuration
 .. warning:: Lizmap web client is based on Jelix PHP framework. You must install at least the **7** version of PHP for full features. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 7.x installation)
 
 For this instalation we use the PHP 7.3.10, if you install the previouly the Microsoft Visual C++ Redistributable for Apache version of this documentation, you don't need to install again.
-Go to `PHP binaries <http://windows.php.net/download/>`_ and download the link with the name **Zip**, **make sure** it is the non-thread-safe file.
+Go to `PHP binaries <https://windows.php.net/download/>`_ and download the link with the name **Zip**, **make sure** it is the non-thread-safe file.
 
 After download create a folder in **C:\\webserver\\** with name php73 and unzip the files into it. Go to the file **C:\\webserver\\php73\\php.ini-production** and change into **C:\\webserver\\php73\\php.ini**.
 Open the :kbd:`php.ini` and search for extension dir directive and change to the properly locate of **EXT** folder, make sure that you enter the full path like this **extension_dir = "C:\\webserver\\php73\\ext"**.
@@ -244,14 +244,14 @@ Restart Apache in command line with :kbd:`httpd -k restart` and see if everythin
 QGIS Server Installation
 ------------------------
 
-Go to http://www.qgis.org and get the file `Osgeo4W Network installer (64 bit) <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ and run the installer. Choose the following options:
+Go to http://www.qgis.org and get the file `Osgeo4W Network installer (64 bit) <https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ and run the installer. Choose the following options:
 
 1. Advanced Installer;
 2. Install from internet;
 3. Root Directory **C:\\OSGeo4W64** and install for **all users**;
 4. Keep default Local Package Directory and Start Menu Name;
 5. Do not configure proxy if not needed;
-6. Choose a download site (e.g. http://download.osgeo.org );
+6. Choose a download site (e.g. https://download.osgeo.org );
 7. Select packages : command line_Utilities/gdal, Desktop/Qgis full , Web/Qgis server, lib/fcgi  then Next (We use for stable purposes, the QGIS LTR version);
 8. Accept to get packages to meet dependencies : Next then Wait for the download to be completed and Agree to all licenses.
 
@@ -611,5 +611,5 @@ After the remote configuration, in the workstation of the GIS manager you can re
 is necessary install a FTP client see :ref:`requirements-label` section. Another thing, is it's necessary a client certificate produced by the remote in the GIS manager. After that try to connect with:
 **Server** = Remote IP. Use Passive mode AND check IPV6.
 
-.. note:: You can see this tutorial (only in french): http://forum.hardware.fr/hfr/WindowsSoftware/Tutoriels/filezilla-serveur-securise-sujet_300273_1.htm
+.. note:: You can see this tutorial (only in french): https://forum.hardware.fr/hfr/WindowsSoftware/Tutoriels/filezilla-serveur-securise-sujet_300273_1.htm
 

@@ -94,7 +94,7 @@ Lizmap popup
 Introduction
 ____________
 
-If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know well the **HTML format**. See e.g.: http://html.net/tutorials/html/
+If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know well the **HTML format**. See e.g.: https://html.net/tutorials/html/
 
 .. warning:: When you use the *lizmap* mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the template. Managing media is also possible, but you have to configure it as well.
 
@@ -161,7 +161,7 @@ Here an example of a template handling media and an external link:
 
    <p><a href="{$website}" target="_blank">Web link</a></p>
 
-   <p><img src="http://www.3liz.com/assets/img/logo.png"/></p>
+   <p><img src="https://www.3liz.com/images/logo-lizmap.png"/></p>
 
 .. seealso:: Chapter :ref:`media` for more details on the use of documents in the directory media.
 
