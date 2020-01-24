@@ -4,19 +4,26 @@ Adding your own JavaScript
 Principle
 ---------
 
-This is useful for a variety of advanced usage. For instance, you can avoid people being able to download elements of the page by right clicking on them, and of course much more.
+Adding some JavaScript is useful for a variety of advanced usage. For instance, you can avoid people being able to download
+elements of the page by right clicking on them, and of course much more.
 
-.. note:: This is available starting with Lizmap 2.11. For earlier versions, you must add your code directly to file ``lizmap/www/js/map.js``.
-
-* In your repository (e.g. ``/home/data/repo1/myproject.qgs`` you should have these directories::
+* In your repository (e.g. ``/home/data/repo1/myproject.qgs``), you should have these directories::
 
     media
     |-- js
       |-- myproject
+      |-- default
 
-* All the Javascript code you copy in the ``/home/data/rep1/media/js/myproject/`` directory will be executed by Lizmap, provided that:
-* you allow it, through the Lizmap admin interface, adding the privilege "Allow themes for this repository" in the form for the modification of the repository
+* All the JavaScript code you copy in the ``/home/data/rep1/media/js/myproject/`` directory will be executed by Lizmap for this **specific** project only.
+* All the JavaScript code in ``default`` will be executed for **all** projects.
+* To allow the execution of JavaScript code, in the Lizmap admin interface, you **must** add the privilege "Allow themes for this repository".
 
+
+Library of scripts
+------------------
+
+In the directory ``lizmap-web-client/lizmap/install/qgis/media/js/`` (or in GitHub https://github.com/3liz/lizmap-web-client/tree/master/lizmap/install/qgis/media/js/montpellier), you can find examples of suitable JavaScript code.
+Remove the extension ``.example`` and copy them to your ``media/js/default/`` folder to activate them. You can also find some examples in the repository https://github.com/3liz/lizmap-javascript-scripts
 
 Available Javascript events
 ---------------------------
@@ -71,8 +78,6 @@ There are also some variables which are available.
 
 Examples
 --------
-
-In the directory ``lizmap-web-client/lizmap/install/qgis/media/js/`` you can find examples of suitable JavaScript code; just remove the extension ``.example`` and copy them to your media/js/default/ folder to activate them. You can also find some examples in the repository https://github.com/3liz/lizmap-javascript-scripts
 
 Here is a very small example allowing you to disable right click in Lizmap. Just add a file named e.g. ``disableRightClick.js`` with the following code:
 
