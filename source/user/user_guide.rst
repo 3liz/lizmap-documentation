@@ -3,13 +3,13 @@ The projects pages
 
 The default lizmap page offers a list maps organized by folder.
 
-.. image:: /images/user-guide-01-projects.png
+.. image:: /images/user-guide-01-projects.jpg
    :align: center
    :scale: 80%
 
 You can access to the map information sheet. This informations come directly from QGIS project.
 
-.. image:: /images/user-guide-02-information.png
+.. image:: /images/user-guide-02-information.jpg
    :align: center
    :scale: 80%
 
@@ -29,31 +29,31 @@ Lizmap offers default web maps with the following features:
 
 The order and organization of layers in the layers panel management meet those defined in the QGIS by the map publisher.
 
-.. image:: /images//user-guide-03-simple-map.png
+.. image:: /images/user-guide-03-simple-map.jpg
    :align: center
    :scale: 80%
 
 Zooming and paning are available on the right of the map. To zoom on an area, you need to select the *zoom by rectangle* and drag to draw a rectangle defining the area to reach.
 
-.. image:: /images//user-guide-03-simple-map-zoom.png
+.. image:: /images/user-guide-03-simple-map-zoom.jpg
    :align: center
    :scale: 80%
 
 You can using the *triangle*, left the layers title, bring up the legend of the layer.
 
-.. image:: /images//user-guide-04-legend.png
+.. image:: /images/user-guide-04-legend.jpg
    :align: center
    :scale: 80%
 
 Selection boxes allow you to hide and display the proposed layers.
 
-.. image:: /images//user-guide-05-show-hide-layer.png
+.. image:: /images/user-guide-05-show-hide-layer.jpg
    :align: center
    :scale: 80%
 
 To take full advantage of the map, you can hide the panel management layers.
 
-.. image:: /images//user-guide-06-hide-layer-switcher.png
+.. image:: /images/user-guide-06-hide-layer-switcher.jpg
    :align: center
    :scale: 80%
 
@@ -67,13 +67,13 @@ Authentication
 
 The admin can restrict access to certain map groups. To access these maps, you must authenticate. Authentication is accessible through the button *Connect* at the top left.
 
-.. image:: /images//user-guide-07-authentication.png
+.. image:: /images/user-guide-07-authentication.jpg
    :align: center
    :scale: 80%
 
 Once authentication is enabled, depending on your rights, you should have access to new maps.
 
-.. image:: /images//user-guide-07-authentication-projects.png
+.. image:: /images/user-guide-07-authentication-projects.jpg
    :align: center
    :scale: 80%
 
@@ -92,7 +92,7 @@ The map publisher can add some features depending on the desired user experience
 * statictics 
 
 
-.. image:: /images//user-guide-07-advanced-features.png
+.. image:: /images/user-guide-07-advanced-features.jpg
    :align: center
    :scale: 80%
 
@@ -101,7 +101,7 @@ Selecting a basemap
 
 Using the Lizmap plugin, the editor may have added external base maps or an empty base layer to the map. These base maps are available in the layer management panel as a list.
 
-.. image:: /images//user-guide-08-baselayers.png
+.. image:: /images/user-guide-08-baselayers.jpg
    :align: center
    :scale: 80%
 
@@ -112,14 +112,14 @@ This feature is displayed by default if it has been activated by the map publish
 
 It is located above the layer management panel and is in the form of lists. Some lists need to enter a few characters before proposing locations.
 
-.. image:: /images//user-guide-09-locate-by-layer.png
+.. image:: /images/user-guide-09-locate-by-layer.jpg
    :align: center
    :scale: 80%
 
 
 Simply select a location from the list to zoom to the item.
 
-.. image:: /images//user-guide-09-locate-by-layer-zoom.png
+.. image:: /images/user-guide-09-locate-by-layer-zoom.jpg
    :align: center
    :scale: 80%
 
@@ -134,19 +134,19 @@ Measurement feature give you the ability to calculate:
 
 It is available in the Lizmap menu bar.
 
-.. image:: /images//user-guide-10-measure-menu.png
+.. image:: /images/user-guide-10-measure-menu.jpg
    :align: center
    :scale: 80%
 
 The tool is activated by selecting the measurement type. Once activated, a message tells you what to do.
 
-.. image:: /images//user-guide-11-measure-activated.png
+.. image:: /images/user-guide-11-measure-activated.jpg
    :align: center
    :scale: 80%
 
 The measurement is displayed in the status bar.
 
-.. image:: /images//user-guide-12-measure-value.png
+.. image:: /images/user-guide-12-measure-value.jpg
    :align: center
    :scale: 80%
 
@@ -154,7 +154,7 @@ By double-clicking on the map, the measurement is fixed. To start over, you can 
 
 In the feature bar, the button on the right allows to stop using it.
 
-.. image:: /images//user-guide-13-measure-stop.png
+.. image:: /images/user-guide-13-measure-stop.jpg
    :align: center
    :scale: 80%
 
@@ -166,31 +166,31 @@ Printing
 
 The print feature is available in the Lizmap menu bar. It depends on the number of print compositions published by the map publisher.
 
-.. image:: /images//user-guide-14-print-menu.png
+.. image:: /images/user-guide-14-print-menu.jpg
    :align: center
    :scale: 80%
 
 Once the feature activated, a print area with the form of the composition is displayed on the map. Use this area to define the area to be printed. You can move it.
 
-.. image:: /images//user-guide-15-print-zone.png
+.. image:: /images/user-guide-15-print-zone.jpg
    :align: center
    :scale: 80%
 
 On the left, above the panel layer management, you can select the scale of printing.
 
-.. image:: /images//user-guide-16-print-scale.png
+.. image:: /images/user-guide-16-print-scale.jpg
    :align: center
    :scale: 80%
 
 Depending on the configuration of the printing composition, you can have the possibility to enter your own text.
 
-.. image:: /images//user-guide-17-print-input.png
+.. image:: /images/user-guide-17-print-input.jpg
    :align: center
    :scale: 80%
 
 To begin building the print file, you can click on *Print*. You will get a PDF file with the layout defined by the map publisher.
 
-.. image:: /images//user-guide-18-print-result.png
+.. image:: /images/user-guide-18-print-result.jpg
    :align: center
    :scale: 80%
 
@@ -207,13 +207,13 @@ The map publisher can allow users to edit certain data. It also has the ability 
 
 The feature is available in the Lizmap menu bar. The edit menu allows you to select the data you want to update.
 
-.. image:: /images//user-guide-19-edition-menu.png
+.. image:: /images/user-guide-19-edition-menu.jpg
    :align: center
    :scale: 80%
 
 Once the layer selected, the edit pannel appears. This varies depending on the configuration desired by the map publisher. If any changes are available you have to choose between *Add* a new object or *Select* one.
 
-.. image:: /images//user-guide-20-edition-add.png
+.. image:: /images/user-guide-20-edition-add.jpg
    :align: center
    :scale: 80%
 
@@ -225,13 +225,13 @@ If you have selected *Add*, you will be asked to draw a simple form that depends
 
 In the case of line and polygon, you need to click several times to draw the shape you want.
 
-.. image:: /images//user-guide-21-edition-add-draw.png
+.. image:: /images/user-guide-21-edition-add-draw.jpg
    :align: center
    :scale: 80%
 
 To finish your line or your polygon you must add the last point by double-clicking the desired location. Once drawing finished, an editing form for fields will be displayed.
 
-.. image:: /images//user-guide-22-edition-add-attributes.png
+.. image:: /images/user-guide-22-edition-add-attributes.jpg
    :align: center
    :scale: 80%
 
@@ -241,31 +241,31 @@ If the geometry is right for you and you have entered the required information, 
 
 To select an object to update, you will need to click on it on the map then click on the button *Edit*.
 
-.. image:: /images//user-guide-23-edition-select.png
+.. image:: /images/user-guide-23-edition-select.jpg
    :align: center
    :scale: 80%
 
 The selected object appears on the map and its geometry may be changed immediatly.
 
-.. image:: /images//user-guide-26-edition-select-draw.png
+.. image:: /images/user-guide-26-edition-select-draw.jpg
    :align: center
    :scale: 80%
 
 You can undo geometry changes using the *Cancel* button.
 
-.. image:: /images//user-guide-27-edition-select-draw-undo.png
+.. image:: /images/user-guide-27-edition-select-draw-undo.jpg
    :align: center
    :scale: 80%
 
 To validate your geometry modifications or simply access the editing form for fields, you must click *Save*.
 
-.. image:: /images//user-guide-28-edition-select-draw-validate.png
+.. image:: /images/user-guide-28-edition-select-draw-validate.jpg
    :align: center
    :scale: 80%
 
 A dialog box containing the editing form for fields of the object appears.
 
-.. image:: /images//user-guide-29-edition-select-draw-form.png
+.. image:: /images/user-guide-29-edition-select-draw-form.jpg
    :align: center
    :scale: 80%
 
@@ -275,7 +275,7 @@ If you want to remove the object you selected, you must click *Del*.
 
 Finally, to disable editing tool, simply click on *Close* or click again on the Edition icon.
 
-.. image:: /images//user-guide-30-edition-stop.png
+.. image:: /images/user-guide-30-edition-stop.jpg
    :align: center
    :scale: 80%
 
@@ -289,7 +289,7 @@ Another entry labelled **Selection** with a star icon will also be displayed for
 
 Clicking on this icon will open a new panel situated at the bottom of the interface, containing one single **Data** tab with a list of published vector layers.
 
-.. image:: /images//user-guide-31-attribute-menu.png
+.. image:: /images/user-guide-31-attribute-menu.jpg
    :align: center
    :scale: 80%
 
@@ -310,7 +310,7 @@ You can click back on any of these 2 **Pin** and **Maximise** button to get back
 
 The **Close** button closes the attribute table tool completely (as if you clicked in the menu bar icon).
 
-.. image:: /images//user-guide-32-attribute-menu-tools.png
+.. image:: /images/user-guide-32-attribute-menu-tools.jpg
    :align: center
    :scale: 80%
 
@@ -321,7 +321,7 @@ Once the attribute table panel is displayed, you can open the attribute table of
 
 *Opening an attribute table can take some time depending on the data size and complexity.*
 
-.. image:: /images//user-guide-33-attribute-menu-visualize-layer.png
+.. image:: /images/user-guide-33-attribute-menu-visualize-layer.jpg
    :align: center
    :scale: 80%
 
@@ -333,7 +333,7 @@ The layer data is shown in a **paginated table**. By default, the table shows 10
 
 The table of data can be **ordered by a field** by clicking on the column corresponding to . If you click again on the column, the order will be reversed.
 
-.. image:: /images//user-guide-34-attribute-order-line.png
+.. image:: /images/user-guide-34-attribute-order-line.jpg
    :align: center
    :scale: 80%
 
@@ -355,7 +355,7 @@ Each line of the table shows some buttons at the left side:
 * **Zoom** button : clicking on this button will zoom to the corresponding geometry in the map. The scale will be chosen so that the feature geometry uses most of the available space.
 * **Center** button : clicking on this button will just pan the map to the corresponding feature, without changing scale.
 
-.. image:: /images//user-guide-35-attribute-panel-options.png
+.. image:: /images/user-guide-35-attribute-panel-options.jpg
    :align: center
    :scale: 80%
 
@@ -364,7 +364,7 @@ More about selection tools
 
 You can also select a layer object by **displaying the popup** for this object (if the map publisher has enabled the popup for the layer, a click on the map will show a popup window containing detailed information on the clicked feature). Inside the popup, if you can see the select button, you can use it to select only this object. Previous selection will be replaced by only this object.
 
-.. image:: /images//user-guide-36-attribute-popup-selection.png
+.. image:: /images/user-guide-36-attribute-popup-selection.jpg
    :align: center
    :scale: 80%
 
@@ -372,7 +372,7 @@ When one or more lines have been selected in the attribute table (they become ye
 
 You can **unselect all the selected objects** by clicking on the "white star" button situated above the table.
 
-.. image:: /images//user-guide-37-attribute-select-top.png
+.. image:: /images/user-guide-37-attribute-select-top.jpg
    :align: center
    :scale: 80%
 
@@ -387,7 +387,7 @@ Note that only the content of the table will be restricted to the lines matching
 
 Once you have filtered some data in the attribute table by entering some text in it, **you can easily select them all** by clicking on the "black star" button labelled "Select searched lines". This will select all the corresponding objects in the attribute table (display them in yellow) and also change their color in the map (usually in yellow too, depending on the configuration done by the map publisher)
 
-.. image:: /images//user-guide-38-attribute-search.png
+.. image:: /images/user-guide-38-attribute-search.jpg
    :align: center
    :scale: 80%
 
@@ -409,7 +409,7 @@ You can cancel the filter to go back to previous state:
 * by clicking on the orange "Funnel" button at the top of the legend in Lizmap left panel
 * by clicking back on the filter button just above the attribute table concerned by the filter
 
-.. image:: /images//user-guide-39-attribute-filter.png
+.. image:: /images/user-guide-39-attribute-filter.jpg
    :align: center
    :scale: 80%
 

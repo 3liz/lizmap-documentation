@@ -6,7 +6,7 @@ Principle
 
 This feature let you chose and configure a layer to make a sequence of entities in your Lizmap project.
 
-..  image:: /images/publish-04-atlas-plugin-interface.png
+..  image:: /images/publish-04-atlas-plugin-interface.jpg
    :align: center
    :width: 80%
 

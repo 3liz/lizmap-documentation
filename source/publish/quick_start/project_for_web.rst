@@ -30,7 +30,7 @@ Add your data:
   * MSSQL spatial
   * Oracle locator / spatial
 
-.. image:: /images/qgis-montpellier-project.png
+.. image:: /images/qgis-montpellier-project.jpg
    :align: center
    :width: 60%
 
@@ -61,7 +61,7 @@ Configure the coordinates reference system, CRS, of your project:
 
 * QGIS can reproject raster and vector data.
 
-.. image:: /images/qgis-montpellier-project-crs.png
+.. image:: /images/qgis-montpellier-project-crs.jpg
    :align: center
    :width: 60%
 
@@ -78,7 +78,7 @@ Configure the Web Geographics Services parameters with the *QGIS Server* tab:
 * Exclude compositions and layers if data cannot be published in WMS
 * Enable the layers you want to publish WFS and WCS
 
-.. image:: /images/qgis-montpellier-project-ows.png
+.. image:: /images/qgis-montpellier-project-ows.jpg
    :align: center
    :width: 60%
 
@@ -95,7 +95,7 @@ In the window *Layer properties*, the *QGIS Server* tab allows you to configure 
 * Specify the attribution to respect the data license
 * Add the metadata record URL if it's available
 
-.. image:: /images/qgis-montpellier-project-tram-layer-metadata.png
+.. image:: /images/qgis-montpellier-project-tram-layer-metadata.jpg
    :align: center
    :width: 60%
 

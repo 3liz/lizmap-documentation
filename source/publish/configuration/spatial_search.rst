@@ -127,7 +127,7 @@ You **mustn't** specify the schema where the lizmap_search table is located.
 
 You can now use the default search bar in Lizmap which is located on top right corner.
 
-.. image:: /images/interface-postgresql-search.png
+.. image:: /images/interface-postgresql-search.jpg
    :align: center
    :width: 300
 

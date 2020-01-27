@@ -35,7 +35,7 @@ You need to add a line in the plugin table for each field you need to add in the
 
 The order of the lines in the configuration table is taken into account to show the field inputs in the form.
 
-.. image:: /images/user-guide-advanced-form-filtering.png
+.. image:: /images/user-guide-advanced-form-filtering.jpg
    :align: center
    :width: 80%
 

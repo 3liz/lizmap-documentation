@@ -65,7 +65,7 @@ You can use the tools available in the **Fields** tab of the **Layer properties*
 
 * to **change the name** displayed for that column, type a different name in the *Alias* column
 
-.. image:: /images/features-popup-fields.png
+.. image:: /images/features-popup-fields.jpg
    :align: center
    :width: 70%
 
@@ -106,7 +106,7 @@ You can edit the popup template with the button *Configure* in the Lizmap plugin
 * an **area where you can type your text**
 * a **read-only area**, showing a preview of your template
 
-.. image:: /images/features-popup-configure.png
+.. image:: /images/features-popup-configure.jpg
    :align: center
    :width: 70%
 
@@ -226,6 +226,6 @@ Here an example:
    </tr>
  </table>
 
-.. image:: /images/popup_display_children.png
+.. image:: /images/popup_display_children.jpg
    :align: center
    :width: 80%

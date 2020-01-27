@@ -6,7 +6,7 @@ Locate by layer
 Principle
 ---------
 
-.. image:: /images/interface-tools-tab-locate.png
+.. image:: /images/interface-tools-tab-locate.jpg
    :align: center
    :width: 80%
 

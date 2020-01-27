@@ -35,6 +35,6 @@ It is advisable to use:
 
 Here is an example of use:
 
-.. image:: /images/features-overview.png
+.. image:: /images/features-overview.jpg
    :align: center
    :width: 60%
