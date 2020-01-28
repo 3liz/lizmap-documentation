@@ -6,7 +6,7 @@ Principle
 
 In the 3.2 version of Lizmap, a way to show charts in Lizmap is implemented. You will be able to create a few kinds of graph (scatter, pie, histogram, box, bar histogram2d, polar) with only a few clicks.
 
-.. image:: /images//publish-01-dataviz-interface.png
+.. image:: /images/publish-01-dataviz-interface.jpg
    :align: center
    :scale: 80%
 
@@ -15,7 +15,7 @@ Configuring the tool
 
 You can easily configure it with the plugin Lizmap in QGIS in the Dataviz panel.
 
-.. image:: /images//publish-02-dataviz-interface-plugin.png
+.. image:: /images/publish-02-dataviz-interface-plugin.jpg
     :align: center
     :scale: 80%
 
@@ -25,7 +25,7 @@ You have the possibility to change the value to **dock**, **bottomdock** or **ri
 **2**:
 Here, you have the possibility to write in HTML to change the style of the container of your charts. If you are proficient in the HTML language, there are a lot of possibilities and you can customize your container the way you want.
 
-.. image:: /images//publish-03-dataviz-html-example.png
+.. image:: /images/publish-03-dataviz-html-example.jpg
    :align: center
    :scale: 80%
 

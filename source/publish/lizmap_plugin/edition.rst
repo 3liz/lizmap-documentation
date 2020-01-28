@@ -76,7 +76,7 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
 
   - Add the layer in the list with the "Add layer" button.
 
-.. image:: /images/features-edition-table.png
+.. image:: /images/features-edition-table.jpg
    :align: center
    :width: 80%
 

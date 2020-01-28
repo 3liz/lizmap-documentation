@@ -6,7 +6,7 @@ Changing the default image of a project
 
 By default the following image is displayed for a project:
 
-.. image:: /images/mapmonde.png
+.. image:: /images/mapmonde.jpg
    :align: left
    :width: 15%
 

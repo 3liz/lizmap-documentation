@@ -81,6 +81,6 @@ ____________
 
 Below is an illustration of a Lizmap popup displaying a picture, a text and a link in the popup:
 
-.. image:: /images/features-popup-photo-example.png
+.. image:: /images/features-popup-photo-example.jpg
    :align: center
    :width: 90%

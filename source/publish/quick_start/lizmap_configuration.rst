@@ -15,7 +15,7 @@ To install it, just do it like any QGIS plugin:
 * Install the plugin
 * It's available in the menu and toolbar :menuselection:`Web`
 
-.. image:: /images/introduction-install-lizmap.png
+.. image:: /images/introduction-install-lizmap.jpg
    :align: center
    :width: 60%
 
@@ -48,7 +48,7 @@ The layer configuration is done in the *Layers* tab.
 
 This tab shows the layers tree of the project with the same organization that is defined in the Layers panel. You can select one of the tree elements, a layer or group, and then configure the options for the selected group or layer.
 
-.. image:: /images/interface-layers-tab-01.png
+.. image:: /images/interface-layers-tab-01.jpg
    :align: center
    :width: 80%
 
@@ -74,7 +74,7 @@ Layers options:
   * `png; mode=8bit`: very light image format, color panel restricts to the maximum with transparency, possible degradation of the image
   * `jpeg`: light image format without transparency with loss of quality
 
-.. image:: /images/interface-layers-tab-02.png
+.. image:: /images/interface-layers-tab-02.jpg
    :align: center
    :width: 80%
 
@@ -99,7 +99,7 @@ Configure the map
 
 The tab *Map* allows you to enable or disable basic Lizmap tools, choosing scales and the intial extent.
 
-.. image:: /images/interface-map-tab.png
+.. image:: /images/interface-map-tab.jpg
    :align: center
    :width: 80%
 
@@ -148,7 +148,7 @@ The base layers are not part of the legend and are presented as a list.
 
 The *Base layers* tab lets you add external services as base layer and an empty base layer. The empty base layer will display thematic layers over the project background color.
 
-.. image:: /images/interface-baselayers-tab.png
+.. image:: /images/interface-baselayers-tab.jpg
    :align: center
    :width: 80%
 
