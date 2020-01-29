@@ -1,4 +1,4 @@
-: _locate-by-layer:
+.. _locate-by-layer:
 
 Locate by layer
 ===============

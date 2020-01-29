@@ -1,3 +1,5 @@
+.. _creating-simple-themes:
+
 Creating simple themes
 ======================
 
