@@ -112,7 +112,7 @@ To create a repository, you must give:
 * **an id**: a word without spaces, accents or special characters
 * **a label**: the name that will be displayed for this repository, accents and spaces allowed
 * **a local folder path**: the full path on the server to the folder that contains the QGIS projects and data
-* **Allow repository themes**: This option enables the possibility for the publisher to set a theme for the repository and themes for each map. See :ref:`lizmap-simples-themes`.
+* **Allow repository themes**: This option enables the possibility for the publisher to set a theme for the repository and themes for each map. See :ref:`creating-simple-themes`.
 
 .. _define-group-rights:
 
@@ -132,7 +132,7 @@ After creating the directory, the repository modification form is displayed auto
 
 * **Always see complete layers data, even if filtered by login**
 
-  This option is in connection with the filtering feature data layers per group. See :ref:`filter-layer-data-by-group`. Check the box for deciding which groups can see all the time all the data, even when a filter is active on some layers.
+  This option is in connection with the filtering feature data layers per group. See :ref:`filtered-layer-by-user`. Check the box for deciding which groups can see all the time all the data, even when a filter is active on some layers.
 
 .. image:: /images/administration-modify-repository.jpg
    :align: center

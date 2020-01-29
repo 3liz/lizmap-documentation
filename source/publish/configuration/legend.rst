@@ -1,7 +1,7 @@
 Legend
 ======
 
-: _hide-layers:
+.. _hide-layers:
 
 Masking individual layers
 -------------------------

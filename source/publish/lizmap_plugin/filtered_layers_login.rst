@@ -1,3 +1,5 @@
+.. _filtered-layer-by-user:
+
 Filtered layer by user
 ======================
 
@@ -13,7 +15,7 @@ Filtering currently uses the ID of the user group connected to the Web applicati
 * the vector layers images displayed on the map
 * the popups
 * the *Locate by layer* feature lists. See :ref:`locate-by-layer`
-* drop-down lists of *Editing forms* from *Value relation*. See :ref:`lizmap-config-edition`
+* drop-down lists of *Editing forms* from *Value relation*. See :ref:`edition`
 * upcoming features (the attribute table display, search features, etc.)
 
 A video tutorial is available at: https://vimeo.com/83966790
