@@ -78,6 +78,15 @@ Finally Lizmap is a proxy to the web services used to construct maps. It is ther
    :align: center
    :scale: 80%
 
+Additional Lizmap modules
+-------------------------
+
+Some modules can be added to Lizmap:
+
+* French cadastre : https://github.com/3liz/lizmap-cadastre-module
+* Map builder : https://github.com/3liz/lizmap-mapbuilder-module
+* Naturaliz : https://github.com/3liz/lizmap-naturaliz-module
+
 Configuration with QGIS
 -----------------------
 
@@ -150,4 +159,3 @@ In a nutshell
 * Zoom with localisation
 * Address search: Nominatim (OpenStreetMap engine), Google
 * Access logs
-
