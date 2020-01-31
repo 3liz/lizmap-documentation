@@ -27,10 +27,10 @@ Start with the creation of a folder near to **C:\\** (e.g. **C:\\webserver**). A
 .. note:: You can use others installations of Apache but you need to be careful and install the correct the Microsoft Visual C++ Redistributables (e.g. VC15, VC16) and their modules for a correct Apache installation.
 
 Extract the Apache24 zip file into **C:\\webserver\\** and change the name from **httpd-2.4.41-win64-VS16** to **Apache24**. After that unzip all modules and copy all *.so* files into the folder **C:\\webserver\\Apache24\\modules**.
-Then you open the Apache configuration in **C:\\webserver\\Apache24\\conf\\httpd.conf** and edit with the text editor and replace the global variable *ServerRoot* to **C:\\webserver\\Apache24**. This action will allow Apache to recognize the path of Apache installation. 
+Then you open the Apache configuration in **C:\\webserver\\Apache24\\conf\\httpd.conf** and edit with the text editor and replace the global variable *ServerRoot* to **C:\\webserver\\Apache24**. This action will allow Apache to recognize the path of Apache installation.
 
 .. code-block:: apache
-  
+
   Define SRVROOT "c:/webserver/Apache24" #Variable to define the root folder
   ServerRoot "${SRVROOT}"
 
@@ -43,10 +43,10 @@ The purpose of using the variable *SRVROOT* is the automatic replace of ${SRVROO
     Listen 80 #Activated Default Apache port
     #Listen 1664 Example port if default Apache port is taken
 
-    #You can activate or deactivate the ports using the # symbol 
+    #You can activate or deactivate the ports using the # symbol
 
-After choosing the port, is time to activate the Apache modules in the configuration file. For this action, you need 
-to change the Apache configuration in **C:\\webserver\\Apache24\\conf\\httpd.conf** and enable the modules that you need. Search for 
+After choosing the port, is time to activate the Apache modules in the configuration file. For this action, you need
+to change the Apache configuration in **C:\\webserver\\Apache24\\conf\\httpd.conf** and enable the modules that you need. Search for
 **LoadModule** command lines and then uncheck ( remove :kbd:`#`) of the following modules:
 
 .. code-block:: apache
@@ -56,7 +56,7 @@ to change the Apache configuration in **C:\\webserver\\Apache24\\conf\\httpd.con
   LoadModule ssl_module modules/mod_ssl.so
   LoadModule rewrite_module modules/mod_rewrite.so
   LoadModule headers_module modules/mod_headers.so
-  LoadModule deflate_module modules/mod_deflate.so 
+  LoadModule deflate_module modules/mod_deflate.so
   LoadModule expires_module expires_module modules/mod_expires.so
   LoadModule ext_filter_module modules/mod_ext_filter.so
   LoadModule ident_module modules/mod_ident.so
@@ -83,7 +83,7 @@ Pressing *Enter* after the instruction in the command line will result in a dial
 
 Using a browser, write http://localhost and press enter, if everything went right in installation this will open the page with the text **"It Works"**.
 
-.. warning:: If don't popup the firewall windows this means that you probably have an anti-virus software managing your firewall. In this case, you need to check the configurations and allow manually the 
+.. warning:: If don't popup the firewall windows this means that you probably have an anti-virus software managing your firewall. In this case, you need to check the configurations and allow manually the
    apache service. Another important tip is that if Windows Firewall doesn't show the previous dialog you need to add manually the port 80 as an inbound/outbound port in Advanced Windows Firewall properties ( :kbd:`Control Planel > Administrative Tools > Windows Firewall with Advanced Security` ).
 
 Open the :kbd:`cmd` where you run the previous command to start Apache and press :kbd:`Ctrl+C` to stop Apache. To add the Apache in Windows System Path and have access directly in the :kbd:`cmd` it's necessary hold the :kbd:`Windows` and search for Edit System environments. After clicking in the result will appear a dialog with :kbd:`Environment Variables`. The next step is to append (not replace!) **;C:\\webserver\\Apache24\\bin** to the *Path* variable (double-click in "Path" line). After this step, close :kbd:`cmd` , reopen :kbd:`cmd` and check Apache is correctly declare in the *System path*. For this test, open :kbd:`cmd` type :kbd:`httpd` then hit enter this will run Apache, if Yes stop using the combination keys :kbd:`Ctrl+C`.
@@ -114,10 +114,10 @@ Now is time to prepare the configurations that will serve the php version. Start
     AddHandler fcgid-script .php
     FcgidWrapper "C:/webserver/php73/php-cgi.exe" .php
    </FilesMatch>
-   
+
 
    FcgidInitialEnv PHPRC "C:\\webserver\\php73"
-  
+
    FcgidInitialEnv PATH "C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\qgis-ltr\bin;C:\OSGeo4W64\apps\Qt5\bin;C:\OSGeo4W64\apps\grass\grass-6.4.3\lib;C:\OSGeo4W64\apps\grass\grass-6.4.3\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\WBem"
    FcgidInitialEnv QT_PLUGIN_PATH "C:\OSGeo4W64\apps\qgis-ltr\qtplugins;C:\OSGeo4W64\apps\Qt5\plugins"
    FcgidInitialEnv PYTHONHOME "C:\OSGeo4W64\apps\Python37"
@@ -125,8 +125,8 @@ Now is time to prepare the configurations that will serve the php version. Start
 
    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
    FcgidInitialEnv QGIS_SERVER_LOG_FILE "C:\webserver\Apache24\logs\qgis_server.log"
-   
-   FcgidIOTimeout 120 
+
+   FcgidIOTimeout 120
    FcgidInitialEnv LC_ALL "en_US.UTF-8"
    FcgidInitialEnv PYTHONIOENCODING UTF-8
    FcgidInitialEnv LANG "en_US.UTF-8"
@@ -134,10 +134,10 @@ Now is time to prepare the configurations that will serve the php version. Start
    FcgidInitialEnv QGIS_SERVER_LOG_FILE "C:\webserver\Apache24\logs\qgis_server.log"
    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
    FcgidInitialEnv QGIS_PLUGINPATH "C:\OSGeo4W64\apps\qgis-ltr\python\plugins"
-  
+
    SetEnvIf Request_URI ^/qgis QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis-ltr"
    SetEnvIf Request_URI ^/qgis TEMP "C:\Windows\Temp"
-  
+
    SetEnvIf Request_URI ^/qgis GDAL_DATA "C:\OSGeo4W64\share\gdal"
    SetEnvIf Request_URI ^/qgis GDAL_DRIVER_PATH "C:\OSGeo4W64\bin"
    SetEnvIf Request_URI ^/qgis PDAL_DRIVER_PATH "C:\OSGeo4W64\bin"
@@ -160,7 +160,7 @@ Include the vhosts to create the new virtual hosts configurations in the file **
   <VirtualHost *:80>
     Include conf/extra/php73.conf #include the diretory conf file for php73 configuration
     ServerName localhost # name of the server, in this case is localhost
-    
+
     DocumentRoot "C:/webserver/lizmap/" #Path to the root document Directory
     <Directory "C:/webserver/lizmap">
         Options -Indexes +FollowSymLinks +ExecCGI
@@ -170,19 +170,19 @@ Include the vhosts to create the new virtual hosts configurations in the file **
 
     CustomLog "logs/lizmap-access.log" common
     ErrorLog "logs/lizmap-error.log"
-	
+
     <IfModule mod_fcgid.c>
 		  RewriteEngine on
 		  RewriteCond %{HTTP:Authorization} .
 		  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
     </IfModule>
-	
+
     #Parameters for maximum requests and timeout connections of fgci module
 	  <IfModule fcgid_module>
 		  FcgidMaxRequestLen 51200000
 		  FcgidConnectTimeout 60
     </IfModule>
-    
+
   </VirtualHost>
 
 After this step save the file.
@@ -194,7 +194,7 @@ php 7.3.10 Configuration
 
 .. warning:: Lizmap web client is based on Jelix PHP framework. You must install at least the **7** version of PHP for full features. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 7.x installation)
 
-For this instalation we use the PHP 7.3.10, if you install the previouly the Microsoft Visual C++ Redistributable for Apache version of this documentation, you don't need to install again.
+For this installation we use the PHP 7.3.10, if you install the previouly the Microsoft Visual C++ Redistributable for Apache version of this documentation, you don't need to install again.
 Go to `PHP binaries <https://windows.php.net/download/>`_ and download the link with the name **Zip**, **make sure** it is the non-thread-safe file.
 
 After download create a folder in **C:\\webserver\\** with name php73 and unzip the files into it. Go to the file **C:\\webserver\\php73\\php.ini-production** and change into **C:\\webserver\\php73\\php.ini**.
@@ -209,8 +209,8 @@ Now is time to activate the php modules, for this task you need to uncomment the
     extension=php_mbstring.dll
     ; driver for PostgreSQL
     extension=php_pdo_pgsql.dll
-    ; driver for SQLite 
-    extension=php_pdo_sqlite.dll 
+    ; driver for SQLite
+    extension=php_pdo_sqlite.dll
     ; driver for PostgreSQL
     extension=php_pgsql.dll
     ; driver for SQLite3
@@ -264,7 +264,7 @@ After the installation we need to configure QGIS Server to be accessible as fcgi
   <VirtualHost *:80>
     Include conf/extra/php73.conf
     ServerName localhost # name of the server, in this case is localhost
-    
+
     DocumentRoot "C:/webserver/lizmap/" #Path to the root document Directory
     <Directory "C:/webserver/lizmap">
         Options -Indexes +FollowSymLinks +ExecCGI
@@ -283,12 +283,12 @@ After the installation we need to configure QGIS Server to be accessible as fcgi
 
     CustomLog "logs/lizmap-access.log" common
     ErrorLog "logs/lizmap-error.log"
-    
+
     <IfModule mod_fcgid.c>
 		  RewriteEngine on
 		  RewriteCond %{HTTP:Authorization} .
 		  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-    </IfModule> 
+    </IfModule>
 
     #Parameters for maximum requests and timeout connections of fgci module
 	  <IfModule fcgid_module>
@@ -343,7 +343,7 @@ After create the cache folders, modify the virtual host to point to the **www fo
     </Directory>
 
     # LizMap Pre-production (master)
-    # Version master 
+    # Version master
     Alias /preprod/ "C:/webserver/lizmap/preprod/master/lizmap/www/"
     <Directory "C:/webserver/lizmap/preprod/master/lizmap/www">
         Options -Indexes +FollowSymLinks +ExecCGI
@@ -358,7 +358,7 @@ After create the cache folders, modify the virtual host to point to the **www fo
         AllowOverride All
         Require all granted
     </Directory>
-    
+
     CustomLog "logs/lizmap-access.log" common
     ErrorLog "logs/lizmap-error.log"
 
@@ -368,7 +368,7 @@ After create the cache folders, modify the virtual host to point to the **www fo
         RewriteCond %{HTTP:Authorization} .
         RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
     </IfModule>
-    
+
     <IfModule fcgid_module>
         FcgidMaxRequestLen 51200000
         FcgidConnectTimeout 60
@@ -387,7 +387,7 @@ After the replacement save the file and restart Apache with the command line ins
 In case of lizmap version >= 3.0, you must use some scripts to install it properly (see https://github.com/3liz/lizmap-web-client/blob/master/INSTALL.md ). Open the command line (:kbd:`cmd.exe`) and write the next instructions:
 
 .. code-block:: bat
-   
+
    REM Production folder
    cd C:\webserver\lizmap\prod\release_3_3\
    cd lizmap\var\config
@@ -397,7 +397,7 @@ In case of lizmap version >= 3.0, you must use some scripts to install it proper
    cd ..\..\..
 
 .. code-block:: bat
-   
+
   REM PreProd (Master) folder
   cd C:\webserver\lizmap\preprod\master\
   cd lizmap\var\config
@@ -480,14 +480,14 @@ Remove :kbd:`;` and fill with PostgreSQL credentials:
 After all your previous changes you are ready to launch the installer of lizmap for both environments in the command line (:kbd:`cmd`):
 
 .. code-block:: bat
-   
-   REM Production Lizmap 
+
+   REM Production Lizmap
    cd C:\webserver\lizmap\prod\release_3_3\
    php lizmap\install\installer.php
 
 .. code-block:: bat
-   
-   REM PreProduction Lizmap 
+
+   REM PreProduction Lizmap
    cd C:\webserver\lizmap\prod\master\
    php lizmap\install\installer.php
 
@@ -497,13 +497,13 @@ Configuring the LizMap Admin Panel
 
 **[PROD] Production Environment** ( `webgis <http://localhost//webgis//index.php>`_ )
 
-After the correct installation owith the installer, go to http://localhost/webgis/index.php and you should see the Lizmap application home page with the demo project Montpellier - Transport. 
+After the correct installation owith the installer, go to http://localhost/webgis/index.php and you should see the Lizmap application home page with the demo project Montpellier - Transport.
 Now it's time to configure the LizMap Admin Panel, go to http://localhost/webgis/admin.php and do the login with:
 
 * **user=admin**;
 * **password=admin**;
 
-Then for security proposes change the admin password, for example: **lizmap_12345**. If it makes sense, you can delete the users lizadmin and logintranet. 
+Then for security proposes change the admin password, for example: **lizmap_12345**. If it makes sense, you can delete the users lizadmin and logintranet.
 You can do the same for groups, in this case delete group Intranet Demo Group and Lizadmin group.
 
 Go to Lizmap configuration menu > Delete the "intranet" repository (at the bottom). Then you need to change the **URL WMS Server**, go to Lizmap configuration menu / Edit the Services form and change the WMS Server URL from: http://127.0.0.1/cgi-bin/qgis_mapserv.fcgi to http://localhost/qgis/qgis_mapserv.fcgi.exe
@@ -513,7 +513,7 @@ Now check the Montpellier demo project is working: http://localhost/webgis/index
 
 **[PREPROD] Pré-production Environment** ( `preprod <http://localhost//preprod//index.php>`_ )
 
-After the correct installation with the installer, go to http://localhost/preprod/index.php and you should see the Lizmap application home page with the demo project Montpellier - Transport. 
+After the correct installation with the installer, go to http://localhost/preprod/index.php and you should see the Lizmap application home page with the demo project Montpellier - Transport.
 Now it's time to configure the LizMap Admin Panel, go to http://localhost/preprod/admin.php and do the login with:
 
 * **user=admin**;
@@ -533,11 +533,11 @@ You need to create a Lizmap directory architecture for organization porposes. Cr
 
 .. code-block:: winbatch
 
-   REM common folder for both environments 
+   REM common folder for both environments
    mkdir C:\webserver\data\common\
    REM common folder to publish SVG and images files in QGIS Server
    mkdir C:\webserver\data\document\
-   
+
    REM directory of prod data
    mkdir C:\webserver\data\prod\
    REM common folder between rep in production environment
@@ -559,7 +559,7 @@ You need to create a Lizmap directory architecture for organization porposes. Cr
    mkdir C:\webserver\data\preprod\rep2\
    mkdir C:\webserver\data\preprod\rep2\media\
    mkdir C:\webserver\data\preprod\rep2\media\js\
-  
+
 
 Now we need to get access to the folder **C:\\webserver\\data\\prod** and its subfolders so that the GIS admin can send the QGIS project files, the Lizmap configuration file for each project, the GIS data into these folders and other documents. Go to Lizmap administration panel in http://localhost/admin.php and create the new repository. Follow this steps:
 
@@ -573,7 +573,7 @@ Now we need to get access to the folder **C:\\webserver\\data\\prod** and its su
 In Apache you need to Add a vhost to publish SVG and images files via HTTP this will avoid the bug in QGIS Server under Windows which cannot display SVG icon when you have a relative path. Previous your create a folder **C:\\webserver\\data\\document\\** and now is necessary to modify the file **C:\\webserver\\Apache24\\conf\\extra\\httpd-vhosts.conf**, adding the following directory:
 
 .. code-block:: apache
-    
+
     #Add this configuration before of the two environments directories.
     Alias /document/ "C:/webserver/data/document/"
     <Directory "C:/webserver/Data/document">

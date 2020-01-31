@@ -286,7 +286,8 @@ Retrieve and install Lizmap Web Client
 With ZIP file
 --------------
 
-Retrieve the latest available stable version from https://packages.3liz.org/pub/lizmap/release/
+Retrieve the latest available stable version from our `Github release page <https://github.com/3liz/lizmap-web-client/releases/>`_.
+
 
 .. code-block:: bash
 
@@ -294,7 +295,7 @@ Retrieve the latest available stable version from https://packages.3liz.org/pub/
    # Options
    VERSION=3.4.0
    # Archive recovery with wget
-   wget https://packages.3liz.org/pub/lizmap/release/3.4/lizmap-web-client-$VERSION.zip
+   wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
    # Unzip archive
    unzip $VERSION.zip
    # virtual link for http://localhost/lizmap/
@@ -354,9 +355,13 @@ Development version with Git
 
 .. warning:: The development version is always changing, and bugs can occur. Do not use it in production.
 
-* Source code in the Git repository is missing external PHP packages.
-You need to install first `PHP Composer` first following its documentation https://getcomposer.org/download/
-and then run these following commands.
+* First installation
+
+The source code in the Git repository is missing external PHP and Javascript packages.
+In order to install and build some files, you need to install `PHP Composer <https://getcomposer.org/download/>`_,
+`NodeJs and Npm <https://nodejs.org/en/download/>`_, as well as some other
+tools like `Make`. Read the CONTRIBUTING.md file, provided with the source code,
+to have details about how to install these tools
 
 .. code-block:: bash
 
@@ -367,10 +372,11 @@ and then run these following commands.
    git clone https://github.com/3liz/lizmap-web-client.git lizmap-web-client-$VERSION
    # Go into the git repository
    cd lizmap-web-client-$VERSION
-   # Launch PHP Composer to install external dependencies
-   make build
    # Create a personal branch for your changes
    git checkout -b mybranch
+   # Launch PHP Composer, Npm etc, to install external dependencies
+   make build
+
 
 * To update your branch from the master repository
 
@@ -394,6 +400,10 @@ and then run these following commands.
    # Apply rights
    chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
    chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+
+You should then update dependencies (like external PHP and javascript packages).
+See the CONTRIBUTING.md file provided with the source code.
+
 
 .. note:: It is always good to make a backup before updating.
 
