@@ -51,6 +51,12 @@ Selection boxes allow you to hide and display the proposed layers.
    :align: center
    :scale: 80%
 
+Themes allow you to change layers visibility following a context.
+
+.. image:: /images/user-guide-theme-switcher.jpg
+   :align: center
+   :scale: 80%
+
 To take full advantage of the map, you can hide the panel management layers.
 
 .. image:: /images/user-guide-06-hide-layer-switcher.jpg
