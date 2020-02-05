@@ -11,7 +11,7 @@ As an administrator, you can:
 * create, modify, delete users
 * linking a user to one or more groups
 
-.. note:: Rights on Lizmap Web CLient repositories are managed at group level, not at the user level.
+.. note:: Rights on Lizmap Web Client repositories are managed at group level, not at the user level.
 
 Manage Groups: create, rename, delete
 =====================================
@@ -34,15 +34,26 @@ Manage Users
 
   - give a *Nickname* which will be used for the login
   - give an email
-  - define and validate the password
   - set name and firstname
-  
-* it is also possible to *view* and *edit* informations about users
+
+* The user will have an email for setting up his password. If you want to set the password yourself, read the section below.
+* It is also possible to *view* and *edit* informations about users.
 
 .. warning:: Once users created, you must put them into groups to assign the associated rights.
 
 .. image:: /images/administration-user-list.jpg
    :align: center
+
+Setting password for users
+==========================
+
+By default, in Lizmap, when a new user is created, the user will get an email for setting up his own password.
+If for some reasons, the administrator needs to setup the password, the :file:`localconfig.ini.php` needs to be edited:
+
+.. code-block:: bash
+
+   [jcommunity]
+   resetAdminPasswordEnabled = off
 
 Putting users in groups
 =======================
