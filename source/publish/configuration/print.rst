@@ -6,13 +6,13 @@ Area defined by the user on the fly in Lizmap
 
 To add print capabilities in the online map, you have to enable the printing tool in the plugin *Map* tab (:ref:`lizmap-config-map`) and the QGIS project has at least one print composition without having atlas enabled.
 
-The print composition must contain **at least one map**.
+The print composition must contain **at least one map** without atlas enabled.
 
 You can add :
 
 * An image to North arrow
 * An image for the logo of your organization
-* A legend that will be fixed for all printing (before version 2.6)
+* A legend that will be fixed for all printing
 * A scale, preferably digital for display
 * A location map, a map for which you have enabled and configured the function of *Overview*
 * Labels
@@ -24,7 +24,7 @@ If your label is pre-populated in QGIS, the field will be pre-populated too in t
 
 The preview in Lizmap will be similar to this screenshot. The red rectangle is the area that the user can define in the webbrowser and the user can also set the map description and the map title.
 
-.. image:: /images/print_on_the_fly_params.jpg
+.. image:: /images/print_user_params.jpg
    :align: center
    :width: 800
 
@@ -32,7 +32,7 @@ Finally the print function will be based on the map scales that you set in the p
 
 .. note:: It is possible to exclude printing compositions for the web. For example, if the QGIS project contains 4 compositions, the project administrator can exclude 2 compositions in the *QGIS project properties*, *QGIS server* tab. So only the published compositions will be presented in Lizmap.
 
-.. image:: /images/disable_print_layouts.jpg
+.. image:: /images/exclude_layout.jpg
    :align: center
    :width: 600
 
