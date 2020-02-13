@@ -16,7 +16,7 @@ Requirements
 * Web Server (`Apache 24 64-bits <https://www.apachelounge.com/download>`_ )
 * PHP 7.3.10 (`Non Thread Safe <https://windows.php.net/download/>`_ )
 * QGIS Server 3 64-bits (`OSGeo4W Network Installer (64 bit) <https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_)
-* Lizmap Web Client 3.x (`Github Lizmap releases <https://www.github.com/3liz/lizmap-web-client>`_ )
+* Lizmap Web Client 3.x (`Github Lizmap releases <https://github.com/3liz/lizmap-web-client>`_ )
 * FTP software (e.g. `Filezilla <https://filezilla-project.org/>`_ , `WinSCP <https://winscp.net/eng/download.php>`_ ) 64-bits (*optional*)
 
 Apache 2.4.41 Server Configuration
@@ -244,7 +244,7 @@ Restart Apache in command line with :kbd:`httpd -k restart` and see if everythin
 QGIS Server Installation
 ------------------------
 
-Go to http://www.qgis.org and get the file `Osgeo4W Network installer (64 bit) <https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ and run the installer. Choose the following options:
+Go to https://www.qgis.org/en/site and get the file `Osgeo4W Network installer (64 bit) <https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ and run the installer. Choose the following options:
 
 1. Advanced Installer;
 2. Install from internet;
@@ -320,7 +320,7 @@ Preparing the home of LizMap Web Client
 
 Is usefull to have 2 environments, one for production and other for preproduction (or master to test new features), for this action you will need to create the folders **C:\\webserver\\lizmap\\prod\\** and  **C:\\webserver\\lizmap\\preprod\\** and change the Apache VirtualHost configuration file.
 
-First, go to 3Liz `Github repository tags <https://github.com/3liz/lizmap-web-client/tags>`_ and get the last version in ZIP format. For example, you can use `Lizmap-web-client 3.3 <https://codeload.github.com/3liz/lizmap-web-client/zip/release_3_3.zip>`_ for prod folder and the `master version <https://github.com/3liz/lizmap-web-client/archive/master.zip>`_ for predprod folder.
+First, go to 3Liz `Github repository tags <https://github.com/3liz/lizmap-web-client/tags>`_ and get the last version in ZIP format. For example, you can use `Lizmap-web-client 3.4 <https://github.com/3liz/lizmap-web-client/releases/download/3.3.4/lizmap-web-client-3.3.4.zip>`_ for prod folder and the `master version <https://github.com/3liz/lizmap-web-client/archive/master.zip>`_ for predprod folder.
 
 Each environment will have a version in parallel. For example: release_3_3 and master. For that you need to unzip in **C:\\webserver\\lizmap\\prod** the release_3_3 version and **C:\\webserver\\lizmap\\preprod** the master version.
 Then you can create a directory where you will put the tile cache for production environment **C:\\webserver\\cache\\prod** and for master environment **C:\\webserver\\cache\\preprod**.

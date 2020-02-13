@@ -185,9 +185,9 @@ The available base layers
 The licenses are available at the following URLs:
 
 * *OpenStreetMap*: https://wiki.openstreetmap.org/wiki/Tile_usage_policy
-* *Google*: https://developers.google.com/maps/terms
-* *Bing*: https://www.microsoft.com/maps/product/terms.html
-* *IGN*: https://api.ign.fr/services#web
+* *Google*: https://cloud.google.com/maps-platform/terms/
+* *Bing*: https://www.microsoft.com/en-us/maps/product
+* *IGN*: https://depot.ign.fr/geoportail/api/develop/tech-docs-js/fr/license.html
 
 .. note:: If you choose an external base layer, the map will be displayed in Google Mercator (EPSG: 3857 or EPSG: 900913), the scales are those of external services and QGIS-Server will perform on the fly reprojection.
 

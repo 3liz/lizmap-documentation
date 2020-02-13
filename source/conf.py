@@ -276,3 +276,10 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 locale_dirs = ['../i18n/']
 gettext_compact = True
+
+linkcheck_ignore = [
+    r'http://localhost:\d+/',
+    r'http://localhost/',
+    r'http://mydomain.lizmap.3liz.com/',
+    r'http://127.0.0.1/',
+]

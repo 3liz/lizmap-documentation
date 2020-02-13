@@ -42,7 +42,7 @@ Here are the detailed steps:
   - think about adding a **spatial index**: this is important for performance
   - *create as many fields as you need for attributes*: if possible, use simple field names!
 
-Please refer to the QGIS documentation to see how to create a spatial layer in a PostGIS or Spatialite database: https://docs.qgis.org/html/en/docs/user_manual/index.html
+Please refer to the QGIS documentation to see how to create a spatial layer in a PostGIS or Spatialite database: https://docs.qgis.org/3.4/en/docs/user_manual/managing_data_source/index.html
 
 * **Set the editing tools** for your layer fields
 

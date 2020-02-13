@@ -245,9 +245,9 @@ Creating a user account
 Map server: QGIS Server
 ====================================
 
-.. note:: Details for the installation may differ for specific versions of the operating system. Please refer to http://qgis.org/en/site/forusers/download.html for up to date documentation.
+.. note:: Details for the installation may differ for specific versions of the operating system. Please refer to https://qgis.org/en/site/forusers/download.html for up to date documentation.
 
-First declare the QGIS repository into a  /etc/apt/sources.list.d/debian-qgis.list file. Its content should be:
+First declare the QGIS repository into a  :file:`/etc/apt/sources.list.d/debian-qgis.list` file. Its content should be:
 
 .. code-block:: text
 
