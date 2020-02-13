@@ -8,7 +8,6 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
   :maxdepth: 2
 
   legend
-  theme_switcher
   popup
   action_popup
   media
