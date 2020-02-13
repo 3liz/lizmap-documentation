@@ -8,19 +8,19 @@ In the map options, you can activate and configure the address search bar, based
 Additionally, you can add spatial searching capability to Lizmap. This means you will allow the users to search within spatial data, such as countries, points of interests, etc. You have two ways to add searching capability in Lizmap:
 
 * For |qgis_2| and |qgis_3|, since |lizmap_3_2|, you can create a table or view ``lizmap_search`` in your PostgreSQL database to store the search data for all your Lizmap projects.
-* For |qgis_2| only and since |lizmap_3_1|, you can use the plugin **QuickFinder** to configure a data search per QGIS project.
+* For |qgis_2| only and since |lizmap_3_1|, you can use the plugin ``QuickFinder`` to configure a data search per QGIS project.
 
 PostgreSQL search
 -----------------
 
-When you have many projects and data, the best solution to provide searching capabilities is to set up a dedicated relation (table or view) inside your database. Since version 3.2, Lizmap allows to use a PostgreSQL database to store the search data.
+When you have many projects and data, the best solution to provide searching capabilities is to set up a dedicated relation (table or view) inside your database. Since |lizmap_3_2|, it's possible to use a PostgreSQL database to store the search data.
 
 Prerequisites
 _____________
 
 * A PostgreSQL database, accessible from Lizmap Web Client.
-* PostgreSQL extensions activated in this database : **unaccent** and **pg_trgm** (for effective LIKE queries)
-* A custom function **f_unaccent** which can be used in an index. See this `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_ for explanation
+* PostgreSQL extensions activated in this database : ``unaccent`` and ``pg_trgm`` (for effective LIKE queries)
+* A custom function ``f_unaccent`` which can be used in an index. See this `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_ for explanation
 
 .. code-block:: postgresql
 
@@ -38,16 +38,16 @@ _____________
    $func$ LANGUAGE sql IMMUTABLE;
 
 
-.. note:: We choose to use the pg_trgm extension and this custom f_unaccent function instead of the Full Text Search (FTS) tool of PostgreSQL, to keep the tool as simple as possible and avoid the need to create FTS "vectors" in your search data.
+.. note:: We choose to use the ``pg_trgm`` extension and this custom ``f_unaccent`` function instead of the Full Text Search (FTS) tool of PostgreSQL, to keep the tool as simple as possible and avoid the need to create FTS "vectors" in your search data.
 
 Create the lizmap_search table or view
 ______________________________________
 
-The database admin must create a table, view or materialized view called **lizmap_search**.
-This relation must be accessible in the *search_path* (you can put it in the public schema,
-or configure the search_path variable for the database or the user which connects to the database).
+The database admin must create a table, view or materialized view called ``lizmap_search``.
+This relation must be accessible in the ``search_path`` (you can put it in the public schema,
+or configure the ``search_path`` variable for the database or the user which connects to the database).
 
-The relation "lizmap_search" must contain the following columns:
+The relation ``lizmap_search`` must contain the following columns:
 
 * ``item_layer`` (text). Name of the layer. For example "Countries"
 * ``item_label`` (text). Label to display the results, which is the data to search among. Ex: "France" or "John Doe - Australia". You can build it from a concatenation of several fields values.
@@ -95,7 +95,7 @@ ____________
    -- You can refresh the materialized view at any time (for example in a cron job) with:
    REFRESH MATERIALIZED VIEW lizmap_search;
 
-* At present, Lizmap PostgreSQL search cannot use 3D geometries, or geometries with Z or M values. You have to use the `ST_Force2D(geom)` function to convert geometries into 2D geometries.
+* At present, Lizmap PostgreSQL search cannot use 3D geometries, or geometries with Z or M values. You have to use the ``ST_Force2D(geom)`` function to convert geometries into 2D geometries.
 
 Configure access
 ________________
@@ -117,9 +117,9 @@ The new profile is a new jdb prefixed section, called **jdb:search**. For exampl
    password=DATABASE_PASSWORD
    ; search_path=DATABASE_SCHEMA_WITH_LIZMAP_SEARCH,public
 
-You don't need to configure the **locate by layer** tool.
+You don't need to configure the :guilabel:`locate by layer` tool.
 The link with Lizmap Web Client is done automatically if you can run the query below successfully in PgAdmin using the same credentials as the Lizmap application.
-You **mustn't** specify the schema where the lizmap_search table is located.
+You **mustn't** specify the schema where the lizmap_search table is located. It **must** work without specifying the schema.
 
 .. code-block:: sql
 
