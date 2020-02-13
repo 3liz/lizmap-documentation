@@ -1,8 +1,11 @@
-Documentation for core contributors
-===================================
+# Documentation for core contributors
 
-Installing Transifex cli and Sphinx
-------------------------------------
+## RST substitutions
+
+* Use RST substitutions : http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#default-substitutions
+* Use Lizmap substitutions : check the file `substitutions.rst`
+
+## Installing Transifex cli and Sphinx
 
 We are using Transifex, and so you will need their cli tool to push or pull
 translations.
@@ -30,8 +33,7 @@ password =
 In the password parameter, you should set an API Key [you have to generate from your
 Transifex account](https://www.transifex.com/user/settings/api/).
 
-Updating the list of strings to translate
------------------------------------------
+## Updating the list of strings to translate
 
 You must first generate the `.pot` files, from the `.rst` files:
 
@@ -50,8 +52,7 @@ tx push -s --branch lizmap_3_3
 Note: our continuous integration system Gitlab-CI generates and pushes pot files to
 Transifex at each commit.
 
-Updating translated strings
----------------------------
+## Updating translated strings
 
 It is not recommended to modify by hand files into `i18n/`! We prefer to 
 translate strings into Transifex.
@@ -69,15 +70,13 @@ You can then commit them.
 Note: our continuous integration system regularly retrieves translated strings
 to publish the web site. It doesn't rely on `.po` files stored into the repository.
 
-Adding a new language
-----------------------
+## Adding a new language
 
 The language should be created into Transifex. When there are enough translated
 strings, you can download translated files with `tx pull`. See above.
 Update the list of available language into the Makefile file (in the TRANSLATIONS variable).
 
-Releasing a new version 
-------------------------
+## Releasing a new version
 
 When a new major version of lizmap has been released, be sure the documentation
 is updated into the master branch.
@@ -93,9 +92,3 @@ When the documentation is ready,
 - in the server configuration, change the target of the symbolic link 'current'
 - copy the source/lizmap_versions.json into all other branches, it should be the
   same for all.
-
-
-
-
-
-
