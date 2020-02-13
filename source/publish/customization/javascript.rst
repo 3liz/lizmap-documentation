@@ -7,23 +7,23 @@ Principle
 Adding some JavaScript is useful for a variety of advanced usage. For instance, you can avoid people being able to download
 elements of the page by right clicking on them, and of course much more.
 
-* In your repository (e.g. ``/home/data/repo1/myproject.qgs``), you should have these directories::
+* In your repository (e.g. :file:`/home/data/repo1/myproject.qgs`), you should have these directories::
 
     media
     |-- js
       |-- myproject
       |-- default
 
-* All the JavaScript code you copy in the ``/home/data/rep1/media/js/myproject/`` directory will be executed by Lizmap for this **specific** project only.
+* All the JavaScript code you copy in the :file:`/home/data/rep1/media/js/myproject/` directory will be executed by Lizmap for this **specific** project only.
 * All the JavaScript code in ``default`` will be executed for **all** projects.
-* To allow the execution of JavaScript code, in the Lizmap admin interface, you **must** add the privilege "Allow themes for this repository".
+* To allow the execution of JavaScript code, in the Lizmap admin interface, you **must** add the privilege :guilabel:`Allow themes for this repository`.
 
 
 Library of scripts
 ------------------
 
-In the directory ``lizmap-web-client/lizmap/install/qgis/media/js/`` (or in GitHub https://github.com/3liz/lizmap-web-client/tree/master/lizmap/install/qgis/media/js/montpellier), you can find examples of suitable JavaScript code.
-Remove the extension ``.example`` and copy them to your ``media/js/default/`` folder to activate them. You can also find some examples in the repository https://github.com/3liz/lizmap-javascript-scripts
+In the directory :file:`lizmap-web-client/lizmap/install/qgis/media/js/` (or in GitHub https://github.com/3liz/lizmap-web-client/tree/master/lizmap/install/qgis/media/js/montpellier), you can find examples of suitable JavaScript code.
+Remove the extension ``.example`` and copy them to your :file:`media/js/default/` folder to activate them. You can also find some examples in the repository https://github.com/3liz/lizmap-javascript-scripts
 
 Available Javascript events
 ---------------------------
@@ -79,7 +79,7 @@ There are also some variables which are available.
 Examples
 --------
 
-Here is a very small example allowing you to disable right click in Lizmap. Just add a file named e.g. ``disableRightClick.js`` with the following code:
+Here is a very small example allowing you to disable right click in Lizmap. Just add a file named e.g. :file:`disableRightClick.js` with the following code:
 
 .. code-block:: javascript
 
@@ -89,7 +89,7 @@ Here is a very small example allowing you to disable right click in Lizmap. Just
       }
    });
 
-* If you want this code to be executed for all projects of your repository, you have to copy the file in the directory ``/home/data/rep1/media/js/default/`` rather than in ``/home/data/rep1/media/js/myproject/``.
+* If you want this code to be executed for all projects of your repository, you have to copy the file in the directory :file:`/home/data/rep1/media/js/default/` rather than in :file:`/home/data/rep1/media/js/myproject/`.
 
 Here is a very useful example allowing you to send current login User-ID (and/or other user data) to PostgreSQL table column, using edition tool:
 

@@ -1,3 +1,5 @@
+.. include:: ../../substitutions.rst
+
 Atlas - a sequence of entities
 ==============================
 
@@ -5,6 +7,9 @@ Principle
 ---------
 
 This feature let you chose and configure a layer to make a sequence of entities in your Lizmap project.
+
+|lizmap_3_4|
+Many layers can be configured in this tool. If the checkbox :guilabel:`Auto-play` is checked, the first layer in the list is used.
 
 ..  image:: /images/publish-04-atlas-plugin-interface.jpg
    :align: center
@@ -15,7 +20,6 @@ Configuring the tool
 
 Layer options :
 
-* the atlas is enabled or not in your project
 * you need to chose the layer you want your atlas on
 * select the primary key field, it must be an integer
 * check if you want to display the layer description in the dock of your atlas
@@ -29,6 +33,5 @@ Layer options :
 Atlas options:
 
 * check if you want to open the atlas tool when you open your project
-* you can chose the size of the atlas dock (20%-50%)
-* you can select the duration between each step when your atlas is in auto-play mode
+* you can select the duration between each step when your atlas is in auto-play mode for the first layer of the table
 * check if you want to launch the auto-play mode when you open your project

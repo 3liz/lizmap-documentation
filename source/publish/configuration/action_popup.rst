@@ -1,3 +1,5 @@
+.. include:: ../../substitutions.rst
+
 Action in a popup
 =================
 
@@ -6,8 +8,6 @@ Principle
 
 This module allows to add **action buttons in the popup** which will trigger PostgreSQL queries and return a **geometry** to display on the map.
 
-![](media/lizmap_pg_api_example.png "Example action")
-
 It reads a **JSON configuration file** which must be placed **aside the QGIS project**. This file lists the **PostgreSQL actions** to be added in the **popup** for one or many QGIS PostgreSQL vector layers.
 
 Configuring the tool
@@ -15,7 +15,7 @@ Configuring the tool
 
 Each action is caracterized by a **layer**, a **name**, a **title**, an **icon**, some optional **options**, **style** and **callbacks**.
 
-Example of this JSON configuration file, name **myproject.qgs.action** if the QGIS project file is named **myproject.qgs**:
+Example of this JSON configuration file, name :file:`myproject.qgs.action` if the QGIS project file is named :file:`myproject.qgs`:
 
 .. code-block:: json
 
@@ -48,12 +48,12 @@ Example of this JSON configuration file, name **myproject.qgs.action** if the QG
        ]
    }
 
-The JSON configuration file lists the QGIS layers for which you want to declare actions. Each layer is defined by its **QGIS ID**, for example here **points_a7e8943b_7138_4788_a775_f94cbd0ad8b6**, and for each ID, a list of objects describing the actions to allow. Each **action** is an object defined by:
+The JSON configuration file lists the QGIS layers for which you want to declare actions. Each layer is defined by its **QGIS ID**, for example here ``points_a7e8943b_7138_4788_a775_f94cbd0ad8b6``, and for each ID, a list of objects describing the actions to allow. Each **action** is an object defined by:
 
 * a **name** which is the action identifier.
 * a **title** which is used as a label in Lizmap interface
 * an **icon** which is displayed on the action button ( See https://getbootstrap.com/2.3.2/base-css.html#icons )
-* an **options** object, giving some additionnal parameters for this action.
+* an **options** object, giving some additional parameters for this action.
 * a **style** object allowing to configure the returned geometry style. It follows OpenLayers styling attributes.
 * a **callbacks** object allows to trigger some actions after the generated geometry is returned. They are defined by a **method** name, which can at present be:
 
@@ -69,14 +69,15 @@ Each button **triggers the corresponding action**:
 * creates the **PostgreSQL query** and execute it in the layer PostgreSQL database.
 * This query returns a **GeoJSON** which is then displayed on the map.
 
-The created query is build up by Lizmap web client and uses the PostgreSQL function **lizmap_get_data(json)** wich **must be created beforehand in the PostgreSQL database**. This function also uses a more generic function **query_to_geojson(text)** which transforms any PostgreSQL query into a **GeoJSON output**. Here is an example below of the query executed by Lizmap, for the example configuration given above, when the users clicks on the **action** button **liztest**, for the **feature** with id **1** of the **layer** **points** corresponding to the PostgreSQL **table** **test.points**:
+The created query is build up by Lizmap web client and uses the PostgreSQL function ``lizmap_get_data(json)`` which **must be created beforehand in the PostgreSQL database**. This function also uses a more generic function ``query_to_geojson(text)`` which transforms any PostgreSQL query into a **GeoJSON output**.
+Here is an example below of the query executed by Lizmap, for the example configuration given above, when the users clicks on the button action :guilabel:`liztest`, for the **feature** with id ``1`` of the **layer** ``points`` corresponding to the PostgreSQL **table** ``test.points``:
 
 .. code-block:: postgresql
 
    SELECT public.lizmap_get_data('{"layer_name":"points","layer_schema":"test","layer_table":"points","feature_id":1,"action_name":"liztest","buffer_size":5000}') AS data
 
 
-You can see that Lizmap creates a JSON parameters with all needed information and run the PostgreSQL function **lizmap_get_data**. The following SQL code allows you to create the needed functions:
+You can see that Lizmap creates a JSON parameters with all needed information and run the PostgreSQL function ``lizmap_get_data``. The following SQL code allows you to create the needed functions:
 
 .. code-block:: postgresql
 
@@ -178,6 +179,6 @@ You can see that Lizmap creates a JSON parameters with all needed information an
    COMMENT ON FUNCTION lizmap_get_data(json) IS 'Generate a valide GEOJSON from an action described by a name, PostgreSQL schema and table name of the source data, a QGIS layer name, a feature id and additionnal options.';
 
 
-The function **lizmap_get_data(json)** is provided here as an example. Since it is the **key entry point**, you need to adapt it to fit your needs.
+The function ``lizmap_get_data(json)`` is provided here as an example. Since it is the **key entry point**, you need to adapt it to fit your needs.
 
-You can use all the given parameters (action name, source data schema and table name, feature id, QGIS layer name) to create the appropriate query for your action(s), by using PostgreSQL **IF THEN ELSIF ELSE** clauses.
+You can use all the given parameters (action name, source data schema and table name, feature id, QGIS layer name) to create the appropriate query for your action(s), by using PostgreSQL ``IF THEN ELSIF ELSE`` clauses.

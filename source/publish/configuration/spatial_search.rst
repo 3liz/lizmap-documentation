@@ -1,4 +1,4 @@
-
+.. include:: ../../substitutions.rst
 .. _fts-searches:
 
 Spatial searching
@@ -7,8 +7,8 @@ Spatial searching
 In the map options, you can activate and configure the address search bar, based on external web services (nominatim, google or french IGN). See :ref:`lizmap-config-map` .
 Additionally, you can add spatial searching capability to Lizmap. This means you will allow the users to search within spatial data, such as countries, points of interests, etc. You have two ways to add searching capability in Lizmap:
 
-* For QGIS 2 and QGIS 3, since Lizmap version 3.2, you can create a table or view **lizmap_search** in your PostgreSQL database to store the search data for all your Lizmap projects.
-* For QGIS only, since Lizmap version 3.1, you can use the plugin **QuickFinder** to configure a data search per QGIS project.
+* For |qgis_2| and |qgis_3|, since |lizmap_3_2|, you can create a table or view ``lizmap_search`` in your PostgreSQL database to store the search data for all your Lizmap projects.
+* For |qgis_2| only and since |lizmap_3_1|, you can use the plugin **QuickFinder** to configure a data search per QGIS project.
 
 PostgreSQL search
 -----------------
@@ -49,11 +49,11 @@ or configure the search_path variable for the database or the user which connect
 
 The relation "lizmap_search" must contain the following columns:
 
-* **item_layer** (text). Name of the layer. For example "Countries"
-* **item_label** (text). Label to display the results, which is the data to search among. Ex: "France" or "John Doe - Australia". You can build it from a concatenation of several fields values.
-* **item_project** (text). List of Lizmap projects separated by commas. Optionnal. When set, the search will be done only for the specified Lizmap projects
-* **item_filter** (text). Username or group name. When given, the results will be filtered by authenticated user login and groups. For example, 'admins'
-* **geom** (geometry). We advise to store all the geometries with the same SRID.
+* ``item_layer`` (text). Name of the layer. For example "Countries"
+* ``item_label`` (text). Label to display the results, which is the data to search among. Ex: "France" or "John Doe - Australia". You can build it from a concatenation of several fields values.
+* ``item_project`` (text). List of Lizmap projects separated by commas. Optionnal. When set, the search will be done only for the specified Lizmap projects
+* ``item_filter`` (text). Username or group name. When given, the results will be filtered by authenticated user login and groups. For example, 'admins'
+* ``geom`` (geometry). We advise to store all the geometries with the same SRID.
 
 Here is an example of SQL code you can use, to add data from two different spatial tables into lizmap_search (here as a materialized view to ease further maintenance)
 
@@ -84,7 +84,7 @@ ____________
 
 * You should use a table, or a materialized view, on which you can add indexes to speed up the search queries.
 
-* We strongly advise you to add a trigram index on the unaccentuated **item_label** field, to speed up the search query:
+* We strongly advise you to add a trigram index on the unaccentuated ``item_label`` field, to speed up the search query:
 
 .. code-block:: sql
 
@@ -102,9 +102,9 @@ ________________
 
 Once this table (or view, or materialized view) is created in your database, you need to check that Lizmap can have a read access on it.
 
-If your Lizmap instance uses PostgreSQL to store the users, groups and rights, a connection profile already exists for your database. Then you can just add the **lizmap_search** relation inside this database (in the public schema).
+If your Lizmap instance uses PostgreSQL to store the users, groups and rights, a connection profile already exists for your database. Then you can just add the ``lizmap_search`` relation inside this database (in the ``public`` schema).
 
-If not, or if you need to put the search data in another database (or connect with another PostgreSQL user), you need to add a new **database connection profile** in Lizmap configuration file **lizmap/var/config/profiles.ini.php**.
+If not, or if you need to put the search data in another database (or connect with another PostgreSQL user), you need to add a new **database connection profile** in Lizmap configuration file :file:`lizmap/var/config/profiles.ini.php`.
 The new profile is a new jdb prefixed section, called **jdb:search**. For example, add the following section (please replace the ``DATABASE_`` variables by the correct values):
 
 .. code-block:: ini
@@ -131,8 +131,10 @@ You can now use the default search bar in Lizmap which is located on top right c
    :align: center
    :width: 300
 
-QuickFinder Plugin (QGIS 2 only)
----------------------------
+QuickFinder Plugin
+------------------
+
+.. warning:: This is for |qgis_2| only. This plugin has not been ported to |qgis_3|.
 
 The purpose of this plugin is to provide fast searching among big datasets, searching in a qtfs file generated by QGIS Desktop.
 
@@ -140,18 +142,18 @@ Prerequisites
 _____________
 
 * You must have install at least the **7.x** version of **PHP** in your Lizmap server.
-* It is available only since version 3.1 of Lizmap Web Client.
+* It is available only since version |lizmap_3_1|.
 
 Configuration
 _____________
 
 Inside QGIS:
 
-* install QuickFinder Plugin, for QGIS 2 only
-* choose a layer(s), define the fields to search among, pick the geometry storage format (WKT or Extent) and store Full Text Searchs (FTS) vector into a file database (.qfts). The filename must be identical to the QGIS project filename. Ex: **myproject.qfts** for a QGIS project stored as **myproject.qgs**
+* install QuickFinder Plugin, for |qgis_2| only
+* choose a layer(s), define the fields to search among, pick the geometry storage format (WKT or Extent) and store Full Text Searchs (FTS) vector into a file database (.qfts). The filename must be identical to the QGIS project filename. Ex: :file:`myproject.qfts` for a QGIS project stored as :file:`myproject.qgs`.
 
 .. note:: Only **WKT** or **Extent** formats for geometry storage are working, since binary format (WKB) can not be decoded by LWC.
 
-Inside LWC (available since version 3.1):
+Inside LWC:
 
 * put the database file beside the QGIS project, use the Search tool (input) and zoom to the chosen feature.
