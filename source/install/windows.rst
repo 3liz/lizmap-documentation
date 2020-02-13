@@ -315,7 +315,7 @@ Now it's time to test the QGIS Server and see if is accessible in fcgi typing in
 
 .. _preparation-lizmap:
 
-Preparing the home of LizMap Web Client
+Preparing the home of Lizmap Web Client
 ---------------------------------------
 
 Is usefull to have 2 environments, one for production and other for preproduction (or master to test new features), for this action you will need to create the folders **C:\\webserver\\lizmap\\prod\\** and  **C:\\webserver\\lizmap\\preprod\\** and change the Apache VirtualHost configuration file.
@@ -342,7 +342,7 @@ After create the cache folders, modify the virtual host to point to the **www fo
         Require all granted
     </Directory>
 
-    # LizMap Pre-production (master)
+    # Lizmap Pre-production (master)
     # Version master
     Alias /preprod/ "C:/webserver/lizmap/preprod/master/lizmap/www/"
     <Directory "C:/webserver/lizmap/preprod/master/lizmap/www">
@@ -419,7 +419,7 @@ Using PostgreSQL as administrator database (Optional)
 
 .. note:: **Requirements**: PostgreSQL/PostGIS installation
 
-By default, when you install LizMap Web Client, you will install a sqlite database where will be store the information about users, permissions among other information.
+By default, when you install Lizmap Web Client, you will install a sqlite database where will be store the information about users, permissions among other information.
 
 Imagine that you are GIS Manager and you want to link the user and password credentials of lizmap to the PostgreSQL users and password credentials.
 
@@ -492,13 +492,13 @@ After all your previous changes you are ready to launch the installer of lizmap 
    php lizmap\install\installer.php
 
 
-Configuring the LizMap Admin Panel
+Configuring the Lizmap Admin Panel
 ------------------------------------
 
 **[PROD] Production Environment** ( `webgis <http://localhost//webgis//index.php>`_ )
 
 After the correct installation owith the installer, go to http://localhost/webgis/index.php and you should see the Lizmap application home page with the demo project Montpellier - Transport.
-Now it's time to configure the LizMap Admin Panel, go to http://localhost/webgis/admin.php and do the login with:
+Now it's time to configure the Lizmap Admin Panel, go to http://localhost/webgis/admin.php and do the login with:
 
 * **user=admin**;
 * **password=admin**;
@@ -514,7 +514,7 @@ Now check the Montpellier demo project is working: http://localhost/webgis/index
 **[PREPROD] Pré-production Environment** ( `preprod <http://localhost//preprod//index.php>`_ )
 
 After the correct installation with the installer, go to http://localhost/preprod/index.php and you should see the Lizmap application home page with the demo project Montpellier - Transport.
-Now it's time to configure the LizMap Admin Panel, go to http://localhost/preprod/admin.php and do the login with:
+Now it's time to configure the Lizmap Admin Panel, go to http://localhost/preprod/admin.php and do the login with:
 
 * **user=admin**;
 * **password=admin**;
@@ -526,7 +526,7 @@ After that, also change the cache directory from  **C:\\Windows\\Temp\\** to: **
 
 Now check the Montpellier demo project is working: http://localhost/preprod/index.php/view/map/?repository=montpellier&project=montpellier
 
-LizMap directories configuration
+Lizmap directories configuration
 --------------------------------
 
 You need to create a Lizmap directory architecture for organization porposes. Create the following directories via a :kbd:`*.bat` file ( Please Check line ends are correct, you can open using notepad, notepad++):

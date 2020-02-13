@@ -28,7 +28,7 @@ The plugin is organized in 12 tabs:
 * :guilabel:`Baselayers`: the baselayers used on the Web
 * :guilabel:`Locate by layer`: the locating tool
 * :guilabel:`Attribute table`: configure the attribute table and the vector selection
-* :guilabel:`Layer editing`: which layer can be edited with LizMap
+* :guilabel:`Layer editing`: which layer can be edited with Lizmap
 * :guilabel:`Tooltip layers`: configure the tooltip for some layers
 * :guilabel:`Filter layer by user`: setup some filtering based on the current logged user
 * :guilabel:`Dataviz`: add some charts and dataviz

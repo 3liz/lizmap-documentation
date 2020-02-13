@@ -107,6 +107,6 @@ Note this can be changed in your global settings for layers added later.
 Save your QGIS project
 ======================
 
-.. warning:: In |qgis_3|, it's possible to save your project in ``QGZ`` format or in database (PostGIS/Geopackage). Lizmap does not support these formats. You must save your project as QGS extension by doing :menuselection:`Project --> Save as... --> QGIS file` and not choosing ``QGZ``.
+.. warning:: In |qgis_3|, it's possible to save your project in ``QGZ`` format or in database (PostGIS/Geopackage). Lizmap does not support these formats. You must save your project as ``QGS`` extension by doing :menuselection:`Project --> Save as... --> QGIS file` and not choosing ``QGZ``.
 
-You should save your project as QGS file on your filesystem before opening the Lizmap plugin in the next step.
+You should save your project as ``QGS`` file on your filesystem before opening the Lizmap plugin in the next step.
