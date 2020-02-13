@@ -1,3 +1,5 @@
+.. include:: ../../substitutions.rst
+
 ==============================
 Prepare a QGIS project for Web
 ==============================
@@ -25,7 +27,7 @@ Add your data:
 
   * PostgreSQL / PostGIS
 
-    * When you create your connection to PostGIS, use the checkbox `Use estimated metadata`. Be careful, changing this checkbox after you have already added a layer doesn't change layers already loaded.
+    * When you create your connection to PostGIS, use the checkbox :guilabel:`Use estimated metadata`. Be careful, changing this checkbox after you have already added a layer doesn't change layers already loaded.
 
   * MSSQL spatial
   * Oracle locator / spatial
@@ -38,15 +40,15 @@ Organize and manipulate the layers in the legend:
 
 * *Add groups* with a right click in the empty part of the legend: *Add a new group*
 * *Move* layers and groups with *drag-and-drop*
-* *Rename* layers and groups with the F2 key or the layer properties window
+* *Rename* layers and groups with the :kbd:`F2` or the layer properties window
 * Manipulate the rendering order:
 
   * with the *legend layer order*: the upper layers are rendered above the others.
-  * by specifying *layer order* with the menu *View > Panels > Layer order*
+  * by specifying *layer order* with the menu :menuselection:`View --> Panels --> Layer order`
 
 Add a title to your project and save it in your working directory.
 
-.. note:: **New in Lizmap 3**: if your layer has more than one style, the user will be able to switch between them through the button *Change layer style* at the top of the legend.
+.. note:: In |lizmap_3_0|, if your layer has more than one style, the user will be able to switch between them through the button *Change layer style* at the top of the legend.
 
 Set up your project for Web
 ===============================================================
@@ -82,14 +84,14 @@ Configure the Web Geographics Services parameters with the *QGIS Server* tab:
    :align: center
    :width: 60%
 
-Check that the paths are saved *relative* in the general tab of the project properties window, access it with the menu :menuselection:`Project --> Project Properties` or `CTRL+SHIFT+P`.
+Check that the paths are saved *relative* in the general tab of the project properties window, access it with the menu :menuselection:`Project --> Project Properties` or :kbd:`CTRL+SHIFT+P`.
 
 .. _layers-tab-metadata:
 
 Configure your layers for the Web
 =================================
 
-In the window *Layer properties*, the *QGIS Server* tab allows you to configure a lot of information for Web Geographic Services:
+In the window :menuselection:`Layer properties --> QGIS Server` allows you to configure a lot of information for Web Geographic Services:
 
 * Provide a title, a description and keywords
 * Specify the attribution to respect the data license
@@ -99,5 +101,12 @@ In the window *Layer properties*, the *QGIS Server* tab allows you to configure 
    :align: center
    :width: 60%
 
-In the window *Rendering properties*, enable the *Simplify geometry* and the *Simplify on the provider side if possible* checkbox too.
+In the window :guilabel:`Rendering` tab, enable the :guilabel:`Simplify geometry` and the :guilabel:`Simplify on the provider side if possible` checkbox too.
 Note this can be changed in your global settings for layers added later.
+
+Save your QGIS project
+======================
+
+.. warning:: In |qgis_3|, it's possible to save your project in ``QGZ`` format or in database (PostGIS/Geopackage). Lizmap does not support these formats. You must save your project as QGS extension by doing :menuselection:`Project --> Save as... --> QGIS file` and not choosing ``QGZ``.
+
+You should save your project as QGS file on your filesystem before opening the Lizmap plugin in the next step.
