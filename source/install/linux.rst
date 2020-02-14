@@ -242,39 +242,29 @@ Creating a user account
    chmod 700 /home/data/cache/$MYUSER -R
    chown www-data:www-data /home/data/cache/$MYUSER -R
 
-Map server: QGIS Server
-====================================
+QGIS Server
+===========
 
-.. note:: Details for the installation may differ for specific versions of the operating system. Please refer to https://qgis.org/en/site/forusers/download.html for up to date documentation.
+Follow the QGIS Documentation how to install QGIS Server : https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/server/index.html
 
-First declare the QGIS repository into a  :file:`/etc/apt/sources.list.d/debian-qgis.list` file. Its content should be:
+As we started to use Nginx in this Lizmap installation, you should continue the installation of QGIS Server with Nginx.
+With Nginx, the preferred way is to use ``spawn-fcgi``.
 
-.. code-block:: text
+.. warning:: Nginx with ``fcgiwrap`` is not efficient, but it's mentionned in the QGIS Server documentation. Better to use ``spawn-fcgi``.
 
-    deb https://qgis.org/debian-ltr stretch main
+In the Nginx configuration, it's good to use the ``QGIS_OPTIONS_PATH`` variable for a folder with write permissions for ``www-data``.
+These is explained in the QGIS Server documentation.
 
+You should also install and configure ``XVFB`` mentioned in the QGIS Documentation.
+This is useful for printing PDF. You can only skip this section if you don't plan to print PDF on the server side.
 
-Install also the Qgis key for the package manager
+After you have setup your web server with QGIS-Server, check that the URL of QGIS Server is working. You probably get a XML like:
 
-.. code-block:: bash
+.. code-block:: xml
 
-   # Add keys
-   sudo gpg --recv-key CAEB3DC3BDF7FB45
-   sudo gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
+    <ServerException>Project file error</ServerException>
 
-
-Update the package repository and install the Qgis packages:
-
-
-.. code-block:: bash
-
-   # Update package list
-   sudo apt-get update
-
-   # Install QGIS Server
-   sudo apt-get install qgis-server python-qgis
-
-.. note:: See https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/server/index.html for more information on QGIS Server.
+Keep this URL, we will use it in the Lizmap admin panel.
 
 Retrieve and install Lizmap Web Client
 =======================================
@@ -423,6 +413,8 @@ Go to the Lizmap Web Client home to see if the installation was performed correc
 
 .. note:: Replace ``localhost`` with the address or IP number of your server.
 
+In the administration panel, you should check the :guilabel:`QGIS server version` and the :guilabel:`WMS server URL` with the URL of QGIS Server.
+
 Lizmap is accessible, without further configurations, also as WMS and WFS server from a browser:
 
 http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities
@@ -437,6 +429,17 @@ http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project
 
 .. note:: Access to the WMS and WFS servers can be limited by assigning privileges to specific repositories, see the administration section.
 
+
+QGIS Server plugins
+===================
+
+Some plugins can be added to QGIS Server. This will enable some features in Lizmap. It's not compulsory but in some situations, it's better.
+
+You must have setup the ``QGIS_PLUGIN_PATH`` variables in the installation of QGIS Server.
+
+* WfsOutputExtension : To add new format when exporting vector data https://github.com/3liz/qgis-wfsOutputExtension
+* AtlasPrint : To enable the PDF based on a QGIS Layout Atlas https://github.com/3liz/qgis-atlasprint
+* Logging : To log QGIS Servers log and to flush the cache on QGIS Server https://github.com/3liz/qgis-logging-plugin
 
 Editing tool: Configure the server with the database support
 =============================================================================
