@@ -415,6 +415,18 @@ Go to the Lizmap Web Client home to see if the installation was performed correc
 
 In the administration panel, you should check the :guilabel:`QGIS server version` and the :guilabel:`WMS server URL` with the URL of QGIS Server.
 
+If you didn't install the demo, you can check that you have well installed Lizmap and configured QGIS Server within Lizmap by checking the ``qgis_server`` section in this URL:
+http://localhost/lizmap/index.php/view/app/metadata
+
+.. code-block:: json
+
+    {
+        "qgis_server":{
+            "test":"OK",
+            "mime_type":"text\/xml; charset=utf-8"
+        }
+    }
+
 Lizmap is accessible, without further configurations, also as WMS and WFS server from a browser:
 
 http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities
