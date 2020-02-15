@@ -5,7 +5,7 @@ Introduction
 Lizmap architecture
 ===================
 
-.. image:: images/all-schema-client-server.jpg
+.. image:: images/architecture.jpg
    :align: center
 
 **Data preparation**
