@@ -12,27 +12,35 @@ Since |lizmap_3_4| :
 
 Many layers can be configured in this tool. If the checkbox :guilabel:`Auto-play` is checked, the first layer in the list is used.
 
-..  image:: /images/publish-04-atlas-plugin-interface.jpg
-   :align: center
-   :width: 80%
 
 Configuring the tool
 --------------------
 
-Layer options :
+..  image:: /images/interface-add-atlas.jpg
+   :align: center
 
-* you need to chose the layer you want your atlas on
-* select the primary key field, it must be an integer
-* check if you want to display the layer description in the dock of your atlas
-* chose the field who contains the name of your features, it will be shown instead of the primary key in the list of features
-* your atlas will be sorted according to this field
-* you can chose to highlight the feature selected by the atlas, it will change every time it's switching to a new feature
-* chose between a zoom on the feature or to make it the center of your map
-* you can chose to display the popup in the feature in the atlas container or not
-* check if you want to activate filter on the feature selected by the atlas, it will hide all other features of the layer and only show the one selected
+- For setting a atlas layer:
 
-Atlas options:
+    1. |add_layer|
+    2. you need to chose the layer you want your atlas on
+    3. select the primary key field, it must be an integer
+    4. check if you want to display the layer description in the dock of your atlas
+    5. chose the field who contains the name of your features, it will be shown instead of the primary key in the list of features
+    6. your atlas will be sorted according to this field
+    7. you can chose to highlight the feature selected by the atlas, it will change every time it's switching to a new feature
+    8. chose between a zoom on the feature or to make it the center of your map
+    9. you can chose to display the popup in the feature in the atlas container or not
+    10. check if you want to activate filter on the feature selected by the atlas, it will hide all other features of the layer and only show the one selected
 
-* check if you want to open the atlas tool when you open your project
-* you can select the duration between each step when your atlas is in auto-play mode for the first layer of the table
-* check if you want to launch the auto-play mode when you open your project
+- |edit_layer|
+- |remove_layer|
+
+The order in the table is important.
+
+- |move_up_down_layer|
+
+- Atlas options:
+
+    - check if you want to open the atlas tool when you open your project
+    - you can select the duration between each step when your atlas is in auto-play mode for the first layer of the table
+    - check if you want to launch the auto-play mode when you open your project

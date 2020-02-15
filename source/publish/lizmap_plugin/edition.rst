@@ -19,12 +19,17 @@ The **Web form** presented to the user to populate the **attribute table** suppo
 
 In addition, Lizmap Web Client automatically detects the column type (integer, real, string, etc.) and adds the necessary checks and controls on the fields.
 
-Usage examples
---------------
+Examples
+--------
 
 * **A town** wish that citizens identify visible problems on the road: uncollected trash, broken street lights, wrecks to remove. The QGIS project administrator creates a layer dedicated to collect data and displays them to all.
 
 * **An engineering office** wants to allow project partners to trace remarks on the project areas. It allows the addition of polygons in a dedicated layer.
+
+Prerequisites
+-------------
+
+|wfs_layer|
 
 Configuring the tool
 --------------------

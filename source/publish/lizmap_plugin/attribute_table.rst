@@ -1,3 +1,5 @@
+.. include:: ../../substitutions.rst
+
 Attribute table
 ===============
 
@@ -8,12 +10,15 @@ Lizmap is designed to show spatial data in the main map, and you can propose use
 
 Sometimes this is not enough, and as a map editor, you would like the user to see all the data of a specific layer, as you can do in QGIS by opening the attribute table. Since Lizmap 2.11, you can propose such a feature for any vector layer published in you map. (This feature has been heavily enhanced since Lizmap 3.0. Many features described underneath are only available for Lizmap 3.0 )
 
+Prerequisites
+-------------
+
+|wfs_layer|
+
 Configuring the tool
 --------------------
 
 In the **Tools** tab of Lizmap plugin dialog, there is a group called "Attribute layers" which shows a table and some form fields dedicated to add or remove vector layers.
-
-Lizmap Web Client uses the **Web Feature Service** (WFS) to get data from a QGIS vector layer and display it in the web interface. This is why the first thing to do whenever you want to show a layer data in the web client is to **publish the vector layer through the WFS**. To do so, open the **Project properties** dialog, got the the **OWS Server** tab, and add the layer as "published" by checking the corresponding checkbox in the **Web Feature Service** table, and save the project. You can also tune the number of decimals to decrease the size of data to be fetched from WFS ( keep 8 only for a map published in degrees, and keep 1 for map projections in meters )
 
 Once the layer is published through WFS, you can add it in the attribute layers table. Some options are available to finely tune the features provided to the user:
 

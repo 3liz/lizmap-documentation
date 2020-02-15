@@ -6,36 +6,49 @@ Form filtering - filter layer data based on field values
 Principle
 ---------
 
-This tool, available since |lizmap_3_3|, displays a form in the left panel, based on some fields, and allow the users to search among the layer data with a variety of form inputs: combo boxes, checkboxes, text inputs with autocompletion, date selector with sliders between the min and max date, etc..
+This tool, available since |lizmap_3_3|, displays a form in the left panel, based on some fields, and allow the users to search among the layer data with a variety of form inputs: combo boxes, checkboxes, text inputs with autocompletion, date selector with sliders between the min and max date, etc.
 
-It works only for database layers: PostgreSQL (recommended), Spatialite and GeoPackage, since Lizmap should query the data to retrieve:
+It works only for **database** layers: PostgreSQL (recommended), Spatialite and GeoPackage, since Lizmap should query the data to retrieve:
 
 * the total count of features for the current filter
 * the unique values of some fields (for the Unique Values type for example)
 * the minimum and maximum of the numeric fields or date fields
 * the extent of the data for the current filter
 
+Example
+-------
+
 You can see a video with an example: https://vimeo.com/331395259
+
+
+Prerequisites
+-------------
+
+|wfs_layer|
 
 Configuring the tool
 --------------------
 
 There is a new tab in the Lizmap plugin which lets you configure the filter inputs based on the layer fields. You can add one or more fields for one or more layer. If you add fields from 2 or more different layers, Lizmap Web Client will show a combo box to allow the user to choose the layer to filter. Selecting a layer will refresh the form and deactivate the current filter.
 
-The layer must be published in the WFS capabilities group of the Project properties OWS Server tab.
+- You need to add a line in the plugin table for each field you need to add in the filter form. For each field, you need to configure some options:
 
-You need to add a line in the plugin table for each field you need to add in the filter form. For each field, you need to configure some options:
+    1. |add_layer|
+    2. **Layer**: the source layer.
+    3. **Title**: the title to give to the input, which will be displayed above the form input. For example "Choose a category" for a layer field called "category".
+    4. **Type**: the type of the form input, among one of the following: **Text, Unique Values, Date, Numeric**.
+    5. **Field**: the field name (in the database table). Only for the Text, Unique Values and Numeric types.
+    6. **Min date**: the field containing the start date of your object (ex: "start_date" of an event). This is only needed for the **Date** type. If you have only one date field in your data, you should select it in the Min Date field.
+    7. * **Max date**: the field containing the end date of your data. If you have 2 fields containing dates, one for the start date and another for the end date, you can differentiate them. If not, you need to use the same field name for **Min date** and **Max date**.
+    8. * **Format**: the format of the **Unique values** type only. It can be **select**, which will show a combo box, or **checkboxes** which will show one checkbox for each distinct value. The distinct values are dynamically queried by Lizmap Web Client.
+    9. **Splitter**: for the **Unique values** type only. Use if you want to split the field values by a separator. Ex: ``culture, environment`` can be split into ``culture`` and ``environment`` with the splitter **`, `**.
 
-* **Layer**: the source layer.
-* **Title**: the title to give to the input, which will be displayed above the form input. For example "Choose a category" for a layer field called "category".
-* **Type**: the type of the form input, among one of the following: **Text, Unique Values, Date, Numeric**.
-* **Field**: the field name (in the database table). Only for the Text, Unique Values and Numeric types.
-* **Min date**: the field containing the start date of your object (ex: "start_date" of an event). This is only needed for the **Date** type. If you have only one date field in your data, you should select it in the Min Date field.
-* **Max date**: the field containing the end date of your data. If you have 2 fields containing dates, one for the start date and another for the end date, you can differentiate them. If not, you need to use the same field name for **Min date** and **Max date**.
-* **Format**: the format of the **Unique values** type only. It can be **select**, which will show a combo box, or **checkboxes** which will show one checkbox for each distinct value. The distinct values are dynamically queried by Lizmap Web Client.
-* **Splitter**: for the **Unique values** type only. Use if you want to split the field values by a separator. Ex: ``culture, environment`` can be split into ``culture`` and ``environment`` with the splitter **`, `**.
+- |edit_layer|
+- |remove_layer|
 
-The order of the lines in the configuration table is taken into account to show the field inputs in the form.
+The order of the lines in the configuration table is taken into account to show the field inputs in the form :
+
+- |move_up_down_layer|
 
 .. image:: /images/user-guide-advanced-form-filtering.jpg
    :align: center
@@ -91,7 +104,7 @@ If you have specified a splitter text, for example **`, `**, Lizmap will find th
 You can choose to show two different input types:
 
 * **Combo box**: this type will show a combo box with the list of distinct values for the field. The user will be able to choose only one item among the values.
-* **Checkboxes**: this type will show as many comboboxes as distinct values for the field. The data will be filtered with a UNION between checked items.
+* **Checkboxes**: this type will show as many comboboxes as distinct values for the field. The data will be filtered with a ``UNION`` between checked items.
 
 The filter built will be like:
 

@@ -10,6 +10,7 @@ This section is listing panels available in the Lizmap QGIS plugin.
   locate_by_layer
   attribute_table
   edition
+  tooltip
   filtered_layers_login
   dataviz
   time_manager

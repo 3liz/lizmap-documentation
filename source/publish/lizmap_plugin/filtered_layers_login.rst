@@ -19,6 +19,9 @@ Filtering currently uses the ID of the user group connected to the Web applicati
 * drop-down lists of *Editing forms* from *Value relation*. See :ref:`edition`
 * upcoming features (the attribute table display, search features, etc.)
 
+Example
+-------
+
 A video tutorial is available at: https://vimeo.com/83966790
 
 Configuring the tool
@@ -46,7 +49,7 @@ Here are the detailed steps to configure this feature:
     * It is possible to set ``all`` as the value in some lines to disable the filter: All users will see the data for these lines.
     * If the value in this column for a row does not correspond to a user group, then the data will be displayed for no user.
 
-* Add the layer in the table :guilabel:`Filter Data by User` panel:
+- Add the layer in the table :guilabel:`Filter Data by User` panel:
 
     1. |add_layer|
     2. Select layer from the dropdown list

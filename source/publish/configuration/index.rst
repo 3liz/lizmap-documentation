@@ -7,6 +7,8 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
 .. toctree::
   :maxdepth: 2
 
+  project
+  layer
   legend
   popup
   action_popup

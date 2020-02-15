@@ -1,3 +1,4 @@
+.. include:: ../../substitutions.rst
 .. _locate-by-layer:
 
 Locate by layer
@@ -24,7 +25,7 @@ When the Web map user selects one name in this list, the map will automatically 
 Prerequisites
 -------------
 
-.. note:: The layer(s) you want to use must be **published as WFS layer**: check the corresponding box of the *WFS capabilities* in the *OWS Server* tab of the *Project Properties* window.
+|wfs_layer|
 
 Configuring the tool
 --------------------

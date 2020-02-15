@@ -15,6 +15,11 @@ In |lizmap_3_4|, the sun burst chart is available.
    :align: center
    :scale: 80%
 
+Prerequisites
+-------------
+
+|wfs_layer|
+
 Configuring the tool
 --------------------
 
