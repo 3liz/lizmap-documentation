@@ -8,4 +8,12 @@
 .. |lizmap_3_3| replace:: **Lizmap 3.3**
 .. |lizmap_3_4| replace:: **Lizmap 3.4**
 
-.. |remove_layer| image:: /images/icons/symbologyRemove.svg
+
+
+.. |add_layer| replace:: Click the |add_layer_svg| button
+.. |edit_layer| replace:: To edit a layer in the table, select it and click the |edit_layer_svg| button
+.. |remove_layer| replace:: To remove a layer from the table, select it and click the |remove_layer_svg| button
+
+.. |add_layer_svg| image:: /images/icons/symbologyAdd.svg
+.. |edit_layer_svg| image:: /images/icons/symbologyEdit.svg
+.. |remove_layer_svg| image:: /images/icons/symbologyRemove.svg

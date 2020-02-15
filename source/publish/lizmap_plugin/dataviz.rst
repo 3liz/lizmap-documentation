@@ -35,7 +35,7 @@ Here, you have the possibility to write in HTML to change the style of the conta
    :scale: 80%
 
 **3**:
-This table contains all the layers you have configured to be able to show statistics in your Lizmap project. All details about the configuration are shown in this table. You have to use it if you want to remove a layer, you will need to click on a line of the table then click on the button |remove_layer| at the bottom on the panel.
+This table contains all the layers you have configured to be able to show statistics in your Lizmap project. All details about the configuration are shown in this table. You have to use it if you want to remove a layer, you will need to click on a line of the table then click on the button |remove_layer_svg| at the bottom on the panel.
 
 **4**:
 To add a graph, you have to configure it in this part of the panel.
