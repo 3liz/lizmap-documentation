@@ -1,3 +1,5 @@
+.. include:: ../../substitutions.rst
+
 .. _edition:
 
 Edition
@@ -6,7 +8,7 @@ Edition
 Principle
 ---------
 
-Since version 2.8, it is possible to allow users to **edit spatial and attribute data** from the Lizmap Web Client interface for **PostgreSQL or Spatialite** layers of the QGIS project. The Lizmap plugin allows you to add one or more layers and choose what actions for each will be possible in the web interface:
+Since |lizmap_2_8|, it is possible to allow users to **edit spatial and attribute data** from the Lizmap Web Client interface for **PostgreSQL or Spatialite** layers of the QGIS project. The Lizmap plugin allows you to add one or more layers and choose what actions for each will be possible in the web interface:
 
 * creating elements
 * modifying attributes
@@ -99,7 +101,7 @@ The layers that you have selected for the editing tool are "layers like the othe
 
 .. note:: Using the cache: whether to use the server or client cache for editing layers, do so by knowingly: the data will not be visible to users until the cache has not expired. We suggest not to enable the cache for editing layers.
 
-.. note:: Lizmap 3 only
+.. note:: |lizmap_3_0| seulement
 
 Adding files and images for features
 ------------------------------------
@@ -107,7 +109,7 @@ Adding files and images for features
 Use the media/upload folder relative to the project
 ___________________________________________________
 
-With Lizmap 3, it is now possible to upload your files, including images, for each feature, during online editing; to achieve this, you need to:
+With |lizmap_3_0|, it is now possible to upload your files, including images, for each feature, during online editing; to achieve this, you need to:
 
 * Configure edition for the layer, with one or more fields with the **edit type** "Photo" or "File". For example, let say the field name is "photo"
 * Create a folder at the root of the QGIS project file : **media/** and a subfolder **media/upload** (obviously you need to do that locally in your computer and server side ).
@@ -124,7 +126,7 @@ Obviously you will be able to display this image (or any other file) in the popu
 Use a specific destination folder
 _________________________________
 
-Since Lizmap 3.2, you can override the default destination folder ``media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT`` by manually setting the path where to store the media, relatively to the project. To do so, you must use the **External resource** field edit widget, and configure it with:
+Since |lizmap_3_2|, you can override the default destination folder ``media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT`` by manually setting the path where to store the media, relatively to the project. To do so, you must use the **External resource** field edit widget, and configure it with:
 
 * a **Default path** written relative to the project. For example ``../media/images/`` if you want to store this field files in a folder media situated alongside the project folder. You can also choose set a path inside the project media folder. For example ``media/my_target_folder/``.
 * chek the **Relative path** checkbox, with the default **Relative to project path** option

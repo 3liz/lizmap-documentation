@@ -75,7 +75,7 @@ Enable caching can greatly lighten the load on the server, since we do not want 
 
 To activate it, you must:
 
-* check the box *Server tile cache*
+* check the box :guilabel:`Server tile cache`
 * specify the expiration time of the cache server in seconds: **Expiration (seconds)**.
   0 means no expiration on the server, the tile will be kept on the server until the cache is cleared.
 
