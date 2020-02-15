@@ -5,6 +5,14 @@ These settings are in :menuselection:`Project --> Project properties` or :kbd:`C
 
 .. _publish_layer_wfs:
 
+OGC Services Capabilities
+-------------------------
+
+In :menuselection:`Project properties --> QGIS Server --> Service capabilities`, you can setup some metadata about your project:
+
+- The title which will be used by Lizmap.
+- Other information such as organization, the owner of the publication, the abstract, etc
+
 Publish a layer as WFS
 ----------------------
 

@@ -18,16 +18,30 @@ Prerequisites
 Configuring the tool
 --------------------
 
+..  image:: /images/interface-add-attribute-table-layer.jpg
+   :align: center
+
 In the **Tools** tab of Lizmap plugin dialog, there is a group called "Attribute layers" which shows a table and some form fields dedicated to add or remove vector layers.
 
-Once the layer is published through WFS, you can add it in the attribute layers table. Some options are available to finely tune the features provided to the user:
+To add a layer to this tool:
 
-* **Layer**: Choose one of the vector layers (spatial or not). This can be any vector layer format : GeoJSON, Shapefile, PostGIS, CSV, etc.
-* **Unique ID**: The attribute table tool needs to be able to defined each feature as unique. We strongly advise you to add such a field if your layer has not one yet. Usually the unique ID field contains **integers**. If the layer do not have this kind of field, you can easily create it with the *Field calculator*. Choose the correct field with the combo box.
-* **Fields to hide**: You have 2 ways of hiding fields in the published attribute table.
+    1. |add_layer|
+    2. **Layer**: Choose one of the vector layers (spatial or not). This can be any vector layer format : GeoJSON, Shapefile, PostGIS, CSV, etc.
+    3. **Unique ID**: The attribute table tool needs to be able to defined each feature as unique. We strongly advise you to add such a field if your layer has not one yet. Usually the unique ID field contains **integers**. If the layer do not have this kind of field, you can easily create it with the *Field calculator*. Choose the correct field with the combo box.
+    4. **Fields to hide**: You have 2 ways of hiding fields in the published attribute table.
 
-  -  In the *vector layer properties dialog* of the QGIS vector layer, in the *Fields* tab, you can uncheck the checkbox of the column **WFS** for the fields to unpublish. This means this fields will not be published via the WFS protocol. This is the **simplest and safiest way** to restrict the publication to some fields (for example to get rid of sensitive fields)
-  - You can use this **Fields to hide** option to **hide** the given fields in the attribute table display. The hidden fields won't be visible for the end user, but will still be available for Lizmap Web Client. **You must use this option to hide the Unique ID field**. If you use the first way (uncheck WFS column), the unique ID won't be usable by Lizmap, and some of the attribute table features will not work properly.
+        -  In the *vector layer properties dialog* of the QGIS vector layer, in the *Fields* tab, you can uncheck the checkbox of the column **WFS** for the fields to unpublish. This means this fields will not be published via the WFS protocol. This is the **simplest and safiest way** to restrict the publication to some fields (for example to get rid of sensitive fields)
+        - You can use this **Fields to hide** option to **hide** the given fields in the attribute table display. The hidden fields won't be visible for the end user, but will still be available for Lizmap Web Client. **You must use this option to hide the Unique ID field**. If you use the first way (uncheck WFS column), the unique ID won't be usable by Lizmap, and some of the attribute table features will not work properly.
+    5. Let the :guilabel:`Pivot table` unchecked. This is for relation.
+    6. Let the :guilabel:`Hide in child subpanels` unchecked. This is for relation.
+    7. Let the :guilabel:`Hide layer in the list` unchecked. This is for relation.
+
+- |edit_layer|
+- |remove_layer|
+
+The order in the table is important.
+
+- |move_up_down_layer|
 
 Using with relations
 --------------------
@@ -54,9 +68,3 @@ Lizmap Web Client will then handle the relation as a N:M relation:
 
 * The pivot table will be displayed under each parent attribute table and show only the corresponding children.
 * The filter feature based on the attribute layers will trigger the cascading filter of the pivot and the other parent. For example, if the user uses the filter to show only one tramway line, Lizmap will also only show the corresponding stops in the map and in the Stops attribute tables
-
-
-Edition
--------
-
-todo

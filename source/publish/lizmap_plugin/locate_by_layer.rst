@@ -7,10 +7,6 @@ Locate by layer
 Principle
 ---------
 
-.. image:: /images/interface-tools-tab-locate.jpg
-   :align: center
-   :width: 80%
-
 The idea of this tool is to present to the Lizmap Web Client user a drop down list that gives the ability to zoom on one or more spatial objects of the layer.
 
 Use case
@@ -30,17 +26,25 @@ Prerequisites
 Configuring the tool
 --------------------
 
+..  image:: /images/interface-add-locate-layer.jpg
+   :align: center
+
 To add a layer to this tool:
 
-* **choose the layer** with the first dropdown from the list of the project vector layers
-* then **the column that contains the label** you want to display in the dropdown list
-* if you want the geometry of the related objects is also displayed on the map when the user selects an item from the list, then check the option *Display the geometry*
-* finally click the button **Add layer** to add it to the list.
+    1. |add_layer|
+    2. **choose the layer** with the first dropdown from the list of the project vector layers
+    3. then **the column that contains the label** you want to display in the dropdown list
+    4. if you want to add pre-filter your data if a optional group by, use the :guilabel:`Optional group by` field.
+    5. if you want the geometry of the related objects is also displayed on the map when the user selects an item from the list, then check the option *Display the geometry*
+    6. If you set a value above 0, autocompletion will be used after this amount of characters while the user types. The classical combobox will be replaced by a editable text input.
+    7. If Lizmap must trigger the filter on the layer. Only the selected feature will be visible on the map.
 
-To remove a layer already configured:
+- |edit_layer|
+- |remove_layer|
 
-* select the line of the layer you want to remote by clicking on it
-* click on the button **Remove layer**.
+The order in the table is important.
+
+- |move_up_down_layer|
 
 Hierarchical Lists
 ------------------
@@ -52,5 +56,4 @@ For this, there are 2 methods:
 * you either have **2 separate vector layers**: one for districts and for sub-districts. So you have to use a **field join** between the two layers to enable automatic filtering lists in Lizmap
 * either we have **only 1 layer for sub-districts**, and then you can specify with the plugin a **group field**. Two dropdowns will be created instead of one in the Web application.
 
-.. note:: Up to 3 project layers can be added to the *Locate by layer* tool.
 .. note:: Don't forget to check if your configuration of Qgis server is the right one (in Lizmap : My account -> Lizmap configuration -> check if the qgis server version is the right one, if not, you can use the button 'modify' below). If the configuration is not right the location will be wrong!
