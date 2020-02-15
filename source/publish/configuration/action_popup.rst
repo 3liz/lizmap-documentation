@@ -13,7 +13,7 @@ It reads a **JSON configuration file** which must be placed **aside the QGIS pro
 Configuring the tool
 --------------------
 
-Each action is caracterized by a **layer**, a **name**, a **title**, an **icon**, some optional **options**, **style** and **callbacks**.
+Each action is characterised by a ``layer``, a ``name``, a ``title``, an ``icon``, some optional ``options``, ``style`` and ``callbacks``.
 
 Example of this JSON configuration file, name :file:`myproject.qgs.action` if the QGIS project file is named :file:`myproject.qgs`:
 
@@ -48,18 +48,18 @@ Example of this JSON configuration file, name :file:`myproject.qgs.action` if th
        ]
    }
 
-The JSON configuration file lists the QGIS layers for which you want to declare actions. Each layer is defined by its **QGIS ID**, for example here ``points_a7e8943b_7138_4788_a775_f94cbd0ad8b6``, and for each ID, a list of objects describing the actions to allow. Each **action** is an object defined by:
+The JSON configuration file lists the QGIS layers for which you want to declare actions. Each layer is defined by its **QGIS layer ID**, for example here ``points_a7e8943b_7138_4788_a775_f94cbd0ad8b6``, and for each ID, a list of objects describing the actions to allow. Each **action** is an object defined by:
 
-* a **name** which is the action identifier.
-* a **title** which is used as a label in Lizmap interface
-* an **icon** which is displayed on the action button ( See https://getbootstrap.com/2.3.2/base-css.html#icons )
-* an **options** object, giving some additional parameters for this action.
-* a **style** object allowing to configure the returned geometry style. It follows OpenLayers styling attributes.
-* a **callbacks** object allows to trigger some actions after the generated geometry is returned. They are defined by a **method** name, which can at present be:
+* a ``name`` which is the action identifier.
+* a ``title`` which is used as a label in Lizmap interface
+* an ``icon`` which is displayed on the action button ( See https://getbootstrap.com/2.3.2/base-css.html#icons )
+* an ``options`` object, giving some additional parameters for this action.
+* a ``style`` object allowing to configure the returned geometry style. It follows OpenLayers styling attributes.
+* a ``callbacks`` object allows to trigger some actions after the generated geometry is returned. They are defined by a ``method`` name, which can at present be:
 
-    -  **zoom**: zoom to the returned geometry
-    -  **select**: select the features from a given layer intersecting the returned geometry. The target layer QGIS ID must be added in the **layerId** property
-    -  **redraw**: redraw a given layer. The target layer QGIS ID must be added in the **layerId** property.
+    -  ``zoom``: zoom to the returned geometry
+    -  ``select``: select the features from a given layer intersecting the returned geometry. The target layer QGIS ID must be added in the ``layerId`` property
+    -  ``redraw``: redraw a given layer. The target layer QGIS ID must be added in the ``layerId`` property.
 
 Lizmap detects the presence of this configuration file, and adds the needed logic when the map loads. When the users clicks on an object of one of this layer in the map, the **popup panel** shows the feature data. At the top of each popup item, **a toolbar will show one button per each layer action**.
 
