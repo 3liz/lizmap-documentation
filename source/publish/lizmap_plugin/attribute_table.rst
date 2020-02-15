@@ -38,10 +38,8 @@ To add a layer to this tool:
 
 - |edit_layer|
 - |remove_layer|
-
-The order in the table is important.
-
 - |move_up_down_layer|
+- |field_alias|
 
 Using with relations
 --------------------

@@ -34,9 +34,6 @@ Configuring the tool
 
 - |edit_layer|
 - |remove_layer|
-
-The order in the table is important.
-
 - |move_up_down_layer|
 
 - Atlas options:

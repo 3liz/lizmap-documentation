@@ -8,8 +8,6 @@ Principle
 
 You can let the user activate map tooltips when hovering features by choosing a list of fields to display.
 
-Fields will be displayed with their alias if it's defined. See :ref:`alias_on_fields`.
-
 Prerequisites
 -------------
 
@@ -31,3 +29,4 @@ Configuring the tool
 
 - |edit_layer|
 - |remove_layer|
+- |field_alias|

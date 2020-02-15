@@ -29,16 +29,16 @@ Examples
 Prerequisites
 -------------
 
-|wfs_layer|
+To allow data editing in Lizmap Web Client, you must:
+
+* Have vector layer with PostGIS or Spatialite.
+* Configure the editing tool for the layer in :menuselection:`Layer Properties --> Attributs Form`. This is not required but recommended to control the data entered by users. See :ref:`form`.
+* |wfs_layer|
+
+.. note:: Be careful if your layer contains some Z or M values, unfortunately Lizmap will set them to "0" which is the default value when saving to the database.
 
 Configuring the tool
 --------------------
-
-To allow data editing in Lizmap Web Client, you must:
-
-* **At least one vector layer with PostGIS or Spatialite type** in the QGIS project.
-* **Configure editing tools** for this layer in the *fields* tab of the layer properties. This is not required but recommended to control the data entered by users.
-* **Add the layer in the tool with the plugin**
 
 Here are the detailed steps:
 
@@ -51,43 +51,25 @@ Here are the detailed steps:
 
 Please refer to the QGIS documentation to see how to create a spatial layer in a PostGIS or Spatialite database: https://docs.qgis.org/3.4/en/docs/user_manual/managing_data_source/index.html
 
-* **Set the editing tools** for your layer fields
-
-  - *Open the layer properties* by double-clicking on the layer name in the legend.
-  - Go to *Fields* tab.
-  - Select the *Editing tool* in the *Edit widget* column for each field of the layer:
-
-    + To hide a field, choose *Hidden*. The user will not see the field in the form. There will be no content inserting. *Use it for the primary key*.
-    + To add a read-only field, unchecked *Editable* checkbox.
-    + Special case of the option *Value Relation*. You can use this option for a Lizmap map. For users to have access to information of the outer layer that contains the data, you must enable the publication of the layer as a WFS layer in the *OWS Server* tab of the QGIS *project properties*.
-    + etc.
-
-  - **QGIS 2 evolutions**:
-
-    + To hide columns in the Lizmap popup, you must now uncheck the box in the *WMS* for each field to hide (this column is just after *Alias*)
-    + Lizmap Web Client does not know the "QT Designer UI file" for form generation. Therefore only use the *Autogenerate* mode or *Drag and drop* mode for editing layers.
-
-.. note:: All the editing tools are not yet managed by Lizmap Web Client. Only the following tools are supported: Text edit, Classification, Range, Value Map, Hidden, Check Box, Date/Time, Value Relation, Relation Reference. If the tool is not supported, the web form displays a text input field.
-
-.. note:: To make the field compulsory you have to define it as `NOT NULL` in the properties of the table, at the database level.
-
-.. note:: Be careful if your layer contains some Z or M values, unfortunately Lizmap will set them to "0" which is the default value when saving to the database.
-
-* Add the layer in the table "Layer Editing" located in the plugin Lizmap "Tools" tab:
-
-  - *Select the layer* in the drop-down list
-  - Check the actions you want to activate from:
-
-    + Create
-    + Modify attributes
-    + Modify geometry
-    + Delete
-
-  - Add the layer in the list with the "Add layer" button.
-
-.. image:: /images/features-edition-table.jpg
+..  image:: /images/interface-add-edition-layer.jpg
    :align: center
-   :width: 80%
+
+- To enable a layer with edition capabilities:
+
+    1. |add_layer|
+    2. *Select the layer* in the drop-down list
+    3. Check the actions you want to activate from:
+        + Create
+        + Modify attributes
+        + Modify geometry
+        + Delete
+
+    4. Optional, you can add a list of groups which are allowed to edit, separated by a comma.
+
+- |edit_layer|
+- |remove_layer|
+- |move_up_down_layer|
+- |field_alias|
 
 Reusing data of edition layers
 ------------------------------

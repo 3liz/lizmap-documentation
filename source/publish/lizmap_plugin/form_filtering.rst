@@ -45,9 +45,6 @@ There is a new tab in the Lizmap plugin which lets you configure the filter inpu
 
 - |edit_layer|
 - |remove_layer|
-
-The order of the lines in the configuration table is taken into account to show the field inputs in the form :
-
 - |move_up_down_layer|
 
 .. image:: /images/user-guide-advanced-form-filtering.jpg
