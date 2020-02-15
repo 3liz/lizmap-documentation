@@ -3,6 +3,8 @@
 Action in a popup
 =================
 
+This is a feature in |lizmap_3_4|.
+
 Principle
 ---------
 
