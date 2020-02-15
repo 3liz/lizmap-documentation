@@ -1,3 +1,5 @@
+.. include:: ../../substitutions.rst
+
 Time Manager - animation of temporal vector layers
 ==================================================
 
