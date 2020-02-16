@@ -103,6 +103,7 @@ In the window :menuselection:`Layer properties --> QGIS Server` allows you to co
 
 In the window :guilabel:`Rendering` tab, enable the :guilabel:`Simplify geometry` and the :guilabel:`Simplify on the provider side if possible` checkbox too.
 Note this can be changed in your global settings for layers added later.
+Read :ref:`server_side_simplification`.
 
 Save your QGIS project
 ======================

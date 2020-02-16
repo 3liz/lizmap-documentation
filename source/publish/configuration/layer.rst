@@ -41,3 +41,11 @@ In :menuselection:`Layer Properties --> Attribute Forms` and clicking on a field
 .. note:: All the editing tools are not yet managed by Lizmap Web Client. Only the following tools are supported: Text edit, Classification, Range, Value Map, Hidden, Check Box, Date/Time, Value Relation, Relation Reference. If the tool is not supported, the web form displays a text input field.
 
 .. note:: To make the field compulsory you have to define it as `NOT NULL` in the properties of the table, at the database level.
+
+.. _server_side_simplification:
+
+Server side simplification
+--------------------------
+
+For PostGIS layers, you can enable server side simplification. This in :menuselection:`Layer properties --> Rendering` for each layers.
+You can change the default behavior for next new layer in  This in :menuselection:`QGIS General properties --> Rendering`.

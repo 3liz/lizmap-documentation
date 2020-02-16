@@ -53,6 +53,7 @@ To optimize your application as much as possible, we suggest you to:
   * be aware of the fact that certain rendering options (e.g. labels, expressions, etc.) can be very demanding from the server
   * if you use PostGIS, optimize it: always add spatial indexes, indexes for filtered fields, for foreign keys, appropriate parameters for the configuration of PostgreSQL, possibly a connection through Unix socket instead of TCP/IP (you can do this through the use of services), etc.
   * use an appropriate image format. For the base layers, where you do not need transparency JPEG is usually the best option: the tiles will be smaller, and faster to download. For other layers, try smaller depth PNGs (16bit or 8bit): for some symbolizations, the visual result may be the same, and the tiles smaller. Have a check to see if the image quality is acceptable in your case
+  * Use server side simplification if possible. Read :ref:`server_side_simplification`.
 
 * Upgrade your server. This is always an option, but is often useless if you did not optimize your project as described above. In any case, a low end server (e.g. 2 Gb RAM, 2 cores at 2.2 GHz) is unsuitable. A fast quad-core with 8 Gb RAM is a reasonable minimum. Avoid installing QGIS server and Lizmap on Windows, it's more complex and slower.
 
