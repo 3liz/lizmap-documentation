@@ -1,3 +1,5 @@
+.. _adding-javascript:
+
 Adding your own JavaScript
 ==========================
 
