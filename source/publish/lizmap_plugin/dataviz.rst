@@ -7,9 +7,16 @@ Dataviz - display some graphs
 Principle
 ---------
 
-With the dataviz panel, you can create a few kinds of graph (scatter, pie, histogram, box, bar histogram2d, polar) with only a few clicks.
+With the dataviz panel, you can create a few kinds of graph with only a few clicks:
 
-In |lizmap_3_4|, the sun burst chart is available.
+- scatter
+- pie
+- histogram
+- box
+- bar
+- histogram2d
+- polar
+- sunburst |lizmap_3_4|
 
 .. image:: /images/publish-01-dataviz-interface.jpg
    :align: center
@@ -23,11 +30,18 @@ Prerequisites
 Configuring the tool
 --------------------
 
-You can easily configure it with the plugin Lizmap in QGIS in the Dataviz panel.
+.. tip::
+    You can start using the plugin ``DataPlotly`` to create your graph in QGIS itself.
+    So you can have a preview about what is possible *more or less* about dataviz with your layers.
+    But keep in mind that Lizmap and DataPlotLy, even if's using the same dataviz engine, features are different between these two tools.
+
+You can easily configure it with the plugin Lizmap in QGIS in the :guilabel:`Dataviz` panel.
 
 .. image:: /images/publish-02-dataviz-interface-plugin.jpg
     :align: center
     :scale: 80%
+
+- |field_alias|
 
 **1** :
 You have the possibility to change the value to **dock**, **bottomdock** or **right-dock** these options change where your dataviz panel will be located in your Lizmap's project. You have 3 positions available, at the right of the screen, bottom and right.
@@ -57,4 +71,9 @@ To add a graph, you have to configure it in this part of the panel.
    * **Display filtered plot in popups of parent layer** : if you check this checkbox, the children of your layer will get the same graph as the parent plot but filtered only for them. It's useful if you want to see the statistics of one entity instead of all.
    * **Only show child** : The main graph will not be shown in the main container and only the filtered graph of the relation of the layer will be displayed in the popup when you select the element.
 
-When all the configuration is done, you have to click on the button **add a layer** at the bottom of the window.
+|add_layer|
+
+Examples
+--------
+
+You can visit the Cats project on https://demo.lizmap.com

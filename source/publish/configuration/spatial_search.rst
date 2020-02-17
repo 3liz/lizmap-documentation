@@ -7,13 +7,13 @@ Spatial searching
 In the map options, you can activate and configure the address search bar, based on external web services (nominatim, google or french IGN). See :ref:`lizmap-config-map` .
 Additionally, you can add spatial searching capability to Lizmap. This means you will allow the users to search within spatial data, such as countries, points of interests, etc. You have two ways to add searching capability in Lizmap:
 
-* For |qgis_2| and |qgis_3|, since |lizmap_3_2|, you can create a table or view ``lizmap_search`` in your PostgreSQL database to store the search data for all your Lizmap projects.
-* For |qgis_2| only and since |lizmap_3_1|, you can use the plugin ``QuickFinder`` to configure a data search per QGIS project.
+* For |qgis_2| and |qgis_3|, you can create a table or view ``lizmap_search`` in your PostgreSQL database to store the search data for all your Lizmap projects.
+* For |qgis_2| only, you can use the plugin ``QuickFinder`` to configure a data search per QGIS project.
 
 PostgreSQL search
 -----------------
 
-When you have many projects and data, the best solution to provide searching capabilities is to set up a dedicated relation (table or view) inside your database. Since |lizmap_3_2|, it's possible to use a PostgreSQL database to store the search data.
+When you have many projects and data, the best solution to provide searching capabilities is to set up a dedicated relation (table or view) inside your database. It's possible to use a PostgreSQL database to store the search data.
 
 Prerequisites
 _____________
@@ -142,7 +142,6 @@ Prerequisites
 _____________
 
 * You must have install at least the **7.x** version of **PHP** in your Lizmap server.
-* It is available only since version |lizmap_3_1|.
 
 Configuration
 _____________

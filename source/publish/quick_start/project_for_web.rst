@@ -48,7 +48,7 @@ Organize and manipulate the layers in the legend:
 
 Add a title to your project and save it in your working directory.
 
-.. note:: In |lizmap_3_0|, if your layer has more than one style, the user will be able to switch between them through the button *Change layer style* at the top of the legend.
+.. note:: If your layer has more than one style, the user will be able to switch between them through the button *Change layer style* at the top of the legend.
 
 Set up your project for Web
 ===============================================================

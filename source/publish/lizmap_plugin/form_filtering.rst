@@ -6,7 +6,7 @@ Form filtering - filter layer data based on field values
 Principle
 ---------
 
-This tool, available since |lizmap_3_3|, displays a form in the left panel, based on some fields, and allow the users to search among the layer data with a variety of form inputs: combo boxes, checkboxes, text inputs with autocompletion, date selector with sliders between the min and max date, etc.
+This tool displays a form in the left panel, based on some fields, and allow the users to search among the layer data with a variety of form inputs: combo boxes, checkboxes, text inputs with autocompletion, date selector with sliders between the min and max date, etc.
 
 It works only for **database** layers: PostgreSQL (recommended), Spatialite and GeoPackage, since Lizmap should query the data to retrieve:
 
