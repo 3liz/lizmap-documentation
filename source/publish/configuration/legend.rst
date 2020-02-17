@@ -21,7 +21,10 @@ You can exclude layers of your publication with the :guilabel:`QGIS Server` tab 
 
 To overcome this lack Lizmap offers a simple way to not display some layers.
 
-Not to display one or more layers of QGIS project in the legend of the Web map, just put these layers in a group called ``hidden``. All the layers in this group will not be visible in the Web application.
+Not to display one or more layers of QGIS project in the legend of the Web map, there is two ways:
+
+* Create a group in your legend called ``hidden`` an put your layer into this group. This group (and its layers) won't be displayed in Lizmap.
+* Or use the check box :guilabel:`Hide in legend` in :menuselection:`Lizmap --> Layers` for the specific layer.
 
 This feature can be used for:
 

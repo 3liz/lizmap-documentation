@@ -52,31 +52,38 @@ A link will be displayed automatically at the bottom of the popup. It's not poss
 Allow printing of external baselayers
 -------------------------------------
 
-The Lizmap plugin *Baselayers* tab allows you to select and add external baselayers (:ref:`lizmap-config-baselayers`). These external baselayers are not part of the QGIS project, default print function does not integrate them.
+The Lizmap plugin :guilabel:`Baselayers` tab allows you to select and add external baselayers (:ref:`lizmap-config-baselayers`).
+These external baselayers are not part of the QGIS project, default print function does not integrate them.
 
 To overcome this lack Lizmap offers an easy way to print a group or layer instead of the external baselayer.
+To be able to print a layer which is visible in Lizmap Web Client only:
 
-To add to printing a layer that replaces an external baselayer, simply add to the QGIS project a group or layer whose name is part of the following list:
+* You need to add the equivalent layer in the QGIS project.
+* You might need to hide it from the legend, see :ref:`hide-layers`.
+* Rename the layer to one of these names:
 
-* *osm-mapnik* for OpenStreetMap
-* *osm-mapquest* for MapQuest OSM
-* *osm-cyclemap* for OSM CycleMap
-* *google-satellite* for Google Satellite
-* *google-hybrid* for Google Hybrid
-* *google-terrain* for Google Terrain
-* *google-street* for Google Streets
-* *bing-road* for Bing Road
-* *bing-aerial* for Bing Aerial
-* *bing-hybrid* for Bing Hybrid
-* *ign-scan* for IGN Scan
-* *ign-plan* for IGN Plan
-* *ign-photo* for IGN Photos
-* *ign-cadastre* for IGN Cadastre
+* ``osm-mapnik`` for OpenStreetMap
+* ``osm-stamen-toner`` for OSM Stamen Toner
+* ``osm-cyclemap`` for OSM CycleMap
+* ``google-satellite`` for Google Satellite
+* ``google-hybrid`` for Google Hybrid
+* ``google-terrain`` for Google Terrain
+* ``google-street`` for Google Streets
+* ``bing-road`` for Bing Road
+* ``bing-aerial`` for Bing Aerial
+* ``bing-hybrid`` for Bing Hybrid
+* ``ign-scan`` for IGN Scan
+* ``ign-plan`` for IGN Plan
+* ``ign-photo`` for IGN Photos
+* ``ign-cadastre`` for IGN Cadastre
 
-and then add your layer(s) you want to print as base.
 
 .. note:: The use of this method must be in compliance with the licensing of external baselayers used (:ref:`lizmap-config-baselayers`).
 
-For OpenStreetMap baselayers, it is possible to use an XML file for GDAL to exploit the OpenStreetMap tile services. Its use is described in the GDAL documentation https://gdal.org/frmt_wms.html or in this blog post https://www.3liz.com/blog/rldhont/index.php?post/2012/07/17/OpenStreetMap-Tiles-in-QGIS (beware, EPSG code should be 3857).
+.. warning::
+    If it's not working, check that your server is able to access to the internet. These base layers are provided online only.
+    Some proxy or firewalls might block some requests to the internet.
 
-By cons, if this layer has to replace an external baselayer, it must be accessible to QGIS-Server but should not be accessible to the user in Lizmap Web Client. So it must be hidden. See chapter :ref:`hide-layers`.
+To add these layers, you can use existing WMS/WMTS services, XYZ providers (with QuickMapServices), local files...
+
+For OpenStreetMap baselayers, it is possible to use an XML file for GDAL to exploit the OpenStreetMap tile services. Its use is described in the GDAL documentation https://gdal.org/frmt_wms.html or in this blog post https://www.3liz.com/blog/rldhont/index.php?post/2012/07/17/OpenStreetMap-Tiles-in-QGIS (beware, EPSG code should be 3857).

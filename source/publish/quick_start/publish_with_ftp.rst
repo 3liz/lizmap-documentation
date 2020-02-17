@@ -32,4 +32,4 @@ You can use these tools to make manual changes to the remote directory:
 
 * **made a backup**
 * **remove contents**
-* **overwrite files manually**: QGIS project (``.qgs``) and Lizmap configuration (``.qgs.cfg``).
+* **overwrite files manually**: QGIS project :file:`*.qgs` and Lizmap configuration :file:`*.qgs.cfg`.
