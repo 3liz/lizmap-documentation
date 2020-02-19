@@ -8,7 +8,7 @@ Principle
 
 Lizmap is designed to show spatial data in the main map, and you can propose users to see an object data through the "popup" feature (a small popup containing the objects data is shown whenever the user clicks on the map ). See :ref:`popup`
 
-Sometimes this is not enough, and as a map editor, you would like the user to see all the data of a specific layer, as you can do in QGIS by opening the attribute table. Since Lizmap 2.11, you can propose such a feature for any vector layer published in you map. (This feature has been heavily enhanced since Lizmap 3.0. Many features described underneath are only available for Lizmap 3.0 )
+Sometimes this is not enough, and as a map editor, you would like the user to see all the data of a specific layer, as you can do in QGIS by opening the attribute table.
 
 Prerequisites
 -------------

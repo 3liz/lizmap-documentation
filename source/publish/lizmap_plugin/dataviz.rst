@@ -49,6 +49,21 @@ You have the possibility to change the value to **dock**, **bottomdock** or **ri
 **2**:
 Here, you have the possibility to write in HTML to change the style of the container of your charts. If you are proficient in the HTML language, there are a lot of possibilities and you can customize your container the way you want.
 
+For instance, this bootstrap HTML code will produce the layout below:
+
+.. code-block:: html
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span6">$0</div>
+            <div class="span6">$1</div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">$2</div>
+        </div>
+    </div>
+
+
 .. image:: /images/publish-03-dataviz-html-example.jpg
    :align: center
    :scale: 80%
