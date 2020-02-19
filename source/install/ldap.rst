@@ -20,10 +20,10 @@ or
 Then, in order to enable the LDAP support Lizmap, you have to change the
 authentication method in the configuration as follows.
 
-Enabling ldap into Lizmap 3.3
-==============================
+Enabling LDAP
+=============
 
-In the localconfig.ini.php, you have to set these parameters:
+In the :file:`localconfig.ini.php`, you have to set these parameters:
 
 .. code-block:: ini
 
