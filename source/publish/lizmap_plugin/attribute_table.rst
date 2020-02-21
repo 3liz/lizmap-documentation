@@ -41,6 +41,19 @@ To add a layer to this tool:
 - |move_up_down_layer|
 - |field_alias|
 
+Order of fields
+---------------
+
+Lizmap is reusing the order of the fields defined in the attribute table.
+
+1. Open your attribute table.
+2. Right click on a column header.
+3. Click :guilabel:`organize Columns…`
+4. Drag and drop columns.
+
+..  image:: /images/interface-organize-attributes.jpg
+   :align: center
+
 Using with relations
 --------------------
 
