@@ -3,6 +3,12 @@
 Legend
 ======
 
+Groups
+------
+
+You can create groups in your legend. Lizmap will use them too in the web interface.
+
+
 Theme switcher
 --------------
 
