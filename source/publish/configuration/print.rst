@@ -83,8 +83,20 @@ To be able to print a layer which is visible in Lizmap Web Client only:
 .. warning::
     If it's not working, check that your server is able to access to the internet. These base layers are provided online only.
     Some proxy or firewalls might block some requests to the internet. If your server is behind a proxy, check that QGIS Server is configured
-    with the proxy settings (using the file :file:`QGIS3.ini` and the section ``[proxy]``).
+    with the proxy settings (using the file :file:`QGIS3.ini` and the section ``[proxy]``). Refer to the QGIS Server documentation for these settings.
 
 To add these layers, you can use existing WMS/WMTS services, XYZ providers (with QuickMapServices), local files...
 
 For OpenStreetMap baselayers, it is possible to use an XML file for GDAL to exploit the OpenStreetMap tile services. Its use is described in the GDAL documentation https://gdal.org/frmt_wms.html or in this blog post https://www.3liz.com/blog/rldhont/index.php?post/2012/07/17/OpenStreetMap-Tiles-in-QGIS (beware, EPSG code should be 3857).
+
+Adding your own images in a layout
+----------------------------------
+
+If you add some custom images in a layout, such as custom North arrow or your organization logo, the server needs to access these images too.
+
+* Either use an image with an URL ``http://`` so that your image is accessible on both your local computer and on the server.
+* Or use QGIS expression to build a compatible path on both desktop and server:
+
+    1. Put your images in the :file:`media` directory (see :ref:`media`), this is not mandatory, you can put it next to your project file.
+    2. Use an QGIS expression ``@project_home || '/media/organization_logo.png'``.
+    3. Use slash even if you are on Windows.
