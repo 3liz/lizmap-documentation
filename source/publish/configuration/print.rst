@@ -62,21 +62,20 @@ To be able to print a layer which is visible in Lizmap Web Client only:
 * You might need to hide it from the legend, see :ref:`hide-layers`.
 * Rename the layer to one of these names:
 
-* ``osm-mapnik`` for OpenStreetMap
-* ``osm-stamen-toner`` for OSM Stamen Toner
-* ``osm-cyclemap`` for OSM CycleMap
-* ``google-satellite`` for Google Satellite
-* ``google-hybrid`` for Google Hybrid
-* ``google-terrain`` for Google Terrain
-* ``google-street`` for Google Streets
-* ``bing-road`` for Bing Road
-* ``bing-aerial`` for Bing Aerial
-* ``bing-hybrid`` for Bing Hybrid
-* ``ign-scan`` for IGN Scan
-* ``ign-plan`` for IGN Plan
-* ``ign-photo`` for IGN Photos
-* ``ign-cadastre`` for IGN Cadastre
-
+    - ``osm-mapnik`` for OpenStreetMap
+    - ``osm-stamen-toner`` for OSM Stamen Toner
+    - ``osm-cyclemap`` for OSM CycleMap
+    - ``google-satellite`` for Google Satellite
+    - ``google-hybrid`` for Google Hybrid
+    - ``google-terrain`` for Google Terrain
+    - ``google-street`` for Google Streets
+    - ``bing-road`` for Bing Road
+    - ``bing-aerial`` for Bing Aerial
+    - ``bing-hybrid`` for Bing Hybrid
+    - ``ign-scan`` for IGN Scan
+    - ``ign-plan`` for IGN Plan
+    - ``ign-photo`` for IGN Photos
+    - ``ign-cadastre`` for IGN Cadastre
 
 .. note:: The use of this method must be in compliance with the licensing of external baselayers used (:ref:`lizmap-config-baselayers`).
 
