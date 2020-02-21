@@ -82,7 +82,8 @@ To be able to print a layer which is visible in Lizmap Web Client only:
 
 .. warning::
     If it's not working, check that your server is able to access to the internet. These base layers are provided online only.
-    Some proxy or firewalls might block some requests to the internet.
+    Some proxy or firewalls might block some requests to the internet. If your server is behind a proxy, check that QGIS Server is configured
+    with the proxy settings (using the file :file:`QGIS3.ini` and the section ``[proxy]``).
 
 To add these layers, you can use existing WMS/WMTS services, XYZ providers (with QuickMapServices), local files...
 
