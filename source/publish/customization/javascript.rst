@@ -93,7 +93,7 @@ Here is a very small example allowing you to disable right click in Lizmap. Just
 
 * If you want this code to be executed for all projects of your repository, you have to copy the file in the directory :file:`/home/data/rep1/media/js/default/` rather than in :file:`/home/data/rep1/media/js/myproject/`.
 
-Here is a very useful example allowing you to send current login User-ID (and/or other user data) to PostgreSQL table column, using edition tool:
+Here is a very useful example allowing you to send current login User-ID (and/or other user data) to PostgreSQL table column (syntax -> lizmap_variable: 'your_receiving_field'), using edition tool:
 
 .. code-block:: javascript
 
