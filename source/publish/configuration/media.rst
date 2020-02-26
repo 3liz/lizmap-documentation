@@ -92,7 +92,9 @@ Here are the display rules in the popup:
 
 * If you are using a :guilabel:`lizmap` popup, ``${name_of_the_field}`` will have the full URL to the media, starting by ``http``. This needs to be encapsulated to some HTML, such as ``<img />`` or ``<a href></a>``.
 
-* Then if your are using a :guilabel:`qgis` popup, ``[% "name_of_the_field" %]`` will return only the value of the field, like ``media/test.pdf``. You need to use some HTML, such as ``<a href="[% "name_of_field" %]">Link</a>``.
+* Then if your are using a :guilabel:`qgis` popup:
+    - ``[% "name_of_the_field" %]`` will return only the value of the field, like ``media/test.pdf``.
+    - You need to use some HTML, such as ``<a href="[% "name_of_field" %]">Link</a>``.
 
 Illustration
 ____________
