@@ -100,11 +100,12 @@ Here is a very useful example allowing you to send current login User-ID (and/or
    var formPrefix = 'jforms_view_edition';
 
    // Name of the QGIS vector layer fields which must contain the user info
+   // In the list below, replace the right side by your own fields in Lizmap
    var userFields = {
-      login: 'lizmap_user_login',
-      firstname: 'lizmap_user_firstname',
-      lastname: 'lizmap_user_lastname',
-      organization: 'lizmap_user_organization'
+      login: 'your_lizmap_user_login_field',
+      firstname: 'your_lizmap_user_firstname_field',
+      lastname: 'your_lizmap_user_lastname_field',
+      organization: 'your_lizmap_user_organization_field'
    };
 
 
