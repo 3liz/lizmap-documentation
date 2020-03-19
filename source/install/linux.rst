@@ -2,7 +2,7 @@
 Installing Lizmap Web Client on Linux Debian or Ubuntu
 ===============================================================
 
-Generic Server Configuration
+Generic Server Configuration with Nginx server
 ===============================================================
 
 This documentation provides an example for configuring a server with the Debian 9 distribution. We assume you have base system installed and updated.
@@ -97,6 +97,40 @@ Enable the virtual host you just created:
 .. code-block:: bash
 
    ln -s /etc/nginx/sites-available/lizmap.conf /etc/nginx/sites-enabled/lizmap.conf
+
+Generic Server Configuration with Apache2 server
+===============================================================
+
+To install QGIS-server on apache refer to the official QGIS documentation https://docs.qgis.org/3.10/en/docs/training_manual/qgis_server/install.html
+
+Installing necessary packages
+--------------------------------------------------------------
+
+.. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.4 installation)
+
+.. note:: At least the current version supports PHP 7, so it should be straight foreward to install it on current debian 9 or ubuntu 16.04.
+
+.. code-block:: bash
+
+   sudo su # only necessary if you are not logged in as root
+   apt update # update package lists
+   
+   
+On debian 9, install these packages:
+
+.. code-block:: bash
+
+   apt-get install php7.0-fpm php7.0-cli php7.0-bz2 php7.0-curl php7.0-gd php7.0-intl php7.0-json php7.0-mbstring php7.0-pgsql php7.0-sqlite3 php7.0-xml php7.0-ldap
+   
+
+On Ubuntu 18.04 LTS
+
+.. code-block:: bash
+
+   apt install xauth htop curl libapache2-mod-fcgid libapache2-mod-php7.3 php7.3-cgi php7.3-gd php7.3-sqlite php7.3-curl php7.3-xmlrpc python-simplejson software-properties-common
+
+
+
 
 Enable geolocation
 -------------------
