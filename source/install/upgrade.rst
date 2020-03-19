@@ -71,13 +71,12 @@ Delete Jelix temporary files
 
 .. code-block:: bash
 
-   rm -rf /var/www/$MYAPP-$VERSION/temp/lizmap/*
+   rm -rf temp/lizmap/*
 
 Redefine the rights to the application files
 -------------------------------------------------------
 
 .. code-block:: bash
 
-   cd /var/www/$MYAPP-$VERSION
-   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+   sudo chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+   sudo chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
