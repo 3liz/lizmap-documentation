@@ -269,9 +269,6 @@ Keep this URL, we will use it in the Lizmap admin panel.
 Retrieve and install Lizmap Web Client
 =======================================
 
-.. code-block:: bash
-
-   cd /var/www/
 
 With ZIP file
 --------------
@@ -281,20 +278,44 @@ Retrieve the latest available stable version from our `Github release page <http
 
 .. code-block:: bash
 
-   cd /var/www/
+   
    # Options
    VERSION=3.4.0
+   # chose location where download your zip (e.g. /var/www or your home)
+   LOCATION=/var/www 
    # Archive recovery with wget
+   cd $LOCATION
    wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
    # Unzip archive
    unzip $VERSION.zip
+
+
+Or clone the repository and than use a specific version (it is a better solution for future update)
+
+.. code-block:: bash
+
+   
+   # Options
+   VERSION=3.4.0
+   # chose location where create your clone (e.g. /var/www or your home)
+   LOCATION=/var/www 
+   
+   # Clone repository
+   cd $LOCATION
+   git clone https://github.com/3liz/lizmap-web-client.git
+   # go to a specific release
+   git checkout $VERSION
+   
+   
+   
+   
    # virtual link for http://localhost/lizmap/
-   ln -s /var/www/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lizmap
+   ln -s $LOCATION/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lizmap
    # Remove archive
    rm $VERSION.zip
 
 
-Set rights for Nginx, so php scripts could write some temporary files or do changes.
+Set rights for Nginx (or Apache), so php scripts could write some temporary files or do changes.
 
 .. code-block:: bash
 
