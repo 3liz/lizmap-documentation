@@ -116,14 +116,14 @@ Installing necessary packages
 
    sudo su # only necessary if you are not logged in as root
    apt update # update package lists
-   
-   
+
+
 On debian 10, install these packages:
 
 .. code-block:: bash
 
    apt install php7.3-fpm php7.3-cli php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-pgsql php7.3-sqlite3 php7.3-xml php7.3-ldap
-   
+
 
 On Ubuntu 18.04 LTS
 
@@ -282,9 +282,6 @@ Creating a user account
 Installing sources of Lizmap Web Client
 =======================================
 
-.. code-block:: bash
-
-   cd /var/www/
 
 With ZIP file
 --------------
@@ -296,15 +293,39 @@ Retrieve the latest available stable version from our `Github release page <http
 
 .. code-block:: bash
 
-   cd /var/www/
+
    # Options
    VERSION=3.4.0
+   # chose location where download your zip (e.g. /var/www or your home)
+   LOCATION=/var/www
    # Archive recovery with wget
+   cd $LOCATION
    wget https://github.com/3liz/lizmap-web-client/releases/download/$VERSION/lizmap-web-client-$VERSION.zip
    # Unzip archive
    unzip $VERSION.zip
+
+
+Or clone the repository and than use a specific version (it is a better solution for future update)
+
+.. code-block:: bash
+
+
+   # Options
+   VERSION=3.4.0
+   # chose location where create your clone (e.g. /var/www or your home)
+   LOCATION=/var/www
+
+   # Clone repository
+   cd $LOCATION
+   git clone https://github.com/3liz/lizmap-web-client.git
+   # go to a specific release
+   git checkout $VERSION
+
+
+
+
    # virtual link for http://localhost/lizmap/
-   ln -s /var/www/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lizmap
+   ln -s $LOCATION/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lizmap
    # Remove archive
    rm $VERSION.zip
 
