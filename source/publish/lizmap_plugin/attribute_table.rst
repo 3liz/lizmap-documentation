@@ -54,6 +54,14 @@ Lizmap is reusing the order of the fields defined in the attribute table.
 ..  image:: /images/interface-organize-attributes.jpg
    :align: center
 
+Download data
+-------------
+
+By adding the layer in the attribute table tool, this will also enable the download capability on that layer. By default, only GeoJSON and GML are available. By installing the WfsOutputExtension plugin on QGIS Server, you can add more formats such as Geopackage, ODS, CSV, XLSX …. Read https://github.com/3liz/qgis-wfsOutputExtension
+
+..  image:: /images/user-guide-wfs-output-extension.jpg
+   :align: center
+
 Using with relations
 --------------------
 
