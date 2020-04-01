@@ -34,7 +34,7 @@ To allow data editing in Lizmap Web Client, you must:
 * Have vector layer with PostGIS or Spatialite.
 * Configure the editing tool for the layer in :menuselection:`Layer Properties --> Attributs Form`. This is not required but recommended to control the data entered by users. See :ref:`form`.
 * |wfs_layer|
-* Despite we want to edit the layer, there is no need to use :guilabel:`Update`, :guilabel:`Insert` and :guilabel:`Delete` checkboxes. Lizmap does not use WFS-T. Lizmap will make the edit directly on the datasource and this is configured in the panel described below.
+* Despite we want to edit the layer, there is no need to use :guilabel:`Update`, :guilabel:`Insert` and :guilabel:`Delete` checkboxes in the WFS table in the :guilabel:`QGIS Server` tab. Lizmap does not use WFS-T. Lizmap will make the edit directly on the datasource. The configuration is done only in the panel described below.
 
 .. note:: Be careful if your layer contains some Z or M values, unfortunately Lizmap will set them to "0" which is the default value when saving to the database.
 
