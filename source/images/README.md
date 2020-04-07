@@ -6,3 +6,8 @@ Only add progressive jpg images (better for web). You can convert png to jpg wit
 ```bash
 convert -strip -interlace plane -quality 80 SOURCE.png DESTINATION.jpg
 ```
+
+For batch
+```bash
+for i in *.png ; do convert -strip -interlace plane -quality 80 "$i" "${i%.*}.jpg" ; done && ls *.png | xargs rm && git checkout logo.png logo_big.png
+```
