@@ -16,6 +16,9 @@ Many layers can be configured in this tool. If the checkbox :guilabel:`Auto-play
 Configuring the tool
 --------------------
 
+At the layer level
+^^^^^^^^^^^^^^^^^^
+
 ..  image:: /images/interface-add-atlas.jpg
    :align: center
 
@@ -31,13 +34,14 @@ Configuring the tool
     8. chose between a zoom on the feature or to make it the center of your map
     9. you can chose to display the popup in the feature in the atlas container or not
     10. check if you want to activate filter on the feature selected by the atlas, it will hide all other features of the layer and only show the one selected
+    11. you can select the duration between each step
 
 - |edit_layer|
 - |remove_layer|
 - |move_up_down_layer|
 
-- Atlas options:
+At the project level
+^^^^^^^^^^^^^^^^^^^^
 
     - check if you want to open the atlas tool when you open your project
-    - you can select the duration between each step when your atlas is in auto-play mode for the first layer of the table
     - check if you want to launch the auto-play mode when you open your project
