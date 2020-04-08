@@ -5,7 +5,7 @@ Lizmap QGIS plugin
 This section is listing panels available in the Lizmap QGIS plugin.
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 3
 
   locate_by_layer
   attribute_table
