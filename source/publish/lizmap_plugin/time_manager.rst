@@ -39,7 +39,7 @@ At the layer level
     2. One layer with date/time capabilities.
     3. The start column with date/time.
     4. The end column with date/time. This is optional.
-    5 .Date/time resolution of the chosen attribute(s).
+    5. Date/time resolution of the chosen attribute(s).
 
 - |edit_layer|
 - |remove_layer|

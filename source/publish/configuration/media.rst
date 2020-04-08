@@ -86,8 +86,8 @@ Here are the display rules in the popup:
 
 * If you are using a :guilabel:`auto` popup:
 
-    - If the path is a picture, the image will be displayed in the popup. Clicking on the picture will display the original image in a new tab.
-    - If the path is a text file or HTML file, the file contents will be displayed in the popup.
+    - If the path points to a picture, the image will be displayed in the popup. Clicking on the picture will display the original image in a new tab.
+    - If the path points to a text file or HTML file, the file contents will be displayed in the popup.
     - For any other file types, the popup will display a link to the document that users can download by clicking on the link.
 
 * If you are using a :guilabel:`lizmap` popup, ``${name_of_the_field}`` will have the full URL to the media, starting by ``http``. This needs to be encapsulated to some HTML, such as ``<img />`` or ``<a href></a>``.
