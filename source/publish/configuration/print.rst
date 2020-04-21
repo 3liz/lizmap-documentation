@@ -88,6 +88,8 @@ To add these layers, you can use existing WMS/WMTS services, XYZ providers (with
 
 For OpenStreetMap baselayers, it is possible to use an XML file for GDAL to exploit the OpenStreetMap tile services. Its use is described in the GDAL documentation https://gdal.org/frmt_wms.html or in this blog post https://www.3liz.com/blog/rldhont/index.php?post/2012/07/17/OpenStreetMap-Tiles-in-QGIS (beware, EPSG code should be 3857).
 
+For IGN baselayers, you can use IGN's WMS or WMTS url. The key used for this url need to be protected by referer and IP. In referer, you have to indicate your projects page's URL like this : ``.*your-url.fr.*``. In IP, you have to indicate your Lizmap server's IP and your computer's IP (to open IGN's WMS url in QGIS on your computer). Both IP addresses must be separated by a comma. Beware, if you use IGN WMS or WMTS layers, QGIS project's EPSG code should be 3857.
+
 Adding your own images in a layout
 ----------------------------------
 
