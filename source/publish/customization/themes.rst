@@ -26,7 +26,8 @@ The principle is:
 Prerequisites
 -------------
 
-This function needs to be activated by the administrator and uses the directory :file:`media`. Read how to use :ref:`media` folder in Lizmap.
+* This function needs to be activated by the administrator of the Lizmap instance.
+* The :file:`media` directory. Read how to use :ref:`media` folder in Lizmap.
 
 Configuring the tool
 --------------------

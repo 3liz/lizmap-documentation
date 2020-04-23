@@ -9,6 +9,15 @@ Principle
 Adding some JavaScript is useful for a variety of advanced usage. For instance, you can avoid people being able to download
 elements of the page by right clicking on them, and of course much more.
 
+Prerequisites
+-------------
+
+* This function needs to be activated by the administrator of the Lizmap instance.
+* The :file:`media` directory. Read how to use :ref:`media` folder in Lizmap.
+
+Configuring the tool
+--------------------
+
 * In your repository (e.g. :file:`/home/data/repo1/myproject.qgs`), you should have these directories::
 
     media
