@@ -6,7 +6,7 @@ Creating simple themes
 Principle
 ---------
 
-It is possible to create themes for all maps of a repository or for a single map within a repository. This function needs to be activated by the administrator and uses the directory :file:`media`. Read how to use :ref:`media` in Lizmap.
+It is possible to create themes for all maps of a repository or for a single map within a repository.
 
 The principle is:
 
@@ -22,6 +22,14 @@ The principle is:
        |-- map_project_file_name1
        |-- map_project_file_name2
        |-- etc
+
+Prerequisites
+-------------
+
+This function needs to be activated by the administrator and uses the directory :file:`media`. Read how to use :ref:`media` folder in Lizmap.
+
+Configuring the tool
+--------------------
 
 In order to simplify the creation of a theme for a repository or a map, Lizmap allows you to obtain the default theme from the application, through the request: ``index.php/view/media/getDefaultTheme``.
 
@@ -49,7 +57,10 @@ Once downloaded the zipfile, you can:
 
 .. warning:: The files and directories must be readable (755:644)
 
-To preview your results just add ``&theme=yourtheme`` at the end of your URL (e.g. ``https://demo.lizmap.3liz.com/index.php/view/map/?repository=montpellier&project=montpellier&theme=yourtheme``).
+
+.. tip::
+    To preview your results without deploying it in production, you can add your theme in the :file:`lizmap/www/themes`.
+    Add ``&theme=yourtheme`` at the end of your URL (e.g. ``https://your.lizmap.instance/index.php/view/map/?repository=montpellier&project=montpellier&theme=yourtheme``).
 
 Once your theme is ready, you can just publish it copying it in the directory ``media``.
 
