@@ -49,6 +49,9 @@ Here are the detailed steps to configure this feature:
     * It is possible to set ``all`` as the value in some lines to disable the filter: All users will see the data for these lines.
     * If the value in this column for a row does not correspond to a user group, then the data will be displayed for no user.
 
+..  image:: /images/interface-add-filter-by-login.jpg
+   :align: center
+
 - Add the layer in the table :guilabel:`Filter Data by User` panel:
 
     1. .. include:: ../../shared/add_layer.rst
