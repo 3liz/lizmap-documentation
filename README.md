@@ -13,7 +13,9 @@ Contributing to the english documentation
 
 Clone the repository and edit files into `sources/`.
 
-The format is the ReStructured Text format. 
+The format is the ReStructured Text format.
+
+Read [CONTRIBUTING.md](./CONTRIBUTING.md) about the structure.
 
 See below to build the documentation into HTML to see the result.
 
