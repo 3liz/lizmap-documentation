@@ -60,12 +60,18 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
     1. .. include:: ../../shared/add_layer.rst
     2. *Select the layer* in the drop-down list
     3. Check the actions you want to activate from:
-        + Create
-        + Modify attributes
-        + Modify geometry
-        + Delete
-
+        + :guilabel:`Create`
+        + :guilabel:`Edit attributes`
+        + :guilabel:`Edit geometry`
+        + :guilabel:`Delete`
     4. Optional, you can add a list of groups which are allowed to edit, separated by a comma.
+    5. Snapping can be activated if you select at least one layer in the layer list.
+        + .. include:: ../../shared/wfs_layer.rst
+    6. If one layer is selected above, at least one checkbox must be used :
+        + :guilabel:`Vertices`
+        + :guilabel:`Segments`
+        + :guilabel:`Intersections`
+    7. It's possible to set the tolerance for the snapping.
 
 - .. include:: ../../shared/edit_layer.rst
 - .. include:: ../../shared/remove_layer.rst
