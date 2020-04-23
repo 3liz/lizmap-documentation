@@ -27,7 +27,7 @@ We are using [Transifex](https://www.transifex.com/3liz-1/lizmap-documentation/)
 to translate the documentation. So if you want to contribute to the translation,
 create an account on the Transifex web site, and translate different strings.
 
-We retrieve regurlarly translation and store them into the `i18n/` directory. 
+We retrieve regularly translation and store them into the `i18n/` directory. 
 
 We don't recommend to contribute on translations by doing Pull Request on
 github, as it may be difficult to merge content coming from Transifex and your

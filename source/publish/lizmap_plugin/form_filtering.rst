@@ -24,7 +24,7 @@ You can see a video with an example: https://vimeo.com/331395259
 Prerequisites
 -------------
 
-|wfs_layer|
+.. include:: ../../shared/wfs_layer.rst
 
 Configuring the tool
 --------------------
@@ -33,7 +33,7 @@ There is a new tab in the Lizmap plugin which lets you configure the filter inpu
 
 - You need to add a line in the plugin table for each field you need to add in the filter form. For each field, you need to configure some options:
 
-    1. |add_layer|
+    1. .. include:: ../../shared/add_layer.rst
     2. **Layer**: the source layer.
     3. **Title**: the title to give to the input, which will be displayed above the form input. For example "Choose a category" for a layer field called "category".
     4. **Type**: the type of the form input, among one of the following: **Text, Unique Values, Date, Numeric**.
@@ -43,9 +43,9 @@ There is a new tab in the Lizmap plugin which lets you configure the filter inpu
     8. * **Format**: the format of the **Unique values** type only. It can be **select**, which will show a combo box, or **checkboxes** which will show one checkbox for each distinct value. The distinct values are dynamically queried by Lizmap Web Client.
     9. **Splitter**: for the **Unique values** type only. Use if you want to split the field values by a separator. Ex: ``culture, environment`` can be split into ``culture`` and ``environment`` with the splitter **`, `**.
 
-- |edit_layer|
-- |remove_layer|
-- |move_up_down_layer|
+- .. include:: ../../shared/edit_layer.rst
+- .. include:: ../../shared/remove_layer.rst
+- .. include:: ../../shared/move_up_down_layer.rst
 
 .. image:: /images/user-guide-advanced-form-filtering.jpg
    :align: center

@@ -13,7 +13,7 @@ Sometimes this is not enough, and as a map editor, you would like the user to se
 Prerequisites
 -------------
 
-|wfs_layer|
+.. include:: ../../shared/wfs_layer.rst
 
 Configuring the tool
 --------------------
@@ -25,7 +25,7 @@ In the **Tools** tab of Lizmap plugin dialog, there is a group called "Attribute
 
 To add a layer to this tool:
 
-    1. |add_layer|
+    1. .. include:: ../../shared/add_layer.rst
     2. **Layer**: Choose one of the vector layers (spatial or not). This can be any vector layer format : GeoJSON, Shapefile, PostGIS, CSV, etc.
     3. **Unique ID**: The attribute table tool needs to be able to defined each feature as unique. We strongly advise you to add such a field if your layer has not one yet. Usually the unique ID field contains **integers**. If the layer do not have this kind of field, you can easily create it with the *Field calculator*. Choose the correct field with the combo box.
     4. **Fields to hide**: You have 2 ways of hiding fields in the published attribute table.
@@ -36,10 +36,10 @@ To add a layer to this tool:
     6. Let the :guilabel:`Hide in child subpanels` unchecked. This is for relation.
     7. Let the :guilabel:`Hide layer in the list` unchecked. This is for relation.
 
-- |edit_layer|
-- |remove_layer|
-- |move_up_down_layer|
-- |field_alias|
+- .. include:: ../../shared/edit_layer.rst
+- .. include:: ../../shared/remove_layer.rst
+- .. include:: ../../shared/move_up_down_layer.rst
+- .. include:: ../../shared/field_alias.rst
 
 Order of fields
 ---------------

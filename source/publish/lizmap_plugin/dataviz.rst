@@ -26,7 +26,7 @@ With the dataviz panel, you can create a few kinds of graph with only a few clic
 Prerequisites
 -------------
 
-|wfs_layer|
+.. include:: ../../shared/wfs_layer.rst
 
 Configuring the tool
 --------------------
@@ -43,7 +43,7 @@ At the layer level
 
 - To enable a layer with dataviz capabililities:
 
-    1. |add_layer|
+    1. .. include:: ../../shared/add_layer.rst
     2. Select the type of chart to add. According to your choices, the form will adapt it self.
     3. **Title** : Here you can write the title you want for your chart.
     4. **Description** : The description of the chart. You can include HTML.
@@ -57,10 +57,10 @@ At the layer level
     12. **Display the legend**, sometimes, the legend is not necessary.
     13. **Display plot only when the layer is visible**.
 
-- |edit_layer|
-- |remove_layer|
-- |move_up_down_layer|
-- |field_alias|
+- .. include:: ../../shared/edit_layer.rst
+- .. include:: ../../shared/remove_layer.rst
+- .. include:: ../../shared/move_up_down_layer.rst
+- .. include:: ../../shared/field_alias.rst
 
 .. image:: /images/interface-publisher-dataviz.jpg
     :align: center

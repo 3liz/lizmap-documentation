@@ -51,13 +51,13 @@ Here are the detailed steps to configure this feature:
 
 - Add the layer in the table :guilabel:`Filter Data by User` panel:
 
-    1. |add_layer|
+    1. .. include:: ../../shared/add_layer.rst
     2. Select layer from the dropdown list
     3. Select the field with the ID
     4. Check the box if the field contains user ID, instead of group ID
 
-- |edit_layer|
-- |remove_layer|
+- .. include:: ../../shared/edit_layer.rst
+- .. include:: ../../shared/remove_layer.rst
 
 .. warning::
     Disable the client cache and cache server for all filtered layers. Otherwise, the data displayed will not be updated between each connection or user logout!

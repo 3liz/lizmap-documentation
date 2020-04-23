@@ -24,7 +24,7 @@ At the layer level
 
 - For setting a atlas layer:
 
-    1. |add_layer|
+    1. .. include:: ../../shared/add_layer.rst
     2. you need to chose the layer you want your atlas on
     3. select the primary key field, it must be an integer
     4. check if you want to display the layer description in the dock of your atlas
@@ -36,9 +36,9 @@ At the layer level
     10. check if you want to activate filter on the feature selected by the atlas, it will hide all other features of the layer and only show the one selected
     11. you can select the duration between each step
 
-- |edit_layer|
-- |remove_layer|
-- |move_up_down_layer|
+- .. include:: ../../shared/edit_layer.rst
+- .. include:: ../../shared/remove_layer.rst
+- .. include:: ../../shared/move_up_down_layer.rst
 
 At the project level
 ^^^^^^^^^^^^^^^^^^^^

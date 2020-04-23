@@ -21,7 +21,7 @@ When the Web map user selects one name in this list, the map will automatically 
 Prerequisites
 -------------
 
-|wfs_layer|
+.. include:: ../../shared/wfs_layer.rst
 
 Configuring the tool
 --------------------
@@ -31,7 +31,7 @@ Configuring the tool
 
 To add a layer to this tool:
 
-    1. |add_layer|
+    1. .. include:: ../../shared/add_layer.rst
     2. **choose the layer** with the first dropdown from the list of the project vector layers
     3. then **the column that contains the label** you want to display in the dropdown list
     4. if you want to add pre-filter your data if a optional group by, use the :guilabel:`Optional group by` field.
@@ -39,9 +39,9 @@ To add a layer to this tool:
     6. If you set a value above 0, autocompletion will be used after this amount of characters while the user types. The classical combobox will be replaced by a editable text input.
     7. If Lizmap must trigger the filter on the layer. Only the selected feature will be visible on the map.
 
-- |edit_layer|
-- |remove_layer|
-- |move_up_down_layer|
+- .. include:: ../../shared/edit_layer.rst
+- .. include:: ../../shared/remove_layer.rst
+- .. include:: ../../shared/move_up_down_layer.rst
 
 Hierarchical Lists
 ------------------

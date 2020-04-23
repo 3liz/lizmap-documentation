@@ -17,7 +17,7 @@ A video tutorial is available here: https://vimeo.com/83845949. It shows all the
 Prerequisites
 -------------
 
-|wfs_layer|
+.. include:: ../../shared/wfs_layer.rst
 
 Configuring the tool
 --------------------
@@ -35,15 +35,15 @@ At the layer level
 
 - For setting the time manager with one layer:
 
-    1. |add_layer|
+    1. .. include:: ../../shared/add_layer.rst
     2. One layer with date/time capabilities.
     3. The start column with date/time.
     4. The end column with date/time. This is optional.
     5. Date/time resolution of the chosen attribute(s).
 
-- |edit_layer|
-- |remove_layer|
-- |move_up_down_layer|
+- .. include:: ../../shared/edit_layer.rst
+- .. include:: ../../shared/remove_layer.rst
+- .. include:: ../../shared/move_up_down_layer.rst
 
 At the project level
 ^^^^^^^^^^^^^^^^^^^^
