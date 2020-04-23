@@ -83,6 +83,7 @@ Additional Lizmap modules
 
 Some modules can be added to Lizmap:
 
+* French adresse : https://github.com/3liz/lizmap-adresse-module
 * French cadastre : https://github.com/3liz/lizmap-cadastre-module
 * Map builder : https://github.com/3liz/lizmap-mapbuilder-module
 * Naturaliz : https://github.com/3liz/lizmap-naturaliz-module

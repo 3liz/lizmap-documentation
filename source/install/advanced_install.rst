@@ -35,7 +35,7 @@ To force to use the port 443 (true) or the 8443 for example with the https proto
     # or
     forceHTTPSPort = 8443
 
-To specify the domain name of your lizmap application, if Lizmap cannot guess it:
+To specify the domain name of your Lizmap application, if Lizmap cannot guess it:
 
 .. code-block:: ini
 

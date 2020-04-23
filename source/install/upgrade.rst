@@ -33,10 +33,10 @@ If you want to backup by hand, you should backup at least these files:
 - var/config/profiles.ini.php
 
 
-Replace lizmap files
+Replace Lizmap files
 --------------------------------------------------------------
 
-Get the lizmap archive (by downloading an archive or by doing a git clone/pull)
+Get the Lizmap archive (by downloading an archive or by doing a git clone/pull)
 
 You should
 

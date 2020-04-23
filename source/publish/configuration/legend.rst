@@ -46,7 +46,7 @@ To add an **overview map**, or location map, in the Lizmap's map, you must:
 * Create an independent group in the QGIS project called ``Overview`` (with the 1st letter capitalized)
 * **Add layers**, for example a layer of municipalities, a lighter terrain base layer, etc.
 
-All layers and groups in the *Overview* group will **not be shown in the lizmap's map legend**. They are drawn only in the Overview map.
+All layers and groups in the *Overview* group will **not be shown in the Lizmap's map legend**. They are drawn only in the Overview map.
 
 It is advisable to use:
 
