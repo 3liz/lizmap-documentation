@@ -43,5 +43,10 @@ At the layer level
 At the project level
 ^^^^^^^^^^^^^^^^^^^^
 
+..  image:: /images/interface-atlas.jpg
+   :align: center
+
+Options:
+
     - check if you want to open the atlas tool when you open your project
     - check if you want to launch the auto-play mode when you open your project

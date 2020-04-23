@@ -70,6 +70,9 @@ At the layer level
 At the project level
 ^^^^^^^^^^^^^^^^^^^^
 
+..  image:: /images/interface-dataviz.jpg
+   :align: center
+
 1. You have the possibility to change the value to **dock**, **bottomdock** or **right-dock** these options change where your dataviz panel will be located in your Lizmap's project. You have 3 positions available, at the right of the screen, bottom and right.
 
 2. You have the possibility to write in HTML the layout of the container of your charts. If you are proficient in the HTML language, there are a lot of possibilities and you can customize your container the way you want.

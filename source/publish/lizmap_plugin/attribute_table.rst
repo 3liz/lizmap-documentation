@@ -18,6 +18,9 @@ Prerequisites
 Configuring the tool
 --------------------
 
+At the layer level
+^^^^^^^^^^^^^^^^^^
+
 ..  image:: /images/interface-add-attribute-table-layer.jpg
    :align: center
 
@@ -40,6 +43,12 @@ To add a layer to this tool:
 - .. include:: ../../shared/remove_layer.rst
 - .. include:: ../../shared/move_up_down_layer.rst
 - .. include:: ../../shared/field_alias.rst
+
+At the project level
+^^^^^^^^^^^^^^^^^^^^
+
+..  image:: /images/interface-attribute-table.jpg
+   :align: center
 
 Order of fields
 ---------------

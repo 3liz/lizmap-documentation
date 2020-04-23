@@ -48,6 +48,11 @@ At the layer level
 At the project level
 ^^^^^^^^^^^^^^^^^^^^
 
+..  image:: /images/interface-time-manager.jpg
+   :align: center
+
+Options:
+
     - Time frame size
     - Frame type
     - Animation frame length
