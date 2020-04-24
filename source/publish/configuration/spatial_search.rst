@@ -151,7 +151,7 @@ Inside QGIS:
 * install QuickFinder Plugin, for |qgis_2| only
 * choose a layer(s), define the fields to search among, pick the geometry storage format (WKT or Extent) and store Full Text Searchs (FTS) vector into a file database (.qfts). The filename must be identical to the QGIS project filename. Ex: :file:`myproject.qfts` for a QGIS project stored as :file:`myproject.qgs`.
 
-.. note:: Only **WKT** or **Extent** formats for geometry storage are working, since binary format (WKB) can not be decoded by LWC.
+.. warning:: Only **WKT** or **Extent** formats for geometry storage are working, since binary format (WKB) can not be decoded by LWC.
 
 Inside LWC:
 

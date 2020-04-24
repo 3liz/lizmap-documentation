@@ -83,10 +83,12 @@ Additional Lizmap modules
 
 Some modules can be added to Lizmap:
 
+* Web Processing Service : https://github.com/3liz/lizmap-wps-web-client-module
+* Map builder : https://github.com/3liz/lizmap-mapbuilder-module
+* Altitude : https://github.com/3liz/lizmap-altitude-module
+* Naturaliz : https://github.com/3liz/lizmap-naturaliz-module
 * French adresse : https://github.com/3liz/lizmap-adresse-module
 * French cadastre : https://github.com/3liz/lizmap-cadastre-module
-* Map builder : https://github.com/3liz/lizmap-mapbuilder-module
-* Naturaliz : https://github.com/3liz/lizmap-naturaliz-module
 
 Configuration with QGIS
 -----------------------
