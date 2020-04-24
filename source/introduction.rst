@@ -24,6 +24,7 @@ To be able to put the map online, the publisher configures publishing options (s
 
 When synchronization is complete, The QGIS map can then be accessed on the Internet at the same. It is available on the application **Lizmap Web Client** with a Web browser (Firefox, Safari, Chrome, Internet Explorer).
 
+.. include:: shared/about_versions.rst
 
 QGIS and QGIS Server
 ====================
