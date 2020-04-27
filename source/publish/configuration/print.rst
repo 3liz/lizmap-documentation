@@ -1,26 +1,44 @@
+.. include:: ../../substitutions.rst
+
 Printing
 ========
 
 Area defined by the user on the fly in Lizmap
 ---------------------------------------------
 
-To add print capabilities in the online map, you have to enable the printing tool in the plugin *Map* tab (:ref:`lizmap-config-map`) and the QGIS project has at least one print composition without having atlas enabled.
+To add print capabilities in the online map, you have to enable the printing tool in the plugin :guilabel:`Map` tab (:ref:`lizmap-config-map`) and the QGIS project needs at least one print composition without atlas enabled.
 
-The print composition must contain **at least one map** without atlas enabled.
+Creating the layout
+^^^^^^^^^^^^^^^^^^
 
-You can add :
+In your layout, you can add :
 
+* A map, **without** an atlas enabled
 * An image to North arrow
 * An image for the logo of your organization
 * A legend that will be fixed for all printing
-* A scale, preferably digital for display
-* A location map, a map for which you have enabled and configured the function of *Overview*
 * Labels
-* Since QGIS 3, you can use QGIS expressions, in your labels for instance. You can create automatic source label according to visible layers following this example https://docs.qgis.org/3.4/en/docs/user_manual/print_composer/composer_items/composer_label.html#id4 on the QGIS Documentation.
+* A scale
+    - Either :guilabel:`Numeric`
+    - Or set :guilabel:`Fit segment width` with a correct reference anchor point to adjust the position of the scale bar
+* A location map, a map for which you have enabled and configured the function of *Overview*, read :ref:`overview-map`
+* Since |qgis_3|, you can use QGIS expressions, in your labels for instance. You can create automatic source label according to visible layers following this example https://docs.qgis.org/3.4/en/docs/user_manual/print_composer/composer_items/composer_label.html#id4 on the QGIS Documentation.
+
+Dynamic content
+^^^^^^^^^^^^^^^
 
 You can allow the user to modify the contents of certain labels (title, description, comment, etc).
-To do this, you need to add a identifier to your label in the composer. Lizmap will automatically ask you in the webbrowser to fill each fields.
-If your label is pre-populated in QGIS, the field will be pre-populated too in the webbrowser. If you check 'Render as HTML' for your label in QGIS, you will have a multiline label in Lizmap.
+To do this, you need to add a identifier to your label in the composer.
+
+..  image:: /images/interface-print-dynamic-label.jpg
+   :align: center
+
+Lizmap will automatically ask the user in the webbrowser to fill each fields.
+
+More tips:
+
+* If your label is pre-populated in QGIS, the field will be pre-populated too in the webbrowser.
+* If you check 'Render as HTML' for your label in QGIS, you will have a multiline label in Lizmap.
 
 The preview in Lizmap will be similar to this screenshot. The red rectangle is the area that the user can define in the webbrowser and the user can also set the map description and the map title.
 
@@ -28,9 +46,17 @@ The preview in Lizmap will be similar to this screenshot. The red rectangle is t
    :align: center
    :width: 800
 
-Finally the print function will be based on the map scales that you set in the plugin *Map* (:ref:`lizmap-config-map`).
+Scales
+^^^^^^
 
-.. note:: It is possible to exclude printing compositions for the web. For example, if the QGIS project contains 4 compositions, the project administrator can exclude 2 compositions in the *QGIS project properties*, *QGIS server* tab. So only the published compositions will be presented in Lizmap.
+The print function will be based on the map scales that you set in the plugin *Map* (:ref:`lizmap-config-map`).
+
+Excluding a layout
+^^^^^^^^^^^^^^^^^
+
+It is possible to exclude printing compositions for the web.
+For example, if the QGIS project contains 4 compositions, the project administrator can exclude 2 compositions in the :menuselection:`Project properties --> QGIS server`.
+Only the published compositions will be presented in Lizmap.
 
 .. image:: /images/exclude_layout.jpg
    :align: center

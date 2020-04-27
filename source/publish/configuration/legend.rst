@@ -38,6 +38,8 @@ This feature can be used for:
 * hide a simple layer for adding data rendered with a view
 * hide a layer for printing (:ref:`print-external-baselayer`)
 
+.. _overview-map:
+
 Create an overview map
 ----------------------
 
