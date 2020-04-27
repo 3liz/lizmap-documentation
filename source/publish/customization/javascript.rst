@@ -6,8 +6,11 @@ Adding your own JavaScript
 Principle
 ---------
 
-Adding some JavaScript is useful for a variety of advanced usage. For instance, you can avoid people being able to download
-elements of the page by right clicking on them, and of course much more.
+Adding some JavaScript is useful for a variety of advanced usage.
+For instance, you can:
+    - avoid people being able to download elements of the page by right clicking on them, and of course much more.
+    - hide some UI elements that you don't want
+    - add some popups when the project is opened
 
 Prerequisites
 -------------
@@ -90,7 +93,10 @@ There are also some variables which are available.
 Examples
 --------
 
-Here is a very small example allowing you to disable right click in Lizmap. Just add a file named e.g. :file:`disableRightClick.js` with the following code:
+Disable right click
+^^^^^^^^^^^^^^^^^^
+
+Add a file named e.g. :file:`disableRightClick.js` with the following code:
 
 .. code-block:: javascript
 
@@ -102,7 +108,10 @@ Here is a very small example allowing you to disable right click in Lizmap. Just
 
 * If you want this code to be executed for all projects of your repository, you have to copy the file in the directory :file:`/home/data/rep1/media/js/default/` rather than in :file:`/home/data/rep1/media/js/myproject/`.
 
-Here is a very useful example allowing you to send current login User-ID (and/or other user data) to PostgreSQL table column, using edition tool:
+Send current login user-ID
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An example allowing you to send current login User-ID (and/or other user data) to PostgreSQL table column, using edition tool:
 
 .. code-block:: javascript
 
@@ -144,6 +153,9 @@ Here is a very useful example allowing you to send current login User-ID (and/or
 
    });
 
+
+URL of a static file
+^^^^^^^^^^^^^^^^^^^^
 
 If you want to get the URL of a static file:
 
