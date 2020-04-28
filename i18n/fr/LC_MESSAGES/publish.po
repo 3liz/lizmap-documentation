@@ -4,19 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Nicolas Boisteault <nboisteault@gmail.com>, 2019
 # rldhont <rldhont@gmail.com>, 2019
 # Laurent Jouanneau <dev@ljouanneau.com>, 2019
-# Arnaud HANRY <arnaud.hanry@le64.fr>, 2019
+# etrimaille <gustrimaille@yahoo.fr>, 2020
+# Arnaud HANRY <arnaud.hanry@le64.fr>, 2020
+# Nicolas Boisteault <nboisteault@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 13:40+0000\n"
+"POT-Creation-Date: 2020-04-28 11:03+0200\n"
 "PO-Revision-Date: 2019-05-27 15:16+0000\n"
-"Last-Translator: Arnaud HANRY <arnaud.hanry@le64.fr>, 2019\n"
+"Last-Translator: Nicolas Boisteault <nboisteault@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -274,6 +275,13 @@ msgid ""
 "data, such as countries, points of interests, etc. You have two ways to add "
 "searching capability in Lizmap:"
 msgstr ""
+"Dans les options de carte, vous pouvez configurer la barre de recherches "
+"d'adresses basées sur des services web externes (nominatim, google, IGN "
+"France). Lire :ref:`lizmap-config-map`. De plus, vous pouvez ajouter des "
+"moyens de recherche spatiale à Lizmap. Cela signifie que vous autoriserez "
+"les utilisateurs à effectuer des recherches avec des données spatiales, "
+"telles que les pays, les points d'intérêts, etc. Vous avez 2 manières pour "
+"ajouter des moyens de recherche dans Lizmap : "
 
 #: ../../source/publish/advanced_lizmap_config.rst:88
 msgid ""
@@ -519,7 +527,7 @@ msgid ""
 "connection profile** in Lizmap configuration file "
 "**lizmap/var/config/profiles.ini.php**. The new profile is a new jdb "
 "prefixed section, called **jdb:search**. For example, add the following "
-"section (please replace the DATABASE_ variables by the correct values):"
+"section (please replace the `DATABASE_` variables by the correct values):"
 msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:220
@@ -1420,7 +1428,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:516
 msgid "Display children in a compact way"
-msgstr ""
+msgstr "Affichez les enfants de manière compacte"
 
 #: ../../source/publish/advanced_lizmap_config.rst:518
 msgid ""
@@ -2014,7 +2022,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1
 msgid "lizmapexternalsearchitemselected"
-msgstr ""
+msgstr "lizmapexternalsearchitemselected"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1
 msgid ""
@@ -2024,7 +2032,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1
 msgid "feature"
-msgstr ""
+msgstr "entité"
 
 #: ../../source/publish/advanced_lizmap_config.rst:659
 msgid "There are also some variables which are available."
@@ -3801,6 +3809,9 @@ msgid ""
 "Give webserver user (usually www-data) **write permission** on the upload "
 "folder, so that it can create files and folders in media/upload::"
 msgstr ""
+"Donnez à l'utilisateur du serveur web (en général www-data) **le droit "
+"d'écriture** sur le répertoire upload, afin qu'il puisse créer des fichiers "
+"et répertoires dans media/upload :"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1107
 msgid ""
@@ -3808,6 +3819,9 @@ msgid ""
 "``upload_max_filesize`` are correctly set (by default, php only allows "
 "uploading files up to 2 Mbyte)"
 msgstr ""
+"Vérifiez votre fichier ``php.ini`` pour voir si vos variables "
+"``post_max_size`` et ``max_upload_size`` sont correctement configurées (par "
+"défaut, php n'autorise des fichiers téléversés que jusqu'à 2 Mo)"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1109
 msgid ""
@@ -3876,7 +3890,7 @@ msgstr ""
 #: ../../source/publish/advanced_lizmap_config.rst:1124
 #: ../../source/publish/advanced_lizmap_config.rst:1133
 msgid "media"
-msgstr ""
+msgstr "media"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1126
 msgid "images <-- to store images in this folder, use: ``../media/images/``"
@@ -3884,7 +3898,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1129
 msgid "environment"
-msgstr ""
+msgstr "environnement"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1131
 msgid "trees.qgs"
@@ -4182,7 +4196,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1205
 msgid "Statictics with Dataviz"
-msgstr ""
+msgstr "Les statistiques avec la Dataviz"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1207
 msgid ""
@@ -4447,11 +4461,12 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1293
 msgid "the extent of the data for the current filter"
-msgstr ""
+msgstr "l'emprise des données pour le filtre courant"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1295
 msgid "You can see a video with an example: https://vimeo.com/331395259"
 msgstr ""
+"Vous pouvez voir une vidéo avec un exemple : https://vimeo.com/331395259"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1300
 msgid ""
@@ -4533,11 +4548,11 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1321
 msgid "Description of the different form input types"
-msgstr ""
+msgstr "Description des différents types de champ du formulaire"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1324
 msgid "Text"
-msgstr ""
+msgstr "Texte"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1326
 msgid ""
@@ -4550,7 +4565,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1328
 msgid "The filter built will be like: `\"field\" LIKE '%foo%'`"
-msgstr ""
+msgstr "Le filtre construit sera de la forme : `\"champ\" LIKE '%foo%'`"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1331
 msgid "Date"
@@ -4574,6 +4589,8 @@ msgid ""
 "The slider step is hard coded and equals to 86400 seconds, which means 1 "
 "day."
 msgstr ""
+"Le pas du slider est codé en dur et vaut 86400 secondes, ce qui représente 1"
+" jour."
 
 #: ../../source/publish/advanced_lizmap_config.rst:1339
 msgid ""
@@ -4584,7 +4601,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1342
 msgid "Numeric"
-msgstr ""
+msgstr "Numérique"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1344
 msgid ""
@@ -4601,7 +4618,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1349
 msgid "Unique values"
-msgstr ""
+msgstr "Valeurs uniques"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1351
 msgid ""
@@ -4620,7 +4637,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1355
 msgid "You can choose to show two different input types:"
-msgstr ""
+msgstr "Vous pouvez choisir de montrer deux types de champ différents :"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1357
 msgid ""
@@ -4741,7 +4758,7 @@ msgstr "Aide"
 
 #: ../../source/publish/lizmap_configuration.rst:33
 msgid "Apply"
-msgstr ""
+msgstr "Appliquer"
 
 #: ../../source/publish/lizmap_configuration.rst:34
 msgid "Close"

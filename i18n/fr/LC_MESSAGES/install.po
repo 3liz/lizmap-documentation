@@ -7,16 +7,17 @@
 # Bobo Plateau <bobo-romania@users.noreply.github.com>, 2019
 # rldhont <rldhont@gmail.com>, 2019
 # Nicolas Boisteault <nboisteault@gmail.com>, 2019
-# Laurent Jouanneau <dev@ljouanneau.com>, 2019
+# Laurent Jouanneau <dev@ljouanneau.com>, 2020
+# Arnaud HANRY <arnaud.hanry@le64.fr>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 13:40+0000\n"
+"POT-Creation-Date: 2020-04-28 11:00+0200\n"
 "PO-Revision-Date: 2019-05-27 15:16+0000\n"
-"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2019\n"
+"Last-Translator: Arnaud HANRY <arnaud.hanry@le64.fr>, 2020\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -197,13 +198,8 @@ msgid ""
 "``mainconfig.ini.php`` contains many configuration parameters, mainly for "
 "the framework used by Lizmap. You may want to modify some of them, like the "
 "available languages etc. **DON'T MODIFY mainconfig.ini.php**. Put parameters"
-" with their new values into ``localconfig.ini.pp`` instead!"
+" with their new values into ``localconfig.ini.php`` instead!"
 msgstr ""
-"``mainconfig.ini.php`` contient beaucoup de paramètres de configuration, "
-"principalement pour le framework utilisé par Lizmap. Vous voudriez "
-"probablement en modifier certaine, comme la liste des langues disponibles "
-"etc. **NE MODIFIEZ PAS mainconfig.ini.php**. Mettez les paramètres avec "
-"leurs nouvelles valeurs plutôt dans ``localconfig.ini.pp`` !"
 
 #: ../../source/install/configuration.rst:19
 msgid ""
@@ -226,24 +222,17 @@ msgstr ""
 #: ../../source/install/configuration.rst:25
 msgid ""
 "During the execution of Lizmap, ``mainconfig.ini.php``, "
-"``localconfig.ini.pp``, and ``liveconfig.ini.php`` are merged in this order."
-" So parameters into ``liveconfig.ini.pp`` have higher priority that those "
-"into ``localconfig.ini.pp``, which in turn, have parameters having higher "
-"priority over parameters of ``mainconfig.ini.php``."
+"``localconfig.ini.php``, and ``liveconfig.ini.php`` are merged in this "
+"order. So parameters into ``liveconfig.ini.php`` have higher priority that "
+"those into ``localconfig.ini.php``, which in turn, have parameters having "
+"higher priority over parameters of ``mainconfig.ini.php``."
 msgstr ""
-"Durant l'execution de Lizmap, ``mainconfig.ini.php``, "
-"``localconfig.ini.pp``, et ``liveconfig.ini.php`` sont fusionnés dans cet "
-"ordre. Ainsi les paramètres dans ``liveconfig.ini.pp`` ont la priority sur "
-"ceux de ``localconfig.ini.pp``, qui a son tour a des paramètres qui ont la "
-"priorité sur les paramètres de ``mainconfig.ini.php``."
 
 #: ../../source/install/configuration.rst:30
 msgid ""
-"``liveconfig.ini.php`` and ``localconfig.ini.pp`` may not exists on old "
+"``liveconfig.ini.php`` and ``localconfig.ini.php`` may not exists on old "
 "releases."
 msgstr ""
-"``liveconfig.ini.php`` et ``localconfig.ini.pp`` n'existent pas dans des "
-"vieilles versions."
 
 #: ../../source/install/configuration.rst:33
 msgid "Other framework configuration files:"
@@ -288,15 +277,11 @@ msgstr ""
 
 #: ../../source/install/configuration.rst:47
 msgid ""
-"For backups and upgrades, you should keep ``localconfig.ini.pp``,  "
+"For backups and upgrades, you should keep ``localconfig.ini.php``,  "
 "``liveconfig.ini.php``, ``lizmapConfig.ini.php``, ``profiles.ini.php``, "
 "``lizmapLogConfig.ini.php`` and  ``installer.ini.php``. They are all "
 "modified during the life or the installation of the application."
 msgstr ""
-"Pour les sauvegardes et les mises à jour, vous devez préserver les fichiers "
-"``localconfig.ini.pp``, ``liveconfig.ini.php``, ``lizmapConfig.ini.php``, "
-"``profiles.ini.php``, ``lizmapLogConfig.ini.php`` et ``installer.ini.php``. "
-"Ils sont tous modifiés durant la vie ou l'installation de l'application."
 
 #: ../../source/install/configuration.rst:53
 msgid "Setting language"
@@ -750,12 +735,17 @@ msgid ""
 "With `searchGroupProperty`, you must indicate the ldap attribute that "
 "contains the group name. Ex: ``searchGroupProperty=\"cn\"``."
 msgstr ""
+"Avec `searchGroupProperty`, vous devez indiquer l'attribut ldap qui contient"
+" le nom du group. Ex :  ``searchGroupProperty=\"cn\"``."
 
 #: ../../source/install/ldap.rst:195
 msgid ""
 "You may also indicate the base DN for the search, into `searchGroupBaseDN`. "
 "Example: ``searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"``."
 msgstr ""
+"Vous pouvez aussi indiquer le DN de base pour la recherche, dans "
+"`searchGroupBaseDN`. Exemple : "
+"``searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"``."
 
 #: ../../source/install/ldap.rst:199
 msgid "Debugging"
@@ -766,10 +756,13 @@ msgid ""
 "If the authentication does not working, you can have more details on what is"
 " wrong. To see these details, you should activate the traces for ldapdao."
 msgstr ""
+"Si l'authentification ne fonctionne pas, vous pouvez avoir plus de détails "
+"sur ce qui s'est mal passé. Pour voir ces détails, vous devez activer les "
+"traces pour ldapdao."
 
 #: ../../source/install/ldap.rst:204
 msgid "In your var/config/localconfig.ini.php, set these parameters"
-msgstr ""
+msgstr "Dans votre var/config/localconfig.ini.php, mettez ces paramètres"
 
 #: ../../source/install/ldap.rst:214
 msgid ""
@@ -777,6 +770,9 @@ msgid ""
 "connector. Remove these settings when you don't need them, to avoid a huge "
 "auth.log file."
 msgstr ""
+"Ensuite, dans var/log/auth.log, vous allez avoir des messages du connecteur "
+"ldap. Enlevez ces paramètres quand vous n'en avez plus besoin, pour éviter "
+"d'avoir un trop gros fichier auth.log."
 
 #: ../../source/install/linux.rst:3
 msgid "Installing Lizmap Web Client on Linux Debian or Ubuntu"
@@ -791,12 +787,17 @@ msgid ""
 "This documentation provides an example for configuring a server with the "
 "Debian 9 distribution. We assume you have base system installed and updated."
 msgstr ""
+"La documentation fournie un exemple pour configurer un serveur avec la "
+"distribution Debian 9. Nous supposons que vous avez un système fraîchement "
+"installé et mis à jour."
 
 #: ../../source/install/linux.rst:10
 msgid ""
 "This page does not describe how to secure your Nginx server. It's just for a"
 " demonstration."
 msgstr ""
+"Cette page ne décrit pas comment sécuriser votre serveur Nginx. C'est juste "
+"pour une démonstration."
 
 #: ../../source/install/linux.rst:13
 msgid "Configure Locales"
@@ -829,10 +830,14 @@ msgid ""
 "**tokenizer** and **spl** extensions are required (they are generally turned"
 " on in a standard PHP 5.6/7.x installation)"
 msgstr ""
+"Lizmap Web Client s'appuie sur Jelix 1.6. Vous devez installer au minimum la"
+" version **5.6** de PHP. Les extensions **dom**, **simplexml**, **pcre**, "
+"**session**, **tokenizer** et **spl** sont requises (elles sont actives en "
+"général dans une installation standard de PHP 5.6/7.x)."
 
 #: ../../source/install/linux.rst:34
 msgid "On debian 9, install these packages:"
-msgstr ""
+msgstr "Sur un système Debian 9, installez ces paquets :"
 
 #: ../../source/install/linux.rst:44
 msgid "Web configuration"
@@ -840,17 +845,20 @@ msgstr "Configuration web"
 
 #: ../../source/install/linux.rst:46
 msgid "Create a new file /etc/nginx/sites-available/lizmap.conf:"
-msgstr ""
+msgstr "Créez un nouveau fichier /etc/nginx/sites-available/lizmap.conf :"
 
 #: ../../source/install/linux.rst:84
 msgid ""
 "You should declare the lizmap.local domain name somewhere (in your "
 "/etc/hosts, or into your DNS..), or replace it by your own domain name."
 msgstr ""
+"Vous devez déclarer un domaine lizmap.local quelque part (dans votre fichier"
+" /etc/hosts, ou sur vos DNS), ou remplacez le par votre propre nom de "
+"domaine."
 
 #: ../../source/install/linux.rst:87
 msgid "Enable the virtual host you just created:"
-msgstr ""
+msgstr "Activez l'hôte virtuel que vous venez juste de créer."
 
 #: ../../source/install/linux.rst:94
 msgid "Enable geolocation"
@@ -1324,6 +1332,8 @@ msgid ""
 "If the replacement has erased some files that you've been backuped, restore "
 "them with ``lizmap/install/restore.sh /tmp``"
 msgstr ""
+"Si le remplacement a effacé des fichiers que vous avez sauvegardé, "
+"restaurez-les avec \"lizmap/install/restore.sh /tmp\""
 
 #: ../../source/install/upgrade.rst:49
 msgid "Launch the installer"
@@ -1334,6 +1344,8 @@ msgid ""
 "You have to launch the installer, it will upgrade some stuff: database "
 "tables, configuration etc.."
 msgstr ""
+"Vous devez lancer le programme d'installation, il mettra à jour certaines "
+"choses: tables de base de données, configuration, etc."
 
 #: ../../source/install/upgrade.rst:61
 msgid ""
@@ -1954,12 +1966,21 @@ msgid ""
 "folders and other documents. Go to Lizmap administration panel in "
 "http://localhost/admin.php and create the new repository. Follow this steps:"
 msgstr ""
+"Maintenant nous devons avoir accès au dossier "
+"**C:\\\\webserver\\\\data\\\\prod** et ses sous-dossiers, ainsi "
+"l'administrateur SIG peut envoyer les fichiers projet Qgis, le fichier de "
+"configuration Lizmap pour chaque projet, les données SIG dans ces dossiers "
+"et d'autres documents. Aller dans le panneau d'administration Lizmap à "
+"l'adresse http://localhost.admin.php et créer le nouveau répertoire. Suivez "
+"les étapes :"
 
 #: ../../source/install/windows.rst:566
 msgid ""
 "Lizmap configuration / Create a new repository (button at the bottom of the "
 "page)"
 msgstr ""
+"Configuration Lizmap / Créer un nouveau répertoire (bouton en bas de la "
+"page)"
 
 #: ../../source/install/windows.rst:567
 msgid "**id** = rep1"
@@ -2020,11 +2041,11 @@ msgstr ""
 
 #: ../../source/install/windows.rst:597
 msgid "Do not forget to **\"Execute with admin rights\"**"
-msgstr ""
+msgstr "Ne pas oublier \"d'exécuter avec les droits d'administrateur\""
 
 #: ../../source/install/windows.rst:599
 msgid "Specify the **Port: 14147** ."
-msgstr ""
+msgstr "Spécifiez le port  : 14147"
 
 #: ../../source/install/windows.rst:600
 msgid ""
@@ -2077,7 +2098,7 @@ msgstr ""
 
 #: ../../source/install/windows.rst:608
 msgid "You can add IP filter here too if needed."
-msgstr ""
+msgstr "Vous pouvez ajouter un filtre d'IP ici également si besoin."
 
 #: ../../source/install/windows.rst:610
 msgid ""
