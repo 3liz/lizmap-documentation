@@ -44,9 +44,7 @@ make gettext
 Then you push them to Transifex, by indicating the branch (indicate the good branch name !!)
 
 ```
-tx push -s --branch master
-#or 
-tx push -s --branch lizmap_3_3
+./push_to_transifex.sh
 ```
 
 Note: our continuous integration system Gitlab-CI generates and pushes pot files to
@@ -60,9 +58,7 @@ translate strings into Transifex.
 To retrieve translated string:
 
 ```
-tx pull -l es,fi,fr,it,pt,ru -f --mode developer --branch master
-#or 
-tx pull -l es,fi,fr,it,pt,ru -f --mode developer --branch lizmap_3_3
+./update_from_transifex.sh -f
 ```
 
 You can then commit them.
