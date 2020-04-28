@@ -9,7 +9,7 @@ Area defined by the user on the fly in Lizmap
 To add print capabilities in the online map, you have to enable the printing tool in the plugin :guilabel:`Map` tab (:ref:`lizmap-config-map`) and the QGIS project needs at least one print composition without atlas enabled.
 
 Creating the layout
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 In your layout, you can add :
 
@@ -52,7 +52,7 @@ Scales
 The print function will be based on the map scales that you set in the plugin *Map* (:ref:`lizmap-config-map`).
 
 Excluding a layout
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 It is possible to exclude printing compositions for the web.
 For example, if the QGIS project contains 4 compositions, the project administrator can exclude 2 compositions in the :menuselection:`Project properties --> QGIS server`.
