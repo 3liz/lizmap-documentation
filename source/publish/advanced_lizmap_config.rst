@@ -205,7 +205,7 @@ Once this table (or view, or materialized view) is created in your database, you
 
 If your Lizmap instance uses PostgreSQL to store the users, groups and rights, a connection profile already exists for your database. Then you can just add the **lizmap_search** relation inside this database (in the public schema).
 
-If not, or if you need to put the search data in another database (or connect with another PostgreSQL user), you need to add a new **database connection profile** in Lizmap configuration file **lizmap/var/config/profiles.ini.php**. The new profile is a new jdb prefixed section, called **jdb:search**. For example, add the following section (please replace the DATABASE_ variables by the correct values):
+If not, or if you need to put the search data in another database (or connect with another PostgreSQL user), you need to add a new **database connection profile** in Lizmap configuration file **lizmap/var/config/profiles.ini.php**. The new profile is a new jdb prefixed section, called **jdb:search**. For example, add the following section (please replace the `DATABASE_` variables by the correct values):
 
 .. code-block:: ini
 
@@ -1346,7 +1346,7 @@ This input type will show a slider with 2 handles to allow to search between the
 The filter built will be like: ` ( ( "field" >= 100 ) AND ( "field_date" <= 200 ) ) "`
 
 Unique values
-___________
+_____________
 
 Lizmap will query the data to get the distinct values of the field. You can choose two different input types: **select** or **checkboxes**.
 
