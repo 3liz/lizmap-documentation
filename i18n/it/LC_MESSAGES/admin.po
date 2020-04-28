@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-15 10:44+0000\n"
+"POT-Creation-Date: 2020-04-28 11:10+0200\n"
 "PO-Revision-Date: 2018-09-07 13:31+0000\n"
 "Last-Translator: Nicla Maria Notarangelo <nicla_n@yahoo.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/3liz-1/teams/62012/it/)\n"
@@ -29,23 +29,19 @@ msgstr "Gestione della cache come amministratore"
 
 #: ../../source/admin/cache.rst:5
 msgid ""
-"Lizmap Web Client can automatically generate a tile cache by the server as "
-"and when users access maps. In some cases it is desirable to remove the "
-"server cache, for example, when the style changes have been made for some "
-"spatial layers published in Lizmap Web Client. For this, two solutions are "
-"possible:"
+"For a layer with server cache activated, Lizmap will keep the cache when the"
+" user pan and zoom on the map. To have better performance, Lizmap Web Client"
+" can also automatically generate the tile cache on the server. In some "
+"cases, it is desirable to remove the server cache, for example, when the "
+"style has changed and the tiles need to be updated. For this, two solutions "
+"are possible:"
 msgstr ""
-"Nel momento nel quale gli utenti accedono alla mappa il Web Client di Lizmap"
-" genera automaticamente una cache di tile nel server. In alcuni casi è "
-"auspicabile rimuovere la cache dal server, ad esempio quando sono stati "
-"applicati dei cambiamenti di stile ad alcuni livelli spaziali pubblicati nel"
-" Web Client di Lizmap. Per fare questo sono possibili due soluzioni:"
 
-#: ../../source/admin/cache.rst:8
+#: ../../source/admin/cache.rst:12
 msgid "Remove all the cache by Lizmap repository"
 msgstr "Rimuovere tutte le cache dal repository di Lizmap"
 
-#: ../../source/admin/cache.rst:10
+#: ../../source/admin/cache.rst:14
 msgid ""
 "In the administration interface, The **Lizmap configuration** menu lists "
 "configured *Lizmap repository*. For each repository, the administrator can "
@@ -57,120 +53,113 @@ msgstr ""
 "l'amministratore può cancellare la cache per tutti i livelli di tutti i "
 "repository dei progetti cliccando sul bottone **Svuota cache**."
 
-#: ../../source/admin/cache.rst:13
+#: ../../source/admin/cache.rst:19
 msgid "Delete the cache, layer by layer, for each Lizmap project"
 msgstr "Cancellare la cache, un layer per volta, per ogni progetto Lizmap"
 
-#: ../../source/admin/cache.rst:15
+#: ../../source/admin/cache.rst:21
 msgid ""
 "When the administrator is connected and consults a Lizmap map, a **little "
 "red cross** is displayed to the right of the name of each layer that is "
 "configured to be server cached. Clicking on the cross allows, after "
-"confirmation, delete the server cache only for this layer of the QGIS "
-"project. Only logged administrator sees these red crosses and has the right "
-"to start the delete."
+"confirmation, to delete the server cache only for this layer in the QGIS "
+"project."
 msgstr ""
-"Quando l'amministratore è connesso e consulta una mappa di Lizmap, appare "
-"una **piccola croce rossa** alla sinistra del nome di ogni livello "
-"configurato per avere una cache nel server. Premendo sulla croce è "
-"possibile, dopo la conferma, cancellare la cache dal server solo per questo "
-"livello del progetto QGIS. Solo l'utente amministratore può visualizzare "
-"queste croci rosse ed ha i permessi per avviare l'eliminazione."
 
-#: ../../source/admin/cache.rst:19
+#: ../../source/admin/cache.rst:25
+msgid ""
+"Only logged administrator sees these red crosses and has the right to delete"
+" the cache."
+msgstr ""
+
+#: ../../source/admin/cache.rst:29
 msgid "Seeding"
 msgstr ""
 
-#: ../../source/admin/cache.rst:21
+#: ../../source/admin/cache.rst:31
 msgid ""
 "You can pre-generate the tiles for any layers of a QGIS project configured "
-"with server-side caching on. To do so, you need to have full access on the "
-"server where Lizmap is installed, and use a terminal to connect to it. You "
-"also need to know the ids of Lizmap repositories, and the code name of the "
-"project ( the QGIS project filename without the extension )."
+"with server-side caching on. You need to have full access on the server "
+"where Lizmap is installed and use a terminal to connect to it. You also need"
+" to know the ids of Lizmap repositories and the code name of the project "
+"(the QGIS project filename without the extension)."
 msgstr ""
-"E' possibile pre-generare le tiles per ogni layer del progetto di QGIS che è"
-" stato configurato da essere copiato nella cache del server. Per fare ciò, "
-"si necessita il pieno accesso al server dove è installato Lizmap e "
-"utilizzare un terminale per connettersi. Si devono anche conoscere gli ids  "
-"dei repository di Lizmap e il code name del progetto (sarebbe il progetto di"
-" QGIS senza estensione)."
 
-#: ../../source/admin/cache.rst:23
+#: ../../source/admin/cache.rst:36
 msgid ""
 "In this example, we will show commands to manage the tiles cache for the "
-"demo project Montpellier, shiped with Lizmap Web Client. We also assume that"
-" your Lizmap application is installed in the folder /var/www/lizmap-web-"
-"client/ ."
+"demo project Montpellier, shipped with Lizmap Web Client. We also assume "
+"that your Lizmap application is installed in the folder /var/www/lizmap-web-"
+"client/."
 msgstr ""
-"In questo esempio, si mostreranno i comandi per gestire le tile per il "
-"progetto Monpellier di esempio, fornitocon Lizmap Web Client. Si assume "
-"anche che il vostro Lizmap sia installato nella cartella /varr/www/lizmap-"
-"web-client/"
 
-#: ../../source/admin/cache.rst:32
+#: ../../source/admin/cache.rst:45
 msgid ""
-"It is important to know that Lizmap publish the cached layers in WMTS ( Web "
+"It is important to know that Lizmap publish the cached layers in WMTS (Web "
 "Map Tiled Service). The following concepts are used as options of Lizmap "
 "tile cache seeder:"
 msgstr ""
-"è importante sapere che Lizmap può effettuare una copia cache dei WMTS (Web "
-"Map Tiled Service). I seguenti concetti sono utilizzati come opzioni del "
-"servizio di cache di Lizmap"
 
-#: ../../source/admin/cache.rst:34
+#: ../../source/admin/cache.rst:47
 msgid ""
 "**TileMatrixSet** - In Lizmap, this represents the projection code, for "
-"exampe *EPSG:3857* ( Pseudo mercator )"
+"example *EPSG:3857* (Pseudo mercator)."
 msgstr ""
-"**TileMatrixSet** - In Lizmap, questo rappresenta il codice di proiezione, "
-"per esempio  * EPSG: 3857 * (Pseudo Mercatore)"
 
-#: ../../source/admin/cache.rst:35
+#: ../../source/admin/cache.rst:48
 msgid ""
-"**TileMatrixMin** - This is the minimum zoom level . This is not a map "
+"**TileMatrixMin** - This is the minimum zoom level. This is **not** a map "
 "scale, but a ID of the zoom level. In Lizmap plugin, the project publisher "
 "can configure scales for the published project. For example the list : "
-"*100000, 50000, 25000, 10000* ."
+"*100000, 50000, 25000, 10000*. The zoom level ID depends on some CRS and how"
+" you configured your Lizmap project. You can have a idea of the scale ID by "
+"typing `lizMap.map.getZoom()` in your webbrowser Javascript console when "
+"zooming on your map."
 msgstr ""
-"**TileMatrixMax** - Questo è il minimo livello di zoom. Non è una scala "
-"della mappa, ma un ID del livello di zoom. Nel Plugin Lizmap, l'editore del "
-"progetto può configurare le scale per il progetto pubblicato. Ad esempio "
-"l'elenco: * 100000, 50000, 25000, 10000 *."
 
-#: ../../source/admin/cache.rst:36
-msgid "**TileMatrixMax** - This is the maximum zoom level"
-msgstr "**TileMatrixMax** - Questo è il massimo livello di zoom"
-
-#: ../../source/admin/cache.rst:39
-msgid ""
-"First you can get the cache capabilities of one project, and some details on"
-" a specific layer."
+#: ../../source/admin/cache.rst:49
+msgid "**TileMatrixMax** - This is the maximum zoom level."
 msgstr ""
-"Dapprima è possibile ottenere la capabilities della cache di un progetto e "
-"alcuni dettagli di uno specifico layer."
 
-#: ../../source/admin/cache.rst:57
+#: ../../source/admin/cache.rst:51
 msgid ""
-"In this example, you see that the bus layer has 3 different TileMatrixSet , "
+"First you **must** get the cache capabilities of one project and some "
+"details on a specific layer."
+msgstr ""
+
+#: ../../source/admin/cache.rst:70
+msgid ""
+"In this example, you see that the bus layer has 3 different TileMatrixSet, "
 "corresponding to the 3 different spatial coordinate systems available for "
-"this project in Lizmap publication ( configured in the *Project properties*,"
-" tab *OWS Server*. Once you have a good knowledge of a layer, you can "
-"generate the cache for it:"
+"this project in Lizmap(configured in the *Project properties*, tab *QGIS "
+"Server*)."
 msgstr ""
-"In questo esempio si vede che il layer bus ha 3 differenti TileMatrixSet  "
-"che corrispondono a 3 differenti risoluzioni spaziali disponibili per questo"
-" progetto pubblicato in Lizmap (configurato in  *Proprietà di progetto*, "
-"nella tab *OWS Server*.) Una volta che si ha una buona conoscenza del layer "
-"si può generare la cache per esso:"
 
-#: ../../source/admin/cache.rst:90
+#: ../../source/admin/cache.rst:73
+msgid ""
+"It's important to generate the cache capabilities **before** generating the "
+"cache for a specific layer. The cache capabilities is used in the next "
+"command. The next command might fail if the cache capabilities is not "
+"present."
+msgstr ""
+
+#: ../../source/admin/cache.rst:76
+msgid ""
+"Once you have a good knowledge of a layer, you can generate the cache for "
+"it:"
+msgstr ""
+
+#: ../../source/admin/cache.rst:109
 msgid "After seeding, update rights on cache :"
 msgstr ""
 
 #: ../../source/admin/index.rst:3
 msgid "Administrator guide"
 msgstr "Guide per amministratore"
+
+#: ../../source/admin/index.rst:5
+msgid "This guide is for the system administrator on the server."
+msgstr ""
 
 #: ../../source/admin/lizmap-configuration.rst:3
 msgid "Lizmap Web Client configuration"
@@ -444,7 +433,7 @@ msgstr ""
 msgid ""
 "**Allow repository themes**: This option enables the possibility for the "
 "publisher to set a theme for the repository and themes for each map. See "
-":ref:`lizmap-simples-themes`."
+":ref:`creating-simple-themes`."
 msgstr ""
 
 #: ../../source/admin/lizmap-configuration.rst:120
@@ -487,9 +476,9 @@ msgstr ""
 #: ../../source/admin/lizmap-configuration.rst:135
 msgid ""
 "This option is in connection with the filtering feature data layers per "
-"group. See :ref:`filter-layer-data-by-group`. Check the box for deciding "
-"which groups can see all the time all the data, even when a filter is active"
-" on some layers."
+"group. See :ref:`filtered-layer-by-user`. Check the box for deciding which "
+"groups can see all the time all the data, even when a filter is active on "
+"some layers."
 msgstr ""
 
 #: ../../source/admin/logs.rst:3
@@ -707,7 +696,7 @@ msgstr ""
 
 #: ../../source/admin/users-groups.rst:14
 msgid ""
-"Rights on Lizmap Web CLient repositories are managed at group level, not at "
+"Rights on Lizmap Web Client repositories are managed at group level, not at "
 "the user level."
 msgstr ""
 
@@ -762,15 +751,17 @@ msgid "give an email"
 msgstr ""
 
 #: ../../source/admin/users-groups.rst:37
-msgid "define and validate the password"
-msgstr ""
-
-#: ../../source/admin/users-groups.rst:38
 msgid "set name and firstname"
 msgstr ""
 
+#: ../../source/admin/users-groups.rst:39
+msgid ""
+"The user will have an email for setting up his password. If you want to set "
+"the password yourself, read the section below."
+msgstr ""
+
 #: ../../source/admin/users-groups.rst:40
-msgid "it is also possible to *view* and *edit* informations about users"
+msgid "It is also possible to *view* and *edit* informations about users."
 msgstr ""
 
 #: ../../source/admin/users-groups.rst:42
@@ -780,39 +771,51 @@ msgid ""
 msgstr ""
 
 #: ../../source/admin/users-groups.rst:48
-msgid "Putting users in groups"
+msgid "Setting password for users"
 msgstr ""
 
 #: ../../source/admin/users-groups.rst:50
+msgid ""
+"By default, in Lizmap, when a new user is created, the user will get an "
+"email for setting up his own password. If for some reasons, the "
+"administrator needs to setup the password, the :file:`localconfig.ini.php` "
+"needs to be edited:"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:59
+msgid "Putting users in groups"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:61
 msgid "In the left menu click on *Rights of users*"
 msgstr ""
 
-#: ../../source/admin/users-groups.rst:51
+#: ../../source/admin/users-groups.rst:62
 msgid "it is possible to filter the visible users with the dropdown menu"
 msgstr ""
 
-#: ../../source/admin/users-groups.rst:52
+#: ../../source/admin/users-groups.rst:63
 msgid "to put a user in groups, click on the its button *rights*"
 msgstr ""
 
-#: ../../source/admin/users-groups.rst:54
+#: ../../source/admin/users-groups.rst:65
 msgid "The page displays a table with *rights online and groups on column*"
 msgstr ""
 
-#: ../../source/admin/users-groups.rst:55
+#: ../../source/admin/users-groups.rst:66
 msgid "The last column shows *the resulting rights*"
 msgstr ""
 
-#: ../../source/admin/users-groups.rst:56
+#: ../../source/admin/users-groups.rst:67
 msgid ""
 "In the *head row*, the + and - buttons allow to set / remove the user from a"
 " group"
 msgstr ""
 
-#: ../../source/admin/users-groups.rst:58
+#: ../../source/admin/users-groups.rst:69
 msgid "Do not use the *Personal rights* column."
 msgstr ""
 
-#: ../../source/admin/users-groups.rst:61
+#: ../../source/admin/users-groups.rst:72
 msgid "Assigning groups for each user created"
 msgstr ""
