@@ -3,8 +3,8 @@
 Printing
 ========
 
-Area defined by the user on the fly in Lizmap
----------------------------------------------
+Extent defined by the user on the fly in Lizmap
+-----------------------------------------------
 
 To add print capabilities in the online map, you have to enable the printing tool in the plugin :guilabel:`Map` tab (:ref:`lizmap-config-map`) and the QGIS project needs at least one print composition without atlas enabled.
 
@@ -65,13 +65,16 @@ Only the published compositions will be presented in Lizmap.
 Layout with an atlas when using a popup
 ---------------------------------------
 
-Using the atlas-print https://github.com/3liz/qgis-atlasprint plugin on QGIS Server, it's possible to automatically add a link to the PDF.
+Using the ``AtlasPrint`` https://github.com/3liz/qgis-atlasprint plugin on QGIS Server, it's possible to automatically add a link to the PDF.
 
 * Install the AtlasPrint plugin on the server
 * Enable an atlas layout on a layer
 * Enable :ref:`popup` on the same layer
 
 A link will be displayed automatically at the bottom of the popup. It's not possible to let the user fill some inputs. These PDF are linked to a feature due to the atlas.
+
+.. image:: /images/feature-popup-atlas.jpg
+   :align: center
 
 .. _print-external-baselayer:
 

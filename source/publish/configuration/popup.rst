@@ -194,11 +194,14 @@ In Lizmap plugin:
 * You can optionally activate editing for the two layers, to allow the web users to create new features and upload pictures
 * Save and publish your project and Lizmap configuration
 
-Link of an element for layers with an atlas
-___________________________________________
+Link to a PDF QGIS layout
+_________________________
 
-Every element of a layer with an atlas configured will have a link at the end of his popup which open a pdf of the atlas for this particular element.
-To make it work you will need to download the "atlas_print" plugin, for that you have to get it from his Github at : https://github.com/3liz/qgis-atlasprint
+Every feature of a layer with an atlas configured will have a link at the end of its popup which open a PDF for this specific feature, using the QGIS Atlas layout.
+To enable this feature, you need a QGIS Layout with atlas enabled on that layer **and** to download the `AtlasPrint` QGIS Server plugin on GitHub : https://github.com/3liz/qgis-atlasprint
+
+.. image:: /images/feature-popup-atlas.jpg
+   :align: center
 
 Display children in a compact way
 _________________________________
