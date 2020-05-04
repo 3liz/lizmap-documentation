@@ -6,37 +6,44 @@ Popup
 Activate popup
 ---------------
 
-With the plugin, you can activate popups **for a single layer** or for **a group configured with the "Group as layer" option**.
+With the plugin, you can activate popups for a **layer** or for a **group** configured with the :guilabel:`Group as layer` option.
 
-Just click on the checkbox **Activate popups** of the tab *Layers* on the Lizmap plugin interface. For the *Group as layer* option you must select the option for the group and for all the layers included you want to show in the popup: in this case, only the layers with the option *Popup* checked will be shown.
+In the :guilabel:`Layers` tab, click on the :guilabel:`Popup` checkbox.
+
+For the :guilabel:`Group as layer` option you must select the option for the group and for all the layers included you want to show in the popup: in this case, only the layers with the option :guilabel:`Popup` checked will be shown.
 
 You have three types of popup sources:
 
-* *auto*
-* *lizmap*
-* *qgis*
+* ``auto``, read :ref:`auto-popup`
+* ``lizmap``, read :ref:`lizmap-popup`
+* ``qgis``, read :ref:`qgis-popup`
 
-In the web application Lizmap Web Client, a click on a map object will trigger the popup if (and only if):
+In the web application Lizmap Web Client, a click on a feature will trigger the popup if (and only if):
+
+* the popup **has been activated**
+
+    * through the plugin for the layer or the group
+    * or the layer has edition capabilities for existing features
 
 * the layer is **active in the legend**, so that it is shown on the canvas
-* the popup **has been activated** through the plugin for the layer or the group
 * the user has clicked on an **area of the canvas** where data for the layer with active popups are displayed.
 
-.. note:: For point layers you need to click in the middle of the point to display the popup. The tolerance can be setup in tab *Map options* then **Map tools**.
+.. note:: For point layers you need to click in the middle of the point to display the popup. The tolerance can be setup in :menuselection:`Lizmap plugin --> Map options --> Map tools`.
 
-You can update where the popup is displayed in the web interface in *Map options* then **Map interface**. You can choose between:
+You can update where the popup is displayed in the web interface in :menuselection:`Lizmap plugin --> Map options --> Map interface`. You can choose between:
 
-* *dock*
-* *minidock*
-* *map*
-* *bottomdock*
-* *right-dock*
+* ``dock``
+* ``minidock``
+* ``map``
+* ``bottomdock``
+* ``right-dock``
 
+.. _auto-popup:
 
 Auto popup
 -----------
 
-The Lizmap Web Client `auto` popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:
+The Lizmap Web Client ``auto`` popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:
 
 ============  ==============
 Field         Value
@@ -87,6 +94,8 @@ You can also use, in a field, **full web links to a specific page or image**:
 
 * the image referred to will be displayed, instead of the links
 * the web link will be displayed and clickable
+
+.. _lizmap-popup:
 
 Lizmap popup
 ------------
@@ -164,6 +173,8 @@ Here an example of a template handling media and an external link:
    <p><img src="https://www.3liz.com/images/logo-lizmap.png"/></p>
 
 .. seealso:: Chapter :ref:`media` for more details on the use of documents in the directory media.
+
+.. _qgis-popup:
 
 QGIS popup
 -----------
