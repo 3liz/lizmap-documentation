@@ -168,7 +168,7 @@ Here an example of a template handling media and an external link:
 QGIS popup
 -----------
 
-*QGIS* popups can be configured via `QGIS --> Layer properties --> Tooltips --> HTML`, using the same syntax as for the *lizmap* popups. The main advantages of this approach are:
+*QGIS* popups can be configured via :menuselection:`QGIS --> Layer properties --> Display --> HTML Map Tip`. The main advantages of this approach are:
 
 * you can use QGIS variables and expressions, thus adding information created dynamically
 * the popup can be previewed in QGIS, using tooltips
