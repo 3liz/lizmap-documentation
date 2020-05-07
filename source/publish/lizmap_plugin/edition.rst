@@ -103,32 +103,32 @@ ___________________________________________________
 
 It is possible to upload your files, including images, for each feature, during online editing; to achieve this, you need to:
 
-* Configure edition for the layer, with one or more fields with the **edit type** "Photo" or "File". For example, let say the field name is "photo"
-* Create a folder at the root of the QGIS project file : **media/** and a subfolder **media/upload** (obviously you need to do that locally in your computer and server side ).
-* Give webserver user (usually www-data) **write permission** on the upload folder, so that it can create files and folders in media/upload::
+* Configure edition for the layer, with one or more fields with the :guilabel:`edit type` ``Photo`` or ``File``. For example, let say the field name is ``photo``
+* Create a folder at the root of the QGIS project file : :file:`media/` and a subfolder :file:`media/upload` (obviously you need to do that locally in your computer and server side).
+* Give to the webserver user (usually www-data) **write permission** on the upload folder, so that it can create files and folders in :file:`media/upload`:
 
    chmod 775 -R media/upload && chown :www-data -R media/upload
 
-* Check you ``php.ini`` to see if the variables ``post_max_size`` and ``upload_max_filesize`` are correctly set (by default, php only allows uploading files up to 2 Mbyte)
+* Check you :file:`php.ini` to see if the variables ``post_max_size`` and ``upload_max_filesize`` are correctly set (by default, PHP only allows uploading files up to 2 Mbyte)
 
-Lizmap will then create folders to store the data, depending on the layer name, field name, etc. For example, a file would be stored in the folder ``media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT`` and an image in ``media/upload/environment/observations/species_picture/my_picture.png``.
+Lizmap will then create folders to store the data, depending on the layer name, field name, etc. For example, a file would be stored in the folder :file:`media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT` and an image in :file:`media/upload/environment/observations/species_picture/my_picture.png`.
 
 Obviously you will be able to display this image (or any other file) in the popup, as it will be stored in the media folder. See :ref:`use-in-popups`
 
 Use a specific destination folder
 _________________________________
 
-You can override the default destination folder ``media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT`` by manually setting the path where to store the media, relatively to the project. To do so, you must use the **External resource** field edit widget, and configure it with:
+You can override the default destination folder :file:`media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT` by manually setting the path where to store the media, relatively to the project. To do so, you must use the :guilabel:`External resource` field edit widget, and configure it with:
 
-* a **Default path** written relative to the project. For example ``../media/images/`` if you want to store this field files in a folder media situated alongside the project folder. You can also choose set a path inside the project media folder. For example ``media/my_target_folder/``.
-* chek the **Relative path** checkbox, with the default **Relative to project path** option
-* if the field should store a image, you should also check the **Integrated document viewer** checkbox, with the type **Image**
+* a :guilabel:`Default path` written relative to the project. For example :file:`../media/images/` if you want to store this field files in a folder media situated alongside the project folder. You can also choose set a path inside the project media folder. For example :file:`media/my_target_folder/`.
+* check the :guilabel:`Relative path` checkbox, with the default :guilabel:`Relative to project path` option
+* if the field should store a image, you should also check the :guilabel:`Integrated document viewer` checkbox, with the type :guilabel:`Image`
 
-This allow to store the sent media files and images in a centralized folder, for example a directory **media** at the same level than the Lizmap repositories folders:
+This allow to store the sent media files and images in a centralized folder, for example a directory :file:`media` at the same level than the Lizmap repositories folders:
 
 * media
 
-  - images <-- to store images in this folder, use: ``../media/images/``
+  - images <-- to store images in this folder, use :file:`../media/images/`
   - pdf
 
 * environment
@@ -137,4 +137,4 @@ This allow to store the sent media files and images in a centralized folder, for
   - trees.qgs.cfg
   - media
 
-    * tree_pictures/ <-- to store images in this folder, use: ``media/tree_pictures/``
+    * tree_pictures/ <-- to store images in this folder, use: :file:`media/tree_pictures/`
