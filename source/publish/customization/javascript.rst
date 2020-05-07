@@ -9,9 +9,10 @@ Principle
 Adding some JavaScript is useful for a variety of advanced usage.
 For instance, you can:
 
+    - hide some UI elements that you don't want to display by default
+    - add a custom button in the UI
+    - add a popup when the project is opened (to display funders, credits…)
     - avoid people being able to download elements of the page by right clicking on them, and of course much more.
-    - hide some UI elements that you don't want
-    - add some popups when the project is opened
 
 Prerequisites
 -------------
@@ -37,8 +38,9 @@ Configuring the tool
 Library of scripts
 ------------------
 
-In the directory :file:`lizmap-web-client/lizmap/install/qgis/media/js/` (or in GitHub https://github.com/3liz/lizmap-web-client/tree/master/lizmap/install/qgis/media/js/montpellier), you can find examples of suitable JavaScript code.
-Remove the extension ``.example`` and copy them to your :file:`media/js/default/` folder to activate them. You can also find some examples in the repository https://github.com/3liz/lizmap-javascript-scripts
+You can find some examples in the repository https://github.com/3liz/lizmap-javascript-scripts.
+Also, in the directory :file:`lizmap-web-client/lizmap/install/qgis/media/js/` (or in GitHub https://github.com/3liz/lizmap-web-client/tree/master/lizmap/install/qgis/media/js/montpellier), you can find examples of suitable JavaScript code.
+Remove the extension ``.example`` and copy them to your :file:`media/js/default/` folder to activate them.
 
 Available Javascript events
 ---------------------------
