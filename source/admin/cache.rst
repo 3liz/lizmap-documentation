@@ -1,3 +1,5 @@
+.. _seed-cache:
+
 =================================
 Cache management as administrator
 =================================
