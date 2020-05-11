@@ -4,6 +4,7 @@ Cache management as administrator
 
 For a layer with server cache activated, Lizmap will keep the cache when the user pan and zoom on the map.
 To have better performance, Lizmap Web Client can also automatically generate the tile cache on the server.
+
 In some cases, it is desirable to remove the server cache, for example,
 when the style has changed and the tiles need to be updated.
 For this, two solutions are possible:
@@ -11,15 +12,15 @@ For this, two solutions are possible:
 Remove all the cache by Lizmap repository
 =========================================
 
-In the administration interface, The **Lizmap configuration** menu lists configured *Lizmap repository*.
-For each repository, the administrator can delete the cache for all layers of all the projects
-repository by clicking the button **Empty cache**.
+In the administration interface, in the :guilabel:`Maps management` page,
+for each repository, the administrator can delete the cache for all layers of all the projects
+repository by clicking the button :guilabel:`Empty cache`.
 
 Delete the cache, layer by layer, for each Lizmap project
 =========================================================
 
-When the administrator is connected and consults a Lizmap map, a **little red cross** is displayed to the
-right of the name of each layer that is configured to be server cached.
+When the administrator is connected and consults a Lizmap map, a **little red cross** is displayed on the
+right of the name of each layer that is configured with server cache.
 Clicking on the cross allows, after confirmation, to delete the server cache only for this layer in the QGIS project.
 
 Only logged administrator sees these red crosses and has the right to delete the cache.
@@ -33,8 +34,8 @@ You need to have full access on the server where Lizmap is installed and use a t
 You also need to know the ids of Lizmap repositories and the code name of the project
 (the QGIS project filename without the extension).
 
-In this example, we will show commands to manage the tiles cache for the demo project Montpellier, shipped with Lizmap Web Client.
-We also assume that your Lizmap application is installed in the folder /var/www/lizmap-web-client/.
+In this example, we will show commands to manage the tiles cache for the demo project ``Montpellier``, shipped with Lizmap Web Client.
+We also assume that your Lizmap application is installed in the folder :file:`/var/www/lizmap-web-client/`.
 
 .. code-block:: bash
 
@@ -44,8 +45,8 @@ We also assume that your Lizmap application is installed in the folder /var/www/
 
 It is important to know that Lizmap publish the cached layers in WMTS (Web Map Tiled Service). The following concepts are used as options of Lizmap tile cache seeder:
 
-* **TileMatrixSet** - In Lizmap, this represents the projection code, for example *EPSG:3857* (Pseudo mercator).
-* **TileMatrixMin** - This is the minimum zoom level. This is **not** a map scale, but a ID of the zoom level. In Lizmap plugin, the project publisher can configure scales for the published project. For example the list : *100000, 50000, 25000, 10000*. The zoom level ID depends on some CRS and how you configured your Lizmap project. You can have a idea of the scale ID by typing `lizMap.map.getZoom()` in your webbrowser Javascript console when zooming on your map.
+* **TileMatrixSet** - In Lizmap, this represents the projection code, for example `EPSG:3857` (Pseudo mercator).
+* **TileMatrixMin** - This is the minimum zoom level. This is **not** a map scale, but a ID of the zoom level. In Lizmap plugin, the project publisher can configure scales for the published project. For example the list : `100000, 50000, 25000, 10000`. The zoom level ID depends on some CRS and how you configured your Lizmap project. You can have a idea of the scale ID by typing `lizMap.map.getZoom()` in your webbrowser Javascript console when zooming on your map.
 * **TileMatrixMax** - This is the maximum zoom level.
 
 First you **must** get the cache capabilities of one project and some details on a specific layer.
@@ -68,7 +69,10 @@ First you **must** get the cache capabilities of one project and some details on
 
 
 In this example, you see that the bus layer has 3 different TileMatrixSet, corresponding to the 3 different
-spatial coordinate systems available for this project in Lizmap(configured in the *Project properties*, tab *QGIS Server*).
+spatial coordinate systems available for this project in Lizmap (configured in the :menuselection:`Project properties -> QGIS Server`).
+
+.. note::
+    If your layer name has some spaces, you need to use `""`.
 
 It's important to generate the cache capabilities **before** generating the cache for a specific layer.
 The cache capabilities is used in the next command. The next command might fail if the cache capabilities is not present.
