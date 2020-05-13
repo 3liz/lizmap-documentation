@@ -66,11 +66,12 @@ Nevertheless, you can tune several things in QGIS and with the help of Lizmap pl
 Mask or rename a column
 _______________________
 
-You can use the tools available in the **Fields** tab of the **Layer properties**, in QGIS:
+.. warning:: This is working only using `Lizmap` or `Auto` popup. The `QGIS` popup follows the QGIS maptip.
 
-* to **avoid displaying** a column in the popup, **uncheck the relative WMS checkbox**. The WMS column is on the right
+You can use the tools available in :menuselection:`Layer Properties --> Fields` tab in QGIS:
 
-* to **change the name** displayed for that column, type a different name in the *Alias* column
+* to **hide** a column in the popup, uncheck the relative WMS checkbox. The WMS column is on the right.
+* to **rename** a column, add an alias from :menuselection:`Layer Properties --> Attribute form`.
 
 .. image:: /images/features-popup-fields.jpg
    :align: center
