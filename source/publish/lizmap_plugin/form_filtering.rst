@@ -8,7 +8,10 @@ Principle
 
 This tool displays a form in the left panel, based on some fields, and allow the users to search among the layer data with a variety of form inputs: combo boxes, checkboxes, text inputs with autocompletion, date selector with sliders between the min and max date, etc.
 
-It works only for **database** layers: PostgreSQL (recommended), Spatialite and GeoPackage, since Lizmap should query the data to retrieve:
+.. warning::
+    It works only with **database** layers: PostgreSQL (recommended), Spatialite and GeoPackage.
+
+Using SQL statements, Lizmap will query the data to retrieve:
 
 * the total count of features for the current filter
 * the unique values of some fields (for the Unique Values type for example)
