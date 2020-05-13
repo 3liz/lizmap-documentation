@@ -15,7 +15,9 @@ To install it, just do it like any QGIS plugin:
 * Install the plugin
 * It's available in the menu and toolbar :menuselection:`Web`
 
-.. warning:: Lizmap QGIS plugin is regularly updated. To enjoy new features or before reporting a bug, be sure to update your plugin. In :menuselection:`Menu --> Plugins --> Manage and Install Plugins --> Settings`, check that QGIS will check for updates on a regular basis automatically.
+.. warning::
+    Lizmap QGIS plugin is regularly updated. To enjoy new features or before reporting a bug, be sure to update your plugin.
+    In :menuselection:`Menu --> Plugins --> Manage and Install Plugins --> Settings`, check that QGIS will check for updates on a regular basis automatically.
 
 .. image:: /images/introduction-install-lizmap.jpg
    :align: center

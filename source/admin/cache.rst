@@ -71,7 +71,7 @@ First you **must** get the cache capabilities of one project and some details on
 
 
 In this example, you see that the bus layer has 3 different TileMatrixSet, corresponding to the 3 different
-spatial coordinate systems available for this project in Lizmap (configured in the :menuselection:`Project properties -> QGIS Server`).
+spatial coordinate systems available for this project in Lizmap (configured in the :menuselection:`Project properties --> QGIS Server`).
 
 .. note::
     If your layer name has some spaces, you need to use `""`.

@@ -40,7 +40,7 @@ Here are the detailed steps to configure this feature:
 
 * Check group ID or user ID in the administration interface:
 
-    * To know group ID, you must go to the administration interface :menuselection:`SYSTEM --> Groups of users for rights`: ID appears in parentheses after the name of each group (under the title *Groups of new users*)
+    * To know group ID, you must go to the administration interface :menuselection:`SYSTEM --> Groups of users for rights`: ID appears in parentheses after the name of each group (under the title :guilabel:`Groups of new users`)
     * Or to know the user ID, just use its login.
 
 * For all vector layers which is desired filter data, just add a text column that will hold the ID for each line who has the right to display this feature.

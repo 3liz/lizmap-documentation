@@ -74,7 +74,7 @@ To optimize your application as much as possible, we suggest you to:
 In detail: how to activate the caches
 -------------------------------------
 
-In :menuselection:`Lizmap plugin -> Layers`, you can enable for each layer or group the cache (client and server side) for generated images.
+In :menuselection:`Lizmap plugin --> Layers`, you can enable for each layer or group the cache (client and server side) for generated images.
 
 Server side
 ^^^^^^^^^^^
@@ -128,13 +128,13 @@ To use this feature, you must:
 
 * publish the parent QGIS project with Lizmap
 
-  - you must **choose the right announced extent** in :menuselection:`project properties -> QGIS Server`, because this **extent will be reused identically in child projects**.
+  - you must **choose the right announced extent** in :menuselection:`project properties --> QGIS Server`, because this **extent will be reused identically in child projects**.
   - you must **configure the cache** for the layers to integrate. Also, note the options chosen here (image format, metatile, expiration) for use as such in child projects.
-  - It is possible to hide the project from the main page of Lizmap with the check box  in :menuselection:`Map -> Hide the project Web Client Lizmap`.
+  - It is possible to hide the project from the main page of Lizmap with the check box  in :menuselection:`Map --> Hide the project Web Client Lizmap`.
 
 * open the child project and integrate layers or groups in this project, for example orthophoto. Then you must:
 
-  - verify that the **announced extent** in :menuselection:`QGIS project properties -> QGIS Server` is **exactly the same as the parent project**.
+  - verify that the **announced extent** in :menuselection:`QGIS project properties --> QGIS Server` is **exactly the same as the parent project**.
   - you must **configure the cache** for the integrated layer **with exactly the same options as those selected from the parent project**: image size, expiration, metatile.
   - you must set the Lizmap id of the **Source repository** of the parent project (The one configured in the Lizmap Web Client administration interface).
   - the code of the "Source project" (the name of the parent QGIS project without the `.qgs` extension) is automatically entered for layers and integrated groups.
