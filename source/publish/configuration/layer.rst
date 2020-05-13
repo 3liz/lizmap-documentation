@@ -34,6 +34,8 @@ To set the editing tools for your layer fields:
 
 .. warning:: Lizmap Web Client does not know the "QT Designer UI file" for form generation. Therefore only use the :guilabel:`Autogenerate` mode or :guilabel:`Drag and drop` mode for editing layers.
 
+.. note:: To make the field compulsory you have to define it as ``NOT NULL`` in the properties of the table, **in the database**, not in :guilabel:`QGIS --> Layer Properties`.
+
 .. note::
     All the editing tools are not yet managed by Lizmap Web Client. Only the following tools are supported:
 
@@ -48,8 +50,6 @@ To set the editing tools for your layer fields:
         * Relation Reference
 
     If the tool is not supported, the web form displays a text input field.
-
-.. note:: To make the field compulsory you have to define it as ``NOT NULL`` in the properties of the table, at the database level.
 
 .. _server_side_simplification:
 
