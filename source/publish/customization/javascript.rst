@@ -171,7 +171,7 @@ An example allowing you to send current login User-ID (and/or other user data) t
 URL of a static file
 ^^^^^^^^^^^^^^^^^^^^
 
-If you want to get the URL of a static file:
+If you want to get the URL of a static file, located in the :ref:`media` folder:
 
 .. code-block:: javascript
 
@@ -184,3 +184,9 @@ If you want to get the URL of a static file:
         })
    );
 
+or
+
+.. code-block:: javascript
+
+    var domain = 'https://' + document.domain + lizUrls.basepath;
+    var image  = '<img src="' + domain + 'index.php/view/media/getMedia?repository=REPOSITORY&project=PROJECT&path=/media/logo.png" title="Logo" />';
