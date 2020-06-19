@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# João Gaspar <joao.f.r.gaspar@gmail.com>, 2018
+# José Macau <jose.macau@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-07 18:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-09-07 16:04+0000\n"
 "Last-Translator: José Macau <jose.macau@gmail.com>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/3liz-1/teams/62012/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +28,7 @@ msgstr "Instalação avançada da configuração"
 
 #: ../../source/install/advanced_install.rst:6
 msgid "Lizmap behind a proxy/reverse proxy"
-msgstr ""
+msgstr "Lizmap através de um proxy/reverse proxy"
 
 #: ../../source/install/advanced_install.rst:8
 msgid ""
@@ -33,6 +37,10 @@ msgid ""
 " content an unwanted port ( ``http://mydomain:5468/`` instead of "
 "``http://mydomain/`` ). Or url may not contain the real domain name."
 msgstr ""
+"Por vezes, alguns URLs no Lizmap podem não ser o que se espera. Por exemplo,"
+" existe a utilização do protocolo \"http\" em vez do protocolo \"https\". Ou"
+" podem conter uma porta indesejada (``http://mydomain:5468/`` em vez de "
+"``http://mydomain/ ``). Ou o URL pode não conter o nome real do domínio."
 
 #: ../../source/install/advanced_install.rst:13
 msgid ""
@@ -41,36 +49,50 @@ msgid ""
 "environment parameters given by PHP or the backend web server to Lizmap are "
 "wrong."
 msgstr ""
+"Na maioria dos casos, isso acontece porque o servidor web ou PHP-fpm está "
+"por trás de um servidor web principal (que funciona como um proxy ou proxy "
+"reverso), e então os parâmetros de ambiente fornecidos pelo PHP ou pelo "
+"servidor web de backend não estão corretos."
 
 #: ../../source/install/advanced_install.rst:17
 msgid ""
 "You can tell to Lizmap to force to HTTPS, to use the right domain or to use "
 "the right port."
 msgstr ""
+"É possível fornecer informação ao Lizmap para forçar o protocolo HTTPS, "
+"utilizar o domínio correto ou utilizar a porta adequada."
 
 #: ../../source/install/advanced_install.rst:19
 msgid ""
 "In ``localconfig.ini.php``, you can use these following configuration "
 "parameters."
 msgstr ""
+"No ficheiro ``localconfig.ini.php``, é possível utilizar os seguintes "
+"parâmetros de configuração."
 
 #: ../../source/install/advanced_install.rst:22
 msgid ""
 "To force to use the port 80 (true) or the 8080 for example with the http "
 "protocol:"
 msgstr ""
+"Para forçar a utilização da porta 80 (true) ou da 8080, por exemplo, com o "
+"protocolo http:"
 
 #: ../../source/install/advanced_install.rst:30
 msgid ""
 "To force to use the port 443 (true) or the 8443 for example with the https "
 "protocol:"
 msgstr ""
+"Para forçar a utilização da porta 443 (true) ou da 8443, por exemplo, com o "
+"protocolo https:"
 
 #: ../../source/install/advanced_install.rst:38
 msgid ""
 "To specify the domain name of your lizmap application, if Lizmap cannot "
 "guess it:"
 msgstr ""
+"Para especificar o nome de domínio da aplicação Lizmap, se o Lizmap não o "
+"conseguir descobrir:"
 
 #: ../../source/install/advanced_install.rst:45
 msgid ""
@@ -80,12 +102,20 @@ msgid ""
 "``http://backend.example.com/foo/bar/index.php``, You have to indicate the "
 "\"public\" URL path (basePath) and the backend URL Path (backendBasePath):"
 msgstr ""
+"Se o caminho da URL do servidor web de backend não corresponde ao caminho da"
+" URL do servidor web frontal (ex: o proxy redireciona urls como "
+"``http://example.com/index.php`` para o servidor web "
+"``http://backend.example.com/foo/bar/index.php``, deverá ser indicado o "
+"caminho do URL \"público\" (basePath) e o caminho do URL de backend "
+"(backendBasePath):"
 
 #: ../../source/install/advanced_install.rst:56
 msgid ""
 "If the reverse proxy redirect HTTPS request to HTTP, you must deactivate the"
 " HTTPS check:"
 msgstr ""
+"Se o proxy reverso redirecionar os pedidos HTTPS para HTTP, deverá ser "
+"desativada a verificação HTTPS:"
 
 #: ../../source/install/advanced_install.rst:63
 msgid ""
@@ -93,6 +123,9 @@ msgid ""
 "generated URL with the HTTPS protocol, when Lizmap doesn't know what is the "
 "protocol used by requests on the reverse proxy:"
 msgstr ""
+"A partir do Lizmap 3.0.18 e 3.1.6, é possível forçar todo o URL gerado "
+"através do protocolo HTTPS, quando o Lizmap desconhece qual é o protocolo "
+"utilizado para pedidos ao proxy reverso:"
 
 #: ../../source/install/advanced_install.rst:75
 msgid "Using environment variables"
@@ -105,20 +138,27 @@ msgid ""
 "``profiles.ini.php`` files. Be sure the environment variables are available "
 "to the PHP-FPM process or the APACHE/NGINX process."
 msgstr ""
+"Se algumas credenciais ou parâmetros estiverem disponíveis em variáveis de "
+"ambiente, é possível indicar a utilização dos mesmos nos ficheiros "
+"``localconfig.ini.php`` ou ``profiles.ini.php``. É necessário que as "
+"variáveis de ambiente estejam disponíveis para o processo PHP-FPM ou para o "
+"processo APACHE/NGINX."
 
 #: ../../source/install/advanced_install.rst:81
 msgid "Into this files, use the syntax ``${VARIABLE_NAME}``."
-msgstr ""
+msgstr "Dentro desses ficheiros, utilizar a sintaxe ``${VARIABLE_NAME}``."
 
 #: ../../source/install/advanced_install.rst:83
 msgid ""
 "For example, to indicate postgresql credentials stored into these variables "
 ":"
 msgstr ""
+"Por exemplo, para indicar as credenciais do PostgreSQL guardadas nessas "
+"variáveis:"
 
 #: ../../source/install/advanced_install.rst:92
 msgid "You write this configuration into profiles.ini.php:"
-msgstr ""
+msgstr "É necessário escrever esta configuração no ficheiro profiles.ini.php:"
 
 #: ../../source/install/configuration.rst:3
 msgid "Configuration of Lizmap"
@@ -129,6 +169,8 @@ msgid ""
 "In some server, additionnal settings should be done into Lizmap. Settings "
 "should be set into the ``lizmap/var/config/`` directory."
 msgstr ""
+"Em alguns servidores, configurações adicionais devem ser feitas no Lizmap. "
+"As configurações devem ser definidas no diretório ``lizmap/var/config/``."
 
 #: ../../source/install/configuration.rst:9
 msgid "Configuration files"

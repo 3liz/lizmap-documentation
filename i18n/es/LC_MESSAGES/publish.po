@@ -3,14 +3,18 @@
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# rldhont <rldhont@gmail.com>, 2018
+# Arturo Lorenzo <shroomeater@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-07 18:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: rldhont <rldhont@gmail.com>, 2018\n"
+"PO-Revision-Date: 2018-09-07 16:04+0000\n"
+"Last-Translator: Arturo Lorenzo <shroomeater@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/3liz-1/teams/62012/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,22 +24,26 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:3
 msgid "Advanced Configuration"
-msgstr ""
+msgstr "Configuración avanzada"
 
 #: ../../source/publish/advanced_lizmap_config.rst:6
 msgid "Create an overview map"
-msgstr ""
+msgstr "Crear un mapa de localización"
 
 #: ../../source/publish/advanced_lizmap_config.rst:8
 msgid ""
 "To add an **overview map**, or location map, in the Lizmap's map, you must:"
 msgstr ""
+"Para añadir un **overview map**, o mapa de localización, en el mapa de "
+"Lizmap, debes:"
 
 #: ../../source/publish/advanced_lizmap_config.rst:10
 msgid ""
 "Create an independent group in the QGIS project called **Overview** (with "
 "the 1st letter capitalized)"
 msgstr ""
+"Crear  en el proyecto de QGIS un grupo de capas independiente denominado "
+"**Overview** (con la primera letra en mayúscula)"
 
 #: ../../source/publish/advanced_lizmap_config.rst:11
 msgid ""
@@ -79,7 +87,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:38
 msgid "Use case"
-msgstr ""
+msgstr "Casos de uso"
 
 #: ../../source/publish/advanced_lizmap_config.rst:40
 msgid ""
@@ -104,7 +112,7 @@ msgstr ""
 #: ../../source/publish/advanced_lizmap_config.rst:47
 #: ../../source/publish/advanced_lizmap_config.rst:88
 msgid "Prerequisites"
-msgstr ""
+msgstr "Prerrequisitos"
 
 #: ../../source/publish/advanced_lizmap_config.rst:49
 msgid ""
@@ -119,7 +127,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:54
 msgid "To add a layer to this tool:"
-msgstr ""
+msgstr "Para añadir una capa a esta herramienta:"
 
 #: ../../source/publish/advanced_lizmap_config.rst:56
 msgid ""
@@ -146,7 +154,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:61
 msgid "To remove a layer already configured:"
-msgstr ""
+msgstr "Para eliminar una capa que ya ha sido configurada:"
 
 #: ../../source/publish/advanced_lizmap_config.rst:63
 msgid "select the line of the layer you want to remote by clicking on it"
@@ -154,7 +162,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:64
 msgid "click on the button **Remove layer**."
-msgstr ""
+msgstr "pulsa el botón **Remove layer**"
 
 #: ../../source/publish/advanced_lizmap_config.rst:67
 msgid "Hierarchical Lists"
@@ -167,10 +175,15 @@ msgid ""
 " district, the dropdown of sub-districts is automatically filtered to "
 "display only the sub-districts of the chosen district."
 msgstr ""
+"Si tomamos el ejemplo de los distritos, puede ser interesante facilitar al "
+"ususario un menú desplegable de *subdistritos*. Lo que se quiere conseguir "
+"es que cuando el usuario seleccione un distrito, el menú desplegable de "
+"subdistritos, muestre automáticamente solamente los subdistritos del "
+"distrito seleccionado."
 
 #: ../../source/publish/advanced_lizmap_config.rst:71
 msgid "For this, there are 2 methods:"
-msgstr ""
+msgstr "Para conseguir esto, existen dos métodos:"
 
 #: ../../source/publish/advanced_lizmap_config.rst:73
 msgid ""
@@ -178,6 +191,9 @@ msgid ""
 "districts. So you have to use a **field join** between the two layers to "
 "enable automatic filtering lists in Lizmap"
 msgstr ""
+"o bien tiene **2 separate vector layers**: una para distritos y "
+"subdistritos. Por lo tanto, debe usar una ** field join ** entre las dos "
+"capas para habilitar el filtrado automático de listas en Lizmap"
 
 #: ../../source/publish/advanced_lizmap_config.rst:74
 msgid ""
@@ -185,10 +201,15 @@ msgid ""
 "with the plugin a **group field**. Two dropdowns will be created instead of "
 "one in the Web application."
 msgstr ""
+"o bien se tiene **only 1 layer for sub-districts**, y entonces se puede "
+"especificar mediante el plugin un **group field**. Dos menúes desplegable se"
+" crearán en lugar de uno en la aplicación Web."
 
 #: ../../source/publish/advanced_lizmap_config.rst:76
 msgid "Up to 3 project layers can be added to the *Locate by layer* tool."
 msgstr ""
+"Hasta 3 capas del proyecto se pueden añadir a la herramienta *Locate by "
+"layer*."
 
 #: ../../source/publish/advanced_lizmap_config.rst:77
 msgid ""
@@ -197,6 +218,11 @@ msgid ""
 "version is the right one, if not, you can use the button 'modify' below). If"
 " the configuration is not right the location will be wrong!"
 msgstr ""
+"No olvide comprobar si la configuración de Qgis server es la correcta (en "
+"Lizmap : Mi cuenta -> Lizmap configuración -> comprobar si la versión de "
+"qgis server es la correcta, si no, puede usar el botón de abajo "
+"'modificar'). !Si la configuración no es correcta la localización estará "
+"mal¡"
 
 #: ../../source/publish/advanced_lizmap_config.rst:83
 msgid "Fast Searchs - QuickFinder Plugin"
