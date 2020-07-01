@@ -37,9 +37,10 @@ At the layer level
 
     1. .. include:: ../../shared/add_layer.rst
     2. One layer with date/time capabilities.
-    3. The start column with date/time.
+    3. The start column with date/time. It can any kind of fields.
     4. The end column with date/time. This is optional.
     5. Date/time resolution of the chosen attribute(s).
+    6. For not database based layer, you must compute the minimum and maximum values.
 
 - .. include:: ../../shared/edit_layer.rst
 - .. include:: ../../shared/remove_layer.rst

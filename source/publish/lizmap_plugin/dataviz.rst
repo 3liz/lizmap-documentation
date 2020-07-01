@@ -41,6 +41,10 @@ You can easily configure it with the plugin Lizmap in QGIS in the :guilabel:`Dat
 At the layer level
 ^^^^^^^^^^^^^^^^^^
 
+.. image:: /images/interface-publisher-dataviz.jpg
+    :align: center
+    :scale: 80%
+
 - To enable a layer with dataviz capabililities:
 
     1. .. include:: ../../shared/add_layer.rst
@@ -52,19 +56,17 @@ At the layer level
     7. **Aggregation** : For a few types of charts like bar or pie, you can chose to aggregate the data in the graph. There are a few aggregate functions available - average(avg), sum, count, median, stddev, min, max, first, last.
     8. **Traces** : Depending of the kind of chart, you can add one or many traces : the Y field of your graph.
     9. Depending of the kind of chart, there is now different options.
-    10. **Display filtered plot in popups of parent layer** : if you check this checkbox, the children of your layer will get the same graph as the parent plot but filtered only for them. It's useful if you want to see the statistics of one entity instead of all.
-    11. **Only show child popup** : The main graph will not be shown in the main container and only the filtered graph of the relation of the layer will be displayed in the popup when you select the element.
-    12. **Display the legend**, sometimes, the legend is not necessary.
-    13. **Display plot only when the layer is visible**.
+    10. **Layout** : The layout can be customized. It must be a JSON dictionary. You can read the documentation of Plotly documentation about the layout configuration https://plotly.com/javascript/reference/#layout
+    11. **Display filtered plot in popups of parent layer** : if you check this checkbox, the children of your layer will get the same graph as the parent plot but filtered only for them. It's useful if you want to see the statistics of one entity instead of all.
+    12. **Only show child popup** : The main graph will not be shown in the main container and only the filtered graph of the relation of the layer will be displayed in the popup when you select the element.
+    13. **Display the legend**, sometimes, the legend is not necessary.
+    14. **Display plot only when the layer is visible**.
+    15. Some options might be visible or not according to the kind of chart, like choosing for horizontal/vertical layout for a bar chart.
 
 - .. include:: ../../shared/edit_layer.rst
 - .. include:: ../../shared/remove_layer.rst
 - .. include:: ../../shared/move_up_down_layer.rst
 - .. include:: ../../shared/field_alias.rst
-
-.. image:: /images/interface-publisher-dataviz.jpg
-    :align: center
-    :scale: 80%
 
 
 At the project level
@@ -96,6 +98,19 @@ For instance, this bootstrap HTML code will produce the layout below:
    :align: center
    :scale: 80%
 
+JSON layout
+^^^^^^^^^^^
+
+.. code-block:: javascript
+
+    {
+        "xaxis": {
+            "showticklabels": "False"
+        },
+        "yaxis": {
+            "showticklabels": "False"
+        }
+    }
 
 Examples
 --------
