@@ -5,7 +5,7 @@ Publish the map by FTP
 Reminder of Lizmap architecture
 ===============================
 
-.. image:: /images/all-schema-client-server.jpg
+.. image:: /images/architecture.jpg
    :align: center
 
 **Lizmap is based on repositories system**. To publish a map in Lizmap, it is sufficient to ensure that the contents of the local directory containing the data and QGIS projects **be reproduced exactly** identical in the corresponding server repository.

@@ -8,3 +8,5 @@
 .. |remove_layer_svg| image:: /images/icons/symbologyRemove.svg
 .. |down_layer_svg| image:: /images/icons/mActionArrowDown.svg
 .. |up_layer_svg| image:: /images/icons/mActionArrowUp.svg
+.. |refresh_svg| image:: /images/icons/mActionRefresh.svg
+.. |properties_svg| image:: /images/icons/mActionPropertiesWidget.svg

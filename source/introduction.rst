@@ -50,7 +50,7 @@ QGIS and QGIS Server
   * Copy and paste the QGIS project and data files
   * QGIS Server and QGIS Desktop share **the same rendering engine**
 
-.. image:: images/introduction-comparison-qgis-web.jpg
+.. image:: images/qgis_to_web.jpg
    :align: center
    :width: 90%
 
