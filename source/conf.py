@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Lizmap'
-copyright = u'2014-2019, 3liz'
+copyright = u'2014-2020, 3liz'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
