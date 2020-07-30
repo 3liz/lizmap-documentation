@@ -187,6 +187,9 @@ QGIS popup
 * the popup can be previewed in QGIS, using map tips. You can enable map tips in the menu :menuselection:`View --> Show Map Tips`
 * the popup configurations are stored in QGIS project and layer style, so they can be reused in other Lizmap projects without replicating the configuration.
 
+If you have defined a form layout with the 'Drag and drop designer' for a layer in :menuselection:`Layer Properties --> Attributes Form`, you can also display it in its popup.
+For this, you have to click on the :guilabel:`Copy the drag and drop designer` button. Tabs defined in :guilabel:`Form Layout` in QGIS will also be displayed as tabs in popups.
+
 One to many relations
 ---------------------
 
