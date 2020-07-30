@@ -26,7 +26,7 @@ Add a alias on a field
 ----------------------
 
 Usually, the field names are defined without accent, spaces and can't be very long.
-In :menuselection:`Layer Properties --> Attribute Forms` and clicking on a field, you can add an alias.
+In :menuselection:`Layer Properties --> Attributes Form` and clicking on a field, you can add an alias.
 
 This will be used to substitute the field name when possible for a more friendly name.
 
@@ -37,7 +37,7 @@ This will be used to substitute the field name when possible for a more friendly
 Customize the edition form
 --------------------------
 
-In :menuselection:`Layer Properties --> Attribute Form` and clicking on a field, you can setup the form.
+In :menuselection:`Layer Properties --> Attributes Form` and clicking on a field, you can setup the form.
 
 To set the editing tools for your layer fields:
 

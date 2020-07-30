@@ -71,7 +71,7 @@ _______________________
 You can use the tools available in :menuselection:`Layer Properties --> Fields` tab in QGIS:
 
 * to **hide** a column in the popup, uncheck the relative WMS checkbox. The WMS column is on the right.
-* to **rename** a column, add an alias from :menuselection:`Layer Properties --> Attribute form`.
+* to **rename** a column, add an alias from :menuselection:`Layer Properties --> Attributes Form`.
 
 .. image:: /images/features-popup-fields.jpg
    :align: center
