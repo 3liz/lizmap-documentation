@@ -88,7 +88,7 @@ To overcome this lack Lizmap offers an easy way to print a group or layer instea
 To be able to print a layer which is visible in Lizmap Web Client only:
 
 * You need to add the equivalent layer in the QGIS project.
-* You might need to hide it from the legend, see :ref:`hide-layers`.
+* You need to hide it from the Lizmap legend, see :ref:`hide-layers`.
 * Rename the layer to one of these names:
 
     - ``osm-mapnik`` for OpenStreetMap

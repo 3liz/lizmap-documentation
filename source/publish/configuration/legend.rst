@@ -25,13 +25,13 @@ To create your themes, follow QGIS documentation https://docs.qgis.org/3.4/en/do
 Masking individual layers
 -------------------------
 
-You can exclude layers of your publication with the :guilabel:`QGIS Server` tab of the :guilabel:`QGIS project properties`. In this case the layers will not be available in Lizmap. With this method, you cannot use a layer in the locate by layer function and not display in the map.
+You can exclude layers of your publication with the :guilabel:`QGIS Server` tab of the :guilabel:`QGIS project properties`.
+In this case the layers will not be available in Lizmap **at all**. With this method, you cannot use a layer in the locate by layer
+function and not display in the map.
 
-To overcome this lack Lizmap offers a simple way to not display some layers.
+To overcome this lack, Lizmap offers two simple ways to not display some layers only in the legend :
 
-Not to display one or more layers of QGIS project in the legend of the Web map, there is two ways:
-
-* Create a group in your legend called ``hidden`` an put your layer into this group. This group (and its layers) won't be displayed in Lizmap.
+* Either create a group in your legend called ``hidden`` and put your layer into this group. This group (and its layers) won't be displayed in the Lizmap legend.
 * Or use the check box :guilabel:`Hide in legend` in :menuselection:`Lizmap --> Layers` for the specific layer.
 
 This feature can be used for:
