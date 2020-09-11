@@ -28,6 +28,17 @@ Clicking on the cross allows, after confirmation, to delete the server cache onl
 Only logged administrator sees these red crosses and has the right to delete the cache.
 
 
+Configuring the caching system
+==============================
+
+In the :menuselection:`Administration -> Lizmap Configuration -> Cache`, you can configure the caching system which is
+used.
+You can choose between different kind of caching :
+
+* Files
+* Sqlite
+* Redis (You would need a Redis server)
+
 Seeding
 =======
 
@@ -48,8 +59,15 @@ We also assume that your Lizmap application is installed in the folder :file:`/v
 It is important to know that Lizmap publish the cached layers in WMTS (Web Map Tiled Service). The following concepts are used as options of Lizmap tile cache seeder:
 
 * **TileMatrixSet** - In Lizmap, this represents the projection code, for example `EPSG:3857` (Pseudo mercator).
-* **TileMatrixMin** - This is the minimum zoom level. This is **not** a map scale, but a ID of the zoom level. In Lizmap plugin, the project publisher can configure scales for the published project. For example the list : `100000, 50000, 25000, 10000`. The zoom level ID depends on some CRS and how you configured your Lizmap project. You can have a idea of the scale ID by typing `lizMap.map.getZoom()` in your webbrowser Javascript console when zooming on your map.
+* **TileMatrixMin** - This is the minimum zoom level.
 * **TileMatrixMax** - This is the maximum zoom level.
+
+.. warning::
+    The zoom level is **not** a map scale, but the the zoom level. In Lizmap plugin, the project publisher can
+    configure scales for the published project, for example the list : `100000, 50000, 25000, 10000`.
+    The zoom level ID depends on some CRS and how you configured your Lizmap project.
+    You can have a idea of the scale ID by typing `lizMap.map.getZoom()` in your webbrowser Javascript console when
+    zooming on your map.
 
 First you **must** get the cache capabilities of one project and some details on a specific layer.
 
