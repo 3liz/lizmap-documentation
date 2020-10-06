@@ -11,7 +11,7 @@ It is possible to create themes for all maps of a repository or for a single map
 The principle is:
 
 * the directory :file:`media` contains a directory named :file:`themes`
-* the directory :file:`themes` contains a default directory for the theme of all the maps of the repository
+* the directory :file:`themes` contains a :file:`default` directory for the theme of all the maps of the repository
 * the directory :file:`themes` may contain too one directory per project, for the themes specific for each project
 
 .. code-block:: none
