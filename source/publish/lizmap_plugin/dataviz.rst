@@ -101,16 +101,82 @@ For instance, this bootstrap HTML code will produce the layout below:
 JSON layout
 ^^^^^^^^^^^
 
+The layout option, available since |Lizmap 3.4|, allows you to configure many options by writing up a JSON object. See the full reference: https://plotly.com/javascript/reference/#layout
+
+The following examples show how to use some properties depending of the layout property:
+
+* Add units in the Y (vertical) axis numbers:
+
+.. code-block:: javascript
+
+    // Add " ha" suffix
+    {"yaxis": {"ticksuffix": " ha"}}
+
+
+* Remove labels in the X (horizontal) axis:
+
+.. code-block:: javascript
+
+    // Hode X labels. Use yaxis for Y labels
+    {"xaxis": {"showticklabels": false}}
+
+
+* Remove the automatic k, M or G suffix (ex: 10 M) for big number in the axis and in the hover toolip:
+
+.. code-block:: javascript
+
+    {"yaxis": {"tickformat": ",.2f"}}
+
+* Order of the bars for a bar chart. Use ascending or descending values:
+
+.. code-block:: javascript
+
+    // By ascending X value
+    {"xaxis": {"categoryorder": "category ascending"}}
+
+    // By descending bar height (total Y value)
+    {"xaxis": {"categoryorder": "total ascending"}}
+
+
+* Set margins. Use l for left, t for top, r for right and b for bottom:
+
+.. code-block:: javascript
+
+    // Shift the plot to the right (to display big Y axis labels)
+    {"margin": {"l": 70}}
+
+
+* Define Font properties:
+
+.. code-block:: javascript
+
+    // Change X axis font size
+    {"xaxis": {"tickfont": {"size": 10}}}
+
+
+* You can combine any of the properties, for example:
+
 .. code-block:: javascript
 
     {
         "xaxis": {
-            "showticklabels": "False"
+            "categoryorder": "total ascending"
+            "tickfont": {
+                "size": 10
+            }
         },
         "yaxis": {
-            "showticklabels": "False"
+            "showticklabels": false
         }
     }
+
+
+
+Miscellaneous
+^^^^^^^^^^^^^
+
+* For **pie chart** : the items in the legend are ordered by X as a default behaviour since |Lizmap 3.4|
+* QGIS Field **aliases** are used in the toolpip when hovering the bar or pie slices.
 
 Examples
 --------
