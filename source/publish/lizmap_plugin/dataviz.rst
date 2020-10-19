@@ -101,7 +101,8 @@ For instance, this bootstrap HTML code will produce the layout below:
 JSON layout
 ^^^^^^^^^^^
 
-The layout option, available since |Lizmap 3.4|, allows you to configure many options by writing up a JSON object. See the full reference: https://plotly.com/javascript/reference/#layout
+The layout option, allows you to configure many options by writing up a JSON object.
+See the full reference: https://plotly.com/javascript/reference/#layout
 
 The following examples show how to use some properties depending of the layout property:
 
@@ -121,7 +122,7 @@ The following examples show how to use some properties depending of the layout p
     {"xaxis": {"showticklabels": false}}
 
 
-* Remove the automatic k, M or G suffix (ex: 10 M) for big number in the axis and in the hover toolip:
+* Remove the automatic `k`, `M` or `G` suffix (ex: `10 M`) for big number in the axis and in the hover tooltip:
 
 .. code-block:: javascript
 
@@ -138,7 +139,7 @@ The following examples show how to use some properties depending of the layout p
     {"xaxis": {"categoryorder": "total ascending"}}
 
 
-* Set margins. Use l for left, t for top, r for right and b for bottom:
+* Set margins. Use `l` for left, `t` for top, `r` for right and `b` for bottom:
 
 .. code-block:: javascript
 
@@ -146,7 +147,7 @@ The following examples show how to use some properties depending of the layout p
     {"margin": {"l": 70}}
 
 
-* Define Font properties:
+* Define font properties:
 
 .. code-block:: javascript
 
@@ -175,8 +176,8 @@ The following examples show how to use some properties depending of the layout p
 Miscellaneous
 ^^^^^^^^^^^^^
 
-* For **pie chart** : the items in the legend are ordered by X as a default behaviour since |Lizmap 3.4|
-* QGIS Field **aliases** are used in the toolpip when hovering the bar or pie slices.
+* For **pie chart** : the items in the legend are ordered by X as a default behaviour.
+* QGIS Field **aliases** are used in the tooltip when hovering the bar or pie slices.
 
 Examples
 --------
