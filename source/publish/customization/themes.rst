@@ -32,7 +32,11 @@ Prerequisites
 Configuring the tool
 --------------------
 
-In order to simplify the creation of a theme for a repository or a map, Lizmap allows you to obtain the default theme from the application, through the request: ``index.php/view/media/getDefaultTheme``.
+.. warning:: The web browser has some caching mechanism. Do not forget to refresh and force the cache with
+    Ctrl+F5.
+
+In order to simplify the creation of a theme for a repository or a map, Lizmap allows you to obtain the
+default theme from the application, through the request: ``index.php/view/media/getDefaultTheme``.
 
 The request returns a zipfile containing the default theme, with the following structure:
 
@@ -60,22 +64,26 @@ Once downloaded the zipfile, you can:
 
 
 .. tip::
-    To preview your results without deploying it in production, you can add your theme in the :file:`lizmap/www/themes`.
-    Add ``&theme=yourtheme`` at the end of your URL (e.g. ``https://your.lizmap.instance/index.php/view/map/?repository=montpellier&project=montpellier&theme=yourtheme``).
+    To preview your results without deploying it in production, you can add your theme in the
+    :file:`lizmap/www/themes`.
+    Add ``&theme=yourtheme`` at the end of your URL (e.g.
+    ``https://your.lizmap.instance/index.php/view/map/?repository=montpellier&project=montpellier&theme=yourtheme``).
 
 Once your theme is ready, you can just publish it copying it in the directory ``media``.
 
 Example
 -------
 
-We want to change *only* the logo in a specific project called ``roads`` and we want to keep the default theme from the Lizmap *instance*:
+We want to change *only* the logo in a specific project called ``roads`` and we want to keep the default theme
+from the Lizmap *instance*:
 
 * We don't need the :file:`media/themes/default` folder.
 * Create :file:`media/themes/roads`.
 * Extract the content zip file inside.
 * Change the file :file:`css/img/logo.png`
 
-This would work. But you still have a lot of CSS which is the same from the Lizmap main instance. So we can make our style smaller:
+This would work. But you still have a lot of CSS which is the same from the Lizmap main instance. So we can
+make our style smaller:
 
 * Remove all images which are the same as Lizmap instance
 * Search in the :file:`css` folder where :file:`logo.png` is used.
