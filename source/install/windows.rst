@@ -16,7 +16,7 @@ Requirements
 * Web Server (`Apache 24 64-bits <http://www.apachelounge.com/download>`_ )
 * PHP 7.3.10 (`Non Thread Safe <https://windows.php.net/download/>`_ )
 * QGIS Server 3 64-bits (`OSGeo4W Network Installer (64 bit) <https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_)
-* Lizmap Web Client 3.x (`Github Lizmap releases <https://www.github.com/3liz/lizmap-web-client>`_ )
+* Lizmap Web Client 3.x (`Github Lizmap releases <https://www.github.com/3liz/lizmap-web-client/releases/>`_ )
 * FTP software (e.g. `Filezilla <https://filezilla-project.org/>`_ , `WinSCP <https://winscp.net/eng/download.php>`_ ) 64-bits (*optional*)
 
 Apache 2.4.41 Server Configuration

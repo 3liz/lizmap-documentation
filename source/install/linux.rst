@@ -286,7 +286,7 @@ Retrieve the latest available stable version from https://github.com/3liz/lizmap
    # Options
    VERSION=3.3.0
    # Archive recovery with wget
-   wget https://github.com/3liz/lizmap-web-client/archive/$VERSION.zip
+   wget https://github.com/3liz/lizmap-web-client/releases/download/$VERSION/lizmap-web-client-$VERSION.zip
    # Unzip archive
    unzip $VERSION.zip
    # virtual link for http://localhost/lizmap/
