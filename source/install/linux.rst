@@ -199,7 +199,8 @@ Install
 Adapting the PostgreSQL configuration
 ----------------------------------------------
 
-We will use pgtune, an utility program that can automatically generate a PostgreSQL configuration file adapted to the properties of the server (memory, processors, etc.)
+We will use ``pgtune``, an utility program that can automatically generate a PostgreSQL configuration file
+adapted to the properties of the server (memory, processors, etc.)
 
 .. code-block:: bash
 
@@ -279,12 +280,12 @@ Creating a user account
 QGIS Server
 ===========
 
-Follow the QGIS Documentation how to install QGIS Server : https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/server/index.html
+Follow the QGIS Documentation how to install QGIS Server : https://docs.qgis.org/3.16/en/docs/server_manual/
 
 As we started to use Nginx in this Lizmap installation, you should continue the installation of QGIS Server with Nginx.
 With Nginx, the preferred way is to use ``spawn-fcgi``.
 
-.. warning:: Nginx with ``fcgiwrap`` is not efficient, but it's mentionned in the QGIS Server documentation. Better to use ``spawn-fcgi``.
+.. warning:: Nginx with ``fcgiwrap`` is not efficient, but it's mentioned in the QGIS Server documentation. Better to use ``spawn-fcgi``.
 
 In the Nginx configuration, it's good to use the ``QGIS_OPTIONS_PATH`` variable for a folder with write permissions for ``www-data``.
 These is explained in the QGIS Server documentation.
@@ -300,8 +301,23 @@ After you have setup your web server with QGIS-Server, check that the URL of QGI
 
 Keep this URL, we will use it in the Lizmap admin panel.
 
-Retrieve and install Lizmap Web Client
-=======================================
+QGIS Server plugins
+-------------------
+
+Some plugins can be added to QGIS Server. This will enable some features in Lizmap. It's not compulsory but
+in some situations, it's better.
+
+Either you should setup the ``QGIS_PLUGIN_PATH`` environment variable during the installation of QGIS Server
+or use the default one provided by QGIS. https://docs.qgis.org/3.16/en/docs/server_manual/config.html#environment-variables
+
+* AtlasPrint : To enable the PDF based on a QGIS Layout Atlas https://github.com/3liz/qgis-atlasprint
+* Lizmap : Lizmap is not only a PHP application, there is also Python plugin for **QGIS Server** to evaluate
+  QGIS Expressions in forms https://github.com/3liz/lizmap-plugin/
+* WfsOutputExtension : To add new format when exporting vector data https://github.com/3liz/qgis-wfsOutputExtension
+* Logging : To log QGIS Servers log and to flush the cache on QGIS Server https://github.com/3liz/qgis-logging-plugin
+
+Install Lizmap Web Client
+=========================
 
 .. code-block:: bash
 
@@ -336,9 +352,9 @@ Set rights for Nginx, so php scripts could write some temporary files or do chan
    lizmap/install/set_rights.sh www-data www-data
 
 
-Create lizmapConfig.ini.php, localconfig.ini.php and profiles.ini.php and edit them
-to set parameters specific to your installation. You can modify lizmapConfig.ini.php
-to set the url of qgis map server and other things, and profiles.ini.php to store
+Create :file:`lizmapConfig.ini.php`, :file:`localconfig.ini.php` and :file:`profiles.ini.php` and edit them
+to set parameters specific to your installation. You can modify :file:`lizmapConfig.ini.php`
+to set the url of qgis map server and other things, and :file:`profiles.ini.php` to store
 data in a database other than an sqlite database.
 
 .. code-block:: bash
@@ -349,7 +365,7 @@ data in a database other than an sqlite database.
    cp profiles.ini.php.dist profiles.ini.php
    cd ../../..
 
-In case you want to enable the demo repositories, just add to ``localconfig.ini.php`` the following:
+In case you want to enable the demo repositories, just add to :file:`localconfig.ini.php` the following:
 
 .. code-block:: bash
 
@@ -473,19 +489,53 @@ http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project
 
 http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&
 
-.. note:: Access to the WMS and WFS servers can be limited by assigning privileges to specific repositories, see the administration section.
+.. note::
+    Access to the WMS and WFS servers can be limited by assigning privileges to specific repositories, see
+    the administration section.
 
+Lizmap modules
+--------------
 
-QGIS Server plugins
-===================
+Previously, we explained how we could add QGIS Server plugins to add more features to QGIS Server. Now that
+we have Lizmap Web Client up and running, we can add some Lizmap modules to add again some features.
 
-Some plugins can be added to QGIS Server. This will enable some features in Lizmap. It's not compulsory but in some situations, it's better.
+The list is available in the Lizmap :ref:`introduction<additional_lizmap_modules>`. On their GitHub repository,
+their is usually their install instructions.
 
-You must have setup the ``QGIS_PLUGIN_PATH`` variables in the installation of QGIS Server.
+* Extract the module in :file:`lizmap/lizmap-modules/`. For instance, for the module
+  ``PgMetadata`` :
 
-* WfsOutputExtension : To add new format when exporting vector data https://github.com/3liz/qgis-wfsOutputExtension
-* AtlasPrint : To enable the PDF based on a QGIS Layout Atlas https://github.com/3liz/qgis-atlasprint
-* Logging : To log QGIS Servers log and to flush the cache on QGIS Server https://github.com/3liz/qgis-logging-plugin
+.. code-block:: bash
+
+    $ ls -hl lizmap/lizmap-modules/pgmetadata/
+    total 44K
+    drwxrwxr-x 2 etienne etienne 4,0K nov.  17 12:38 classes
+    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 12:50 controllers
+    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 10:09 daos
+    -rw-rw-r-- 1 etienne etienne  146 nov.   4 10:38 events.xml
+    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 10:09 forms
+    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 12:50 install
+    drwxrwxr-x 4 etienne etienne 4,0K nov.   4 10:09 locales
+    -rw-rw-r-- 1 etienne etienne  789 nov.  19 16:02 module.xml
+    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 10:09 templates
+    -rw-rw-r-- 1 etienne etienne  106 nov.   4 10:39 urls.xml
+    drwxrwxr-x 2 etienne etienne 4,0K nov.  17 12:38 www
+
+* Edit the :file:`lizmap/var/config/localconfig.ini.php`, in the ``modules`` section, add a new line for the
+  given module :
+
+.. code-block:: ini
+
+    [modules]
+    pgmetadata.access=2
+
+* Run the installation :
+
+.. code-block:: bash
+
+    php lizmap/install/installer.php
+    lizmap/install/clean_vartmp.sh
+    lizmap/install/set_rights.sh
 
 Editing tool: Configure the server with the database support
 =============================================================================
@@ -536,4 +586,7 @@ So you have to give the rights in this way:
    chown :www-data /path/to/a/lizmap_directory -R
    chmod 775 /path/to/a/lizmap_directory -R
 
-.. note:: so if you want to install Lizmap to provide access to multiple map publishers, you should tell them to always create a **db** directory at the same level as the QGIS projects in the Lizmap Web Client directory. This will facilitate the admin work that just have to change the rights of this unique directory.
+.. note::
+    So if you want to install Lizmap to provide access to multiple map publishers, you should tell them to
+    always create a **db** directory at the same level as the QGIS projects in the Lizmap Web Client directory.
+    This will facilitate the admin work that just have to change the rights of this unique directory.
