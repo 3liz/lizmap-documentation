@@ -5,13 +5,13 @@
 * Use RST substitutions : http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#default-substitutions
 * Use Lizmap substitutions : check the file `substitutions.rst`
 
-## Installing Transifex cli and Sphinx
+## Installing Transifex CLI and Sphinx
 
-We are using Transifex, and so you will need their cli tool to push or pull
+We are using Transifex, and so you will need their CLI tool to push or pull
 translations.
 
 It is recommended to install Virtualenv and to install Sphinx and 
-Transifex into a dedicated Python environnement. For exemple:
+Transifex into a dedicated Python environment. For example:
 
 ```
 virtualenv env/
@@ -75,16 +75,16 @@ Update the list of available language into the Makefile file (in the TRANSLATION
 ## Releasing a new version
 
 When a new major version of lizmap has been released, be sure the documentation
-is updated into the master branch.
+is updated into the `master` branch.
 
-When the documentation is ready, 
+When the documentation is ready to release `X.Y`:
 
-- set the version number into source/conf.py 
-- update the file source/lizmap_versions.json
-- create a new branch `lizmap_X_Y` (replace X and Y).
-- configure a new schedule in the CI configuration for this new branch
-- on the master branch, set the next version into source/conf.py and source/lizmap_versions.json
-- push the new branch and the master branch
-- in the server configuration, change the target of the symbolic link 'current'
-- copy the source/lizmap_versions.json into all other branches, it should be the
-  same for all.
+1. Set the version number into `source/conf.py` about `X.Y`
+1. Update the file `source/lizmap_versions.json`
+1. Create a new branch `lizmap_X_Y` (replace X and Y).
+1. Configure a new schedule in the CI configuration for this new branch
+1. On the master branch, set the next version into `source/conf.py` and `source/lizmap_versions.json`
+1. Push the new branch and the master branch
+1. In the server configuration, change the target of the symbolic link 'current'
+1. Copy the `source/lizmap_versions.json` into all other branches, it should be the
+   same for all.
