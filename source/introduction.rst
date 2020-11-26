@@ -80,6 +80,7 @@ Finally Lizmap is a proxy to the web services used to construct maps. It is ther
    :scale: 80%
 
 .. _additional_lizmap_modules:
+
 Additional Lizmap modules
 -------------------------
 

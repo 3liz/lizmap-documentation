@@ -7,6 +7,7 @@ Lizmap - Documentation
 :Copyright: CC-BY-SA
 :Contact: info@3liz.com
 :Organization: 3Liz
+:Version: |version|
 :Abstract: This document contains the complete documentation of Lizmap, an application to publish online maps: the QGIS plugin and Lizmap Web Client application
 
 .. meta::
