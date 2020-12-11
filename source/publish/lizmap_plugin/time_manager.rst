@@ -42,6 +42,10 @@ At the layer level
     5. Date/time resolution of the chosen attribute(s).
     6. For not database based layer, you must compute the minimum and maximum values.
 
+.. warning::
+    Date/time resolution can have a different value than *Frame type*. You might select ``years`` for *Frame type* 
+    but your date field could have a ``Days`` resolution.
+
 - .. include:: ../../shared/edit_layer.rst
 - .. include:: ../../shared/remove_layer.rst
 - .. include:: ../../shared/move_up_down_layer.rst
