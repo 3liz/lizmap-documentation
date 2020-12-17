@@ -28,7 +28,10 @@ Dynamic content
 ^^^^^^^^^^^^^^^
 
 You can allow the user to modify the contents of certain labels (title, description, comment, etc).
-To do this, you need to add a identifier to your label in the composer.
+To do this, you need to add an identifier to your label in the composer.
+
+.. warning::
+    Each identifier must be unique for the whole composer. Identifiers must be strings **not** integers (e.g. 'my_title' **not** '1').
 
 ..  image:: /images/interface-print-dynamic-label.jpg
    :align: center
