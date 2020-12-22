@@ -11,7 +11,7 @@ the english.
 Contributing to the english documentation
 =========================================
 
-Clone the repository and edit files into `sources/`.
+Clone the repository and edit files into `source/`.
 
 The format is the ReStructured Text format.
 
