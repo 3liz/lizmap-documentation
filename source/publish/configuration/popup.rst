@@ -210,6 +210,13 @@ In Lizmap plugin:
 * You can optionally activate editing for the two layers, to allow the web users to create new features and upload pictures
 * Save and publish your project and Lizmap configuration
 
+In Lizmap Web Client:
+
+.. image:: /images/feature-poup-toggle-compact-mode.jpg
+   :align: left
+
+This button will be visible in the feature's popup at the top of related objects. Click it to compact all related objects in one table with search, sort and paging capabilities.
+
 Link to a PDF QGIS layout
 _________________________
 
