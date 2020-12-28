@@ -212,10 +212,11 @@ In Lizmap plugin:
 
 In Lizmap Web Client:
 
-.. image:: /images/feature-poup-toggle-compact-mode.jpg
+.. image:: /images/feature-popup-toggle-compact-mode.jpg
    :align: left
 
-This button will be visible in the feature's popup at the top of related objects. Click it to compact all related objects in one table with search, sort and paging capabilities.
+This button will be visible in the feature's popup at the top of related objects. Click it to compact all
+related objects in one table with search, sort and paging capabilities.
 
 Link to a PDF QGIS layout
 _________________________
