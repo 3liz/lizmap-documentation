@@ -7,6 +7,7 @@ This section is listing panels available in the Lizmap QGIS plugin.
 .. toctree::
   :maxdepth: 3
 
+  information
   map_options
   layers
   basemap
