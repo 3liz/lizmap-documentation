@@ -62,38 +62,59 @@ The licenses are available at the following URLs:
 * *Bing*: https://www.microsoft.com/en-us/maps/product
 * *IGN*: https://depot.ign.fr/geoportail/api/develop/tech-docs-js/fr/license.html
 
-.. note::
-    If you choose an external base layer, the map will be displayed in Google Mercator (EPSG: 3857 or EPSG: 900913),
-    the scales are those of external services and QGIS-Server will perform on the fly reprojection.
+Scale with external base layer
+------------------------------
 
-It is therefore necessary to prepare the QGIS project accordingly.
+All these external base layer are provided only in **EPSG:3857 / Pseudo Mercator** from the provider.
+The scale of such layer are **fixed** by the projection EPSG:3857.
 
-The *Google Mercator* coordinate reference system must be added in the Web Services CRSs list with the *QGIS Server* tab in the *Project Properties* window.
-For now, all the proposed base layers use the projection::
+.. warning::
+    As a result, if you choose an external base layer, the project **will be displayed** in Google Mercator
+    EPSG:3857. Therefore, if you have specified multiple scales in the Lizmap configuration, these
+    intermediate scales **won't** be used. **Only** the **minimum** and **maximum** scale are used in this
+    case. Read below about approximate scales.
 
-    EPSG:3857 ; Pseudo Mercator
+.. image:: /images/interface-scale-3857.jpg
+   :align: center
+   :width: 80%
 
-Here are the approximate integer scales of the current external base layers::
+QGIS Server will perform **on the fly reprojection** for your data. It is therefore necessary to prepare the
+QGIS project accordingly.
 
-    0   591659008
-    1   295829504
-    2   147914752
-    3   73957376
-    4   36978688
-    5   18489344
-    6   9244672
-    7   4622336
-    8   2311168
-    9   1155584
-    10  577792
-    11  288896
-    12  144448
-    13  72224
-    14  36112
-    15  18056
-    16  9028
-    17  4514
-    18  2257
+The *Google Mercator* coordinate reference system must be added in the Web Services CRSs list with the
+:menuselection:`Project properties --> QGIS Server --> WMS`.
+
+This is a list of a **very approximate** integer scale for a given zoom level for the **EPSG:3857**::
+
+    0   500 000 000
+    1   250 000 000
+    2   150 000 000
+    3   70 000 000
+    4   35 000 000
+    5   15 000 000
+    6   10 000 000
+    7   4 000 000
+    8   2 000 000
+    9   1 000 000
+    10  500 000
+    11  250 000
+    12  150 000
+    13  70 000
+    14  35 000
+    15  15 000
+    16  8 000
+    17  4 000
+    18  2 000
+    19  1 000
+    20  500
+
+.. warning::
+    These scales are just a hint of the scale. It is not possible to have rounded scale like this with
+    EPSG:3857.
+
+Visit the OpenStreetMap website at the country level and check how the scale is changing while panning/zooming.
+
+https://www.openstreetmap.org/#map=6/48.995/4.856
 
 External Lizmap layers
 ----------------------
