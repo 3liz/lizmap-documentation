@@ -57,6 +57,9 @@ It is advisable to use:
 * **light and simplified** (if necessary) vector layers
 * use a **suitable symbology**: small strokes and simple or hidden labels
 
+.. note::
+    The location map will use the extent of the WMS Capabilities, :menuselection:`Project Properties -> QGIS Server -> WMS`.
+
 Here is an example of use:
 
 .. image:: /images/features-overview.jpg
