@@ -252,7 +252,7 @@ Go to https://www.qgis.org/en/site and get the file `Osgeo4W Network installer (
 4. Keep default Local Package Directory and Start Menu Name;
 5. Do not configure proxy if not needed;
 6. Choose a download site (e.g. https://download.osgeo.org );
-7. Select packages : command line_Utilities/gdal, Desktop/Qgis full , Web/Qgis server, lib/fcgi  then Next (We use for stable purposes, the QGIS LTR version);
+7. Select packages : command line_Utilities/gdal, Desktop/QGIS full , Web/QGIS server, lib/fcgi  then Next (We use for stable purposes, the QGIS LTR version);
 8. Accept to get packages to meet dependencies : Next then Wait for the download to be completed and Agree to all licenses.
 
 .. note:: This process can be long (~ 1 hour).

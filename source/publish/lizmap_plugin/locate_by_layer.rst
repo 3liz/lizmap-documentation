@@ -53,4 +53,4 @@ For this, there are 2 methods:
 * you either have **2 separate vector layers**: one for districts and for sub-districts. So you have to use a **field join** between the two layers to enable automatic filtering lists in Lizmap
 * either we have **only 1 layer for sub-districts**, and then you can specify with the plugin a **group field**. Two dropdowns will be created instead of one in the Web application.
 
-.. note:: Don't forget to check if your configuration of Qgis server is the right one (in Lizmap : My account -> Lizmap configuration -> check if the qgis server version is the right one, if not, you can use the button 'modify' below). If the configuration is not right the location will be wrong!
+.. note:: Don't forget to check if your configuration of QGIS server is the right one (in Lizmap : My account -> Lizmap configuration -> check if the qgis server version is the right one, if not, you can use the button 'modify' below). If the configuration is not right the location will be wrong!

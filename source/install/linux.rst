@@ -153,7 +153,7 @@ You must restart the Nginx server to validate the configuration.
 Create directories for data
 ============================================
 
-Qgis files and other cache files will be stored into these directories.
+QGIS files and other cache files will be stored into these directories.
 
 .. code-block:: bash
 
