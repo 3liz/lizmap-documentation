@@ -7,11 +7,10 @@ Installing and upgrading Lizmap
 .. toctree::
   :maxdepth: 0
 
-  upgrade
+  pre_requirements
   linux
   windows
   configuration
   ldap
   advanced_install
-
-
+  upgrade
