@@ -190,6 +190,29 @@ QGIS popup
 If you have defined a form layout with the 'Drag and drop designer' for a layer in :menuselection:`Layer Properties --> Attributes Form`, you can also display it in its popup.
 For this, you have to click on the :guilabel:`Copy the drag and drop designer` button. Tabs defined in :guilabel:`Form Layout` in QGIS will also be displayed as tabs in popups.
 
+To have a similar popup as the **auto** one, you need to use :
+
+.. code-block:: html
+
+    <table class="table table-condensed table-striped table-bordered lizmapPopupTable">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Valeur</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <th>NAME OF THE FIELD</th>
+            <td>VALUE OF FIELD USING EXPRESSION</td>
+          </tr>
+          <tr>
+            <th>NAME OF THE FIELD</th>
+            <td>VALUE OF FIELD USING EXPRESSION</td>
+          </tr>
+      </tbody>
+    </table>
+
 One to many relations
 ---------------------
 
