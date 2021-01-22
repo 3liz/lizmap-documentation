@@ -2,6 +2,8 @@
 Requirements before installing Lizmap Web Client
 ================================================
 
+.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those `instructions <https://github.com/3liz/lizmap-docker-compose#run-lizmap-stack-with-docker-compose>`_.
+
 QGIS Server
 ===========
 

@@ -2,6 +2,8 @@
 Installing Lizmap Web Client on Windows
 =======================================
 
+.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those `instructions <https://github.com/3liz/lizmap-docker-compose#run-lizmap-stack-with-docker-compose>`_.
+
 This documentation shows the necessary steps to install Lizmap Web Client on a **Windows 7** and **Windows 10** environment. The other versions of Windows should not be a problem.
 
 .. note:: In this document, the *version 3.3* of Lizmap Web Client is used. Be sure to adjust it according to the version you want to install (the later is recommended).
