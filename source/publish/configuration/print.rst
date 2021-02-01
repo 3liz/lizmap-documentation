@@ -107,7 +107,7 @@ To be able to print a layer which is visible in Lizmap Web Client only:
     - ``ign-scan`` for IGN Scan
     - ``ign-plan`` for IGN Plan
     - ``ign-photo`` for IGN Photos
-    - ``ign-cadastre`` for IGN Cadastre
+    - ``ign-cadastral`` for IGN Cadastre
 
 .. note:: The use of this method must be in compliance with the licensing of external baselayers used (:ref:`lizmap-config-baselayers`).
 
