@@ -68,10 +68,12 @@ _______________________
 
 .. warning:: This is working only using `Lizmap` or `Auto` popup. The `QGIS` popup follows the QGIS maptip.
 
-You can use the tools available in :menuselection:`Layer Properties --> Fields` tab in QGIS:
+You need to use the :menuselection:`Layer Properties --> Fields` tab in QGIS:
 
-* to **hide** a column in the popup, uncheck the relative WMS checkbox. The WMS column is on the right.
-* to **rename** a column, add an alias from :menuselection:`Layer Properties --> Attributes Form`.
+* to **hide** a column in the popup, uncheck the corresponding WMS checkbox. The WMS column is on the right of
+  the table. This will hide the field in QGIS Server from any WMS requests.
+* to **rename** a column, you should use the alias column. But to edit this column, add it from the tab
+  :menuselection:`Layer Properties --> Attributes Form`.
 
 .. image:: /images/features-popup-fields.jpg
    :align: center
