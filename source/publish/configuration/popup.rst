@@ -82,13 +82,17 @@ You need to use the :menuselection:`Layer Properties --> Fields` tab in QGIS:
 Usage of media: images, documents, etc.
 _______________________________________
 
-If you use **paths to documents of the media directory**, you can:
+If you want to use some media in your popup (pictures, PDF documents…) in your popup, you must use the
+:ref:`media` directory.
 
-* *display the image* found at that link
-* *display the content (text or HTML)* of the file
-* *display a link* to a document
+For a given feature, using a path in your field starting by ``media/``, Lizmap will display:
 
-.. seealso:: Chapter :ref:`media` for more details on the usage of documents of the directory media in the popups.
+* **the image itself** for jpeg or png files
+* **the content** for txt or HTML files
+* **a link** to any other file extension
+
+.. seealso::
+    Chapter :ref:`media` for more details on the usage of documents of the directory media in the popups.
 
 Usage of external links
 _______________________
