@@ -15,7 +15,7 @@ Lizmap - Documentation
    :keywords: Lizmap, QGIS, Server, webmapping, webgis, publication, plugin, 3liz
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 	
    introduction
    user/index

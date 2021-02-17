@@ -2,6 +2,9 @@
 Overview of the administration interface
 ========================================
 
+.. contents::
+   :depth: 3
+
 Access the administration interface
 ===================================
 

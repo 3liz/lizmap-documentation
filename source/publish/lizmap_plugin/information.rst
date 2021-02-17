@@ -3,6 +3,9 @@
 Information - Get some news about the project and your server
 =============================================================
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 

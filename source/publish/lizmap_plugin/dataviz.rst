@@ -1,8 +1,10 @@
 .. include:: ../../substitutions.rst
 
-
 Dataviz - display some graphs
 =============================
+
+.. contents::
+   :depth: 3
 
 Principle
 ---------

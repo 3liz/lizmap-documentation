@@ -3,6 +3,9 @@
 Attribute table
 ===============
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 

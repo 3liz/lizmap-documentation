@@ -3,6 +3,9 @@
 Base layers
 ===========
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 

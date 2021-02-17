@@ -3,6 +3,9 @@
 Layer configuration
 ===================
 
+.. contents::
+   :depth: 3
+
 These settings are in :menuselection:`Layer properties`.
 
 .. _layer_qgis_server:

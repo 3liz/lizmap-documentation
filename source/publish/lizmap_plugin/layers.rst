@@ -3,6 +3,9 @@
 Layers - settings for each layer
 ================================
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 

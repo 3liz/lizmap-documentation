@@ -3,6 +3,9 @@
 Popup
 =====
 
+.. contents::
+   :depth: 3
+
 Activate popup
 ---------------
 

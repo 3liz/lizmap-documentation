@@ -4,6 +4,9 @@
 Locate by layer
 ===============
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 

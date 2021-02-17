@@ -3,6 +3,9 @@
 Legend
 ======
 
+.. contents::
+   :depth: 3
+
 Groups
 ------
 

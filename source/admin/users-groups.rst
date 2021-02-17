@@ -2,6 +2,9 @@
 Manage groups and users in Lizmap Web Client
 ============================================
 
+.. contents::
+   :depth: 3
+
 The groups and users: principles
 ================================
 

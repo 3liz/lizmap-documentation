@@ -3,6 +3,9 @@
 Adding your own JavaScript
 ==========================
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 

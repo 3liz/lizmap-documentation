@@ -3,6 +3,9 @@
 Form filtering - filter layer data based on field values
 ========================================================
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 

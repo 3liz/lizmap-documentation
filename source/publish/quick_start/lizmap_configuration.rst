@@ -2,6 +2,9 @@
 Set up your project for Lizmap
 ==============================
 
+.. contents::
+   :depth: 3
+
 Install the Lizmap plugin
 =========================
 

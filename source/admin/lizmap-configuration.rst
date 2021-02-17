@@ -2,6 +2,9 @@
 Lizmap Web Client configuration
 ===============================
 
+.. contents::
+   :depth: 3
+
 Introduction
 ============
 

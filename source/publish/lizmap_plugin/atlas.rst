@@ -3,6 +3,9 @@
 Atlas - a sequence of entities
 ==============================
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 

@@ -3,6 +3,9 @@
 Time Manager - animation of temporal vector layers
 ==================================================
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 

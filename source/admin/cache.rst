@@ -4,6 +4,9 @@
 Cache management as administrator
 =================================
 
+.. contents::
+   :depth: 3
+
 For a layer with server cache activated, Lizmap will keep the cache when the user pan and zoom on the map.
 To have better performance, Lizmap Web Client can also automatically generate the tile cache on the server.
 

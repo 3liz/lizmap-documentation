@@ -1,6 +1,9 @@
 Project configuration
 =====================
 
+.. contents::
+   :depth: 3
+
 These settings are in :menuselection:`Project --> Project properties` or :kbd:`CTRL+SHIFT+P`.
 
 .. _publish_layer_wfs:

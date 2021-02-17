@@ -3,6 +3,9 @@
 Printing
 ========
 
+.. contents::
+   :depth: 3
+
 Extent defined by the user on the fly in Lizmap
 -----------------------------------------------
 

@@ -3,6 +3,9 @@
 Creating simple themes
 ======================
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 

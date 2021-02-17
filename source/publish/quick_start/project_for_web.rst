@@ -4,6 +4,9 @@
 Prepare a QGIS project for Web
 ==============================
 
+.. contents::
+   :depth: 3
+
 Create your project
 ===================
 

@@ -3,6 +3,9 @@
 Action in a popup
 =================
 
+.. contents::
+   :depth: 3
+
 This is a feature in |lizmap_3_4|.
 
 Principle

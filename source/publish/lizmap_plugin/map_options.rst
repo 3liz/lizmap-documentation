@@ -5,6 +5,9 @@
 Map options
 ===========
 
+.. contents::
+   :depth: 3
+
 The tab :guilabel:`Map options` allows you to enable or disable basic Lizmap tools, choosing scales and the initial extent.
 
 .. image:: /images/interface-map-tab.jpg
