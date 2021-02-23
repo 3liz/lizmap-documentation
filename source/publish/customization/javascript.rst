@@ -69,6 +69,7 @@ The Javascript code can use many events fired by Lizmap Web Client. Here is a li
    "lizmaplocatefeaturecanceled","Fired when the user has canceled the locate by layer tool","featureType"
    "lizmaplocatefeaturechanged","Fired when the user has selected an item in the locate by layer tool","featureType | featureId"
    "lizmappopupdisplayed","Fired when the popup content is displayed",""
+   "lizmappopupallchildrendisplayed","Fired when the all children popups are displayed","parentPopupElement | childPopupElements"
    "lizmappopupdisplayed_inattributetable","Fired when the popup content is displayed in attribute table (right sub-panel)",""
    "lizmapeditionformdisplayed","Fired when a edition form is displayed","layerId | featureId | editionConfig"
    "lizmapeditionfeaturecreated","Fired when a layer feature has been created with the edition tool","layerId"
