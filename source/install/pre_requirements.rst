@@ -14,7 +14,7 @@ QGIS Server
     Even if some functions might work, there is a probability that some configuration won't work if these two
     versions are **different**.
 
-    The reason is QGIS Server version X might not be able to a QGIS project made with a QGIS Server version Y.
+    The reason is QGIS Server version X might not be able to a QGIS project made with a QGIS Desktop version Y.
 
 Follow the QGIS Documentation how to install QGIS Server : https://docs.qgis.org/latest/en/docs/server_manual/
 
