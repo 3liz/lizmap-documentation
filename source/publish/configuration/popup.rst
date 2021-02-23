@@ -113,7 +113,7 @@ Lizmap popup
 Introduction
 ____________
 
-If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know well the **HTML format**. See e.g.: https://html.net/tutorials/html/
+If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know some **HTML format**. See e.g.: https://www.w3schools.com/html/
 
 .. warning:: When you use the *lizmap* mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the template. Managing media is also possible, but you have to configure it as well.
 

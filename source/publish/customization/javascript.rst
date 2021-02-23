@@ -42,7 +42,7 @@ Library of scripts
 ------------------
 
 You can find some examples in the repository https://github.com/3liz/lizmap-javascript-scripts.
-Also, in the directory :file:`lizmap-web-client/lizmap/install/qgis/media/js/` (or in GitHub https://github.com/3liz/lizmap-web-client/tree/master/lizmap/install/qgis/media/js/montpellier), you can find examples of suitable JavaScript code.
+Also, in the directory :file:`lizmap-web-client/lizmap/install/qgis/media/js/` (or in GitHub https://github.com/3liz/lizmap-web-client/tree/master/extra-modules/lizmapdemo/qgis-projects/demoqgis/media/js/montpellier), you can find examples of suitable JavaScript code.
 Remove the extension ``.example`` and copy them to your :file:`media/js/default/` folder to activate them.
 
 Available Javascript events

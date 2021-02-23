@@ -20,7 +20,7 @@ Theme switcher
 This is a feature in |lizmap_3_4|.
 
 Lizmap allows you to display and switch between themes configured in QGIS.
-To create your themes, follow QGIS documentation https://docs.qgis.org/3.4/en/docs/user_manual/introduction/general_tools.html#configuring-map-themes.
+To create your themes, follow QGIS documentation https://docs.qgis.org/latest/en/docs/user_manual/introduction/general_tools.html#configuring-map-themes.
 
 
 .. _hide-layers:

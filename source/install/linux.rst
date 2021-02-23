@@ -2,7 +2,7 @@
 Installing Lizmap Web Client on Linux Debian or Ubuntu
 ===============================================================
 
-.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those `instructions <https://github.com/3liz/lizmap-docker-compose#run-lizmap-stack-with-docker-compose>`_.
+.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those `instructions <https://github.com/3liz/lizmap-docker-compose>`_.
 
 Generic Server Configuration with Nginx server
 ===============================================================
@@ -103,14 +103,14 @@ Enable the virtual host you just created:
 Generic Server Configuration with Apache2 server
 ===============================================================
 
-To install QGIS-server on apache refer to the official QGIS documentation https://docs.qgis.org/3.10/en/docs/training_manual/qgis_server/install.html
+To install QGIS-server on apache refer to the official QGIS documentation https://docs.qgis.org/latest/en/docs/server_manual/index.html
 
 Installing necessary packages
 --------------------------------------------------------------
 
 .. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.4 installation)
 
-.. note:: At least the current version supports PHP 7, so it should be straight foreward to install it on current debian 9 or ubuntu 16.04.
+.. note:: At least the current version supports PHP 7, so it should be straight forward to install it on current debian 9 or ubuntu 16.04.
 
 .. code-block:: bash
 
@@ -523,10 +523,10 @@ Spatialite
 Enable Spatialite extension
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To use editing on layers spatiatlite,you have to add the spatialite extension in PHP. You can follow these instructions to do so:
-http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html
+To use editing on layers spatialite,you have to add the spatialite extension in PHP. You can follow these instructions to do so:
+http://www.gaia-gis.it/gaia-sins/spatialite-cookbook-fr/html/php.html
 
-Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it is not, then spatialities layers will not be used in the editing tool. You can always use PostgreSQL data for editing.
+Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it is not, then spatialite layers will not be used in the editing tool. You can always use PostgreSQL data for editing.
 
 Give the appropriate rights to the directory containing Spatialite databases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -2,7 +2,7 @@
 Requirements before installing Lizmap Web Client
 ================================================
 
-.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those `instructions <https://github.com/3liz/lizmap-docker-compose#run-lizmap-stack-with-docker-compose>`_.
+.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those `instructions <https://github.com/3liz/lizmap-docker-compose>`_.
 
 QGIS Server
 ===========
@@ -45,7 +45,7 @@ in some situations, it's better.
 
 Either you should setup the ``QGIS_PLUGIN_PATH`` environment variable during the installation of QGIS Server
 or use the default one provided by QGIS.
-https://docs.qgis.org/3.16/en/docs/server_manual/config.html#environment-variables
+https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-variables
 
 * AtlasPrint : To enable the PDF based on a QGIS Layout Atlas https://github.com/3liz/qgis-atlasprint
 * Lizmap : Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server** to evaluate
