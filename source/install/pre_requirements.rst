@@ -7,14 +7,19 @@ Requirements before installing Lizmap Web Client
 QGIS Server
 ===========
 
-Follow the QGIS Documentation how to install QGIS Server : https://docs.qgis.org/3.16/en/docs/server_manual/
+.. warning::
+    Before installing the QGIS Server part, it is **very highly** recommended to use the **same** version
+    between QGIS Desktop and QGIS Server.
+
+    Even if some functions might work, there is a probability that some configuration won't work if these two
+    versions are **different**.
+
+    The reason is QGIS Server version X might not be able to a QGIS project made with a QGIS Server version Y.
+
+Follow the QGIS Documentation how to install QGIS Server : https://docs.qgis.org/latest/en/docs/server_manual/
 
 Using a webserver (Apache or Nginx), you must install QGIS Server. With Nginx, the preferred way is to use
-``spawn-fcgi``.
-
-.. warning::
-    Nginx with ``fcgiwrap`` is not efficient, but it's mentioned in the QGIS Server documentation. Better to
-    use ``spawn-fcgi``.
+``spawn-fcgi``. Do **not** use the ``fcgiwrap``, this solution is not efficient.
 
 In the Nginx configuration, it's good to use the ``QGIS_OPTIONS_PATH`` variable for a folder with write
 permissions for ``www-data``. These is explained in the QGIS Server documentation.
