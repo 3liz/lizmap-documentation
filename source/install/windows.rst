@@ -324,7 +324,7 @@ Is usefull to have 2 environments, one for production and other for preproductio
 
 First, go to 3Liz `Github repository tags <https://github.com/3liz/lizmap-web-client/releases/>`_ and get the last version in ZIP format.
 For example, you can use `Lizmap-web-client 3.3.4 <https://github.com/3liz/lizmap-web-client/releases/download/3.3.4/lizmap-web-client-3.3.4.zip>`_
-for prod folder and the `master version <https://github.com/3liz/lizmap-web-client/archive/master.zip>`_ for predprod folder.
+for prod folder.
 
 Each environment will have a version in parallel. For example: release_3_3 and master. For that you need to unzip
 in **C:\\webserver\\lizmap\\prod** the release_3_3 version and **C:\\webserver\\lizmap\\preprod** the master version.

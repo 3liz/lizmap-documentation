@@ -291,6 +291,8 @@ With ZIP file
 
 Retrieve the latest available stable version from our `Github release page <https://github.com/3liz/lizmap-web-client/releases/>`_.
 
+.. warning::
+    Do not use the automatic ZIP file created by GitHub on the website. Only use ZIP attached to a release.
 
 .. code-block:: bash
 
@@ -358,13 +360,19 @@ Development version with Git
 
 .. warning:: The development version is always changing, and bugs can occur. Do not use it in production.
 
+.. warning::
+    Using the code from GIT, either from the ``git clone`` or the automatic ZIP created by GitHub on-the-fly,
+    needs to **build** the package first. It is not possible to use this code **directly**. If you don't want
+    to build, you **must** use some Lizmap Web Client ZIP packages which are ready to be installed, as
+    written in the step before.
+
 * First installation
 
 The source code in the Git repository is missing external PHP and Javascript packages.
 In order to install and build some files, you need to install `PHP Composer <https://getcomposer.org/download/>`_,
 `NodeJs and Npm <https://nodejs.org/en/download/>`_, as well as some other
-tools like `Make`. Read the CONTRIBUTING.md file, provided with the source code,
-to have details about how to install these tools
+tools like `Make`. Read the :file:`CONTRIBUTING.md` file, provided with the source code,
+to have details about how to install these tools and to build the package.
 
 .. code-block:: bash
 
@@ -405,7 +413,7 @@ to have details about how to install these tools
    chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
 
 You should then update dependencies (like external PHP and javascript packages).
-See the CONTRIBUTING.md file provided with the source code.
+See the :file:`CONTRIBUTING.md` file provided with the source code.
 
 
 .. note:: It is always good to make a backup before updating.
