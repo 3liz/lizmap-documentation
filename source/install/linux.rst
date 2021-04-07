@@ -38,11 +38,11 @@ Installing necessary packages
    apt update # update package lists
    apt-get install curl openssl libssl1.1 nginx-full nginx nginx-common
 
-On debian 9, install these packages:
+On debian 10, install these packages:
 
 .. code-block:: bash
 
-   apt-get install php7.0-fpm php7.0-cli php7.0-bz2 php7.0-curl php7.0-gd php7.0-intl php7.0-json php7.0-mbstring php7.0-pgsql php7.0-sqlite3 php7.0-xml php7.0-ldap
+   apt-get install php7.3-fpm php7.3-cli php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-pgsql php7.3-sqlite3 php7.3-xml php7.3-ldap
 
 On Ubuntu 18.04 or later, install these packages:
 
@@ -86,7 +86,7 @@ Create a new file /etc/nginx/sites-available/lizmap.conf:
            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
            fastcgi_param PATH_INFO $path_info;
            fastcgi_param PATH_TRANSLATED $document_root$path_info;
-           fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+           fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
            fastcgi_param SERVER_NAME $http_host;
         }
     }
@@ -118,11 +118,11 @@ Installing necessary packages
    apt update # update package lists
    
    
-On debian 9, install these packages:
+On debian 10, install these packages:
 
 .. code-block:: bash
 
-   apt install php7.0-fpm php7.0-cli php7.0-bz2 php7.0-curl php7.0-gd php7.0-intl php7.0-json php7.0-mbstring php7.0-pgsql php7.0-sqlite3 php7.0-xml php7.0-ldap
+   apt install php7.3-fpm php7.3-cli php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-pgsql php7.3-sqlite3 php7.3-xml php7.3-ldap
    
 
 On Ubuntu 18.04 LTS
@@ -279,8 +279,8 @@ Creating a user account
    chmod 700 /home/data/cache/$MYUSER -R
    chown www-data:www-data /home/data/cache/$MYUSER -R
 
-Install Lizmap Web Client
-=========================
+Installing sources of Lizmap Web Client
+=======================================
 
 .. code-block:: bash
 
@@ -308,51 +308,6 @@ Retrieve the latest available stable version from our `Github release page <http
    # Remove archive
    rm $VERSION.zip
 
-
-Set rights for Nginx, so php scripts could write some temporary files or do changes.
-
-.. code-block:: bash
-
-   cd /var/www/lizmap-web-client-$VERSION/
-   lizmap/install/set_rights.sh www-data www-data
-
-
-Create :file:`lizmapConfig.ini.php`, :file:`localconfig.ini.php` and :file:`profiles.ini.php` and edit them
-to set parameters specific to your installation. You can modify :file:`lizmapConfig.ini.php`
-to set the url of qgis map server and other things, and :file:`profiles.ini.php` to store
-data in a database other than an sqlite database.
-
-.. code-block:: bash
-
-   cd lizmap/var/config
-   cp lizmapConfig.ini.php.dist lizmapConfig.ini.php
-   cp localconfig.ini.php.dist localconfig.ini.php
-   cp profiles.ini.php.dist profiles.ini.php
-   cd ../../..
-
-In case you want to enable the demo repositories, just add to :file:`localconfig.ini.php` the following:
-
-.. code-block:: bash
-
-   [modules]
-   lizmap.installparam=demo
-
-
-Then you can launch the installer
-
-.. code-block:: bash
-
-   php lizmap/install/installer.php
-
-
-For testing launch: ``http://127.0.0.1/lizmap`` in your browser.
-
-In case you get a ``500 - internal server error``, run again:
-
-.. code-block:: bash
-
-   cd /var/www/lizmap-web-client-$VERSION/
-   lizmap/install/set_rights.sh www-data www-data
 
 
 Development version with Git
@@ -418,100 +373,23 @@ See the :file:`CONTRIBUTING.md` file provided with the source code.
 
 .. note:: It is always good to make a backup before updating.
 
-Give the appropriate rights to directories and files
---------------------------------------------------------------
+
+
+Configure Lizmap with the database support
+==========================================
+
+Lizmap needs a database to store its own data and to access to data used in your
+Qgis projects, with its editing tool.
+
+Create :file:`profiles.ini.php` into :file:`lizmap/var/config` by copying :file:`profiles.ini.php.dist`.
 
 .. code-block:: bash
 
-   cd /var/www/lizmap-web-client-$VERSION
-   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+   cd lizmap/var/config
+   cp profiles.ini.php.dist profiles.ini.php
+   cd ../../..
 
-First test
---------------------------------------------------------------
 
-Go to the Lizmap Web Client home to see if the installation was performed correctly: http://localhost/lizmap
-
-.. note:: Replace ``localhost`` with the address or IP number of your server.
-
-In the administration panel, you should check the :guilabel:`QGIS server version` and the :guilabel:`WMS server URL` with the URL of QGIS Server.
-
-If you didn't install the demo, you can check that you have well installed Lizmap and configured QGIS Server within Lizmap by checking the ``qgis_server`` section in this URL:
-http://localhost/lizmap/index.php/view/app/metadata
-
-.. code-block:: json
-
-    {
-        "qgis_server":{
-            "test":"OK",
-            "mime_type":"text\/xml; charset=utf-8"
-        }
-    }
-
-Lizmap is accessible, without further configurations, also as WMS and WFS server from a browser:
-
-http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities
-
-http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities
-
-and from QGIS:
-
-http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&
-
-http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&
-
-.. note::
-    Access to the WMS and WFS servers can be limited by assigning privileges to specific repositories, see
-    the administration section.
-
-Lizmap modules
---------------
-
-Previously, we explained how we could add QGIS Server plugins to add more features to QGIS Server. Now that
-we have Lizmap Web Client up and running, we can add some Lizmap modules to add again some features.
-
-The list is available in the Lizmap :ref:`introduction<additional_lizmap_modules>`. On their GitHub repository,
-their is usually their install instructions.
-
-* Extract the module in :file:`lizmap/lizmap-modules/`. For instance, for the module
-  ``PgMetadata`` :
-
-.. code-block:: bash
-
-    $ ls -hl lizmap/lizmap-modules/pgmetadata/
-    total 44K
-    drwxrwxr-x 2 etienne etienne 4,0K nov.  17 12:38 classes
-    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 12:50 controllers
-    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 10:09 daos
-    -rw-rw-r-- 1 etienne etienne  146 nov.   4 10:38 events.xml
-    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 10:09 forms
-    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 12:50 install
-    drwxrwxr-x 4 etienne etienne 4,0K nov.   4 10:09 locales
-    -rw-rw-r-- 1 etienne etienne  789 nov.  19 16:02 module.xml
-    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 10:09 templates
-    -rw-rw-r-- 1 etienne etienne  106 nov.   4 10:39 urls.xml
-    drwxrwxr-x 2 etienne etienne 4,0K nov.  17 12:38 www
-
-* Edit the :file:`lizmap/var/config/localconfig.ini.php`, in the ``modules`` section, add a new line for the
-  given module :
-
-.. code-block:: ini
-
-    [modules]
-    pgmetadata.access=2
-
-* Run the installation :
-
-.. code-block:: bash
-
-    php lizmap/install/installer.php
-    lizmap/install/clean_vartmp.sh
-    lizmap/install/set_rights.sh
-
-Editing tool: Configure the server with the database support
-=============================================================================
-
-.. note:: This section is optional
 
 PostgreSQL
 ------------------------------
@@ -520,10 +398,72 @@ For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreS
 
 .. code-block:: bash
 
-   sudo apt-get install php7.0-pgsql
+   sudo apt-get install php7.3-pgsql
    sudo service nginx restart
 
 .. note:: For editing, we strongly recommend using a PostgreSQL database. This greatly simplifies installation and retrieval of data entered by users.
+
+Into a fresh copy of :file:`lizmap/var/config/profiles.ini.php`, you should have:
+
+.. code-block:: ini
+
+    [jdb:jauth]
+    driver=sqlite3
+    database="var:db/jauth.db"
+
+    [jdb:lizlog]
+    driver=sqlite3
+    database="var:db/logs.db"
+
+This is the configuration by default to use Sqlite. You should change these
+sections to use Postgresql, and indicate several parameters to access to your
+Postgresql database:
+
+.. code-block:: ini
+
+    [jdb:jauth]
+    driver=pgsql
+    host=localhost
+    port=5432
+    database="your_database"
+    user=my_login
+    password=my_password
+    search_path=public
+
+    [jdb:lizlog]
+    driver=pgsql
+    host=localhost
+    port=5432
+    database="your_database"
+    user=my_login
+    password=my_password
+    search_path=public
+
+
+You can use a specific schema to store lizmap tables. And you may want that lizmap
+could access to other schema. You then have to set search_path correctly. Example:
+
+.. code-block:: ini
+
+    search_path=lizmap,my_schema,public
+
+If you have setup a service file for postgresql onto your server, you may want to
+indicate a postgresql service instead of indicating login, password and so on.
+Use then the service parameter:
+
+.. code-block:: ini
+
+    [jdb:jauth]
+    driver=pgsql
+    service=my_service
+    database="your_database"
+    search_path=lizmap,public
+
+    [jdb:lizlog]
+    driver=pgsql
+    service=my_service
+    database="your_database"
+    search_path=lizmap,public
 
 Spatialite
 ------------------------------
@@ -561,3 +501,203 @@ So you have to give the rights in this way:
     So if you want to install Lizmap to provide access to multiple map publishers, you should tell them to
     always create a **db** directory at the same level as the QGIS projects in the Lizmap Web Client directory.
     This will facilitate the admin work that just have to change the rights of this unique directory.
+
+
+
+Configuring Lizmap and launching the installer
+================================================
+
+Give the appropriate rights to directories and files
+--------------------------------------------------------------
+
+Set rights for Nginx/Apache, so php scripts could write some temporary files or do changes.
+
+.. code-block:: bash
+
+   cd /var/www/lizmap-web-client-$VERSION/
+   lizmap/install/set_rights.sh www-data www-data
+   chown :www-data lizmap/install/qgis/edition/ -R
+   chmod 775 lizmap/install/qgis/edition/ -R
+
+
+Setup configuration
+--------------------
+
+
+Create :file:`lizmapConfig.ini.php`, :file:`localconfig.ini.php` and edit them
+to set parameters specific to your installation. You can modify :file:`lizmapConfig.ini.php`
+to set the url of qgis map server and other things.
+
+.. code-block:: bash
+
+   cd lizmap/var/config
+   cp lizmapConfig.ini.php.dist lizmapConfig.ini.php
+   cp localconfig.ini.php.dist localconfig.ini.php
+   cd ../../..
+
+In case you want to enable the demo repositories, just add to :file:`localconfig.ini.php` the following:
+
+.. code-block:: ini
+
+   [modules]
+   lizmap.installparam=demo
+
+
+
+Launching the installer
+-----------------------
+
+After creating configuration files, you can launch the installer
+
+.. code-block:: bash
+
+   php lizmap/install/installer.php
+
+It will finished the installation, and will create all SQL tables needed by Lizmap.
+
+
+First test
+----------
+
+For testing launch: ``http://localhost/lizmap`` in your browser.
+
+In case you get a ``500 - internal server error``, run again:
+
+.. code-block:: bash
+
+   cd /var/www/lizmap-web-client-$VERSION/
+   lizmap/install/set_rights.sh www-data www-data
+
+
+.. note:: Replace ``localhost`` with the address or IP number of your server.
+
+In the administration panel, you should check the :guilabel:`QGIS server version` and the :guilabel:`WMS server URL` with the URL of QGIS Server.
+
+If you didn't install the demo, you can check that you have well installed Lizmap and configured QGIS Server within Lizmap by checking the ``qgis_server`` section in this URL:
+http://localhost/lizmap/index.php/view/app/metadata
+
+.. code-block:: json
+
+    {
+        "qgis_server":{
+            "test":"OK",
+            "mime_type":"text\/xml; charset=utf-8"
+        }
+    }
+
+Lizmap is accessible, without further configurations, also as WMS and WFS server from a browser:
+
+http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities
+
+http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities
+
+and from QGIS:
+
+http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&
+
+http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&
+
+.. note::
+    Access to the WMS and WFS servers can be limited by assigning privileges to specific repositories, see
+    the administration section.
+
+Lizmap modules
+==============
+
+Previously, we explained how we could add QGIS Server plugins to add more features to QGIS Server. Now that
+we have Lizmap Web Client up and running, we can add some Lizmap modules to add again some features.
+
+The list is available in the Lizmap :ref:`introduction<additional_lizmap_modules>`. On their GitHub repository,
+their is usually their install instructions. You should follow them. However
+here are the main instructions to install a module.
+
+
+installing modules with Composer
+--------------------------------
+
+Since Lizmap 3.4, you can install modules with Composer, the package manager for
+PHP. Of course it is possible only if the author of the module has created
+a package of his module. A such package has a name, for example `lizmap/lizmap-pgmetadata-module``.
+The documentation of the module should indicate it.
+
+You must install Composer. See instructions on its web site http://getcomposer.org.
+
+You must create a :file:`composer.json` file into :file:`lizmap/my-packages/`
+by copying the :file:`composer.json.dist` from this directory. And launching
+a first time Compose
+
+
+.. code-block:: bash
+
+    cp -n lizmap/my-packages/composer.json.dist lizmap/my-packages/composer.json
+    composer install --working-dir=lizmap/my-packages
+
+
+Then you can install the package of the module
+
+.. code-block:: bash
+
+    composer require --working-dir=lizmap/my-packages "lizmap/lizmap-pgmetadata-module"
+
+
+If you want to install a new version of the module, just execute:
+
+.. code-block:: bash
+
+    composer update --working-dir=lizmap/my-packages
+
+Read the documentation of the module to know if there are additional steps to
+configure it.
+
+To finish the installation, run again the installer of Lizmap:
+
+.. code-block:: bash
+
+    php lizmap/install/installer.php
+    lizmap/install/clean_vartmp.sh
+    lizmap/install/set_rights.sh
+
+
+installing modules without Composer
+-----------------------------------
+
+To install a module without Composer, retrieve the zip file of the module.
+
+* Extract the module into :file:`lizmap/lizmap-modules/`. For instance, for the module
+  ``PgMetadata`` :
+
+.. code-block:: bash
+
+    $ ls -hl lizmap/lizmap-modules/pgmetadata/
+    total 44K
+    drwxrwxr-x 2 etienne etienne 4,0K nov.  17 12:38 classes
+    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 12:50 controllers
+    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 10:09 daos
+    -rw-rw-r-- 1 etienne etienne  146 nov.   4 10:38 events.xml
+    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 10:09 forms
+    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 12:50 install
+    drwxrwxr-x 4 etienne etienne 4,0K nov.   4 10:09 locales
+    -rw-rw-r-- 1 etienne etienne  789 nov.  19 16:02 module.xml
+    drwxrwxr-x 2 etienne etienne 4,0K nov.   4 10:09 templates
+    -rw-rw-r-- 1 etienne etienne  106 nov.   4 10:39 urls.xml
+    drwxrwxr-x 2 etienne etienne 4,0K nov.  17 12:38 www
+
+* Edit the :file:`lizmap/var/config/localconfig.ini.php`, in the ``modules`` section, add a new line for the
+  given module (check the documentation of the module to setup the correct values):
+
+.. code-block:: ini
+
+    [modules]
+    pgmetadata.access=2
+
+* Read the documentation of the module to know if there are additional steps to
+  configure it.
+
+* Run the installation :
+
+.. code-block:: bash
+
+    php lizmap/install/installer.php
+    lizmap/install/clean_vartmp.sh
+    lizmap/install/set_rights.sh
+
