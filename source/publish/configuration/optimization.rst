@@ -1,6 +1,9 @@
 Optimization
 ============
 
+.. contents::
+   :depth: 3
+
 General concepts
 ----------------
 

@@ -1,6 +1,9 @@
 Other configuration
 ===================
 
+.. contents::
+   :depth: 3
+
 Changing the default image of a project
 ---------------------------------------
 

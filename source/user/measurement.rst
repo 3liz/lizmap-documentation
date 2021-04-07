@@ -6,6 +6,7 @@ Measurement feature give you the ability to calculate:
 * a distance
 * an area
 * a perimeter
+* an angle
 
 It is available in the Lizmap menu bar.
 

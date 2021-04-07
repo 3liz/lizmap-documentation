@@ -2,6 +2,9 @@
 Set up your project for Lizmap
 ==============================
 
+.. contents::
+   :depth: 3
+
 Install the Lizmap plugin
 =========================
 
@@ -23,8 +26,9 @@ To install it, just do it like any QGIS plugin:
    :align: center
    :width: 60%
 
-The plugin is organized in 12 tabs:
+The plugin is organized in 13 tabs:
 
+* :guilabel:`Information`: some information about the Lizmap project and your servers
 * :guilabel:`Map options`: the general options of the map
 * :guilabel:`Layers`: the options of each layer
 * :guilabel:`Baselayers`: the baselayers used on the Web

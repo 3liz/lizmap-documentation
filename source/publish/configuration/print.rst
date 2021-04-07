@@ -3,10 +3,14 @@
 Printing
 ========
 
+.. contents::
+   :depth: 3
+
 Extent defined by the user on the fly in Lizmap
 -----------------------------------------------
 
-To add print capabilities in the online map, you have to enable the printing tool in the plugin :guilabel:`Map` tab (:ref:`lizmap-config-map`) and the QGIS project needs at least one print composition without atlas enabled.
+To add print capabilities in the online map, you have to enable the printing tool in the plugin :guilabel:`Map`
+tab (:ref:`lizmap-config-map`) and the QGIS project needs at least one `print layout <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/index.html>`_ without atlas enabled.
 
 Creating the layout
 ^^^^^^^^^^^^^^^^^^^
@@ -22,13 +26,16 @@ In your layout, you can add :
     - Either :guilabel:`Numeric`
     - Or set :guilabel:`Fit segment width` with a correct reference anchor point to adjust the position of the scale bar
 * A location map, a map for which you have enabled and configured the function of *Overview*, read :ref:`overview-map`
-* Since |qgis_3|, you can use QGIS expressions, in your labels for instance. You can create automatic source label according to visible layers following this example https://docs.qgis.org/3.4/en/docs/user_manual/print_composer/composer_items/composer_label.html#id4 on the QGIS Documentation.
+* Since |qgis_3|, you can use QGIS expressions, in your labels for instance. You can create automatic source label according to visible layers following this example https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#id4 on the QGIS Documentation.
 
 Dynamic content
 ^^^^^^^^^^^^^^^
 
 You can allow the user to modify the contents of certain labels (title, description, comment, etc).
-To do this, you need to add a identifier to your label in the composer.
+To do this, you need to add an identifier to your label in the composer.
+
+.. warning::
+    Each identifier must be unique for the whole composer. Identifiers must be strings **not** integers (e.g. 'my_title' **not** '1').
 
 ..  image:: /images/interface-print-dynamic-label.jpg
    :align: center
@@ -104,7 +111,7 @@ To be able to print a layer which is visible in Lizmap Web Client only:
     - ``ign-scan`` for IGN Scan
     - ``ign-plan`` for IGN Plan
     - ``ign-photo`` for IGN Photos
-    - ``ign-cadastre`` for IGN Cadastre
+    - ``ign-cadastral`` for IGN Cadastre
 
 .. note:: The use of this method must be in compliance with the licensing of external baselayers used (:ref:`lizmap-config-baselayers`).
 

@@ -2,6 +2,8 @@
 Installing Lizmap Web Client on Windows
 =======================================
 
+.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those `instructions <https://github.com/3liz/lizmap-docker-compose>`_.
+
 This documentation shows the necessary steps to install Lizmap Web Client on a **Windows 7** and **Windows 10** environment. The other versions of Windows should not be a problem.
 
 .. note:: In this document, the *version 3.3* of Lizmap Web Client is used. Be sure to adjust it according to the version you want to install (the later is recommended).
@@ -252,7 +254,7 @@ Go to https://www.qgis.org/en/site and get the file `Osgeo4W Network installer (
 4. Keep default Local Package Directory and Start Menu Name;
 5. Do not configure proxy if not needed;
 6. Choose a download site (e.g. https://download.osgeo.org );
-7. Select packages : command line_Utilities/gdal, Desktop/Qgis full , Web/Qgis server, lib/fcgi  then Next (We use for stable purposes, the QGIS LTR version);
+7. Select packages : command line_Utilities/gdal, Desktop/QGIS full , Web/QGIS server, lib/fcgi  then Next (We use for stable purposes, the QGIS LTR version);
 8. Accept to get packages to meet dependencies : Next then Wait for the download to be completed and Agree to all licenses.
 
 .. note:: This process can be long (~ 1 hour).
@@ -322,7 +324,7 @@ Is usefull to have 2 environments, one for production and other for preproductio
 
 First, go to 3Liz `Github repository tags <https://github.com/3liz/lizmap-web-client/releases/>`_ and get the last version in ZIP format.
 For example, you can use `Lizmap-web-client 3.3.4 <https://github.com/3liz/lizmap-web-client/releases/download/3.3.4/lizmap-web-client-3.3.4.zip>`_
-for prod folder and the `master version <https://github.com/3liz/lizmap-web-client/archive/master.zip>`_ for predprod folder.
+for prod folder.
 
 Each environment will have a version in parallel. For example: release_3_3 and master. For that you need to unzip
 in **C:\\webserver\\lizmap\\prod** the release_3_3 version and **C:\\webserver\\lizmap\\preprod** the master version.

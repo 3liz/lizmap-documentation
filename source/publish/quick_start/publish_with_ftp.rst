@@ -2,6 +2,9 @@
 Publish the map by FTP
 ======================
 
+.. contents::
+   :depth: 3
+
 Reminder of Lizmap architecture
 ===============================
 

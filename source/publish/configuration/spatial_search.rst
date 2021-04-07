@@ -4,6 +4,9 @@
 Spatial searching
 =================
 
+.. contents::
+   :depth: 3
+
 In the map options, you can activate and configure the address search bar, based on external web services (nominatim, google or french IGN). See :ref:`lizmap-config-map` .
 Additionally, you can add spatial searching capability to Lizmap. This means you will allow the users to search within spatial data, such as countries, points of interests, etc. You have two ways to add searching capability in Lizmap:
 

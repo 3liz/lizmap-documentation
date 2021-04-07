@@ -2,6 +2,8 @@
 Installing Lizmap Web Client on Linux Debian or Ubuntu
 ===============================================================
 
+.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those `instructions <https://github.com/3liz/lizmap-docker-compose>`_.
+
 Generic Server Configuration with Nginx server
 ===============================================================
 
@@ -101,14 +103,14 @@ Enable the virtual host you just created:
 Generic Server Configuration with Apache2 server
 ===============================================================
 
-To install QGIS-server on apache refer to the official QGIS documentation https://docs.qgis.org/3.10/en/docs/training_manual/qgis_server/install.html
+To install QGIS-server on apache refer to the official QGIS documentation https://docs.qgis.org/latest/en/docs/server_manual/index.html
 
 Installing necessary packages
 --------------------------------------------------------------
 
 .. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.4 installation)
 
-.. note:: At least the current version supports PHP 7, so it should be straight foreward to install it on current debian 9 or ubuntu 16.04.
+.. note:: At least the current version supports PHP 7, so it should be straight forward to install it on current debian 9 or ubuntu 16.04.
 
 .. code-block:: bash
 
@@ -153,7 +155,7 @@ You must restart the Nginx server to validate the configuration.
 Create directories for data
 ============================================
 
-Qgis files and other cache files will be stored into these directories.
+QGIS files and other cache files will be stored into these directories.
 
 .. code-block:: bash
 
@@ -277,45 +279,6 @@ Creating a user account
    chmod 700 /home/data/cache/$MYUSER -R
    chown www-data:www-data /home/data/cache/$MYUSER -R
 
-QGIS Server
-===========
-
-Follow the QGIS Documentation how to install QGIS Server : https://docs.qgis.org/3.16/en/docs/server_manual/
-
-As we started to use Nginx in this Lizmap installation, you should continue the installation of QGIS Server with Nginx.
-With Nginx, the preferred way is to use ``spawn-fcgi``.
-
-.. warning:: Nginx with ``fcgiwrap`` is not efficient, but it's mentioned in the QGIS Server documentation. Better to use ``spawn-fcgi``.
-
-In the Nginx configuration, it's good to use the ``QGIS_OPTIONS_PATH`` variable for a folder with write permissions for ``www-data``.
-These is explained in the QGIS Server documentation.
-
-You should also install and configure ``XVFB`` mentioned in the QGIS Documentation.
-This is useful for printing PDF. You can only skip this section if you don't plan to print PDF on the server side.
-
-After you have setup your web server with QGIS-Server, check that the URL of QGIS Server is working. You probably get a XML like:
-
-.. code-block:: xml
-
-    <ServerException>Project file error</ServerException>
-
-Keep this URL, we will use it in the Lizmap admin panel.
-
-QGIS Server plugins
--------------------
-
-Some plugins can be added to QGIS Server. This will enable some features in Lizmap. It's not compulsory but
-in some situations, it's better.
-
-Either you should setup the ``QGIS_PLUGIN_PATH`` environment variable during the installation of QGIS Server
-or use the default one provided by QGIS. https://docs.qgis.org/3.16/en/docs/server_manual/config.html#environment-variables
-
-* AtlasPrint : To enable the PDF based on a QGIS Layout Atlas https://github.com/3liz/qgis-atlasprint
-* Lizmap : Lizmap is not only a PHP application, there is also Python plugin for **QGIS Server** to evaluate
-  QGIS Expressions in forms https://github.com/3liz/lizmap-plugin/
-* WfsOutputExtension : To add new format when exporting vector data https://github.com/3liz/qgis-wfsOutputExtension
-* Logging : To log QGIS Servers log and to flush the cache on QGIS Server https://github.com/3liz/qgis-logging-plugin
-
 Install Lizmap Web Client
 =========================
 
@@ -328,6 +291,8 @@ With ZIP file
 
 Retrieve the latest available stable version from our `Github release page <https://github.com/3liz/lizmap-web-client/releases/>`_.
 
+.. warning::
+    Do not use the automatic ZIP file created by GitHub on the website. Only use ZIP attached to a release.
 
 .. code-block:: bash
 
@@ -395,13 +360,19 @@ Development version with Git
 
 .. warning:: The development version is always changing, and bugs can occur. Do not use it in production.
 
+.. warning::
+    Using the code from GIT, either from the ``git clone`` or the automatic ZIP created by GitHub on-the-fly,
+    needs to **build** the package first. It is not possible to use this code **directly**. If you don't want
+    to build, you **must** use some Lizmap Web Client ZIP packages which are ready to be installed, as
+    written in the step before.
+
 * First installation
 
 The source code in the Git repository is missing external PHP and Javascript packages.
 In order to install and build some files, you need to install `PHP Composer <https://getcomposer.org/download/>`_,
 `NodeJs and Npm <https://nodejs.org/en/download/>`_, as well as some other
-tools like `Make`. Read the CONTRIBUTING.md file, provided with the source code,
-to have details about how to install these tools
+tools like `Make`. Read the :file:`CONTRIBUTING.md` file, provided with the source code,
+to have details about how to install these tools and to build the package.
 
 .. code-block:: bash
 
@@ -442,7 +413,7 @@ to have details about how to install these tools
    chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
 
 You should then update dependencies (like external PHP and javascript packages).
-See the CONTRIBUTING.md file provided with the source code.
+See the :file:`CONTRIBUTING.md` file provided with the source code.
 
 
 .. note:: It is always good to make a backup before updating.
@@ -560,10 +531,10 @@ Spatialite
 Enable Spatialite extension
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To use editing on layers spatiatlite,you have to add the spatialite extension in PHP. You can follow these instructions to do so:
-http://www.gaia-gis.it/spatialite-2.4.0-4/splite-php.html
+To use editing on layers spatialite,you have to add the spatialite extension in PHP. You can follow these instructions to do so:
+http://www.gaia-gis.it/gaia-sins/spatialite-cookbook-fr/html/php.html
 
-Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it is not, then spatialities layers will not be used in the editing tool. You can always use PostgreSQL data for editing.
+Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it is not, then spatialite layers will not be used in the editing tool. You can always use PostgreSQL data for editing.
 
 Give the appropriate rights to the directory containing Spatialite databases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

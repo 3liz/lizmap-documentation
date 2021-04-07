@@ -3,6 +3,9 @@
 Time Manager - animation of temporal vector layers
 ==================================================
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 
@@ -41,6 +44,10 @@ At the layer level
     4. The end column with date/time. This is optional.
     5. Date/time resolution of the chosen attribute(s).
     6. For not database based layer, you must compute the minimum and maximum values.
+
+.. warning::
+    Date/time resolution can have a different value than *Frame type*. You might select ``years`` for *Frame type* 
+    but your date field could have a ``Days`` resolution.
 
 - .. include:: ../../shared/edit_layer.rst
 - .. include:: ../../shared/remove_layer.rst

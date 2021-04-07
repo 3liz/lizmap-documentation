@@ -3,6 +3,9 @@
 Adding your own JavaScript
 ==========================
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 
@@ -39,7 +42,7 @@ Library of scripts
 ------------------
 
 You can find some examples in the repository https://github.com/3liz/lizmap-javascript-scripts.
-Also, in the directory :file:`lizmap-web-client/lizmap/install/qgis/media/js/` (or in GitHub https://github.com/3liz/lizmap-web-client/tree/master/lizmap/install/qgis/media/js/montpellier), you can find examples of suitable JavaScript code.
+Also, in the directory :file:`lizmap-web-client/lizmap/install/qgis/media/js/` (or in GitHub https://github.com/3liz/lizmap-web-client/tree/master/extra-modules/lizmapdemo/qgis-projects/demoqgis/media/js/montpellier), you can find examples of suitable JavaScript code.
 Remove the extension ``.example`` and copy them to your :file:`media/js/default/` folder to activate them.
 
 Available Javascript events
@@ -66,6 +69,7 @@ The Javascript code can use many events fired by Lizmap Web Client. Here is a li
    "lizmaplocatefeaturecanceled","Fired when the user has canceled the locate by layer tool","featureType"
    "lizmaplocatefeaturechanged","Fired when the user has selected an item in the locate by layer tool","featureType | featureId"
    "lizmappopupdisplayed","Fired when the popup content is displayed",""
+   "lizmappopupallchildrendisplayed","Fired when the all children popups are displayed","parentPopupElement | childPopupElements"
    "lizmappopupdisplayed_inattributetable","Fired when the popup content is displayed in attribute table (right sub-panel)",""
    "lizmapeditionformdisplayed","Fired when a edition form is displayed","layerId | featureId | editionConfig"
    "lizmapeditionfeaturecreated","Fired when a layer feature has been created with the edition tool","layerId"

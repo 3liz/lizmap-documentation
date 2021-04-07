@@ -2,6 +2,9 @@
 Log management in Lizmap
 ========================
 
+.. contents::
+   :depth: 3
+
 Principle and description
 =========================
 

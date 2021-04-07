@@ -3,6 +3,9 @@
 Popup
 =====
 
+.. contents::
+   :depth: 3
+
 Activate popup
 ---------------
 
@@ -68,10 +71,12 @@ _______________________
 
 .. warning:: This is working only using `Lizmap` or `Auto` popup. The `QGIS` popup follows the QGIS maptip.
 
-You can use the tools available in :menuselection:`Layer Properties --> Fields` tab in QGIS:
+You need to use the :menuselection:`Layer Properties --> Fields` tab in QGIS:
 
-* to **hide** a column in the popup, uncheck the relative WMS checkbox. The WMS column is on the right.
-* to **rename** a column, add an alias from :menuselection:`Layer Properties --> Attributes Form`.
+* to **hide** a column in the popup, uncheck the corresponding WMS checkbox. The WMS column is on the right of
+  the table. This will hide the field in QGIS Server from any WMS requests.
+* to **rename** a column, you should use the alias column. But to edit this column, add it from the tab
+  :menuselection:`Layer Properties --> Attributes Form`.
 
 .. image:: /images/features-popup-fields.jpg
    :align: center
@@ -80,13 +85,17 @@ You can use the tools available in :menuselection:`Layer Properties --> Fields` 
 Usage of media: images, documents, etc.
 _______________________________________
 
-If you use **paths to documents of the media directory**, you can:
+If you want to use some media in your popup (pictures, PDF documents…) in your popup, you must use the
+:ref:`media` directory.
 
-* *display the image* found at that link
-* *display the content (text or HTML)* of the file
-* *display a link* to a document
+For a given feature, using a path in your field starting by ``media/``, Lizmap will display:
 
-.. seealso:: Chapter :ref:`media` for more details on the usage of documents of the directory media in the popups.
+* **the image itself** for jpeg or png files
+* **the content** for txt or HTML files
+* **a link** to any other file extension
+
+.. seealso::
+    Chapter :ref:`media` for more details on the usage of documents of the directory media in the popups.
 
 Usage of external links
 _______________________
@@ -104,7 +113,7 @@ Lizmap popup
 Introduction
 ____________
 
-If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know well the **HTML format**. See e.g.: https://html.net/tutorials/html/
+If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know some **HTML format**. See e.g.: https://www.w3schools.com/html/
 
 .. warning:: When you use the *lizmap* mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the template. Managing media is also possible, but you have to configure it as well.
 
@@ -190,6 +199,29 @@ QGIS popup
 If you have defined a form layout with the 'Drag and drop designer' for a layer in :menuselection:`Layer Properties --> Attributes Form`, you can also display it in its popup.
 For this, you have to click on the :guilabel:`Copy the drag and drop designer` button. Tabs defined in :guilabel:`Form Layout` in QGIS will also be displayed as tabs in popups.
 
+To have a similar popup as the **auto** one, you need to use :
+
+.. code-block:: html
+
+    <table class="table table-condensed table-striped table-bordered lizmapPopupTable">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Valeur</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <th>NAME OF THE FIELD</th>
+            <td>VALUE OF FIELD USING EXPRESSION</td>
+          </tr>
+          <tr>
+            <th>NAME OF THE FIELD</th>
+            <td>VALUE OF FIELD USING EXPRESSION</td>
+          </tr>
+      </tbody>
+    </table>
+
 One to many relations
 ---------------------
 
@@ -210,10 +242,19 @@ In Lizmap plugin:
 * You can optionally activate editing for the two layers, to allow the web users to create new features and upload pictures
 * Save and publish your project and Lizmap configuration
 
+In Lizmap Web Client:
+
+.. image:: /images/feature-popup-toggle-compact-mode.jpg
+   :align: left
+
+If relative children popup are defined as ``auto``, this button will be visible in the feature's popup at the top of related objects. Click it to compact all
+related objects in one table with search, sort and paging capabilities.
+
 Link to a PDF QGIS layout
 _________________________
 
-Every feature of a layer with an atlas configured will have a link at the end of its popup which open a PDF for this specific feature, using the QGIS Atlas layout.
+Every feature of a layer with an atlas configured will have a link (1) at the end of its popup which open a PDF for this specific feature, using the QGIS Atlas layout.
+If the layout contains custom text fields, a button (2) will be displayed. Clicking this button, allows you to type values for those custom text fields before printing.
 To enable this feature, you need a QGIS Layout with atlas enabled on that layer **and** to download the `AtlasPrint` QGIS Server plugin on GitHub : https://github.com/3liz/qgis-atlasprint
 
 .. image:: /images/feature-popup-atlas.jpg

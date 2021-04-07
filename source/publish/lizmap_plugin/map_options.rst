@@ -5,6 +5,9 @@
 Map options
 ===========
 
+.. contents::
+   :depth: 3
+
 The tab :guilabel:`Map options` allows you to enable or disable basic Lizmap tools, choosing scales and the initial extent.
 
 .. image:: /images/interface-map-tab.jpg
@@ -35,8 +38,15 @@ The map tools:
 
 The scales :
 
-* a list of integer values separated by commas (and optional whitespace), eg: *250000, 100000, 50000*.
-* Lizmap also used these scales to restrict the display between the minimum and maximum data scales. This is why **it is mandatory to enter at least 2 scales** in the list.
+* a list of integer values separated by commas (and optional whitespace), eg: ``250000, 100000, 50000``.
+* Lizmap also used these scales to restrict the application display between the minimum and maximum of these scales.
+  This is why **it is mandatory to enter at least 2 scales** in the list.
+
+.. warning::
+    As soon as there is an external basemap published in **EPSG:3857** such as OSM, Google Maps..., the
+    application will only use the minimum and maximum **scale** to the minimum and maximum **zoom level**.
+    Intermediate **scale** that you might have defined won't be read, because there isn't a strict match
+    between your **scale** and **zoom level** provided by external base map in **EPSG:3857**.
 
 The initial map extent:
 

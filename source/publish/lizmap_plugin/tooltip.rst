@@ -3,6 +3,9 @@
 Tooltip
 =======
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 

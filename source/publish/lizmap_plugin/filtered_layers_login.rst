@@ -4,6 +4,9 @@
 Filtered layer by user
 ======================
 
+.. contents::
+   :depth: 3
+
 Principle
 ---------
 
