@@ -57,3 +57,16 @@ To select an object to update, you will need to click on it on the map then clic
    :scale: 80%
 
 If you want to remove a point on a geometry, you must hover it and type *Del* on your keyboard.
+
+*Digitizing* button is displayed with line and polygon geometries, by clicking it, you'll access those tools:
+
+#. Node tool (default). Move or delete the geom nodes (vertices) and also create new ones by dragging virtual nodes in the middle of the segments.
+#. Drag tool. Translate a geometry by dragging the displayed point at the center of the geometry.
+#. Rotate tool. Rotate a geometry by dragging the displayed point at bottom right of the geometry.
+#. Reshape tool.
+#. Split tool.
+#. Reverse geom (To be used with the node tool). Reverse nodes (vertices) order. Useful for streets when their circulation orientation is reversed for example.
+
+.. image:: /images/user-guide-27-edition-digitizing.jpg
+   :align: center
+   :scale: 80%
