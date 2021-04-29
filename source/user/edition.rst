@@ -48,36 +48,12 @@ To select an object to update, you will need to click on it on the map then clic
    :align: center
    :scale: 80%
 
-The selected object appears on the map and its geometry may be changed immediatly.
+#. The selected object appears on the map and its geometry may be changed immediatly.
+#. You can undo geometry changes and stop edition using the *Cancel* button.
+#. To validate your geometry modifications, you must click *Save*.
 
-.. image:: /images/user-guide-26-edition-select-draw.jpg
+.. image:: /images/user-guide-26-edition-select-draw-undo-validate.jpg
    :align: center
    :scale: 80%
 
-You can undo geometry changes using the *Cancel* button.
-
-.. image:: /images/user-guide-27-edition-select-draw-undo.jpg
-   :align: center
-   :scale: 80%
-
-To validate your geometry modifications or simply access the editing form for fields, you must click *Save*.
-
-.. image:: /images/user-guide-28-edition-select-draw-validate.jpg
-   :align: center
-   :scale: 80%
-
-A dialog box containing the editing form for fields of the object appears.
-
-.. image:: /images/user-guide-29-edition-select-draw-form.jpg
-   :align: center
-   :scale: 80%
-
-The *Save* button saves the geometry and attributes changes.
-
-If you want to remove the object you selected, you must click *Del*.
-
-Finally, to disable editing tool, simply click on *Close* or click again on the Edition icon.
-
-.. image:: /images/user-guide-30-edition-stop.jpg
-   :align: center
-   :scale: 80%
+If you want to remove a point on a geometry, you must hover it and type *Del* on your keyboard.
