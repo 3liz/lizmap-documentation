@@ -11,3 +11,9 @@ For batch
 ```bash
 for i in *.png ; do convert -strip -interlace plane -quality 80 "$i" "${i%.*}.jpg" ; done && ls *.png | xargs rm && git checkout logo.png logo_big.png
 ```
+
+Note *post* `convert`, `gm` looks to give better result ?
+```bash
+gm convert image.png image.jpg
+for i in *.png ; do gm convert "$i" "${i%.*}.jpg" ; done
+```

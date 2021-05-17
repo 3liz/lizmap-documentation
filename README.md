@@ -44,6 +44,7 @@ So install these tools. On Linux / MacOs, install Python, Pip and then:
 
 ```
 sudo pip install -U sphinx
+sudo pip install -U sphinx==3.5.4
 sudo pip install -U sphinx-intl
 ```
 
@@ -57,5 +58,3 @@ For core contributor
 --------------------
 
 See DEV.md to see instructions to push and pull translated files to/from Transifex.
-
-
