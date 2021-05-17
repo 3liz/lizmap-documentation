@@ -38,6 +38,14 @@ To allow data editing in Lizmap Web Client, you must:
 * Configure the editing tool for the layer in :menuselection:`Layer Properties --> Attributs Form`. This is not required but recommended to control the data entered by users. See :ref:`form` for more information.
 * .. include:: ../../shared/wfs_layer.rst
 * Despite we want to edit the layer, there is no need to use :guilabel:`Update`, :guilabel:`Insert` and :guilabel:`Delete` checkboxes in the WFS table in the :guilabel:`QGIS Server` tab. Lizmap does not use WFS-T. Lizmap will make the edit directly on the datasource. The configuration is done only in the panel described below.
+* As a consequence as above :
+
+  * For a file based layer, such as Spatialite, the file will be edited directly from PHP Lizmap code
+  * For a PostGIS based layer, the credentials **must not** use the **Authentification system provided by QGIS** for a layer with edition capabilities.
+    Credentials must be either in the **QGS** project file or in the PostgreSQL service file (recommended, more secure because credentials are not stored in the QGIS project) :
+
+    * `How to use service file on docs.qgis.org <https://docs.qgis.org/3.16/en/docs/user_manual/managing_data_source/opening_data.html#postgresql-service-connection-file>`_
+    * `How to use service file on postgresql.org <https://www.postgresql.org/docs/current/libpq-pgservice.html>`_
 
 .. note:: Be careful if your layer contains some Z or M values, unfortunately Lizmap will set them to "0" which is the default value when saving to the database.
 
