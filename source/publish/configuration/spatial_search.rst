@@ -13,6 +13,8 @@ Additionally, you can add spatial searching capability to Lizmap. This means you
 * For |qgis_2| and |qgis_3|, you can create a table or view ``lizmap_search`` in your PostgreSQL database to store the search data for all your Lizmap projects.
 * For |qgis_2| only, you can use the plugin ``QuickFinder`` to configure a data search per QGIS project.
 
+.. _postgresql-lizmap-search:
+
 PostgreSQL search
 -----------------
 
