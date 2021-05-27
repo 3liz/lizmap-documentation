@@ -26,6 +26,12 @@ Prerequisites
 
 .. include:: ../../shared/wfs_layer.rst
 
+.. warning::
+    This tool is not designed for layers having a lot of features or a lot of complex geometries. The web browser
+    will indeed have to download **all** features with vector geometries so it will make the loading the application
+    slower. To reduce the loading time, you can reduce the decimals in the WFS settings for instance if your
+    layer is in meters. For better performance if your layer is stored in PostGIS, use :ref:`postgresql-lizmap-search`.
+
 Configuring the tool
 --------------------
 
