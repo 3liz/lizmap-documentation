@@ -84,14 +84,44 @@ Finally Lizmap is a proxy to the web services used to construct maps. It is ther
 Additional Lizmap modules
 -------------------------
 
-Some modules can be added to Lizmap:
+Some modules can be added to Lizmap :
 
-* Web Processing Service : https://github.com/3liz/lizmap-wps-web-client-module
-* Map builder : https://github.com/3liz/lizmap-mapbuilder-module
-* AltiProfil : https://github.com/arno974/lizmap-altiProfil
-* Naturaliz : https://github.com/3liz/lizmap-naturaliz-module
-* French adresse : https://github.com/3liz/lizmap-adresse-module
-* French cadastre : https://github.com/3liz/lizmap-cadastre-module
+* AltiProfil
+    Display a profil with altitude according to a line and a MNT
+
+    https://github.com/arno974/lizmap-altiProfil
+
+* Map builder
+    To combine many Lizmap projects into a single map viewer
+
+    https://github.com/3liz/lizmap-mapbuilder-module
+
+* PgMetadata
+    For displaying metadata stored with the QGIS PgMetadata plugin. It is also providing a DCAT XML catalog, to be harvested by external services
+
+    https://github.com/3liz/lizmap-pgmetadata-module
+
+* Web Processing Service
+    To execute QGIS Processing algorithms or models on a server and view the results within Lizmap
+
+    https://github.com/3liz/lizmap-wps-web-client-module
+
+Specific to France use-case :
+
+* French adresse
+    For managing addresses
+
+    https://github.com/3liz/lizmap-adresse-module
+
+* French cadastre
+    For managing cadastre data
+
+    https://github.com/3liz/lizmap-cadastre-module
+
+* Naturaliz
+    For managing species and observation data
+
+    https://github.com/3liz/lizmap-naturaliz-module
 
 Configuration with QGIS
 -----------------------
