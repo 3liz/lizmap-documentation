@@ -20,6 +20,7 @@ You have three types of popup sources:
 * ``auto``, read :ref:`auto-popup`
 * ``lizmap``, read :ref:`lizmap-popup`
 * ``qgis``, read :ref:`qgis-popup`
+* ``form``, read :ref:`form-popup`
 
 In the web application Lizmap Web Client, a click on a feature will trigger the popup if (and only if):
 
@@ -184,20 +185,38 @@ Here an example of a template handling media and an external link:
 
 .. seealso:: Chapter :ref:`media` for more details on the use of documents in the directory media.
 
+.. _form-popup:
+
+Form popup
+----------
+
+If you have defined a form layout with the *Drag and drop form designer* for a layer in
+:menuselection:`Layer Properties --> Attributes Form`, you can also display it in its popup.
+See the QGIS documentation about `Drag and Drop form <https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#the-drag-and-drop-designer>`_.
+
+The QGIS Form, designed for HTML, is displayed in the popup directly. You can't alter the
+popup on runtime.
+
+Tabs defined in the :guilabel:`Form Layout` in QGIS will also be displayed as HTML tabs in the popup.
+
+If you want to alter the popup HTML, then you must use :guilabel:`QGIS Popup` instead of :guilabel:`Form Popup`.
+
 .. _qgis-popup:
 
 QGIS popup
------------
+----------
 
-*QGIS* popups can be configured via :menuselection:`QGIS --> Layer properties --> Display --> HTML Map Tip`. The main advantages of this approach are:
+*QGIS* popups can be configured via :menuselection:`QGIS --> Layer properties --> Display --> HTML Map Tip`.
+The main advantages of this approach are:
 
 * HTML is used
 * you can use QGIS variables and expressions, thus adding information created dynamically
 * the popup can be previewed in QGIS, using map tips. You can enable map tips in the menu :menuselection:`View --> Show Map Tips`
 * the popup configurations are stored in QGIS project and layer style, so they can be reused in other Lizmap projects without replicating the configuration.
 
-If you have defined a form layout with the 'Drag and drop designer' for a layer in :menuselection:`Layer Properties --> Attributes Form`, you can also display it in its popup.
-For this, you have to click on the :guilabel:`Copy the drag and drop designer` button. Tabs defined in :guilabel:`Form Layout` in QGIS will also be displayed as tabs in popups.
+Similar to :ref:`form-popup`, you have a *Drag and drop form designer* for a layer, you can click on the
+:guilabel:`Copy the drag and drop designer` button. This will **erase** any existing maptip set on the layer and
+will generate the QGIS Expression matching the form layout.
 
 To have a similar popup as the **auto** one, you need to use :
 
