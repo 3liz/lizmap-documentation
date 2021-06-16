@@ -87,6 +87,7 @@ The Javascript code can use many events fired by Lizmap Web Client. Here is a li
    "layerfeatureselectsearched","Fire this event to select all the features corresponding to the displayed lines of the attribute table, which can be visually filterd by the user by entering some characters in the search text input.","featureType | updateDrawing"
    "layerfeatureunselectall","Fire this event to remove all features from selection for a layer. Once done, Lizmap responds with the event layerSelectionChanged","featureType | updateDrawing"
    "lizmapexternalsearchitemselected","Fired when the user has selected an item listed in the results of the header search input","feature"
+   "actionResultReceived","Fired when a Lizmap popup action has been performed and the result has been received","layerId | featureId | action | features"
 
 There are also some variables which are available.
 
