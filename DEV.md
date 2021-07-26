@@ -70,7 +70,10 @@ to publish the web site. It doesn't rely on `.po` files stored into the reposito
 
 The language should be created into Transifex. When there are enough translated
 strings, you can download translated files with `tx pull`. See above.
-Update the list of available language into the Makefile file (in the TRANSLATIONS variable).
+Update the list of available language into :
+* the `Makefile` file in the `TRANSLATIONS` variable.
+* the `lizmap_versions.json` in the `locales` variable.
+* the `update_from_transifex.sh` in `AVAILABLE_LOCALES` variable.
 
 ## Releasing a new version
 
