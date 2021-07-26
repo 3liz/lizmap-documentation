@@ -74,6 +74,7 @@ Update the list of available language into :
 * the `Makefile` file in the `TRANSLATIONS` variable.
 * the `lizmap_versions.json` in the `locales` variable.
 * the `update_from_transifex.sh` in `AVAILABLE_LOCALES` variable.
+* the `.gitlab-ci.yml` in `retrieve_po_and_build` stage.
 
 ## Releasing a new version
 
