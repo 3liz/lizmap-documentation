@@ -700,4 +700,3 @@ To install a module without Composer, retrieve the zip file of the module.
     php lizmap/install/installer.php
     lizmap/install/clean_vartmp.sh
     lizmap/install/set_rights.sh
-
