@@ -14,10 +14,8 @@ It is recommended to install Virtualenv and to install Sphinx and
 Transifex into a dedicated Python environment. For example:
 
 ```
-virtualenv env/
-env/bin/pip install sphinx
-env/bin/pip install sphinx-intl
-env/bin/pip install transifex-client
+python3 -m venv .venv
+.venv/bin/pip install requirements.txt
 ``` 
 
 You should create a `~/.transifexrc` file containing:
@@ -52,7 +50,7 @@ Transifex at each commit.
 
 ## Updating translated strings
 
-It is not recommended to modify by hand files into `i18n/`! We prefer to 
+It is not recommended modifying by hand files into `i18n/`! We prefer to 
 translate strings into Transifex.
 
 To retrieve translated string:
