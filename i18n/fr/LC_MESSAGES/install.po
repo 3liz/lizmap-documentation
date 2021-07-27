@@ -7,17 +7,17 @@
 # Bobo Plateau <bobo-romania@users.noreply.github.com>, 2019
 # rldhont <rldhont@gmail.com>, 2019
 # Nicolas Boisteault <nboisteault@gmail.com>, 2019
-# Laurent Jouanneau <dev@ljouanneau.com>, 2020
 # Arnaud HANRY <arnaud.hanry@le64.fr>, 2020
+# Laurent Jouanneau <dev@ljouanneau.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 11:00+0200\n"
+"POT-Creation-Date: 2020-11-26 13:58+0000\n"
 "PO-Revision-Date: 2019-05-27 15:16+0000\n"
-"Last-Translator: Arnaud HANRY <arnaud.hanry@le64.fr>, 2020\n"
+"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -200,6 +200,11 @@ msgid ""
 "available languages etc. **DON'T MODIFY mainconfig.ini.php**. Put parameters"
 " with their new values into ``localconfig.ini.php`` instead!"
 msgstr ""
+"``mainconfig.ini.php`` contient beaucoup de paramètres de configuration, "
+"principalement pour le framework utilisé par Lizmap. Vous voudriez "
+"probablement en modifier certaine, comme la liste des langues disponibles "
+"etc. **NE MODIFIEZ PAS mainconfig.ini.php**. Mettez les paramètres avec "
+"leurs nouvelles valeurs plutôt dans ``localconfig.ini.php`` !"
 
 #: ../../source/install/configuration.rst:19
 msgid ""
@@ -227,12 +232,19 @@ msgid ""
 "those into ``localconfig.ini.php``, which in turn, have parameters having "
 "higher priority over parameters of ``mainconfig.ini.php``."
 msgstr ""
+"Durant l'execution de Lizmap, ``mainconfig.ini.php``, "
+"``localconfig.ini.pp``, et ``liveconfig.ini.php`` sont fusionnés dans cet "
+"ordre. Ainsi les paramètres dans ``liveconfig.ini.pp`` ont la priorité sur "
+"ceux de ``localconfig.ini.pp``, qui a son tour a des paramètres qui ont la "
+"priorité sur les paramètres de ``mainconfig.ini.php``."
 
 #: ../../source/install/configuration.rst:30
 msgid ""
 "``liveconfig.ini.php`` and ``localconfig.ini.php`` may not exists on old "
 "releases."
 msgstr ""
+"``liveconfig.ini.php`` et ``localconfig.ini.pp`` ne devraient pas exister "
+"dans d'anciennes versions."
 
 #: ../../source/install/configuration.rst:33
 msgid "Other framework configuration files:"
@@ -282,6 +294,10 @@ msgid ""
 "``lizmapLogConfig.ini.php`` and  ``installer.ini.php``. They are all "
 "modified during the life or the installation of the application."
 msgstr ""
+"Pour les sauvegardes et les mises à jour, vous devriez garder les fichiers "
+"``localconfig.ini.pp``, ``liveconfig.ini.php``, ``lizmapConfig.ini.php``, "
+"``profiles.ini.php``, ``lizmapLogConfig.ini.php`` et ``installer.ini.php``. "
+"Ils sont tous modifiés durant la vie ou l'installation de l'application."
 
 #: ../../source/install/configuration.rst:53
 msgid "Setting language"
@@ -893,11 +909,11 @@ msgstr ""
 
 #: ../../source/install/linux.rst:103
 msgid "Restart Nginx"
-msgstr ""
+msgstr "Redémarrer Nginx"
 
 #: ../../source/install/linux.rst:105
 msgid "You must restart the Nginx server to validate the configuration."
-msgstr ""
+msgstr "Vous devez redémarrer le serveur Nginx pour valider la configuration."
 
 #: ../../source/install/linux.rst:112
 msgid "Create directories for data"
@@ -907,6 +923,8 @@ msgstr "Création des répertoires pour les données"
 msgid ""
 "Qgis files and other cache files will be stored into these directories."
 msgstr ""
+"Les fichiers Qgis et les autres fichiers de cache seront stockés dans ces "
+"répertoires."
 
 #: ../../source/install/linux.rst:126
 msgid "Spatial DBMS: PostgreSQL"
@@ -990,6 +1008,9 @@ msgid ""
 "https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/server/index.html"
 " for more information on QGIS Server."
 msgstr ""
+"Voir "
+"https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/server/index.html"
+" pour plus d'informations sur Qgis Server."
 
 #: ../../source/install/linux.rst:272
 msgid "Retrieve and install Lizmap Web Client"
@@ -1012,6 +1033,8 @@ msgid ""
 "Set rights for Nginx, so php scripts could write some temporary files or do "
 "changes."
 msgstr ""
+"Mettez les droits pour Nignx, afin que les scripts PHP puisse écrire des "
+"fichiers temporaires ou faire des changements."
 
 #: ../../source/install/linux.rst:306
 msgid ""
@@ -1040,7 +1063,7 @@ msgstr "Ensuite vous pouvez lancer l'installateur"
 
 #: ../../source/install/linux.rst:334
 msgid "For testing launch: ``http://127.0.0.1/lizmap`` in your browser."
-msgstr ""
+msgstr "Pour tester : ``http://127.0.0.1/lizmap`` dans votre navigateur."
 
 #: ../../source/install/linux.rst:336
 msgid "In case you get a ``500 - internal server error``, run again:"
@@ -1083,6 +1106,8 @@ msgid ""
 "Go to the Lizmap Web Client home to see if the installation was performed "
 "correctly: http://localhost/lizmap"
 msgstr ""
+"Aller à l'accueil de Lizmap pour voir si l'installation a été correctement "
+"réalisée : http://localhost/lizmap"
 
 #: ../../source/install/linux.rst:402
 msgid "Replace ``localhost`` with the address or IP number of your server."
@@ -1123,6 +1148,7 @@ msgstr ""
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 msgstr ""
+"http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 
 #: ../../source/install/linux.rst:416
 msgid ""
@@ -1201,6 +1227,10 @@ msgid ""
 "Spatialite, we must ensure that **the webserver user (www-data) has well "
 "write access to the directory containing each Spatialite file**"
 msgstr ""
+"Pour que Lizmap Web Client puisse modifier les données contenues dans les "
+"bases Spatialite, vous devez vous assurer que **l'utilisateur du serveur web"
+" (www-data) a les droits en écriture dans le répertoire contenant les "
+"fichiers Spatialite**"
 
 #: ../../source/install/linux.rst:452
 msgid ""
@@ -1243,6 +1273,8 @@ msgid ""
 "See `documentation of Lizmap 3.1 "
 "<https://docs.lizmap.com/3.1/en/install/upgrade.html>`_."
 msgstr ""
+"Voir `documentation de Lizmap 3.1 "
+"<https://docs.lizmap.com/3.1/en/install/upgrade.html>` _."
 
 #: ../../source/install/upgrade.rst:11
 msgid "Upgrading from Lizmap 3.x versions"
@@ -1383,16 +1415,21 @@ msgid ""
 " adjust it according to the version you want to install (the later is "
 "recommended)."
 msgstr ""
+"Dans la documentation la version 3.3 de Lizmap Web Client est utilisée. "
+"Soyez certain de l'adapter en fonction de la version que vous voulez "
+"installer (la dernière est recommandée)."
 
 #: ../../source/install/windows.rst:12
 msgid "Requirements"
-msgstr ""
+msgstr "Prérequis"
 
 #: ../../source/install/windows.rst:14
 msgid ""
 "Text Editor (e.g. `Notepad++ <https://notepad-plus-plus.org/>`_ , `Visual "
 "Studio Code <https://code.visualstudio.com/>`_ )"
 msgstr ""
+"Text Editor (e.g. `Notepad++ <https://notepad-plus-plus.org/>`_ , `Visual "
+"Studio Code <https://code.visualstudio.com/>`_ )"
 
 #: ../../source/install/windows.rst:15
 msgid ""
@@ -1409,18 +1446,20 @@ msgstr ""
 
 #: ../../source/install/windows.rst:17
 msgid "PHP 7.3.10 (`Non Thread Safe <https://windows.php.net/download/>`_ )"
-msgstr ""
+msgstr "PHP 7.3.10 (`Non Thread Safe <https://windows.php.net/download/>`_ )"
 
 #: ../../source/install/windows.rst:18
 msgid ""
 "QGIS Server 3 64-bits (`OSGeo4W Network Installer (64 bit) "
 "<https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_)"
 msgstr ""
+"QGIS Server 3 64-bits (`OSGeo4W Network Installer (64 bit) "
+"<https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_)"
 
 #: ../../source/install/windows.rst:19
 msgid ""
 "Lizmap Web Client 3.x (`Github Lizmap releases <https://www.github.com/3liz"
-"/lizmap-web-client>`_ )"
+"/lizmap-web-client/releases/>`_ )"
 msgstr ""
 
 #: ../../source/install/windows.rst:20
@@ -1428,10 +1467,12 @@ msgid ""
 "FTP software (e.g. `Filezilla <https://filezilla-project.org/>`_ , `WinSCP "
 "<https://winscp.net/eng/download.php>`_ ) 64-bits (*optional*)"
 msgstr ""
+"FTP software (e.g. `Filezilla <https://filezilla-project.org/>`_ , `WinSCP "
+"<https://winscp.net/eng/download.php>`_ ) 64-bits (*optional*)"
 
 #: ../../source/install/windows.rst:23
 msgid "Apache 2.4.41 Server Configuration"
-msgstr ""
+msgstr "Configuration du serveur Apache 2.4.41"
 
 #: ../../source/install/windows.rst:25
 msgid ""
@@ -1586,7 +1627,7 @@ msgstr ""
 
 #: ../../source/install/windows.rst:153
 msgid "Make sure that you have the extension :kbd:`.conf` in this file."
-msgstr ""
+msgstr "Assurez-vous que vous avez l'extension: kbd: `.conf` dans ce fichier."
 
 #: ../../source/install/windows.rst:155
 msgid ""
@@ -1625,6 +1666,10 @@ msgid ""
 "**pcre**, **session**, **tokenizer** and **spl** extensions are required "
 "(they are generally turned on in a standard PHP 7.x installation)"
 msgstr ""
+"Lizmap Web Client s'appuie sur Jelix 1.6. Vous devez installer au minimum la"
+" version **7** de PHP. Les extensions **dom**, **simplexml**, **pcre**, "
+"**session**, **tokenizer** et **spl** sont requises (elles sont actives en "
+"général dans une installation standard de PHP 7.x)."
 
 #: ../../source/install/windows.rst:197
 msgid ""
@@ -1683,6 +1728,10 @@ msgid ""
 "http://localhost/index.php and will appear the page of PHP properties we "
 "assume that you install correctly the PHP."
 msgstr ""
+"Redémarrez Apache en ligne de commande avec: kbd: `httpd -k restart` et "
+"voyez si tout va bien. Si OUI, ouvrez le navigateur et tapez "
+"http://localhost/index.php et apparaîtra la page des propriétés PHP, nous "
+"supposons que vous installez correctement le PHP."
 
 #: ../../source/install/windows.rst:245
 msgid "QGIS Server Installation"
@@ -1815,6 +1864,9 @@ msgid ""
 "this installation you need to add to the file **localconfig.ini.php** in "
 "both environments the following code:"
 msgstr ""
+"Au cas où vous voudriez activer le répertoire des démos dans les deux "
+"environnements, avant l'installation vous devez ajouter "
+":file:`localconfig.ini.php` dans les deux environnements le code suivant :"
 
 #: ../../source/install/windows.rst:418
 msgid "Using PostgreSQL as administrator database (Optional)"
@@ -1884,11 +1936,11 @@ msgstr ""
 
 #: ../../source/install/windows.rst:503 ../../source/install/windows.rst:519
 msgid "**user=admin**;"
-msgstr ""
+msgstr "**user=admin**;"
 
 #: ../../source/install/windows.rst:504 ../../source/install/windows.rst:520
 msgid "**password=admin**;"
-msgstr ""
+msgstr "**password=admin**;"
 
 #: ../../source/install/windows.rst:506 ../../source/install/windows.rst:522
 msgid ""
@@ -2024,7 +2076,7 @@ msgstr ""
 
 #: ../../source/install/windows.rst:591
 msgid "FTP Server Configuration (e.g. Filezilla)"
-msgstr ""
+msgstr "Configuration du serveur Filezilla"
 
 #: ../../source/install/windows.rst:592
 msgid "This configuration only applies if your using a remote server."

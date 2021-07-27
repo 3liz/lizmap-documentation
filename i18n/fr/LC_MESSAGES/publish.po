@@ -6,9 +6,10 @@
 # Translators:
 # rldhont <rldhont@gmail.com>, 2019
 # Laurent Jouanneau <dev@ljouanneau.com>, 2019
-# etrimaille <gustrimaille@yahoo.fr>, 2020
-# Arnaud HANRY <arnaud.hanry@le64.fr>, 2020
 # Nicolas Boisteault <nboisteault@gmail.com>, 2020
+# Arnaud HANRY <arnaud.hanry@le64.fr>, 2020
+# Alain_LG, 2020
+# etrimaille <gustrimaille@yahoo.fr>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 11:03+0200\n"
 "PO-Revision-Date: 2019-05-27 15:16+0000\n"
-"Last-Translator: Nicolas Boisteault <nboisteault@gmail.com>, 2020\n"
+"Last-Translator: etrimaille <gustrimaille@yahoo.fr>, 2020\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -394,6 +395,8 @@ msgid ""
 "PostgreSQL extensions activated in this database : **unaccent** and "
 "**pg_trgm** (for effective LIKE queries)"
 msgstr ""
+"Extensions PostgreSQL activées dans la base de données : \"unaccent\" et "
+"\"pg_trgm\" (pour des requêtes LIKE efficaces)"
 
 #: ../../source/publish/advanced_lizmap_config.rst:127
 msgid ""
@@ -410,6 +413,10 @@ msgid ""
 "as simple as possible and avoid the need to create FTS \"vectors\" in your "
 "search data."
 msgstr ""
+"Nous avons choisi d'utiliser l'extension pg_trgm et sa fonction habituelle "
+"f_unaccent plutôt que l'outil de PostgreSQL de recherche plein texte (FTS), "
+"pour garder l'outil aussi simple que possible et éviter de devoir créer des "
+"vecteurs FTS pour votre recherche de données."
 
 #: ../../source/publish/advanced_lizmap_config.rst:147
 msgid "Create the lizmap_search table or view"
@@ -422,6 +429,11 @@ msgid ""
 "can put it in the public schema, or configure the search_path variable for "
 "the database or the user which connects to the database)."
 msgstr ""
+"L'administrateur de la base de données doit créer une table, vue ou vue "
+"matérialisée nommée \"lizmap_search\". Cette relation doit être accessible "
+"dans le search_path (vous pouvez la mettre dans le schéma public, ou "
+"configurer la variable search_path pour la base de données ou l'utilisateur "
+"qui se connecte à la base de données)."
 
 #: ../../source/publish/advanced_lizmap_config.rst:151
 msgid "The relation \"lizmap_search\" must contain the following columns:"
@@ -429,7 +441,7 @@ msgstr "La relation \"lizmap_search\" doit contenir les colonnes suivantes :"
 
 #: ../../source/publish/advanced_lizmap_config.rst:153
 msgid "**item_layer** (text). Name of the layer. For example \"Countries\""
-msgstr ""
+msgstr "\"item_layer\" (texte). Nom de la couche. Par exemple, \"Pays\""
 
 #: ../../source/publish/advanced_lizmap_config.rst:154
 msgid ""
@@ -494,6 +506,10 @@ msgid ""
 " with Z or M values. You have to use the `ST_Force2D(geom)` function to "
 "convert geometries into 2D geometries."
 msgstr ""
+"Pour le moment, la recherche PostgreSQL de Lizmap ne peut pas utiliser les "
+"géométries 3D, ou les géométries avec des valeurs Z ou M. Vous devez "
+"utiliser la fonction \"ST_Frce2D(geom)\" pour convertir les géométries entre"
+" géométries 2D."
 
 #: ../../source/publish/advanced_lizmap_config.rst:202
 msgid "Configure access"
@@ -1415,7 +1431,7 @@ msgstr "Enregistrez et publiez votre projet et la configuration de Lizmap"
 
 #: ../../source/publish/advanced_lizmap_config.rst:510
 msgid "Link of an element for layers with an atlas"
-msgstr ""
+msgstr "Lien d'un élément pour les couches avec un atlas"
 
 #: ../../source/publish/advanced_lizmap_config.rst:512
 msgid ""
@@ -1425,6 +1441,11 @@ msgid ""
 "that you have to get it from his Github at : https://github.com/3liz/qgis-"
 "atlasprint"
 msgstr ""
+"Chaque élément d'une couche avec un atlas configuré aura un lien à la fin de"
+" sa popup qui ouvre un pdf de l'atlas de cet élément particulier. Pour le "
+"faire fonctionner vous devez télécharger le plugin \"atlas_print\", pour "
+"cela, vous l'obtiendrez sur son Github à l'adresse : https://github.com/3liz"
+"/qgis-atlasprint"
 
 #: ../../source/publish/advanced_lizmap_config.rst:516
 msgid "Display children in a compact way"
@@ -1436,10 +1457,13 @@ msgid ""
 "table. For that, you will need to adapt the HTML of your children layer and "
 "use a few classes to manipulate it."
 msgstr ""
+"Vous pouvez changer la manière dont les enfants sont affichés et les faire "
+"ressembler à une table. Pour cela, vous devez le code HTML de votre couche "
+"enfant et utiliser quelques classes pour le manipuler."
 
 #: ../../source/publish/advanced_lizmap_config.rst:520
 msgid "\"lizmap_merged\" : You need to attribute this class to your table"
-msgstr ""
+msgstr "\"lizmap_merged\" : Vous devez attribuer cette classe à votre table."
 
 #: ../../source/publish/advanced_lizmap_config.rst:521
 msgid ""
@@ -1533,6 +1557,8 @@ msgstr "modifier les fichiers CSS"
 #: ../../source/publish/advanced_lizmap_config.rst:591
 msgid "The files and directories must be readable (755:644)"
 msgstr ""
+"Les fichiers et les dossiers doivent avoir la permission d'écriture "
+"(755:644)"
 
 #: ../../source/publish/advanced_lizmap_config.rst:593
 msgid ""
@@ -3773,7 +3799,7 @@ msgstr "Ajouter des images et des fichiers pour les attributs"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1097
 msgid "Use the media/upload folder relative to the project"
-msgstr ""
+msgstr "Utilisez le dossier media/upload par rapport à un projet"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1099
 msgid ""
@@ -3849,7 +3875,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1114
 msgid "Use a specific destination folder"
-msgstr ""
+msgstr "Utilisez un dossier de destination spécifique"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1116
 msgid ""
@@ -4210,6 +4236,8 @@ msgid ""
 "You can easily configure it with the plugin Lizmap in Qgis in the Dataviz "
 "panel."
 msgstr ""
+"Vous pouvez facilement le configurer avec le plugin Lizmap dans Qgis à "
+"partir de l'onglet Dataviz."
 
 #: ../../source/publish/advanced_lizmap_config.rst:1220
 msgid ""
@@ -4240,6 +4268,8 @@ msgstr ""
 msgid ""
 "**4**: To add a graph, you have to configure it in this part of the panel."
 msgstr ""
+"**4**: Pour ajouter un graphique, vous devez le configurer dans cette zone "
+"de l'onglet."
 
 #: ../../source/publish/advanced_lizmap_config.rst:1236
 msgid ""
@@ -4448,16 +4478,18 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1290
 msgid "the total count of features for the current filter"
-msgstr ""
+msgstr "le nombre total des entités pour le filtre courant"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1291
 msgid ""
 "the unique values of some fields (for the Unique Values type for example)"
 msgstr ""
+"les valeurs uniques de certains champs (pour le type Valeurs  uniques par "
+"exemple)"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1292
 msgid "the minimum and maximum of the numeric fields or date fields"
-msgstr ""
+msgstr "le minimum et le maximum pour les champs numériques ou de date"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1293
 msgid "the extent of the data for the current filter"
@@ -4489,6 +4521,9 @@ msgid ""
 "You need to add a line in the plugin table for each field you need to add in"
 " the filter form. For each field, you need to configure some options:"
 msgstr ""
+"Vous devez ajouter une ligne dans le tableau du plugin pour chaque champ "
+"souhaité dans le formulaire de filtre. Pour chaque champ vous devez "
+"configurer des options :"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1306
 msgid ""
@@ -4508,6 +4543,8 @@ msgid ""
 "**Field**: the field name (in the database table). Only for the Text, Unique"
 " Values and Numeric types."
 msgstr ""
+"**Champ** : le nom du champ (dans la table en base données). Seulement pour "
+"les types Texte, Valeurs uniques et Nombre."
 
 #: ../../source/publish/advanced_lizmap_config.rst:1309
 msgid ""
@@ -4562,6 +4599,12 @@ msgid ""
 "this field. This could be an option in the future if some datasets are too "
 "big and this autocompletion feature is too heavy."
 msgstr ""
+"Le type le plus simple. Avec ce type d'entrée, l'utilisateur verra une "
+"entrée classique de type texte. Vous pouvez saisir n'importe quel texte et "
+"validez. L'autocomplétion est activée par défaut, ce qui signifie que Lizmap"
+" retrouvera les valeurs uniques pour ce champ. Ceci pourrait dans le futur "
+"devenir optionnel si certains jeux de données étaient trop gros et que "
+"l'autocomplétion devenait trop lourde."
 
 #: ../../source/publish/advanced_lizmap_config.rst:1328
 msgid "The filter built will be like: `\"field\" LIKE '%foo%'`"
@@ -4583,6 +4626,8 @@ msgid ""
 "The date is \"truncated\" to a date (no time data such as hour, minutes or "
 "seconds yet)."
 msgstr ""
+"La date est \"tronquée\" à un format date (pas de donnée temps tel que les "
+"heures, minutes ou secondes actuellement)."
 
 #: ../../source/publish/advanced_lizmap_config.rst:1337
 msgid ""
