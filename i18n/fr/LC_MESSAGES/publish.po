@@ -7,8 +7,9 @@
 # rldhont <rldhont@gmail.com>, 2018
 # Laurent Jouanneau <dev@ljouanneau.com>, 2019
 # Nicolas Boisteault <nboisteault@gmail.com>, 2020
-# etrimaille <gustrimaille@yahoo.fr>, 2020
 # Arnaud HANRY <arnaud.hanry@le64.fr>, 2020
+# Alain_LG, 2020
+# etrimaille <gustrimaille@yahoo.fr>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-08 15:15+0200\n"
 "PO-Revision-Date: 2018-09-10 15:50+0000\n"
-"Last-Translator: Arnaud HANRY <arnaud.hanry@le64.fr>, 2020\n"
+"Last-Translator: etrimaille <gustrimaille@yahoo.fr>, 2020\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -393,6 +394,8 @@ msgid ""
 "PostgreSQL extensions activated in this database : **unaccent** and "
 "**pg_trgm** (for effective LIKE queries)"
 msgstr ""
+"Extensions PostgreSQL activées dans la base de données : \"unaccent\" et "
+"\"pg_trgm\" (pour des requêtes LIKE efficaces)"
 
 #: ../../source/publish/advanced_lizmap_config.rst:127
 msgid ""
@@ -409,6 +412,10 @@ msgid ""
 "as simple as possible and avoid the need to create FTS \"vectors\" in your "
 "search data."
 msgstr ""
+"Nous avons choisi d'utiliser l'extension pg_trgm et sa fonction habituelle "
+"f_unaccent plutôt que l'outil de PostgreSQL de recherche plein texte (FTS), "
+"pour garder l'outil aussi simple que possible et éviter de devoir créer des "
+"vecteurs FTS pour votre recherche de données."
 
 #: ../../source/publish/advanced_lizmap_config.rst:147
 msgid "Create the lizmap_search table or view"
@@ -421,6 +428,11 @@ msgid ""
 "can put it in the public schema, or configure the search_path variable for "
 "the database or the user which connects to the database)."
 msgstr ""
+"L'administrateur de la base de données doit créer une table, vue ou vue "
+"matérialisée nommée \"lizmap_search\". Cette relation doit être accessible "
+"dans le search_path (vous pouvez la mettre dans le schéma public, ou "
+"configurer la variable search_path pour la base de données ou l'utilisateur "
+"qui se connecte à la base de données)."
 
 #: ../../source/publish/advanced_lizmap_config.rst:151
 msgid "The relation \"lizmap_search\" must contain the following columns:"
@@ -428,7 +440,7 @@ msgstr "La relation \"lizmap_search\" doit contenir les colonnes suivantes :"
 
 #: ../../source/publish/advanced_lizmap_config.rst:153
 msgid "**item_layer** (text). Name of the layer. For example \"Countries\""
-msgstr ""
+msgstr "\"item_layer\" (texte). Nom de la couche. Par exemple, \"Pays\""
 
 #: ../../source/publish/advanced_lizmap_config.rst:154
 msgid ""
@@ -493,6 +505,10 @@ msgid ""
 " with Z or M values. You have to use the `ST_Force2D(geom)` function to "
 "convert geometries into 2D geometries."
 msgstr ""
+"Pour le moment, la recherche PostgreSQL de Lizmap ne peut pas utiliser les "
+"géométries 3D, ou les géométries avec des valeurs Z ou M. Vous devez "
+"utiliser la fonction \"ST_Force2D(geom)\" pour convertir les géométries "
+"entre géométries 2D."
 
 #: ../../source/publish/advanced_lizmap_config.rst:202
 msgid "Configure access"
@@ -1414,7 +1430,7 @@ msgstr "Enregistrez et publiez votre projet et la configuration de Lizmap"
 
 #: ../../source/publish/advanced_lizmap_config.rst:510
 msgid "Link of an element for layers with an atlas"
-msgstr ""
+msgstr "Lien d'un élément pour les couches avec un atlas"
 
 #: ../../source/publish/advanced_lizmap_config.rst:512
 msgid ""
@@ -1424,6 +1440,11 @@ msgid ""
 "that you have to get it from his Github at : https://github.com/3liz/qgis-"
 "atlasprint"
 msgstr ""
+"Chaque élément d'une couche avec un atlas configuré aura un lien à la fin de"
+" sa popup qui ouvre un pdf de l'atlas de cet élément particulier. Pour le "
+"faire fonctionner vous devez télécharger le plugin \"atlas_print\", pour "
+"cela, vous l'obtiendrez sur son Github à l'adresse : https://github.com/3liz"
+"/qgis-atlasprint"
 
 #: ../../source/publish/advanced_lizmap_config.rst:516
 msgid "Display children in a compact way"
@@ -1435,10 +1456,13 @@ msgid ""
 "table. For that, you will need to adapt the HTML of your children layer and "
 "use a few classes to manipulate it."
 msgstr ""
+"Vous pouvez changer la manière dont les enfants sont affichés et les faire "
+"ressembler à une table. Pour cela, vous devez adapter le code HTML de votre "
+"couche enfant et utiliser quelques classes pour le manipuler."
 
 #: ../../source/publish/advanced_lizmap_config.rst:520
 msgid "\"lizmap_merged\" : You need to attribute this class to your table"
-msgstr ""
+msgstr "\"lizmap_merged\" : Vous devez attribuer cette classe à votre table."
 
 #: ../../source/publish/advanced_lizmap_config.rst:521
 msgid ""
@@ -1532,6 +1556,8 @@ msgstr "modifier les fichiers CSS"
 #: ../../source/publish/advanced_lizmap_config.rst:591
 msgid "The files and directories must be readable (755:644)"
 msgstr ""
+"Les fichiers et les dossiers doivent avoir la permission d'écriture "
+"(755:644)"
 
 #: ../../source/publish/advanced_lizmap_config.rst:593
 msgid ""
@@ -3772,7 +3798,7 @@ msgstr "Ajouter des images et des fichiers pour les attributs"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1097
 msgid "Use the media/upload folder relative to the project"
-msgstr ""
+msgstr "Utilisez le dossier media/upload par rapport à un projet"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1099
 msgid ""
@@ -3848,7 +3874,7 @@ msgstr ""
 
 #: ../../source/publish/advanced_lizmap_config.rst:1114
 msgid "Use a specific destination folder"
-msgstr ""
+msgstr "Utilisez un dossier de destination spécifique"
 
 #: ../../source/publish/advanced_lizmap_config.rst:1116
 msgid ""
@@ -4209,6 +4235,8 @@ msgid ""
 "You can easily configure it with the plugin Lizmap in Qgis in the Dataviz "
 "panel."
 msgstr ""
+"Vous pouvez facilement le configurer avec le plugin Lizmap dans Qgis à "
+"partir de l'onglet Dataviz."
 
 #: ../../source/publish/advanced_lizmap_config.rst:1220
 msgid ""
@@ -4239,6 +4267,8 @@ msgstr ""
 msgid ""
 "**4**: To add a graph, you have to configure it in this part of the panel."
 msgstr ""
+"**4**: Pour ajouter un graphique, vous devez le configurer dans cette zone "
+"de l'onglet."
 
 #: ../../source/publish/advanced_lizmap_config.rst:1236
 msgid ""
