@@ -93,9 +93,3 @@ When the documentation is ready,
 - in the server configuration, change the target of the symbolic link 'current'
 - copy the source/lizmap_versions.json into all other branches, it should be the
   same for all.
-
-
-
-
-
-
