@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2020, 3liz
+# Copyright (C) 2014-2021, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-07 11:26+0200\n"
+"POT-Creation-Date: 2021-07-26 09:53+0000\n"
 "PO-Revision-Date: 2020-11-26 13:55+0000\n"
 "Last-Translator: Sérgio Pinheiro <sergiuspinheiro@gmail.com>, 2020\n"
 "Language-Team: Portuguese (https://www.transifex.com/3liz-1/teams/62012/pt/)\n"
@@ -1384,12 +1384,12 @@ msgstr ""
 "seguintes ficheiros:"
 
 #: ../../source/install/upgrade.rst:27
-msgid "var/jauth.db"
-msgstr "var/jauth.db"
+msgid "var/db/jauth.db"
+msgstr ""
 
 #: ../../source/install/upgrade.rst:28
-msgid "var/logs.db"
-msgstr "var/logs.db"
+msgid "var/db/logs.db"
+msgstr ""
 
 #: ../../source/install/upgrade.rst:29
 msgid "var/config/installer.ini.php"
@@ -1468,6 +1468,64 @@ msgstr "Eliminar ficheiros temporários do Jelix"
 #: ../../source/install/upgrade.rst:77
 msgid "Redefine the rights to the application files"
 msgstr "Redefinir as permissões para os ficheiros da aplicação"
+
+#: ../../source/install/upgrade.rst:87
+msgid "Migrating from Sqlite to Postgresql"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:89
+msgid ""
+"You may have installed Lizmap with Sqlite. You should then have these files "
+":file:`lizmap/var/db/jauth.db` and :file:`lizmap/var/db/logs.db`, where some"
+" data like users, permissions and logs are stored. And you should have this "
+"configuration into :file:`lizmap/var/config/profiles.ini.php`:"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:105
+msgid ""
+"It you have a such configuration, you can migrate data to a Postgresql "
+"database."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:107
+msgid ""
+"First, create a Postgresql database, and then change the configuration into "
+":file:`lizmap/var/config/profiles.ini.php`, by setting access parameters to "
+"the Postgresql database. It is recommended to create a schema into the "
+"database, for example ``lizmap`` , if it contains already some tables."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:113
+msgid "For example :"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:135
+msgid ""
+"See the chapter about installation to know more about these parameters."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:137
+msgid "Then you can launch these scripts which will migrate the data."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:145
+msgid ""
+"If there are no errors, you can then go onto lizmap with your browser, and "
+"check that you can authenticate yourself. You should see also the list of "
+"users into the administration panel. If this is the case, you can backup "
+"files jauth.db and logs.db and you can delete them."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:150
+msgid ""
+"If something goes wrong and you cannot fix the issue, revert the database "
+"access into :file:`lizmap/var/config/profiles.ini.php` as before, like this "
+":"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:164
+msgid "And Lizmap should work well, but still with Sqlite."
+msgstr ""
 
 #: ../../source/install/windows.rst:3
 msgid "Installing Lizmap Web Client on Windows"

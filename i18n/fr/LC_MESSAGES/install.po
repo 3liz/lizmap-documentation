@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2020, 3liz
+# Copyright (C) 2014-2021, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-07 11:26+0200\n"
+"POT-Creation-Date: 2021-07-26 09:53+0000\n"
 "PO-Revision-Date: 2020-11-26 13:55+0000\n"
 "Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
@@ -1146,6 +1146,8 @@ msgid ""
 "Create :file:`profiles.ini.php` into :file:`lizmap/var/config` by copying "
 ":file:`profiles.ini.php.dist`."
 msgstr ""
+"Créer :file:`profiles.ini.php` dans :file:`lizmap/var/config` en copiant "
+":file:`profiles.ini.php.dist`."
 
 #: ../../source/install/linux.rst:395
 msgid "PostgreSQL"
@@ -1173,6 +1175,8 @@ msgid ""
 "Into a fresh copy of :file:`lizmap/var/config/profiles.ini.php`, you should "
 "have:"
 msgstr ""
+"Dans une copie toute fraiche de :file:`lizmap/var/config/profiles.ini.php`, "
+"vous devriez avoir :"
 
 #: ../../source/install/linux.rst:418
 msgid ""
@@ -1180,6 +1184,9 @@ msgid ""
 "sections to use Postgresql, and indicate several parameters to access to "
 "your Postgresql database:"
 msgstr ""
+"C'est la configuration par défaut pour utiliser Sqlite. Vous devez changer "
+"ces sections pour utiliser Postgresql, et indiquer les paramètres d’accès à "
+"votre base de données Postgresql :"
 
 #: ../../source/install/linux.rst:443
 msgid ""
@@ -1187,6 +1194,9 @@ msgid ""
 "lizmap could access to other schema. You then have to set search_path "
 "correctly. Example:"
 msgstr ""
+"Vous pouvez utiliser un schéma spécifique pour stocker les tables Lizmap. Et"
+" vous voudriez peut-être que Lizmap accède à d'autres schéma. Vous devez "
+"alors paramétrer correctement search_path. Exemple :"
 
 #: ../../source/install/linux.rst:450
 msgid ""
@@ -1194,6 +1204,9 @@ msgid ""
 "want to indicate a postgresql service instead of indicating login, password "
 "and so on. Use then the service parameter:"
 msgstr ""
+"Si vous avez configuré un fichier de service pour Postgresql sur votre "
+"serveur, vous voudriez peut-être indiquer le nom du service  au lieu "
+"d'indiquer le login, mot de passe etc. Utilisez alors le paramètre service :"
 
 #: ../../source/install/linux.rst:469
 msgid "Spatialite"
@@ -1209,6 +1222,10 @@ msgid ""
 " in PHP. You can follow these instructions to do so: http://www.gaia-gis.it"
 "/gaia-sins/spatialite-cookbook-fr/html/php.html"
 msgstr ""
+"Pour utiliser l'edition de couches spatialite, vous devez ajouter "
+"l'extension spatialite dans PHP. Vous pouvez suivre ces instructions pour le"
+" faire : http://www.gaia-gis.it/gaia-sins/spatialite-cookbook-"
+"fr/html/php.html"
 
 #: ../../source/install/linux.rst:477
 msgid ""
@@ -1216,6 +1233,10 @@ msgid ""
 " it is not, then spatialite layers will not be used in the editing tool. You"
 " can always use PostgreSQL data for editing."
 msgstr ""
+"Lizmap Web Client test si Spatialite est activé dans PHP. Si ce n'est pas le"
+" cas, alors les couches Spatialite ne pourront pas être utilisée dans "
+"l'outil d'édition. Vous pouvez toujours utiliser Postgresql pour l'édition "
+"de données."
 
 #: ../../source/install/linux.rst:480
 msgid ""
@@ -1230,6 +1251,10 @@ msgid ""
 "Spatialite, we must ensure that **the webserver user (www-data) has well "
 "write access to the directory containing each Spatialite file**"
 msgstr ""
+"Pour que Lizmap Web Client puisse modifier les données contenues dans les "
+"bases Spatialite, vous devez vous assurer que **l'utilisateur du serveur web"
+" (www-data) a les droits en écriture dans le répertoire contenant les "
+"fichiers Spatialite**"
 
 #: ../../source/install/linux.rst:484
 msgid ""
@@ -1253,10 +1278,15 @@ msgid ""
 "will facilitate the admin work that just have to change the rights of this "
 "unique directory."
 msgstr ""
+"Donc si vous voulez installer Lizmap pour fournir un accès à de multiple "
+"fournisseurs de cartes, vous devez leur demander de toujours créer un "
+"répertoire **db** au même niveau que les projets QGIS dans le répertoire de "
+"Lizmap. Cela facilitera le travail de l'administrateur, qui aura juste à "
+"changer les droits d'un seul répertoire."
 
 #: ../../source/install/linux.rst:508
 msgid "Configuring Lizmap and launching the installer"
-msgstr ""
+msgstr "Configurer Lizmap et lancer l'installateur"
 
 #: ../../source/install/linux.rst:511
 msgid "Give the appropriate rights to directories and files"
@@ -1267,10 +1297,12 @@ msgid ""
 "Set rights for Nginx/Apache, so php scripts could write some temporary files"
 " or do changes."
 msgstr ""
+"Mettez les droits pour Nginx/Apache, ainsi les scripts PHP pourront écrire "
+"des fichiers temporaires ou modifier des fichiers."
 
 #: ../../source/install/linux.rst:524
 msgid "Setup configuration"
-msgstr ""
+msgstr "Modifier la configuration"
 
 #: ../../source/install/linux.rst:527
 msgid ""
@@ -1279,26 +1311,34 @@ msgid ""
 ":file:`lizmapConfig.ini.php` to set the url of qgis map server and other "
 "things."
 msgstr ""
+"Créez :file:`lizmapConfig.ini.php`, :file:`localconfig.ini.php`  et éditez "
+"les pour mettre les paramètres spécifiques à votre installation. Vous pouvez"
+" modifier :file:`lizmapConfig.ini.php` pour mettre l'url du serveur Qgis et "
+"d'autres choses."
 
 #: ../../source/install/linux.rst:538
 msgid ""
 "In case you want to enable the demo repositories, just add to "
 ":file:`localconfig.ini.php` the following:"
 msgstr ""
+"Dans le cas où vous voulez activer les répertoires de démo, ajoutez juste "
+"dans le fichier :file:`localconfig.ini.php` :"
 
 #: ../../source/install/linux.rst:548
 msgid "Launching the installer"
-msgstr ""
+msgstr "Lancement de l'installateur"
 
 #: ../../source/install/linux.rst:550
 msgid "After creating configuration files, you can launch the installer"
-msgstr ""
+msgstr "Après avoir configuré les fichiers, vous pouvez lancer l'installateur"
 
 #: ../../source/install/linux.rst:556
 msgid ""
 "It will finished the installation, and will create all SQL tables needed by "
 "Lizmap."
 msgstr ""
+"Cela finira l'installation, et créera toutes les tables SQL nécessaires à "
+"Lizmap."
 
 #: ../../source/install/linux.rst:560
 msgid "First test"
@@ -1306,7 +1346,7 @@ msgstr "Premier test"
 
 #: ../../source/install/linux.rst:562
 msgid "For testing launch: ``http://localhost/lizmap`` in your browser."
-msgstr ""
+msgstr "Pour tester : ``http://localhost/lizmap`` dans votre navigateur."
 
 #: ../../source/install/linux.rst:564
 msgid "In case you get a ``500 - internal server error``, run again:"
@@ -1383,7 +1423,7 @@ msgstr ""
 
 #: ../../source/install/linux.rst:605
 msgid "Lizmap modules"
-msgstr ""
+msgstr "Modules Lizmap"
 
 #: ../../source/install/linux.rst:607
 msgid ""
@@ -1391,6 +1431,10 @@ msgid ""
 "features to QGIS Server. Now that we have Lizmap Web Client up and running, "
 "we can add some Lizmap modules to add again some features."
 msgstr ""
+"Précédemment, nous expliquions comment vous pouviez ajouter des plugins pour"
+" Qgis Server, pour ajouter plus de fonctionnalités à Qgis. Maintenant que "
+"nous avons Lizmap prêt et fonctionnel, nous pouvons ajouter des modules "
+"Lizmap pour ajouter des fonctionnalités."
 
 #: ../../source/install/linux.rst:610
 msgid ""
@@ -1399,10 +1443,14 @@ msgid ""
 "their is usually their install instructions. You should follow them. However"
 " here are the main instructions to install a module."
 msgstr ""
+"La liste est disponible dans Lizmap  "
+":ref:`introduction<additional_lizmap_modules>`. Dans leur dépôt Github, il y"
+" a en en général les instructions pour les installer. Vous devriez les "
+"suivre. Cependant voici les instructions générales pour installer un module."
 
 #: ../../source/install/linux.rst:616
 msgid "installing modules with Composer"
-msgstr ""
+msgstr "Installer des modules avec Composer"
 
 #: ../../source/install/linux.rst:618
 msgid ""
@@ -1412,12 +1460,19 @@ msgid ""
 "`lizmap/lizmap-pgmetadata-module``. The documentation of the module should "
 "indicate it."
 msgstr ""
+"Depuis Lizmap 3.4, vous pouvez installer des modules avec Composer, le "
+"gestionnaire de paquet de PHP. Bien sûr, cela est possible uniquement si "
+"l'auteur du module a créé un paquet de ce module. Un tel paquet a un nom, "
+"par exemple ``lizmap/lizmap-pgmetadata-module``. La documentation du module "
+"devrait l'indiquer."
 
 #: ../../source/install/linux.rst:623
 msgid ""
 "You must install Composer. See instructions on its web site "
 "http://getcomposer.org."
 msgstr ""
+"Vous devez installer Composer. Voyez les instructions sur son site web "
+"http://getcomposer.org."
 
 #: ../../source/install/linux.rst:625
 msgid ""
@@ -1425,39 +1480,50 @@ msgid ""
 "packages/` by copying the :file:`composer.json.dist` from this directory. "
 "And launching a first time Compose"
 msgstr ""
+"Vous devez créer un fichier :file:`composer.json` dans :file:`lizmap/my-"
+"packages/` en copiant le fichier :file:`composer.json.dist` qui s'y trouve. "
+"Et lancer une première fois Composer"
 
 #: ../../source/install/linux.rst:636
 msgid "Then you can install the package of the module"
-msgstr ""
+msgstr "Ensuite vous pouvez installer le paquet du module"
 
 #: ../../source/install/linux.rst:643
 msgid "If you want to install a new version of the module, just execute:"
 msgstr ""
+"Si vous voulez installer une nouvelle version du module, lancez juste :"
 
 #: ../../source/install/linux.rst:649 ../../source/install/linux.rst:693
 msgid ""
 "Read the documentation of the module to know if there are additional steps "
 "to configure it."
 msgstr ""
+"Lisez la documentation du module pour savoir si il y a des étapes "
+"supplémentaires à faire pour le configurer."
 
 #: ../../source/install/linux.rst:652
 msgid "To finish the installation, run again the installer of Lizmap:"
 msgstr ""
+"Pour finir l'installation, lancez une nouvelle fois l'installateur de Lizmap"
+" :"
 
 #: ../../source/install/linux.rst:662
 msgid "installing modules without Composer"
-msgstr ""
+msgstr "Installer des modules sans Composer"
 
 #: ../../source/install/linux.rst:664
 msgid ""
 "To install a module without Composer, retrieve the zip file of the module."
 msgstr ""
+"Pour installer le module sans Composer, récupérez le fichier zip du module."
 
 #: ../../source/install/linux.rst:666
 msgid ""
 "Extract the module into :file:`lizmap/lizmap-modules/`. For instance, for "
 "the module ``PgMetadata`` :"
 msgstr ""
+"Extrayez le module dans :file:`lizmap/lizmap-modules/`. Par exemple, pour le"
+" module \"PgMetaData\" :"
 
 #: ../../source/install/linux.rst:685
 msgid ""
@@ -1465,14 +1531,17 @@ msgid ""
 "section, add a new line for the given module (check the documentation of the"
 " module to setup the correct values):"
 msgstr ""
+"Éditez le fichier :file:`lizmap/var/config/localconfig.ini.php`, dans la "
+"section ``modules``, ajoutez une nouvelle ligne pour le module donné "
+"(vérifiez la documentation du module pour mettre les bonnes valeurs) :"
 
 #: ../../source/install/linux.rst:696
 msgid "Run the installation :"
-msgstr ""
+msgstr "Lancez l'installation :"
 
 #: ../../source/install/pre_requirements.rst:3
 msgid "Requirements before installing Lizmap Web Client"
-msgstr ""
+msgstr "Prérequis pour l'installation de Lizmap Web Client"
 
 #: ../../source/install/pre_requirements.rst:8
 msgid "QGIS Server"
@@ -1483,6 +1552,8 @@ msgid ""
 "Before installing the QGIS Server part, it is **very highly** recommended to"
 " use the **same** version between QGIS Desktop and QGIS Server."
 msgstr ""
+"Avant d'installer la partie Qgis Server, il est **hautement** recommandé "
+"d'utiliser la **même** version de Qgis Desktop et de Qgis Server."
 
 #: ../../source/install/pre_requirements.rst:14
 msgid ""
@@ -1635,12 +1706,12 @@ msgstr ""
 "ces fichiers :"
 
 #: ../../source/install/upgrade.rst:27
-msgid "var/jauth.db"
-msgstr "var/jauth.db"
+msgid "var/db/jauth.db"
+msgstr "var/db/jauth.db"
 
 #: ../../source/install/upgrade.rst:28
-msgid "var/logs.db"
-msgstr "var/logs.db"
+msgid "var/db/logs.db"
+msgstr "var/db/logs.db"
 
 #: ../../source/install/upgrade.rst:29
 msgid "var/config/installer.ini.php"
@@ -1727,6 +1798,64 @@ msgstr "Supprimer les fichiers temporaires de Jelix"
 msgid "Redefine the rights to the application files"
 msgstr "Redéfinir les droits sur les fichiers de l'application"
 
+#: ../../source/install/upgrade.rst:87
+msgid "Migrating from Sqlite to Postgresql"
+msgstr "Migration de Sqlite vers Postgresql"
+
+#: ../../source/install/upgrade.rst:89
+msgid ""
+"You may have installed Lizmap with Sqlite. You should then have these files "
+":file:`lizmap/var/db/jauth.db` and :file:`lizmap/var/db/logs.db`, where some"
+" data like users, permissions and logs are stored. And you should have this "
+"configuration into :file:`lizmap/var/config/profiles.ini.php`:"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:105
+msgid ""
+"It you have a such configuration, you can migrate data to a Postgresql "
+"database."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:107
+msgid ""
+"First, create a Postgresql database, and then change the configuration into "
+":file:`lizmap/var/config/profiles.ini.php`, by setting access parameters to "
+"the Postgresql database. It is recommended to create a schema into the "
+"database, for example ``lizmap`` , if it contains already some tables."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:113
+msgid "For example :"
+msgstr "Voici un exemple :"
+
+#: ../../source/install/upgrade.rst:135
+msgid ""
+"See the chapter about installation to know more about these parameters."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:137
+msgid "Then you can launch these scripts which will migrate the data."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:145
+msgid ""
+"If there are no errors, you can then go onto lizmap with your browser, and "
+"check that you can authenticate yourself. You should see also the list of "
+"users into the administration panel. If this is the case, you can backup "
+"files jauth.db and logs.db and you can delete them."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:150
+msgid ""
+"If something goes wrong and you cannot fix the issue, revert the database "
+"access into :file:`lizmap/var/config/profiles.ini.php` as before, like this "
+":"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:164
+msgid "And Lizmap should work well, but still with Sqlite."
+msgstr ""
+
 #: ../../source/install/windows.rst:3
 msgid "Installing Lizmap Web Client on Windows"
 msgstr "Installation de Lizmap sous Windows"
@@ -1750,7 +1879,7 @@ msgstr ""
 
 #: ../../source/install/windows.rst:14
 msgid "Requirements"
-msgstr ""
+msgstr "Prérequis"
 
 #: ../../source/install/windows.rst:16
 msgid ""

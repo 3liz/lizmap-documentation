@@ -92,3 +92,10 @@ When the documentation is ready to release `X.Y`:
 1. In the server configuration, change the target of the symbolic link 'current'
 1. Copy the `source/lizmap_versions.json` into all other branches, it should be the
    same for all.
+
+## Archive an old version
+
+1. Checkout the branch
+1. `./update_from_transifex.sh -f
+1. `git commit -am 'Archive LWC BRANCH translations, EOL'`
+1. Remove all ressources on Transifex for the BRANCH

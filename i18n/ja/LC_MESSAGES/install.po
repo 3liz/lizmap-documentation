@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Jin Igarashi <wushilan0623@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,20 +13,21 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-26 09:53+0000\n"
 "PO-Revision-Date: 2020-11-26 13:55+0000\n"
-"Language-Team: Spanish (https://www.transifex.com/3liz-1/teams/62012/es/)\n"
+"Last-Translator: Jin Igarashi <wushilan0623@gmail.com>, 2021\n"
+"Language-Team: Japanese (https://www.transifex.com/3liz-1/teams/62012/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../source/install/advanced_install.rst:3
 msgid "Advanced installation configuration"
-msgstr ""
+msgstr "高度なインストールの設定"
 
 #: ../../source/install/advanced_install.rst:6
 msgid "Lizmap behind a proxy/reverse proxy"
-msgstr ""
+msgstr "プロキシ/リバースプロキシ下にLizmapをインストールする"
 
 #: ../../source/install/advanced_install.rst:8
 msgid ""
@@ -32,6 +36,8 @@ msgid ""
 " content an unwanted port ( ``http://mydomain:5468/`` instead of "
 "``http://mydomain/`` ). Or url may not contain the real domain name."
 msgstr ""
+"LizmapのURLはお望みのものになってはいないかもしれません。たとえば、\"https \"プロトコルではなく \"http "
+"\"プロトコルを使用している場合です。あるいは、不要なポートを含んでいるかもしれません（``http://mydomain/``ではなく``http://mydomain:5468/``）。また、URLに実際のドメイン名が含まれていない場合もあります。"
 
 #: ../../source/install/advanced_install.rst:13
 msgid ""
@@ -40,36 +46,38 @@ msgid ""
 "environment parameters given by PHP or the backend web server to Lizmap are "
 "wrong."
 msgstr ""
+"ほとんどの場合、ウェブサーバーまたはPHP-"
+"fpmがマスターとなるウェブサーバー（プロキシまたはリバースプロキシとして機能する）の背後にあり、PHPまたはバックエンドウェブサーバーがLizmapに付与する環境変数が誤っていることが原因となります。"
 
 #: ../../source/install/advanced_install.rst:17
 msgid ""
 "You can tell to Lizmap to force to HTTPS, to use the right domain or to use "
 "the right port."
-msgstr ""
+msgstr "LizmapにHTTPSを強制的に使うようにしたり、正しいドメインを使うようにしたり、正しいポートを使うようにさせることができます。"
 
 #: ../../source/install/advanced_install.rst:19
 msgid ""
 "In ``localconfig.ini.php``, you can use these following configuration "
 "parameters."
-msgstr ""
+msgstr "``localconfig.ini.php``には、以下のような設定パラメータがあります。"
 
 #: ../../source/install/advanced_install.rst:22
 msgid ""
 "To force to use the port 80 (true) or the 8080 for example with the http "
 "protocol:"
-msgstr ""
+msgstr "例えば、httpプロトコルでポート80（true）または8080を強制的に使用する場合"
 
 #: ../../source/install/advanced_install.rst:30
 msgid ""
 "To force to use the port 443 (true) or the 8443 for example with the https "
 "protocol:"
-msgstr ""
+msgstr "例えば、httpsプロトコルで443（true）または8443を強制的に使用する場合"
 
 #: ../../source/install/advanced_install.rst:38
 msgid ""
 "To specify the domain name of your Lizmap application, if Lizmap cannot "
 "guess it:"
-msgstr ""
+msgstr "Lizmapが推測できない時のために、Lizmapアプリケーションのドメイン名を指定する場合"
 
 #: ../../source/install/advanced_install.rst:45
 msgid ""
@@ -79,12 +87,16 @@ msgid ""
 "``http://backend.example.com/foo/bar/index.php``, You have to indicate the "
 "\"public\" URL path (basePath) and the backend URL Path (backendBasePath):"
 msgstr ""
+"バックエンドのウェブサーバのURLパスが、フロントのウェブサーバのURLパスに対応していない場合（例：プロキシが "
+"``http://example.com/index.php`` のようなURLをあなたのウェブサーバ "
+"``http://backend.example.com/foo/bar/index.php`` "
+"にリダイレクトする場合）、「パブリック」なURLパス（basePath）とバックエンドのURLパス（backendBasePath）を指定する必要があります。"
 
 #: ../../source/install/advanced_install.rst:56
 msgid ""
 "If the reverse proxy redirect HTTPS request to HTTP, you must deactivate the"
 " HTTPS check:"
-msgstr ""
+msgstr "リバースプロキシがHTTPSリクエストをHTTPにリダイレクトする場合は、HTTPSチェックを無効にする必要があります。"
 
 #: ../../source/install/advanced_install.rst:63
 msgid ""
@@ -92,10 +104,12 @@ msgid ""
 "generated URL with the HTTPS protocol, when Lizmap doesn't know what is the "
 "protocol used by requests on the reverse proxy:"
 msgstr ""
+"Lizmap "
+"3.0.18および3.1.6以降では、リバースプロキシ上のリクエストで使用されているプロトコルがLizmapに不明な場合、生成されるすべてのURLにHTTPSプロトコルを強制的に適用するよう指示することができます。"
 
 #: ../../source/install/advanced_install.rst:75
 msgid "Using environment variables"
-msgstr ""
+msgstr "環境変数を使用する"
 
 #: ../../source/install/advanced_install.rst:77
 msgid ""
@@ -104,20 +118,23 @@ msgid ""
 "``profiles.ini.php`` files. Be sure the environment variables are available "
 "to the PHP-FPM process or the APACHE/NGINX process."
 msgstr ""
+"環境変数で利用可能な認証情報やパラメータがある場合には、それらを ``localconfig.ini.php`` や "
+"``profiles.ini.php`` ファイルに記述することができます。環境変数が PHP-FPM プロセスまたは APACHE/NGINX "
+"プロセスで利用可能であることを確認してください。"
 
 #: ../../source/install/advanced_install.rst:81
 msgid "Into this files, use the syntax ``${VARIABLE_NAME}``."
-msgstr ""
+msgstr "このファイルには、 ``${VARIABLE_NAME}``の構文を使用します。"
 
 #: ../../source/install/advanced_install.rst:83
 msgid ""
 "For example, to indicate postgresql credentials stored into these variables "
 ":"
-msgstr ""
+msgstr "例えば、これらの変数に格納されているpostgresqlの認証情報を示すためには以下のようにします。"
 
 #: ../../source/install/advanced_install.rst:92
 msgid "You write this configuration into profiles.ini.php:"
-msgstr ""
+msgstr "この設定をprofiles.ini.phpに書き込みます。"
 
 #: ../../source/install/configuration.rst:3
 msgid "Configuration of Lizmap"
@@ -275,6 +292,9 @@ msgid ""
 " which are supported, it's written on the Lizmap Web Client wiki page : "
 "https://github.com/3liz/lizmap-web-client/wiki/Versions"
 msgstr ""
+"サポートされているバージョン（Webブラウザ、QGISサーバ、PostgreSQLなど）の詳細については、Lizmap Web "
+"Clientのwikiページに書かれています： https://github.com/3liz/lizmap-web-"
+"client/wiki/Versions"
 
 #: ../../source/install/ldap.rst:3
 msgid "LDAP authentication"

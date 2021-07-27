@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2020, 3liz
+# Copyright (C) 2014-2021, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-07 11:26+0200\n"
+"POT-Creation-Date: 2021-07-26 09:53+0000\n"
 "PO-Revision-Date: 2020-11-26 13:55+0000\n"
 "Last-Translator: Sérgio Pinheiro <sergiuspinheiro@gmail.com>, 2020\n"
 "Language-Team: Portuguese (https://www.transifex.com/3liz-1/teams/62012/pt/)\n"
@@ -581,43 +581,59 @@ msgstr ""
 "O objeto selecionado aparece no mapa e sua geometria pode ser alterada "
 "imediatamente."
 
-#: ../../source/user/edition.rst:57
-msgid "You can undo geometry changes using the *Cancel* button."
+#: ../../source/user/edition.rst:52
+msgid ""
+"You can undo geometry changes and stop edition using the *Cancel* button."
 msgstr ""
-"Pode desfazer as alterações relativas à geometria utilizando o botão "
-"*Cancelar*."
+
+#: ../../source/user/edition.rst:53
+msgid "To validate your geometry modifications, you must click *Save*."
+msgstr ""
+
+#: ../../source/user/edition.rst:59
+msgid ""
+"If you want to remove a point on a geometry, you must hover it and type "
+"*Del* on your keyboard."
+msgstr ""
+
+#: ../../source/user/edition.rst:61
+msgid ""
+"*Digitizing* button is displayed with line and polygon geometries, by "
+"clicking it, you'll access those tools:"
+msgstr ""
 
 #: ../../source/user/edition.rst:63
 msgid ""
-"To validate your geometry modifications or simply access the editing form "
-"for fields, you must click *Save*."
+"Node tool (default). Move or delete the geom nodes (vertices) and also "
+"create new ones by dragging virtual nodes in the middle of the segments."
 msgstr ""
-"Para validar as modificações relativas à geometria ou simplesmente aceder ao"
-" formulário de edição de campos, deve clicar em *Guardar*."
 
-#: ../../source/user/edition.rst:69
+#: ../../source/user/edition.rst:64
 msgid ""
-"A dialog box containing the editing form for fields of the object appears."
+"Drag tool. Translate a geometry by dragging the displayed point at the "
+"center of the geometry."
 msgstr ""
-"Uma caixa de diálogo contendo o formulário de edição para os campos do "
-"objeto será apresentada."
 
-#: ../../source/user/edition.rst:75
-msgid "The *Save* button saves the geometry and attributes changes."
-msgstr ""
-"O botão *Guardar* grava as alterações relativas à geometria e aos atributos."
-
-#: ../../source/user/edition.rst:77
-msgid "If you want to remove the object you selected, you must click *Del*."
-msgstr "Se desejar remover o objeto selecionado, deve clicar em *Eliminar*."
-
-#: ../../source/user/edition.rst:79
+#: ../../source/user/edition.rst:65
 msgid ""
-"Finally, to disable editing tool, simply click on *Close* or click again on "
-"the Edition icon."
+"Rotate tool. Rotate a geometry by dragging the displayed point at bottom "
+"right of the geometry."
 msgstr ""
-"Finalmente, para desativar a ferramenta de edição, basta clicar em *Fechar* "
-"ou clicar novamente no ícone de Edição."
+
+#: ../../source/user/edition.rst:66
+msgid "Reshape tool."
+msgstr ""
+
+#: ../../source/user/edition.rst:67
+msgid "Split tool."
+msgstr ""
+
+#: ../../source/user/edition.rst:68
+msgid ""
+"Reverse geom (To be used with the node tool). Reverse nodes (vertices) "
+"order. Useful for streets when their circulation orientation is reversed for"
+" example."
+msgstr ""
 
 #: ../../source/user/index.rst:3
 msgid "User guide"
