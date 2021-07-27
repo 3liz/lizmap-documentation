@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2020, 3liz
+# Copyright (C) 2014-2021, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# etrimaille <gustrimaille@yahoo.fr>, 2020
-# Arnaudkoch, 2020
+# Arnaudkoch, 2018
+# rldhont <rldhont@gmail.com>, 2018
 # Nicolas Boisteault <nboisteault@gmail.com>, 2020
-# rldhont <rldhont@gmail.com>, 2020
-# Laurent Jouanneau <dev@ljouanneau.com>, 2020
 # Nicolas Audibert <nicolas.audibert@hotmail.fr>, 2020
+# etrimaille <gustrimaille@yahoo.fr>, 2020
+# Laurent Jouanneau <dev@ljouanneau.com>, 2021
+# Corentin LEMAITRE <corentinlemaitre@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Lizmap 3.4\n"
+"Project-Id-Version: Lizmap 3.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-07 11:26+0200\n"
-"PO-Revision-Date: 2020-11-26 13:55+0000\n"
-"Last-Translator: Nicolas Audibert <nicolas.audibert@hotmail.fr>, 2020\n"
+"POT-Creation-Date: 2021-07-26 09:54+0000\n"
+"PO-Revision-Date: 2018-09-07 13:32+0000\n"
+"Last-Translator: Corentin LEMAITRE <corentinlemaitre@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -609,46 +610,79 @@ msgstr ""
 "L'objet sélectionné apparait sur la carte et sa géométrie est directement "
 "modifiable."
 
-#: ../../source/user/edition.rst:57
-msgid "You can undo geometry changes using the *Cancel* button."
+#: ../../source/user/edition.rst:52
+msgid ""
+"You can undo geometry changes and stop edition using the *Cancel* button."
 msgstr ""
-"Vous pouvez annuler les modifications de géométrie en utilisant le bouton "
-"*Annuler*."
+"Vous pouvez annuler les modifications de géométrie  et arrêter l'édition en "
+"utilisant le bouton *Annuler*."
+
+#: ../../source/user/edition.rst:53
+msgid "To validate your geometry modifications, you must click *Save*."
+msgstr ""
+"Pour valider vos modifications de géométrie vous devez cliquer sur "
+"*Enregistrer*."
+
+#: ../../source/user/edition.rst:59
+msgid ""
+"If you want to remove a point on a geometry, you must hover it and type "
+"*Del* on your keyboard."
+msgstr ""
+"Si vous souhaitez supprimer un point au sein d'une géométrie vous devez le "
+"survoler et appuyer sur la touche *Suppr* du clavier."
+
+#: ../../source/user/edition.rst:61
+msgid ""
+"*Digitizing* button is displayed with line and polygon geometries, by "
+"clicking it, you'll access those tools:"
+msgstr ""
+"Le bouton \"Numérisation\" est affiché pour les géométries lignes ou "
+"polygones. En cliquant sur ce bouton vous pouvez accéder à ces différents "
+"outils :"
 
 #: ../../source/user/edition.rst:63
 msgid ""
-"To validate your geometry modifications or simply access the editing form "
-"for fields, you must click *Save*."
+"Node tool (default). Move or delete the geom nodes (vertices) and also "
+"create new ones by dragging virtual nodes in the middle of the segments."
 msgstr ""
-"Pour valider vos modifications de dessin ou simplement accéder à la "
-"modification des attributs, vous devez cliquer sur *Enregistrer*."
+"Outils de noeuds (par défaut). Déplacer ou supprimer des noeuds (sommets), "
+"cet outil permet aussi d'ajouter de nouveau sommets en déplaçant un nœud "
+"virtuel entre deux nœuds existants."
 
-#: ../../source/user/edition.rst:69
+#: ../../source/user/edition.rst:64
 msgid ""
-"A dialog box containing the editing form for fields of the object appears."
+"Drag tool. Translate a geometry by dragging the displayed point at the "
+"center of the geometry."
 msgstr ""
-"Un boîte de dialogue contenant le formulaire de saisie des attributs de "
-"l'objet s'affiche alors."
+"Outil de déplacement. Faire glisser le point affiché au centre de la "
+"géométrie pour la déplacer."
 
-#: ../../source/user/edition.rst:75
-msgid "The *Save* button saves the geometry and attributes changes."
-msgstr ""
-"Le bouton *Valider* permet d'enregistrer les modifications de géométrie et "
-"d'attributs."
-
-#: ../../source/user/edition.rst:77
-msgid "If you want to remove the object you selected, you must click *Del*."
-msgstr ""
-"Si vous souhaitez supprimer l'objet que vous avez sélectionné, vous devez "
-"cliquer sur *Sup*."
-
-#: ../../source/user/edition.rst:79
+#: ../../source/user/edition.rst:65
 msgid ""
-"Finally, to disable editing tool, simply click on *Close* or click again on "
-"the Edition icon."
+"Rotate tool. Rotate a geometry by dragging the displayed point at bottom "
+"right of the geometry."
 msgstr ""
-"Enfin, pour désactiver l'édition de données, cliquez simplement sur *Fermer*"
-" ou cliquez de nouveau sur l’icône Édition."
+"Outil pivoter. Faire glisser le point affiché en bas à droite de la "
+"géométrie pour la faire pivoter."
+
+#: ../../source/user/edition.rst:66
+msgid "Reshape tool."
+msgstr "Outil remodeler."
+
+#: ../../source/user/edition.rst:67
+msgid "Split tool."
+msgstr "Outil séprer les entités."
+
+#: ../../source/user/edition.rst:68
+msgid ""
+"Reverse geom (To be used with the node tool). Reverse nodes (vertices) "
+"order. Useful for streets when their circulation orientation is reversed for"
+" example."
+msgstr ""
+"Outil inverser la géométrie (à utiliser avec l'outil de noeuds). Inverse "
+"l'ordre des noeuds (sommets) dans la géométrie. L'outil peut être utile par "
+"exemple pour la modification de la voirie si l'orientation de la géométrie "
+"correspond au sens de circulation."
 
 #: ../../source/user/index.rst:3
 msgid "User guide"
@@ -707,7 +741,7 @@ msgstr "un périmètre"
 
 #: ../../source/user/measurement.rst:9
 msgid "an angle"
-msgstr ""
+msgstr "un angle"
 
 #: ../../source/user/measurement.rst:11
 msgid "It is available in the Lizmap menu bar."

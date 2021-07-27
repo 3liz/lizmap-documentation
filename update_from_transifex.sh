@@ -3,7 +3,7 @@
 LOCALES_DIR="$(dirname $0)"
 
 export LOCALES_BRANCH=$(git branch | grep \* | cut -d ' ' -f2)
-export AVAILABLE_LOCALES="es fi fr it ja pt ru"
+export AVAILABLE_LOCALES="es fi fr it:wq ja pt ru"
 
 usage()
 {
