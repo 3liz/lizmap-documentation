@@ -13,3 +13,7 @@ For describing a feature, we should try to split it into:
   * Project level
 * More technical details if needed
 * Exercise, use case
+
+## Getting help
+- Send an email to the lizmap mailing list at https://lists.osgeo.org/pipermail/lizmap/
+- Join us on IRC , #lizmap on https://libera.chat
