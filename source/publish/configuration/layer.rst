@@ -71,6 +71,24 @@ To set the editing tools for your layer fields:
 
     If the tool is not supported, the web form displays a text input field.
 
+Advanced form
+^^^^^^^^^^^^^
+
+.. note::
+    To group fields in different tabs, follow QGIS documentation https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#the-drag-and-drop-designer.
+
+Lizmap can reproduce several behavior configured in QGIS :
+
+* **Control visibility by expression**. For example, you can toggle tab's visibility based on a checkbox state. For that, we can create a field named ``has_photo`` defined as a ``Checkbox`` and a ``photo`` tab having ``Control Visibility by Expression`` checked and ``"has_photo" = true OR "has_photo" = 't'`` as Expression.
+* **Constraints defined by expression**. For example, you want to simply assert users correctly type a website URL beginning by 'http' (of course, regex would be better but we keep it simple). For that, we can create a field named ``website`` defined as a ``Text Edit``, define ``Constraints`` with ``left( "website", 4) = 'http'`` as expression and ``Web site URL must start with 'http'`` as Expression description.
+* **Filter expression for a Value Relation field**. For example, you want a field to automatically get the related value from another layer's field when drawing a point on the map. For that, we can create a field name ``quartier`` defined as a Value Relation to a ``quartiers`` layer and set ``intersects($geometry, @current_geometry)`` as Filter expression. We can also check ``Not null`` and ``Enforce not null contraint`` to assert no NULL value can be set.
+
+.. raw:: html
+
+  <center>
+    <video controls src="../../_static/videos/advanced_form.mp4"></video>
+  </center>
+
 .. _server_side_simplification:
 
 Server side simplification
