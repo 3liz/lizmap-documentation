@@ -101,6 +101,11 @@ Some modules can be added to Lizmap :
 
     https://github.com/3liz/lizmap-pgmetadata-module
 
+* PgRouting
+   For displaying itinerary between two points using the `PgRouting <https://pgrouting.org/>`_ extension for PostGIS.
+
+    https://github.com/3liz/lizmap-pgrouting-module
+
 * Web Processing Service
     To execute QGIS Processing algorithms or models on a server and view the results within Lizmap
 
