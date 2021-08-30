@@ -1,3 +1,6 @@
+.. meta::
+   :keywords: js,script,javascript,code
+
 .. _adding-javascript:
 
 Adding your own JavaScript
@@ -9,7 +12,7 @@ Adding your own JavaScript
 Principle
 ---------
 
-Adding some JavaScript is useful for a variety of advanced usage.
+Adding some JavaScript (JS) is useful for a variety of advanced usage.
 For instance, you can:
 
     - hide some UI elements that you don't want to display by default
@@ -37,12 +40,22 @@ Configuring the tool
 * All the JavaScript code in ``default`` will be executed for **all** projects.
 * To allow the execution of JavaScript code, in the Lizmap admin interface, you **must** add the privilege :guilabel:`Allow themes for this repository`.
 
+Video tutorial
+--------------
+
+This video is an quick start how to add a JavaScript to change the default panel in Lizmap.
+
+.. raw:: html
+
+    <center><iframe width="800" height="450" src="https://www.youtube.com/embed/xQQ34nvRZ-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 Library of scripts
 ------------------
 
 You can find some examples in the repository https://github.com/3liz/lizmap-javascript-scripts.
+
 Also, in the directory :file:`lizmap-web-client/lizmap/install/qgis/media/js/` (or in GitHub https://github.com/3liz/lizmap-web-client/tree/master/extra-modules/lizmapdemo/qgis-projects/demoqgis/media/js/montpellier), you can find examples of suitable JavaScript code.
+
 Remove the extension ``.example`` and copy them to your :file:`media/js/default/` folder to activate them.
 
 Available Javascript events
