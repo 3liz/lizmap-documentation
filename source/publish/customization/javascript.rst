@@ -45,9 +45,7 @@ Video tutorial
 
 This video is an quick start how to add a JavaScript to change the default panel in Lizmap.
 
-.. raw:: html
-
-    <center><iframe width="800" height="450" src="https://www.youtube.com/embed/xQQ34nvRZ-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+https://www.youtube.com/embed/xQQ34nvRZ-w
 
 Library of scripts
 ------------------
