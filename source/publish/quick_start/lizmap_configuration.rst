@@ -26,7 +26,7 @@ To install it, just do it like any QGIS plugin:
    :align: center
    :width: 60%
 
-The plugin is organized in 13 tabs:
+The plugin is organized in 14 tabs:
 
 * :guilabel:`Information`: some information about the Lizmap project and your servers
 * :guilabel:`Map options`: the general options of the map
@@ -41,6 +41,7 @@ The plugin is organized in 13 tabs:
 * :guilabel:`Time manager`: play an animation based on date or datetime field
 * :guilabel:`Atlas`: setup an atlas for the project
 * :guilabel:`Filter data with form`: Make some filtering based on attributes
+* :guilabel:`Filter data with a spatial layer`: Filter a layer based on another polygon layer for a given user
 * :guilabel:`Log`: displays information of performed actions
 
 And it has 5 action buttons:

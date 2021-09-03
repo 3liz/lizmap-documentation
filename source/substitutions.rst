@@ -2,6 +2,7 @@
 .. |qgis_3| replace:: **QGIS 3**
 
 .. |lizmap_3_4| replace:: **Lizmap 3.4**
+.. |lizmap_3_5| replace:: **Lizmap 3.5**
 
 .. |add_layer_svg| image:: /images/icons/symbologyAdd.svg
 .. |edit_layer_svg| image:: /images/icons/symbologyEdit.svg
