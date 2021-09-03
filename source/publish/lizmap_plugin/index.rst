@@ -20,3 +20,4 @@ This section is listing panels available in the Lizmap QGIS plugin.
   time_manager
   atlas
   form_filtering
+  spatial_filtering
