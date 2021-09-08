@@ -60,7 +60,7 @@ The relation ``lizmap_search`` must contain the following columns:
 * ``item_filter`` (text). Username or group name. When given, the results will be filtered by authenticated user login and groups. For example, 'admins'
 * ``geom`` (geometry). We advise to store all the geometries with the same SRID.
 
-Here is an example of SQL code you can use, to add data from two different spatial tables into lizmap_search (here as a materialized view to ease further maintenance)
+Here is an example of SQL code you can use, to a* Py-QGIS-Serverdd data from two different spatial tables into lizmap_search (here as a materialized view to ease further maintenance)
 
 .. code-block:: sql
 
@@ -100,7 +100,9 @@ ____________
    -- You can refresh the materialized view at any time (for example in a cron job) with:
    REFRESH MATERIALIZED VIEW lizmap_search;
 
-* At present, Lizmap PostgreSQL search cannot use 3D geometries, or geometries with Z or M values. You have to use the ``ST_Force2D(geom)`` function to convert geometries into 2D geometries.
+.. warning::
+    At present, Lizmap PostgreSQL search cannot use 3D geometries, or geometries with Z or M values.
+    You have to use the ``ST_Force2D(geom)`` function to convert geometries into 2D geometries.
 
 Configure access
 ________________
