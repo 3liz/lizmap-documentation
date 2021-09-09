@@ -60,7 +60,7 @@ The relation ``lizmap_search`` must contain the following columns:
 * ``item_filter`` (text). Username or group name. When given, the results will be filtered by authenticated user login and groups. For example, 'admins'
 * ``geom`` (geometry). We advise to store all the geometries with the same SRID.
 
-Here is an example of SQL code you can use, to a* Py-QGIS-Serverdd data from two different spatial tables into lizmap_search (here as a materialized view to ease further maintenance)
+Here is an example of SQL code you can use, to add data from two different spatial tables into lizmap_search (here as a materialized view to ease further maintenance)
 
 .. code-block:: sql
 
