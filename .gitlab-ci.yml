@@ -67,7 +67,7 @@ deploy_snap:
     - retrieve_po_and_build
     - build_html
   script:
-    - rsync -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/$VERSION
+    - rsync -vvv -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/$VERSION
   environment:
     name: snap
   tags:
