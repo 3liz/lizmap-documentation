@@ -44,7 +44,8 @@ Links can be filled with the Lizmap plugin :guilabel:`Layers` tab after selectin
 The path should be written:
 
 * Starting with ``media/``
-* With slashes ``/`` and not backslashes
+* Or with ``../media/`` if you want to use a single **media** folder, read :ref:`single-media-folder`
+* With slashes ``/`` and not backslashes ``\``
 
 Some examples:
 
@@ -53,6 +54,14 @@ Some examples:
 * ``media/a_picture.png``
 
 On the Lizmap Web Client map, if a link has been set up this way for one of the layers, then an icon (i) will be placed to the right of the layer. Clicking this icon opens the linked document in a new browser tab.
+
+.. _single-media-folder:
+
+Use a single media folder for many Lizmap folders
+-------------------------------------------------
+
+It's possible to use a single ``media`` folder located in the root repository of the Lizmap installation.
+As the folder is located in the parent folder of the QGIS project, it's allowed to use ``../media`` in the QGIS project, for instance in the attribute table of a layer.
 
 .. _use-in-popups:
 
