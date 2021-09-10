@@ -55,6 +55,12 @@ Some examples:
 
 On the Lizmap Web Client map, if a link has been set up this way for one of the layers, then an icon (i) will be placed to the right of the layer. Clicking this icon opens the linked document in a new browser tab.
 
+.. warning::
+    For editing capabilities, in :menuselection:`Layer properties --> Attributes Form`, for the given field,
+    you should choose ``Attachment`` widget and set the path relative to the project.
+
+    If the media is a picture, you should set the :guilabel:`Integrated Document Viewer` to ``Image``.
+
 .. _single-media-folder:
 
 Use a single media folder for many Lizmap folders
