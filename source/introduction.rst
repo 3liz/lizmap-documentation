@@ -87,7 +87,7 @@ Additional Lizmap modules
 Some modules can be added to Lizmap :
 
 * AltiProfil
-    Display a profil with altitude according to a line and a MNT
+    Display a profil with altitude according to a line and a DEM (Digital Elevation Model)
 
     https://github.com/arno974/lizmap-altiProfil
 
