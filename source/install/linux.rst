@@ -612,10 +612,10 @@ their is usually their install instructions. You should follow them. However
 here are the main instructions to install a module.
 
 
-installing modules with Composer
+Installing modules with Composer
 --------------------------------
 
-Since Lizmap 3.4, you can install modules with Composer, the package manager for
+You can install modules with Composer, the package manager for
 PHP. Of course it is possible only if the author of the module has created
 a package of his module. A such package has a name, for example `lizmap/lizmap-pgmetadata-module``.
 The documentation of the module should indicate it.

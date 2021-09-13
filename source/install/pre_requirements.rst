@@ -37,6 +37,13 @@ probably get a XML like:
 
 Keep this URL, we will use it later in the Lizmap admin panel.
 
+.. warning::
+    We **strongly** encourage you to set up QGIS Server on a different virtual host than Lizmap Web Client.
+    QGIS Server URL should stay private, accessible by the Lizmap PHP application **only**.
+
+    Otherwise, especially after the **Lizmap** plugin on QGIS Server is installed, your user might be able to
+    access private data if they by-pass Lizmap, by using straight QGIS Server URL.
+
 QGIS Server plugins
 -------------------
 
@@ -48,7 +55,12 @@ or use the default one provided by QGIS.
 https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-variables
 
 * AtlasPrint : To enable the PDF based on a QGIS Layout Atlas https://github.com/3liz/qgis-atlasprint
-* Lizmap : Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server** to evaluate
-  QGIS Expressions in forms https://github.com/3liz/lizmap-plugin/
-* WfsOutputExtension : To add new format when exporting vector data https://github.com/3liz/qgis-wfsOutputExtension
+* Cadastre : French use-case only, working with the Cadastre Lizmap module https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/
+* Lizmap : Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server** to
+
+   * evaluate QGIS Expressions in forms
+   * check User Access Rights (ACL) for features and layers (filter by polygon, by attribute…)
+   * https://github.com/3liz/lizmap-plugin/
+
 * Logging : To log QGIS Servers log and to flush the cache on QGIS Server https://github.com/3liz/qgis-logging-plugin
+* WfsOutputExtension : To add new format when exporting vector data https://github.com/3liz/qgis-wfsOutputExtension
