@@ -36,7 +36,10 @@ retrieve_po_and_build:
     - schedules
   stage: build_html
   script:
-    - tx pull -l es,fi,fr,it,ja,pt,ru --branch $TX_BRANCH
+    # -f because of
+    # https://github.com/transifex/transifex-client/issues/233
+    # and https://github.com/transifex/transifex-client/issues/22
+    - tx pull -f -l es,fi,fr,it,ja,pt,ru --branch $TX_BRANCH
     - make clean html
   artifacts:
     paths:
