@@ -1,20 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2019, 3liz
+# Copyright (C) 2014-2021, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# João Gaspar <joao.f.r.gaspar@gmail.com>, 2019
-# José Macau <jose.macau@gmail.com>, 2019
+# João Gaspar <joao.f.r.gaspar@gmail.com>, 2020
+# José Macau <jose.macau@gmail.com>, 2020
+# Sérgio Pinheiro <sergiuspinheiro@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Lizmap 3.3\n"
+"Project-Id-Version: Lizmap 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-08 15:15+0200\n"
-"PO-Revision-Date: 2019-05-27 15:16+0000\n"
-"Last-Translator: José Macau <jose.macau@gmail.com>, 2019\n"
+"POT-Creation-Date: 2021-09-13 13:33+0000\n"
+"PO-Revision-Date: 2020-11-26 13:55+0000\n"
+"Last-Translator: Sérgio Pinheiro <sergiuspinheiro@gmail.com>, 2020\n"
 "Language-Team: Portuguese (https://www.transifex.com/3liz-1/teams/62012/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,490 +23,20 @@ msgstr ""
 "Language: pt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/user/index.rst:3
-msgid "User guide"
-msgstr "Guia do utilizador"
-
-#: ../../source/user/user_guide.rst:2
-msgid "The projects pages"
-msgstr "Páginas dos Projetos"
-
-#: ../../source/user/user_guide.rst:4
-msgid "The default lizmap page offers a list maps organized by folder."
-msgstr ""
-"A página padrão do Lizmap oferece uma lista de mapas organizados por pasta."
-
-#: ../../source/user/user_guide.rst:10
-msgid ""
-"You can access to the map information sheet. This informations come directly"
-" from QGIS project."
-msgstr ""
-"Pode aceder à folha de informações do mapa. Estas informações provêm "
-"diretamente do projeto QGIS."
-
-#: ../../source/user/user_guide.rst:16
-msgid ""
-"Access to the map is done either by clicking the **Load the map** buttons or"
-" the image that accompanies the project."
-msgstr ""
-"O acesso ao mapa é feito clicando nos botões **Visualizar mapa** ou na "
-"imagem que acompanha o projeto."
-
-#: ../../source/user/user_guide.rst:19
-msgid "A simple map"
-msgstr "Um Mapa simples"
-
-#: ../../source/user/user_guide.rst:21
-msgid "Lizmap offers default web maps with the following features:"
-msgstr ""
-"O Lizmap disponibiliza mapas web padrão com as seguintes características:"
-
-#: ../../source/user/user_guide.rst:23
-msgid "pan"
-msgstr "mover"
-
-#: ../../source/user/user_guide.rst:24
-msgid "zoom on area drawn by the user"
-msgstr "zoom para a área desenhada pelo utilizador"
-
-#: ../../source/user/user_guide.rst:25
-msgid "zoom more"
-msgstr "aproximar"
-
-#: ../../source/user/user_guide.rst:26
-msgid "selecting a zoom level with a scale bar"
-msgstr "selecionar um nível de zoom através de uma escala gráfica"
-
-#: ../../source/user/user_guide.rst:27
-msgid "zoom less"
-msgstr "afastar"
-
-#: ../../source/user/user_guide.rst:28
-msgid "scale display as a scale bar and numerically"
-msgstr "apresentação de escala gráfica e escala numérica"
-
-#: ../../source/user/user_guide.rst:30
-msgid ""
-"The order and organization of layers in the layers panel management meet "
-"those defined in the QGIS by the map publisher."
-msgstr ""
-"A ordem e a organização das camadas na gestão do painel de camadas atende às"
-" definições do QGIS para publicação de mapas."
-
-#: ../../source/user/user_guide.rst:36
-msgid ""
-"Zooming and paning are available on the right of the map. To zoom on an "
-"area, you need to select the *zoom by rectangle* and drag to draw a "
-"rectangle defining the area to reach."
-msgstr ""
-"Zoom e panorâmica estão disponíveis à direita do mapa. Para ampliar uma "
-"área, é necessário selecionar *aproximar por retângulo* clicar e arrastar "
-"para desenhar um retângulo que define a área a ser alcançada."
-
-#: ../../source/user/user_guide.rst:42
-msgid ""
-"You can using the *triangle*, left the layers title, bring up the legend of "
-"the layer."
-msgstr ""
-"Pode utilizar o *triângulo*, à esquerda do título das camadas, para "
-"apresentar a legenda da camada."
-
-#: ../../source/user/user_guide.rst:48
-msgid "Selection boxes allow you to hide and display the proposed layers."
-msgstr ""
-"As caixas de seleção permitem ocultar e mostrar as respetivas camadas."
-
-#: ../../source/user/user_guide.rst:54
-msgid ""
-"To take full advantage of the map, you can hide the panel management layers."
-msgstr ""
-"Para aproveitar ao máximo o mapa, pode ocultar o painel de gestão de "
-"camadas."
-
-#: ../../source/user/user_guide.rst:60
-msgid "Finally you can:"
-msgstr "Finalmente pode:"
-
-#: ../../source/user/user_guide.rst:62
-msgid "go back to the projects page"
-msgstr "voltar à página dos projetos"
-
-#: ../../source/user/user_guide.rst:63
-msgid "display the map information sheet"
-msgstr "visualizar a folha de informações do mapa"
-
-#: ../../source/user/user_guide.rst:66
-msgid "Authentication"
-msgstr "Autenticação"
-
-#: ../../source/user/user_guide.rst:68
-msgid ""
-"The admin can restrict access to certain map groups. To access these maps, "
-"you must authenticate. Authentication is accessible through the button "
-"*Connect* at the top left."
-msgstr ""
-"O administrador pode restringir o acesso a determinados grupos de mapas. "
-"Para aceder a esses mapas, deverá autenticar-se. A autenticação está "
-"acessível através do botão *Ligar* no canto superior direito."
-
-#: ../../source/user/user_guide.rst:74
-msgid ""
-"Once authentication is enabled, depending on your rights, you should have "
-"access to new maps."
-msgstr ""
-"Depois de autenticado, dependendo das suas permissões, deverá ter acesso a "
-"novos mapas."
-
-#: ../../source/user/user_guide.rst:80
-msgid "You can log out and edit your user information."
-msgstr "Pode terminar a sessão e editar suas informações de utilizador."
-
-#: ../../source/user/user_guide.rst:83
-msgid "Advanced features"
-msgstr "Características avançadas"
-
-#: ../../source/user/user_guide.rst:85
-msgid ""
-"The map publisher can add some features depending on the desired user "
-"experience:"
-msgstr ""
-"Podem ser adicionados alguns recursos à publicação de mapas, dependendo da "
-"experiência desejada pelo utilizador:"
-
-#: ../../source/user/user_guide.rst:87
-msgid "selecting a basemap"
-msgstr "selecionar um Tema Base"
-
-#: ../../source/user/user_guide.rst:88
-msgid "locate by layer"
-msgstr "localização por camada"
-
-#: ../../source/user/user_guide.rst:89
-msgid "distance, area and perimeter measurements"
-msgstr "medições de distância, área e perímetro"
-
-#: ../../source/user/user_guide.rst:90
-msgid "printing the map"
-msgstr "impressão do mapa"
-
-#: ../../source/user/user_guide.rst:91
-msgid "editing data"
-msgstr "edição de dados"
-
-#: ../../source/user/user_guide.rst:92
-msgid "statictics"
-msgstr "estatísticas"
-
-#: ../../source/user/user_guide.rst:100
-msgid "Selecting a basemap"
-msgstr "Selecionar um Tema Base"
-
-#: ../../source/user/user_guide.rst:102
-msgid ""
-"Using the Lizmap plugin, the editor may have added external base maps or an "
-"empty base layer to the map. These base maps are available in the layer "
-"management panel as a list."
-msgstr ""
-"Através do plugin Lizmap, o editor pode ter adicionado mapas base externos "
-"ou uma camada base vazia ao mapa. Esses mapas de base estão disponíveis na "
-"parte inferior do painel de gestão de camadas como uma lista."
-
-#: ../../source/user/user_guide.rst:109
-msgid "Locate by layer"
-msgstr "Localização por camada"
-
-#: ../../source/user/user_guide.rst:111
-msgid ""
-"This feature is displayed by default if it has been activated by the map "
-"publisher."
-msgstr ""
-"Este recurso é apresentado por padrão se tiver sido ativado na publicação do"
-" mapa."
-
-#: ../../source/user/user_guide.rst:113
-msgid ""
-"It is located above the layer management panel and is in the form of lists. "
-"Some lists need to enter a few characters before proposing locations."
-msgstr ""
-"Este recurso está localizado acima do painel de gestão de camadas na forma "
-"de listas. Nalgumas listas é necessário digitar alguns caracteres que possam"
-" sugerir elementos para localização."
-
-#: ../../source/user/user_guide.rst:120
-msgid "Simply select a location from the list to zoom to the item."
-msgstr "Basta selecionar um elemento a partir da lista para aproximar o item."
-
-#: ../../source/user/user_guide.rst:127
-msgid "Measurement"
-msgstr "Medição"
-
-#: ../../source/user/user_guide.rst:129
-msgid "Measurement feature give you the ability to calculate:"
-msgstr "O recurso de medição oferece a capacidade para calcular:"
-
-#: ../../source/user/user_guide.rst:131
-msgid "a distance"
-msgstr "uma distância"
-
-#: ../../source/user/user_guide.rst:132
-msgid "an area"
-msgstr "uma área"
-
-#: ../../source/user/user_guide.rst:133
-msgid "a perimeter"
-msgstr "um perímetro"
-
-#: ../../source/user/user_guide.rst:135
-msgid "It is available in the Lizmap menu bar."
-msgstr "Encontra-se disponível na barra de menus do Lizmap."
-
-#: ../../source/user/user_guide.rst:141
-msgid ""
-"The tool is activated by selecting the measurement type. Once activated, a "
-"message tells you what to do."
-msgstr ""
-"A ferramenta é ativada selecionando o tipo de medição. Uma vez ativada, uma "
-"mensagem informa o que fazer."
-
-#: ../../source/user/user_guide.rst:147
-msgid "The measurement is displayed in the status bar."
-msgstr "A medição é apresentada na barra de estado."
-
-#: ../../source/user/user_guide.rst:153
-msgid ""
-"By double-clicking on the map, the measurement is fixed. To start over, you "
-"can click on the map and restart the measurement calculation."
-msgstr ""
-"Clicando duas vezes no mapa, a medição é fixada. Para começar de novo, pode "
-"clicar no mapa e reiniciar o cálculo de medição."
-
-#: ../../source/user/user_guide.rst:155
-msgid "In the feature bar, the button on the right allows to stop using it."
-msgstr "Na barra de recursos, o botão à direita permite parar de utilizá-lo."
-
-#: ../../source/user/user_guide.rst:161
-msgid ""
-"It is also possible to change the measurement functionality without having "
-"to stop the feature."
-msgstr ""
-"Também é possível alterar a funcionalidade de medição sem ter que parar o "
-"recurso."
-
-#: ../../source/user/user_guide.rst:165
-msgid "Printing"
-msgstr "Impressão"
-
-#: ../../source/user/user_guide.rst:167
-msgid ""
-"The print feature is available in the Lizmap menu bar. It depends on the "
-"number of print compositions published by the map publisher."
-msgstr ""
-"O recurso de impressão está disponível na barra de menus do Lizmap. Depende "
-"do número de composições de impressão definidas para a publicação do mapa."
-
-#: ../../source/user/user_guide.rst:173
-msgid ""
-"Once the feature activated, a print area with the form of the composition is"
-" displayed on the map. Use this area to define the area to be printed. You "
-"can move it."
-msgstr ""
-"Uma vez ativado o recurso, uma área de impressão com a forma da composição é"
-" apresentada no mapa. Utilize esta área para definir a área a ser impressa. "
-"A mesma pode ser movida."
-
-#: ../../source/user/user_guide.rst:179
-msgid ""
-"On the left, above the panel layer management, you can select the scale of "
-"printing."
-msgstr ""
-"À esquerda, acima do painel de gestão de camadas, pode selecionar a escala "
-"de impressão."
-
-#: ../../source/user/user_guide.rst:185
-msgid ""
-"Depending on the configuration of the printing composition, you can have the"
-" possibility to enter your own text."
-msgstr ""
-"Dependendo da configuração da composição de impressão, pode ter a "
-"possibilidade de inserir seu próprio texto."
-
-#: ../../source/user/user_guide.rst:191
-msgid ""
-"To begin building the print file, you can click on *Print*. You will get a "
-"PDF file with the layout defined by the map publisher."
-msgstr ""
-"Para começar a construir o ficheiro de impressão, pode clicar em *Imprimir*."
-" Obterá um ficheiro PDF com o layout definido para a publicação de mapas."
-
-#: ../../source/user/user_guide.rst:199
-msgid "Editing spatial data"
-msgstr "Edição de dados espaciais"
-
-#: ../../source/user/user_guide.rst:201
-msgid ""
-"The map publisher can allow users to edit certain data. It also has the "
-"ability to limit possible changes:"
-msgstr ""
-"A publicação de mapas pode permitir que os utilizadores editem determinados "
-"dados. Oferece também a capacidade de limitar possíveis alterações:"
-
-#: ../../source/user/user_guide.rst:203
-msgid "adding spatial object"
-msgstr "adicionar um objeto espacial"
-
-#: ../../source/user/user_guide.rst:204
-msgid "geometric modification"
-msgstr "modificação da geometria"
-
-#: ../../source/user/user_guide.rst:205
-msgid "fields modification"
-msgstr "alteração de dados"
-
-#: ../../source/user/user_guide.rst:206
-msgid "deleting spatial object"
-msgstr "eliminar um objeto espacial"
-
-#: ../../source/user/user_guide.rst:208
-msgid ""
-"The feature is available in the Lizmap menu bar. The edit menu allows you to"
-" select the data you want to update."
-msgstr ""
-"O recurso está disponível na barra de menus do Lizmap. O menu de edição "
-"permite selecionar os dados a serem atualizados."
-
-#: ../../source/user/user_guide.rst:214
-msgid ""
-"Once the layer selected, the edit pannel appears. This varies depending on "
-"the configuration desired by the map publisher. If any changes are available"
-" you have to choose between *Add* a new object or *Select* one."
-msgstr ""
-"Uma vez selecionada a camada, o painel de edição aparece. O mesmo varia de "
-"acordo com a configuração desejada para a publicação de mapas. Se houver "
-"alguma alteração disponível, terá que escolher entre *Adicionar* um novo "
-"objeto ou *Selecionar* um existente."
-
-#: ../../source/user/user_guide.rst:220
-msgid ""
-"If you have selected *Add*, you will be asked to draw a simple form that "
-"depends on the selected data layer:"
-msgstr ""
-"Se selecionou *Adicionar*, será convidado a desenhar um forma simples que "
-"depende da camada de dados selecionada:"
-
-#: ../../source/user/user_guide.rst:222
-msgid "point"
-msgstr "ponto"
-
-#: ../../source/user/user_guide.rst:223
-msgid "line"
-msgstr "linha"
-
-#: ../../source/user/user_guide.rst:224
-msgid "polygon"
-msgstr "polígono"
-
-#: ../../source/user/user_guide.rst:226
-msgid ""
-"In the case of line and polygon, you need to click several times to draw the"
-" shape you want."
-msgstr ""
-"No caso de linha e polígono, é necessário clicar várias vezes para desenhar "
-"a forma desejada."
-
-#: ../../source/user/user_guide.rst:232
-msgid ""
-"To finish your line or your polygon you must add the last point by double-"
-"clicking the desired location. Once drawing finished, an editing form for "
-"fields will be displayed."
-msgstr ""
-"Para terminar sua linha ou o seu polígono deve adicionar o último ponto "
-"clicando duas vezes no local desejado. Uma vez terminado o desenho, será "
-"apresentado um formulário de edição com os respetivos campos."
-
-#: ../../source/user/user_guide.rst:238
-msgid ""
-"If you want to restart drawing the geometry, you should click *Cancel*."
-msgstr "Se quiser reiniciar o desenho da geometria, clique em *Cancelar*."
-
-#: ../../source/user/user_guide.rst:240
-msgid ""
-"If the geometry is right for you and you have entered the required "
-"information, you can *Save*. The new object will be added. You will be able "
-"to update it by selecting it."
-msgstr ""
-"Se a geometria estiver correta e se já tiver inserido as informações "
-"necessárias, poderá *Guardar*. O novo objeto será adicionado. O mesmo poderá"
-" ser atualizado, selecionando-o."
-
-#: ../../source/user/user_guide.rst:242
-msgid ""
-"To select an object to update, you will need to click on it on the map then "
-"click on the button *Edit*."
-msgstr ""
-"Para selecionar um objeto a ser atualizado, precisa de clicar no mapa e de "
-"seguida no botão *Editar*."
-
-#: ../../source/user/user_guide.rst:248
-msgid ""
-"The selected object appears on the map and its geometry may be changed "
-"immediatly."
-msgstr ""
-"O objeto selecionado aparece no mapa e sua geometria pode ser alterada "
-"imediatamente."
-
-#: ../../source/user/user_guide.rst:254
-msgid "You can undo geometry changes using the *Cancel* button."
-msgstr ""
-"Pode desfazer as alterações relativas à geometria utilizando o botão "
-"*Cancelar*."
-
-#: ../../source/user/user_guide.rst:260
-msgid ""
-"To validate your geometry modifications or simply access the editing form "
-"for fields, you must click *Save*."
-msgstr ""
-"Para validar as modificações relativas à geometria ou simplesmente aceder ao"
-" formulário de edição de campos, deve clicar em *Guardar*."
-
-#: ../../source/user/user_guide.rst:266
-msgid ""
-"A dialog box containing the editing form for fields of the object appears."
-msgstr ""
-"Uma caixa de diálogo contendo o formulário de edição para os campos do "
-"objeto será apresentada."
-
-#: ../../source/user/user_guide.rst:272
-msgid "The *Save* button saves the geometry and attributes changes."
-msgstr ""
-"O botão *Guardar* grava as alterações relativas à geometria e aos atributos."
-
-#: ../../source/user/user_guide.rst:274
-msgid "If you want to remove the object you selected, you must click *Del*."
-msgstr "Se desejar remover o objeto selecionado, deve clicar em *Eliminar*."
-
-#: ../../source/user/user_guide.rst:276
-msgid ""
-"Finally, to disable editing tool, simply click on *Close* or click again on "
-"the Edition icon."
-msgstr ""
-"Finalmente, para desativar a ferramenta de edição, basta clicar em *Fechar* "
-"ou clicar novamente no ícone de Edição."
-
-#: ../../source/user/user_guide.rst:285
+#: ../../source/user/attribute_table.rst:2
 msgid "Attribute layers"
 msgstr "Atributos das camadas"
 
-#: ../../source/user/user_guide.rst:287
+#: ../../source/user/attribute_table.rst:4
 msgid ""
 "When this feature has been enabled by the map publisher for one or many "
 "vector layers, a new menu entry will be visible at the bottom of the menu "
-"bar, labelled as **Data**."
+"bar, labelled as **Data**. Another entry labelled **Selection** with a star "
+"icon will also be displayed for a layer for which the attribute table has "
+"been activated."
 msgstr ""
-"Quando esse recurso for ativado para a publicação de mapas para uma ou "
-"várias camadas vetoriais, uma nova entrada no menu será visível na parte "
-"inferior da barra de menus, rotulada como **Listar registos**."
 
-#: ../../source/user/user_guide.rst:289
+#: ../../source/user/attribute_table.rst:7
 msgid ""
 "Clicking on this icon will open a new panel situated at the bottom of the "
 "interface, containing one single **Data** tab with a list of published "
@@ -515,11 +46,11 @@ msgstr ""
 "da interface, contendo um único separador **Listar registos** com uma lista "
 "de camadas vetoriais publicadas."
 
-#: ../../source/user/user_guide.rst:296
+#: ../../source/user/attribute_table.rst:14
 msgid "Attribute table panel behaviour"
 msgstr "Comportamento do painel da tabela de atributos"
 
-#: ../../source/user/user_guide.rst:298
+#: ../../source/user/attribute_table.rst:16
 msgid ""
 "Since this panel is situated above the map, some default behaviours have "
 "been proposed to ease the consultation of the data in the map and in the "
@@ -529,11 +60,11 @@ msgstr ""
 "comportamentos padrão serão apresentados para facilitar a consulta dos dados"
 " no mapa e na tabela ao mesmo tempo."
 
-#: ../../source/user/user_guide.rst:300
+#: ../../source/user/attribute_table.rst:18
 msgid "The attribute table panel takes half the size of the screen"
 msgstr "O painel da tabela de atributos ocupa metade do tamanho da tela"
 
-#: ../../source/user/user_guide.rst:301
+#: ../../source/user/attribute_table.rst:19
 msgid ""
 "It is automatically reduced at the bottom when the mouse is out of it, and "
 "automatically displayed back when the user moves the mouse over the bottom "
@@ -543,7 +74,7 @@ msgstr ""
 "fora dele, e automaticamente volta a ser apresentado quando o utilizador "
 "move o rato sobre a parte inferior do mapa."
 
-#: ../../source/user/user_guide.rst:303
+#: ../../source/user/attribute_table.rst:21
 msgid ""
 "You can change the default behaviour by using the buttons displayed at the "
 "bottom of the attribute table panel"
@@ -551,7 +82,7 @@ msgstr ""
 "Pode alterar o comportamento padrão utilizando os botões apresentados na "
 "parte inferior do painel da tabela de atributos."
 
-#: ../../source/user/user_guide.rst:305
+#: ../../source/user/attribute_table.rst:23
 msgid ""
 "The **Pin** button deactivates the automatic reduction of the panel when the"
 " user mouse leaves it. But in this case, the whole panel will be displayed "
@@ -561,7 +92,7 @@ msgstr ""
 "utilizador o abandona. Mas neste caso, todo o painel será exibido de forma "
 "semi-transparente para permitir ao utilizador visualizar o mapa por debaixo."
 
-#: ../../source/user/user_guide.rst:306
+#: ../../source/user/attribute_table.rst:24
 msgid ""
 "The **Maximise** button expands the panel so that it occupies the total "
 "place left between the left panel and the map header. This is handy when you"
@@ -579,7 +110,7 @@ msgstr ""
 "legenda. Mas nesse caso, apenas a opacidade do painel da tabela de atributos"
 " mudará para que possa visualizar o mapa por debaixo."
 
-#: ../../source/user/user_guide.rst:308
+#: ../../source/user/attribute_table.rst:26
 msgid ""
 "You can click back on any of these 2 **Pin** and **Maximise** button to get "
 "back to the default behaviour."
@@ -587,7 +118,7 @@ msgstr ""
 "Pode clicar em qualquer um destes 2 botões **Fixar** e **Maximizar** para "
 "voltar ao comportamento padrão."
 
-#: ../../source/user/user_guide.rst:310
+#: ../../source/user/attribute_table.rst:28
 msgid ""
 "The **Close** button closes the attribute table tool completely (as if you "
 "clicked in the menu bar icon)."
@@ -595,11 +126,11 @@ msgstr ""
 "O botão **Fechar** fecha completamente a ferramenta da tabela de atributos "
 "(como se tivesse clicado no ícone da barra de menus)."
 
-#: ../../source/user/user_guide.rst:317
+#: ../../source/user/attribute_table.rst:35
 msgid "Open an attribute table for a layer"
 msgstr "Abrir a tabela de atributos para uma camada"
 
-#: ../../source/user/user_guide.rst:319
+#: ../../source/user/attribute_table.rst:37
 msgid ""
 "Once the attribute table panel is displayed, you can open the attribute "
 "table of each vector layer by clicking on the button situated right to the "
@@ -611,7 +142,7 @@ msgstr ""
 "nome da mesma. Isso abrirá um novo separador rotulado com o título da "
 "camada, que mostrará a tabela de atributos para a camada escolhida."
 
-#: ../../source/user/user_guide.rst:321
+#: ../../source/user/attribute_table.rst:39
 msgid ""
 "*Opening an attribute table can take some time depending on the data size "
 "and complexity.*"
@@ -619,11 +150,11 @@ msgstr ""
 "*Abrir uma tabela de atributos pode levar algum tempo dependendo do tamanho "
 "e da complexidade dos dados.*"
 
-#: ../../source/user/user_guide.rst:329
+#: ../../source/user/attribute_table.rst:47
 msgid "Description of the attribute table functionality"
 msgstr "Descrição das funcionalidades da tabela de atributos"
 
-#: ../../source/user/user_guide.rst:331
+#: ../../source/user/attribute_table.rst:49
 msgid ""
 "The layer data is shown in a **paginated table**. By default, the table "
 "shows 100 lines at a time. You can change this behaviour by using the list "
@@ -634,7 +165,7 @@ msgstr ""
 "utilizando a lista situada no lado inferior esquerdo do conteúdo do "
 "separador."
 
-#: ../../source/user/user_guide.rst:333
+#: ../../source/user/attribute_table.rst:51
 msgid ""
 "The table of data can be **ordered by a field** by clicking on the column "
 "corresponding to . If you click again on the column, the order will be "
@@ -643,11 +174,11 @@ msgstr ""
 "A tabela de dados pode ser **ordenada por um campo** clicando na coluna "
 "correspondente a. Se clicar novamente na coluna, a ordem será revertida."
 
-#: ../../source/user/user_guide.rst:341
+#: ../../source/user/attribute_table.rst:59
 msgid "Actions on lines"
 msgstr "Ações sobre linhas"
 
-#: ../../source/user/user_guide.rst:343
+#: ../../source/user/attribute_table.rst:61
 msgid ""
 "When you **click on a table line**, the line will be displayed with a border"
 " to help viewing which line is **highlighted**."
@@ -655,7 +186,7 @@ msgstr ""
 "Quando **clicar em uma linha de tabela**, a linha será mostrada com uma "
 "borda para ajudar a ver qual a linha que está **destacada**."
 
-#: ../../source/user/user_guide.rst:345
+#: ../../source/user/attribute_table.rst:63
 msgid ""
 "If the publisher has enabled the **popup** for the layer, you will be able "
 "to see the content of the popup for the highlighted feature by clicking on "
@@ -669,7 +200,7 @@ msgstr ""
 " à direita da tabela, que mostrará as informações detalhadas sobre a linha "
 "destacada da tabela. Além disso:"
 
-#: ../../source/user/user_guide.rst:347
+#: ../../source/user/attribute_table.rst:65
 msgid ""
 "Clicking on another line will refresh the right panel content with the new "
 "highlighted feature."
@@ -677,19 +208,18 @@ msgstr ""
 "Clicar noutra linha irá atualizar o conteúdo do painel direito de acordo com"
 " o novo elemento destacado."
 
-#: ../../source/user/user_guide.rst:348
+#: ../../source/user/attribute_table.rst:66
 msgid ""
 "Clicking back on the (i) button or on the cross situated at the top right "
-"side of the information panel will hide the panel."
+"side of the information panel will hide the panel. To have the (i) button, "
+"you need to have activated the popup for the current layer."
 msgstr ""
-"Clicando novamente no botão (i) ou na cruz situada no canto superior direito"
-" do painel de informações, o painel será ocultado."
 
-#: ../../source/user/user_guide.rst:350
+#: ../../source/user/attribute_table.rst:69
 msgid "Each line of the table shows some buttons at the left side:"
 msgstr "Cada linha da tabela apresenta alguns botões no lado esquerdo:"
 
-#: ../../source/user/user_guide.rst:352
+#: ../../source/user/attribute_table.rst:71
 msgid ""
 "**Select** button : when clicked, the corresponding feature is selected. You"
 " can select many lines by using this button on different lines. The selected"
@@ -703,7 +233,7 @@ msgstr ""
 "geralmente com uma cor Amarela. Pode clicar novamente em \"Selecionar\" para"
 " desmarcar um elemento selecionado."
 
-#: ../../source/user/user_guide.rst:353
+#: ../../source/user/attribute_table.rst:72
 msgid ""
 "**Zoom** button : clicking on this button will zoom to the corresponding "
 "geometry in the map. The scale will be chosen so that the feature geometry "
@@ -713,7 +243,7 @@ msgstr ""
 "correspondente no mapa. A escala será escolhida de modo a que a geometria do"
 " elemento utilize a maior parte do espaço disponível."
 
-#: ../../source/user/user_guide.rst:354
+#: ../../source/user/attribute_table.rst:73
 msgid ""
 "**Center** button : clicking on this button will just pan the map to the "
 "corresponding feature, without changing scale."
@@ -721,11 +251,11 @@ msgstr ""
 "Botão **Centrar**: ao clicar neste botão apenas irá deslocar o mapa para o "
 "elemento correspondente, sem alterar a escala."
 
-#: ../../source/user/user_guide.rst:361
+#: ../../source/user/attribute_table.rst:80
 msgid "More about selection tools"
 msgstr "Mais sobre as ferramentas de seleção"
 
-#: ../../source/user/user_guide.rst:363
+#: ../../source/user/attribute_table.rst:82
 msgid ""
 "You can also select a layer object by **displaying the popup** for this "
 "object (if the map publisher has enabled the popup for the layer, a click on"
@@ -741,7 +271,7 @@ msgstr ""
 "botão de seleção, pode utilizá-lo para selecionar apenas esse objeto. A "
 "seleção anterior será substituída apenas por este objeto."
 
-#: ../../source/user/user_guide.rst:369
+#: ../../source/user/attribute_table.rst:88
 msgid ""
 "When one or more lines have been selected in the attribute table (they "
 "become yellow), you can use the black \"arrow up\" button situated above the"
@@ -752,7 +282,7 @@ msgstr ""
 "parte superior da tabela para **mover as linhas selecionadas para a parte "
 "superior da tabela**."
 
-#: ../../source/user/user_guide.rst:371
+#: ../../source/user/attribute_table.rst:90
 msgid ""
 "You can **unselect all the selected objects** by clicking on the \"white "
 "star\" button situated above the table."
@@ -760,11 +290,11 @@ msgstr ""
 "Pode **desmarcar todos os objetos selecionados** clicando no botão \"estrela"
 " branca\" situado na parte superior da tabela."
 
-#: ../../source/user/user_guide.rst:378
+#: ../../source/user/attribute_table.rst:97
 msgid "Quickly search through data"
 msgstr "Pesquisa rápida de dados"
 
-#: ../../source/user/user_guide.rst:380
+#: ../../source/user/attribute_table.rst:99
 msgid ""
 "You can **filter the lines displayed** in the table by entering some letters"
 " in the **Search field** situated at the top left side of the tab content. "
@@ -778,7 +308,7 @@ msgstr ""
 " conteúdo do campo de pesquisa manualmente ou clicando no botão de cruz "
 "situado dentro do campo."
 
-#: ../../source/user/user_guide.rst:382
+#: ../../source/user/attribute_table.rst:101
 msgid ""
 "The text entered in the search field launches a search among the data for "
 "**all the fields of the table.**"
@@ -786,7 +316,7 @@ msgstr ""
 "O texto inserido no campo de pesquisa executa uma pesquisa entre os dados "
 "para **todos os campos da tabela**."
 
-#: ../../source/user/user_guide.rst:384
+#: ../../source/user/attribute_table.rst:103
 msgid ""
 "Note that only the content of the table will be restricted to the lines "
 "matching your textual search. **The objects on the map will not be filtered "
@@ -797,7 +327,7 @@ msgstr ""
 "filtrados dinamicamente** (mas pode utilizar selecionar e filtro para fazer "
 "isso, veja abaixo):"
 
-#: ../../source/user/user_guide.rst:386
+#: ../../source/user/attribute_table.rst:105
 msgid ""
 "Once you have filtered some data in the attribute table by entering some "
 "text in it, **you can easily select them all** by clicking on the \"black "
@@ -813,11 +343,11 @@ msgstr ""
 "também alterar sua cor no mapa (geralmente para amarelo também, dependendo "
 "da configuração feita para a publicação de mapas)."
 
-#: ../../source/user/user_guide.rst:393
+#: ../../source/user/attribute_table.rst:112
 msgid "Filter data"
 msgstr "Filtrar dados"
 
-#: ../../source/user/user_guide.rst:395
+#: ../../source/user/attribute_table.rst:114
 msgid ""
 "When you have selected one or more objects in the layer attribute table, you"
 " can then **filter the data displayed in Lizmap** for this layer. To do so, "
@@ -830,26 +360,26 @@ msgstr ""
 "situado na parte superior da tabela (apenas disponível se existir pelo menos"
 " um objeto selecionado)."
 
-#: ../../source/user/user_guide.rst:397
+#: ../../source/user/attribute_table.rst:116
 msgid "Filtering will have the following consequences:"
 msgstr "A filtragem terá as seguintes consequências:"
 
-#: ../../source/user/user_guide.rst:399
+#: ../../source/user/attribute_table.rst:118
 msgid "The attribute table will **show only the filtered data**"
 msgstr "A tabela de atributos **apresentará apenas os dados filtrados**"
 
-#: ../../source/user/user_guide.rst:400
+#: ../../source/user/attribute_table.rst:119
 msgid ""
 "The Search input field will allow to **search only among filtered data**"
 msgstr ""
 "O campo de entrada para pesquisa permitirá **pesquisar apenas entre os dados"
 " filtrados**"
 
-#: ../../source/user/user_guide.rst:401
+#: ../../source/user/attribute_table.rst:120
 msgid "The map will show **only the filtered objects**"
 msgstr "O mapa apresentará **apenas os objetos filtrados**"
 
-#: ../../source/user/user_guide.rst:402
+#: ../../source/user/attribute_table.rst:121
 msgid ""
 "The child layers linked with relations (and also published in the attribute "
 "table tool) will be filtered too. We call it \"cascading filtering\". For "
@@ -862,7 +392,7 @@ msgstr ""
 "automaticamente caso tenha filtrado uma linha de autocarro, para mostrar "
 "apenas aquelas que estão de acordo com a linha filtrada."
 
-#: ../../source/user/user_guide.rst:403
+#: ../../source/user/attribute_table.rst:122
 msgid ""
 "The filtered layers will be marked in the left panel legend with an orange "
 "background, and a new orange \"Funnel\" button will be displayed above the "
@@ -872,11 +402,11 @@ msgstr ""
 "fundo laranja e também um novo botão laranja \"Filtro\" será apresentado "
 "acima da legenda."
 
-#: ../../source/user/user_guide.rst:405
+#: ../../source/user/attribute_table.rst:124
 msgid "You can cancel the filter to go back to previous state:"
 msgstr "Pode cancelar o filtro para voltar ao estado anterior:"
 
-#: ../../source/user/user_guide.rst:407
+#: ../../source/user/attribute_table.rst:126
 msgid ""
 "by clicking on the orange \"Funnel\" button at the top of the legend in "
 "Lizmap left panel"
@@ -884,7 +414,7 @@ msgstr ""
 "clicando no botão \"Filtro\" laranja no topo da legenda no painel esquerdo "
 "do Lizmap"
 
-#: ../../source/user/user_guide.rst:408
+#: ../../source/user/attribute_table.rst:127
 msgid ""
 "by clicking back on the filter button just above the attribute table "
 "concerned by the filter"
@@ -892,7 +422,7 @@ msgstr ""
 "clicando novamente no botão de filtro acima da tabela de atributos "
 "relacionada com o filtro"
 
-#: ../../source/user/user_guide.rst:414
+#: ../../source/user/attribute_table.rst:133
 msgid ""
 "When exporting the map view with the permalink tool (situated in the menu "
 "bar), **the filter will be activated** in the linked map and the users won't"
@@ -909,10 +439,463 @@ msgstr ""
 "segura de proteger alguns dados, mas uma maneira de se concentrar apenas em "
 "alguns dados**."
 
-#: ../../source/user/user_guide.rst:420
-msgid "More complex scenarios : relations between layers"
-msgstr "Cenários mais complexos: relações entre camadas"
+#: ../../source/user/authentication.rst:2
+msgid "Authentication"
+msgstr "Autenticação"
 
-#: ../../source/user/user_guide.rst:422
-msgid "todo"
-msgstr "elaborar"
+#: ../../source/user/authentication.rst:4
+msgid ""
+"The admin can restrict access to certain map groups. To access these maps, "
+"you must authenticate. Authentication is accessible through the button "
+"*Connect* at the top left."
+msgstr ""
+"O administrador pode restringir o acesso a determinados grupos de mapas. "
+"Para aceder a esses mapas, deverá autenticar-se. A autenticação está "
+"acessível através do botão *Ligar* no canto superior direito."
+
+#: ../../source/user/authentication.rst:10
+msgid ""
+"Once authentication is enabled, depending on your rights, you should have "
+"access to new maps."
+msgstr ""
+"Depois de autenticado, dependendo das suas permissões, deverá ter acesso a "
+"novos mapas."
+
+#: ../../source/user/authentication.rst:16
+msgid "You can log out and edit your user information."
+msgstr "Pode terminar a sessão e editar suas informações de utilizador."
+
+#: ../../source/user/edition.rst:2
+msgid "Editing spatial data"
+msgstr "Edição de dados espaciais"
+
+#: ../../source/user/edition.rst:4
+msgid ""
+"The map publisher can allow users to edit certain data. It also has the "
+"ability to limit possible changes:"
+msgstr ""
+"A publicação de mapas pode permitir que os utilizadores editem determinados "
+"dados. Oferece também a capacidade de limitar possíveis alterações:"
+
+#: ../../source/user/edition.rst:6
+msgid "adding spatial object"
+msgstr "adicionar um objeto espacial"
+
+#: ../../source/user/edition.rst:7
+msgid "geometric modification"
+msgstr "modificação da geometria"
+
+#: ../../source/user/edition.rst:8
+msgid "fields modification"
+msgstr "alteração de dados"
+
+#: ../../source/user/edition.rst:9
+msgid "deleting spatial object"
+msgstr "eliminar um objeto espacial"
+
+#: ../../source/user/edition.rst:11
+msgid ""
+"The feature is available in the Lizmap menu bar. The edit menu allows you to"
+" select the data you want to update."
+msgstr ""
+"O recurso está disponível na barra de menus do Lizmap. O menu de edição "
+"permite selecionar os dados a serem atualizados."
+
+#: ../../source/user/edition.rst:17
+msgid ""
+"Once the layer selected, the edit pannel appears. This varies depending on "
+"the configuration desired by the map publisher. If any changes are available"
+" you have to choose between *Add* a new object or *Select* one."
+msgstr ""
+"Uma vez selecionada a camada, o painel de edição aparece. O mesmo varia de "
+"acordo com a configuração desejada para a publicação de mapas. Se houver "
+"alguma alteração disponível, terá que escolher entre *Adicionar* um novo "
+"objeto ou *Selecionar* um existente."
+
+#: ../../source/user/edition.rst:23
+msgid ""
+"If you have selected *Add*, you will be asked to draw a simple form that "
+"depends on the selected data layer:"
+msgstr ""
+"Se selecionou *Adicionar*, será convidado a desenhar um forma simples que "
+"depende da camada de dados selecionada:"
+
+#: ../../source/user/edition.rst:25
+msgid "point"
+msgstr "ponto"
+
+#: ../../source/user/edition.rst:26
+msgid "line"
+msgstr "linha"
+
+#: ../../source/user/edition.rst:27
+msgid "polygon"
+msgstr "polígono"
+
+#: ../../source/user/edition.rst:29
+msgid ""
+"In the case of line and polygon, you need to click several times to draw the"
+" shape you want."
+msgstr ""
+"No caso de linha e polígono, é necessário clicar várias vezes para desenhar "
+"a forma desejada."
+
+#: ../../source/user/edition.rst:35
+msgid ""
+"To finish your line or your polygon you must add the last point by double-"
+"clicking the desired location. Once drawing finished, an editing form for "
+"fields will be displayed."
+msgstr ""
+"Para terminar sua linha ou o seu polígono deve adicionar o último ponto "
+"clicando duas vezes no local desejado. Uma vez terminado o desenho, será "
+"apresentado um formulário de edição com os respetivos campos."
+
+#: ../../source/user/edition.rst:41
+msgid ""
+"If you want to restart drawing the geometry, you should click *Cancel*."
+msgstr "Se quiser reiniciar o desenho da geometria, clique em *Cancelar*."
+
+#: ../../source/user/edition.rst:43
+msgid ""
+"If the geometry is right for you and you have entered the required "
+"information, you can *Save*. The new object will be added. You will be able "
+"to update it by selecting it."
+msgstr ""
+"Se a geometria estiver correta e se já tiver inserido as informações "
+"necessárias, poderá *Guardar*. O novo objeto será adicionado. O mesmo poderá"
+" ser atualizado, selecionando-o."
+
+#: ../../source/user/edition.rst:45
+msgid ""
+"To select an object to update, you will need to click on it on the map then "
+"click on the button *Edit*."
+msgstr ""
+"Para selecionar um objeto a ser atualizado, precisa de clicar no mapa e de "
+"seguida no botão *Editar*."
+
+#: ../../source/user/edition.rst:51
+msgid ""
+"The selected object appears on the map and its geometry may be changed "
+"immediatly."
+msgstr ""
+"O objeto selecionado aparece no mapa e sua geometria pode ser alterada "
+"imediatamente."
+
+#: ../../source/user/edition.rst:52
+msgid ""
+"You can undo geometry changes and stop edition using the *Cancel* button."
+msgstr ""
+
+#: ../../source/user/edition.rst:53
+msgid "To validate your geometry modifications, you must click *Save*."
+msgstr ""
+
+#: ../../source/user/edition.rst:59
+msgid ""
+"If you want to remove a point on a geometry, you must hover it and type "
+"*Del* on your keyboard."
+msgstr ""
+
+#: ../../source/user/edition.rst:61
+msgid ""
+"*Digitizing* button is displayed with line and polygon geometries, by "
+"clicking it, you'll access those tools:"
+msgstr ""
+
+#: ../../source/user/edition.rst:63
+msgid ""
+"Node tool (default). Move or delete the geom nodes (vertices) and also "
+"create new ones by dragging virtual nodes in the middle of the segments."
+msgstr ""
+
+#: ../../source/user/edition.rst:64
+msgid ""
+"Drag tool. Translate a geometry by dragging the displayed point at the "
+"center of the geometry."
+msgstr ""
+
+#: ../../source/user/edition.rst:65
+msgid ""
+"Rotate tool. Rotate a geometry by dragging the displayed point at bottom "
+"right of the geometry."
+msgstr ""
+
+#: ../../source/user/edition.rst:66
+msgid "Reshape tool."
+msgstr ""
+
+#: ../../source/user/edition.rst:67
+msgid "Split tool."
+msgstr ""
+
+#: ../../source/user/edition.rst:68
+msgid ""
+"Reverse geom (To be used with the node tool). Reverse nodes (vertices) "
+"order. Useful for streets when their circulation orientation is reversed for"
+" example."
+msgstr ""
+
+#: ../../source/user/index.rst:3
+msgid "User guide"
+msgstr "Guia do utilizador"
+
+#: ../../source/user/index.rst:5
+msgid "This guide is for the end user, when using the web client."
+msgstr ""
+
+#: ../../source/user/locate_by_layer.rst:2
+msgid "Locate by layer"
+msgstr "Localização por camada"
+
+#: ../../source/user/locate_by_layer.rst:4
+msgid ""
+"This feature is displayed by default if it has been activated by the map "
+"publisher."
+msgstr ""
+"Este recurso é apresentado por padrão se tiver sido ativado na publicação do"
+" mapa."
+
+#: ../../source/user/locate_by_layer.rst:6
+msgid ""
+"It is located above the layer management panel and is in the form of lists. "
+"Some lists need to enter a few characters before proposing locations."
+msgstr ""
+"Este recurso está localizado acima do painel de gestão de camadas na forma "
+"de listas. Nalgumas listas é necessário digitar alguns caracteres que possam"
+" sugerir elementos para localização."
+
+#: ../../source/user/locate_by_layer.rst:13
+msgid "Simply select a location from the list to zoom to the item."
+msgstr "Basta selecionar um elemento a partir da lista para aproximar o item."
+
+#: ../../source/user/measurement.rst:2
+msgid "Measurement"
+msgstr "Medição"
+
+#: ../../source/user/measurement.rst:4
+msgid "Measurement feature give you the ability to calculate:"
+msgstr "O recurso de medição oferece a capacidade para calcular:"
+
+#: ../../source/user/measurement.rst:6
+msgid "a distance"
+msgstr "uma distância"
+
+#: ../../source/user/measurement.rst:7
+msgid "an area"
+msgstr "uma área"
+
+#: ../../source/user/measurement.rst:8
+msgid "a perimeter"
+msgstr "um perímetro"
+
+#: ../../source/user/measurement.rst:9
+msgid "an angle"
+msgstr ""
+
+#: ../../source/user/measurement.rst:11
+msgid "It is available in the Lizmap menu bar."
+msgstr "Encontra-se disponível na barra de menus do Lizmap."
+
+#: ../../source/user/measurement.rst:17
+msgid ""
+"The tool is activated by selecting the measurement type. Once activated, a "
+"message tells you what to do."
+msgstr ""
+"A ferramenta é ativada selecionando o tipo de medição. Uma vez ativada, uma "
+"mensagem informa o que fazer."
+
+#: ../../source/user/measurement.rst:23
+msgid "The measurement is displayed in the status bar."
+msgstr "A medição é apresentada na barra de estado."
+
+#: ../../source/user/measurement.rst:29
+msgid ""
+"By double-clicking on the map, the measurement is fixed. To start over, you "
+"can click on the map and restart the measurement calculation."
+msgstr ""
+"Clicando duas vezes no mapa, a medição é fixada. Para começar de novo, pode "
+"clicar no mapa e reiniciar o cálculo de medição."
+
+#: ../../source/user/measurement.rst:31
+msgid "In the feature bar, the button on the right allows to stop using it."
+msgstr "Na barra de recursos, o botão à direita permite parar de utilizá-lo."
+
+#: ../../source/user/measurement.rst:37
+msgid ""
+"It is also possible to change the measurement functionality without having "
+"to stop the feature."
+msgstr ""
+"Também é possível alterar a funcionalidade de medição sem ter que parar o "
+"recurso."
+
+#: ../../source/user/printing.rst:2
+msgid "Printing"
+msgstr "Impressão"
+
+#: ../../source/user/printing.rst:4
+msgid ""
+"The print feature is available in the Lizmap menu bar. It depends on the "
+"number of print compositions published by the map publisher."
+msgstr ""
+"O recurso de impressão está disponível na barra de menus do Lizmap. Depende "
+"do número de composições de impressão definidas para a publicação do mapa."
+
+#: ../../source/user/printing.rst:10
+msgid ""
+"Once the feature activated, a print area with the form of the composition is"
+" displayed on the map. Use this area to define the area to be printed. You "
+"can move it."
+msgstr ""
+"Uma vez ativado o recurso, uma área de impressão com a forma da composição é"
+" apresentada no mapa. Utilize esta área para definir a área a ser impressa. "
+"A mesma pode ser movida."
+
+#: ../../source/user/printing.rst:16
+msgid ""
+"On the left, above the panel layer management, you can select the scale of "
+"printing."
+msgstr ""
+"À esquerda, acima do painel de gestão de camadas, pode selecionar a escala "
+"de impressão."
+
+#: ../../source/user/printing.rst:22
+msgid ""
+"Depending on the configuration of the printing composition, you can have the"
+" possibility to enter your own text."
+msgstr ""
+"Dependendo da configuração da composição de impressão, pode ter a "
+"possibilidade de inserir seu próprio texto."
+
+#: ../../source/user/printing.rst:28
+msgid ""
+"To begin building the print file, you can click on *Print*. You will get a "
+"PDF file with the layout defined by the map publisher."
+msgstr ""
+"Para começar a construir o ficheiro de impressão, pode clicar em *Imprimir*."
+" Obterá um ficheiro PDF com o layout definido para a publicação de mapas."
+
+#: ../../source/user/project_page.rst:2
+msgid "The projects page"
+msgstr "Página de projetos"
+
+#: ../../source/user/project_page.rst:4
+msgid "The default lizmap page offers a list maps organized by folder."
+msgstr ""
+"A página padrão do Lizmap oferece uma lista de mapas organizados por pasta."
+
+#: ../../source/user/project_page.rst:10
+msgid ""
+"You can access to the map information sheet. This informations come directly"
+" from QGIS project."
+msgstr ""
+"Pode aceder à folha de informações do mapa. Estas informações provêm "
+"diretamente do projeto QGIS."
+
+#: ../../source/user/project_page.rst:16
+msgid ""
+"Access to the map is done either by clicking the **Load the map** buttons or"
+" the image that accompanies the project."
+msgstr ""
+"O acesso ao mapa é feito clicando nos botões **Visualizar mapa** ou na "
+"imagem que acompanha o projeto."
+
+#: ../../source/user/select_basemap.rst:2
+msgid "Selecting a basemap"
+msgstr "Selecionar um Tema Base"
+
+#: ../../source/user/select_basemap.rst:4
+msgid ""
+"Using the Lizmap plugin, the editor may have added external base maps or an "
+"empty base layer to the map. These base maps are available in the layer "
+"management panel as a list."
+msgstr ""
+"Através do plugin Lizmap, o editor pode ter adicionado mapas base externos "
+"ou uma camada base vazia ao mapa. Esses mapas de base estão disponíveis na "
+"parte inferior do painel de gestão de camadas como uma lista."
+
+#: ../../source/user/simple_map.rst:2
+msgid "A simple map"
+msgstr "Um Mapa simples"
+
+#: ../../source/user/simple_map.rst:4
+msgid "Lizmap offers default web maps with the following features:"
+msgstr ""
+"O Lizmap disponibiliza mapas web padrão com as seguintes características:"
+
+#: ../../source/user/simple_map.rst:6
+msgid "pan"
+msgstr "mover"
+
+#: ../../source/user/simple_map.rst:7
+msgid "zoom on area drawn by the user"
+msgstr "zoom para a área desenhada pelo utilizador"
+
+#: ../../source/user/simple_map.rst:8
+msgid "zoom more"
+msgstr "aproximar"
+
+#: ../../source/user/simple_map.rst:9
+msgid "selecting a zoom level with a scale bar"
+msgstr "selecionar um nível de zoom através de uma escala gráfica"
+
+#: ../../source/user/simple_map.rst:10
+msgid "zoom less"
+msgstr "afastar"
+
+#: ../../source/user/simple_map.rst:11
+msgid "scale display as a scale bar and numerically"
+msgstr "apresentação de escala gráfica e escala numérica"
+
+#: ../../source/user/simple_map.rst:13
+msgid ""
+"The order and organization of layers in the layers panel management meet "
+"those defined in the QGIS by the map publisher."
+msgstr ""
+"A ordem e a organização das camadas na gestão do painel de camadas atende às"
+" definições do QGIS para publicação de mapas."
+
+#: ../../source/user/simple_map.rst:19
+msgid ""
+"Zooming and paning are available on the right of the map. To zoom on an "
+"area, you need to select the *zoom by rectangle* and drag to draw a "
+"rectangle defining the area to reach."
+msgstr ""
+"Zoom e panorâmica estão disponíveis à direita do mapa. Para ampliar uma "
+"área, é necessário selecionar *aproximar por retângulo* clicar e arrastar "
+"para desenhar um retângulo que define a área a ser alcançada."
+
+#: ../../source/user/simple_map.rst:25
+msgid ""
+"You can using the *triangle*, left the layers title, bring up the legend of "
+"the layer."
+msgstr ""
+"Pode utilizar o *triângulo*, à esquerda do título das camadas, para "
+"apresentar a legenda da camada."
+
+#: ../../source/user/simple_map.rst:31
+msgid "Selection boxes allow you to hide and display the proposed layers."
+msgstr ""
+"As caixas de seleção permitem ocultar e mostrar as respetivas camadas."
+
+#: ../../source/user/simple_map.rst:37
+msgid "Themes allow you to change layers visibility following a context."
+msgstr ""
+
+#: ../../source/user/simple_map.rst:43
+msgid ""
+"To take full advantage of the map, you can hide the panel management layers."
+msgstr ""
+"Para aproveitar ao máximo o mapa, pode ocultar o painel de gestão de "
+"camadas."
+
+#: ../../source/user/simple_map.rst:50
+msgid "Finally you can:"
+msgstr "Finalmente pode:"
+
+#: ../../source/user/simple_map.rst:50
+msgid "go back to the projects page"
+msgstr "voltar à página dos projetos"
+
+#: ../../source/user/simple_map.rst:51
+msgid "display the map information sheet"
+msgstr "visualizar a folha de informações do mapa"
