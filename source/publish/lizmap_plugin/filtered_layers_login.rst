@@ -10,29 +10,77 @@ Filtered layer by user
 Principle
 ---------
 
-Usually, the management of projects Lizmap access rights is via directory. Configuration is done in this case in the Lizmap Web Client administration interface. See :ref:`define-group-rights`. This will completely hide some projects based on user groups, but requires a directory and project management.
+The filtering feature presented allows you to filter the data displayed on the map based on the logged in user.
+It is possible to filter only vector layers because Lizmap uses a column in the attribute table.
 
-Instead, the filtering feature presented here allows you to publish a single project QGIS, and filter the data displayed on the map based on the logged in user. It is possible to filter only vector layers because Lizmap uses a column in the attribute table.
-
-Filtering currently uses the ID of the user group connected to the Web application. He is active for all requests to the QGIS server, and thus concerns:
+Filtering currently uses the ID of the user group connected. It's active for all requests to QGIS server,
+and thus concerns:
 
 * the vector layers images displayed on the map
 * the popups. See :ref:`popup`
 * the *Locate by layer* feature lists. See :ref:`locate-by-layer`
 * drop-down lists of *Editing forms* from *Value relation*. See :ref:`edition`
-* upcoming features (the attribute table display, search features, etc.)
+* the attribute table display etc
+
+There are two kinds of filtering :
+
+* based on attributes
+* based on spatial relationship
+
+Filtering by spatial relationship
+---------------------------------
+
+Principle
+^^^^^^^^^
+
+In this panel, we can:
+
+* configure a polygon layer to use for spatial filtering
+* configure layers which must be filtered by the filtering layer
+
+Prerequisites
+^^^^^^^^^^^^^
+
+This is a feature in |lizmap_3_5|.
+
+The Lizmap plugin in QGIS Server **must** be installed with at least **Lizmap QGIS plugin 3.6**.
+Otherwise, the filter won't work and all data will be visible.
+
+Configuring the tool
+^^^^^^^^^^^^^^^^^^^^
+
+..  image:: /images/interface-filter-by-polygon.jpg
+   :align: center
+
+1. Choose the polygon layer used for filtering
+2. Choose the field in this layer which has Lizmap groups, separated by a comma.
+3. Add a layer to filter to this tool:
+
+    1. .. include:: ../../shared/add_layer.rst
+    2. Choose the layer to filter
+    3. Choose the primary key of the layer
+    4. Choose if the filtering if for both visualisation and editing or only editing
+    5. Choose either **intersection** or **contain** spatial relationship.
+
+- .. include:: ../../shared/edit_layer.rst
+- .. include:: ../../shared/remove_layer.rst
+
+For your information, performance will be better when using PostgreSQL layers : either filtering or filtered
+layers or both.
+
+Filtering by attribute
+----------------------
 
 Example
--------
+^^^^^^^
 
 A video tutorial is available at: https://vimeo.com/83966790
 
 Configuring the tool
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 To use data filtering tool in Lizmap Web Client, you must:
 
-* use |qgis_2| on the server
 * have **access to the administration interface** of Lizmap Web Client
 
 Here are the detailed steps to configure this feature:
@@ -69,7 +117,7 @@ Here are the detailed steps to configure this feature:
     Disable the client cache and cache server for all filtered layers. Otherwise, the data displayed will not be updated between each connection or user logout!
 
 Edition
--------
+^^^^^^^
 
 If you have enabled the edition (see :ref:`edition`) on the filtered layer, the field containing the ID will be editable with:
 
