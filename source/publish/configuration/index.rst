@@ -13,6 +13,7 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
   popup
   action_popup
   media
+  expression
   print
   spatial_search
   other_configuration
