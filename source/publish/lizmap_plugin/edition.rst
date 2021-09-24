@@ -30,6 +30,8 @@ Examples
 
 * **An engineering office** wants to allow project partners to trace remarks on the project areas. It allows the addition of polygons in a dedicated layer.
 
+.. _edition-prerequisites:
+
 Prerequisites
 -------------
 
