@@ -64,3 +64,8 @@ https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-varia
 
 * Logging : To log QGIS Servers log and to flush the cache on QGIS Server https://github.com/3liz/qgis-logging-plugin
 * WfsOutputExtension : To add new format when exporting vector data https://github.com/3liz/qgis-wfsOutputExtension
+
+PostgreSQL
+----------
+
+It's possible to edit layers with Lizmap, but the layer **must** be stored in PostgreSQL. See :ref:`edition-prerequisites`.
