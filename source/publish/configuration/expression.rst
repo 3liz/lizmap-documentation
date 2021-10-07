@@ -5,6 +5,20 @@ QGIS Expression
 
 As in QGIS Desktop, Lizmap can use `QGIS expression <https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/expression.html>`_ .
 
+Project level
+-------------
+
+At the project level, Lizmap will set two variables in QGIS Server:
+
+* ``@lizmap_user`` : the current user connected in Lizmap otherwise a empty string
+* ``@lizmap_user_groups`` : the current user groups as a list
+
+.. note::
+    It's possible use these variables in a symbology for instance, to set a different color for a given user.
+
+.. note::
+    In QGIS Desktop, you need to set these variables manually to try.
+
 Advanced forms
 --------------
 
