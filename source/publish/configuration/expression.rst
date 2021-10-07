@@ -17,7 +17,7 @@ At the project level, Lizmap will set two variables in QGIS Server:
     It's possible use these variables in a symbology for instance, to set a different color for a given user.
 
 .. note::
-    In QGIS Desktop, you need to set these variables manually to try.
+    In QGIS Desktop, you need to set these variables manually to try. Set them in :menuselection:`Project properties -> Variables`.
 
 Advanced forms
 --------------
