@@ -55,7 +55,7 @@ or use the default one provided by QGIS.
 https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-variables
 
 .. tip::
-    To manager QGIS Server plugins, we encourage you to use **qgis-plugin-manager**, a CLI tool to install and
+    To manage QGIS Server plugins, we encourage you to use **qgis-plugin-manager**, a CLI tool to install and
     upgrade plugins. https://pypi.org/project/qgis-plugin-manager/
 
 * AtlasPrint : To enable the PDF based on a QGIS Layout Atlas https://github.com/3liz/qgis-atlasprint
