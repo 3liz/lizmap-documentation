@@ -10,14 +10,12 @@ Project level
 
 At the project level, Lizmap will set two variables in QGIS Server:
 
-* ``@lizmap_user`` : the current user connected in Lizmap otherwise a empty string
-* ``@lizmap_user_groups`` : the current user groups as a list
+* ``@lizmap_user`` : *string*, the current user connected in Lizmap. It might be empty.
+* ``@lizmap_user_groups`` : *array*, the current user groups as a list. It might be empty.
 
 .. note::
-    It's possible use these variables in a symbology for instance, to set a different color for a given user.
-
-.. note::
-    In QGIS Desktop, you need to set these variables manually to try. Set them in :menuselection:`Project properties -> Variables`.
+    It's possible use these variables in a symbology for instance, to set a different color for a given user,
+    or to print the current Lizmap user in a layout.
 
 Advanced forms
 --------------

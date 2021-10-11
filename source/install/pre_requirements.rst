@@ -54,16 +54,34 @@ Either you should setup the ``QGIS_PLUGIN_PATH`` environment variable during the
 or use the default one provided by QGIS.
 https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-variables
 
+.. tip::
+    To manager QGIS Server plugins, we encourage you to use **qgis-plugin-manager**, a CLI tool to install and
+    upgrade plugins. https://pypi.org/project/qgis-plugin-manager/
+
 * AtlasPrint : To enable the PDF based on a QGIS Layout Atlas https://github.com/3liz/qgis-atlasprint
 * Cadastre : French use-case only, working with the Cadastre Lizmap module https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/
 * Lizmap : Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server** to
 
-   * evaluate QGIS Expressions in forms
-   * check User Access Rights (ACL) for features and layers (filter by polygon, by attribute…)
-   * https://github.com/3liz/lizmap-plugin/
+   * evaluate QGIS Expressions in forms about :
 
-* Logging : To log QGIS Servers log and to flush the cache on QGIS Server https://github.com/3liz/qgis-logging-plugin
+     * constraints
+     * default value
+     * group visibility
+     * Read :ref:`edition-expressions`.
+
+   * check User Access Rights (ACL) for features and layers :
+
+     * filter by polygon
+     * by attribute
+
+   * use the **Form** popup, read :ref:`form-popup`.
+   * enable ``@lizmap_user`` and ``lizmap_user_groups`` variables
+   * https://github.com/3liz/lizmap-plugin/
+   * The plugin is not required, but a few features won't work as expected if the plugin is not installed or not upgraded
+
 * WfsOutputExtension : To add new format when exporting vector data https://github.com/3liz/qgis-wfsOutputExtension
+* Logging : To log QGIS Servers log and to flush the cache on QGIS Server https://github.com/3liz/qgis-logging-plugin.
+  This plugin is deprecated.
 
 PostgreSQL
 ----------
