@@ -166,10 +166,10 @@ QGIS files and other cache files will be stored into these directories.
    mkdir /home/data/ftp/template/
    mkdir /home/data/ftp/template/qgis
 
-Spatial DBMS: PostgreSQL
-============================================
+Spatial Database: PostgreSQL
+============================
 
-.. note:: This section is optional
+.. note:: This section is optional, but required if you want to enable editing capabilities on a layer. See :ref:`edition-prerequisites`.
 
 PostgreSQL and PostGIS can be very useful to manage spatial data centralized manner on the server.
 
@@ -401,8 +401,6 @@ For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreS
    sudo apt-get install php7.3-pgsql
    sudo service nginx restart
 
-.. note:: For editing, we strongly recommend using a PostgreSQL database. This greatly simplifies installation and retrieval of data entered by users.
-
 Into a fresh copy of :file:`lizmap/var/config/profiles.ini.php`, you should have:
 
 .. code-block:: ini
@@ -612,10 +610,10 @@ their is usually their install instructions. You should follow them. However
 here are the main instructions to install a module.
 
 
-installing modules with Composer
+Installing modules with Composer
 --------------------------------
 
-Since Lizmap 3.4, you can install modules with Composer, the package manager for
+You can install modules with Composer, the package manager for
 PHP. Of course it is possible only if the author of the module has created
 a package of his module. A such package has a name, for example `lizmap/lizmap-pgmetadata-module``.
 The documentation of the module should indicate it.

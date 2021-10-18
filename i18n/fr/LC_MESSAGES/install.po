@@ -7,18 +7,18 @@
 # Bobo Plateau <bobo-romania@users.noreply.github.com>, 2018
 # Nicolas Boisteault <nboisteault@gmail.com>, 2018
 # rldhont <rldhont@gmail.com>, 2020
-# etrimaille <gustrimaille@yahoo.fr>, 2020
 # Arnaud HANRY <arnaud.hanry@le64.fr>, 2020
 # Laurent Jouanneau <dev@ljouanneau.com>, 2021
+# etrimaille <gustrimaille@yahoo.fr>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-26 09:54+0000\n"
+"POT-Creation-Date: 2021-09-13 10:30+0000\n"
 "PO-Revision-Date: 2018-09-07 13:31+0000\n"
-"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2021\n"
+"Last-Translator: etrimaille <gustrimaille@yahoo.fr>, 2021\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1449,22 +1449,16 @@ msgstr ""
 "suivre. Cependant voici les instructions générales pour installer un module."
 
 #: ../../source/install/linux.rst:616
-msgid "installing modules with Composer"
-msgstr "Installer des modules avec Composer"
+msgid "Installing modules with Composer"
+msgstr ""
 
 #: ../../source/install/linux.rst:618
 msgid ""
-"Since Lizmap 3.4, you can install modules with Composer, the package manager"
-" for PHP. Of course it is possible only if the author of the module has "
-"created a package of his module. A such package has a name, for example "
-"`lizmap/lizmap-pgmetadata-module``. The documentation of the module should "
-"indicate it."
+"You can install modules with Composer, the package manager for PHP. Of "
+"course it is possible only if the author of the module has created a package"
+" of his module. A such package has a name, for example `lizmap/lizmap-"
+"pgmetadata-module``. The documentation of the module should indicate it."
 msgstr ""
-"Depuis Lizmap 3.4, vous pouvez installer des modules avec Composer, le "
-"gestionnaire de paquet de PHP. Bien sûr, cela est possible uniquement si "
-"l'auteur du module a créé un paquet de ce module. Un tel paquet a un nom, "
-"par exemple ``lizmap/lizmap-pgmetadata-module``. La documentation du module "
-"devrait l'indiquer."
 
 #: ../../source/install/linux.rst:623
 msgid ""
@@ -1615,10 +1609,24 @@ msgid "Keep this URL, we will use it later in the Lizmap admin panel."
 msgstr ""
 
 #: ../../source/install/pre_requirements.rst:41
+msgid ""
+"We **strongly** encourage you to set up QGIS Server on a different virtual "
+"host than Lizmap Web Client. QGIS Server URL should stay private, accessible"
+" by the Lizmap PHP application **only**."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:44
+msgid ""
+"Otherwise, especially after the **Lizmap** plugin on QGIS Server is "
+"installed, your user might be able to access private data if they by-pass "
+"Lizmap, by using straight QGIS Server URL."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:48
 msgid "QGIS Server plugins"
 msgstr "Plugins Qgis serveur"
 
-#: ../../source/install/pre_requirements.rst:43
+#: ../../source/install/pre_requirements.rst:50
 msgid ""
 "Some plugins can be added to QGIS Server. This will enable some features in "
 "Lizmap. It's not compulsory but in some situations, it's better."
@@ -1627,7 +1635,7 @@ msgstr ""
 "certaines fonctionnalités dans Lizmap. Ce n'est pas obligatoire mais dans "
 "certaines situations, c'est mieux."
 
-#: ../../source/install/pre_requirements.rst:46
+#: ../../source/install/pre_requirements.rst:53
 msgid ""
 "Either you should setup the ``QGIS_PLUGIN_PATH`` environment variable during"
 " the installation of QGIS Server or use the default one provided by QGIS. "
@@ -1635,29 +1643,48 @@ msgid ""
 "variables"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:50
+#: ../../source/install/pre_requirements.rst:57
 msgid ""
 "AtlasPrint : To enable the PDF based on a QGIS Layout Atlas "
 "https://github.com/3liz/qgis-atlasprint"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:51
+#: ../../source/install/pre_requirements.rst:58
+msgid ""
+"Cadastre : French use-case only, working with the Cadastre Lizmap module "
+"https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/"
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:59
 msgid ""
 "Lizmap : Lizmap **is not only** a PHP application, there is also Python "
-"plugin for **QGIS Server** to evaluate QGIS Expressions in forms "
-"https://github.com/3liz/lizmap-plugin/"
+"plugin for **QGIS Server** to"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:53
+#: ../../source/install/pre_requirements.rst:61
+msgid "evaluate QGIS Expressions in forms"
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:62
 msgid ""
-"WfsOutputExtension : To add new format when exporting vector data "
-"https://github.com/3liz/qgis-wfsOutputExtension"
+"check User Access Rights (ACL) for features and layers (filter by polygon, "
+"by attribute…)"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:54
+#: ../../source/install/pre_requirements.rst:63
+msgid "https://github.com/3liz/lizmap-plugin/"
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:65
 msgid ""
 "Logging : To log QGIS Servers log and to flush the cache on QGIS Server "
 "https://github.com/3liz/qgis-logging-plugin"
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:66
+msgid ""
+"WfsOutputExtension : To add new format when exporting vector data "
+"https://github.com/3liz/qgis-wfsOutputExtension"
 msgstr ""
 
 #: ../../source/install/upgrade.rst:3
@@ -2086,7 +2113,7 @@ msgstr ""
 
 #: ../../source/install/windows.rst:155
 msgid "Make sure that you have the extension :kbd:`.conf` in this file."
-msgstr "Assurez-vous que vous avez l'extension: kbd: `.conf` dans ce fichier."
+msgstr "Assurez-vous que vous avez l'extension :kbd:`.conf` dans ce fichier."
 
 #: ../../source/install/windows.rst:157
 msgid ""
@@ -2187,8 +2214,8 @@ msgid ""
 "http://localhost/index.php and will appear the page of PHP properties we "
 "assume that you install correctly the PHP."
 msgstr ""
-"Redémarrez Apache en ligne de commande avec: kbd: `httpd -k restart` et "
-"voyez si tout va bien. Si OUI, ouvrez le navigateur et tapez "
+"Redémarrez Apache en ligne de commande avec :kbd:`httpd -k restart` et voyez"
+" si tout va bien. Si OUI, ouvrez le navigateur et tapez "
 "http://localhost/index.php et apparaîtra la page des propriétés PHP, nous "
 "supposons que vous installez correctement le PHP."
 

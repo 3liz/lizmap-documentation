@@ -36,11 +36,11 @@ The plugin is organized in 13 tabs:
 * :guilabel:`Attribute table`: configure the attribute table and the vector selection
 * :guilabel:`Layer editing`: which layer can be edited with Lizmap
 * :guilabel:`Tooltip layers`: configure the tooltip for some layers
+* :guilabel:`Form filter`: Make some filtering based on attributes
 * :guilabel:`Filter layer by user`: setup some filtering based on the current logged user
 * :guilabel:`Dataviz`: add some charts and dataviz
 * :guilabel:`Time manager`: play an animation based on date or datetime field
 * :guilabel:`Atlas`: setup an atlas for the project
-* :guilabel:`Filter data with form`: Make some filtering based on attributes
 * :guilabel:`Log`: displays information of performed actions
 
 And it has 5 action buttons:

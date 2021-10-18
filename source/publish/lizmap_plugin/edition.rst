@@ -11,7 +11,8 @@ Edition
 Principle
 ---------
 
-It is possible to allow users to **edit spatial and attribute data** from the Lizmap Web Client interface for **PostgreSQL or Spatialite** layers of the QGIS project. The Lizmap plugin allows you to add one or more layers and choose what actions for each will be possible in the web interface:
+It is possible to allow users to **edit spatial and attribute data** from the Lizmap Web Client interface for **PostgreSQL** layers.
+The Lizmap plugin allows you to add one or more layers and choose what actions for each will be possible in the web interface:
 
 * creating elements
 * modifying attributes
@@ -29,19 +30,21 @@ Examples
 
 * **An engineering office** wants to allow project partners to trace remarks on the project areas. It allows the addition of polygons in a dedicated layer.
 
+.. _edition-prerequisites:
+
 Prerequisites
 -------------
 
 To allow data editing in Lizmap Web Client, you must:
 
-* Have vector layer with PostGIS or Spatialite.
-* Configure the editing tool for the layer in :menuselection:`Layer Properties --> Attributs Form`. This is not required but recommended to control the data entered by users. See :ref:`form` for more information.
+* Have vector layer stored in PostgreSQL.
+* The vector layer mustn't have space in field names.
+* Configure the editing tool for the layer in :menuselection:`Layer Properties --> Attributs Form`. This is not required but recommended to control the data entered by users. See :ref:`form` for more information about layout, widgets, expressions, constraints in a form.
 * .. include:: ../../shared/wfs_layer.rst
 * Despite we want to edit the layer, there is no need to use :guilabel:`Update`, :guilabel:`Insert` and :guilabel:`Delete` checkboxes in the WFS table in the :guilabel:`QGIS Server` tab. Lizmap does not use WFS-T. Lizmap will make the edit directly on the datasource. The configuration is done only in the panel described below.
 * As a consequence as above :
 
-  * For a file based layer, such as Spatialite, the file will be edited directly from PHP Lizmap code
-  * For a PostGIS based layer, the credentials **must not** use the **Authentification system provided by QGIS** for a layer with edition capabilities.
+  * The credentials **must not** use the **Authentification system provided by QGIS** for a layer with edition capabilities.
     Credentials must be either in the **QGS** project file or in the PostgreSQL service file (recommended, more secure because credentials are not stored in the QGIS project) :
 
     * `How to use service file on docs.qgis.org <https://docs.qgis.org/3.16/en/docs/user_manual/managing_data_source/opening_data.html#postgresql-service-connection-file>`_
@@ -61,7 +64,7 @@ Here are the detailed steps:
   - think about adding a **spatial index**: this is important for performance
   - *create as many fields as you need for attributes*: if possible, use simple field names!
 
-Please refer to the QGIS documentation to see how to create a spatial layer in a PostGIS or Spatialite database: https://docs.qgis.org/latest/en/docs/user_manual/managing_data_source/index.html
+Please refer to the QGIS documentation to see how to create a spatial layer in a PostgreSQL database: https://docs.qgis.org/latest/en/docs/user_manual/managing_data_source/index.html
 
 ..  image:: /images/interface-add-edition-layer.jpg
    :align: center
@@ -101,8 +104,6 @@ The layers that you have selected for the editing tool are "layers like the othe
 * **The layers are printable** if they are not masked.
 
 * **The data are stored in a layer of the project**. The administrator can retrieve this data and use them thereafter.
-
-.. note:: PostGIS or Spatialite? To centralize things, we recommend using a PostGIS database to store data. For Spatialite layers, be careful not to overwrite the Spatialite file stored in the Lizmap directory on the server with the one you have locally: remember always to make a backup of the server file before a new sync your local directory.
 
 .. note:: Using the cache: whether to use the server or client cache for editing layers, do so by knowingly: the data will not be visible to users until the cache has not expired. We suggest not to enable the cache for editing layers.
 

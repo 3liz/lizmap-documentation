@@ -14,6 +14,8 @@ before_script:
 build_pot:
   only:
     - schedules
+    - master
+    - lizmap_3_4
   stage: build_pot
   script:
     - make gettext
@@ -24,6 +26,9 @@ build_and_publish_pot:
   except:
     - schedules
     - tags
+  only:
+    - master
+    - lizmap_3_4
   stage: build_pot
   script:
     - make gettext
@@ -36,7 +41,10 @@ retrieve_po_and_build:
     - schedules
   stage: build_html
   script:
-    - tx pull -l es,fi,fr,it,ja,pt,ru --branch $TX_BRANCH
+    # -f because of
+    # https://github.com/transifex/transifex-client/issues/233
+    # and https://github.com/transifex/transifex-client/issues/22
+    - tx pull -f -l es,fi,fr,it,ja,pt,ru --branch $TX_BRANCH
     - make clean html
   artifacts:
     paths:
@@ -67,7 +75,7 @@ deploy_snap:
     - retrieve_po_and_build
     - build_html
   script:
-    - rsync -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/$VERSION
+    - rsync -vvv -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/$VERSION
   environment:
     name: snap
   tags:

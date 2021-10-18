@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Jin Igarashi <wushilan0623@gmail.com>, 2021
+# 山本　竜三 <ryu@yamakun.net>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-26 09:54+0000\n"
+"POT-Creation-Date: 2021-09-13 10:30+0000\n"
 "PO-Revision-Date: 2018-09-07 13:32+0000\n"
-"Last-Translator: Jin Igarashi <wushilan0623@gmail.com>, 2021\n"
+"Last-Translator: 山本　竜三 <ryu@yamakun.net>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/3liz-1/teams/62012/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -235,8 +236,10 @@ msgid "AltiProfil"
 msgstr "AltiProfil"
 
 #: ../../source/introduction.rst:90
-msgid "Display a profil with altitude according to a line and a MNT"
-msgstr "ラインとMNTに応じた高度プロファイルの表示"
+msgid ""
+"Display a profil with altitude according to a line and a DEM (Digital "
+"Elevation Model)"
+msgstr ""
 
 #: ../../source/introduction.rst:92
 msgid "https://github.com/arno974/lizmap-altiProfil"
@@ -271,250 +274,265 @@ msgid "https://github.com/3liz/lizmap-pgmetadata-module"
 msgstr "https://github.com/3liz/lizmap-pgmetadata-module"
 
 #: ../../source/introduction.rst:107
+msgid "PgRouting"
+msgstr "PgRouting"
+
+#: ../../source/introduction.rst:105
+msgid ""
+"For displaying itinerary between two points using the `PgRouting "
+"<https://pgrouting.org/>`_ extension for PostGIS."
+msgstr ""
+"‎2 点間の経路を表示する場合は、PostGISの拡張機能 `PgRouting <https://pgrouting.org/>`を使用ください。"
+
+#: ../../source/introduction.rst:107
+msgid "https://github.com/3liz/lizmap-pgrouting-module"
+msgstr "https://github.com/3liz/lizmap-pgrouting-module"
+
+#: ../../source/introduction.rst:112
 msgid "Web Processing Service"
 msgstr "Webプロセッシングサービス"
 
-#: ../../source/introduction.rst:105
+#: ../../source/introduction.rst:110
 msgid ""
 "To execute QGIS Processing algorithms or models on a server and view the "
 "results within Lizmap"
 msgstr "QGISプロセッシングアルゴリズムやモデルをサーバー上で実行し、その結果をLizmap内で表示します"
 
-#: ../../source/introduction.rst:107
+#: ../../source/introduction.rst:112
 msgid "https://github.com/3liz/lizmap-wps-web-client-module"
 msgstr "https://github.com/3liz/lizmap-wps-web-client-module"
 
-#: ../../source/introduction.rst:109
+#: ../../source/introduction.rst:114
 msgid "Specific to France use-case :"
 msgstr "フランスでの利用には以下のものが利用できます"
 
-#: ../../source/introduction.rst:114
+#: ../../source/introduction.rst:119
 msgid "French adresse"
 msgstr "French adresse"
 
-#: ../../source/introduction.rst:112
+#: ../../source/introduction.rst:117
 msgid "For managing addresses"
 msgstr "住所の管理に"
 
-#: ../../source/introduction.rst:114
+#: ../../source/introduction.rst:119
 msgid "https://github.com/3liz/lizmap-adresse-module"
 msgstr "https://github.com/3liz/lizmap-adresse-module"
 
-#: ../../source/introduction.rst:119
+#: ../../source/introduction.rst:124
 msgid "French cadastre"
 msgstr "French cadastre"
 
-#: ../../source/introduction.rst:117
+#: ../../source/introduction.rst:122
 msgid "For managing cadastre data"
 msgstr "地籍データの管理に"
 
-#: ../../source/introduction.rst:119
+#: ../../source/introduction.rst:124
 msgid "https://github.com/3liz/lizmap-cadastre-module"
 msgstr "https://github.com/3liz/lizmap-cadastre-module"
 
-#: ../../source/introduction.rst:124
+#: ../../source/introduction.rst:129
 msgid "Naturaliz"
 msgstr "Naturaliz"
 
-#: ../../source/introduction.rst:122
+#: ../../source/introduction.rst:127
 msgid "For managing species and observation data"
 msgstr "生物種や観測データの管理に"
 
-#: ../../source/introduction.rst:124
+#: ../../source/introduction.rst:129
 msgid "https://github.com/3liz/lizmap-naturaliz-module"
 msgstr "https://github.com/3liz/lizmap-naturaliz-module"
 
-#: ../../source/introduction.rst:127
+#: ../../source/introduction.rst:132
 msgid "Configuration with QGIS"
 msgstr "QGISでの設定"
 
-#: ../../source/introduction.rst:129
+#: ../../source/introduction.rst:134
 msgid "Map's configuration is done in QGIS."
 msgstr "地図の設定はQGIS上で行われます。"
 
-#: ../../source/introduction.rst:131
+#: ../../source/introduction.rst:136
 msgid "One part comes directly from the **QGIS project**:"
 msgstr "1つの部分は、**QGISプロジェクト** から直接来ています。"
 
-#: ../../source/introduction.rst:133
+#: ../../source/introduction.rst:138
 msgid "legend order and structure"
 msgstr "凡例の順序と構成"
 
-#: ../../source/introduction.rst:134
+#: ../../source/introduction.rst:139
 msgid "layer symbology"
 msgstr "レイヤのシンボル"
 
-#: ../../source/introduction.rst:135
+#: ../../source/introduction.rst:140
 msgid "location map with a group Overview in the legend"
 msgstr "凡例にグループ概要を表示したロケーション・マップ"
 
-#: ../../source/introduction.rst:136
+#: ../../source/introduction.rst:141
 msgid "configure print templates via composers"
 msgstr "コンポージャを使用した印刷テンプレートの設定"
 
-#: ../../source/introduction.rst:138
+#: ../../source/introduction.rst:143
 msgid "The rest is done with the **Lizmap plugin**. This plugin allows to:"
 msgstr "残りの部分は **Lizmapプラグイン** で行われます。このプラグインは以下のことを行えます。"
 
-#: ../../source/introduction.rst:140
+#: ../../source/introduction.rst:145
 msgid "specify the layers and groups name in the Web interface"
 msgstr "ウェブインターフェースでのレイヤとグループ名の設定"
 
-#: ../../source/introduction.rst:141
+#: ../../source/introduction.rst:146
 msgid "group the layers into a single WMS layer"
 msgstr "レイヤを一つのWMSレイヤとしてグループ化する"
 
-#: ../../source/introduction.rst:142
+#: ../../source/introduction.rst:147
 msgid "set some layers as baselayer"
 msgstr "いくつかのレイヤをベースレイヤとして設定する"
 
-#: ../../source/introduction.rst:143
+#: ../../source/introduction.rst:148
 msgid "set the display layer system: alone image or tiles"
 msgstr "単独の画像やタイルをレイヤとして表示するシステムの設定"
 
-#: ../../source/introduction.rst:144
+#: ../../source/introduction.rst:149
 msgid "set the lifetime of the images in the cache"
 msgstr "キャッシュした画像の有効期限を設定する"
 
-#: ../../source/introduction.rst:145
+#: ../../source/introduction.rst:150
 msgid "set the lifetime of the images in the network"
 msgstr "ネットワークでの画像の有効期限を設定する"
 
-#: ../../source/introduction.rst:146
+#: ../../source/introduction.rst:151
 msgid "set the popups for querying layer"
 msgstr "レイヤへの問い合わせ時に表示するポップアップの設定"
 
-#: ../../source/introduction.rst:147
+#: ../../source/introduction.rst:152
 msgid "set a link to the metadata"
 msgstr "メタデータへのリンクの設定"
 
-#: ../../source/introduction.rst:148
+#: ../../source/introduction.rst:153
 msgid "set the map scales"
 msgstr "地図の縮尺の設定"
 
-#: ../../source/introduction.rst:149
+#: ../../source/introduction.rst:154
 msgid "set the tools available with the map:"
 msgstr "地図で利用可能なツールの設定"
 
-#: ../../source/introduction.rst:151
+#: ../../source/introduction.rst:156
 msgid "printing"
 msgstr "印刷"
 
-#: ../../source/introduction.rst:152
+#: ../../source/introduction.rst:157
 msgid "measuring length, area and perimeter"
 msgstr "長さ、面積、外周の測定"
 
-#: ../../source/introduction.rst:153
+#: ../../source/introduction.rst:158
 msgid "using user geolocation (GPS)"
 msgstr "ユーザの測位情報 (GPS)の使用"
 
-#: ../../source/introduction.rst:154
+#: ../../source/introduction.rst:159
 msgid "address search in OpenStreetMap or Google"
 msgstr "OpenStreetMapまたはGoogleでの住所検索"
 
-#: ../../source/introduction.rst:156
+#: ../../source/introduction.rst:161
 msgid "set external baselayers:"
 msgstr "サードパーティのベースレイヤの設定"
 
-#: ../../source/introduction.rst:158
+#: ../../source/introduction.rst:163
 msgid "Google Maps"
 msgstr "Googleマップ"
 
-#: ../../source/introduction.rst:159
+#: ../../source/introduction.rst:164
 msgid "Bing Maps"
 msgstr "Bingマップ"
 
-#: ../../source/introduction.rst:160
+#: ../../source/introduction.rst:165
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
-#: ../../source/introduction.rst:161
+#: ../../source/introduction.rst:166
 msgid "Géoportail IGN"
 msgstr "Géoportail IGN"
 
-#: ../../source/introduction.rst:163
+#: ../../source/introduction.rst:168
 msgid "set layers for navigation shortcut:"
 msgstr "ナビゲーションのショートカットのためのレイヤの設定"
 
-#: ../../source/introduction.rst:165
+#: ../../source/introduction.rst:170
 msgid "search in a layer field"
 msgstr "レイヤのフィールドでの検索"
 
-#: ../../source/introduction.rst:166
+#: ../../source/introduction.rst:171
 msgid "zoom to the selected item"
 msgstr "選択された地物へのズーム"
 
-#: ../../source/introduction.rst:167
+#: ../../source/introduction.rst:172
 msgid ""
 "cascaded search within 2 fields of the same layer or between joined layers"
 msgstr "同一レイヤーの2つのフィールド内、または結合されたレイヤー間でのカスケード検索"
 
-#: ../../source/introduction.rst:175
+#: ../../source/introduction.rst:180
 msgid "Configuring with the Web back-office"
 msgstr "Webバックオフィスとの連携"
 
-#: ../../source/introduction.rst:177
+#: ../../source/introduction.rst:182
 msgid "The Lizmap back-office defines:"
 msgstr "Lizmapバックオフィスとは以下の通りです。"
 
-#: ../../source/introduction.rst:179
+#: ../../source/introduction.rst:184
 msgid "the directory list containing maps"
 msgstr "地図を含むディレクトリの一覧"
 
-#: ../../source/introduction.rst:180
+#: ../../source/introduction.rst:185
 msgid "users' rights by map directory"
 msgstr "地図のディレクトリごとのユーザー権限"
 
-#: ../../source/introduction.rst:181
+#: ../../source/introduction.rst:186
 msgid "using subdomain to improve the responsiveness of the interface."
 msgstr "サブドメインを使用して、インターフェースの応答性を向上させます。"
 
-#: ../../source/introduction.rst:185
+#: ../../source/introduction.rst:190
 msgid "In a nutshell"
 msgstr "手短にいえば、"
 
-#: ../../source/introduction.rst:187
+#: ../../source/introduction.rst:192
 msgid "HTML5 interface compatible mobiles and tablets"
 msgstr "モバイルやタブレットに対応したHTML5インターフェース"
 
-#: ../../source/introduction.rst:188
+#: ../../source/introduction.rst:193
 msgid ""
 "Grouping maps by directory: application multi-directories and multi-projects"
 msgstr "ディレクトリによる地図のグループ化：アプリケーションのマルチディレクトリとマルチプロジェクト"
 
-#: ../../source/introduction.rst:189
+#: ../../source/introduction.rst:194
 msgid "Management of access rights per directory for user groups"
 msgstr "ユーザーグループのディレクトリごとのアクセス権の管理"
 
-#: ../../source/introduction.rst:190
+#: ../../source/introduction.rst:195
 msgid "Automatic map cache management"
 msgstr "地図の自動キャッシュ管理"
 
-#: ../../source/introduction.rst:191
+#: ../../source/introduction.rst:196
 msgid ""
 "Multilingual interface: English, French, Italian, Spanish, Portuguese, Greek"
 msgstr "英語、フランス語、イタリア語、スペイン語、ポルトガル語、ギリシャ語などの多言語インターフェース"
 
-#: ../../source/introduction.rst:192
+#: ../../source/introduction.rst:197
 msgid "Using external baselayers: OSM, Google, Bing"
 msgstr "OSM、Google、BIngなどのサードパーティのベースレイヤの使用"
 
-#: ../../source/introduction.rst:193
+#: ../../source/introduction.rst:198
 msgid "Printing"
 msgstr "印刷"
 
-#: ../../source/introduction.rst:194
+#: ../../source/introduction.rst:199
 msgid "Online edition: adding, spatial and filed changing, deleting"
 msgstr "オンラインでの編集：追加、編集、削除"
 
-#: ../../source/introduction.rst:195
+#: ../../source/introduction.rst:200
 msgid "Zoom with localisation"
 msgstr "ローカライズしたズーム"
 
-#: ../../source/introduction.rst:196
+#: ../../source/introduction.rst:201
 msgid "Address search: Nominatim (OpenStreetMap engine), Google"
 msgstr "住所検索：Nominatim（OpenStreetMapエンジン）、Google"
 
-#: ../../source/introduction.rst:197
+#: ../../source/introduction.rst:202
 msgid "Access logs"
 msgstr "ログへのアクセス"

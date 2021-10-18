@@ -100,7 +100,9 @@ ____________
    -- You can refresh the materialized view at any time (for example in a cron job) with:
    REFRESH MATERIALIZED VIEW lizmap_search;
 
-* At present, Lizmap PostgreSQL search cannot use 3D geometries, or geometries with Z or M values. You have to use the ``ST_Force2D(geom)`` function to convert geometries into 2D geometries.
+.. warning::
+    At present, Lizmap PostgreSQL search cannot use 3D geometries, or geometries with Z or M values.
+    You have to use the ``ST_Force2D(geom)`` function to convert geometries into 2D geometries.
 
 Configure access
 ________________

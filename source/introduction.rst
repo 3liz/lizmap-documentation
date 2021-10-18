@@ -99,7 +99,7 @@ Additional Lizmap modules
 Some modules can be added to Lizmap :
 
 * AltiProfil
-    Display a profil with altitude according to a line and a MNT
+    Display a profil with altitude according to a line and a DEM (Digital Elevation Model)
 
     https://github.com/arno974/lizmap-altiProfil
 
@@ -112,6 +112,11 @@ Some modules can be added to Lizmap :
     For displaying metadata stored with the QGIS PgMetadata plugin. It is also providing a DCAT XML catalog, to be harvested by external services
 
     https://github.com/3liz/lizmap-pgmetadata-module
+
+* PgRouting
+   For displaying itinerary between two points using the `PgRouting <https://pgrouting.org/>`_ extension for PostGIS.
+
+    https://github.com/3liz/lizmap-pgrouting-module
 
 * Web Processing Service
     To execute QGIS Processing algorithms or models on a server and view the results within Lizmap

@@ -14,6 +14,7 @@ for i in *.png ; do convert -strip -interlace plane -quality 80 "$i" "${i%.*}.jp
 
 Note *post* `convert`, `gm` looks to give better result ?
 ```bash
+sudo apt install graphicsmagick
 gm convert image.png image.jpg
 for i in *.png ; do gm convert "$i" "${i%.*}.jpg" ; done
 ```
