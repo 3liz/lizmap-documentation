@@ -212,3 +212,10 @@ In a nutshell
 * Zoom with localisation
 * Address search: Nominatim (OpenStreetMap engine), Google
 * Access logs
+
+Requirements
+------------
+Version 3.4 of lizmap web client requires:
+* Firefox >=63
+* Edge >= 79
+* Chromemium >= 54 
