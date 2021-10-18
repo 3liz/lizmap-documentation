@@ -57,6 +57,18 @@ QGIS and QGIS Server
 Lizmap features
 ===============
 
+Open Source
+-----------
+Lizmap, the modules are opensource projects edited and managed by
+https://3liz.com
+The source code is currenty available on https://github.com/3liz/
+Help is available throught :
+* Github tickets
+* Our mailing-list : https://lists.osgeo.org/pipermail/lizmap/
+* On IRC on the  #lizmap channel of https://libera.chat
+* Commercial support throught 3liz , contact
+mailto:info@3liz.com?subject=CommercialSupportRequest 
+
 Default features
 ----------------
 
@@ -200,3 +212,10 @@ In a nutshell
 * Zoom with localisation
 * Address search: Nominatim (OpenStreetMap engine), Google
 * Access logs
+
+Requirements
+------------
+Version 3.4 of lizmap web client requires:
+* Firefox >=63
+* Edge >= 79
+* Chromemium >= 54 
