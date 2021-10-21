@@ -15,5 +15,6 @@ For describing a feature, we should try to split it into:
 * Exercise, use case
 
 ## Getting help
-- Send an email to the lizmap mailing list at https://lists.osgeo.org/pipermail/lizmap/
-- Join us on IRC , #lizmap on https://libera.chat
+
+* Send an email to the Lizmap mailing list at https://lists.osgeo.org/pipermail/lizmap/
+* Join us on IRC , #lizmap on https://libera.chat
