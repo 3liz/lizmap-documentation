@@ -45,7 +45,7 @@ Lizmap will automatically ask the user in the webbrowser to fill each fields.
 More tips:
 
 * If your label is pre-populated in QGIS, the field will be pre-populated too in the webbrowser.
-* If you check 'Render as HTML' for your label in QGIS, you will have a multiline label in Lizmap.
+* If you check 'Render as HTML' for your label in QGIS, you will have a multiline label in Lizmap accepting HTML code. Use ``<br>`` for line breaks for example.
 
 The preview in Lizmap will be similar to this screenshot. The red rectangle is the area that the user can define in the webbrowser and the user can also set the map description and the map title.
 
