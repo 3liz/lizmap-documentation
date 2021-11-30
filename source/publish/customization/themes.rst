@@ -77,12 +77,12 @@ Once your theme is ready, you can just publish it copying it in the directory ``
 Example
 -------
 
-We want to change *only* the logo in a specific project called ``roads`` and we want to keep the default theme
+We want to change the logo and the navigation bar background color (e.g. blue) *only* in a specific project called ``roads`` and we want to keep the default theme
 from the Lizmap *instance*:
 
 * We don't need the :file:`media/themes/default` folder.
 * Create :file:`media/themes/roads`.
-* Extract the content zip file inside.
+* Extract the :file:`css/` directory from the zip file inside.
 * Change the file :file:`css/img/logo.png`
 
 This would work. But you still have a lot of CSS which is the same from the Lizmap main instance. So we can
@@ -90,7 +90,7 @@ make our style smaller:
 
 * Remove all images which are the same as Lizmap instance
 * Search in the :file:`css` folder where :file:`logo.png` is used.
-* Remove every files :file:`*.css` except the file :file:`css/main.css` and keep only:
+* Remove every files :file:`*.css` except :file:`css/main.css` and :file:`css/map.css` and keep only:
 
 .. code-block:: css
 
@@ -98,5 +98,15 @@ make our style smaller:
       background : url(img/logo.png) no-repeat;
       background-size:contain;
     }
+
+for :file:`css/main.css` and:
+
+.. code-block:: css
+
+    #navbar button.btn {
+      background-color : blue;
+    }
+
+for :file:`css/map.css`
 
 By following these steps, we keep our custom theme as small as possible.
