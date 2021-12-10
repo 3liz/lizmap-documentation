@@ -131,12 +131,12 @@ We want to change the default title in the header of the main page of lizmap. Th
 
 * Create a directory named view in the theme's default folder
 
-.. code-block:: none
+.. code-block:: bash
   nano mkdir lizmap/var/themes/default/view
 
 * Copy the :file:`main.tpl` file from the default location in :file:`lizmap/modules/view/templates/` to the :file:`lizmap/var/themes/default/view` folder
 
-.. code-block:: none
+.. code-block:: bash
   cp lizmap/var/themes/default/view/main.tpl lizmap/var/themes/default/view
 
 * Find the title div and replace the original code with your custom text 
