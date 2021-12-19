@@ -79,16 +79,17 @@ Update the list of available language into :
 When a new major version of lizmap has been released, be sure the documentation
 is updated into the `master` branch.
 
-When the documentation is ready to release `X.Y`:
+When the documentation is ready to release `X.Y` from the master branch:
 
-1. Set the version number into `source/conf.py` about `X.Y`
-1. Update the file `source/lizmap_versions.json`
-1. Create a new branch `lizmap_X_Y` (replace X and Y).
-1. Configure a new schedule in the CI configuration for this new branch
-1. On the master branch, set the next version into `source/conf.py` and `source/lizmap_versions.json`
-1. Push the new branch and the master branch
-1. In the server configuration, change the target of the symbolic link 'current'
-1. Copy the `source/lizmap_versions.json` into all other branches, it should be the
+1. Set the version number into `source/conf.py` about `X.Y`, mainly the `release` without the suffix.
+2. Update the file `source/lizmap_versions.json`
+3. Commit these two files : `Release version X.Y`
+4. Create a new branch `git checkout -b lizmap_X_Y` (replace X and Y).
+5. Configure a new schedule in the CI configuration for this new branch
+6. On the master branch, set the next version into `source/conf.py` and `source/lizmap_versions.json`
+7. Push the new branch and the master branch
+8. In the server configuration, change the target of the symbolic link 'current', ask a system administrator for it
+9. Copy the `source/lizmap_versions.json` into all other branches, it should be the
    same for all.
 
 ## Archive an old version
