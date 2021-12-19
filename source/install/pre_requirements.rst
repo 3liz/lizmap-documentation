@@ -86,7 +86,6 @@ https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-varia
            * filter by polygon
            * by attribute
 
-        * use the **Form** popup, read :ref:`form-popup`.
         * enable ``@lizmap_user`` and ``lizmap_user_groups`` variables
     * https://github.com/3liz/lizmap-plugin/
     * The plugin is not required, but a few features won't work as expected if the plugin is not installed or not upgraded
