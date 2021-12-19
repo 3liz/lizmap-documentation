@@ -69,8 +69,7 @@ Help is available through :
 * Github tickets
 * Our mailing-list : https://lists.osgeo.org/pipermail/lizmap/
 * On IRC on the #lizmap channel of https://libera.chat
-* Commercial support through 3Liz, contact
-mailto:info@3liz.com?subject=CommercialSupportRequest 
+* Commercial support through 3Liz, contact mailto:info@3liz.com?subject=CommercialSupportRequest
 
 Default features
 ----------------

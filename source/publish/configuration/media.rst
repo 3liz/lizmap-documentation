@@ -116,7 +116,7 @@ Here are the display rules in the popup:
     - So for links, you need to use HTML, such as ``<a href="[% "name_of_field" %]">Link</a>``.
     - And for images, you need ``<img>`` (with an optional link to open it fullscreen) such as
 
-.. code-block:: html
+.. code-block:: none
 
     <a href="[% "name_of_field" %]" target="_blank">
         <img src="[% "name_of_field" %]" border="0">

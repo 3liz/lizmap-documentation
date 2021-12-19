@@ -250,7 +250,7 @@ Obviously, **you must adapt it to fit your needs**.
 Since Lizmap Web Client **triggers an event** ``actionResultReceived`` any time the user clicks on an action button, and data is returned (in the same time as the result geometry is drawn on the map), you could use your own Javascript code to add some logic after the result is shown.
 
 .. seealso::
-    Chapter :ref:`_adding-javascript`
+    Chapter :ref:`adding-javascript`
 
 For example, here we just write in the browser console the content received:
 

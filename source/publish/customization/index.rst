@@ -9,4 +9,5 @@ This section shows how to customize Lizmap with some lines of code.
 
   javascript
   themes
+  template
   iframe
