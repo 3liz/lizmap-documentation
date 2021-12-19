@@ -83,14 +83,15 @@ When the documentation is ready to release `X.Y` from the master branch:
 
 1. Set the version number into `source/conf.py` about `X.Y`, mainly the `release` without the suffix.
 2. Update the file `source/lizmap_versions.json`
-3. Commit these two files : `Release version X.Y`
-4. Create a new branch `git checkout -b lizmap_X_Y` (replace X and Y).
-5. Configure a new schedule in the CI configuration for this new branch
-6. On the master branch, set the next version into `source/conf.py` and `source/lizmap_versions.json`
-7. Push the new branch and the master branch
-8. In the server configuration, change the target of the symbolic link 'current', ask a system administrator for it
-9. Copy the `source/lizmap_versions.json` into all other branches, it should be the
-   same for all.
+3. Update gitlab-ci about this new branch
+4. Commit these 3 files : `Release version X.Y`
+5. Create a new branch `git checkout -b lizmap_X_Y` (replace X and Y).
+6. Configure a new schedule in the CI configuration for this new branch
+7. On the master branch, set the next version into `source/conf.py` and `source/lizmap_versions.json`
+8. Push the new branch and the master branch
+9. In the server configuration, change the target of the symbolic link 'current'
+10. Copy the `source/lizmap_versions.json` into all other branches, it should be the
+    same for all.
 
 ## Archive an old version
 
