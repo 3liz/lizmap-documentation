@@ -105,4 +105,9 @@ https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-varia
 PostgreSQL
 ----------
 
-It's possible to edit layers with Lizmap, but the layer **must** be stored in PostgreSQL. See :ref:`edition-prerequisites`.
+PostgreSQL can be used for two different purposes in Lizmap :
+
+* To store GIS data. No configuration is needed on the Lizmap Web Client server side, **only** the PostgreSQL server
+  must be accessible from the Lizmap Web Client server.
+  It's possible to edit layers with Lizmap, but the layer **must** be stored in PostgreSQL. See :ref:`edition-prerequisites`.
+* To store Lizmap Web Client users and user actions. Lizmap uses tables. This setting must be done when **installing** Lizmap.
