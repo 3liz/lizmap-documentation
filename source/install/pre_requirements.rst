@@ -71,7 +71,30 @@ https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-varia
 
 * Lizmap
 
-    * Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server** to
+    * Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server**.
+    * https://github.com/3liz/lizmap-plugin/
+    * The plugin is highly recommended, a few features won't work as expected if the plugin is not installed or not upgraded.
+    * **Important**, read below for more information the Lizmap QGIS Server plugin. (:ref:`lizmap-server-plugin`)
+
+* WfsOutputExtension
+
+    * To add new format when exporting vector data
+    * https://github.com/3liz/qgis-wfsOutputExtension
+
+* Logging
+
+    * To log QGIS Servers log and to flush the cache on QGIS Server
+    * https://github.com/3liz/qgis-logging-plugin.
+    * This plugin is deprecated.
+
+.. _lizmap-server-plugin:
+
+Lizmap QGIS Server plugin
+_________________________
+
+Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web Client :
+
+        * retrieve information from QGIS Server.
 
         * evaluate `QGIS Expressions <https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`_
           in forms about :
@@ -87,20 +110,21 @@ https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-varia
            * by attribute
 
         * use the **Form** popup, read :ref:`form-popup`.
-        * enable ``@lizmap_user`` and ``lizmap_user_groups`` variables
-    * https://github.com/3liz/lizmap-plugin/
-    * The plugin is not required, but a few features won't work as expected if the plugin is not installed or not upgraded
+        * enable ``@lizmap_user`` and ``lizmap_user_groups`` variables in QGIS projects
 
-* WfsOutputExtension
+.. warning::
+    Starting from Lizmap plugin 3.7.0 on the server, the plugin will require you to **add** a environment
+    variable on QGIS server.
 
-    * To add new format when exporting vector data
-    * https://github.com/3liz/qgis-wfsOutputExtension
+    For **security** reason, to enable all features on the QGIS server side, you must enable the environment variable
+    ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`` on QGIS server.
 
-* Logging
+    You **must** be ensured that this API ``http://your.qgis.server.url/lizmap/server.json`` is protected on
+    your webserver. The best is to restrict the access to QGIS server ``http://your.qgis.server.url`` on a
+    virtual host, not accessible on the internet. All requests to QGIS server will be sent by Lizmap Web Client.
+    QGIS server mustn't be accessible from outside.
 
-    * To log QGIS Servers log and to flush the cache on QGIS Server
-    * https://github.com/3liz/qgis-logging-plugin.
-    * This plugin is deprecated.
+    This variable will **expose** server settings such as QGIS server version, which is used by Lizmap Web Client 3.5.
 
 PostgreSQL
 ----------
