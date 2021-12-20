@@ -126,6 +126,16 @@ Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web Client
 
     This variable will **expose** server settings such as QGIS server version, which is used by Lizmap Web Client 3.5.
 
+    If you are using `Py-QGIS-Server <https://docs.3liz.org/py-qgis-server/>`_, you must explicit publish this API as well :
+
+    .. code-block:: ini
+
+        [api.endpoints]
+        lizmap_api=/lizmap
+
+        [api.enabled]
+        lizmap_api=yes
+
 PostgreSQL
 ----------
 
