@@ -44,7 +44,7 @@ In this project, there is a vector layer called ``Points`` with the internal lay
                "icon": "icon-leaf",
                "options": {
                    "buffer_size": 500,
-                   "other_param": "yes",
+                   "other_param": "yes"
                },
                "style": {
                    "graphicName": "circle",
