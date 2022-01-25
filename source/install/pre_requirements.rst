@@ -120,15 +120,18 @@ Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web Client
     ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`` on QGIS server.
 
     You **must** be ensured that this API ``http://your.qgis.server.url/lizmap/server.json`` is protected on
-    your webserver. The best is to restrict the access to QGIS server ``http://your.qgis.server.url`` on a
+    your webserver. The **best** is to restrict the access to QGIS server ``http://your.qgis.server.url`` on a
     virtual host, not accessible on the internet. All requests to QGIS server will be sent by Lizmap Web Client.
-    QGIS server mustn't be accessible from outside.
+    QGIS server mustn't be accessible from outside. It was already **highly** recommended before to protect the QGIS Server
+    from the internet. Users **must use** WFS/WMS links provided by Lizmap Web Client, so Lizmap can check user permissions.
 
-    This variable will **expose** server settings such as QGIS server version, which is used by Lizmap Web Client 3.5.
+    This variable will **expose** server settings such as QGIS server version, which is used by Lizmap Web Client.
 
-    The Lizmap API URL must be also configured in the administration interface.
+    If your are using QGIS Server with FCGI, the Lizmap API URL must be empty. Otherwise, if you are using
+    `Py-QGIS-Server <https://docs.3liz.org/py-qgis-server/>`_, the Lizmap API URL must be configured in the administration
+    interface.
 
-    If you are using `Py-QGIS-Server <https://docs.3liz.org/py-qgis-server/>`_, you must explicit publish this API as well :
+    In Py-QGIS-Server, you must explicitly publish the API as well :
 
     .. code-block:: ini
 
