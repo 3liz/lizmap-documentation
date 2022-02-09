@@ -38,6 +38,9 @@ In this panel, we can:
 * configure a polygon layer to use for spatial filtering
 * configure layers which must be filtered by the filtering layer
 
+..  image:: /images/filter-polygon.gif
+   :align: center
+
 Prerequisites
 ^^^^^^^^^^^^^
 
@@ -45,6 +48,7 @@ This is a feature in |lizmap_3_5|.
 
 The Lizmap plugin in QGIS Server **must** be installed with at least **Lizmap QGIS plugin 3.6**.
 Otherwise, the filter won't work and all data will be visible.
+See :ref:`lizmap-server-plugin`.
 
 Configuring the tool
 ^^^^^^^^^^^^^^^^^^^^
