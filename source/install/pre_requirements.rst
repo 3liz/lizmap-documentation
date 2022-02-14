@@ -50,7 +50,7 @@ QGIS Server plugins
 Some plugins can be added to QGIS Server. This will enable some features in Lizmap. It's not compulsory but
 in some situations, it's better.
 
-Either you should setup the ``QGIS_PLUGIN_PATH`` environment variable during the installation of QGIS Server
+Either you should setup the ``QGIS_PLUGINPATH`` environment variable during the installation of QGIS Server
 or use the default one provided by QGIS.
 https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-variables
 
