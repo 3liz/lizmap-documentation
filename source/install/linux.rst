@@ -2,17 +2,20 @@
 Installing Lizmap Web Client on Linux Debian or Ubuntu
 ===============================================================
 
-.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those `instructions <https://github.com/3liz/lizmap-docker-compose>`_.
+.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those
+    `instructions <https://github.com/3liz/lizmap-docker-compose>`_ using Docker and Docker-Compose.
+
+.. note:: In Debian distributions, you can work as administrator (log in with ``root``), without using ``sudo`` on contrary to Ubuntu.
 
 Generic Server Configuration with Nginx server
-===============================================================
+==============================================
 
 This documentation provides an example for configuring a server with the Debian 9 distribution. We assume you have base system installed and updated.
 
 .. warning:: This page does not describe how to secure your Nginx server. It's just for a demonstration.
 
 Configure Locales
---------------------------------------------------------------
+-----------------
 
 For simplicity, it is interesting to configure the server with UTF-8 default encoding.
 
@@ -27,6 +30,13 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 
 .. note:: It is also necessary configure the other software so that they are using this default encoding if this is not the case.
 
+Nginx Server Configuration
+==========================
+
+This documentation provides an example for configuring a server with the Debian 9 distribution. We assume you have base system installed and updated.
+
+.. warning:: This page does not describe how to secure your Nginx server. It's just for a demonstration.
+
 Installing necessary packages
 -----------------------------
 
@@ -35,7 +45,7 @@ Installing necessary packages
 .. code-block:: bash
 
    sudo su # only necessary if you are not logged in as root
-   apt update # update package lists
+   apt update # update packages list
    apt-get install curl openssl libssl1.1 nginx-full nginx nginx-common
 
 On debian 10, install these packages:
@@ -50,8 +60,9 @@ On Ubuntu 18.04 or later, install these packages:
 
    apt-get install php7.3-fpm php7.3-cli php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-pgsql php7.3-sqlite3 php7.3-xml php7.3-ldap
 
+
 Web configuration
------------------------
+-----------------
 
 Create a new file /etc/nginx/sites-available/lizmap.conf:
 
@@ -100,51 +111,8 @@ Enable the virtual host you just created:
 
    ln -s /etc/nginx/sites-available/lizmap.conf /etc/nginx/sites-enabled/lizmap.conf
 
-Generic Server Configuration with Apache2 server
-===============================================================
-
-To install QGIS-server on apache refer to the official QGIS documentation https://docs.qgis.org/latest/en/docs/server_manual/index.html
-
-Installing necessary packages
---------------------------------------------------------------
-
-.. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.4 installation)
-
-.. note:: At least the current version supports PHP 7, so it should be straight forward to install it on current debian 9 or ubuntu 16.04.
-
-.. code-block:: bash
-
-   sudo su # only necessary if you are not logged in as root
-   apt update # update package lists
-   
-   
-On debian 10, install these packages:
-
-.. code-block:: bash
-
-   apt install php7.3-fpm php7.3-cli php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-pgsql php7.3-sqlite3 php7.3-xml php7.3-ldap
-   
-
-On Ubuntu 18.04 LTS
-
-.. code-block:: bash
-
-   apt install xauth htop curl libapache2-mod-fcgid libapache2-mod-php7.3 php7.3-cgi php7.3-gd php7.3-sqlite php7.3-curl php7.3-xmlrpc python-simplejson software-properties-common
-
-
-
-
-Enable geolocation
--------------------
-
-The automatic geolocation provided by Lizmap relies on Google services. To enable it, your webGIS must be placed under a secure protocol, like HTTPS. See for more details:
-
-https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins
-
-https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
-
 Restart Nginx
---------------
+-------------
 
 You must restart the Nginx server to validate the configuration.
 
@@ -152,8 +120,143 @@ You must restart the Nginx server to validate the configuration.
 
    service nginx restart
 
+
+Apache Server configuration
+===========================
+
+This documentation provides an example for configuring a server with the Debian 10 distribution. We assume you have base system installed and updated.
+
+.. warning:: This page does not describe how to secure your Apache server. It's just for a demonstration.
+
+Installing necessary packages
+-----------------------------
+
+
+Firstly update the packages list, then install these packages:
+
+.. code-block:: bash
+
+   sudo su # only necessary if you are not logged in as root
+   apt update
+   apt-get install xauth htop curl apache2 libapache2-mod-fcgid
+   apt-get install libapache2-mod-php7.3 php7.3-cgi php7.3-gd php7.3-sqlite php7.3-curl php7.3-xmlrpc php7.3-xml python-simplejson software-properties-common
+
+PHP 7.3 configuration
+---------------------
+
+In this example, we use Apache mpm-worker. So we must manually configure the activation of PHP 7.3.
+
+.. code-block:: bash
+
+   # Create the configuration file
+   nano /etc/apache2/conf-available/php.conf
+   # Copy the following text in it
+   <Directory /usr/share>
+      AddHandler fcgid-script .php
+      FCGIWrapper /usr/lib/cgi-bin/php7.3 .php
+      Options ExecCGI FollowSymlinks Indexes
+   </Directory>
+
+   <Files ~ (\.php)>
+      AddHandler fcgid-script .php
+      FCGIWrapper /usr/lib/cgi-bin/php7.3 .php
+      Options +ExecCGI
+      allow from all
+   </Files>
+
+Enable the configuration with the following command line:
+
+.. code-block:: bash
+
+   a2enconf php
+
+Web configuration
+-----------------
+
+mpm-worker configuration
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+We modify the Apache configuration file to adapt the options to mpm_worker server configuration.
+
+.. code-block:: bash
+
+   nano /etc/apache2/apache2.conf
+   <IfModule mpm_worker_module>
+   StartServers       4
+   MinSpareThreads    25
+   MaxSpareThreads    100
+   ThreadLimit          64
+   ThreadsPerChild      25
+   MaxClients        150
+   MaxRequestsPerChild   0
+   </IfModule>
+
+mod_fcgid configuration
+^^^^^^^^^^^^^^^^^^^^^^^
+
+QGIS Server runs with the FastCGI protocole (a.k.a. fcgi). We must therefore configure the Apache mod_fcgid to suit to the server capabilities.
+
+.. code-block:: bash
+
+  # Open the mod_fcgid configuration file
+   nano /etc/apache2/mods-enabled/fcgid.conf
+   # Paste the following content and adapt it
+   <IfModule mod_fcgid.c>
+      AddHandler    fcgid-script .fcgi
+      FcgidConnectTimeout 300
+      FcgidIOTimeout 300
+      FcgidMaxProcessesPerClass 50
+      FcgidMinProcessesPerClass 20
+      FcgidMaxRequestsPerProcess 500
+      IdleTimeout   300
+      BusyTimeout   300
+   </IfModule>
+
+Setting the compression
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+   nano /etc/apache2/conf-available/mod_deflate.conf
+   # Add the bellow text in the file
+   <Location />
+      # Insert filter
+      SetOutputFilter DEFLATE
+      # Netscape 4.x encounters some problems ...
+      BrowserMatch ^Mozilla/4 gzip-only-text/html
+      # Netscape 4.06-4.08 encounter even more problems
+      BrowserMatch ^Mozilla/4\.0[678] no-gzip
+      # MSIE pretends it is Netscape, but all is well
+      BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+      # Do not compress images
+      SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+      # Ensure that proxy servers deliver the right content
+      Header append Vary User-Agent env=!dont-vary
+   </Location>
+
+Restart Apache
+--------------
+
+You must restart the Apache server to validate the configuration.
+
+.. code-block:: bash
+
+   service apache2 restart
+   # or
+   systemctl restart apache2
+
+Enable geolocation
+==================
+
+The automatic geolocation provided by Lizmap relies on Google services. To enable it, your webGIS must be placed under a secure protocol, like HTTPS. See for more details:
+
+https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins
+
+https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
+
+
 Create directories for data
-============================================
+===========================
 
 QGIS files and other cache files will be stored into these directories.
 
@@ -174,7 +277,7 @@ Spatial Database: PostgreSQL
 PostgreSQL and PostGIS can be very useful to manage spatial data centralized manner on the server.
 
 Install
--------------
+-------
 
 .. code-block:: bash
 
@@ -199,7 +302,7 @@ Install
    exit
 
 Adapting the PostgreSQL configuration
-----------------------------------------------
+-------------------------------------
 
 We will use ``pgtune``, an utility program that can automatically generate a PostgreSQL configuration file
 adapted to the properties of the server (memory, processors, etc.)
@@ -214,7 +317,7 @@ adapted to the properties of the server (memory, processors, etc.)
    # Restart to check any problems
    service postgresql restart
    # If error messages, increase the linux kernel configuration variables
-   echo "kernel.shmall = 4294967296" >> /etc/sysctl.conf # to increas shred buffer param in kernel
+   echo "kernel.shmall = 4294967296" >> /etc/sysctl.conf # to increase shred buffer param in kernel
    echo "kernel.shmmax = 4294967296" >> /etc/sysctl.conf
    echo 4294967296 > /proc/sys/kernel/shmall
    echo 4294967296 > /proc/sys/kernel/shmmax
@@ -223,19 +326,19 @@ adapted to the properties of the server (memory, processors, etc.)
    service postgresql restart
 
 FTP Server: pure-ftpd
-=======================
+=====================
 
 .. note:: This section is optional
 
 Install
----------------
+-------
 
 .. code-block:: bash
 
    apt-get install pure-ftpd pure-ftpd-common
 
 Configure
----------------
+---------
 
 .. code-block:: bash
 
@@ -258,11 +361,11 @@ Configure
    service pure-ftpd restart
 
 Creating a user account
---------------------------------
+-----------------------
 
 .. code-block:: bash
 
-   # Creating a user accountr
+   # Creating a user account
    MYUSER=demo
    useradd -g client -d /home/data/ftp/$MYUSER -s /bin/ftponly -m $MYUSER -k /home/data/ftp/template/
    passwd $MYUSER
@@ -282,13 +385,6 @@ Creating a user account
 Installing sources of Lizmap Web Client
 =======================================
 
-.. code-block:: bash
-
-   cd /var/www/
-
-With ZIP file
---------------
-
 Retrieve the latest available stable version from our `Github release page <https://github.com/3liz/lizmap-web-client/releases/>`_.
 
 .. warning::
@@ -296,84 +392,22 @@ Retrieve the latest available stable version from our `Github release page <http
 
 .. code-block:: bash
 
-   cd /var/www/
    # Options
-   VERSION=3.4.0
+   # Check the latest version available, maybe it's not 3.5.1 anymore
+   # https://github.com/3liz/lizmap-web-client/releases
+   VERSION=3.5.1
+   # chose location where download your zip (e.g. /var/www or your home)
+   LOCATION=/var/www
    # Archive recovery with wget
+   cd $LOCATION
    wget https://github.com/3liz/lizmap-web-client/releases/download/$VERSION/lizmap-web-client-$VERSION.zip
    # Unzip archive
    unzip $VERSION.zip
+
    # virtual link for http://localhost/lizmap/
-   ln -s /var/www/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lizmap
+   ln -s $LOCATION/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lizmap
    # Remove archive
    rm $VERSION.zip
-
-
-
-Development version with Git
-----------------------------
-
-.. warning:: The development version is always changing, and bugs can occur. Do not use it in production.
-
-.. warning::
-    Using the code from GIT, either from the ``git clone`` or the automatic ZIP created by GitHub on-the-fly,
-    needs to **build** the package first. It is not possible to use this code **directly**. If you don't want
-    to build, you **must** use some Lizmap Web Client ZIP packages which are ready to be installed, as
-    written in the step before.
-
-* First installation
-
-The source code in the Git repository is missing external PHP and Javascript packages.
-In order to install and build some files, you need to install `PHP Composer <https://getcomposer.org/download/>`_,
-`NodeJs and Npm <https://nodejs.org/en/download/>`_, as well as some other
-tools like `Make`. Read the :file:`CONTRIBUTING.md` file, provided with the source code,
-to have details about how to install these tools and to build the package.
-
-.. code-block:: bash
-
-   apt-get install git
-   cd /var/www/
-   VERSION=master
-   # Clone the master branch
-   git clone https://github.com/3liz/lizmap-web-client.git lizmap-web-client-$VERSION
-   # Go into the git repository
-   cd lizmap-web-client-$VERSION
-   # Create a personal branch for your changes
-   git checkout -b mybranch
-   # Launch PHP Composer, Npm etc, to install external dependencies
-   make build
-
-
-* To update your branch from the master repository
-
-.. code-block:: bash
-
-   cd /var/www/lizmap-web-client-$VERSION
-   # Check that you are on the branch: mybranch
-   git checkout mybranch
-
-   # If you have any changes, make a commit
-   git status
-   git commit -am "Your commit message"
-
-   # Save your configuration files!
-   lizmap/install/backup.sh /tmp
-
-   # Update your master branch
-   git checkout master && git fetch origin && git merge origin/master
-   # Apply to your branch, marge and manage potential conflicts
-   git checkout mybranch && git merge master
-   # Apply rights
-   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-
-You should then update dependencies (like external PHP and javascript packages).
-See the :file:`CONTRIBUTING.md` file provided with the source code.
-
-
-.. note:: It is always good to make a backup before updating.
-
-
 
 Configure Lizmap with the database support
 ==========================================
@@ -389,10 +423,8 @@ Create :file:`profiles.ini.php` into :file:`lizmap/var/config` by copying :file:
    cp profiles.ini.php.dist profiles.ini.php
    cd ../../..
 
-
-
 PostgreSQL
-------------------------------
+----------
 
 For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreSQL support for PHP.
 
@@ -400,6 +432,9 @@ For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreS
 
    sudo apt-get install php7.3-pgsql
    sudo service nginx restart
+
+For Lizmap logs, users and groups, it can be either stored in SqLite or PostgreSQL. To store these information in
+PostgreSQL, follow these instructions.
 
 Into a fresh copy of :file:`lizmap/var/config/profiles.ini.php`, you should have:
 
@@ -464,10 +499,10 @@ Use then the service parameter:
     search_path=lizmap,public
 
 Spatialite
-------------------------------
+----------
 
 Enable Spatialite extension
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To use editing on layers spatialite,you have to add the spatialite extension in PHP. You can follow these instructions to do so:
 http://www.gaia-gis.it/gaia-sins/spatialite-cookbook-fr/html/php.html
@@ -475,7 +510,7 @@ http://www.gaia-gis.it/gaia-sins/spatialite-cookbook-fr/html/php.html
 Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it is not, then spatialite layers will not be used in the editing tool. You can always use PostgreSQL data for editing.
 
 Give the appropriate rights to the directory containing Spatialite databases
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 So that Lizmap Web Client can modify the data contained in databases Spatialite, we must ensure that **the webserver user (www-data) has well write access to the directory containing each Spatialite file**
 
@@ -508,7 +543,7 @@ Configuring Lizmap and launching the installer
 Give the appropriate rights to directories and files
 --------------------------------------------------------------
 
-Set rights for Nginx/Apache, so php scripts could write some temporary files or do changes.
+Set rights for Nginx/Apache, so PHP scripts could write some temporary files or do changes.
 
 .. code-block:: bash
 
@@ -519,7 +554,7 @@ Set rights for Nginx/Apache, so php scripts could write some temporary files or 
 
 
 Setup configuration
---------------------
+-------------------
 
 
 Create :file:`lizmapConfig.ini.php`, :file:`localconfig.ini.php` and edit them
