@@ -8,14 +8,14 @@ Installing Lizmap Web Client on Linux Debian or Ubuntu
 .. note:: In Debian distributions, you can work as administrator (log in with ``root``), without using ``sudo`` on contrary to Ubuntu.
 
 Generic Server Configuration with Nginx server
-===============================================================
+==============================================
 
 This documentation provides an example for configuring a server with the Debian 9 distribution. We assume you have base system installed and updated.
 
 .. warning:: This page does not describe how to secure your Nginx server. It's just for a demonstration.
 
 Configure Locales
---------------------------------------------------------------
+-----------------
 
 For simplicity, it is interesting to configure the server with UTF-8 default encoding.
 
@@ -31,7 +31,7 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 .. note:: It is also necessary configure the other software so that they are using this default encoding if this is not the case.
 
 Nginx Server Configuration
-===============================================================
+==========================
 
 This documentation provides an example for configuring a server with the Debian 9 distribution. We assume you have base system installed and updated.
 
@@ -62,7 +62,7 @@ On Ubuntu 18.04 or later, install these packages:
 
 
 Web configuration
------------------------
+-----------------
 
 Create a new file /etc/nginx/sites-available/lizmap.conf:
 
@@ -112,11 +112,12 @@ Enable the virtual host you just created:
    ln -s /etc/nginx/sites-available/lizmap.conf /etc/nginx/sites-enabled/lizmap.conf
 
 Restart Nginx
---------------
+-------------
 
 You must restart the Nginx server to validate the configuration.
 
 .. code-block:: bash
+
    service nginx restart
 
 
@@ -170,10 +171,10 @@ Enable the configuration with the following command line:
    a2enconf php
 
 Web configuration
-----------------------------------------------------------
+-----------------
 
 mpm-worker configuration
-++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 We modify the Apache configuration file to adapt the options to mpm_worker server configuration.
 
@@ -191,7 +192,7 @@ We modify the Apache configuration file to adapt the options to mpm_worker serve
    </IfModule>
 
 mod_fcgid configuration
-++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^
 
 QGIS Server runs with the FastCGI protocole (a.k.a. fcgi). We must therefore configure the Apache mod_fcgid to suit to the server capabilities.
 
@@ -212,7 +213,7 @@ QGIS Server runs with the FastCGI protocole (a.k.a. fcgi). We must therefore con
    </IfModule>
 
 Setting the compression
-++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -255,7 +256,7 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl
 
 
 Create directories for data
-============================================
+===========================
 
 QGIS files and other cache files will be stored into these directories.
 
@@ -276,7 +277,7 @@ Spatial Database: PostgreSQL
 PostgreSQL and PostGIS can be very useful to manage spatial data centralized manner on the server.
 
 Install
--------------
+-------
 
 .. code-block:: bash
 
@@ -301,7 +302,7 @@ Install
    exit
 
 Adapting the PostgreSQL configuration
-----------------------------------------------
+-------------------------------------
 
 We will use ``pgtune``, an utility program that can automatically generate a PostgreSQL configuration file
 adapted to the properties of the server (memory, processors, etc.)
@@ -325,19 +326,19 @@ adapted to the properties of the server (memory, processors, etc.)
    service postgresql restart
 
 FTP Server: pure-ftpd
-=======================
+=====================
 
 .. note:: This section is optional
 
 Install
----------------
+-------
 
 .. code-block:: bash
 
    apt-get install pure-ftpd pure-ftpd-common
 
 Configure
----------------
+---------
 
 .. code-block:: bash
 
@@ -360,7 +361,7 @@ Configure
    service pure-ftpd restart
 
 Creating a user account
---------------------------------
+-----------------------
 
 .. code-block:: bash
 
@@ -384,17 +385,12 @@ Creating a user account
 Installing sources of Lizmap Web Client
 =======================================
 
-
-With ZIP file
---------------
-
 Retrieve the latest available stable version from our `Github release page <https://github.com/3liz/lizmap-web-client/releases/>`_.
 
 .. warning::
     Do not use the automatic ZIP file created by GitHub on the website. Only use ZIP attached to a release.
 
 .. code-block:: bash
-
 
    # Options
    # Check the latest version available, maybe it's not 3.5.1 anymore
@@ -427,10 +423,8 @@ Create :file:`profiles.ini.php` into :file:`lizmap/var/config` by copying :file:
    cp profiles.ini.php.dist profiles.ini.php
    cd ../../..
 
-
-
 PostgreSQL
-------------------------------
+----------
 
 For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreSQL support for PHP.
 
@@ -438,6 +432,9 @@ For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreS
 
    sudo apt-get install php7.3-pgsql
    sudo service nginx restart
+
+For Lizmap logs, users and groups, it can be either stored in SqLite or PostgreSQL. To store these information in
+PostgreSQL, follow these instructions.
 
 Into a fresh copy of :file:`lizmap/var/config/profiles.ini.php`, you should have:
 
@@ -502,10 +499,10 @@ Use then the service parameter:
     search_path=lizmap,public
 
 Spatialite
-------------------------------
+----------
 
 Enable Spatialite extension
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To use editing on layers spatialite,you have to add the spatialite extension in PHP. You can follow these instructions to do so:
 http://www.gaia-gis.it/gaia-sins/spatialite-cookbook-fr/html/php.html
@@ -513,7 +510,7 @@ http://www.gaia-gis.it/gaia-sins/spatialite-cookbook-fr/html/php.html
 Lizmap Web Client tests whether the spatialite support is enabled in PHP. If it is not, then spatialite layers will not be used in the editing tool. You can always use PostgreSQL data for editing.
 
 Give the appropriate rights to the directory containing Spatialite databases
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 So that Lizmap Web Client can modify the data contained in databases Spatialite, we must ensure that **the webserver user (www-data) has well write access to the directory containing each Spatialite file**
 
@@ -557,7 +554,7 @@ Set rights for Nginx/Apache, so PHP scripts could write some temporary files or 
 
 
 Setup configuration
---------------------
+-------------------
 
 
 Create :file:`lizmapConfig.ini.php`, :file:`localconfig.ini.php` and edit them
