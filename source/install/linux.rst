@@ -2,7 +2,10 @@
 Installing Lizmap Web Client on Linux Debian or Ubuntu
 ===============================================================
 
-.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those `instructions <https://github.com/3liz/lizmap-docker-compose>`_.
+.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those
+    `instructions <https://github.com/3liz/lizmap-docker-compose>`_ using Docker and Docker-Compose.
+
+.. note:: In Debian distributions, you can work as administrator (log in with ``root``), without using ``sudo`` on contrary to Ubuntu.
 
 Generic Server Configuration with Nginx server
 ===============================================================
@@ -27,6 +30,13 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 
 .. note:: It is also necessary configure the other software so that they are using this default encoding if this is not the case.
 
+Nginx Server Configuration
+===============================================================
+
+This documentation provides an example for configuring a server with the Debian 9 distribution. We assume you have base system installed and updated.
+
+.. warning:: This page does not describe how to secure your Nginx server. It's just for a demonstration.
+
 Installing necessary packages
 -----------------------------
 
@@ -35,7 +45,7 @@ Installing necessary packages
 .. code-block:: bash
 
    sudo su # only necessary if you are not logged in as root
-   apt update # update package lists
+   apt update # update packages list
    apt-get install curl openssl libssl1.1 nginx-full nginx nginx-common
 
 On debian 10, install these packages:
@@ -49,6 +59,7 @@ On Ubuntu 18.04 or later, install these packages:
 .. code-block:: bash
 
    apt-get install php7.3-fpm php7.3-cli php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-pgsql php7.3-sqlite3 php7.3-xml php7.3-ldap
+
 
 Web configuration
 -----------------------
@@ -100,42 +111,141 @@ Enable the virtual host you just created:
 
    ln -s /etc/nginx/sites-available/lizmap.conf /etc/nginx/sites-enabled/lizmap.conf
 
-Generic Server Configuration with Apache2 server
-===============================================================
+Restart Nginx
+--------------
 
-To install QGIS-server on apache refer to the official QGIS documentation https://docs.qgis.org/latest/en/docs/server_manual/index.html
+You must restart the Nginx server to validate the configuration.
+
+.. code-block:: bash
+   service nginx restart
+
+
+Apache Server configuration
+===========================
+
+This documentation provides an example for configuring a server with the Debian 10 distribution. We assume you have base system installed and updated.
+
+.. warning:: This page does not describe how to secure your Apache server. It's just for a demonstration.
 
 Installing necessary packages
---------------------------------------------------------------
+-----------------------------
 
-.. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.4 installation)
 
-.. note:: At least the current version supports PHP 7, so it should be straight forward to install it on current debian 9 or ubuntu 16.04.
+Firstly update the packages list, then install these packages:
 
 .. code-block:: bash
 
    sudo su # only necessary if you are not logged in as root
-   apt update # update package lists
+   apt update
+   apt-get install xauth htop curl apache2 libapache2-mod-fcgid
+   apt-get install libapache2-mod-php7.3 php7.3-cgi php7.3-gd php7.3-sqlite php7.3-curl php7.3-xmlrpc php7.3-xml python-simplejson software-properties-common
 
+PHP 7.3 configuration
+---------------------
 
-On debian 10, install these packages:
-
-.. code-block:: bash
-
-   apt install php7.3-fpm php7.3-cli php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-pgsql php7.3-sqlite3 php7.3-xml php7.3-ldap
-
-
-On Ubuntu 18.04 LTS
+In this example, we use Apache mpm-worker. So we must manually configure the activation of PHP 7.3.
 
 .. code-block:: bash
 
-   apt install xauth htop curl libapache2-mod-fcgid libapache2-mod-php7.3 php7.3-cgi php7.3-gd php7.3-sqlite php7.3-curl php7.3-xmlrpc python-simplejson software-properties-common
+   # Create the configuration file
+   nano /etc/apache2/conf-available/php.conf
+   # Copy the following text in it
+   <Directory /usr/share>
+      AddHandler fcgid-script .php
+      FCGIWrapper /usr/lib/cgi-bin/php7.3 .php
+      Options ExecCGI FollowSymlinks Indexes
+   </Directory>
 
+   <Files ~ (\.php)>
+      AddHandler fcgid-script .php
+      FCGIWrapper /usr/lib/cgi-bin/php7.3 .php
+      Options +ExecCGI
+      allow from all
+   </Files>
 
+Enable the configuration with the following command line:
 
+.. code-block:: bash
+
+   a2enconf php
+
+Web configuration
+----------------------------------------------------------
+
+mpm-worker configuration
+++++++++++++++++++++++++++++++++++++++++++++
+
+We modify the Apache configuration file to adapt the options to mpm_worker server configuration.
+
+.. code-block:: bash
+
+   nano /etc/apache2/apache2.conf
+   <IfModule mpm_worker_module>
+   StartServers       4
+   MinSpareThreads    25
+   MaxSpareThreads    100
+   ThreadLimit          64
+   ThreadsPerChild      25
+   MaxClients        150
+   MaxRequestsPerChild   0
+   </IfModule>
+
+mod_fcgid configuration
+++++++++++++++++++++++++++++++++++++++++++++
+
+QGIS Server runs with the FastCGI protocole (a.k.a. fcgi). We must therefore configure the Apache mod_fcgid to suit to the server capabilities.
+
+.. code-block:: bash
+
+  # Open the mod_fcgid configuration file
+   nano /etc/apache2/mods-enabled/fcgid.conf
+   # Paste the following content and adapt it
+   <IfModule mod_fcgid.c>
+      AddHandler    fcgid-script .fcgi
+      FcgidConnectTimeout 300
+      FcgidIOTimeout 300
+      FcgidMaxProcessesPerClass 50
+      FcgidMinProcessesPerClass 20
+      FcgidMaxRequestsPerProcess 500
+      IdleTimeout   300
+      BusyTimeout   300
+   </IfModule>
+
+Setting the compression
+++++++++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: bash
+
+   nano /etc/apache2/conf-available/mod_deflate.conf
+   # Add the bellow text in the file
+   <Location />
+      # Insert filter
+      SetOutputFilter DEFLATE
+      # Netscape 4.x encounters some problems ...
+      BrowserMatch ^Mozilla/4 gzip-only-text/html
+      # Netscape 4.06-4.08 encounter even more problems
+      BrowserMatch ^Mozilla/4\.0[678] no-gzip
+      # MSIE pretends it is Netscape, but all is well
+      BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+      # Do not compress images
+      SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+      # Ensure that proxy servers deliver the right content
+      Header append Vary User-Agent env=!dont-vary
+   </Location>
+
+Restart Apache
+--------------
+
+You must restart the Apache server to validate the configuration.
+
+.. code-block:: bash
+
+   service apache2 restart
+   # or
+   systemctl restart apache2
 
 Enable geolocation
--------------------
+==================
 
 The automatic geolocation provided by Lizmap relies on Google services. To enable it, your webGIS must be placed under a secure protocol, like HTTPS. See for more details:
 
@@ -143,14 +253,6 @@ https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-p
 
 https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
 
-Restart Nginx
---------------
-
-You must restart the Nginx server to validate the configuration.
-
-.. code-block:: bash
-
-   service nginx restart
 
 Create directories for data
 ============================================
@@ -214,7 +316,7 @@ adapted to the properties of the server (memory, processors, etc.)
    # Restart to check any problems
    service postgresql restart
    # If error messages, increase the linux kernel configuration variables
-   echo "kernel.shmall = 4294967296" >> /etc/sysctl.conf # to increas shred buffer param in kernel
+   echo "kernel.shmall = 4294967296" >> /etc/sysctl.conf # to increase shred buffer param in kernel
    echo "kernel.shmmax = 4294967296" >> /etc/sysctl.conf
    echo 4294967296 > /proc/sys/kernel/shmall
    echo 4294967296 > /proc/sys/kernel/shmmax
@@ -262,7 +364,7 @@ Creating a user account
 
 .. code-block:: bash
 
-   # Creating a user accountr
+   # Creating a user account
    MYUSER=demo
    useradd -g client -d /home/data/ftp/$MYUSER -s /bin/ftponly -m $MYUSER -k /home/data/ftp/template/
    passwd $MYUSER
@@ -444,7 +546,7 @@ Configuring Lizmap and launching the installer
 Give the appropriate rights to directories and files
 --------------------------------------------------------------
 
-Set rights for Nginx/Apache, so php scripts could write some temporary files or do changes.
+Set rights for Nginx/Apache, so PHP scripts could write some temporary files or do changes.
 
 .. code-block:: bash
 
