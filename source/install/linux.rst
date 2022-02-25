@@ -295,7 +295,9 @@ Retrieve the latest available stable version from our `Github release page <http
 
 
    # Options
-   VERSION=3.4.0
+   # Check the latest version available, maybe it's not 3.5.1 anymore
+   # https://github.com/3liz/lizmap-web-client/releases
+   VERSION=3.5.1
    # chose location where download your zip (e.g. /var/www or your home)
    LOCATION=/var/www
    # Archive recovery with wget
@@ -304,97 +306,10 @@ Retrieve the latest available stable version from our `Github release page <http
    # Unzip archive
    unzip $VERSION.zip
 
-
-Or clone the repository and than use a specific version (it is a better solution for future update)
-
-.. code-block:: bash
-
-
-   # Options
-   VERSION=3.4.0
-   # chose location where create your clone (e.g. /var/www or your home)
-   LOCATION=/var/www
-
-   # Clone repository
-   cd $LOCATION
-   git clone https://github.com/3liz/lizmap-web-client.git
-   # go to a specific release
-   git checkout $VERSION
-
-
-
-
    # virtual link for http://localhost/lizmap/
    ln -s $LOCATION/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lizmap
    # Remove archive
    rm $VERSION.zip
-
-
-
-Development version with Git
-----------------------------
-
-.. warning:: The development version is always changing, and bugs can occur. Do not use it in production.
-
-.. warning::
-    Using the code from GIT, either from the ``git clone`` or the automatic ZIP created by GitHub on-the-fly,
-    needs to **build** the package first. It is not possible to use this code **directly**. If you don't want
-    to build, you **must** use some Lizmap Web Client ZIP packages which are ready to be installed, as
-    written in the step before.
-
-* First installation
-
-The source code in the Git repository is missing external PHP and Javascript packages.
-In order to install and build some files, you need to install `PHP Composer <https://getcomposer.org/download/>`_,
-`NodeJs and Npm <https://nodejs.org/en/download/>`_, as well as some other
-tools like `Make`. Read the :file:`CONTRIBUTING.md` file, provided with the source code,
-to have details about how to install these tools and to build the package.
-
-.. code-block:: bash
-
-   apt-get install git
-   cd /var/www/
-   VERSION=master
-   # Clone the master branch
-   git clone https://github.com/3liz/lizmap-web-client.git lizmap-web-client-$VERSION
-   # Go into the git repository
-   cd lizmap-web-client-$VERSION
-   # Create a personal branch for your changes
-   git checkout -b mybranch
-   # Launch PHP Composer, Npm etc, to install external dependencies
-   make build
-
-
-* To update your branch from the master repository
-
-.. code-block:: bash
-
-   cd /var/www/lizmap-web-client-$VERSION
-   # Check that you are on the branch: mybranch
-   git checkout mybranch
-
-   # If you have any changes, make a commit
-   git status
-   git commit -am "Your commit message"
-
-   # Save your configuration files!
-   lizmap/install/backup.sh /tmp
-
-   # Update your master branch
-   git checkout master && git fetch origin && git merge origin/master
-   # Apply to your branch, marge and manage potential conflicts
-   git checkout mybranch && git merge master
-   # Apply rights
-   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-
-You should then update dependencies (like external PHP and javascript packages).
-See the :file:`CONTRIBUTING.md` file provided with the source code.
-
-
-.. note:: It is always good to make a backup before updating.
-
-
 
 Configure Lizmap with the database support
 ==========================================
