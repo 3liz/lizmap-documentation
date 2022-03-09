@@ -113,6 +113,12 @@ To be able to print a layer which is visible in Lizmap Web Client only:
     - ``ign-photo`` for IGN Photos
     - ``ign-cadastral`` for IGN Cadastre
 
+.. image:: /images/publish-print-basemap.jpg
+   :align: center
+
+*In the screenshot above, we can notice the `osm-mapnik` layer in the `hidden` group, which is a TMS layer using
+https://tiles.openstreetmap.org.*
+
 .. note:: The use of this method must be in compliance with the licensing of external baselayers used (:ref:`lizmap-config-baselayers`).
 
 .. warning::
