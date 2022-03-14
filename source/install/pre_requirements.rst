@@ -146,6 +146,8 @@ Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web Client
     Then, with Py-QGIS-Server, if your URL for OWS is `http://map:8080/ows/`, it means the URL for the Lizmap API endpoint is
     `http://map:8080/lizmap/`.
 
+.. _prerequisites-postgresql:
+
 PostgreSQL
 ----------
 
