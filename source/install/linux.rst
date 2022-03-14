@@ -272,7 +272,7 @@ QGIS files and other cache files will be stored into these directories.
 Spatial Database: PostgreSQL
 ============================
 
-.. note:: This section is optional, but required if you want to enable editing capabilities on a layer. See :ref:`edition-prerequisites`.
+.. note:: This section is optional. Please read :ref:`prerequisites-postgresql`.
 
 PostgreSQL and PostGIS can be very useful to manage spatial data centralized manner on the server.
 
@@ -307,6 +307,8 @@ Adapting the PostgreSQL configuration
 We will use ``pgtune``, an utility program that can automatically generate a PostgreSQL configuration file
 adapted to the properties of the server (memory, processors, etc.)
 
+https://pgtune.leopard.in.ua/
+
 .. code-block:: bash
 
    # PostgreSQL Tuning with pgtune
@@ -325,10 +327,13 @@ adapted to the properties of the server (memory, processors, etc.)
    # Restart PostgreSQL
    service postgresql restart
 
+For installing Lizmap tables into the PostgreSQL database (instead of SqLite by default), you can continue until the next section
+below when you need to edit the file :file:`lizmap/var/config/profiles.ini.php`.
+
 FTP Server: pure-ftpd
 =====================
 
-.. note:: This section is optional
+.. note:: This section is optional, you can setup your own way of transferring data from QGIS GIS technicians to the Lizmap server.
 
 Install
 -------
@@ -426,7 +431,9 @@ Create :file:`profiles.ini.php` into :file:`lizmap/var/config` by copying :file:
 PostgreSQL
 ----------
 
-For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreSQL support for PHP.
+For the editing of PostGIS layers in Web Client Lizmap operate, install PostgreSQL support for PHP. No configuration file need to be edited
+to edit PostgreSQL layer. You must **only** check that the Lizmap server can access the database with credentials which are stored in the QGIS project
+(or with a PostgreSQL service file).
 
 .. code-block:: bash
 
@@ -605,6 +612,10 @@ In case you get a ``500 - internal server error``, run again:
 .. note:: Replace ``localhost`` with the address or IP number of your server.
 
 In the administration panel, you should check the :guilabel:`QGIS server version` and the :guilabel:`WMS server URL` with the URL of QGIS Server.
+
+.. warning::
+    Before trying to have a QGIS project working in Lizmap, you **must** have the communication between QGIS Server and Lizmap Web Client working properly.
+    Versions about QGIS Server plugins **must** be visible from the administration interface. Please read :ref:`lizmap-server-plugin`.
 
 If you didn't install the demo, you can check that you have well installed Lizmap and configured QGIS Server within Lizmap by checking the ``qgis_server`` section in this URL:
 http://localhost/lizmap/index.php/view/app/metadata
