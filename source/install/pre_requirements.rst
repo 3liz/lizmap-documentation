@@ -2,7 +2,9 @@
 Requirements before installing Lizmap Web Client
 ================================================
 
-.. note:: If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those `instructions <https://github.com/3liz/lizmap-docker-compose>`_.
+.. note::
+    If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those
+    `instructions <https://github.com/3liz/lizmap-docker-compose>`_ using Docker and Docker-Compose.
 
 QGIS Server
 ===========
@@ -140,6 +142,9 @@ Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web Client
 
         [api.enabled]
         lizmap_api=yes
+
+    Then, with Py-QGIS-Server, if your URL for OWS is `http://map:8080/ows/`, it means the URL for the Lizmap API endpoint is
+    `http://map:8080/lizmap/`.
 
 PostgreSQL
 ----------
