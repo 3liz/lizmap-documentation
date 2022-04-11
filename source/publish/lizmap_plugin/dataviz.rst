@@ -30,6 +30,13 @@ Prerequisites
 
 .. include:: ../../shared/wfs_layer.rst
 
+Video tutorial
+--------------
+
+This video is an quick start how to setup a filtered chart in a parent popup:
+
+https://www.youtube.com/embed/aGJnScdkEtE
+
 Configuring the tool
 --------------------
 

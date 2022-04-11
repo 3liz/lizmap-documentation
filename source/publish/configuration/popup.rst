@@ -218,28 +218,14 @@ Similar to :ref:`form-popup`, you have a *Drag and drop form designer* for a lay
 :guilabel:`Copy the drag and drop designer` button. This will **erase** any existing maptip set on the layer and
 will generate the QGIS Expression matching the form layout.
 
-To have a similar popup as the **auto** one, you need to use :
+To have a similar popup as the **auto** one, you need to button in the Lizmap plugin :menuselection:`Generate the HTML table`.
+
+To display some color with HTML, you can use this sample above :
 
 .. code-block:: html
 
-    <table class="table table-condensed table-striped table-bordered lizmapPopupTable">
-      <thead>
-        <tr>
-          <th>Field</th>
-          <th>Valeur</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr>
-            <th>NAME OF THE FIELD</th>
-            <td>VALUE OF FIELD USING EXPRESSION</td>
-          </tr>
-          <tr>
-            <th>NAME OF THE FIELD</th>
-            <td>VALUE OF FIELD USING EXPRESSION</td>
-          </tr>
-      </tbody>
-    </table>
+    <font color="red">Text</font>
+
 
 One to many relations
 ---------------------
