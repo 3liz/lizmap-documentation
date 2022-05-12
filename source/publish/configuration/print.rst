@@ -101,6 +101,7 @@ To be able to print a layer which is visible in Lizmap Web Client only:
     - ``osm-mapnik`` for OpenStreetMap
     - ``osm-stamen-toner`` for OSM Stamen Toner
     - ``osm-cyclemap`` for OSM CycleMap
+    - ``open-topo-map`` for OpenTopoMap
     - ``google-satellite`` for Google Satellite
     - ``google-hybrid`` for Google Hybrid
     - ``google-terrain`` for Google Terrain
