@@ -71,11 +71,11 @@ https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-varia
     * Needed for the Lizmap Cadastre module
     * https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/
 
-* Lizmap
+* Lizmap serveur
 
-    * Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server**.
-    * https://github.com/3liz/lizmap-plugin/
-    * The plugin is highly recommended, a few features won't work as expected if the plugin is not installed or not upgraded.
+    * Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server** called **Lizmap server**.
+    * https://github.com/3liz/qgis-lizmap-server-plugin
+    * The plugin is **highly** recommended, a few features won't work as expected if the plugin is not installed or not upgraded.
     * **Important**, read below for more information the Lizmap QGIS Server plugin. (:ref:`lizmap-server-plugin`)
 
 * WfsOutputExtension
@@ -121,12 +121,9 @@ QGIS Server side
 ****************
 
 The Lizmap plugin must be installed in the correct folder for QGIS Server. The environment variable must be set in QGIS
-Server.
+Server. The plugin name is **Lizmap server**.
 
 .. warning::
-    Starting from Lizmap plugin 3.7.0 on the server, the plugin will require you to **add** a environment
-    variable on QGIS server.
-
     For **security** reason, to enable all features on the QGIS server side, you must enable the environment variable
     ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`` on QGIS server.
 
