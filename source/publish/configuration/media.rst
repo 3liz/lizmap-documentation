@@ -66,8 +66,38 @@ On the Lizmap Web Client map, if a link has been set up this way for one of the 
 Use a single media folder for many Lizmap folders
 -------------------------------------------------
 
-It's possible to use a single ``media`` folder located in the root repository of the Lizmap installation.
-As the folder is located in the parent folder of the QGIS project, it's allowed to use ``../media`` in the QGIS project, for instance in the attribute table of a layer.
+It's possible to use a single ``media`` folder located in the root data folder.
+As the folder is located in the parent folder of the QGIS project, it's allowed to use ``../media`` in the QGIS project,
+for instance in the attribute table of a layer to access a media file.
+
+This will make files inside this media folder available for **all** folders, for instance for Javascript.
+
+.. code-block:: bash
+
+    ├── media
+    │   └── js
+    │       └── default
+    │           ├── another_script.js
+    │           └── one_script.js
+    ├── my_repository
+    │   ├── project_a.qgs
+    │   ├── project_a.qgs.cfg
+    │   ├── project_b.qgs
+    │   └── project_b.qgs.cfg
+    └── other_repo
+        ├── media
+        │   └── js
+        │       ├── default
+        │       │   └── script_for_all_projects_in_other_repo.js
+        │       └── project_x
+        │           └── script_for_project_x.js
+        ├── project_x.qgs
+        ├── project_x.qgs.cfg
+        ├── project_y.qgs
+        ├── project_y.qgs.cfg
+        ├── project_z.qgs
+        └── project_z.qgs.cfg
+
 
 .. _use-in-popups:
 
