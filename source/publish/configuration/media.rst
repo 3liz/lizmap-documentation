@@ -70,15 +70,16 @@ It's possible to use a single ``media`` folder located in the root data folder.
 As the folder is located in the parent folder of the QGIS project, it's allowed to use ``../media`` in the QGIS project,
 for instance in the attribute table of a layer to access a media file.
 
-This will make files inside this media folder available for **all** folders, for instance for Javascript.
+This will make files inside this media folder available for **all** folders, for instance for Javascript, images, PDF…
 
 .. code-block:: bash
 
     ├── media
     │   └── js
-    │       └── default
-    │           ├── another_script.js
-    │           └── one_script.js
+    │   |    └── default
+    │   |       ├── another_script.js
+    │   |       └── one_script.js
+    │   └── photo_1.jpg
     ├── my_repository
     │   ├── project_a.qgs
     │   ├── project_a.qgs.cfg
