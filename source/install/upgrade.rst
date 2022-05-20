@@ -38,11 +38,11 @@ Replace Lizmap files
 
 Get the Lizmap archive by downloading an archive on the `release <https://github.com/3liz/lizmap-web-client/releases>`_ page.
 
-You should :
+You should then :
 
 - replace the ``lib/`` directory by the new ``lib/`` directory
 - replace files into ``lizmap/`` directory by the new ``lizmap/`` files
-- If the replacement has erased some files that you've been done any backup, restore
+- If the replacement has erased some files that you haven't done any backup before, restore
   them with ``lizmap/install/restore.sh /tmp``
 
 Launch the installer
