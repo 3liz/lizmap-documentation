@@ -36,13 +36,13 @@ If you want to backup by hand, you should backup at least these files:
 Replace Lizmap files
 --------------------------------------------------------------
 
-Get the Lizmap archive (by downloading an archive or by doing a git clone/pull)
+Get the Lizmap archive by downloading an archive on the `release <https://github.com/3liz/lizmap-web-client/releases>`_ page.
 
-You should
+You should :
 
-- replace the lib/ directory by the new lib/ directory
-- replace files into lizmap/ directory by the new lizmap/ files
-- If the replacement has erased some files that you've been backuped, restore
+- replace the ``lib/`` directory by the new ``lib/`` directory
+- replace files into ``lizmap/`` directory by the new ``lizmap/`` files
+- If the replacement has erased some files that you've been done any backup, restore
   them with ``lizmap/install/restore.sh /tmp``
 
 Launch the installer
