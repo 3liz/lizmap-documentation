@@ -7,16 +7,22 @@ Upgrading from Lizmap 2.x
 
 See `documentation of Lizmap 3.1 <https://docs.lizmap.com/3.1/en/install/upgrade.html>`_.
 
-Upgrading from Lizmap 3.x versions
-===============================================================
+Upgrading from Lizmap lower than 3.5 versions
+=============================================
 
-From 3.0 versions to upper, here is how to upgrade.
+You should first migrate to 3.5. See `documentation of Lizmap 3.5 <https://docs.lizmap.com/3.5/en/install/upgrade.html>`_.
+Then you could migrate to 3.6
+
+Upgrading from Lizmap 3.5 version
+=================================
+
+Here is how to upgrade from Lizmap 3.5.
 
 Data backup
 --------------------------------------------------------------
 
-Backup your data into a directory (ex: /tmp) with the lizmap/install/backup.sh
-script, so you could reinstall them if the installation failed.
+Backup your data and configuration files into a directory (ex: ``/tmp``) with the ``lizmap/install/backup.sh``
+script of Lizmap 3.5.
 
 .. code-block:: bash
 
@@ -27,7 +33,8 @@ If you want to backup by hand, you should backup at least these files:
 - var/db/jauth.db
 - var/db/logs.db
 - var/config/installer.ini.php
-- var/config/liveConfig.ini.php (if it exists)
+- var/config/liveConfig.ini.php
+- var/config/localframework.ini.php (if it exists)
 - var/config/lizmapConfig.ini.php
 - var/config/localconfig.ini.php
 - var/config/profiles.ini.php
@@ -40,10 +47,11 @@ Get the Lizmap archive by downloading an archive on the `release <https://github
 
 You should then :
 
-- replace the ``lib/`` directory by the new ``lib/`` directory
-- replace files into ``lizmap/`` directory by the new ``lizmap/`` files
-- If the replacement has erased some files that you haven't done any backup before, restore
-  them with ``lizmap/install/restore.sh /tmp``
+- rename the ``lizmap/`` directory to ``lizmap.bak/`` for example
+- extract the ``lizmap/`` directory from the archive, so it will be become the new ``lizmap/`` directory.
+- execute the script ``lizmap/install/restore.sh /tmp`` or reinstall by hand the files you backup.
+
+Note: there is not anymore a ``lib/`` directory.
 
 Launch the installer
 --------------------------------------------------------------
@@ -55,32 +63,29 @@ configuration etc..
 
    sudo lizmap/install/clean_vartmp.sh
    php lizmap/install/installer.php
+
+
+Cleanup and test
+----------------------------------------------------------------
+
+You should then delete all cache and temporary files:
+
+.. code-block:: bash
+
    sudo lizmap/install/clean_vartmp.sh
 
-.. note::
-   if you upgrade from 3.0 or 3.1 to Lizmap 3.2/3.3, and if you are using the ldap
-   authentication with the ldapdao module, you have to know that this module
-   is included into Lizmap 3.2/3.3 and is pre-configured. So, before launching the
-   installer, you have to remove the ldapdao module you've installed, and you
-   have to configure the ldapdao module in a little different manner than when
-   installing it by hand. See the ldap configuration section in this manual.
-
-
-Delete Jelix temporary files
---------------------------------------------------------------
+Then you should call the script that sets rights on files. Parameters are the
+web user and the web group used by the web server to execute Lizmap. On a
+Debian server, it is often www-data.
 
 .. code-block:: bash
 
-   rm -rf /var/www/$MYAPP-$VERSION/temp/lizmap/*
+    sudo lizmap/install/set_rights.sh www-data www-data
 
-Redefine the rights to the application files
--------------------------------------------------------
 
-.. code-block:: bash
+Then load Lizmap into your browser, you should see your maps without errors.
 
-   cd /var/www/$MYAPP-$VERSION
-   chown :www-data temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
-   chmod 775 temp/ lizmap/var/ lizmap/www lizmap/install/qgis/edition/ -R
+If this is the case, you can delete the old directories ``lib/`` and ``lizmap.bak/``.
 
 
 Migrating from Sqlite to Postgresql

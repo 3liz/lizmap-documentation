@@ -2,33 +2,30 @@
 Configuration of Lizmap
 ===============================================================
 
-In some server, additionnal settings should be done into Lizmap.
+In some server, additional settings should be done into Lizmap.
 Settings should be set into the ``lizmap/var/config/`` directory.
 
 Configuration files
 ===================
 
-There are several configuration files for Lizmap. There are into lizmap/var/config/.
+There are several configuration files for Lizmap.
 
 Framework configuration files:
 
-* ``mainconfig.ini.php`` contains many configuration parameters, mainly for
-  the framework used by Lizmap. You may want to modify some of them, like
-  the available languages etc. **DON'T MODIFY mainconfig.ini.php**. Put
-  parameters with their new values into ``localconfig.ini.php`` instead!
-* ``localconfig.ini.php`` contains configuration parameters that are specific to
+* ``app/system/mainconfig.ini.php`` contains many configuration parameters, with their
+  default values, mainly for the framework used by Lizmap. You would want to modify
+  some of them, like the available languages etc. However, you **must NOT MODIFY mainconfig.ini.php and any other files from app/**.
+  Set parameters with their new values into ``var/config/localconfig.ini.php`` instead!
+* ``var/config/localconfig.ini.php`` contains configuration parameters that are specific to
   your installation. So you put into it any parameters you can find into
   ``mainconfig.ini.php`` and you want to change.
-* ``liveconfig.ini.php`` is containing parameters from ``mainconfig.ini.php``
+* ``var/config/liveconfig.ini.php`` is containing parameters from ``mainconfig.ini.php``
   that are changed by the application itself.
 
 During the execution of Lizmap, ``mainconfig.ini.php``, ``localconfig.ini.php``,
 and ``liveconfig.ini.php`` are merged in this order. So parameters into ``liveconfig.ini.php``
 have higher priority that those into ``localconfig.ini.php``, which in turn,
 have parameters having higher priority over parameters of ``mainconfig.ini.php``.
-
-.. note:: ``liveconfig.ini.php`` and ``localconfig.ini.php`` may not exists
-          on old releases.
 
 Other framework configuration files:
 
