@@ -71,7 +71,7 @@ https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-varia
     * Needed for the Lizmap Cadastre module
     * https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/
 
-* Lizmap serveur
+* Lizmap server
 
     * Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server** called **Lizmap server**.
     * https://github.com/3liz/qgis-lizmap-server-plugin
@@ -113,6 +113,10 @@ Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web Client
 
         * use the **Form** popup, read :ref:`form-popup`.
         * enable ``@lizmap_user`` and ``lizmap_user_groups`` variables in QGIS projects
+
+    * https://github.com/3liz/qgis-lizmap-server-plugin
+    * The plugin is not required, but a few features won't work as expected if the plugin is not installed or not upgraded
+    * The name of the plugin is **Lizmap server**. Do not install the **Lizmap** plugin which is the **desktop** Python plugin.
 
 Installation
 ^^^^^^^^^^^^
