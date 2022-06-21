@@ -13,6 +13,9 @@ With the plugin, you can activate popups for a **layer** or for a **group** conf
 
 In the :guilabel:`Layers` tab, click on the :guilabel:`Popup` checkbox.
 
+..  image:: /images/publish-link.jpg
+   :align: center
+
 For the :guilabel:`Group as layer` option you must select the option for the group and for all the layers included you want to show in the popup: in this case, only the layers with the option :guilabel:`Popup` checked will be shown.
 
 You have three types of popup sources:
@@ -225,21 +228,26 @@ To have a similar popup as the **auto** one, you need to use :
 One to many relations
 ---------------------
 
-It is possible to display multiple objects (photos, documents) for each geographical feature. To do so, you have to configure both the QGIS project and the Lizmap config.
+It is possible to display multiple objects (photos, documents) for each geographical feature.
+To do so, you have to configure both the QGIS project and the Lizmap config.
 
 In QGIS project:
 
-* Use 2 separate layers to store the main features and the pictures. For example `trees` and `tree_pictures`. The child layer must contain a field referencing the parent layer id
-* Configure aliases and field types in tab Fields of the layers properties dialog. Use `Photo` for the field which will contains the relative path to pictures
-* Add a relation in QGIS project properties between the main layer `trees` and the child layer `tree_pictures`
-* Add data to the layers. You should use relative path to store the pictures path. Theses paths must refer to a project media subdirectory, for example: `media/photos/feature_1_a.jpg`
+* Use 2 separate layers to store the main features and the pictures. For example `trees` and `tree_pictures`.
+  The child layer must contain a field referencing the parent layer id.
+* Configure aliases and field types in :menuselection:`Layer Properties -> Fields`.
+  Use `Photo` for the field which will contains the relative path to pictures.
+* Add a relation in QGIS project properties between the main layer `trees` and the child layer `tree_pictures` in
+  :menuselection:`Project properties -> Relations`.
+* Add data to the layers. You should use relative path to store the pictures path. Theses paths must refer to a
+  project media subdirectory, for example: `media/photos/feature_1_a.jpg`
 
 In Lizmap plugin:
 
-* In the :guilabel:`Layers` tab, activate popup for both layers. You can configure popup if you need specific layouts ( See documentation on popups )
+* In the :guilabel:`Layers` tab, activate popup for both layers. You can configure source of the popup if you need specific layouts
 * For the parent layer, activate the option :guilabel:`Display relative children under each object (use relations)`
-* Add the two layers in the :guilabel:`Attribute table` tab
-* You can optionally activate editing for the two layers, to allow the web users to create new features and upload pictures
+* *Optionally*, add the two layers in the :guilabel:`Attribute table` tab
+* *Optionally*, you can activate editing for the two layers, to allow the web users to create new features and upload pictures
 * Save and publish your project and Lizmap configuration
 
 In Lizmap Web Client:
@@ -247,8 +255,8 @@ In Lizmap Web Client:
 .. image:: /images/feature-popup-toggle-compact-mode.jpg
    :align: left
 
-If relative children popup are defined as ``auto``, this button will be visible in the feature's popup at the top of related objects. Click it to compact all
-related objects in one table with search, sort and paging capabilities.
+If relative children popup are defined as ``auto``, this button will be visible in the feature's popup at the top of related objects.
+Click it to compact all related objects in one table with search, sort and paging capabilities.
 
 Link to a PDF QGIS layout
 _________________________
