@@ -9,6 +9,9 @@ Atlas - a sequence of entities
 Principle
 ---------
 
+.. warning::
+    This atlas feature is not linked to a QGIS layout based on an atlas. See :ref:`print-layout-atlas` for layouts using an atlas.
+
 This feature let you chose and configure a layer to make a sequence of entities in your Lizmap project.
 
 Since |lizmap_3_4| :
