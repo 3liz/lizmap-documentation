@@ -69,6 +69,8 @@ Only the published compositions will be presented in Lizmap.
    :align: center
    :width: 600
 
+.. _print-layout-atlas:
+
 Layout with an atlas when using a popup
 ---------------------------------------
 
