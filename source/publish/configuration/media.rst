@@ -11,8 +11,14 @@ Principle
 
 It is possible to provide documents through Lizmap. To do this, you simply:
 
-* Create a directory called :file:`media` (in lower case and without accents) *at the same level as the QGIS project*
+* Create a directory called :file:`media` (in lower case and without accents)
+
+    * either **at the same level as the QGIS project**
+    * or for some specific use-cases, one level up related to the QGIS project, to make it available for **all** folders
+      (:ref:`single-media-folder`)
+
 * Put documents in it : pictures, reports, PDFs, videos, HTML or text files
+* Icons such as SVG for vector layers
 * You can use subdirectories per layer or theme: the organization of :file:`media` directory content is free.
 
 Lizmap is using the directory for other purposes:
@@ -31,6 +37,16 @@ Details of these uses is specified below.
 
 .. warning::
     Check your file permissions on the :file:`media` folder. If the folder is not readable, an error will occur.
+
+Dot and dot-dot
+---------------
+
+On Linux, when you see dot ``.``, it means "this directory".
+
+Two dots, ``..``, one after the other, means "the directory immediately above the current one".
+
+The two dots notation is used in QGIS and Lizmap to go one level up in the tree related to the QGIS project,
+see :ref:`single-media-folder`.
 
 Use for links
 -------------
@@ -60,6 +76,21 @@ On the Lizmap Web Client map, if a link has been set up this way for one of the 
     you should choose ``Attachment`` widget and set the path relative to the project.
 
     If the media is a picture, you should set the :guilabel:`Integrated Document Viewer` to ``Image``.
+
+Use for SVG
+-----------
+
+In the QGIS, you can use custom SVG, in your layouts, symbology etc.
+
+QGIS will display a absolute path but in the project, a relative path is saved. In the screenshot below, you can notice the
+absolute path whereas if you open the QGS file in a text editor, it's a relative path :
+
+``<prop v="../media/custom_svg/croissant.svg" k="name"/>``
+
+..  image:: /images/media-custom-svg.jpg
+   :align: center
+
+The path is starting with ``../media``, it's using the media folder described below.
 
 .. _single-media-folder:
 
