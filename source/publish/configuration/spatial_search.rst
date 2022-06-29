@@ -56,8 +56,8 @@ The relation ``lizmap_search`` must contain the following columns:
 
 * ``item_layer`` (text). Name of the layer. For example "Countries"
 * ``item_label`` (text). Label to display the results, which is the data to search among. Ex: "France" or "John Doe - Australia". You can build it from a concatenation of several fields values.
-* ``item_project`` (text). List of Lizmap projects separated by commas. Optionnal. When set, the search will be done only for the specified Lizmap projects
-* ``item_filter`` (text). Username or group name. When given, the results will be filtered by authenticated user login and groups. For example, 'admins'
+* ``item_project`` (text). List of Lizmap projects separated by commas. When set, the search will be done only for the specified Lizmap projects. The value can be ``NULL`` if you don't want to filter per project.
+* ``item_filter`` (text). Username or group name. When given, the results will be filtered by authenticated user login and groups. For example, 'admins'. The value can be ``NULL`` if you don't want to filter per user.
 * ``geom`` (geometry). We advise to store all the geometries with the same SRID.
 
 Here is an example of SQL code you can use, to add data from two different spatial tables into lizmap_search (here as a materialized view to ease further maintenance)
