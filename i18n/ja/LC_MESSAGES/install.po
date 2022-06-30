@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2021, 3liz
+# Copyright (C) 2014-2022, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Jin Igarashi <wushilan0623@gmail.com>, 2021
+# Jin Igarashi <wushilan0623@gmail.com>, 2022
+# 山本　竜三 <ryu@yamakun.net>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Lizmap 3.5\n"
+"Project-Id-Version: Lizmap 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-13 10:30+0000\n"
+"POT-Creation-Date: 2022-06-30 10:38+0200\n"
 "PO-Revision-Date: 2018-09-07 13:31+0000\n"
-"Last-Translator: Jin Igarashi <wushilan0623@gmail.com>, 2021\n"
+"Last-Translator: 山本　竜三 <ryu@yamakun.net>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/3liz-1/teams/62012/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,9 +37,9 @@ msgid ""
 " content an unwanted port ( ``http://mydomain:5468/`` instead of "
 "``http://mydomain/`` ). Or url may not contain the real domain name."
 msgstr ""
-"LizmapのURLはお望みのものになってはいないかもしれません。たとえば、\"https \"プロトコルではなく \"http "
-"\"プロトコルを使用している場合です。あるいは、不要なポートを含んでいるかもしれません（ ``http://mydomain/`` ではなく "
-"``http://mydomain:5468/` `）。また、URLに実際のドメイン名が含まれていない場合もあります。"
+"LizmapのURLはお望みのものになってはいないかもしれません。たとえば、\"https\" プロトコルではなく \"http\" "
+"プロトコルを使用している場合です。あるいは、不要なポートを含んでいるかもしれません（ ``http://mydomain/`` ではなく "
+"``http://mydomain:5468/`` ）。また、URLに実際のドメイン名が含まれていない場合もあります。"
 
 #: ../../source/install/advanced_install.rst:13
 msgid ""
@@ -60,7 +61,7 @@ msgstr "LizmapにHTTPSを強制的に使うようにしたり、正しいドメ�
 msgid ""
 "In ``localconfig.ini.php``, you can use these following configuration "
 "parameters."
-msgstr "``localconfig.ini.php``には、以下のような設定パラメータがあります。"
+msgstr "``localconfig.ini.php`` には、以下のような設定パラメータがあります。"
 
 #: ../../source/install/advanced_install.rst:22
 msgid ""
@@ -125,7 +126,7 @@ msgstr ""
 
 #: ../../source/install/advanced_install.rst:81
 msgid "Into this files, use the syntax ``${VARIABLE_NAME}``."
-msgstr "このファイルには、``${VARIABLE_NAME}``の構文を使用します。"
+msgstr "このファイルには、``${VARIABLE_NAME}`` の構文を使用します。"
 
 #: ../../source/install/advanced_install.rst:83
 msgid ""
@@ -143,20 +144,17 @@ msgstr "Lizmapの設定"
 
 #: ../../source/install/configuration.rst:5
 msgid ""
-"In some server, additionnal settings should be done into Lizmap. Settings "
+"In some server, additional settings should be done into Lizmap. Settings "
 "should be set into the ``lizmap/var/config/`` directory."
 msgstr ""
-"一部のサーバでは、Lizmapに追加設定を行う必要があります。設定は、``lizmap/var/config/``ディレクトリ上で行います。"
 
 #: ../../source/install/configuration.rst:9
 msgid "Configuration files"
 msgstr "設定ファイル"
 
 #: ../../source/install/configuration.rst:11
-msgid ""
-"There are several configuration files for Lizmap. There are into "
-"lizmap/var/config/."
-msgstr "Lizmapにはいくつかの設定ファイルがあります。lizmap/var/config/にあります。"
+msgid "There are several configuration files for Lizmap."
+msgstr ""
 
 #: ../../source/install/configuration.rst:13
 msgid "Framework configuration files:"
@@ -164,32 +162,26 @@ msgstr "フレームワーク設定ファイル"
 
 #: ../../source/install/configuration.rst:15
 msgid ""
-"``mainconfig.ini.php`` contains many configuration parameters, mainly for "
-"the framework used by Lizmap. You may want to modify some of them, like the "
-"available languages etc. **DON'T MODIFY mainconfig.ini.php**. Put parameters"
-" with their new values into ``localconfig.ini.php`` instead!"
+"``app/system/mainconfig.ini.php`` contains many configuration parameters, "
+"with their default values, mainly for the framework used by Lizmap. You "
+"would want to modify some of them, like the available languages etc. "
+"However, you **must NOT MODIFY mainconfig.ini.php and any other files from "
+"app/**. Set parameters with their new values into "
+"``var/config/localconfig.ini.php`` instead!"
 msgstr ""
-"``mainconfig.ini.php`` "
-"には、主にLizmapが使用するフレームワークのための、多くの設定パラメータが含まれています。利用可能な言語など、いくつかのパラメータを変更したいかもしれません。"
-" **mainconfig.ini.phpを修正はしないでください**。 新しい値を持つパラメータは、代わりに "
-"``localconfig.ini.php`` に設定するようにしてください。"
 
 #: ../../source/install/configuration.rst:19
 msgid ""
-"``localconfig.ini.php`` contains configuration parameters that are specific "
-"to your installation. So you put into it any parameters you can find into "
-"``mainconfig.ini.php`` and you want to change."
+"``var/config/localconfig.ini.php`` contains configuration parameters that "
+"are specific to your installation. So you put into it any parameters you can"
+" find into ``mainconfig.ini.php`` and you want to change."
 msgstr ""
-"``localconfig.ini.php``には、あなたのインストールに特有の設定パラメータが含まれています。つまり、 "
-"``mainconfig.ini.php`` にあるパラメータのうち、変更したいものをこの中で再定義します。"
 
 #: ../../source/install/configuration.rst:22
 msgid ""
-"``liveconfig.ini.php`` is containing parameters from ``mainconfig.ini.php`` "
-"that are changed by the application itself."
+"``var/config/liveconfig.ini.php`` is containing parameters from "
+"``mainconfig.ini.php`` that are changed by the application itself."
 msgstr ""
-"``liveconfig.ini.php`` は、アプリケーション自身によって変更される ``mainconfig.ini.php`` "
-"のパラメータを含んでいます。"
 
 #: ../../source/install/configuration.rst:25
 msgid ""
@@ -200,22 +192,16 @@ msgid ""
 "higher priority over parameters of ``mainconfig.ini.php``."
 msgstr ""
 "Lizmapの実行中に、 ``mainconfig.ini.php``, ``localconfig.ini.php``, "
-"``liveconfig.ini.php`` がこの順番でマージされます。つまり、``liveconfig.ini.php` "
-"のパラメータは、``localconfig.ini.php` のパラメータよりも高い優先度を持ち、その結果、``mainconfig.ini.php` "
+"``liveconfig.ini.php`` がこの順番でマージされます。つまり、``liveconfig.ini.php`` "
+"のパラメータは、``localconfig.ini.php`` "
+"のパラメータよりも高い優先度を持ち、その結果、``mainconfig.ini.php`` "
 "のパラメータよりも高い優先度のパラメータを持つことになります。"
 
 #: ../../source/install/configuration.rst:30
-msgid ""
-"``liveconfig.ini.php`` and ``localconfig.ini.php`` may not exists on old "
-"releases."
-msgstr ""
-"古いリリースでは、 ``liveconfig.ini.php`` と ``localconfig.ini.php`` が存在しない場合があります。"
-
-#: ../../source/install/configuration.rst:33
 msgid "Other framework configuration files:"
 msgstr "その他のフレームワーク設定ファイル"
 
-#: ../../source/install/configuration.rst:35
+#: ../../source/install/configuration.rst:32
 msgid ""
 "``profiles.ini.php`` contains all credentials to access to databases, smtp "
 "servers, ldap etc. You should modify it to set these access parameters."
@@ -223,7 +209,7 @@ msgstr ""
 "``profiles.ini.php`` "
 "には、データベース、SMTPサーバー、LDAPなどにアクセスするためのすべての認証情報が含まれています。これらのアクセスパラメータを設定するためには、これを変更する必要があります。"
 
-#: ../../source/install/configuration.rst:37
+#: ../../source/install/configuration.rst:34
 msgid ""
 "``installer.ini.php`` contains informations about Lizmap modules and their "
 "state. Don't touch it, and don't erase it between upgrades. You can delete "
@@ -232,22 +218,22 @@ msgstr ""
 "``installer.ini.php`` "
 "は、Lizmapモジュールとその状態についての情報を含んでいます。アップグレードの間は、絶対に触らず、消さないでください。削除できるのは、Lizmapを再インストールするときだけです。"
 
-#: ../../source/install/configuration.rst:41
+#: ../../source/install/configuration.rst:38
 msgid "Lizmap configuration files:"
 msgstr "Lizmap設定ファイル"
 
-#: ../../source/install/configuration.rst:43
+#: ../../source/install/configuration.rst:40
 msgid ""
 "``lizmapConfig.ini.php`` contains configuration parameters specific to "
 "Lizmap."
 msgstr "``lizmapConfig.ini.php`` は、Lizmapに固有の設定パラメータを含んでいます。"
 
-#: ../../source/install/configuration.rst:45
+#: ../../source/install/configuration.rst:42
 msgid ""
 "``lizmapLogConfig.ini.php`` contains configuration for the Lizmap logger"
 msgstr "``lizmapLogConfig.ini.php`` は、Lizmapロガーの設定を含んでいます"
 
-#: ../../source/install/configuration.rst:47
+#: ../../source/install/configuration.rst:44
 msgid ""
 "For backups and upgrades, you should keep ``localconfig.ini.php``,  "
 "``liveconfig.ini.php``, ``lizmapConfig.ini.php``, ``profiles.ini.php``, "
@@ -258,17 +244,17 @@ msgstr ""
 "``lizmapConfig.ini.php``, ``profiles.ini.php``, ``lizmapLogConfig.ini.php``,"
 " ``installer.ini.php`` を保持しておく必要があります。これらはすべて、アプリケーションの稼働中やインストール中に変更されます。"
 
-#: ../../source/install/configuration.rst:53
+#: ../../source/install/configuration.rst:50
 msgid "Setting language"
 msgstr "言語の設定"
 
-#: ../../source/install/configuration.rst:55
+#: ../../source/install/configuration.rst:52
 msgid ""
 "Lizmap detects automatically the language of the user (given by his "
 "browser), and it supports many languages."
 msgstr "Lizmapは、ユーザーの言語（ブラウザによって与えられる）を自動的に検出し、多くの言語をサポートしています。"
 
-#: ../../source/install/configuration.rst:58
+#: ../../source/install/configuration.rst:55
 msgid ""
 "Available language into Lizmap are: fr_FR, en_US, it_IT, es_ES, eu_ES, "
 "pt_PT, el_GR, de_DE, pl_PL, ru_RU, fi_FI, gl_ES, sv_SE, nl_NL, ro_RO, hu_HU."
@@ -276,42 +262,44 @@ msgstr ""
 "Lizmapで利用可能な言語は、fr_FR, en_US, it_IT, es_ES, eu_ES, pt_PT, el_GR, de_DE, "
 "pl_PL, ru_RU, fi_FI, gl_ES, sv_SE, nl_NL, ro_RO, hu_HUです。"
 
-#: ../../source/install/configuration.rst:61
+#: ../../source/install/configuration.rst:58
 msgid ""
 "If the browser of the user indicates an unsupported language code, the "
 "default language of Lizmap is used, and is en_US."
 msgstr "ユーザーのブラウザがサポートされていない言語コードを使っている場合は、Lizmapのデフォルト言語が使用され、en_USとなります。"
 
-#: ../../source/install/configuration.rst:64
+#: ../../source/install/configuration.rst:61
 msgid ""
 "You can change the default language of Lizmap by setting the parameter "
 "``locale`` Into localconfig.ini.php, with your prefered language code."
 msgstr ""
-"localconfig.ini.phpにパラメータ``locale``を設定して、お好みの言語コードを指定することで、Lizmapのデフォルト言語を変更することができます。"
+"localconfig.ini.phpにパラメータ ``locale`` "
+"を設定して、お好みの言語コードを指定することで、Lizmapのデフォルト言語を変更することができます。"
 
-#: ../../source/install/configuration.rst:67
+#: ../../source/install/configuration.rst:64
 msgid ""
 "You can also limit available language by changing the ``availableLocales`` "
 "option."
-msgstr "また、``availableLocales``オプションを変更することで、利用可能な言語を制限することもできます。"
+msgstr "また、 ``availableLocales`` オプションを変更することで、利用可能な言語を制限することもできます。"
 
-#: ../../source/install/configuration.rst:69
+#: ../../source/install/configuration.rst:66
 msgid ""
 "In this example, only 3 languages are available and the default language is "
 "italian:"
 msgstr "この例では、3つの言語のみが利用可能で、デフォルトの言語はイタリア語です。"
 
-#: ../../source/install/configuration.rst:76
+#: ../../source/install/configuration.rst:73
 msgid ""
 "There is also a ``fallbackLocale`` option but it is not recommended to "
 "change it."
-msgstr "また、``fallbackLocale``というオプションもありますが、これを変更することはお勧めしません。"
+msgstr "また、 ``fallbackLocale`` というオプションもありますが、これを変更することはお勧めしません。"
 
 #: ../../source/install/index.rst:3
 msgid "Installing and upgrading Lizmap"
 msgstr "Lizmapのインストールとアップグレード"
 
-#: ../../source/shared/about_versions.rst:1
+#: ../../source/shared/about_versions.rst <included from
+#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/install/index.rst>:1
 msgid ""
 "For more information on versions (Web-browsers, QGIS Server, PostgreSQL etc)"
 " which are supported, it's written on the Lizmap Web Client wiki page : "
@@ -353,7 +341,7 @@ msgstr "LDAPを有効にする"
 
 #: ../../source/install/ldap.rst:26
 msgid "In the :file:`localconfig.ini.php`, you have to set these parameters:"
-msgstr ":file:`localconfig.ini.phpで、これらのパラメータを設定する必要があります。"
+msgstr ":file:`localconfig.ini.php` で、これらのパラメータを設定する必要があります。"
 
 #: ../../source/install/ldap.rst:36
 msgid ""
@@ -370,8 +358,8 @@ msgid ""
 "server, and to search users into the ldap. The section may already exist if "
 "you copied profiles.ini.php from the profiles.ini.php.dist."
 msgstr ""
-"それから、 "
-"profiles.ini.phpにセクション`[ldap:lizmapldap]`を追加して、ldapサーバーに接続し、ldapでユーザーを検索できるようにする設定をしなければなりません。このセクションは、profiles.ini.php.distからprofiles.ini.phpをコピーした場合、すでに存在しているかもしれません。"
+"それから、 profiles.ini.phpにセクション `[ldap:lizmapldap]` "
+"を追加して、ldapサーバーに接続し、ldapでユーザーを検索できるようにする設定をしなければなりません。このセクションは、profiles.ini.php.distからprofiles.ini.phpをコピーした場合、すでに存在しているかもしれません。"
 
 #: ../../source/install/ldap.rst:60
 msgid "See details about how to set these parameters in a section below."
@@ -387,7 +375,7 @@ msgstr ""
 
 #: ../../source/install/ldap.rst:66
 msgid "To finish to enable the module, run *php lizmap/install/installer.php*"
-msgstr "モジュールを有効にするには、*php lizmap/install/installer.php*を実行します。"
+msgstr "モジュールを有効にするには、 *php lizmap/install/installer.php* を実行します。"
 
 #: ../../source/install/ldap.rst:70
 msgid "ldap settings"
@@ -415,32 +403,33 @@ msgid ""
 "You indicate such informations into the `searchAttributes` property. It is a"
 " pair of names, ``<ldap attribute>:<table field>``, separated by a comma."
 msgstr ""
-"このような情報は、`searchAttributes`プロパティに記述します。 ``<ldap attribute>:<table "
-"field>``は間まで区切られた名前のペアです。"
+"このような情報は、 `searchAttributes` プロパティに記述します。 ``<ldap attribute>:<table field>``"
+" は間まで区切られた名前のペアです。"
 
 #: ../../source/install/ldap.rst:85
 msgid ""
 "In this example, "
 "``searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"``:"
 msgstr ""
-"例えば``searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"``ような設定の場合"
+"例えば ``searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"`` "
+"ような設定の場合"
 
 #: ../../source/install/ldap.rst:87
 msgid ""
 "the value of the `uid` ldap attribute will be stored into the `login` field"
-msgstr "`uid`というLDAP 属性の値が `login` フィールドに格納されます。"
+msgstr "`uid` というLDAP 属性の値が  `login` フィールドに格納されます。"
 
 #: ../../source/install/ldap.rst:88
 msgid ""
 "the value of the `sn` ldap attribute will be stored into the `lastname` "
 "field"
-msgstr "`sn`というLDAP 属性の値が `lastname` フィールドに格納されます。"
+msgstr "`sn` というLDAP 属性の値が `lastname` フィールドに格納されます。"
 
 #: ../../source/install/ldap.rst:89
 msgid ""
 "the value of the `firstname` ldap attribute will be stored into a field that"
 " have the same name, as there is no field name nor ``:``."
-msgstr "`firstname`というldap属性の値は、フィールド名や ``:`` がないため、同じ名前のフィールドに格納されます。"
+msgstr "`firstname` というldap属性の値は、フィールド名や ``:`` がないため、同じ名前のフィールドに格納されます。"
 
 #: ../../source/install/ldap.rst:91
 msgid ""
@@ -448,8 +437,8 @@ msgid ""
 "field name. It will be readed from ldap, and can be used into the "
 "`bindUserDN` DN template. (see below)."
 msgstr ""
-"`dn` プロパティのマッピングはありません。フィールド名のない ``:`` "
-"があります。これはldapから読み込まれ、`bindUserDN`のDNテンプレートに使用することができます。(下記参照)."
+"`dn` プロパティのマッピングはありません。フィールド名のない ``:`` があります。これはldapから読み込まれ、`bindUserDN` "
+"のDNテンプレートに使用することができます。(下記参照)."
 
 #: ../../source/install/ldap.rst:95
 msgid ""
@@ -459,7 +448,7 @@ msgid ""
 msgstr ""
 "Lizmapで使用可能なフィールドのリストは以下の通りです。`login`, `email`, `firstname`, `lastname`, "
 "`organization`, `phonenumber`, `street`, `postcode`, `city`, "
-"`country`。`login`と`email`のみ必須です。その他はオプションです。"
+"`country`。`login` と `email` のみ必須です。その他はオプションです。"
 
 #: ../../source/install/ldap.rst:101
 msgid "Configuration properties for authentication"
@@ -479,7 +468,7 @@ msgid ""
 "The `searchUserFilter` should contain the ldap query, and a ``%%LOGIN%%`` "
 "placeholder that will be replaced by the login given by the user."
 msgstr ""
-"`searchUserFilter` には，ldap クエリと，ユーザが指定したログイン名で置き換えられる``%%LOGIN%%`` "
+"`searchUserFilter` には，ldap クエリと，ユーザが指定したログイン名で置き換えられる ``%%LOGIN%%`` "
 "プレースホルダを指定します．"
 
 #: ../../source/install/ldap.rst:110
@@ -494,8 +483,8 @@ msgid ""
 "You may also indicate the base DN for the search, into `searchUserBaseDN`. "
 "Example: ``searchUserBaseDN=\"ou=ADAM users,o=Microsoft,c=US\"``."
 msgstr ""
-"また、`searchUserBaseDN`には、検索のベースとなるDNを指定することもできます。例えば、 "
-"``searchUserBaseDN=\"ou=ADAM users,o=Microsoft,c=US\"``."
+"また、`searchUserBaseDN` には、検索のベースとなるDNを指定することもできます。例えば、 "
+"``searchUserBaseDN=\"ou=ADAM users,o=Microsoft,c=US\"`` 。"
 
 #: ../../source/install/ldap.rst:115
 msgid ""
@@ -522,8 +511,8 @@ msgid ""
 "contain a DN, with a ``%%LOGIN%%`` placeholder that will be replaced by the "
 "login."
 msgstr ""
-"*ユーザーが指定したログイン名からDNを構築する*: bindUserDNには、ログインで置き換えられる "
-"``%%LOGIN%%``プレースホルダーを含むDNを指定してください。"
+"*ユーザーが指定したログイン名からDNを構築する*: bindUserDNには、ログインで置き換えられる ``%%LOGIN%%`` "
+"プレースホルダーを含むDNを指定してください。"
 
 #: ../../source/install/ldap.rst:132
 msgid ""
@@ -531,8 +520,9 @@ msgid ""
 "give `john.smith` as a login, the authentication will be made with the DN "
 "``bindUserDN=\"uid=john.smith,ou=users,dc=XY,dc=fr\"``."
 msgstr ""
-"例えば、以下の場合。``bindUserDN=\"uid=%%LOGIN%%,ou=users,dc=XY,dc=fr\"``. "
-"ユーザーがログイン名として`john.smith`を指定した場合は、``bindUserDN=\"uid=john.smith,ou=users,dc=XY,dc=fr\"``のDNで認証が行われます。"
+"例えば、以下の ``bindUserDN=\"uid=%%LOGIN%%,ou=users,dc=XY,dc=fr\"`` "
+"の場合、ユーザーがログイン名として `john.smith` を指定した場合は、 "
+"``bindUserDN=\"uid=john.smith,ou=users,dc=XY,dc=fr\"`` のDNで認証が行われます。"
 
 #: ../../source/install/ldap.rst:136
 msgid ""
@@ -542,8 +532,10 @@ msgid ""
 "or an email or else.. (Probably it's not recommended to allow a user to type"
 " himself its full DN, it can be a security issue)"
 msgstr ""
-"一部のLDAPでは、DNは電子メールなどの単純な文字列になることがあります。You could then set "
-"``bindUserDN=\"%%LOGIN%%@company.local\"``を設定することができます。``bindUserDN=\"%%LOGIN%%\"``としてもいいでしょう。ログイン時にDNの完全な値を入力できるか、電子メールを入力できるか、などなど（大抵の場合ユーザーがDNの完全な値を自分で入力できるようにすることは推奨されません。）"
+"一部のLDAPでは、DNは電子メールなどの単純な文字列になることがあります。 "
+"``bindUserDN=\"%%LOGIN%%@company.local\"`` を設定することができます。 "
+"``bindUserDN=\"%%LOGIN%%\"`` "
+"としてもいいでしょう。ログイン時にDNの完全な値を入力できるか、電子メールを入力できるか、などなど（大抵の場合ユーザーがDNの完全な値を自分で入力できるようにすることは推奨されません。）"
 
 #: ../../source/install/ldap.rst:142
 msgid ""
@@ -554,7 +546,7 @@ msgid ""
 " or you can indicate a single attribute name, corresponding to an attribute "
 "that contain the full DN of the user."
 msgstr ""
-"*ユーザーのldap属性の一つからDNを構築する*。この場合，プラグインはまず `searchUserFilter` フィルタを使って ldap "
+"*ユーザーのldap属性の一つからDNを構築する* 。この場合，プラグインはまず `searchUserFilter` フィルタを使って ldap "
 "ディレクトリに問い合わせを行い，ユーザの ldap 属性を取得します．次に bindUserDN で、いくつかの値が属性値に置き換えられる DN "
 "を指定するか、あるいはユーザの完全な DN を含む属性に対応する単一の属性名を指定することができます。"
 
@@ -569,10 +561,10 @@ msgid ""
 "See above."
 msgstr ""
 "最初のケースでは、bindUserDnはDNを含み、いくつかの ``%?%`` プレースホルダーは対応する属性値で置き換えられます。例： "
-"``bindUserDN=\"uid=%?%,ou=users,dc=XY,dc=fr\"``. ここでは、 ``%?%`` "
+"``bindUserDN=\"uid=%?%,ou=users,dc=XY,dc=fr\"`` 。 ここでは、 ``%?%`` "
 "の部分を、ユーザーの属性から読み取った `uid` "
 "属性の値に置き換えています。この属性名は、フィールドマッピングが行われていなくても、`searchAttributes`設定プロパティに含まれていなければなりません。例："
-" ``...，uid:,...``．上記を参照してください。"
+" ``...，uid:,...``。 上記を参照してください。"
 
 #: ../../source/install/ldap.rst:156
 msgid ""
@@ -584,11 +576,10 @@ msgid ""
 "present into the `searchAttributes` configuration property, even with no "
 "field mapping. Ex: ``...,dn:,...``. See above."
 msgstr ""
-"2つ目のケースでは、属性名の前に`$`を付けて表示します。例： ``bindUserDN=\"$dn\"``. "
-"ここでは、検索結果から読み取った`dn`という属性を受け取り、その完全な値をLDAPサーバーにログインするためのDNとして使用します。これは、Active"
-" "
-"DirectoryのようなLDAPサーバーで、各ユーザーに固有の完全なDNを必要とする場合に有効です。属性名は、フィールドマッピングがされていなくても、`searchAttributes`設定プロパティに含まれていなければなりません。例："
-" ``...，dn:,...``．上記を参照してください。"
+"2つ目のケースでは、属性名の前に`$`を付けて表示します。例： ``bindUserDN=\"$dn\"``. ここでは、検索結果から読み取った "
+"`dn` という属性を受け取り、その完全な値をLDAPサーバーにログインするためのDNとして使用します。これは、Active "
+"DirectoryのようなLDAPサーバーで、各ユーザーに固有の完全なDNを必要とする場合に有効です。属性名は、フィールドマッピングがされていなくても、"
+" `searchAttributes` 設定プロパティに含まれていなければなりません。例： ``...，dn:,...``．上記を参照してください。"
 
 #: ../../source/install/ldap.rst:164
 msgid ""
@@ -614,7 +605,7 @@ msgstr ""
 msgid ""
 "You should then indicate into `searchGroupFilter` the ldap query that will "
 "retrieve the groups of the user."
-msgstr "そして、`searchGroupFilter`に、ユーザーのグループを取得するためのldapクエリを指定します。"
+msgstr "そして、 `searchGroupFilter` に、ユーザーのグループを取得するためのldapクエリを指定します。"
 
 #: ../../source/install/ldap.rst:182
 msgid ""
@@ -631,8 +622,8 @@ msgid ""
 "`searchAttributes`, between `%%`. Example: "
 "``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%givenName%%))\"``"
 msgstr ""
-"``%%USERDN%%`` がユーザーdnに置き換えられます。``%%LOGIN%%`` は、ログインに置き換えられます。また、 "
-"`%%`の間で`searchAttributes`に指定したldapの属性を使用することもできます。例えば、 "
+"``%%USERDN%%`` がユーザーdnに置き換えられます。``%%LOGIN%%`` は、ログインに置き換えられます。また、 `%%` の間で "
+"`searchAttributes` に指定したldapの属性を使用することもできます。例えば、 "
 "``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%givenName%%))\"``"
 
 #: ../../source/install/ldap.rst:188
@@ -642,21 +633,24 @@ msgid ""
 "groups synchronization, leave `searchGroupFilter` empty."
 msgstr ""
 "警告: `searchGroupFilter` を設定すると、ldap "
-"グループにマッチしない他のアプリケーショングループからユーザーが削除されます。グループを同期させたくない場合は、`searchGroupFilter`を空にしてください。"
+"グループにマッチしない他のアプリケーショングループからユーザーが削除されます。グループを同期させたくない場合は、 `searchGroupFilter`"
+" を空にしてください。"
 
 #: ../../source/install/ldap.rst:192
 msgid ""
 "With `searchGroupProperty`, you must indicate the ldap attribute that "
 "contains the group name. Ex: ``searchGroupProperty=\"cn\"``."
 msgstr ""
-"searchGroupProperty`では、グループ名を含むldap属性を指定する必要があります。例：``searchGroupProperty=\"cn\"``."
+"`searchGroupProperty` "
+"では、グループ名を含むldap属性を指定する必要があります。例：``searchGroupProperty=\"cn\"``。"
 
 #: ../../source/install/ldap.rst:195
 msgid ""
 "You may also indicate the base DN for the search, into `searchGroupBaseDN`. "
 "Example: ``searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"``."
 msgstr ""
-"また、検索のベースとなるDNを`searchGroupBaseDN`に指定することもできます。例：``searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"``"
+"また、検索のベースとなるDNを`searchGroupBaseDN`に指定することもできます。例： "
+"``searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"``"
 
 #: ../../source/install/ldap.rst:199
 msgid "Debugging"
@@ -686,22 +680,27 @@ msgid "Installing Lizmap Web Client on Linux Debian or Ubuntu"
 msgstr "Linux DebianまたはUbuntuへのLizmap Web Clientのインストール"
 
 #: ../../source/install/linux.rst:5
-#: ../../source/install/pre_requirements.rst:5
-#: ../../source/install/windows.rst:5
+#: ../../source/install/pre_requirements.rst:6
 msgid ""
 "If you want to quickly install and test Lizmap Web Client in a few steps, "
 "you can follow those `instructions <https://github.com/3liz/lizmap-docker-"
-"compose>`_."
+"compose>`_ using Docker and Docker-Compose."
 msgstr ""
-"いくつかのステップを経てLizmap Web "
-"Clientを素早くインストールしてテストしたい場合は、以下の`手順<https://github.com/3liz/lizmap-docker-"
-"compose>`_の通りに行います。"
+"もし、Lizmap Web Clientをいくつかのステップで素早くインストールしてテストしたい場合は、DockerとDocker-"
+"Composeを使用して、  `以下の手順<https://github.com/3liz/lizmap-docker-compose>`  "
+"の通りに行います。"
 
 #: ../../source/install/linux.rst:8
+msgid ""
+"In Debian distributions, you can work as administrator (log in with "
+"``root``), without using ``sudo`` on contrary to Ubuntu."
+msgstr ""
+
+#: ../../source/install/linux.rst:11
 msgid "Generic Server Configuration with Nginx server"
 msgstr "Nginxサーバーによる一般的なサーバーの設定"
 
-#: ../../source/install/linux.rst:10
+#: ../../source/install/linux.rst:13 ../../source/install/linux.rst:36
 msgid ""
 "This documentation provides an example for configuring a server with the "
 "Debian 9 distribution. We assume you have base system installed and updated."
@@ -709,33 +708,37 @@ msgstr ""
 "このドキュメントでは、Debian 9 "
 "ディストリビューションのサーバーを設定する例を示します。ベースシステムがインストールされ、アップデートされていることを前提としています。"
 
-#: ../../source/install/linux.rst:12
+#: ../../source/install/linux.rst:15 ../../source/install/linux.rst:38
 msgid ""
 "This page does not describe how to secure your Nginx server. It's just for a"
 " demonstration."
 msgstr "このページでは、Nginxサーバをセキュアにする方法を説明していません。あくまでもデモンストレーションのためのものです。"
 
-#: ../../source/install/linux.rst:15
+#: ../../source/install/linux.rst:18
 msgid "Configure Locales"
 msgstr "ロケールの設定"
 
-#: ../../source/install/linux.rst:17
+#: ../../source/install/linux.rst:20
 msgid ""
 "For simplicity, it is interesting to configure the server with UTF-8 default"
 " encoding."
 msgstr "簡単にするために、デフォルトのエンコーディングをUTF-8に設定するのも良いでしょう。"
 
-#: ../../source/install/linux.rst:28
+#: ../../source/install/linux.rst:31
 msgid ""
 "It is also necessary configure the other software so that they are using "
 "this default encoding if this is not the case."
 msgstr "また、他のソフトウェアがデフォルトのエンコーディングを使用していない場合は、このエンコーディングを使用するように設定する必要があります。"
 
-#: ../../source/install/linux.rst:31 ../../source/install/linux.rst:109
+#: ../../source/install/linux.rst:34
+msgid "Nginx Server Configuration"
+msgstr "Nginx Serverの設定"
+
+#: ../../source/install/linux.rst:41 ../../source/install/linux.rst:132
 msgid "Installing necessary packages"
 msgstr "必要なパッケージのインストール"
 
-#: ../../source/install/linux.rst:33
+#: ../../source/install/linux.rst:43
 msgid ""
 "Lizmap web client is based on Jelix 1.6. You must install at least the "
 "**5.6** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, "
@@ -743,74 +746,115 @@ msgid ""
 " on in a standard PHP 5.6/7.x installation)"
 msgstr ""
 "Lizmap Webクライアントは、Jelix "
-"1.6をベースにしています。少なくとも**5.6**バージョンのPHPをインストールする必要があります。**dom**、**simplexml**、**pcre**、**session**、**tokenizer**、**spl**の各拡張モジュールが必要です（通常、PHP"
-" 5.6/7.xの標準的なインストールでは、これらはオンになっています）。"
+"1.6をベースにしています。少なくとも**5.6**バージョンのPHPをインストールする必要があります。**dom**、**simplexml**、**pcre**、**session**、**tokenizer**、**spl**"
+" の各拡張モジュールが必要です（通常、PHP 5.6/7.xの標準的なインストールでは、これらはオンになっています）。"
 
-#: ../../source/install/linux.rst:41 ../../source/install/linux.rst:121
+#: ../../source/install/linux.rst:51
 msgid "On debian 10, install these packages:"
 msgstr "debian 10では、これらのパッケージをインストールします。"
 
-#: ../../source/install/linux.rst:47
+#: ../../source/install/linux.rst:57
 msgid "On Ubuntu 18.04 or later, install these packages:"
 msgstr "Ubuntu 18.04以降では、これらのパッケージをインストールします。"
 
-#: ../../source/install/linux.rst:54
+#: ../../source/install/linux.rst:65 ../../source/install/linux.rst:174
 msgid "Web configuration"
 msgstr "Webの設定"
 
-#: ../../source/install/linux.rst:56
+#: ../../source/install/linux.rst:67
 msgid "Create a new file /etc/nginx/sites-available/lizmap.conf:"
 msgstr "新しい /etc/nginx/sites-available/lizmap.conf ファイルを作成します。"
 
-#: ../../source/install/linux.rst:94
+#: ../../source/install/linux.rst:105
 msgid ""
 "You should declare the lizmap.local domain name somewhere (in your "
 "/etc/hosts, or into your DNS..), or replace it by your own domain name."
 msgstr "lizmap.localのドメイン名をどこか（/etc/hostsやDNSなど）で宣言するか、独自のドメイン名で置き換える必要があります。"
 
-#: ../../source/install/linux.rst:97
+#: ../../source/install/linux.rst:108
 msgid "Enable the virtual host you just created:"
 msgstr "先ほど作成したバーチャルホストを有効にします。"
 
-#: ../../source/install/linux.rst:104
-msgid "Generic Server Configuration with Apache2 server"
-msgstr "Apache2サーバーによる一般的なサーバーの設定"
+#: ../../source/install/linux.rst:115
+msgid "Restart Nginx"
+msgstr "Nginxの再起動"
 
-#: ../../source/install/linux.rst:106
+#: ../../source/install/linux.rst:117
+msgid "You must restart the Nginx server to validate the configuration."
+msgstr "設定を有効にするには、Nginxサーバーを再起動する必要があります。"
+
+#: ../../source/install/linux.rst:125
+msgid "Apache Server configuration"
+msgstr "Apache Serverの設定"
+
+#: ../../source/install/linux.rst:127
 msgid ""
-"To install QGIS-server on apache refer to the official QGIS documentation "
-"https://docs.qgis.org/latest/en/docs/server_manual/index.html"
+"This documentation provides an example for configuring a server with the "
+"Debian 10 distribution. We assume you have base system installed and "
+"updated."
 msgstr ""
-"QGIS-server を apache にインストールするには、QGIS の公式ドキュメント "
-"https://docs.qgis.org/latest/en/docs/server_manual/index.html を参照してください。"
 
-#: ../../source/install/linux.rst:111
+#: ../../source/install/linux.rst:129
 msgid ""
-"Lizmap web client is based on Jelix 1.6. You must install at least the "
-"**5.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, "
-"**tokenizer** and **spl** extensions are required (they are generally turned"
-" on in a standard PHP 5.4 installation)"
+"This page does not describe how to secure your Apache server. It's just for "
+"a demonstration."
 msgstr ""
-"Lizmap Webクライアントは、Jelix "
-"1.6をベースにしています。少なくとも**5.4**バージョンのPHPをインストールする必要があります。**dom**、**simplexml**、**pcre**、**session**、**tokenizer**、**spl**の各拡張モジュールが必要です（通常、PHP"
-" 5.4の標準的なインストールでは、これらはオンになっています）。"
 
-#: ../../source/install/linux.rst:113
+#: ../../source/install/linux.rst:135
+msgid "Firstly update the packages list, then install these packages:"
+msgstr ""
+
+#: ../../source/install/linux.rst:145
+msgid "PHP 7.3 configuration"
+msgstr "‎PHP 7.3 の設定‎"
+
+#: ../../source/install/linux.rst:147
 msgid ""
-"At least the current version supports PHP 7, so it should be straight "
-"forward to install it on current debian 9 or ubuntu 16.04."
+"In this example, we use Apache mpm-worker. So we must manually configure the"
+" activation of PHP 7.3."
 msgstr ""
-"少なくとも現在のバージョンはPHP 7をサポートしていますので、現行のdebian 9やubuntu 16.04にインストールするのは簡単でしょう。"
 
-#: ../../source/install/linux.rst:128
-msgid "On Ubuntu 18.04 LTS"
-msgstr "Ubuntu 18.04 LTSの場合"
+#: ../../source/install/linux.rst:167
+msgid "Enable the configuration with the following command line:"
+msgstr ""
 
-#: ../../source/install/linux.rst:138
+#: ../../source/install/linux.rst:177
+msgid "mpm-worker configuration"
+msgstr "mpm-worker 設定"
+
+#: ../../source/install/linux.rst:179
+msgid ""
+"We modify the Apache configuration file to adapt the options to mpm_worker "
+"server configuration."
+msgstr ""
+
+#: ../../source/install/linux.rst:195
+msgid "mod_fcgid configuration"
+msgstr "mod_fcgid 設定"
+
+#: ../../source/install/linux.rst:197
+msgid ""
+"QGIS Server runs with the FastCGI protocole (a.k.a. fcgi). We must therefore"
+" configure the Apache mod_fcgid to suit to the server capabilities."
+msgstr ""
+
+#: ../../source/install/linux.rst:216
+msgid "Setting the compression"
+msgstr ""
+
+#: ../../source/install/linux.rst:238
+msgid "Restart Apache"
+msgstr "‎Apacheを再起動する‎"
+
+#: ../../source/install/linux.rst:240
+msgid "You must restart the Apache server to validate the configuration."
+msgstr ""
+
+#: ../../source/install/linux.rst:249
 msgid "Enable geolocation"
 msgstr "ジオロケーションの有効化"
 
-#: ../../source/install/linux.rst:140
+#: ../../source/install/linux.rst:251
 msgid ""
 "The automatic geolocation provided by Lizmap relies on Google services. To "
 "enable it, your webGIS must be placed under a secure protocol, like HTTPS. "
@@ -818,15 +862,15 @@ msgid ""
 msgstr ""
 "Lizmapが提供する自動ジオロケーションは、Googleのサービスに依存しています。これを有効にするには、お使いのwebGISをHTTPSのような安全なプロトコル下に置く必要があります。詳しくはこちらをご覧ください。"
 
-#: ../../source/install/linux.rst:142
+#: ../../source/install/linux.rst:253
 msgid ""
-"https://sites.google.com/a/chromium.org/dev/Home/chromium-security"
-"/deprecating-powerful-features-on-insecure-origins"
+"https://sites.google.com/a/chromium.org/dev/Home/chromium-"
+"security/deprecating-powerful-features-on-insecure-origins"
 msgstr ""
-"https://sites.google.com/a/chromium.org/dev/Home/chromium-security"
-"/deprecating-powerful-features-on-insecure-origins"
+"https://sites.google.com/a/chromium.org/dev/Home/chromium-"
+"security/deprecating-powerful-features-on-insecure-origins"
 
-#: ../../source/install/linux.rst:144
+#: ../../source/install/linux.rst:255
 msgid ""
 "https://www.digitalocean.com/community/tutorials/how-to-create-a-self-"
 "signed-ssl-certificate-for-apache-in-ubuntu-16-04"
@@ -834,46 +878,38 @@ msgstr ""
 "https://www.digitalocean.com/community/tutorials/how-to-create-a-self-"
 "signed-ssl-certificate-for-apache-in-ubuntu-16-04"
 
-#: ../../source/install/linux.rst:147
-msgid "Restart Nginx"
-msgstr "Nginxの再起動"
-
-#: ../../source/install/linux.rst:149
-msgid "You must restart the Nginx server to validate the configuration."
-msgstr "設定を有効にするには、Nginxサーバーを再起動する必要があります。"
-
-#: ../../source/install/linux.rst:156
+#: ../../source/install/linux.rst:259
 msgid "Create directories for data"
 msgstr "データ用のディレクトリの作成"
 
-#: ../../source/install/linux.rst:158
+#: ../../source/install/linux.rst:261
 msgid ""
 "QGIS files and other cache files will be stored into these directories."
 msgstr "これらのディレクトリには、QGISファイルやその他のキャッシュファイルが格納されます。"
 
-#: ../../source/install/linux.rst:170
-msgid "Spatial DBMS: PostgreSQL"
-msgstr "空間系DBMS：PostgreSQL"
+#: ../../source/install/linux.rst:273
+msgid "Spatial Database: PostgreSQL"
+msgstr "‎空間データベース: PostgreSQL"
 
-#: ../../source/install/linux.rst:172 ../../source/install/linux.rst:228
-msgid "This section is optional"
-msgstr "このセクションはオプションです。"
+#: ../../source/install/linux.rst:275
+msgid "This section is optional. Please read :ref:`prerequisites-postgresql`."
+msgstr ""
 
-#: ../../source/install/linux.rst:174
+#: ../../source/install/linux.rst:277
 msgid ""
 "PostgreSQL and PostGIS can be very useful to manage spatial data centralized"
 " manner on the server."
 msgstr "PostgreSQLとPostGISは、空間データをサーバー上で一元管理するのに非常に便利です。"
 
-#: ../../source/install/linux.rst:177 ../../source/install/linux.rst:231
+#: ../../source/install/linux.rst:280 ../../source/install/linux.rst:339
 msgid "Install"
 msgstr "インストール"
 
-#: ../../source/install/linux.rst:202
+#: ../../source/install/linux.rst:305
 msgid "Adapting the PostgreSQL configuration"
 msgstr "PostgreSQLの設定を変更する"
 
-#: ../../source/install/linux.rst:204
+#: ../../source/install/linux.rst:307
 msgid ""
 "We will use ``pgtune``, an utility program that can automatically generate a"
 " PostgreSQL configuration file adapted to the properties of the server "
@@ -882,113 +918,65 @@ msgstr ""
 "ここでは、サーバーの特性（メモリ、プロセッサなど）に合わせてPostgreSQLの設定ファイルを自動的に生成するユーティリティープログラムである "
 "``pgtune`` を使用します。"
 
-#: ../../source/install/linux.rst:226
+#: ../../source/install/linux.rst:310
+msgid "https://pgtune.leopard.in.ua/"
+msgstr "https://pgtune.leopard.in.ua/"
+
+#: ../../source/install/linux.rst:330
+msgid ""
+"For installing Lizmap tables into the PostgreSQL database (instead of SqLite"
+" by default), you can continue until the next section below when you need to"
+" edit the file :file:`lizmap/var/config/profiles.ini.php`."
+msgstr ""
+
+#: ../../source/install/linux.rst:334
 msgid "FTP Server: pure-ftpd"
 msgstr "FTPサーバー：pure-ftpd"
 
-#: ../../source/install/linux.rst:238
+#: ../../source/install/linux.rst:336
+msgid ""
+"This section is optional, you can setup your own way of transferring data "
+"from QGIS GIS technicians to the Lizmap server."
+msgstr ""
+
+#: ../../source/install/linux.rst:346
 msgid "Configure"
 msgstr "設定"
 
-#: ../../source/install/linux.rst:261
+#: ../../source/install/linux.rst:369
 msgid "Creating a user account"
 msgstr "ユーザーアカウントの作成"
 
-#: ../../source/install/linux.rst:283
+#: ../../source/install/linux.rst:391
 msgid "Installing sources of Lizmap Web Client"
 msgstr "Lizmap Web Clientのソースコードのインストール"
 
-#: ../../source/install/linux.rst:290
-msgid "With ZIP file"
-msgstr "ZIPファイルを使用する場合"
-
-#: ../../source/install/linux.rst:292
+#: ../../source/install/linux.rst:393
 msgid ""
 "Retrieve the latest available stable version from our `Github release page "
 "<https://github.com/3liz/lizmap-web-client/releases/>`_."
 msgstr ""
-"最新の安定版は、`Githubのリリースページ <https://github.com/3liz/lizmap-web-"
-"client/releases/>`_から入手できます。"
+"最新の安定版は、 `Githubのリリースページ <https://github.com/3liz/lizmap-web-"
+"client/releases/>`_ から入手できます。"
 
-#: ../../source/install/linux.rst:295
+#: ../../source/install/linux.rst:396
 msgid ""
 "Do not use the automatic ZIP file created by GitHub on the website. Only use"
 " ZIP attached to a release."
 msgstr "GitHubがウェブサイト上で自動的に作成するZIPファイルは使用しないでください。リリースに添付されたZIPのみを使用してください。"
 
-#: ../../source/install/linux.rst:314
-msgid "Development version with Git"
-msgstr "Gitを使った開発版を使用する場合"
-
-#: ../../source/install/linux.rst:316
-msgid ""
-"The development version is always changing, and bugs can occur. Do not use "
-"it in production."
-msgstr "開発版は常に変化しており、バグが発生する可能性があります。本番では使用しないでください。"
-
-#: ../../source/install/linux.rst:319
-msgid ""
-"Using the code from GIT, either from the ``git clone`` or the automatic ZIP "
-"created by GitHub on-the-fly, needs to **build** the package first. It is "
-"not possible to use this code **directly**. If you don't want to build, you "
-"**must** use some Lizmap Web Client ZIP packages which are ready to be "
-"installed, as written in the step before."
-msgstr ""
-"GITからコードを使用する場合、``git clone``やGitHubがオンザフライで作成した自動ZIPのいずれであっても、まずパッケージを "
-"**ビルド** "
-"する必要があります。このコードを**直接**使用することはできません。ビルドしたくない場合は、前のステップで書いたように、すぐにインストールできるLizmap"
-" Web ClientのZIPパッケージを使う**必要**があります。"
-
-#: ../../source/install/linux.rst:324
-msgid "First installation"
-msgstr "最初のインストール"
-
-#: ../../source/install/linux.rst:326
-msgid ""
-"The source code in the Git repository is missing external PHP and Javascript"
-" packages. In order to install and build some files, you need to install "
-"`PHP Composer <https://getcomposer.org/download/>`_, `NodeJs and Npm "
-"<https://nodejs.org/en/download/>`_, as well as some other tools like "
-"`Make`. Read the :file:`CONTRIBUTING.md` file, provided with the source "
-"code, to have details about how to install these tools and to build the "
-"package."
-msgstr ""
-"Git リポジトリのソースコードには、PHP と Javascript "
-"の外部パッケージが含まれていません。いくつかのファイルをインストールしたりビルドしたりするためには、`PHP Composer "
-"<https://getcomposer.org/download/>`_、`NodejsとNpm "
-"<https://nodejs.org/en/download/>`_、さらに `Make` "
-"などのツールをインストールする必要があります。これらのツールのインストール方法やパッケージのビルド方法の詳細については、ソースコードと一緒に提供されている"
-" :file:`CONTRIBUTING.md` ファイルをお読みください。"
-
-#: ../../source/install/linux.rst:347
-msgid "To update your branch from the master repository"
-msgstr "マスターリポジトリから自分のブランチを更新する場合"
-
-#: ../../source/install/linux.rst:370
-msgid ""
-"You should then update dependencies (like external PHP and javascript "
-"packages). See the :file:`CONTRIBUTING.md` file provided with the source "
-"code."
-msgstr ""
-"その後、依存関係のあるモジュール（外部のPHPやjavascriptのパッケージなど）を更新する必要があります。ソースコードと一緒に提供されている "
-":file:`CONTRIBUTING.md` ファイルをご覧ください。"
-
-#: ../../source/install/linux.rst:374
-msgid "It is always good to make a backup before updating."
-msgstr "アップデートの前には必ずバックアップを取ることをお勧めします。"
-
-#: ../../source/install/linux.rst:379
+#: ../../source/install/linux.rst:418
 msgid "Configure Lizmap with the database support"
 msgstr "データベースをサポートするLizmapの設定"
 
-#: ../../source/install/linux.rst:381
+#: ../../source/install/linux.rst:420
 msgid ""
 "Lizmap needs a database to store its own data and to access to data used in "
 "your Qgis projects, with its editing tool."
 msgstr ""
 "Lizmapは、自身のデータを保存したり、QGISプロジェクトで使用されるデータに編集ツールでアクセスするために、データベースを必要とします。"
 
-#: ../../source/install/linux.rst:384
+#: ../../source/install/linux.rst:423
 msgid ""
 "Create :file:`profiles.ini.php` into :file:`lizmap/var/config` by copying "
 ":file:`profiles.ini.php.dist`."
@@ -996,32 +984,34 @@ msgstr ""
 ":file:`profiles.ini.php.dist`をコピーして、 :file:`profiles.ini.php`ファイルを "
 ":file:`lizmap/var/config`に作成します。"
 
-#: ../../source/install/linux.rst:395
+#: ../../source/install/linux.rst:432
+#: ../../source/install/pre_requirements.rst:167
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
-#: ../../source/install/linux.rst:397
+#: ../../source/install/linux.rst:434
 msgid ""
 "For the editing of PostGIS layers in Web Client Lizmap operate, install "
-"PostgreSQL support for PHP."
+"PostgreSQL support for PHP. No configuration file need to be edited to edit "
+"PostgreSQL layer. You must **only** check that the Lizmap server can access "
+"the database with credentials which are stored in the QGIS project (or with "
+"a PostgreSQL service file)."
 msgstr ""
-"Web Client "
-"LizmapでPostGISのレイヤーを編集するためには、PHPをサポートするPostgreSQLをインストールする必要があります。"
 
-#: ../../source/install/linux.rst:404
+#: ../../source/install/linux.rst:443
 msgid ""
-"For editing, we strongly recommend using a PostgreSQL database. This greatly"
-" simplifies installation and retrieval of data entered by users."
+"For Lizmap logs, users and groups, it can be either stored in SqLite or "
+"PostgreSQL. To store these information in PostgreSQL, follow these "
+"instructions."
 msgstr ""
-"編集には、PostgreSQLデータベースの使用を強く推奨します。これにより、インストールやユーザーが入力したデータの検索が非常に簡単になります。"
 
-#: ../../source/install/linux.rst:406
+#: ../../source/install/linux.rst:446
 msgid ""
 "Into a fresh copy of :file:`lizmap/var/config/profiles.ini.php`, you should "
 "have:"
 msgstr ":file:`lizmap/var/config/profiles.ini.php`を新しくコピーすると、以下のようになっているはずです。"
 
-#: ../../source/install/linux.rst:418
+#: ../../source/install/linux.rst:458
 msgid ""
 "This is the configuration by default to use Sqlite. You should change these "
 "sections to use Postgresql, and indicate several parameters to access to "
@@ -1029,7 +1019,7 @@ msgid ""
 msgstr ""
 "これはデフォルトでSqliteを使用するための設定です。Postgresqlを使用するためには、これらのセクションを変更し、Postgresqlデータベースにアクセスするためのいくつかのパラメータを指定する必要があります。"
 
-#: ../../source/install/linux.rst:443
+#: ../../source/install/linux.rst:483
 msgid ""
 "You can use a specific schema to store lizmap tables. And you may want that "
 "lizmap could access to other schema. You then have to set search_path "
@@ -1037,7 +1027,7 @@ msgid ""
 msgstr ""
 "lizmapのテーブルを格納するために特定のスキーマを使用することができます。そして、lizmapが他のスキーマにアクセスできるようにすることもできます。その場合、search_pathを正しく設定する必要があります。例えば、"
 
-#: ../../source/install/linux.rst:450
+#: ../../source/install/linux.rst:490
 msgid ""
 "If you have setup a service file for postgresql onto your server, you may "
 "want to indicate a postgresql service instead of indicating login, password "
@@ -1045,24 +1035,24 @@ msgid ""
 msgstr ""
 "postgresqlのサービスファイルをサーバにセットアップしている場合、loginやpasswordなどの代わりにpostgresqlのサービスを示したい場合があります。その場合は、serviceパラメータを使用してください。"
 
-#: ../../source/install/linux.rst:469
+#: ../../source/install/linux.rst:509
 msgid "Spatialite"
 msgstr "Spatialite"
 
-#: ../../source/install/linux.rst:472
+#: ../../source/install/linux.rst:512
 msgid "Enable Spatialite extension"
 msgstr "Spatialite拡張機能を有効にする"
 
-#: ../../source/install/linux.rst:474
+#: ../../source/install/linux.rst:514
 msgid ""
 "To use editing on layers spatialite,you have to add the spatialite extension"
-" in PHP. You can follow these instructions to do so: http://www.gaia-gis.it"
-"/gaia-sins/spatialite-cookbook-fr/html/php.html"
+" in PHP. You can follow these instructions to do so: http://www.gaia-"
+"gis.it/gaia-sins/spatialite-cookbook-fr/html/php.html"
 msgstr ""
-"spatialiteでのレイヤー編集を使用するには、PHPにspatialite拡張を追加する必要があります。以下の手順で行うことができます。http://www"
-".gaia-gis.it/gaia-sins/spatialite-cookbook-fr/html/php.html"
+"spatialiteでのレイヤー編集を使用するには、PHPにspatialite拡張を追加する必要があります。以下の手順で行うことができます。http://www.gaia-"
+"gis.it/gaia-sins/spatialite-cookbook-fr/html/php.html"
 
-#: ../../source/install/linux.rst:477
+#: ../../source/install/linux.rst:517
 msgid ""
 "Lizmap Web Client tests whether the spatialite support is enabled in PHP. If"
 " it is not, then spatialite layers will not be used in the editing tool. You"
@@ -1071,33 +1061,35 @@ msgstr ""
 "Lizmap Web "
 "Clientは、PHPでspatialiteサポートが有効になっているかどうかをテストします。有効になっていない場合は、編集ツールでspatialiteレイヤーは使用されません。編集には常にPostgreSQLデータを使用することができます。"
 
-#: ../../source/install/linux.rst:480
+#: ../../source/install/linux.rst:520
 msgid ""
 "Give the appropriate rights to the directory containing Spatialite databases"
 msgstr "Spatialiteのデータベースがあるディレクトリに適切な権限を与える。"
 
-#: ../../source/install/linux.rst:482
+#: ../../source/install/linux.rst:522
 msgid ""
 "So that Lizmap Web Client can modify the data contained in databases "
 "Spatialite, we must ensure that **the webserver user (www-data) has well "
 "write access to the directory containing each Spatialite file**"
 msgstr ""
-"Lizmap Web ClientがデータベースSpatialiteに含まれるデータを変更できるようにするためには、**ウェブサーバーのユーザー"
-"（www-data）が、各Spatialiteファイルを含むディレクトリに書き込み権限を持っていること**を確実にする必要があります。"
+"Lizmap Web ClientがデータベースSpatialiteに含まれるデータを変更できるようにするためには、 "
+"**ウェブサーバーのユーザー（www-data）が、各Spatialiteファイルを含むディレクトリに書き込み権限を持っていること** "
+"を確実にする必要があります。"
 
-#: ../../source/install/linux.rst:484
+#: ../../source/install/linux.rst:524
 msgid ""
 "For example, if a directory contains a QGIS project, which uses a Spatialite"
 " database placed in a **db** directory at the same level as the QGIS "
 "project:"
 msgstr ""
-"例えば、あるディレクトリにQGISプロジェクトがあり、QGISプロジェクトと同じ階層の**db**ディレクトリに置かれたSpatialiteデータベースを使用している場合などです。"
+"例えば、あるディレクトリにQGISプロジェクトがあり、QGISプロジェクトと同じ階層の **db** "
+"ディレクトリに置かれたSpatialiteデータベースを使用している場合などです。"
 
-#: ../../source/install/linux.rst:493
+#: ../../source/install/linux.rst:533
 msgid "So you have to give the rights in this way:"
 msgstr "だから、このように権限を与える必要があります。"
 
-#: ../../source/install/linux.rst:501
+#: ../../source/install/linux.rst:541
 msgid ""
 "So if you want to install Lizmap to provide access to multiple map "
 "publishers, you should tell them to always create a **db** directory at the "
@@ -1106,79 +1098,91 @@ msgid ""
 "unique directory."
 msgstr ""
 "したがって、Lizmapをインストールして複数の地図公開者へのアクセスを提供したい場合は、Lizmap Web "
-"Clientディレクトリ内のQGISプロジェクトと同じ階層に、常に**db**ディレクトリを作成するように指示する必要があります。これにより、この固有のディレクトリの権限を変更するだけの管理作業が容易になります。"
+"Clientディレクトリ内のQGISプロジェクトと同じ階層に、常に **db** "
+"ディレクトリを作成するように指示する必要があります。これにより、この固有のディレクトリの権限を変更するだけの管理作業が容易になります。"
 
-#: ../../source/install/linux.rst:508
+#: ../../source/install/linux.rst:548
 msgid "Configuring Lizmap and launching the installer"
 msgstr "Lizmapの設定とインストーラーの起動"
 
-#: ../../source/install/linux.rst:511
+#: ../../source/install/linux.rst:551
 msgid "Give the appropriate rights to directories and files"
 msgstr "ディレクトリやファイルに適切な権限を与える"
 
-#: ../../source/install/linux.rst:513
+#: ../../source/install/linux.rst:553
 msgid ""
-"Set rights for Nginx/Apache, so php scripts could write some temporary files"
+"Set rights for Nginx/Apache, so PHP scripts could write some temporary files"
 " or do changes."
-msgstr "Nginx/Apacheの権限を設定し、PHPスクリプトが一時ファイルを書き込んだり、変更したりできるようにします。"
+msgstr ""
 
-#: ../../source/install/linux.rst:524
+#: ../../source/install/linux.rst:564
 msgid "Setup configuration"
 msgstr "初期設定"
 
-#: ../../source/install/linux.rst:527
+#: ../../source/install/linux.rst:567
 msgid ""
 "Create :file:`lizmapConfig.ini.php`, :file:`localconfig.ini.php` and edit "
 "them to set parameters specific to your installation. You can modify "
 ":file:`lizmapConfig.ini.php` to set the url of qgis map server and other "
 "things."
 msgstr ""
-":file:`lizmapConfig.ini.php`、:file:`localconfig.ini.php`を作成し、それらを編集して、インストールに固有のパラメータを設定します。:file:`lizmapConfig.ini.php`を変更して、qgisマップサーバーのURLなどを設定することができます。"
+":file:`lizmapConfig.ini.php`、:file:`localconfig.ini.php` "
+"を作成し、それらを編集して、インストールに固有のパラメータを設定します。:file:`lizmapConfig.ini.php` "
+"を変更して、qgisマップサーバーのURLなどを設定することができます。"
 
-#: ../../source/install/linux.rst:538
+#: ../../source/install/linux.rst:578
 msgid ""
 "In case you want to enable the demo repositories, just add to "
 ":file:`localconfig.ini.php` the following:"
-msgstr "デモ用リポジトリを有効にしたい場合は、 :file:`localconfig.ini.php`に以下の内容を追加してください。"
+msgstr "デモ用リポジトリを有効にしたい場合は、 :file:`localconfig.ini.php` に以下の内容を追加してください。"
 
-#: ../../source/install/linux.rst:548
+#: ../../source/install/linux.rst:588
 msgid "Launching the installer"
 msgstr "インストーラーの起動"
 
-#: ../../source/install/linux.rst:550
+#: ../../source/install/linux.rst:590
 msgid "After creating configuration files, you can launch the installer"
 msgstr "設定ファイルを作成した後、インストーラーを起動します。"
 
-#: ../../source/install/linux.rst:556
+#: ../../source/install/linux.rst:596
 msgid ""
 "It will finished the installation, and will create all SQL tables needed by "
 "Lizmap."
 msgstr "これでインストールが完了し、Lizmapが必要とするすべてのSQLテーブルが作成されます。"
 
-#: ../../source/install/linux.rst:560
+#: ../../source/install/linux.rst:600
 msgid "First test"
 msgstr "最初のテスト"
 
-#: ../../source/install/linux.rst:562
+#: ../../source/install/linux.rst:602
 msgid "For testing launch: ``http://localhost/lizmap`` in your browser."
 msgstr "試しに、ブラウザで ``http://localhost/lizmap`` を開いてみてください。"
 
-#: ../../source/install/linux.rst:564
+#: ../../source/install/linux.rst:604
 msgid "In case you get a ``500 - internal server error``, run again:"
-msgstr "万が一、``500 - internal server error``が発生した場合は、再度実行してください。"
+msgstr "万が一、``500 - internal server error`` が発生した場合は、再度実行してください。"
 
-#: ../../source/install/linux.rst:572
+#: ../../source/install/linux.rst:612
 msgid "Replace ``localhost`` with the address or IP number of your server."
-msgstr "``localhost``をお使いのサーバーのアドレスまたはIPアドレスに置き換えてください。"
+msgstr "``localhost`` をお使いのサーバーのアドレスまたはIPアドレスに置き換えてください。"
 
-#: ../../source/install/linux.rst:574
+#: ../../source/install/linux.rst:614
 msgid ""
 "In the administration panel, you should check the :guilabel:`QGIS server "
 "version` and the :guilabel:`WMS server URL` with the URL of QGIS Server."
 msgstr ""
-"管理パネルで、QGISサーバのURLに合わせて、:guilabel:`QGISサーバのバージョン`と、:guilabel:`WMSサーバのURL`を確認します。"
+"管理パネルで、QGISサーバのURLに合わせて、:guilabel:`QGISサーバのバージョン` と、:guilabel:`WMSサーバのURL` "
+"を確認します。"
 
-#: ../../source/install/linux.rst:576
+#: ../../source/install/linux.rst:617
+msgid ""
+"Before trying to have a QGIS project working in Lizmap, you **must** have "
+"the communication between QGIS Server and Lizmap Web Client working "
+"properly. Versions about QGIS Server plugins **must** be visible from the "
+"administration interface. Please read :ref:`lizmap-server-plugin`."
+msgstr ""
+
+#: ../../source/install/linux.rst:620
 msgid ""
 "If you didn't install the demo, you can check that you have well installed "
 "Lizmap and configured QGIS Server within Lizmap by checking the "
@@ -1189,52 +1193,52 @@ msgstr ""
 "セクションをチェックすることで、Lizmapが正しくインストールされ、Lizmap内にQGIS "
 "Serverが設定されているかどうかを確認することができます。http://localhost/lizmap/index.php/view/app/metadata"
 
-#: ../../source/install/linux.rst:588
+#: ../../source/install/linux.rst:632
 msgid ""
 "Lizmap is accessible, without further configurations, also as WMS and WFS "
 "server from a browser:"
 msgstr "Lizmapは、WMSやWFSのサーバーとしても、ブラウザから追加設定なしでアクセス可能です。"
 
-#: ../../source/install/linux.rst:590
+#: ../../source/install/linux.rst:634
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities"
 msgstr ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities"
 
-#: ../../source/install/linux.rst:592
+#: ../../source/install/linux.rst:636
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities"
 msgstr ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities"
 
-#: ../../source/install/linux.rst:594
+#: ../../source/install/linux.rst:638
 msgid "and from QGIS:"
 msgstr "そして、QGISからのアクセスも可能です。"
 
-#: ../../source/install/linux.rst:596
+#: ../../source/install/linux.rst:640
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&"
 msgstr ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&"
 
-#: ../../source/install/linux.rst:598
+#: ../../source/install/linux.rst:642
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 msgstr ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 
-#: ../../source/install/linux.rst:601
+#: ../../source/install/linux.rst:645
 msgid ""
 "Access to the WMS and WFS servers can be limited by assigning privileges to "
 "specific repositories, see the administration section."
 msgstr ""
 "WMSおよびWFSサーバーへのアクセスは、特定のリポジトリに権限を割り当てることで制限することができます。管理セクションを参照してください。"
 
-#: ../../source/install/linux.rst:605
+#: ../../source/install/linux.rst:649
 msgid "Lizmap modules"
 msgstr "Lizmapのモジュール"
 
-#: ../../source/install/linux.rst:607
+#: ../../source/install/linux.rst:651
 msgid ""
 "Previously, we explained how we could add QGIS Server plugins to add more "
 "features to QGIS Server. Now that we have Lizmap Web Client up and running, "
@@ -1243,35 +1247,38 @@ msgstr ""
 "以前、QGIS Serverに機能を追加するためにQGIS Serverプラグインを追加する方法を説明しました。今回は、Lizmap Web "
 "Clientが稼働したので、いくつかのLizmapモジュールを追加して、再度機能を追加してみます。"
 
-#: ../../source/install/linux.rst:610
+#: ../../source/install/linux.rst:654
 msgid ""
 "The list is available in the Lizmap "
 ":ref:`introduction<additional_lizmap_modules>`. On their GitHub repository, "
 "their is usually their install instructions. You should follow them. However"
 " here are the main instructions to install a module."
 msgstr ""
-"リストは、 Lizmap "
-":ref:`introduction<additional_lizmap_modules>`でご覧いただけます。GitHubリポジトリには、通常、インストール手順が書かれています。その指示に従ってください。しかし、ここでは、モジュールをインストールするための主な手順を説明します。"
+"リストは、 Lizmap :ref:`introduction<additional_lizmap_modules>` "
+"でご覧いただけます。GitHubリポジトリには、通常、インストール手順が書かれています。その指示に従ってください。しかし、ここでは、モジュールをインストールするための主な手順を説明します。"
 
-#: ../../source/install/linux.rst:616
+#: ../../source/install/linux.rst:660
 msgid "Installing modules with Composer"
-msgstr ""
+msgstr "‎コンポーザーを使用したモジュールのインストール‎"
 
-#: ../../source/install/linux.rst:618
+#: ../../source/install/linux.rst:662
 msgid ""
 "You can install modules with Composer, the package manager for PHP. Of "
 "course it is possible only if the author of the module has created a package"
 " of his module. A such package has a name, for example `lizmap/lizmap-"
 "pgmetadata-module``. The documentation of the module should indicate it."
 msgstr ""
+"‎PHP のパッケージマネージャである Composer "
+"を使用してモジュールをインストールできます。もちろん、モジュールの作成者が自分のモジュールのパッケージを作成した場合にのみ可能です。‎‎このようなパッケージには、例えば，"
+" ``lizmap/lizmap-pgmetadata-module`` のような名前が付けられ，‎‎モジュールのドキュメントで示す必要があります。‎"
 
-#: ../../source/install/linux.rst:623
+#: ../../source/install/linux.rst:667
 msgid ""
 "You must install Composer. See instructions on its web site "
 "http://getcomposer.org."
 msgstr "Composerをインストールする必要があります。ウェブサイト（ http://getcomposer.org ）で説明をご覧ください。"
 
-#: ../../source/install/linux.rst:625
+#: ../../source/install/linux.rst:669
 msgid ""
 "You must create a :file:`composer.json` file into :file:`lizmap/my-"
 "packages/` by copying the :file:`composer.json.dist` from this directory. "
@@ -1280,41 +1287,41 @@ msgstr ""
 "このディレクトリから :file:`composer.json.dist` をコピーして、 :file:`lizmap/my-packages/` に "
 ":file:`composer.json` ファイルを作成する必要があります。そして、最初のComposeを起動します。"
 
-#: ../../source/install/linux.rst:636
+#: ../../source/install/linux.rst:680
 msgid "Then you can install the package of the module"
 msgstr "次に、モジュールのパッケージをインストールします。"
 
-#: ../../source/install/linux.rst:643
+#: ../../source/install/linux.rst:687
 msgid "If you want to install a new version of the module, just execute:"
 msgstr "新しいバージョンのモジュールをインストールしたい場合は、以下を実行してください。"
 
-#: ../../source/install/linux.rst:649 ../../source/install/linux.rst:693
+#: ../../source/install/linux.rst:693 ../../source/install/linux.rst:737
 msgid ""
 "Read the documentation of the module to know if there are additional steps "
 "to configure it."
 msgstr "モジュールを設定するための追加手順があるかどうかは、モジュールのドキュメントをお読みください。"
 
-#: ../../source/install/linux.rst:652
+#: ../../source/install/linux.rst:696
 msgid "To finish the installation, run again the installer of Lizmap:"
 msgstr "インストールを終了するには、Lizmapのインストーラーを再度実行してください。"
 
-#: ../../source/install/linux.rst:662
+#: ../../source/install/linux.rst:706
 msgid "installing modules without Composer"
 msgstr "Composerを使わずにモジュールをインストールする"
 
-#: ../../source/install/linux.rst:664
+#: ../../source/install/linux.rst:708
 msgid ""
 "To install a module without Composer, retrieve the zip file of the module."
 msgstr "Composerを使わずにモジュールをインストールするには、モジュールのZIPファイルを取得します。"
 
-#: ../../source/install/linux.rst:666
+#: ../../source/install/linux.rst:710
 msgid ""
 "Extract the module into :file:`lizmap/lizmap-modules/`. For instance, for "
 "the module ``PgMetadata`` :"
 msgstr ""
 "モジュールを :file:`lizmap/lizmap-modules/` に展開します。例えば、モジュール ``PgMetadata`` の場合 :"
 
-#: ../../source/install/linux.rst:685
+#: ../../source/install/linux.rst:729
 msgid ""
 "Edit the :file:`lizmap/var/config/localconfig.ini.php`, in the ``modules`` "
 "section, add a new line for the given module (check the documentation of the"
@@ -1323,7 +1330,7 @@ msgstr ""
 ":file:`lizmap/var/config/localconfig.ini.php` を編集し、``modules` "
 "セクションに、指定したモジュールのための新しい行を追加します（正しい値を設定するには、モジュールのドキュメントを確認してください）。"
 
-#: ../../source/install/linux.rst:696
+#: ../../source/install/linux.rst:740
 msgid "Run the installation :"
 msgstr "インストールを実行します。"
 
@@ -1331,32 +1338,32 @@ msgstr "インストールを実行します。"
 msgid "Requirements before installing Lizmap Web Client"
 msgstr "Lizmap Web Clientをインストールする際の必要な要件"
 
-#: ../../source/install/pre_requirements.rst:8
+#: ../../source/install/pre_requirements.rst:10
 msgid "QGIS Server"
 msgstr "QGIS Server"
 
-#: ../../source/install/pre_requirements.rst:11
+#: ../../source/install/pre_requirements.rst:13
 msgid ""
 "Before installing the QGIS Server part, it is **very highly** recommended to"
 " use the **same** version between QGIS Desktop and QGIS Server."
 msgstr ""
-"QGIS Server部分をインストールする前に、QGIS DesktopとQGIS "
-"Serverで**同じ**バージョンを使用することを**強く**お勧めします。"
+"QGIS Server部分をインストールする前に、QGIS DesktopとQGIS Serverで **同じ** バージョンを使用することを "
+"**強く** お勧めします。"
 
-#: ../../source/install/pre_requirements.rst:14
+#: ../../source/install/pre_requirements.rst:16
 msgid ""
 "Even if some functions might work, there is a probability that some "
 "configuration won't work if these two versions are **different**."
-msgstr "一部の機能が動作したとしても、2つのバージョンが**異なる**場合、一部の設定が動作しない可能性があります。"
+msgstr "一部の機能が動作したとしても、2つのバージョンが **異なる** 場合、一部の設定が動作しない可能性があります。"
 
-#: ../../source/install/pre_requirements.rst:17
+#: ../../source/install/pre_requirements.rst:19
 msgid ""
 "The reason is QGIS Server version X might not be able to a QGIS project made"
 " with a QGIS Desktop version Y."
 msgstr ""
 "その理由は、QGIS DesktopバージョンYで作成したQGISプロジェクトにQGIS ServerバージョンXが対応できない場合があるからです。"
 
-#: ../../source/install/pre_requirements.rst:19
+#: ../../source/install/pre_requirements.rst:21
 msgid ""
 "Follow the QGIS Documentation how to install QGIS Server : "
 "https://docs.qgis.org/latest/en/docs/server_manual/"
@@ -1364,16 +1371,16 @@ msgstr ""
 "QGIS ドキュメントに記載されている QGIS Server "
 "のインストール方法に従ってください。https://docs.qgis.org/latest/en/docs/server_manual/"
 
-#: ../../source/install/pre_requirements.rst:21
+#: ../../source/install/pre_requirements.rst:23
 msgid ""
 "Using a webserver (Apache or Nginx), you must install QGIS Server. With "
 "Nginx, the preferred way is to use ``spawn-fcgi``. Do **not** use the "
 "``fcgiwrap``, this solution is not efficient."
 msgstr ""
-"ウェブサーバ（Apache または Nginx）を使用する場合は、QGIS Server をインストールする必要があります。Nginxでは"
-"、``spawn-fcgi``を使用するのが望ましい方法です。 ``fcgiwrap```は使用**しない**でください。"
+"ウェブサーバ（Apache または Nginx）を使用する場合は、QGIS Server をインストールする必要があります。Nginxでは、 "
+"``spawn-fcgi`` を使用するのが望ましい方法です。 ``fcgiwrap``` は使用 **しない** でください。"
 
-#: ../../source/install/pre_requirements.rst:24
+#: ../../source/install/pre_requirements.rst:26
 msgid ""
 "In the Nginx configuration, it's good to use the ``QGIS_OPTIONS_PATH`` "
 "variable for a folder with write permissions for ``www-data``. These is "
@@ -1382,7 +1389,7 @@ msgstr ""
 "Nginxの設定では、 ``QGIS_OPTIONS_PATH`` 変数に ``www-data`` "
 "の書き込み権限のあるフォルダを指定するのが良いでしょう。これらについては、QGIS Serverのドキュメントで説明されています。"
 
-#: ../../source/install/pre_requirements.rst:27
+#: ../../source/install/pre_requirements.rst:29
 msgid ""
 "You should also install and configure ``XVFB`` mentioned in the QGIS "
 "Documentation. This is useful for printing PDF. You can only skip this "
@@ -1391,7 +1398,7 @@ msgstr ""
 "また、QGISドキュメントに記載されている ``XVFB`` "
 "のインストールと設定も行ってください。これはPDFを印刷するのに使用されます。サーバーサイドでPDFを印刷する予定がない場合にのみ、このセクションをスキップすることができます。"
 
-#: ../../source/install/pre_requirements.rst:31
+#: ../../source/install/pre_requirements.rst:33
 msgid ""
 "After you have setup your web server with QGIS-Server, check that the URL of"
 " QGIS Server is working. You probably get a XML like:"
@@ -1399,95 +1406,319 @@ msgstr ""
 "QGIS-ServerでWebサーバを設定した後、QGIS "
 "ServerのURLが機能しているかどうかを確認します。おそらく、以下のようなXMLが表示されると思います。"
 
-#: ../../source/install/pre_requirements.rst:38
+#: ../../source/install/pre_requirements.rst:40
 msgid "Keep this URL, we will use it later in the Lizmap admin panel."
 msgstr "このURLは、後でLizmapの管理画面で使用するので、とっておいてください。"
 
-#: ../../source/install/pre_requirements.rst:41
+#: ../../source/install/pre_requirements.rst:43
 msgid ""
 "We **strongly** encourage you to set up QGIS Server on a different virtual "
 "host than Lizmap Web Client. QGIS Server URL should stay private, accessible"
 " by the Lizmap PHP application **only**."
 msgstr ""
+"‎我々は ** 強く ** lizmap Web "
+"クライアントとは異なる仮想ホストにQGISサーバーを設定することをお勧めします。QGISサーバーのURLは、lizmap PHPアプリケーション ** "
+"のみ ** でアクセス可能なプライベートな場所にする必要があります。‎"
 
-#: ../../source/install/pre_requirements.rst:44
+#: ../../source/install/pre_requirements.rst:46
 msgid ""
 "Otherwise, especially after the **Lizmap** plugin on QGIS Server is "
 "installed, your user might be able to access private data if they by-pass "
 "Lizmap, by using straight QGIS Server URL."
 msgstr ""
+"‎それ以外の場合、特にQGIS Serverの ** Lizmap ** "
+"プラグインがインストールされた後、ユーザーは直接QGISサーバーURLを使用して、lizmapに渡せばプライベートデータにアクセスできるかもしれません。"
 
-#: ../../source/install/pre_requirements.rst:48
+#: ../../source/install/pre_requirements.rst:50
 msgid "QGIS Server plugins"
 msgstr "QGIS Serverプラグイン"
 
-#: ../../source/install/pre_requirements.rst:50
+#: ../../source/install/pre_requirements.rst:52
 msgid ""
 "Some plugins can be added to QGIS Server. This will enable some features in "
 "Lizmap. It's not compulsory but in some situations, it's better."
 msgstr ""
 "いくつかのプラグインは、QGISサーバーに追加することができます。これにより、Lizmapのいくつかの機能が有効になります。必須ではありませんが、場合によってはその方が良い場合もあります。"
 
-#: ../../source/install/pre_requirements.rst:53
+#: ../../source/install/pre_requirements.rst:55
 msgid ""
-"Either you should setup the ``QGIS_PLUGINPATH`` environment variable during"
-" the installation of QGIS Server or use the default one provided by QGIS. "
+"Either you should setup the ``QGIS_PLUGINPATH`` environment variable during "
+"the installation of QGIS Server or use the default one provided by QGIS. "
 "https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-"
 "variables"
 msgstr ""
-"QGIS Serverのインストール時に環境変数 ``QGIS_PLUGINPATH`` "
-"を設定するか、QGISが提供するデフォルトの環境変数を使用してください。https://docs.qgis.org/latest/en/docs/server_manual/config.html"
-"#environment-variables"
 
-#: ../../source/install/pre_requirements.rst:57
+#: ../../source/install/pre_requirements.rst:60
 msgid ""
-"AtlasPrint : To enable the PDF based on a QGIS Layout Atlas "
-"https://github.com/3liz/qgis-atlasprint"
+"To manage QGIS Server plugins, we encourage you to use **qgis-plugin-"
+"manager**, a CLI tool to install and upgrade plugins. "
+"https://pypi.org/project/qgis-plugin-manager/"
 msgstr ""
-"AtlasPrint : QGISレイアウトの地図帳に基づいたPDFを有効にします https://github.com/3liz/qgis-"
-"atlasprint"
-
-#: ../../source/install/pre_requirements.rst:58
-msgid ""
-"Cadastre : French use-case only, working with the Cadastre Lizmap module "
-"https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/"
-msgstr ""
-
-#: ../../source/install/pre_requirements.rst:59
-msgid ""
-"Lizmap : Lizmap **is not only** a PHP application, there is also Python "
-"plugin for **QGIS Server** to"
-msgstr ""
-
-#: ../../source/install/pre_requirements.rst:61
-msgid "evaluate QGIS Expressions in forms"
-msgstr ""
-
-#: ../../source/install/pre_requirements.rst:62
-msgid ""
-"check User Access Rights (ACL) for features and layers (filter by polygon, "
-"by attribute…)"
-msgstr ""
+"QGIS サーバのプラグインを管理するには、プラグインをインストールおよびアップグレードするための CLI ツールである **qgis-plugin-"
+"manager** を使用することをお勧めします。 https://pypi.org/project/qgis-plugin-manager/"
 
 #: ../../source/install/pre_requirements.rst:63
-msgid "https://github.com/3liz/lizmap-plugin/"
-msgstr ""
+msgid "AtlasPrint"
+msgstr "地図帳"
 
 #: ../../source/install/pre_requirements.rst:65
-msgid ""
-"Logging : To log QGIS Servers log and to flush the cache on QGIS Server "
-"https://github.com/3liz/qgis-logging-plugin"
-msgstr ""
-"Logging : QGIS サーバーのログを記録し、QGIS サーバーのキャッシュをフラッシュします https://github.com/3liz"
-"/qgis-logging-plugin"
+msgid "To enable the PDF based on a QGIS Layout Atlas"
+msgstr "‎QGIS 地図帳レイアウトによる PDF を有効にするには‎"
 
 #: ../../source/install/pre_requirements.rst:66
-msgid ""
-"WfsOutputExtension : To add new format when exporting vector data "
-"https://github.com/3liz/qgis-wfsOutputExtension"
+msgid "https://github.com/3liz/qgis-atlasprint"
+msgstr "https://github.com/3liz/qgis-atlasprint"
+
+#: ../../source/install/pre_requirements.rst:68
+msgid "Cadastre"
+msgstr "Cadastre"
+
+#: ../../source/install/pre_requirements.rst:70
+msgid "French use-case only"
+msgstr "フランスでの利用のみを想定"
+
+#: ../../source/install/pre_requirements.rst:71
+msgid "Needed for the Lizmap Cadastre module"
+msgstr "Lizmap Cadastre モジュールに必要です"
+
+#: ../../source/install/pre_requirements.rst:72
+msgid "https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/"
+msgstr "https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/"
+
+#: ../../source/install/pre_requirements.rst:74
+msgid "Lizmap server"
 msgstr ""
-"WfsOutputExtension : ベクトルデータの書き出し時に新しいフォーマットを追加します https://github.com/3liz"
-"/qgis-wfsOutputExtension"
+
+#: ../../source/install/pre_requirements.rst:76
+msgid ""
+"Lizmap **is not only** a PHP application, there is also Python plugin for "
+"**QGIS Server** called **Lizmap server**."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:77
+#: ../../source/install/pre_requirements.rst:117
+msgid "https://github.com/3liz/qgis-lizmap-server-plugin"
+msgstr "https://github.com/3liz/qgis-lizmap-server-plugin"
+
+#: ../../source/install/pre_requirements.rst:78
+msgid ""
+"The plugin is **highly** recommended, a few features won't work as expected "
+"if the plugin is not installed or not upgraded."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:79
+msgid ""
+"**Important**, read below for more information the Lizmap QGIS Server "
+"plugin. (:ref:`lizmap-server-plugin`)"
+msgstr ""
+"‎ **重要**  lizmap QGISサーバープラグインの詳細については、以下をお読みください‎. (:ref:`lizmap-server-"
+"plugin`)"
+
+#: ../../source/install/pre_requirements.rst:81
+msgid "WfsOutputExtension"
+msgstr "WfsOutputExtension"
+
+#: ../../source/install/pre_requirements.rst:83
+msgid "To add new format when exporting vector data"
+msgstr "‎ベクター データをエクスポートするときに新しい形式を追加するには‎"
+
+#: ../../source/install/pre_requirements.rst:84
+msgid "https://github.com/3liz/qgis-wfsOutputExtension"
+msgstr "https://github.com/3liz/qgis-wfsOutputExtension"
+
+#: ../../source/install/pre_requirements.rst:86
+msgid "Logging"
+msgstr "ロギング"
+
+#: ../../source/install/pre_requirements.rst:88
+msgid "To log QGIS Servers log and to flush the cache on QGIS Server"
+msgstr "‎QGISサーバーログを記録し、QGISサーバー上のキャッシュを清浄化するには‎"
+
+#: ../../source/install/pre_requirements.rst:89
+msgid "https://github.com/3liz/qgis-logging-plugin."
+msgstr "https://github.com/3liz/qgis-logging-plugin."
+
+#: ../../source/install/pre_requirements.rst:90
+msgid "This plugin is deprecated."
+msgstr "‎このプラグインは廃止されました。‎"
+
+#: ../../source/install/pre_requirements.rst:95
+msgid "Lizmap QGIS Server plugin"
+msgstr "Lizmap QGISサーバープラグイン"
+
+#: ../../source/install/pre_requirements.rst:97
+msgid ""
+"Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web "
+"Client :"
+msgstr "lizmap QGISサーバープラグインを追加すると、lizmap Web Client にいくつかの機能が追加されます:‎"
+
+#: ../../source/install/pre_requirements.rst:99
+msgid "retrieve information from QGIS Server."
+msgstr "‎QGISサーバーから情報を取得します。‎"
+
+#: ../../source/install/pre_requirements.rst:101
+msgid ""
+"evaluate `QGIS Expressions "
+"<https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`_"
+" in forms about :"
+msgstr ""
+"フォームに `QGIS 式 "
+"<https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`　を使った表現"
+" :"
+
+#: ../../source/install/pre_requirements.rst:104
+msgid "constraints"
+msgstr "‎制約‎"
+
+#: ../../source/install/pre_requirements.rst:105
+msgid "default value"
+msgstr "‎既定値‎"
+
+#: ../../source/install/pre_requirements.rst:106
+msgid "group visibility"
+msgstr "‎グループの見え方"
+
+#: ../../source/install/pre_requirements.rst:107
+msgid "Read :ref:`edition-expressions`."
+msgstr " :ref:` 編集方法 ‎`を読んでください。"
+
+#: ../../source/install/pre_requirements.rst:109
+msgid "check User Access Rights (ACL) for features and layers :"
+msgstr "地物とレイヤーのユーザーアクセス権（ACL）の確認 :"
+
+#: ../../source/install/pre_requirements.rst:111
+msgid "filter by polygon"
+msgstr "ポリゴンでフィルタ‎"
+
+#: ../../source/install/pre_requirements.rst:112
+msgid "by attribute"
+msgstr "‎属性による"
+
+#: ../../source/install/pre_requirements.rst:114
+msgid "use the **Form** popup, read :ref:`form-popup`."
+msgstr " **フォーム** を使った地物情報は :ref:` フォーム－地物情報 ` を読んでください。"
+
+#: ../../source/install/pre_requirements.rst:115
+msgid ""
+"enable ``@lizmap_user`` and ``lizmap_user_groups`` variables in QGIS "
+"projects"
+msgstr "‎QGISプロジェクトで ``@lizmap_user`` と ``lizmap_user_groups`` 変数を有効にする‎"
+
+#: ../../source/install/pre_requirements.rst:118
+msgid ""
+"The plugin is not required, but a few features won't work as expected if the"
+" plugin is not installed or not upgraded"
+msgstr ""
+"プラグインは必須ではありませんが、プラグインがインストールされていなかったり、アップグレードされていないと、いくつかの機能が期待通りに動作しません。"
+
+#: ../../source/install/pre_requirements.rst:119
+msgid ""
+"The name of the plugin is **Lizmap server**. Do not install the **Lizmap** "
+"plugin which is the **desktop** Python plugin."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:122
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../source/install/pre_requirements.rst:125
+msgid "QGIS Server side"
+msgstr "‎QGISサーバー側‎"
+
+#: ../../source/install/pre_requirements.rst:127
+msgid ""
+"The Lizmap plugin must be installed in the correct folder for QGIS Server. "
+"The environment variable must be set in QGIS Server. The plugin name is "
+"**Lizmap server**."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:131
+msgid ""
+"For **security** reason, to enable all features on the QGIS server side, you"
+" must enable the environment variable "
+"``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`` on QGIS server."
+msgstr ""
+"‎**安全** "
+"のために、QGISサーバー側のすべての機能を有効にするには、QGISサーバー上の環境変数　``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True``"
+" を有効にする必要があります。‎"
+
+#: ../../source/install/pre_requirements.rst:134
+msgid ""
+"You **must** be ensured that this API "
+"``http://your.qgis.server.url/lizmap/server.json`` is protected on your "
+"webserver. The **best** is to restrict the access to QGIS server "
+"``http://your.qgis.server.url`` on a virtual host, not accessible on the "
+"internet. All requests to QGIS server will be sent by Lizmap Web Client. "
+"QGIS server mustn't be accessible from outside. It was already **highly** "
+"recommended before to protect the QGIS Server from the internet. Users "
+"**must use** WFS/WMS links provided by Lizmap Web Client, so Lizmap can "
+"check user permissions."
+msgstr ""
+"Webサーバー上でこのAPI ``http://your.qgis.server.url/lizmap/server.json`` が保護されていることを **確認** する必要があります。 **一番良い** のは、インターネットからアクセスできないバーチャルホスト上のQGISサーバー \n"
+"``http://your.qgis.server.url`` へのアクセスを制限することです。QGISサーバーへのすべてのリクエストは、Lizmap Web Clientから送信されます。QGISサーバーは、外部からアクセスできないようにする必要があります。以前からQGISサーバーをインターネットから保護することを **強く** 推奨しています。Lizmap Web Clientが提供するWFS/WMSリンクをユーザーが使用する **必要** があり、Lizmapはユーザーの権限を確認することができます。"
+
+#: ../../source/install/pre_requirements.rst:140
+msgid ""
+"This variable will **expose** server settings such as QGIS server version, "
+"which is used by Lizmap Web Client."
+msgstr "この変数は、Lizmap Web Clientで使用されるQGISサーバーのバージョンなどのサーバー設定を **公開** するものです。"
+
+#: ../../source/install/pre_requirements.rst:143
+msgid "Administration panel"
+msgstr "‎管理パネル‎"
+
+#: ../../source/install/pre_requirements.rst:145
+msgid ""
+"You **must** have the table called \"Server information\" working correctly "
+"in your administration panel before trying a QGIS project."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:148
+msgid ""
+"If your are using QGIS Server with **FCGI**, the Lizmap API URL **must** be "
+"empty."
+msgstr " **FCGI** でQGISサーバーを使用している場合、Lizmap API URL **は空でなければなりません** 。‎"
+
+#: ../../source/install/pre_requirements.rst:150
+msgid ""
+"Otherwise, if you are using `Py-QGIS-Server <https://docs.3liz.org/py-qgis-"
+"server/>`_, the Lizmap API URL **must** be configured in the administration "
+"interface. In **Py-QGIS-Server**, you must explicitly publish the API as "
+"well :"
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:161
+msgid ""
+"Then, with Py-QGIS-Server, if your URL for OWS is `http://map:8080/ows/`, it"
+" means the URL for the Lizmap API endpoint is `http://map:8080/lizmap/`."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:169
+msgid "PostgreSQL can be used for **three** different purposes in Lizmap :"
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:171
+msgid ""
+"To store GIS data. **No** configuration is needed on the Lizmap Web Client "
+"server side, **only** the PostgreSQL server must be accessible from the "
+"Lizmap Web Client server and QGIS Server. It's possible to edit layers with "
+"Lizmap, but the layer **must** be stored in PostgreSQL. See :ref:`edition-"
+"prerequisites`."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:174
+msgid ""
+"To store Lizmap Web Client users and user actions. Lizmap uses tables. This "
+"setting must be done when **installing** Lizmap."
+msgstr ""
+" Lizmap Web Client ユーザーとユーザーアクションを保存します。lizmapはユーザーテーブルを使用します。‎‎この設定は、lizmap"
+" **インストール** するときに行う必要があります。‎"
+
+#: ../../source/install/pre_requirements.rst:175
+msgid ""
+"To use `lizmap_search`, see :ref:`postgresql-lizmap-search`. This setting on"
+" the Lizmap server can be set when you need it."
+msgstr ""
 
 #: ../../source/install/upgrade.rst:3
 msgid "Upgrade Lizmap Web Client"
@@ -1502,129 +1733,151 @@ msgid ""
 "See `documentation of Lizmap 3.1 "
 "<https://docs.lizmap.com/3.1/en/install/upgrade.html>`_."
 msgstr ""
-"`Lizmap 3.1のドキュメント "
-"<https://docs.lizmap.com/3.1/en/install/upgrade.html>`_をご覧ください。"
+"`Lizmap 3.1のドキュメント <https://docs.lizmap.com/3.1/en/install/upgrade.html>`_ "
+"をご覧ください。"
 
 #: ../../source/install/upgrade.rst:11
-msgid "Upgrading from Lizmap 3.x versions"
-msgstr "Lizmap 3.xからのアップグレード"
+msgid "Upgrading from Lizmap lower than 3.5 versions"
+msgstr ""
 
 #: ../../source/install/upgrade.rst:13
-msgid "From 3.0 versions to upper, here is how to upgrade."
-msgstr "3.0バージョンから上位バージョンへのアップグレード方法は以下の通りです。"
+msgid ""
+"You should first migrate to 3.5. See `documentation of Lizmap 3.5 "
+"<https://docs.lizmap.com/3.5/en/install/upgrade.html>`_. Then you could "
+"migrate to 3.6"
+msgstr ""
 
-#: ../../source/install/upgrade.rst:16
+#: ../../source/install/upgrade.rst:17
+msgid "Upgrading from Lizmap 3.5 version"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:19
+msgid "Here is how to upgrade from Lizmap 3.5."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:22
 msgid "Data backup"
 msgstr "データのバックアップ"
 
-#: ../../source/install/upgrade.rst:18
+#: ../../source/install/upgrade.rst:24
 msgid ""
-"Backup your data into a directory (ex: /tmp) with the "
-"lizmap/install/backup.sh script, so you could reinstall them if the "
-"installation failed."
+"Backup your data and configuration files into a directory (ex: ``/tmp``) "
+"with the ``lizmap/install/backup.sh`` script of Lizmap 3.5."
 msgstr ""
-"インストールに失敗しても再インストールできるように、lizmap/install/backup.shスクリプトでデータをディレクトリ（例：/tmp）にバックアップしておきます。"
 
-#: ../../source/install/upgrade.rst:25
+#: ../../source/install/upgrade.rst:31
 msgid "If you want to backup by hand, you should backup at least these files:"
 msgstr "手作業でバックアップする場合は、少なくともこれらのファイルをバックアップする必要があります。"
 
-#: ../../source/install/upgrade.rst:27
+#: ../../source/install/upgrade.rst:33
 msgid "var/db/jauth.db"
 msgstr "var/db/jauth.db"
 
-#: ../../source/install/upgrade.rst:28
+#: ../../source/install/upgrade.rst:34
 msgid "var/db/logs.db"
 msgstr "var/db/logs.db"
 
-#: ../../source/install/upgrade.rst:29
+#: ../../source/install/upgrade.rst:35
 msgid "var/config/installer.ini.php"
 msgstr "var/config/installer.ini.php"
 
-#: ../../source/install/upgrade.rst:30
-msgid "var/config/liveConfig.ini.php (if it exists)"
-msgstr "var/config/liveConfig.ini.php (if it exists)"
+#: ../../source/install/upgrade.rst:36
+msgid "var/config/liveConfig.ini.php"
+msgstr ""
 
-#: ../../source/install/upgrade.rst:31
+#: ../../source/install/upgrade.rst:37
+msgid "var/config/localframework.ini.php (if it exists)"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:38
 msgid "var/config/lizmapConfig.ini.php"
 msgstr "var/config/lizmapConfig.ini.php"
 
-#: ../../source/install/upgrade.rst:32
+#: ../../source/install/upgrade.rst:39
 msgid "var/config/localconfig.ini.php"
 msgstr "var/config/localconfig.ini.php"
 
-#: ../../source/install/upgrade.rst:33
+#: ../../source/install/upgrade.rst:40
 msgid "var/config/profiles.ini.php"
 msgstr "var/config/profiles.ini.php"
 
-#: ../../source/install/upgrade.rst:37
+#: ../../source/install/upgrade.rst:44
 msgid "Replace Lizmap files"
 msgstr "Lizmapファイルの置き換え"
 
-#: ../../source/install/upgrade.rst:39
+#: ../../source/install/upgrade.rst:46
 msgid ""
-"Get the Lizmap archive (by downloading an archive or by doing a git "
-"clone/pull)"
-msgstr "Lizmapのアーカイブを入手します（アーカイブをダウンロードするか、git clone/pullを行う）。"
-
-#: ../../source/install/upgrade.rst:41
-msgid "You should"
-msgstr "次のことを行います。"
-
-#: ../../source/install/upgrade.rst:43
-msgid "replace the lib/ directory by the new lib/ directory"
-msgstr "lib/ ディレクトリを新しい lib/ ディレクトリに置き換える。"
-
-#: ../../source/install/upgrade.rst:44
-msgid "replace files into lizmap/ directory by the new lizmap/ files"
-msgstr "lizmap/ディレクトリ内のファイルを、新しいlizmap/ファイルに置き換える。"
-
-#: ../../source/install/upgrade.rst:45
-msgid ""
-"If the replacement has erased some files that you've been backuped, restore "
-"them with ``lizmap/install/restore.sh /tmp``"
+"Get the Lizmap archive by downloading an archive on the `release "
+"<https://github.com/3liz/lizmap-web-client/releases>`_ page."
 msgstr ""
-"もし、置き換えによってバックアップしていたファイルが消えてしまった場合は、``lizmap/install/restore.sh "
-"/tmp``で復元してください。"
+"‎Lizmap アーカイブを入手するには、 `release <https://github.com/3liz/lizmap-web-"
+"client/releases>` _ ページでアーカイブをダウンロードしてください。‎"
 
-#: ../../source/install/upgrade.rst:49
+#: ../../source/install/upgrade.rst:48
+msgid "You should then :"
+msgstr "次のことを行う必要があります‎："
+
+#: ../../source/install/upgrade.rst:50
+msgid "rename the ``lizmap/`` directory to ``lizmap.bak/`` for example"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:51
+msgid ""
+"extract the ``lizmap/`` directory from the archive, so it will be become the"
+" new ``lizmap/`` directory."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:52
+msgid ""
+"execute the script ``lizmap/install/restore.sh /tmp`` or reinstall by hand "
+"the files you backup."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:54
+msgid "Note: there is not anymore a ``lib/`` directory."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:57
 msgid "Launch the installer"
 msgstr "インストーラーの起動"
 
-#: ../../source/install/upgrade.rst:51
+#: ../../source/install/upgrade.rst:59
 msgid ""
 "You have to launch the installer, it will upgrade some stuff: database "
 "tables, configuration etc.."
 msgstr "インストーラを起動すると、データベーステーブルや設定など、いくつかのものがアップグレードされます。"
 
-#: ../../source/install/upgrade.rst:61
-msgid ""
-"if you upgrade from 3.0 or 3.1 to Lizmap 3.2/3.3, and if you are using the "
-"ldap authentication with the ldapdao module, you have to know that this "
-"module is included into Lizmap 3.2/3.3 and is pre-configured. So, before "
-"launching the installer, you have to remove the ldapdao module you've "
-"installed, and you have to configure the ldapdao module in a little "
-"different manner than when installing it by hand. See the ldap configuration"
-" section in this manual."
+#: ../../source/install/upgrade.rst:69
+msgid "Cleanup and test"
 msgstr ""
-"3.0または3.1からLizmap "
-"3.2/3.3にアップグレードし、なおかつldapdaoモジュールでldap認証を使用している場合、このモジュールはLizmap "
-"3.2/3.3に含まれていることにご注意ください。そのため、インストーラを起動する前に、インストールしたldapdaoモジュールを削除し、手動でインストールする場合とは少し異なる方法でldapdaoモジュールの設定を行う必要があります。本マニュアルの"
-" ldap の設定のセクションを参照してください。"
 
-#: ../../source/install/upgrade.rst:70
-msgid "Delete Jelix temporary files"
-msgstr "Jelixの一時ファイルの削除"
+#: ../../source/install/upgrade.rst:71
+msgid "You should then delete all cache and temporary files:"
+msgstr ""
 
 #: ../../source/install/upgrade.rst:77
-msgid "Redefine the rights to the application files"
-msgstr "アプリケーションファイルの権限を再定義する"
+msgid ""
+"Then you should call the script that sets rights on files. Parameters are "
+"the web user and the web group used by the web server to execute Lizmap. On "
+"a Debian server, it is often www-data."
+msgstr ""
 
-#: ../../source/install/upgrade.rst:87
+#: ../../source/install/upgrade.rst:86
+msgid ""
+"Then load Lizmap into your browser, you should see your maps without errors."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:88
+msgid ""
+"If this is the case, you can delete the old directories ``lib/`` and "
+"``lizmap.bak/``."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:92
 msgid "Migrating from Sqlite to Postgresql"
 msgstr "SqliteからPostgresqlへの移行"
 
-#: ../../source/install/upgrade.rst:89
+#: ../../source/install/upgrade.rst:94
 msgid ""
 "You may have installed Lizmap with Sqlite. You should then have these files "
 ":file:`lizmap/var/db/jauth.db` and :file:`lizmap/var/db/logs.db`, where some"
@@ -1636,13 +1889,13 @@ msgstr ""
 "には、ユーザー、権限、ログなどのデータが保存されているはずです。そして、この設定を "
 ":file:`lizmap/var/config/profiles.ini.php` に記述する必要があります。"
 
-#: ../../source/install/upgrade.rst:105
+#: ../../source/install/upgrade.rst:110
 msgid ""
 "It you have a such configuration, you can migrate data to a Postgresql "
 "database."
 msgstr "このような設定であれば、Postgresqlのデータベースにデータを移行することができます。"
 
-#: ../../source/install/upgrade.rst:107
+#: ../../source/install/upgrade.rst:112
 msgid ""
 "First, create a Postgresql database, and then change the configuration into "
 ":file:`lizmap/var/config/profiles.ini.php`, by setting access parameters to "
@@ -1651,22 +1904,23 @@ msgid ""
 msgstr ""
 "まず、Postgresqlのデータベースを作成します。次に、Postgresqlのデータベースへのアクセスパラメータを設定して、 "
 ":file:`lizmap/var/config/profiles.ini.php` "
-"の設定を変更します。データベースにすでにいくつかのテーブルが含まれている場合には、例えば、``lizmap``のようなスキーマを作成することをお勧めします。"
+"の設定を変更します。データベースにすでにいくつかのテーブルが含まれている場合には、例えば、 ``lizmap`` "
+"のようなスキーマを作成することをお勧めします。"
 
-#: ../../source/install/upgrade.rst:113
+#: ../../source/install/upgrade.rst:118
 msgid "For example :"
 msgstr "例えば、"
 
-#: ../../source/install/upgrade.rst:135
+#: ../../source/install/upgrade.rst:140
 msgid ""
 "See the chapter about installation to know more about these parameters."
 msgstr "これらのパラメータの詳細については、インストールの章を参照してください。"
 
-#: ../../source/install/upgrade.rst:137
+#: ../../source/install/upgrade.rst:142
 msgid "Then you can launch these scripts which will migrate the data."
 msgstr "そして、データを移行するスクリプトを起動することができます。"
 
-#: ../../source/install/upgrade.rst:145
+#: ../../source/install/upgrade.rst:150
 msgid ""
 "If there are no errors, you can then go onto lizmap with your browser, and "
 "check that you can authenticate yourself. You should see also the list of "
@@ -1675,7 +1929,7 @@ msgid ""
 msgstr ""
 "エラーがなければ、ブラウザでlizmapにアクセスして、自分が認証できることを確認します。管理パネルのユーザーリストにも表示されているはずです。もし問題がある場合は、jauth.dbとlogs.dbをバックアップして、削除してください。"
 
-#: ../../source/install/upgrade.rst:150
+#: ../../source/install/upgrade.rst:155
 msgid ""
 "If something goes wrong and you cannot fix the issue, revert the database "
 "access into :file:`lizmap/var/config/profiles.ini.php` as before, like this "
@@ -1684,7 +1938,7 @@ msgstr ""
 "何か問題が発生し、問題を解決できない場合は、以下のように、データベースアクセスを以前のように "
 ":file:`lizmap/var/config/profiles.ini.php` に戻してください。"
 
-#: ../../source/install/upgrade.rst:164
+#: ../../source/install/upgrade.rst:169
 msgid "And Lizmap should work well, but still with Sqlite."
 msgstr "これでLizmapもうまく動作するはずですが、まだSqlite版のままです。"
 
@@ -1692,919 +1946,22 @@ msgstr "これでLizmapもうまく動作するはずですが、まだSqlite版
 msgid "Installing Lizmap Web Client on Windows"
 msgstr "WindowsへのLizmap Web Clientのインストール"
 
+#: ../../source/install/windows.rst:5
+msgid "Lizmap Web Client is not officially supported on a Windows server."
+msgstr "‎Lizmap Web Client は、Windows サーバーでは正式にはサポートされていません。‎"
+
 #: ../../source/install/windows.rst:7
-msgid ""
-"This documentation shows the necessary steps to install Lizmap Web Client on"
-" a **Windows 7** and **Windows 10** environment. The other versions of "
-"Windows should not be a problem."
-msgstr ""
-"このドキュメントでは、Lizmap Web Clientを**Windows 7**および**Windows "
-"10**の環境にインストールするために必要な手順を説明しています。その他のバージョンのWindowsでも問題はないはずです。"
+msgid "We recommend either :"
+msgstr "‎次のいずれかをお勧めします："
 
 #: ../../source/install/windows.rst:9
 msgid ""
-"In this document, the *version 3.3* of Lizmap Web Client is used. Be sure to"
-" adjust it according to the version you want to install (the later is "
-"recommended)."
+"using `Docker and Docker-Compose <https://github.com/3liz/lizmap-docker-"
+"compose>`_ to quickly test Lizmap Web Client."
 msgstr ""
-"このドキュメントでは、Lizmap Web "
-"Clientの*バージョン3.3*を使用しています。インストールしたいバージョンに応じて、必ず調整してください（最新バージョンを推奨します）。"
 
-#: ../../source/install/windows.rst:14
-msgid "Requirements"
-msgstr "必要要件"
-
-#: ../../source/install/windows.rst:16
-msgid ""
-"Text Editor (e.g. `Notepad++ <https://notepad-plus-plus.org/>`_ , `Visual "
-"Studio Code <https://code.visualstudio.com/>`_ )"
-msgstr ""
-"テキストエディタ (e.g. `Notepad++ <https://notepad-plus-plus.org/>`_ , `Visual "
-"Studio Code <https://code.visualstudio.com/>`_ )"
-
-#: ../../source/install/windows.rst:17
-msgid ""
-"Microsoft Visual C++ Redistributable 64-bits (this installation need to "
-"respect the compiling version of Apache and PHP) ( `Microsoft VCs C++ "
-"<https://support.microsoft.com/pt-pt/help/2977003/the-latest-supported-"
-"visual-c-downloads>`_ )"
-msgstr ""
-"Microsoft Visual C++ Redistributable 64-bits "
-"(このインストールでは、ApacheとPHPのコンパイルバージョンを考慮する必要があります。) ( `Microsoft VCs C++ "
-"<https://support.microsoft.com/pt-pt/help/2977003/the-latest-supported-"
-"visual-c-downloads>`_ )"
-
-#: ../../source/install/windows.rst:18
-msgid ""
-"Web Server (`Apache 24 64-bits <https://www.apachelounge.com/download>`_ )"
-msgstr ""
-"Webサーバー (`Apache 24 64-bits <https://www.apachelounge.com/download>`_ )"
-
-#: ../../source/install/windows.rst:19
-msgid "PHP 7.3.10 (`Non Thread Safe <https://windows.php.net/download/>`_ )"
-msgstr "PHP 7.3.10 (`非スレッドセーフ <https://windows.php.net/download/>`_ )"
-
-#: ../../source/install/windows.rst:20
-msgid ""
-"QGIS Server 3 64-bits (`OSGeo4W Network Installer (64 bit) "
-"<https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_)"
-msgstr ""
-"QGIS Server 3 64-bits (`OSGeo4W Network Installer (64 bit) "
-"<https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_)"
-
-#: ../../source/install/windows.rst:21
-msgid ""
-"Lizmap Web Client 3.x (`Github Lizmap releases <https://github.com/3liz"
-"/lizmap-web-client/releases/>`_ )"
-msgstr ""
-"Lizmap Web Client 3.x (`Github Lizmap リリース <https://github.com/3liz/lizmap-"
-"web-client/releases/>`_ )"
-
-#: ../../source/install/windows.rst:22
-msgid ""
-"FTP software (e.g. `Filezilla <https://filezilla-project.org/>`_ , `WinSCP "
-"<https://winscp.net/eng/download.php>`_ ) 64-bits (*optional*)"
-msgstr ""
-"FTPソフトウェア (e.g. `Filezilla <https://filezilla-project.org/>`_ , `WinSCP "
-"<https://winscp.net/eng/download.php>`_ ) 64-bits (*optional*)"
-
-#: ../../source/install/windows.rst:25
-msgid "Apache 2.4.41 Server Configuration"
-msgstr "Apache 2.4.41 サーバーの設定"
-
-#: ../../source/install/windows.rst:27
-msgid ""
-"Start with the creation of a folder near to **C:\\\\** (e.g. "
-"**C:\\\\webserver**). After that, download the Apache 64 bits and their "
-"modules. At the time of this documentation, we use the **VC16 compiled "
-"version**."
-msgstr ""
-"**C:\\\\**に近いフォルダ（例：C:Webserver）を作成することから始めます。その後、Apache "
-"64ビットとそのモジュールをダウンロードします。このドキュメントの時点では、**VC16コンパイルバージョン**を使用しています。"
-
-#: ../../source/install/windows.rst:29
-msgid ""
-"You can use others installations of Apache but you need to be careful and "
-"install the correct the Microsoft Visual C++ Redistributables (e.g. VC15, "
-"VC16) and their modules for a correct Apache installation."
-msgstr ""
-"他のApacheをインストールして使用することができますが、正しくApacheのインストールのために、適したMicrosoft Visual C++ "
-"Redistributables（例：VC15、VC16）とそのモジュールをインストールするように注意する必要があります。"
-
-#: ../../source/install/windows.rst:31
-msgid ""
-"Extract the Apache24 zip file into **C:\\\\webserver\\\\** and change the "
-"name from **httpd-2.4.41-win64-VS16** to **Apache24**. After that unzip all "
-"modules and copy all *.so* files into the folder "
-"**C:\\\\webserver\\\\Apache24\\\\modules**. Then you open the Apache "
-"configuration in **C:\\\\webserver\\\\Apache24\\\\conf\\\\httpd.conf** and "
-"edit with the text editor and replace the global variable *ServerRoot* to "
-"**C:\\\\webserver\\\\Apache24**. This action will allow Apache to recognize "
-"the path of Apache installation."
-msgstr ""
-"Apache24 の zip ファイルを**C:\\\\webserver\\\\**に展開し、フォルダ名を "
-"**httpd-2.4.41-win64-VS16** から **Apache24** に変更します。その後、すべてのモジュールを解凍し、すべての "
-"*.so* ファイルを **C:\\\\webserver\\\\Apache24\\\\modules**フォルダにコピーします。. "
-"次に、Apache の設定ファイルである**C:\\\\webserver\\\\Apache24\\\\conf\\\\httpd.conf** "
-"を開き、テキストエディタで編集し、グローバル変数 *ServerRoot* を **C:\\\\webserver\\\\Apache24** "
-"に置き換えます。これにより、Apacheがインストールされているパスを認識できるようになります。"
-
-#: ../../source/install/windows.rst:39
-msgid ""
-"The purpose of using the variable *SRVROOT* is the automatic replace of "
-"${SRVROOT} to recognize the path that you define in the rest of the file. "
-"Now t's time to see what port is \"*listen*\" by the Apache. By default, "
-"Apache uses the **port 80**."
-msgstr ""
-"変数*SRVROOT*を使用する目的は、ファイルの残りの部分で定義されたパスを認識するために、${SRVROOT}を自動的に置き換えることです。さて、Apacheがどのポートを「*listen*」するかを見てみましょう。デフォルトでは、Apacheは**ポート80**を使用します。"
-
-#: ../../source/install/windows.rst:41
-msgid ""
-"If another port is to be used e.g. **1664**, add **Listen** option to the "
-"Apache **httpd.conf** file:"
-msgstr ""
-"**1664**など、別のポートを使用する場合は、Apacheの**httpd.conf**ファイルに**Listen**オプションを追加してください。"
-
-#: ../../source/install/windows.rst:50
-msgid ""
-"After choosing the port, is time to activate the Apache modules in the "
-"configuration file. For this action, you need to change the Apache "
-"configuration in **C:\\\\webserver\\\\Apache24\\\\conf\\\\httpd.conf** and "
-"enable the modules that you need. Search for **LoadModule** command lines "
-"and then uncheck ( remove :kbd:`#`) of the following modules:"
-msgstr ""
-"ポートを選択した後は、設定ファイルで Apache モジュールを有効にする必要があります。そのためには、Apache の設定ファイル "
-"**C:\\\\webserver\\\\Apache24\\\\conf\\\\httpd.conf** "
-"を変更し、必要なモジュールを有効にする必要があります。**LoadModule**コマンドラインを検索し、以下のモジュールのチェックを外してください（:kbd:`#`を削除）。"
-
-#: ../../source/install/windows.rst:66
-msgid ""
-"If it’s necessary to use a different port then is necessary to active other "
-"modules associated with the **proxy module**:"
-msgstr "異なるポートを使用する必要がある場合は、**proxyモジュール**に関連する他のモジュールを有効にする必要があります。"
-
-#: ../../source/install/windows.rst:77
-msgid ""
-"After this replacements, search with :kbd:`Ctrl+F` by the variable "
-"**ServerName** and add below the following words **ServerName localhost**. "
-"Continuing in this file will appear the **DirectoryIndex index.html**, "
-"please replace with **DirectoryIndex index.html index.php** after this "
-"action  **save** the file."
-msgstr ""
-"その後、:kbd:`Ctrl+F`で変数**ServerName**を検索し、次の**ServerName "
-"localhost**を追加してください。引き続き、このファイルには**DirectoryIndex "
-"index.html**が表示されますので、**DirectoryIndex index.html "
-"index.php**に置き換えてください。最後にファイルを**保存**します。"
-
-#: ../../source/install/windows.rst:79
-msgid ""
-"Start Apache opening the command line with :kbd:`Windows+R`, type :kbd:`cmd`"
-" and in the command line write "
-"**C:\\\\webserver\\\\Apache24\\\\bin\\\\httpd.exe** and don't close the "
-":kbd:`cmd`."
-msgstr ""
-":kbd:`Windows+R`を押下した後に、 :kbd:`cmd` と入力しコマンドプロンプトを起動し、 "
-"**C:\\\\webserver\\\\Apache24\\\\bin\\\\httpd.exe**と入力しApacheを開始します。 "
-":kbd:`cmd` を終了しないでおいてください。"
-
-#: ../../source/install/windows.rst:81
-msgid ""
-"It is important to **RIGHT-CLICK** in command line and “Run as "
-"administrator” to have complete access. Do it every time you need to use the"
-" *CMD*."
-msgstr ""
-"コマンドラインで**右クリック**して「管理者として実行」し、完全にアクセスできるようにすることが重要です。*CMD*を使用する必要があるときは、毎回この操作を行ってください。"
-
-#: ../../source/install/windows.rst:84
-msgid ""
-"Pressing *Enter* after the instruction in the command line will result in a "
-"dialogue of windows firewall where is need to check the option **Allow "
-"Access For all**."
-msgstr ""
-"コマンドラインのコマンドの後に*Enter*を押すと、Windowsファイアウォールのダイアログが表示されるので、**Allow Access For "
-"all**のオプションをチェックする必要があります。"
-
-#: ../../source/install/windows.rst:86
-msgid ""
-"Using a browser, write http://localhost and press enter, if everything went "
-"right in installation this will open the page with the text **\"It "
-"Works\"**."
-msgstr ""
-"ブラウザで http://localhost と入力してEnterキーを押すと、インストールに問題がなければ、 **\"It "
-"Works\"*というテキストのページが開きます。"
-
-#: ../../source/install/windows.rst:88
-msgid ""
-"If don't popup the firewall windows this means that you probably have an "
-"anti-virus software managing your firewall. In this case, you need to check "
-"the configurations and allow manually the apache service. Another important "
-"tip is that if Windows Firewall doesn't show the previous dialog you need to"
-" add manually the port 80 as an inbound/outbound port in Advanced Windows "
-"Firewall properties ( :kbd:`Control Planel > Administrative Tools > Windows "
-"Firewall with Advanced Security` )."
-msgstr ""
-"ファイアウォールのウィンドウが表示されない場合は、アンチウィルスソフトがファイアウォールを管理している可能性があります。この場合は、設定を確認して、手動で"
-" apache "
-"サービスを許可する必要があります。もう1つの重要なヒントは、Windowsファイアウォールが前のダイアログを表示しない場合、Windowsファイアウォールの詳細設定("
-" :kbd:`Control Planel > Administrative Tools > Windows Firewall with "
-"Advanced Security` )で、80番ポートを受信/送信ポートとして手動で追加する必要があります。"
-
-#: ../../source/install/windows.rst:91
-msgid ""
-"Open the :kbd:`cmd` where you run the previous command to start Apache and "
-"press :kbd:`Ctrl+C` to stop Apache. To add the Apache in Windows System Path"
-" and have access directly in the :kbd:`cmd` it's necessary hold the "
-":kbd:`Windows` and search for Edit System environments. After clicking in "
-"the result will appear a dialog with :kbd:`Environment Variables`. The next "
-"step is to append (not replace!) **;C:\\\\webserver\\\\Apache24\\\\bin** to "
-"the *Path* variable (double-click in \"Path\" line). After this step, close "
-":kbd:`cmd` , reopen :kbd:`cmd` and check Apache is correctly declare in the "
-"*System path*. For this test, open :kbd:`cmd` type :kbd:`httpd` then hit "
-"enter this will run Apache, if Yes stop using the combination keys "
-":kbd:`Ctrl+C`."
-msgstr ""
-"前の Apache を起動したコマンドを実行した :kbd:`cmd` を開いて、 :kbd:`Ctrl+C` を押して Apache "
-"を停止します。WindowsのシステムパスにApacheを追加して、 :kbd:`cmd` で直接アクセスするには、 :kbd:`Windows` "
-"を押しながら、 Edit System environments を検索する必要があります。その結果をクリックすると、 "
-":kbd:`Environment Variables` "
-"のダイアログが表示されます。次のステップでは、**;C:\\\\webserver\\\\Apache24\\\\bin**を*Path*変数に追加（置換ではありません！）します（「Path」の行をダブルクリックします）。その後、:kbd:`cmd`"
-" を閉じ、再び :kbd:`cmd` を開いて、Apache が *System path* に正しく宣言されていることを確認します。このテストでは、 "
-":kbd:`cmd` を開き、 :kbd:`httpd` と入力して Enter キーを押すと、Apache "
-"が実行されます。もし正常な場合は、コンビネーションキー :kbd:`Ctrl+C` の使用して停止します。"
-
-#: ../../source/install/windows.rst:93
-msgid ""
-"Now it's time to add Apache as Service, for this step you need to open the "
-"command line and type :kbd:`httpd -k install`. This will start Apache as a "
-"Windows Service."
-msgstr ""
-"このステップでは、コマンドラインを開いて:kbd:`httpd -k "
-"install`と入力する必要があります。これでApacheがWindowsサービスとして起動します。"
-
-#: ../../source/install/windows.rst:96
-msgid ""
-"After test with success the Apache installation, it's time to add the rest "
-"of Apache configurations that will serve the QGIS Server and the Lizmap Web "
-"Client. Open again the configuration file "
-"**C:\\\\webserver\\Apache24\\\\httpd.conf** and add the following lines at "
-"the end of the file:"
-msgstr ""
-"Apacheのインストールが成功したら、QGISサーバとLizmap Web "
-"Clientにサービスを提供するために、残りのApacheの設定を追加することになります。設定ファイル "
-"**C:\\\\webserver\\Apache24\\\\httpd.conf** を再度開き、ファイルの最後に以下の行を追加します。"
-
-#: ../../source/install/windows.rst:109
-msgid ""
-"This configuration is important to deal with the files compression. After "
-"this configuration restart the Apache in the Windows command line using the "
-"following command :kbd:`httpd -k restart` and press Enter to receive the new"
-" configuration. Now is time to prepare the configurations that will serve "
-"the php version. Start with a creation of an Apache configuration file to "
-"use the PHP configuration in "
-"**C:\\\\webserver\\\\Apache24\\\\conf\\\\extra\\\\** with the name of "
-":kbd:`php73.conf`. This can be done if you open a text editor (e.g. "
-"Notepad++, Visual Studio Code, etc) and save it with the following code:"
-msgstr ""
-"この設定は、ファイルの圧縮に対応するために重要です。この設定が終わったら、Windowsのコマンドラインで次のコマンド:kbd:`httpd -k "
-"restart`を使ってApacheを再起動し、Enterキーを押して新しい設定を有効にしてください。次は、phpバージョンを提供するための設定を行います。まず、Apacheの設定ファイルを作成して、**C:\\\\webserver\\\\Apache24\\\\conf\\\\extra\\\\**の"
-" "
-":kbd:`php73.conf`という名前のファイルにあるPHPの設定を使用するようにします。これは、テキストエディタ（Notepad++、Visual"
-" Studio Codeなど）を開いて、以下のコードを使用して保存することができます。"
-
-#: ../../source/install/windows.rst:155
-msgid "Make sure that you have the extension :kbd:`.conf` in this file."
-msgstr "このファイルの拡張子が:kbd:`.conf`であることを確認してください。"
-
-#: ../../source/install/windows.rst:157
-msgid ""
-"Go to the file **C:\\\\webserver\\\\Apache24\\\\conf\\\\httpd.conf** and "
-"uncomment the line **Include conf\\\\extra\\\\httpd-vhosts.conf** and save "
-"the file. This action will allow to use our virtual hosts configurations in "
-"the file **C:\\\\webserver\\\\Apache24\\\\conf\\\\extra\\\\httpd-"
-"vhosts.conf**. Include the vhosts to create the new virtual hosts "
-"configurations in the file **C:\\\\webserver\\\\Apache24\\\\conf\\\\extra"
-"\\\\httpd-vhosts.conf**. You can comment or delete the two examples inside "
-"(approximately between lines 23 and 38). If you add the comment in the "
-"default examples, copy and paste the next configurations after (the comment "
-"or deleted previous parts):"
-msgstr ""
-" **C:\\\\webserver\\\\Apache24\\\\conf\\\\httpd.conf**のファイルを開き、**Include "
-"conf\\\\extra\\\\httpd-vhosts.conf** "
-"の部分のコメントを外して保存します。これにより、**C:\\\\webserver\\\\Apache24\\\\conf\\\\extra"
-"\\\\httpd-vhosts.conf**でのバーチャルホストの設定が反映されます。バーチャルホストの設定を行う vhosts を "
-"**C:\\\\webserver\\\\Apache24\\\\conf\\\\extra\\\\httpd-"
-"vhosts.conf**ファイルに記述します。その中の2つの例（およそ23行目から38行目の間）をコメントまたは削除してください。デフォルトの例にコメントを付けた場合は、次の設定の後（コメントや削除した前の部分）をコピー＆ペーストしてください。"
-
-#: ../../source/install/windows.rst:190
-msgid "After this step save the file."
-msgstr "この後、ファイルを保存します。"
-
-#: ../../source/install/windows.rst:192
-msgid ""
-"The previous configuration will help us to check if apache is correctly "
-"configurated. The same file will be use to increment the rest of addition "
-"along te installation. In the :ref:`preparation-lizmap` Section this "
-"configuration will be changed to receive two environments."
-msgstr ""
-"以前の設定は、apacheが正しく設定されているかどうかを確認するのに役立ちます。同じファイルを使って、インストールに伴う残りの追加作業を進めていきます。"
-" :ref:`preparation-lizmap` セクションでは、2つの環境を受け取るようにこの設定を変更します。"
-
-#: ../../source/install/windows.rst:195
-msgid "php 7.3.10 Configuration"
-msgstr "php 7.3.10 の設定"
-
-#: ../../source/install/windows.rst:197
-msgid ""
-"Lizmap web client is based on Jelix PHP framework. You must install at least"
-" the **7** version of PHP for full features. The **dom**, **simplexml**, "
-"**pcre**, **session**, **tokenizer** and **spl** extensions are required "
-"(they are generally turned on in a standard PHP 7.x installation)"
-msgstr ""
-"Lizmap Web clientは、Jelix "
-"PHPフレームワークをベースにしています。フル機能を利用するには、少なくとも**7**バージョンのPHPをインストールする必要があります。また、**dom**、**simplexml**、**pcre**、**session**、**tokenizer**、**spl**の各拡張モジュールが必要です（通常、PHP"
-" 7.xのインストールでは、これらの拡張モジュールはオンになっています）。"
-
-#: ../../source/install/windows.rst:199
-msgid ""
-"For this installation we use the PHP 7.3.10, if you install the previouly "
-"the Microsoft Visual C++ Redistributable for Apache version of this "
-"documentation, you don't need to install again. Go to `PHP binaries "
-"<https://windows.php.net/download/>`_ and download the link with the name "
-"**Zip**, **make sure** it is the non-thread-safe file."
-msgstr ""
-"このインストールでは、PHP 7.3.10を使用していますが、以前にこのドキュメントのMicrosoft Visual C++ "
-"Redistributable for Apacheバージョンをインストールした場合は、再度インストールする必要はありません。`PHPバイナリ "
-"<https://windows.php.net/download/>`_ "
-"にアクセスして、**Zip**という名前のリンクをダウンロードします。**必ず**非スレッドセーフのファイルであることを確認してください。"
-
-#: ../../source/install/windows.rst:202
-msgid ""
-"After download create a folder in **C:\\\\webserver\\\\** with name php73 "
-"and unzip the files into it. Go to the file "
-"**C:\\\\webserver\\\\php73\\\\php.ini-production** and change into "
-"**C:\\\\webserver\\\\php73\\\\php.ini**. Open the :kbd:`php.ini` and search "
-"for extension dir directive and change to the properly locate of **EXT** "
-"folder, make sure that you enter the full path like this **extension_dir = "
-"\"C:\\\\webserver\\\\php73\\\\ext\"**. Now is time to activate the php "
-"modules, for this task you need to uncomment the following lines:"
-msgstr ""
-"ダウンロード後、**C:\\\\webserver\\\\**の中にphp73という名前のフォルダを作成し、その中にファイルを解凍します。 "
-"**C:\\\\webserver\\\\php73\\\\php.ini-"
-"production**ファイルを**C:\\\\webserver\\\\php73\\\\php.ini**へ変更します。:kbd:`php.ini`を開き、extension"
-" dirディレクティブを探して、**EXT**フォルダの適切な場所に変更します。 **extension_dir = "
-"\"C:\\\\webserver\\\\php73\\\\ext\"**のようにフルパスを入力したことを確認してください。ここでPHPモジュールを有効にしますが、そのためには以下の行のコメントを外す必要があります。"
-
-#: ../../source/install/windows.rst:221
-msgid ""
-"After the activation of the php extensions, in the same file change the "
-"upload values from default value to 15M and will stay like "
-":kbd:`upload_max_filesize = 15M`. Please, do the same for post_max_size and "
-"change from default value to :kbd:`post_max_size = 15M` and save the changes"
-" in the file. Before you close this file, create a folder with the name "
-"*sessions* in **C:\\\\webserver** and add the following path:"
-msgstr ""
-"php拡張機能を有効にした後、同じファイルでアップロードの値をデフォルトの値から15Mに変更すると、 :kbd:`upload_max_filesize"
-" = 15M` のようになります。また、post_max_sizeについても同様に、デフォルト値から :kbd:`post_max_size = "
-"15M` に変更し、ファイルに変更を保存してください。このファイルを閉じる前に、 **C:\\\\webserver** に *sessions* "
-"という名前のフォルダを作成し、以下のパスを追加してください。"
-
-#: ../../source/install/windows.rst:232
-msgid ""
-"Add the PHP to your Windows System Path allowing to you call the apache "
-"directly in the :kbd:`cmd`. For this task, you hold the :kbd:`Windows` key "
-"and press :kbd:`Pause`. Then, click in *Advanced System Settings* and then "
-"in :kbd:`Environment Variables`. The next step is to append (not replace!) "
-"the path **;C:\\\\webserver\\\\php-7.3** to the *Path* variable (double-"
-"click in \"Path\" line). After this step, close :kbd:`cmd` , reopen "
-":kbd:`cmd` and check PHP is correctly declare in the *System path* using "
-":kbd:`cmd` and typing :kbd:`php -m` You will check now the Apache "
-"configuration with :kbd:`httpd -S`."
-msgstr ""
-"WindowsのシステムパスにPHPを追加することで、 :kbd:`cmd` で直接apacheを呼び出すことができます。この作業のためには、 "
-":kbd:`Windows` キーを押しながら、 :kbd:`Pause` を押します。次に、*Advanced System "
-"Settings*をクリックし、 :kbd:`Environment "
-"Variables`をクリックします。次のステップでは、パス**;C:\\\\php-7.3**を*Path*変数に追加（置換ではありません！）します（\"Path\"の行でダブルクリックします）。この後、:kbd:`cmd`"
-" を閉じ、再度 :kbd:`cmd` を開いて、:kbd:`cmd` を使って:kbd:`php -m`とタイプし、*System path* に "
-"PHP が正しく宣言されていることを確認します。 :kbd:`httpd -S`でApacheの設定を確認します。"
-
-#: ../../source/install/windows.rst:235
-msgid ""
-"Create a folder with the name lizmap inside of **C:\\\\webserver\\\\lizmap**"
-" add a file with .php extension and save with this code inside of file:"
-msgstr ""
-"**C:\\\\webserver\\\\lizmap**の中にlizmapという名前のフォルダを作り、拡張子が.phpのファイルを追加し、その中にこのコードを入れて保存します。"
-
-#: ../../source/install/windows.rst:242
-msgid ""
-"Restart Apache in command line with :kbd:`httpd -k restart` and see if "
-"everything is right. If YES, open the browser and type "
-"http://localhost/index.php and will appear the page of PHP properties we "
-"assume that you install correctly the PHP."
-msgstr ""
-"コマンドラインから :kbd:`httpd -k restart` "
-"でApacheを再起動し、すべてが正しく動作するかどうかを確認します。問題ない場合、ブラウザを開いて "
-"http://localhost/index.php を開くと、PHPプロパティのページが表示されます。"
-
-#: ../../source/install/windows.rst:247
-msgid "QGIS Server Installation"
-msgstr "QGIS Serverのインストール"
-
-#: ../../source/install/windows.rst:249
-msgid ""
-"Go to https://www.qgis.org/en/site and get the file `Osgeo4W Network "
-"installer (64 bit) <https://download.osgeo.org/osgeo4w/osgeo4w-setup-"
-"x86_64.exe>`_ and run the installer. Choose the following options:"
-msgstr ""
-"https://www.qgis.org/en/site を開き、`Osgeo4W Network installer (64 bit) "
-"<https://download.osgeo.org/osgeo4w/osgeo4w-setup-"
-"x86_64.exe>`_を取得し、インストーラを実行します。次のオプションを選んでください。"
-
-#: ../../source/install/windows.rst:251
-msgid "Advanced Installer;"
-msgstr "Advanced Installer;"
-
-#: ../../source/install/windows.rst:252
-msgid "Install from internet;"
-msgstr "Install from internet;"
-
-#: ../../source/install/windows.rst:253
-msgid "Root Directory **C:\\\\OSGeo4W64** and install for **all users**;"
-msgstr "ルートディレクトリを **C:\\\\OSGeo4W64** にし、 **all users**用にインストール。"
-
-#: ../../source/install/windows.rst:254
-msgid "Keep default Local Package Directory and Start Menu Name;"
-msgstr "ローカルパッケージディレクトリとスタートメニュー名はデフォルトのままにします。"
-
-#: ../../source/install/windows.rst:255
-msgid "Do not configure proxy if not needed;"
-msgstr "不要な場合はプロキシを設定しないでください。"
-
-#: ../../source/install/windows.rst:256
-msgid "Choose a download site (e.g. https://download.osgeo.org );"
-msgstr "ダウンロード先を選択する (e.g. https://download.osgeo.org )。"
-
-#: ../../source/install/windows.rst:257
-msgid ""
-"Select packages : command line_Utilities/gdal, Desktop/QGIS full , Web/QGIS "
-"server, lib/fcgi  then Next (We use for stable purposes, the QGIS LTR "
-"version);"
-msgstr ""
-"パッケージを選択する : command line_Utilities/gdal, Desktop/QGIS full , Web/QGIS "
-"server, lib/fcgi を選び、次へ (安定板であるQGIS LTRバージョンを使用します)。"
-
-#: ../../source/install/windows.rst:258
-msgid ""
-"Accept to get packages to meet dependencies : Next then Wait for the "
-"download to be completed and Agree to all licenses."
-msgstr "依存関係を満たすためにパッケージを取得することを受け入れる : 次に、ダウンロードが完了するのを待ち、すべてのライセンスに同意します。"
-
-#: ../../source/install/windows.rst:260
-msgid "This process can be long (~ 1 hour)."
-msgstr "このプロセスは長くなることがあります（～1時間）。"
-
-#: ../../source/install/windows.rst:262
-msgid ""
-"After the installation we need to configure QGIS Server to be accessible as "
-"fcgi, so you need to modify the previous file of virtual hosts in the "
-"directory  **C:\\\\webserver\\\\Apache24\\\\conf\\\\extra\\\\httpd-"
-"vhosts.conf** to have this content:"
-msgstr ""
-"インストール後は、QGIS Server が fcgi でアクセスできるように設定する必要があります。そのためには、以前のバーチャルホストの設定ファイル"
-" **C:\\\\webserver\\\\Apache24\\\\conf\\\\extra\\\\httpd-vhosts.conf** "
-"を変更する必要があります。"
-
-#: ../../source/install/windows.rst:303
-msgid ""
-"After the changes restart apache, type in command line the instruction:"
-msgstr "変更後、apacheを再起動し、コマンドラインでコマンドを入力してください。"
-
-#: ../../source/install/windows.rst:310
-msgid ""
-"Now it's time to test the QGIS Server and see if is accessible in fcgi "
-"typing in the browser the following link: "
-"http://localhost/qgis/qgis_mapserv.fcgi.exe and if everything is right you "
-"will receive the following response:"
-msgstr ""
-"次に、QGISサーバーをテストして、fcgiでアクセスできるかどうかを確認します。ブラウザで次のリンク "
-"http://localhost/qgis/qgis_mapserv.fcgi.exe "
-"を入力します。すべて問題なければ、次のようなレスポンスが表示されます。"
-
-#: ../../source/install/windows.rst:321
-msgid "Preparing the home of Lizmap Web Client"
-msgstr "Lizmap Web Clientのホームを準備する"
-
-#: ../../source/install/windows.rst:323
-msgid ""
-"Is usefull to have 2 environments, one for production and other for "
-"preproduction (or master to test new features), for this action you will "
-"need to create the folders **C:\\\\webserver\\\\lizmap\\\\prod\\\\** and  "
-"**C:\\\\webserver\\\\lizmap\\\\preprod\\\\** and change the Apache "
-"VirtualHost configuration file."
-msgstr ""
-"本番環境とプリプロダクション環境（新機能をテストするためのマスター環境）の2つの環境を用意すると便利です。そのためには、**C:\\\\webserver\\\\lizmap\\\\prod\\\\**と**C:\\\\webserver\\\\lizmap\\\\preprod\\\\**というフォルダーを作成し、Apache"
-" VirtualHostの設定を変更する必要があります。"
-
-#: ../../source/install/windows.rst:325
-msgid ""
-"First, go to 3Liz `Github repository tags <https://github.com/3liz/lizmap-"
-"web-client/releases/>`_ and get the last version in ZIP format. For example,"
-" you can use `Lizmap-web-client 3.3.4 <https://github.com/3liz/lizmap-web-"
-"client/releases/download/3.3.4/lizmap-web-client-3.3.4.zip>`_ for prod "
-"folder."
-msgstr ""
-"まず、3Lizの `Githubリポジトリのタグ <https://github.com/3liz/lizmap-web-"
-"client/releases/>`_ にアクセスして、最新バージョンをZIP形式で取得します。例えば、prodフォルダには、`Lizmap-web-"
-"client 3.3.4 <https://github.com/3liz/lizmap-web-"
-"client/releases/download/3.3.4/lizmap-web-client-3.3.4.zip>`_ を使います。"
-
-#: ../../source/install/windows.rst:329
-msgid ""
-"Each environment will have a version in parallel. For example: release_3_3 "
-"and master. For that you need to unzip in "
-"**C:\\\\webserver\\\\lizmap\\\\prod** the release_3_3 version and "
-"**C:\\\\webserver\\\\lizmap\\\\preprod** the master version. Then you can "
-"create a directory where you will put the tile cache for production "
-"environment **C:\\\\webserver\\\\cache\\\\prod** and for master environment "
-"**C:\\\\webserver\\\\cache\\\\preprod**. After create the cache folders, "
-"modify the virtual host to point to the **www folders** of lizmap web client"
-" application for each environment. Go to the file  "
-"**C:\\\\webserver\\\\Apache24\\\\conf\\\\extra\\\\httpd-vhosts.conf** and "
-"change to the following configuration:"
-msgstr ""
-"それぞれの環境には並行してバージョンが存在します。例えば、release_3_3 と master です。そのためには、release_3_3 "
-"のバージョンを **C:\\\\webserver\\\\lizmap\\\\prod**に、master のバージョンを "
-"**C:\\\\webserver\\\\lizmap\\\\preprod**に解凍する必要があります。そして、本番環境用のタイルキャッシュを置くディレクトリとして、**C:\\\\webserver\\\\cache\\\\prod**とmaster環境用のタイルキャッシュを置くディレクトリとして**C:\\\\webserver\\\\cache\\\\preprod**を作成します。キャッシュフォルダを作成したら、各環境のlizmap"
-" "
-"Webクライアントアプリケーションの**wwwフォルダ**を指すようにバーチャルホストを変更します。**C:\\\\webserver\\\\Apache24\\\\conf\\\\extra"
-"\\\\httpd-vhosts.conf**ファイルにアクセスし、以下の設定に変更してください。"
-
-#: ../../source/install/windows.rst:389
-msgid ""
-"After the replacement save the file and restart Apache with the command line"
-" instruction:"
-msgstr "置換の後、ファイルを保存し、コマンドラインで次の子メンドを実行しApacheを再起動します。"
-
-#: ../../source/install/windows.rst:395
-msgid ""
-"In case of lizmap version >= 3.0, you must use some scripts to install it "
-"properly (see https://github.com/3liz/lizmap-web-"
-"client/blob/master/INSTALL.md ). Open the command line (:kbd:`cmd.exe`) and "
-"write the next instructions:"
-msgstr ""
-"lizmapのバージョンが3.0以上の場合、いくつかのスクリプトを使って適切にインストールする必要があります(https://github.com/3liz"
-"/lizmap-web-client/blob/master/INSTALL.md "
-"参照)。コマンドライン(:kbd:`cmd.exe`)を開いて、次のコマンドを実行してください。"
-
-#: ../../source/install/windows.rst:418
-msgid ""
-"If you want to enable the demo repositories in both environments, before "
-"this installation you need to add to the file **localconfig.ini.php** in "
-"both environments the following code:"
-msgstr ""
-"両方の環境でデモ用リポジトリを有効にしたい場合は、このインストールの前に、両環境の**localconfig.ini.php**ファイルに以下のコードを追加する必要があります。"
-
-#: ../../source/install/windows.rst:427
-msgid "Using PostgreSQL as administrator database (Optional)"
-msgstr "管理者用データベースとしてPostgreSQLを使用する（オプション）"
-
-#: ../../source/install/windows.rst:429
-msgid "**Requirements**: PostgreSQL/PostGIS installation"
-msgstr "**必要要件**: PostgreSQL/PostGISのインストール"
-
-#: ../../source/install/windows.rst:431
-msgid ""
-"By default, when you install Lizmap Web Client, you will install a sqlite "
-"database where will be store the information about users, permissions among "
-"other information."
-msgstr ""
-"デフォルトでは、Lizmap Web "
-"Clientをインストールすると、sqliteデータベースがインストールされ、そこにユーザーや権限などの情報が保存されます。"
-
-#: ../../source/install/windows.rst:433
-msgid ""
-"Imagine that you are GIS Manager and you want to link the user and password "
-"credentials of lizmap to the PostgreSQL users and password credentials."
-msgstr ""
-"あなたがGISマネージャーで、lizmapのユーザーとパスワードの認証情報をPostgreSQLのユーザーとパスワードの認証情報にリンクさせたいと考えていたとします。"
-
-#: ../../source/install/windows.rst:435
-msgid ""
-"For that before of LWC installation you need to change the file "
-":kbd:`profiles.ini.php` in the folder of both environments in the folder "
-"**C:\\\\webserver\\\\lizmap\\\\prod\\\\release_3_3\\\\lizmap\\\\var\\\\config"
-" (Production Folder)**  and "
-"**C:\\\\webserver\\\\lizmap\\\\preprod\\\\master\\\\lizmap\\\\var\\\\config "
-"(PreProduction Folder)** with the following lines:"
-msgstr ""
-"そのためには、Lizmap Web "
-"clientをインストールする前に、両環境の**C:\\\\webserver\\\\lizmap\\\\prod\\\\release_3_3\\\\lizmap\\\\var\\\\config（本番フォルダ）**と**C:\\\\webserver\\\\lizmap\\\\preprod\\\\master\\\\lizmap\\\\var\\\\config"
-" (プレ本番フォルダ)**の中にあるファイル :kbd:`profiles.ini.php`を次のように変更する必要があります。"
-
-#: ../../source/install/windows.rst:442
-msgid "Add :kbd:`;` to deactivate the sqlite database."
-msgstr ":kbd:`;` を追加して、sqliteデータベースを無効にします。"
-
-#: ../../source/install/windows.rst:462
-msgid "Remove :kbd:`;` and fill with PostgreSQL credentials:"
-msgstr ":kbd:`;`を削除し、PostgreSQLの認証情報を入力します。"
-
-#: ../../source/install/windows.rst:489
-msgid ""
-"After all your previous changes you are ready to launch the installer of "
-"lizmap for both environments in the command line (:kbd:`cmd`):"
-msgstr ""
-"これまでのすべての変更を終えて、コマンドライン(:kbd:`cmd`)で両方の環境に対応したlizmapのインストーラを起動する準備ができました。"
-
-#: ../../source/install/windows.rst:505
-msgid "Configuring the Lizmap Admin Panel"
-msgstr "Lizmap管理パネルの設定"
-
-#: ../../source/install/windows.rst:507
-msgid ""
-"**[PROD] Production Environment** ( `webgis "
-"<http://localhost//webgis//index.php>`_ )"
-msgstr "**[PROD] 本番環境** ( `webgis <http://localhost//webgis//index.php>`_ )"
-
-#: ../../source/install/windows.rst:509
-msgid ""
-"After the correct installation owith the installer, go to "
-"http://localhost/webgis/index.php and you should see the Lizmap application "
-"home page with the demo project Montpellier - Transport. Now it's time to "
-"configure the Lizmap Admin Panel, go to http://localhost/webgis/admin.php "
-"and do the login with:"
-msgstr ""
-"インストーラを使って正しくインストールした後、http://localhost/webgis/index.php "
-"を開くと、デモプロジェクトMontpellier - "
-"Transportを含むLizmapアプリケーションのホームページが表示されます。次に、Lizmap管理パネルを設定します。http://localhost/webgis/admin.php"
-" にアクセスして、ログインしてください。"
-
-#: ../../source/install/windows.rst:512 ../../source/install/windows.rst:528
-msgid "**user=admin**;"
-msgstr "**user=admin**;"
-
-#: ../../source/install/windows.rst:513 ../../source/install/windows.rst:529
-msgid "**password=admin**;"
-msgstr "**password=admin**;"
-
-#: ../../source/install/windows.rst:515 ../../source/install/windows.rst:531
-msgid ""
-"Then for security proposes change the admin password, for example: "
-"**lizmap_12345**. If it makes sense, you can delete the users lizadmin and "
-"logintranet. You can do the same for groups, in this case delete group "
-"Intranet Demo Group and Lizadmin group."
-msgstr ""
-"そして、セキュリティ上の提案として、adminのパスワードを変更してください。例えば**lizmap_12345**のように。問題があるならば、ユーザーのlizadminとlogintranetを削除することができます。グループについても同様に、ここではイントラネットデモグループとLizadminグループを削除します。"
-
-#: ../../source/install/windows.rst:518
-msgid ""
-"Go to Lizmap configuration menu > Delete the \"intranet\" repository (at the"
-" bottom). Then you need to change the **URL WMS Server**, go to Lizmap "
-"configuration menu / Edit the Services form and change the WMS Server URL "
-"from: http://127.0.0.1/cgi-bin/qgis_mapserv.fcgi to "
-"http://localhost/qgis/qgis_mapserv.fcgi.exe After that, also change the "
-"cache directory from  **C:\\\\Windows\\\\Temp\\\\** to: "
-"**C:\\\\webserver\\\\cache\\\\prod\\\\** and save this configuration."
-msgstr ""
-"Lizmap設定メニュー＞「intranet」リポジトリの削除（一番下）を行います。次に、**WMSサーバーのURL**を変更する必要があります。Lizmapの設定メニュー"
-" / サービスフォームの編集で、WMSサーバーのURLを次のように変更します： http://127.0.0.1/cgi-"
-"bin/qgis_mapserv.fcgi から http://localhost/qgis/qgis_mapserv.fcgi.exe "
-"にする。その後、キャッシュディレクトリを**C:\\\\Windows\\\\Temp\\\\**から**C:\\\\webserver\\\\cache\\\\prod\\\\**に変更し設定内容を保存します。"
-
-#: ../../source/install/windows.rst:521
-msgid ""
-"Now check the Montpellier demo project is working: "
-"http://localhost/webgis/index.php/view/map/?repository=montpellier&project=montpellier"
-msgstr ""
-"Montpellierのデモプロジェクトが動作していることを確認します。http://localhost/webgis/index.php/view/map/?repository=montpellier&project=montpellier"
-
-#: ../../source/install/windows.rst:523
-msgid ""
-"**[PREPROD] Pré-production Environment** ( `preprod "
-"<http://localhost//preprod//index.php>`_ )"
-msgstr ""
-"**[PREPROD]プレ本番環境** ( `preprod <http://localhost//preprod//index.php>`_ )"
-
-#: ../../source/install/windows.rst:525
-msgid ""
-"After the correct installation with the installer, go to "
-"http://localhost/preprod/index.php and you should see the Lizmap application"
-" home page with the demo project Montpellier - Transport. Now it's time to "
-"configure the Lizmap Admin Panel, go to http://localhost/preprod/admin.php "
-"and do the login with:"
-msgstr ""
-"インストーラを使って正しくインストールした後、http://localhost/preprod/index.php "
-"を開くと、デモプロジェクトMontpellier - "
-"Transportを含むLizmapアプリケーションのホームページが表示されます。次に、Lizmap管理パネルを設定します。 "
-"http://localhost/preprod/admin.php にアクセスして、ログインしてください。"
-
-#: ../../source/install/windows.rst:533
-msgid ""
-"Go to Lizmap configuration menu > Delete the \"intranet\" repository (at the"
-" bottom). Then you need to change the **URL WMS Server**, go to Lizmap "
-"configuration menu > Edit the Services form and change the WMS Server URL "
-"from: http://127.0.0.1/cgi-bin/qgis_mapserv.fcgi to "
-"http://localhost/qgis/qgis_mapserv.fcgi.exe After that, also change the "
-"cache directory from  **C:\\\\Windows\\\\Temp\\\\** to: "
-"**C:\\\\webserver\\\\cache\\\\preprod\\\\** and save this configuration."
-msgstr ""
-"Lizmap設定メニュー＞「intranet」リポジトリの削除（一番下）を行います。次に、**WMSサーバーのURL**を変更する必要があります。Lizmapの設定メニュー"
-" / サービスフォームの編集で、WMSサーバーのURLを次のように変更します： http://127.0.0.1/cgi-"
-"bin/qgis_mapserv.fcgi から http://localhost/qgis/qgis_mapserv.fcgi.exe "
-"にする。その後、キャッシュディレクトリを**C:\\\\Windows\\\\Temp\\\\**から**C:\\\\webserver\\\\cache\\\\preprod\\\\**"
-" に変更し設定内容を保存します。"
-
-#: ../../source/install/windows.rst:536
-msgid ""
-"Now check the Montpellier demo project is working: "
-"http://localhost/preprod/index.php/view/map/?repository=montpellier&project=montpellier"
-msgstr ""
-"Montpellierのデモプロジェクトが動作していることを確認します。http://localhost/preprod/index.php/view/map/?repository=montpellier&project=montpellier"
-
-#: ../../source/install/windows.rst:539
-msgid "Lizmap directories configuration"
-msgstr "Lizmapのディレクトリの設定"
-
-#: ../../source/install/windows.rst:541
-msgid ""
-"You need to create a Lizmap directory architecture for organization "
-"porposes. Create the following directories via a :kbd:`*.bat` file ( Please "
-"Check line ends are correct, you can open using notepad, notepad++):"
-msgstr ""
-"構造化の目的のために、Lizmapディレクトリ・アーキテクチャを作成する必要があります。:kbd:`*.bat`ファイルを使って、以下のディレクトリを作成してください（notepad,"
-" notepad++などを使ってファイルを開き、行末が正しいことを確認してください。）"
-
-#: ../../source/install/windows.rst:573
-msgid ""
-"Now we need to get access to the folder **C:\\\\webserver\\\\data\\\\prod** "
-"and its subfolders so that the GIS admin can send the QGIS project files, "
-"the Lizmap configuration file for each project, the GIS data into these "
-"folders and other documents. Go to Lizmap administration panel in "
-"http://localhost/admin.php and create the new repository. Follow this steps:"
-msgstr ""
-"次に、GIS管理者がQGISプロジェクトファイル、各プロジェクト用のLizmap設定ファイル、これらのフォルダに格納されたGISデータ、その他のドキュメントを送信できるように、**C:\\\\webserver\\\\data\\\\prod**およびそのサブフォルダへのアクセス権を付与する必要があります。http://localhost/admin.php"
-" のLizmap管理パネルにアクセスして、新しいリポジトリを以下の手順で作成します。"
-
-#: ../../source/install/windows.rst:575
-msgid ""
-"Lizmap configuration / Create a new repository (button at the bottom of the "
-"page)"
-msgstr "Lizmapの設定 / 新規リポジトリの作成（ページ下部のボタン）"
-
-#: ../../source/install/windows.rst:576
-msgid "**id** = rep1"
-msgstr "**id** = rep1"
-
-#: ../../source/install/windows.rst:577
-msgid ""
-"**label** = A repository label (you will be able to change it afterwards)"
-msgstr "**ラベル** = リポジトリのラベル（後からでも変更可能です）"
-
-#: ../../source/install/windows.rst:578
-msgid "**path** = /webserver/data/prod/rep1/"
-msgstr "**パス** = /webserver/data/prod/rep1/"
-
-#: ../../source/install/windows.rst:580
-msgid ""
-"IMPORTANT FOR THE REPOSITORY PATH -> DO NOT USE: "
-"**C:\\\\webserver\\\\data\\\\prod\\\\rep1**"
-msgstr "リポジトリのパスの重要性 -> **C:\\\\webserver\\\\data\\\\prod\\\\rep1**は使用しないでください。"
-
-#: ../../source/install/windows.rst:582
-msgid ""
-"In Apache you need to Add a vhost to publish SVG and images files via HTTP "
-"this will avoid the bug in QGIS Server under Windows which cannot display "
-"SVG icon when you have a relative path. Previous your create a folder "
-"**C:\\\\webserver\\\\data\\\\document\\\\** and now is necessary to modify "
-"the file **C:\\\\webserver\\\\Apache24\\\\conf\\\\extra\\\\httpd-"
-"vhosts.conf**, adding the following directory:"
-msgstr ""
-"Apacheでは、SVGや画像ファイルをHTTPで公開するためにvhostを追加する必要があります。これにより、Windows上のQGIS "
-"Serverで相対パスを指定した場合にSVGアイコンが表示されないというバグを回避することができます。以前、 "
-"**C:\\\\webserver\\\\data\\\\document\\\\**というフォルダを作成しましたが、今回は、**C:\\\\webserver\\\\Apache24\\\\conf\\\\extra"
-"\\\\httpd-vhosts.conf**というファイルを変更して、以下のディレクトリを追加します。"
-
-#: ../../source/install/windows.rst:595
-msgid ""
-"After this step save and restart Apache. Please check if you can add svg "
-"file in a folder, for example "
-"**C:\\\\webserver\\\\Data\\\\document\\\\svg\\\\my_icon.svg** and then "
-"access it via *http://localhost/webgis/document/svg/my_icon.svg* and use it "
-"as the SVG path in the style properties of a vector layer."
-msgstr ""
-"この手順の後、Apacheを保存して再起動します。例えば、**C:\\\\webserver\\\\Data\\\\document\\\\svg\\\\my_icon.svg**というsvgファイルをフォルダ内に追加し、*http://localhost/webgis/document/svg/my_icon.svg*"
-" でアクセスして、ベクターレイヤーのスタイルプロパティでSVGパスとして使用できるかどうかをご確認ください。"
-
-#: ../../source/install/windows.rst:600
-msgid "FTP Server Configuration (e.g. Filezilla)"
-msgstr "FTPサーバーの設定（例：Filezilla）"
-
-#: ../../source/install/windows.rst:601
-msgid "This configuration only applies if your using a remote server."
-msgstr "この設定は、リモートサーバーを使用している場合にのみ適用されます。"
-
-#: ../../source/install/windows.rst:603
-msgid ""
-"Now you will configure a FTP to have a remote access and deploy in a easy "
-"way into the server the qgis projects and their project elements. First you "
-"need to download `server FTP <https://filezilla-"
-"project.org/download.php?type=server>`_. Then install the default "
-"configuration in the server."
-msgstr ""
-"ここでは、リモートアクセスのためのFTPを設定し、qgisプロジェクトとそのプロジェクトに必要な一式をサーバに簡単にデプロイできるようにします。まず、`FTPサーバー"
-" <https://filezilla-project.org/download.php?type=server>`_ "
-"をダウンロードしてください。その後、デフォルトの設定をサーバにインストールします。"
-
-#: ../../source/install/windows.rst:606
-msgid "Do not forget to **\"Execute with admin rights\"**"
-msgstr "**「管理者権限で実行する」**のを忘れないでください。"
-
-#: ../../source/install/windows.rst:608
-msgid "Specify the **Port: 14147** ."
-msgstr "**ポート: 14147**を指定します。"
-
-#: ../../source/install/windows.rst:609
-msgid ""
-"Open the FileZilla Server Interface trough  Windows Menu > All programs > "
-"FileZilla Server > FileZilla Server Interface and click **OK** to connect "
-"(no password required yet)."
-msgstr ""
-"Windowsメニュー＞すべてのプログラム＞FileZilla Server＞FileZilla Server InterfaceでFileZilla "
-"Server Interfaceを開き、**OK**をクリックして接続します（パスワードはまだ必要ありません）。"
-
-#: ../../source/install/windows.rst:610
-msgid ""
-"Modify some options via Menu Edit > Settings and change IP Filter if needed "
-": to filter only some IP, use **\"*\"** in the first block, the add the mask"
-" in the second block."
-msgstr ""
-"メニュー「編集」＞「設定」でいくつかのオプションを変更し、必要に応じてIPフィルタを変更します。一部のIPだけをフィルタリングするには、最初のブロックで**\"*\"**を使用し、2番目のブロックでマスクを追加します。"
-
-#: ../../source/install/windows.rst:611
-msgid ""
-"Passive mode settings > Use following IP : write your public IP and change "
-"port range : **5500-5700**."
-msgstr ""
-"パッシブモードの設定 > 次のIPを使用する、でのパブリックIPアドレスを入力し、ポートレンジを**5500-5700**に変更してください。"
-
-#: ../../source/install/windows.rst:612
-msgid ""
-"Logging: Enable logging to file, and limit log file size to **500 KB**."
-msgstr "ロギング： ファイルへのロギングを有効にして、ログファイルのサイズを**500KB**に制限します。"
-
-#: ../../source/install/windows.rst:613
-msgid ""
-"SSL/TLS settings : Enable FTP over SSL/TLS && Generate new certificate into "
-"**C:\\\\webserver\\\\cert\\\\ftp_certificate.crt** && Allow explicit FTP "
-"over TLS && Disallow plain unencrypted FTP && Leave **port 990**."
-msgstr ""
-"SSL/TLS設定：FTPのSSL/TLSを有効にし、証明書を**C:\\\\webserver\\\\cert\\\\ftp_certificate.crt**ファイルとして生成します。"
-" 明示的なFTP over TLSを許可し、暗号化されていないプレーンなFTPを禁止します。最後に、**ポート 990**を残します。"
-
-#: ../../source/install/windows.rst:614
-msgid "Autoban - Enable with default values."
-msgstr "Autoban - デフォルト値で有効にします。"
-
-#: ../../source/install/windows.rst:615
-msgid ""
-"Create user: Edit > Users - button Add **user= lizmap_user** and **pass= "
-"choose_a_password**"
-msgstr ""
-"ユーザーを作成します。編集 > ユーザー - 追加ボタンを押下し、 **user= lizmap_user** と **pass= "
-"choose_a_password**でユーザーを追加します。"
-
-#: ../../source/install/windows.rst:616
-msgid ""
-"Shared folder (Access to **PROD** and **PREPROD** Environment): Add "
-"**C:\\\\webserver\\\\lizmap** - Give all rights by checking checkboxes for "
-"Files and Directories."
-msgstr ""
-"フォルダの共有 (**PROD** と **PREPROD** 環境へのアクセス):  "
-"**C:\\\\webserver\\\\lizmap**を追加し、ファイルとディレクトリにチェックを入れて全ての権限を与えます。"
-
-#: ../../source/install/windows.rst:617
-msgid "You can add IP filter here too if needed."
-msgstr "必要に応じて、ここにIPフィルターを追加することもできます。"
-
-#: ../../source/install/windows.rst:619
-msgid ""
-"After the remote configuration, in the workstation of the GIS manager you "
-"can reproduce the structure of folders to be exactly of the remote to help "
-"the management of the folder. After that, is necessary install a FTP client "
-"see :ref:`requirements-label` section. Another thing, is it's necessary a "
-"client certificate produced by the remote in the GIS manager. After that try"
-" to connect with: **Server** = Remote IP. Use Passive mode AND check IPV6."
-msgstr ""
-"リモート設定後、GIS管理者のワークステーションでは、フォルダの管理をサポートするために、リモートのフォルダ構造を正確に再現することができます。利用する際にはFTPクライアントをインストールする必要がありますす。"
-" :ref:`requirements-label` "
-"セクションを参照してください。もう一つは、GISマネージャがリモート側で作成したクライアント証明書が必要です。その後、以下の方法：**Server** "
-"= リモートIPで接続してみてください。パッシブモードを使用し、IPV6をチェックします。"
-
-#: ../../source/install/windows.rst:623
+#: ../../source/install/windows.rst:10
 msgid ""
-"You can see this tutorial (only in french): "
-"https://forum.hardware.fr/hfr/WindowsSoftware/Tutoriels/filezilla-serveur-"
-"securise-sujet_300273_1.htm"
+"using the tutorial and configuration from `NaturalGIS "
+"<https://github.com/NaturalGIS/qgis_server_and_lizmap_on_windows>`_."
 msgstr ""
-"こちらのチュートリアル（フランス語のみ）をご覧ください： "
-"https://forum.hardware.fr/hfr/WindowsSoftware/Tutoriels/filezilla-serveur-"
-"securise-sujet_300273_1.htm"
