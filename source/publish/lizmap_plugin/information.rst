@@ -28,6 +28,8 @@ Configuring the tool
 
     1. Click |add_layer_svg|
     2. Write the URL of the Lizmap Web Client server. The URL should be the main Lizmap landing page.
+    3. If possible, use a login and password of a Lizmap Web Client administrator. It will give you more information about the server.
+       This is optional.
 
 .. warning::
     Do not use the any URL redirection. For instance, https://demo.lizmap.com/ is a redirection to
