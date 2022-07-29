@@ -45,6 +45,11 @@ You can update where the popup is displayed in the web interface in :menuselecti
 * ``bottomdock``
 * ``right-dock``
 
+Media in popup
+--------------
+
+See :ref:`use-in-popups` in the **media** chapter.
+
 .. _auto-popup:
 
 Auto popup
@@ -229,6 +234,15 @@ To display some color with HTML, you can use this sample above :
 
     <font color="red">Text</font>
 
+Link to a PDF QGIS layout
+_________________________
+
+Every feature of a layer with an atlas configured will have a link (1) at the end of its popup which open a PDF for this specific feature, using the QGIS Atlas layout.
+If the layout contains custom text fields, a button (2) will be displayed. Clicking this button, allows you to type values for those custom text fields before printing.
+To enable this feature, you need a QGIS Layout with atlas enabled on that layer **and** to download the `AtlasPrint` QGIS Server plugin on GitHub : https://github.com/3liz/qgis-atlasprint
+
+.. image:: /images/feature-popup-atlas.jpg
+   :align: center
 
 One to many relations
 ---------------------
@@ -262,16 +276,6 @@ In Lizmap Web Client:
 
 If relative children popup are defined as ``auto``, this button will be visible in the feature's popup at the top of related objects.
 Click it to compact all related objects in one table with search, sort and paging capabilities.
-
-Link to a PDF QGIS layout
-_________________________
-
-Every feature of a layer with an atlas configured will have a link (1) at the end of its popup which open a PDF for this specific feature, using the QGIS Atlas layout.
-If the layout contains custom text fields, a button (2) will be displayed. Clicking this button, allows you to type values for those custom text fields before printing.
-To enable this feature, you need a QGIS Layout with atlas enabled on that layer **and** to download the `AtlasPrint` QGIS Server plugin on GitHub : https://github.com/3liz/qgis-atlasprint
-
-.. image:: /images/feature-popup-atlas.jpg
-   :align: center
 
 Display children in a compact way
 _________________________________
