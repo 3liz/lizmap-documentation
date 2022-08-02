@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2021, 3liz
+# Copyright (C) 2014-2022, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -9,25 +9,26 @@
 # Pietro Rossin <pietro.rossin@gmail.com>, 2020
 # rldhont <rldhont@gmail.com>, 2020
 # Nicla Maria Notarangelo <nicla_n@yahoo.it>, 2020
+# marcobra <marcobra.ubuntu@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-26 09:53+0000\n"
+"POT-Creation-Date: 2022-06-21 15:25+0000\n"
 "PO-Revision-Date: 2020-11-26 13:55+0000\n"
-"Last-Translator: Nicla Maria Notarangelo <nicla_n@yahoo.it>, 2020\n"
+"Last-Translator: marcobra <marcobra.ubuntu@gmail.com>, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/3liz-1/teams/62012/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../source/user/attribute_table.rst:2
 msgid "Attribute layers"
-msgstr "Attributi dei layers"
+msgstr "Attributi dei livelli"
 
 #: ../../source/user/attribute_table.rst:4
 msgid ""
@@ -37,6 +38,11 @@ msgid ""
 "icon will also be displayed for a layer for which the attribute table has "
 "been activated."
 msgstr ""
+"Quando questa funzione è abilitata dall'editore della mappa per uno o più "
+"livelli vettoriali, una nuova voce di menu sarà visibile nella parte "
+"inferiore della barra dei menu, etichettata come **Data**. Un'altra voce "
+"etichettata **Selection** con un'icona a forma di stella sarà mostrata anche"
+" per un livello per il quale la tabella degli attributi è stata attivata."
 
 #: ../../source/user/attribute_table.rst:7
 msgid ""
@@ -201,7 +207,7 @@ msgid ""
 " This will open a panel right to the table, which will display the detailed "
 "information on the highlighted table line. Furthermore:"
 msgstr ""
-"Se l'editore delle mappe ha abilitato i **popup** per lo strato, sarà "
+"Se l'editore delle mappe ha abilitato i **popup** per il livello, sarà "
 "possibile vedere il contenuto del popup per la geometria evidenziata facendo"
 " clic sul pulsante (i) (etichettato con **Mostra informazioni** al passaggio"
 " del mouse su di esso). Questa azione aprirà un pannello alla destra della "
@@ -213,6 +219,8 @@ msgid ""
 "Clicking on another line will refresh the right panel content with the new "
 "highlighted feature."
 msgstr ""
+"Cliccando su un'altra linea, il contenuto del pannello destro verrà "
+"aggiornato con il nuovo elemento evidenziato."
 
 #: ../../source/user/attribute_table.rst:66
 msgid ""
@@ -220,6 +228,9 @@ msgid ""
 "side of the information panel will hide the panel. To have the (i) button, "
 "you need to have activated the popup for the current layer."
 msgstr ""
+"Cliccando di nuovo sul pulsante (i) o sulla croce situata in alto a destra "
+"del pannello informativo, il pannello verrà nascosto. Per avere il pulsante "
+"(i), è necessario aver attivato il popup per il livello corrente."
 
 #: ../../source/user/attribute_table.rst:69
 msgid "Each line of the table shows some buttons at the left side:"
@@ -233,6 +244,11 @@ msgid ""
 "Yellow color. You can click again on the \"Select\" to unselect a selected "
 "feature."
 msgstr ""
+"Bottone **Seleziona** : quando viene cliccato, viene selezionato l'elemento "
+"corrispondente. Puoi selezionare molte linee usando questo pulsante su linee"
+" diverse. Gli elementi selezionati saranno visualizzati in uno stile diverso"
+" sulla mappa, di solito con un colore giallo. Puoi cliccare di nuovo su "
+"\"Seleziona\" per deselezionare un elemento selezionato."
 
 #: ../../source/user/attribute_table.rst:72
 msgid ""
@@ -240,12 +256,17 @@ msgid ""
 "geometry in the map. The scale will be chosen so that the feature geometry "
 "uses most of the available space."
 msgstr ""
+"Bottone **Zoom** : cliccando su questo bottone si fa lo zoom sulla geometria"
+" corrispondente nella mappa. La scala sarà scelta in modo che la geometria "
+"dell'elemento utilizzi la maggior parte dello spazio disponibile."
 
 #: ../../source/user/attribute_table.rst:73
 msgid ""
 "**Center** button : clicking on this button will just pan the map to the "
 "corresponding feature, without changing scale."
 msgstr ""
+"Bottone **Centra** : cliccando su questo bottone la mappa si sposta solo "
+"sull'elemento corrispondente, senza cambiare scala."
 
 #: ../../source/user/attribute_table.rst:80
 msgid "More about selection tools"
@@ -260,6 +281,13 @@ msgid ""
 "can use it to select only this object. Previous selection will be replaced "
 "by only this object."
 msgstr ""
+"Puoi anche selezionare un oggetto del livello **visualizzando il popup** per"
+" questo oggetto (se l'editore della mappa ha abilitato il popup per il "
+"livello, un clic sulla mappa mostrerà una finestra popup contenente "
+"informazioni dettagliate circa l'elemento cliccato). All'interno del popup, "
+"se si vede il pulsante di selezione, è possibile utilizzarlo per selezionare"
+" solo questo oggetto. La selezione precedente sarà sostituita solo da questo"
+" oggetto."
 
 #: ../../source/user/attribute_table.rst:88
 msgid ""
@@ -267,12 +295,17 @@ msgid ""
 "become yellow), you can use the black \"arrow up\" button situated above the"
 " table to **move the selected lines at the top of the table**."
 msgstr ""
+"Quando una o più linee sono state selezionate nella tabella degli attributi "
+"(esse diventano gialle), puoi usare il pulsante nero \"freccia su\" situato "
+"sopra la tabella per **spostare le linee selezionate in cima alla tabella**."
 
 #: ../../source/user/attribute_table.rst:90
 msgid ""
 "You can **unselect all the selected objects** by clicking on the \"white "
 "star\" button situated above the table."
 msgstr ""
+"Puoi **deselezionare tutti gli oggetti selezionati** cliccando sul pulsante "
+"\"stella bianca\" situato sopra la tabella."
 
 #: ../../source/user/attribute_table.rst:97
 msgid "Quickly search through data"
@@ -286,12 +319,19 @@ msgid ""
 "content manually or by clicking on the cross button situated inside the "
 "field."
 msgstr ""
+"Potete **filtrare le righe visualizzate** nella tabella inserendo alcune "
+"lettere nel **campo di ricerca** situato in alto a sinistra del contenuto "
+"della scheda. Se vuoi vedere di nuovo tutti gli elementi, cancella il "
+"contenuto del campo di ricerca manualmente o cliccando sul pulsante a forma "
+"di croce situato all'interno del campo."
 
 #: ../../source/user/attribute_table.rst:101
 msgid ""
 "The text entered in the search field launches a search among the data for "
 "**all the fields of the table.**"
 msgstr ""
+"Il testo inserito nel campo di ricerca lancia una ricerca tra i dati per "
+"**tutti i campi della tabella.**"
 
 #: ../../source/user/attribute_table.rst:103
 msgid ""
@@ -299,6 +339,10 @@ msgid ""
 "matching your textual search. **The objects on the map will not be filtered "
 "dynamically** (but you could use select and filter to do so, see below)"
 msgstr ""
+"Nota che solo il contenuto della tabella sarà limitato alle linee che "
+"corrispondono alla tua ricerca testuale. **Gli oggetti sulla mappa non "
+"saranno filtrati dinamicamente** (ma potresti usare seleziona e filtra per "
+"farlo, vedi sotto)"
 
 #: ../../source/user/attribute_table.rst:105
 msgid ""
@@ -309,6 +353,13 @@ msgid ""
 "also change their color in the map (usually in yellow too, depending on the "
 "configuration done by the map publisher)"
 msgstr ""
+"Una volta che avete filtrato alcuni dati nella tabella degli attributi "
+"inserendovi del testo, **potete facilmente selezionarli tutti** cliccando "
+"sul bottone \"stella nera\" etichettato \" Seleziona linee cercate\". Questo"
+" selezionerà tutti gli oggetti corrispondenti nella tabella degli attributi "
+"(visualizzandoli in giallo) e cambierà anche il loro colore nella mappa (di "
+"solito anche esso in giallo, a seconda della configurazione fatta "
+"dall'editore della mappa)"
 
 #: ../../source/user/attribute_table.rst:112
 msgid "Filter data"
@@ -321,10 +372,15 @@ msgid ""
 "just click on the \"Funnel\" button labelled \"Filter\" situated above the "
 "table (only available if some the selection contains at least one object)."
 msgstr ""
+"Quando avete selezionato uno o più oggetti nella tabella degli attributi del"
+" livello, potete allora **filtrare i dati visualizzati in Lizmap** per "
+"questo livello. Per farlo, basta cliccare sul pulsante \"Imbuto\" "
+"etichettato \"Filtra\" situato sopra la tabella (disponibile solo se la "
+"selezione contiene almeno un oggetto)."
 
 #: ../../source/user/attribute_table.rst:116
 msgid "Filtering will have the following consequences:"
-msgstr "Il filtraggio avrà le seguenti conseguenze:"
+msgstr "Il filtro avrà le seguenti conseguenze:"
 
 #: ../../source/user/attribute_table.rst:118
 msgid "The attribute table will **show only the filtered data**"
@@ -346,6 +402,11 @@ msgid ""
 "example, the bus stops could be filtered automatically if you have filtered "
 "one bus line, to show only the ones served by the filtered line."
 msgstr ""
+"Anche i livelli figli collegati con le relazioni (e anche pubblicati nello "
+"strumento tabella degli attributi) verranno filtrati. Lo chiamiamo \"filtro "
+"a cascata\". Per esempio, le fermate dell'autobus potrebbero essere filtrate"
+" automaticamente se hai filtrato una linea di autobus, per mostrare solo "
+"quelle servite dalla linea filtrata."
 
 #: ../../source/user/attribute_table.rst:122
 msgid ""
@@ -353,6 +414,9 @@ msgid ""
 "background, and a new orange \"Funnel\" button will be displayed above the "
 "legend."
 msgstr ""
+"I livelli filtrati saranno contrassegnati nella legenda del pannello di "
+"sinistra con uno sfondo arancione, e un nuovo pulsante arancione \"Imbuto\" "
+"sarà visualizzato sopra la legenda."
 
 #: ../../source/user/attribute_table.rst:124
 msgid "You can cancel the filter to go back to previous state:"
@@ -363,12 +427,16 @@ msgid ""
 "by clicking on the orange \"Funnel\" button at the top of the legend in "
 "Lizmap left panel"
 msgstr ""
+"cliccando sul pulsante arancione \"Imbuto\" in cima alla leggenda nel "
+"pannello sinistro di Lizmap"
 
 #: ../../source/user/attribute_table.rst:127
 msgid ""
 "by clicking back on the filter button just above the attribute table "
 "concerned by the filter"
 msgstr ""
+"cliccando di nuovo sul pulsante del filtro appena sopra la tabella degli "
+"attributi interessati dal filtro"
 
 #: ../../source/user/attribute_table.rst:133
 msgid ""
@@ -379,6 +447,13 @@ msgid ""
 "parameters from the permalink URL. **This is not a safe way to protect some "
 "data, but a way to focus on some data only**."
 msgstr ""
+"Quando si esporta la visualizzazione della mappa con lo strumento permalink "
+"(situato nella barra dei menu), **il filtro sarà attivato** nella mappa "
+"collegata e gli utenti non saranno in grado di defiltrare facilmente i dati:"
+" il pulsante di non filtro non sarà visualizzato nell'interfaccia Lizmap "
+"L'unico modo sarebbe quello di rimuovere i parametri del filtro dall'URL del"
+" permalink. **Questo non è un modo sicuro per proteggere alcuni dati, ma un "
+"modo per concentrarsi solo su alcuni dati**."
 
 #: ../../source/user/authentication.rst:2
 msgid "Authentication"
@@ -399,8 +474,8 @@ msgid ""
 "Once authentication is enabled, depending on your rights, you should have "
 "access to new maps."
 msgstr ""
-"Una volta abilitata l'autenticazione, in rapporto alla tipologia di diritti,"
-" è possibile accedere a nuove mappe."
+"Una volta abilitata l'autenticazione, dipendentemente dalla tipologia dei "
+"permessi, è possibile accedere a nuove mappe."
 
 #: ../../source/user/authentication.rst:16
 msgid "You can log out and edit your user information."
@@ -431,7 +506,7 @@ msgstr "modifiche geometriche"
 
 #: ../../source/user/edition.rst:8
 msgid "fields modification"
-msgstr "modifica dei campi"
+msgstr "modificare i campi"
 
 #: ../../source/user/edition.rst:9
 msgid "deleting spatial object"
@@ -452,7 +527,7 @@ msgid ""
 " you have to choose between *Add* a new object or *Select* one."
 msgstr ""
 "Una volta selezionato un livello, viene visualizzato il pannello di "
-"modifica. Questo varia a seconda della configurazione definita dall'editor "
+"modifica. Questo varia a seconda della configurazione definita dall'editore "
 "della mappa. Se tutte le modifiche sono disponibili si deve scegliere tra "
 "*Aggiungere* un nuovo oggetto o *Selezionare* un oggetto esistente."
 
@@ -516,6 +591,8 @@ msgid ""
 "To select an object to update, you will need to click on it on the map then "
 "click on the button *Edit*."
 msgstr ""
+"Per selezionare un oggetto da aggiornare, dovrai cliccarci sopra sulla mappa"
+" e poi cliccare sul pulsante *Modifica*."
 
 #: ../../source/user/edition.rst:51
 msgid ""
@@ -529,48 +606,61 @@ msgstr ""
 msgid ""
 "You can undo geometry changes and stop edition using the *Cancel* button."
 msgstr ""
+"Puoi annullare le modifiche alla geometria e fermare la modifica usando il "
+"pulsante *Cancel*."
 
 #: ../../source/user/edition.rst:53
 msgid "To validate your geometry modifications, you must click *Save*."
 msgstr ""
+"Per convalidare le tue modifiche alla geometria, devi cliccare su *Salva*."
 
 #: ../../source/user/edition.rst:59
 msgid ""
 "If you want to remove a point on a geometry, you must hover it and type "
 "*Del* on your keyboard."
 msgstr ""
+"Se volete rimuovere un punto di una geometria, dovete passare il mouse su di"
+" esso e digitare *Canc* sulla vostra tastiera."
 
 #: ../../source/user/edition.rst:61
 msgid ""
 "*Digitizing* button is displayed with line and polygon geometries, by "
 "clicking it, you'll access those tools:"
 msgstr ""
+"Il pulsante *Digitalizzazione* viene visualizzato con le geometrie di linee "
+"e poligoni, cliccandolo si accede a questi strumenti:"
 
 #: ../../source/user/edition.rst:63
 msgid ""
 "Node tool (default). Move or delete the geom nodes (vertices) and also "
 "create new ones by dragging virtual nodes in the middle of the segments."
 msgstr ""
+"Strumento Nodo (predefinito). Sposta o cancella i nodi geom (vertici) e ne "
+"crea di nuovi trascinando i nodi virtuali nel mezzo dei segmenti."
 
 #: ../../source/user/edition.rst:64
 msgid ""
 "Drag tool. Translate a geometry by dragging the displayed point at the "
 "center of the geometry."
 msgstr ""
+"Strumento trascinamento. Trasla una geometria trascinando il punto "
+"visualizzato al centro della geometria."
 
 #: ../../source/user/edition.rst:65
 msgid ""
 "Rotate tool. Rotate a geometry by dragging the displayed point at bottom "
 "right of the geometry."
 msgstr ""
+"Strumento di rotazione. Ruota una geometria trascinando il punto "
+"visualizzato in basso a destra della geometria."
 
 #: ../../source/user/edition.rst:66
 msgid "Reshape tool."
-msgstr ""
+msgstr "Strumento di rimodellamento."
 
 #: ../../source/user/edition.rst:67
 msgid "Split tool."
-msgstr ""
+msgstr "Strumento di divisione."
 
 #: ../../source/user/edition.rst:68
 msgid ""
@@ -578,6 +668,9 @@ msgid ""
 "order. Useful for streets when their circulation orientation is reversed for"
 " example."
 msgstr ""
+"Inverti geom (da usarsi con lo strumento nodo). Inverte l'ordine dei nodi "
+"(vertici). Utile per le strade quando il verso di circolazione è invertito, "
+"per esempio."
 
 #: ../../source/user/index.rst:3
 msgid "User guide"
@@ -585,7 +678,7 @@ msgstr "Guida utente"
 
 #: ../../source/user/index.rst:5
 msgid "This guide is for the end user, when using the web client."
-msgstr ""
+msgstr "Questa guida è per l'utente finale, quando si usa il client web."
 
 #: ../../source/user/locate_by_layer.rst:2
 msgid "Locate by layer"
@@ -596,8 +689,8 @@ msgid ""
 "This feature is displayed by default if it has been activated by the map "
 "publisher."
 msgstr ""
-"Questo componente è visualizzato di default se è stato attivato nello "
-"strumento di pubblicazione della mappa."
+"Questo componente è visualizzato in modo predefinito se è stato attivato "
+"nello strumento di pubblicazione della mappa."
 
 #: ../../source/user/locate_by_layer.rst:6
 msgid ""
@@ -636,7 +729,7 @@ msgstr "un perimetro"
 
 #: ../../source/user/measurement.rst:9
 msgid "an angle"
-msgstr ""
+msgstr "un angolo"
 
 #: ../../source/user/measurement.rst:11
 msgid "It is available in the Lizmap menu bar."
@@ -686,7 +779,7 @@ msgid ""
 "number of print compositions published by the map publisher."
 msgstr ""
 "Lo strumento stampa è disponibile nella barra dei menu di Lizmap. Dipende "
-"dal numero di composizioni di stampa pubblicati dall'editor della mappa."
+"dal numero di composizioni di stampa pubblicati dall'editore della mappa."
 
 #: ../../source/user/printing.rst:10
 msgid ""
@@ -694,7 +787,7 @@ msgid ""
 " displayed on the map. Use this area to define the area to be printed. You "
 "can move it."
 msgstr ""
-"A funzione attivata , un'area di stampa con l'aspetto della composizione "
+"A funzione attivata, un'area di stampa con l'aspetto della composizione "
 "viene visualizzata sulla mappa. Utilizzare quest'area per definire l'area da"
 " stampare. È possibile spostarla."
 
@@ -720,11 +813,11 @@ msgid ""
 "PDF file with the layout defined by the map publisher."
 msgstr ""
 "Per creare il file di stampa, è possibile fare clic su *Stampa*. Si otterrà "
-"un file PDF con il layout definito nell'editor della mappa."
+"un file PDF con il layout definito dall'editore della mappa."
 
 #: ../../source/user/project_page.rst:2
 msgid "The projects page"
-msgstr ""
+msgstr "La pagina del progetto"
 
 #: ../../source/user/project_page.rst:4
 msgid "The default lizmap page offers a list maps organized by folder."
@@ -769,7 +862,7 @@ msgstr "Una semplice mappa"
 #: ../../source/user/simple_map.rst:4
 msgid "Lizmap offers default web maps with the following features:"
 msgstr ""
-"La mappa web di default di lizmap contiene le seguenti caratteristiche:"
+"La mappa web predefinita di Lizmap contiene le seguenti caratteristiche:"
 
 #: ../../source/user/simple_map.rst:6
 msgid "pan"
@@ -777,19 +870,19 @@ msgstr "sposta"
 
 #: ../../source/user/simple_map.rst:7
 msgid "zoom on area drawn by the user"
-msgstr "zoom finestra"
+msgstr "zoom sull'area disegnata dall'utente"
 
 #: ../../source/user/simple_map.rst:8
 msgid "zoom more"
-msgstr "zoom maggiore"
+msgstr "zoom in avanti"
 
 #: ../../source/user/simple_map.rst:9
 msgid "selecting a zoom level with a scale bar"
-msgstr "selezionare il livello di zoom attraverso una barra di scala"
+msgstr "selezione del livello di zoom attraverso una barra di scala"
 
 #: ../../source/user/simple_map.rst:10
 msgid "zoom less"
-msgstr "zoom minore"
+msgstr "zoom all'indietro"
 
 #: ../../source/user/simple_map.rst:11
 msgid "scale display as a scale bar and numerically"
@@ -801,8 +894,8 @@ msgid ""
 "those defined in the QGIS by the map publisher."
 msgstr ""
 "L'ordine e l'organizzazione dei livelli nel pannello di gestione "
-"rispecchiano le definizioni stabilite all'interno dell'editor della mappa in"
-" QGIS."
+"rispecchiano le definizioni stabilite all'interno dall'editore della mappa "
+"in QGIS."
 
 #: ../../source/user/simple_map.rst:19
 msgid ""
@@ -810,7 +903,7 @@ msgid ""
 "area, you need to select the *zoom by rectangle* and drag to draw a "
 "rectangle defining the area to reach."
 msgstr ""
-"Lo zoom ed il pan sono disponibili nella parte destra della mappa. Per lo "
+"Lo zoom e lo sposta sono disponibili nella parte destra della mappa. Per lo "
 "zoom finestra è necessario selezionare *zoom by rectangle* e trascinare il "
 "puntatore per disegnare il rettangolo che definisce l'area di interesse."
 
@@ -820,7 +913,7 @@ msgid ""
 "the layer."
 msgstr ""
 "E' possibile utilizzare il *triangolo*, alla sinistra del titolo del "
-"livello, per nasconderne la legenda."
+"livello, per nascondere la legenda del livello."
 
 #: ../../source/user/simple_map.rst:31
 msgid "Selection boxes allow you to hide and display the proposed layers."
@@ -831,6 +924,8 @@ msgstr ""
 #: ../../source/user/simple_map.rst:37
 msgid "Themes allow you to change layers visibility following a context."
 msgstr ""
+"I temi permettono di modificare la visibilità dei livelli seguendo un "
+"contesto."
 
 #: ../../source/user/simple_map.rst:43
 msgid ""

@@ -1,30 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2021, 3liz
+# Copyright (C) 2014-2022, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# etrimaille <gustrimaille@yahoo.fr>, 2020
 # Jean-Louis Stanus <rammstan@msn.com>, 2020
 # Nicolas Boisteault <nboisteault@gmail.com>, 2020
 # rldhont <rldhont@gmail.com>, 2020
 # Laurent Jouanneau <dev@ljouanneau.com>, 2020
 # Michael Douchin <kimaidou@gmail.com>, 2021
+# Arnaud HANRY <arnaud.hanry@le64.fr>, 2021
+# etrimaille <gustrimaille@yahoo.fr>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-26 09:53+0000\n"
+"POT-Creation-Date: 2022-06-21 15:25+0000\n"
 "PO-Revision-Date: 2020-11-26 13:55+0000\n"
-"Last-Translator: Michael Douchin <kimaidou@gmail.com>, 2021\n"
+"Last-Translator: etrimaille <gustrimaille@yahoo.fr>, 2021\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../source/admin/cache.rst:5
 msgid "Cache management as administrator"
@@ -42,6 +43,10 @@ msgid ""
 " user pan and zoom on the map. To have better performance, Lizmap Web Client"
 " can also automatically generate the tile cache on the server."
 msgstr ""
+"Pour une couche avec le cache serveur activé, Lizmap conservera le cache "
+"lorsque l'utilisateur effectuera un déplacement et un zoom sur la carte. "
+"Pour avoir de meilleures performances, Lizmap Web Client peut également "
+"générer automatiquement le cache de tuiles sur le serveur."
 
 #: ../../source/admin/cache.rst:13
 msgid ""
@@ -49,6 +54,9 @@ msgid ""
 " the style has changed and the tiles need to be updated. For this, two "
 "solutions are possible:"
 msgstr ""
+"Dans certains cas, il est souhaitable d'effacer le cache serveur, par "
+"exemple, quand le style a changé et  que les tuiles nécessitent d'être mises"
+" à jour. Pour cela, deux solutions sont possibles : "
 
 #: ../../source/admin/cache.rst:18
 msgid "Remove all the cache by Lizmap repository"
@@ -61,6 +69,10 @@ msgid ""
 "of all the projects repository by clicking the button :guilabel:`Empty "
 "cache`."
 msgstr ""
+"Dans l'interface d'administration, dans la page :guilabel:`Gestion des "
+"cartes`, pour chaque dossier, l'administrateur peut supprimer le cache de "
+"toutes les couches de tous les projets en cliquant sur le bouton "
+":guilabel:`Vider le cache`."
 
 #: ../../source/admin/cache.rst:25
 msgid "Delete the cache, layer by layer, for each Lizmap project"
@@ -74,6 +86,10 @@ msgid ""
 "confirmation, to delete the server cache only for this layer in the QGIS "
 "project."
 msgstr ""
+"Lorsque l'administrateur est connecté et consulte une carte Lizmap, une "
+"**petite croix rouge** s'affiche à droite du nom de chaque couche configurée"
+" avec le cache serveur. Cliquer sur la croix permet, après validation, de "
+"supprimer le cache serveur uniquement pour cette couche dans le projet QGIS."
 
 #: ../../source/admin/cache.rst:31
 msgid ""
@@ -85,7 +101,7 @@ msgstr ""
 
 #: ../../source/admin/cache.rst:35
 msgid "Configuring the caching system"
-msgstr ""
+msgstr "Configuration du système de cache"
 
 #: ../../source/admin/cache.rst:37
 msgid ""
@@ -93,18 +109,21 @@ msgid ""
 " can configure the caching system which is used. You can choose between "
 "different kind of caching :"
 msgstr ""
+"Dans :menuselection:`Administration -> Configuration -> Cache`, vous pouvez "
+"configurer le système de cache utilisé. Vous pouvez choisir entre différents"
+" types de mise en cache :"
 
 #: ../../source/admin/cache.rst:41
 msgid "Files"
-msgstr ""
+msgstr "Fichiers"
 
 #: ../../source/admin/cache.rst:42
 msgid "Sqlite"
-msgstr ""
+msgstr "Sqlite"
 
 #: ../../source/admin/cache.rst:43
 msgid "Redis (You would need a Redis server)"
-msgstr ""
+msgstr "Redis (Vous devez avoir un serveur Redis)"
 
 #: ../../source/admin/cache.rst:46
 msgid "Seeding"
@@ -130,9 +149,13 @@ msgstr ""
 msgid ""
 "In this example, we will show commands to manage the tiles cache for the "
 "demo project ``Montpellier``, shipped with Lizmap Web Client. We also assume"
-" that your Lizmap application is installed in the folder :file:`/var/www"
-"/lizmap-web-client/`."
+" that your Lizmap application is installed in the folder "
+":file:`/var/www/lizmap-web-client/`."
 msgstr ""
+"Dans cet exemple, nous montrerons les commandes pour gérer le cache des "
+"tuiles pour le projet de démonstration ``Montpellier``, livré avec Lizmap "
+"Web Client. Nous supposons également que votre application Lizmap est "
+"installée dans le dossier :file:`/var/www/lizmap-web-client/`."
 
 #: ../../source/admin/cache.rst:62
 msgid ""
@@ -149,10 +172,12 @@ msgid ""
 "**TileMatrixSet** - In Lizmap, this represents the projection code, for "
 "example `EPSG:3857` (Pseudo mercator)."
 msgstr ""
+"**TileMatrixSet** - Dans Lizmap, cela représente le code de projection, par "
+"exemple `EPSG:3857` (Pseudo mercator)."
 
 #: ../../source/admin/cache.rst:65
 msgid "**TileMatrixMin** - This is the minimum zoom level."
-msgstr ""
+msgstr "**TileMatrixMin** - Il s'agit du niveau de zoom minimum."
 
 #: ../../source/admin/cache.rst:66
 msgid "**TileMatrixMax** - This is the maximum zoom level."
@@ -167,6 +192,13 @@ msgid ""
 " can have a idea of the scale ID by typing `lizMap.map.getZoom()` in your "
 "webbrowser Javascript console when zooming on your map."
 msgstr ""
+"Le niveau de zoom n'est **pas** une échelle de carte, mais le niveau de "
+"zoom. Dans l'extension Lizmap, l'éditeur du projet peut configurer des "
+"échelles pour le projet publié, par exemple la liste : '100000, 50000, "
+"25000, 10000'. L'ID du niveau de zoom dépend du CRS et de la façon dont vous"
+" avez configuré votre projet Lizmap. Vous pouvez avoir une idée de l'ID "
+"d'échelle en tapant `lizMap.map.getZoom()` dans la console Javascript de "
+"votre navigateur Web lorsque vous zoomez sur votre carte."
 
 #: ../../source/admin/cache.rst:75
 msgid ""
@@ -183,10 +215,15 @@ msgid ""
 "this project in Lizmap (configured in the :menuselection:`Project properties"
 " --> QGIS Server`)."
 msgstr ""
+"Dans cet exemple, vous voyez que la couche de bus a 3 TileMatrixSet "
+"différents, correspondant aux 3 systèmes de coordonnées spatiales différents"
+" disponibles pour ce projet dans Lizmap (configurés dans "
+":menuselection:`Propriétés du Projet --> QGIS Serveur`)."
 
 #: ../../source/admin/cache.rst:98
 msgid "If your layer name has some spaces, you need to use `\"\"`."
 msgstr ""
+"Si le nom de votre couche comporte des espaces, vous devez utiliser `\"\"`."
 
 #: ../../source/admin/cache.rst:100
 msgid ""
