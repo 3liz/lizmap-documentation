@@ -110,3 +110,23 @@ for :file:`css/main.css` and:
 for :file:`css/map.css`
 
 By following these steps, we keep our custom theme as small as possible.
+
+Additional CSS
+--------------
+
+In :menuselection:`Server administration panel -> Theme`, it's possible to add some CSS without creating files like the
+step before.
+For instance, a quick tip to remove the title `Projects` from the header in the landing page :
+
+.. code-block:: css
+
+    #title h1 {
+        text-indent: -9999px;
+        display: block;
+    }
+
+    #title h1::before{
+       content: 'Your new title';
+        position: absolute;
+        left: 9999px;
+    }
