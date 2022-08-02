@@ -15,8 +15,8 @@ build_pot:
   only:
     - schedules
     - master
-    - lizmap_3_4
     - lizmap_3_5
+    - lizmap_3_6
   stage: build_pot
   script:
     - make gettext
@@ -29,8 +29,8 @@ build_and_publish_pot:
     - tags
   only:
     - master
-    - lizmap_3_4
     - lizmap_3_5
+    - lizmap_3_6
   stage: build_pot
   script:
     - make gettext
