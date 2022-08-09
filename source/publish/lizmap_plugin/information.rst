@@ -36,3 +36,22 @@ Configuring the tool
 .. warning::
     Do not use the any URL redirection. For instance, https://demo.lizmap.com/ is a redirection to
     https://demo.lizmap.com/lizmap/. Only the second one will work.
+
+Request for support
+-------------------
+
+When requesting support on a website, it might be required or highly recommended to copy/paste versions used on your server.
+This helps a lot to know your environment and to know if the bug is a new one or already fixed. So you should have your
+server available in the table mentioned above, **with** an administrator login.
+
+Then, right-click on your server, then :menuselection:`Copy all versions in your clipboard for a support request…`. You can
+go back on your support request and do a right click and paste.
+
+.. warning::
+    When clicking in the QGIS plugin, you might have some actions displayed **in a popup**. You **should** check these
+    actions, like to be sure to provide an administrator login, have QGIS server installed correctly, running a
+    maintained version of Lizmap Web Client etc. Check your version against latest released on
+    https://github.com/3liz/lizmap-web-client/releases
+
+..  image:: /images/information_tab_clipboard.jpg
+   :align: center
