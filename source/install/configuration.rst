@@ -2,7 +2,7 @@
 Configuration of Lizmap
 ===============================================================
 
-In some server, additionnal settings should be done into Lizmap.
+In some server, additional settings should be done into Lizmap.
 Settings should be set into the ``lizmap/var/config/`` directory.
 
 Configuration files
@@ -55,14 +55,15 @@ Setting language
 Lizmap detects automatically the language of the user (given by his browser),
 and it supports many languages.
 
-Available language into Lizmap are: fr_FR, en_US, it_IT, es_ES, eu_ES, pt_PT,
-el_GR, de_DE, pl_PL, ru_RU, fi_FI, gl_ES, sv_SE, nl_NL, ro_RO, hu_HU.
+Available languages into Lizmap are shown on the `GitHub repository <https://github.com/3liz/lizmap-web-client/tree/master/lizmap/app/locales>`_
+Be careful to select the correct branch on GitHub according to the version of Lizmap Web Client you are installing.
+Some languages might not be available in older versions of Lizmap Web Client, for instance on the `3.6 branch <https://github.com/3liz/lizmap-web-client/tree/release_3_6/lizmap/app/locales>`_.
 
 If the browser of the user indicates an unsupported language code, the default
 language of Lizmap is used, and is en_US.
 
 You can change the default language of Lizmap by setting the parameter ``locale``
-Into localconfig.ini.php, with your prefered language code.
+Into localconfig.ini.php, with your preferred language code.
 
 You can also limit available language by changing the ``availableLocales`` option.
 
@@ -74,4 +75,3 @@ In this example, only 3 languages are available and the default language is ital
     availableLocales = en_US,fr_FR,it_IT
 
 There is also a ``fallbackLocale`` option but it is not recommended to change it.
-
