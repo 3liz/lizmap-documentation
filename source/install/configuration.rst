@@ -52,7 +52,7 @@ Setting language
 Lizmap detects automatically the language of the user (given by his browser),
 and it supports many languages.
 
-Available languages into Lizmap are shown on the `GitHub repository <https://github.com/3liz/lizmap-web-client/tree/master/lizmap/app/locales>`_
+Available languages into Lizmap are shown on the `GitHub repository <https://github.com/3liz/lizmap-web-client/tree/master/lizmap/app/locales>`_.
 Be careful to select the correct branch on GitHub according to the version of Lizmap Web Client you are installing.
 Some languages might not be available in older versions of Lizmap Web Client, for instance on the `3.6 branch <https://github.com/3liz/lizmap-web-client/tree/release_3_6/lizmap/app/locales>`_.
 
