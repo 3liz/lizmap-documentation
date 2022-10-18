@@ -68,7 +68,7 @@ At the layer level
     8. **Traces** : Depending of the kind of chart, you can add one or many traces : the Y field of your graph.
     9. Depending of the kind of chart, there is now different options.
     10. **Layout** : The layout can be customized. It must be a JSON dictionary.
-        You can read the documentation of Plotly documentation about the layout configuration https://plotly.com/javascript/reference/#layout
+        You can read the documentation of Plotly documentation about the layout configuration https://plotly.com/javascript/reference/layout/
     11. **Display filtered plot in popups of parent layer** : if you check this checkbox, the children of your
         layer will get the same graph as the parent plot but filtered only for them.
         It's useful if you want to see the statistics of one entity instead of all.
@@ -121,7 +121,7 @@ JSON layout
 ^^^^^^^^^^^
 
 The layout option, allows you to configure many options by writing up a JSON object.
-See the full reference: https://plotly.com/javascript/reference/#layout
+See the full reference: https://plotly.com/javascript/reference/layout/
 
 The following examples show how to use some properties depending of the layout property:
 
