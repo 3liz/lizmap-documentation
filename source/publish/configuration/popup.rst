@@ -228,7 +228,7 @@ will generate the QGIS Expression matching the form layout.
 
 To have a similar popup as the **auto** one, you need to click the button in the Lizmap plugin :menuselection:`Generate the HTML table`.
 
-To display some color with HTML according to the value of a field, you can use this QGIS expression above :
+To display some color with HTML according to the value of a field, you can use this QGIS expression :
 
 .. code-block:: html
 
