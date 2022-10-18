@@ -190,6 +190,25 @@ The following examples show how to use some properties depending of the layout p
         }
     }
 
+Other customisation with JavaScript scripts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We can also modify charts with some JavaScript scripts.
+
+* You can decide to not have any number after the comma for the first chart (id: dataviz_plot_0), for example:
+
+.. code-block:: javascript
+
+    lizMap.events.on({
+        'datavizplotloaded': (evt) => {
+            if( evt.id === 'dataviz_plot_0'){
+                Plotly.restyle( evt.id, {
+                    texttemplate: "%{value:.0f}" 
+                });
+            }
+        }
+    });
+
 Types of charts
 ^^^^^^^^^^^^^^^
 
