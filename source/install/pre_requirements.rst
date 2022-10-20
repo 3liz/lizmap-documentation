@@ -148,7 +148,10 @@ project.
 If your are using QGIS Server with **FCGI**, the Lizmap API URL **must** be empty.
 
 Otherwise, if you are using `Py-QGIS-Server <https://docs.3liz.org/py-qgis-server/>`_, the Lizmap API URL **must** be
-configured in the administration interface. In **Py-QGIS-Server**, you must explicitly publish the API as well :
+configured in the administration interface. In **Py-QGIS-Server**, you must explicitly publish the API as well.
+
+Starting from Py-QGIS-Server version 1.8.4, it's possible to enable the Lizmap API endpoint with the environment variable
+`QGSRV_API_ENDPOINTS_LIZMAP=yes` otherwise, add the configuration below in your configuration file :
 
 .. code-block:: ini
 
