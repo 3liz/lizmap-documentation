@@ -62,6 +62,7 @@ build_html:
   stage: build_html
   script:
     - sphinx-build --version
+    - pip freeze
     - make clean html
   artifacts:
     paths:

@@ -37,10 +37,9 @@ generate the HTML content in all languages.
 
 So install these tools. On Linux / macOS, install Python, Pip and then:
 
-```
-sudo pip install -U sphinx
-sudo pip install -U sphinx==3.5.4
-sudo pip install -U sphinx-intl
+```bash
+pip install -U sphinx==1.8.6
+# pip install -U sphinx-intl
 ```
 
 Then run `make gettext && make html`. It will build the docs in all available 
