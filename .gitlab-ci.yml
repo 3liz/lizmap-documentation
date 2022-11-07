@@ -61,6 +61,7 @@ build_html:
     - tags
   stage: build_html
   script:
+    - sphinx-build --version
     - make clean html
   artifacts:
     paths:
