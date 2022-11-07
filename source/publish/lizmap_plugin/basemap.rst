@@ -34,36 +34,38 @@ The available base layers
 * *OpenStreetMap*, mapping project under free and open licenses:
 
   * OSM Mapnik: service available on openstreetmap.org
+  * OSM stamen toner
+  * OpenTopoMap
 
-* *ThunderForest*, company using OSM data and providing tiles:
+* *ThunderForest*, **API key required**:
   * Open Cycle Map: OpenStreetMap cycling data including altitude information
 
-* *Google*, requires compliance to use licence agreement:
+* *Google*, **API key required**:
 
   * Streets: the default Google Maps background layer
   * Satellite: the background map incorporating aerial and satellite images
   * Hybrid: the background map mixing streets and satellite
   * Terrain
 
-* *Bing Map*, requires compliance with the Microsoft license agreement and therefore a key:
+* *Bing Map*, **API key required**:
 
   * Streets: the default Bing Map background layer
   * Satellite: the background map incorporating aerial and satellite images
   * Hybrid: the background map mixing streets and satellite
 
-* *IGN Géoportail*, requires compliance with the IGN license agreement and therefore a key:
+* *IGN Géoportail*, **API key required** for one layer:
 
   * Plan: The IGN rendering for the Web
   * Satellite: the background map incorporating IGN aerial and satellite images
-  * Scan: the background map mixing the various IGN scan
+  * Scan: the background map mixing the various IGN scan, API key needed
   * Cadastre
 
 The licenses are available at the following URLs:
 
-* *OpenStreetMap*: https://wiki.openstreetmap.org/wiki/Tile_usage_policy
+* *OpenStreetMap*: https://operations.osmfoundation.org/policies/tiles/
 * *Google*: https://cloud.google.com/maps-platform/terms/
 * *Bing*: https://www.microsoft.com/en-us/maps/product
-* *IGN*: https://depot.ign.fr/geoportail/api/develop/tech-docs-js/fr/license.html
+* *IGN*: https://geoservices.ign.fr/catalogue
 
 Scale with external base layer
 ------------------------------
