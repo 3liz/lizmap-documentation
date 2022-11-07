@@ -61,12 +61,6 @@ build_html:
     - tags
   stage: build_html
   script:
-    - sphinx-build --version
-    - pip freeze
-    - pip list
-    - apt policy python-jinja2
-    - apt policy python3-jinja2
-    - python --version
     - make clean html
   artifacts:
     paths:

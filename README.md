@@ -38,8 +38,8 @@ generate the HTML content in all languages.
 So install these tools. On Linux / macOS, install Python, Pip and then:
 
 ```bash
-pip install -U sphinx==1.8.6
-# pip install -U sphinx-intl
+# In a venv
+pip install -r requirements.txt
 ```
 
 Then run `make gettext && make html`. It will build the docs in all available 
