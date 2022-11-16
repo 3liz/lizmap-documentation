@@ -684,7 +684,7 @@ Then you can install the package of the module
     composer require --working-dir=lizmap/my-packages "lizmap/lizmap-pgmetadata-module"
 
 
-If you want to install a new version of the module, just execute:
+If you want to install a new version of the module, execute:
 
 .. code-block:: bash
 
