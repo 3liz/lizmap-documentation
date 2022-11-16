@@ -124,8 +124,12 @@ Installation
 QGIS Server side
 ****************
 
-The Lizmap plugin must be installed in the correct folder for QGIS Server. The environment variable must be set in QGIS
-Server. The plugin name is **Lizmap server**.
+The Lizmap server plugin must be installed in the correct folder for QGIS Server. The environment variable must be set
+in QGIS Server. The plugin name is **Lizmap server**.
+
+.. warning::
+    You must install the "**Lizmap server**" plugin. The "**Lizmap**" plugin is designed only for QGIS desktop. Do not
+    keep both on your server.
 
 .. warning::
     For **security** reason, to enable all features on the QGIS server side, you must enable the environment variable

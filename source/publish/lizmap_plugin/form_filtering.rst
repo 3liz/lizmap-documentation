@@ -38,7 +38,10 @@ Configuring the tool
 .. image:: /images/interface-add-form-filter.jpg
    :align: center
 
-There is a new tab in the Lizmap plugin which lets you configure the filter inputs based on the layer fields. You can add one or more fields for one or more layer. If you add fields from 2 or more different layers, Lizmap Web Client will show a combo box to allow the user to choose the layer to filter. Selecting a layer will refresh the form and deactivate the current filter.
+There is a tab in the Lizmap plugin which lets you configure the filter inputs based on the layer fields.
+You can add one or more fields for one or more layer. If you add fields from 2 or more different layers,
+Lizmap Web Client will show a combo box to allow the user to choose the layer to filter.
+Selecting a layer will refresh the form and deactivate the current filter.
 
 - You need to add a line in the plugin table for each field you need to add in the filter form. For each field, you need to configure some options:
 
