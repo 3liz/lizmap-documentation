@@ -16,16 +16,17 @@ In the :guilabel:`Layers` tab, click on the :guilabel:`Popup` checkbox.
 ..  image:: /images/publish-link.jpg
    :align: center
 
-For the :guilabel:`Group as layer` option you must select the option for the group and for all the layers included you want to show in the popup: in this case, only the layers with the option :guilabel:`Popup` checked will be shown.
+For the :guilabel:`Group as layer` option you must select the option for the group and for all the layers included you
+want to show in the popup: in this case, only the layers with the option :guilabel:`Popup` checked will be shown.
 
 You have three types of popup sources:
 
-* ``auto``, read :ref:`auto-popup`
-* ``lizmap``, read :ref:`lizmap-popup`
-* ``qgis``, read :ref:`qgis-popup`
-* ``form``, read :ref:`form-popup`
+* ``Automatic``, read :ref:`auto-popup`
+* ``Lizmap HTML``, read :ref:`lizmap-popup`
+* ``QGIS HTML Maptip``, read :ref:`qgis-popup`
+* ``QGIS Drag&Drop form``, read :ref:`form-popup`
 
-In the web application Lizmap Web Client, a click on a feature will trigger the popup if (and only if):
+In Lizmap Web Client, a click on a feature will trigger the popup if (and only if):
 
 * the popup **has been activated**
 
@@ -35,9 +36,12 @@ In the web application Lizmap Web Client, a click on a feature will trigger the 
 * the layer is **active in the legend**, so that it is shown on the canvas
 * the user has clicked on an **area of the canvas** where data for the layer with active popups are displayed.
 
-.. note:: For point layers you need to click in the middle of the point to display the popup. The tolerance can be setup in :menuselection:`Lizmap plugin --> Map options --> Map tools`.
+.. note::
+    For point layers you need to click in the middle of the point to display the popup.
+    The tolerance can be setup in :menuselection:`Lizmap plugin --> Map options --> Map tools`.
 
-You can update where the popup is displayed in the web interface in :menuselection:`Lizmap plugin --> Map options --> Map interface`. You can choose between:
+You can update where the popup is displayed in the web interface in :menuselection:`Lizmap plugin --> Map options --> Map interface`.
+You can choose between:
 
 * ``dock``
 * ``minidock``
@@ -52,10 +56,10 @@ See :ref:`use-in-popups` in the **media** chapter.
 
 .. _auto-popup:
 
-Auto popup
------------
+Automatic popup
+---------------
 
-The Lizmap Web Client ``auto`` popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:
+The Lizmap Web Client ``Automatic`` popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:
 
 ============  ==============
 Field         Value
@@ -116,15 +120,17 @@ You can also use, in a field, **full web links to a specific page or image**:
 
 .. _lizmap-popup:
 
-Lizmap popup
-------------
+Lizmap HTML popup
+-----------------
 
 Introduction
 ____________
 
 If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know some **HTML format**. See e.g.: https://www.w3schools.com/html/
 
-.. warning:: When you use the *lizmap* mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the template. Managing media is also possible, but you have to configure it as well.
+.. warning::
+    When you use the *Lizmap HTML* mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the template.
+    Managing media is also possible, but you have to configure it as well.
 
 Deploying
 _________
@@ -150,7 +156,10 @@ The behaviour is as follows:
 * if the content of the two areas is empty, a simple table will be shown in the popup (default template)
 * if the content is not empty, its content will be used as a template for the popup
 
-Lizmap Web Client will replace automatically a variable, identified by the name of a field, with its content. To add the content of a column to a popup, you should use the name of the column precede by a dollar sign (`$`), all surrounded by curly brackets (`{}`). For instance:
+Lizmap Web Client will replace automatically a variable, identified by the name of a field, with its content.
+To add the content of a column to a popup, you should use the name of the column precede by a dollar sign (`$`), all surrounded by curly brackets (`{}`).
+
+For instance:
 
 .. code-block:: html
 
@@ -161,7 +170,8 @@ Lizmap Web Client will replace automatically a variable, identified by the name 
 
 .. note:: If you have configured an alias for a field, you have to use the alias instead of the name, between the brackets.
 
-You can also use the values of the columns as parameters to give styling to the text. An example here, to use the colour of a bus line as a background colour:
+You can also use the values of the columns as parameters to give styling to the text.
+An example here, to use the colour of a bus line as a background colour:
 
 .. code-block:: html
 
@@ -172,7 +182,9 @@ You can also use the values of the columns as parameters to give styling to the 
 Usage of media and external links
 _________________________________
 
-You can **use the media** referred to in the table content, even if you use a *template model*. To do this, you should use the media column, taking into account the fact that Lizmap Web Client automatically replaces the relative path of the type ``/media/myfile.jpg`` with the full URL to the file, accessible through the web interface.
+You can **use the media** referred to in the table content, even if you use a *template model*.
+To do this, you should use the media column, taking into account the fact that Lizmap Web Client automatically replaces
+the relative path of the type ``/media/myfile.jpg`` with the full URL to the file, accessible through the web interface.
 
 You can also use full URLs pointing to the pages or images on another server.
 
@@ -195,8 +207,8 @@ Here an example of a template handling media and an external link:
 
 .. _form-popup:
 
-Form popup
-----------
+QGIS Drag&Drop Form popup
+-------------------------
 
 If you have defined a form layout with the *Drag and drop form designer* for a layer in
 :menuselection:`Layer Properties --> Attributes Form`, you can also display it in its popup.
@@ -211,8 +223,8 @@ If you want to alter the popup HTML, then you must use :guilabel:`QGIS Popup` in
 
 .. _qgis-popup:
 
-QGIS popup
-----------
+QGIS HTML Maptip popup
+----------------------
 
 *QGIS* popups can be configured via :menuselection:`QGIS --> Layer properties --> Display --> HTML Map Tip`.
 The main advantages of this approach are:
@@ -274,7 +286,7 @@ In Lizmap Web Client:
 .. image:: /images/feature-popup-toggle-compact-mode.jpg
    :align: left
 
-If relative children popup are defined as ``auto``, this button will be visible in the feature's popup at the top of related objects.
+If relative children popup are defined as ``Automatic``, this button will be visible in the feature's popup at the top of related objects.
 Click it to compact all related objects in one table with search, sort and paging capabilities.
 
 Display children in a compact way
