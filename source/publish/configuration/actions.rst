@@ -1,17 +1,15 @@
 .. include:: ../../substitutions.rst
 
-Action in a popup
-=================
+Actions
+=======
 
 .. contents::
    :depth: 3
 
-This is a feature in |lizmap_3_4|.
-
 Principle
 ---------
 
-This module allows to add one or several **action buttons** in the **Lizmap popup**
+This module allows to add one or several **action buttons** in web interface.the **Lizmap popup**
 displayed for a **PostgreSQL** object, which will **trigger a query** in the database
 and return a **geometry** to display on the map.
 
@@ -21,6 +19,23 @@ for one or many QGIS PostgreSQL vector layers.
 
 ..  image:: /images/publish-configuration-action-popup.gif
    :align: center
+
+Demonstration
+------------
+
+You can check the demo about fire hydrants on https://demo.lizmap.com
+
+Click on a fire hydrant and
+
+* Either select buildings which are within 150m
+* Or find the closest fire station
+
+Prerequisites
+-------------
+
+* Some knowledge in SQL and JSON
+* To use the ``select`` callback, your layer must have the **selection** enabled for the layer. See :ref:`attribute_table`
+* .. include:: ../../shared/wfs_layer.rst
 
 Configuring the tool
 --------------------
@@ -75,17 +90,23 @@ Each **action** is an object defined by:
 
 * a ``name`` which is the action identifier.
 * a ``title`` which is used as a label in Lizmap interface
-* an ``icon`` which is displayed on the action button ( See https://getbootstrap.com/2.3.2/base-css.html#icons )
-* an optional ``confirm`` property, since |lizmap_3_5|, containing some text. If set, a confirmation dialog will be shown to the user to ask if the action should really be launched or not. Use it if the action can modify some data in your database.
+* an ``icon`` which is displayed on the action button (See https://getbootstrap.com/2.3.2/base-css.html#icons )
+* an optional ``confirm`` property, containing some text. If set, a confirmation dialog will be shown to the user to ask
+  if the action should really be launched or not. Use it if the action can modify some data in your database.
 * an ``options`` object, giving some additional parameters for this action. You can add any needed parameter.
 * a ``style`` object allowing to configure the returned geometry style. It follows OpenLayers styling attributes.
-* a ``callbacks`` object allows to trigger some actions after the generated geometry is returned. They are defined by a ``method`` name, which can at present be:
+* a ``callbacks`` object allows to trigger some actions after the generated geometry is returned.
+  They are defined by a ``method`` name, which can at present be:
 
     -  ``zoom``: zoom to the returned geometry
-    -  ``select``: select the features from a given layer intersecting the returned geometry. The target layer **QGIS internal ID** must be added in the ``layerId`` property. In the example, the features of the layer containing buildings, ID ``bati_1a016229_287a_4b5e_a4f7_a2080333f440`` will be selected
+    -  ``select``: select the features from a given layer intersecting the returned geometry.
+       The target layer **QGIS internal ID** must be added in the ``layerId`` property.
+       In the example, the features of the layer containing buildings, ID ``bati_1a016229_287a_4b5e_a4f7_a2080333f440`` will be selected
     -  ``redraw``: redraw (refresh) a given layer in the map. The target layer QGIS ID must be added in the ``layerId`` property.
 
-Lizmap detects the presence of this configuration file, and adds the needed logic when the map loads. When the users clicks on an object of one of this layer in the map, the **popup panel** shows the feature data. At the top of each popup item, **a toolbar will show one button per each layer action**.
+Lizmap detects the presence of this configuration file, and adds the needed logic when the map loads.
+When the users clicks on an object of one of this layer in the map, the **popup panel** shows the feature data.
+At the top of each popup item, **a toolbar will show one button per each layer action**.
 The action ``title`` will be displayed on hovering the action button.
 
 Each button **triggers the corresponding action**, if it is not yet **active** (else it deactivates and erases the geometry):
@@ -94,7 +115,7 @@ Each button **triggers the corresponding action**, if it is not yet **active** (
 * creates the **PostgreSQL query** and execute it in the layer PostgreSQL database. (See example below)
 * This query returns a **GeoJSON** which is then displayed on the map.
 * If some **callbacks** have been configured, they are launched
-* Since |lizmap_3_5|, A Lizmap **event** ``actionResultReceived`` is emitted with the returned data and action properties.
+* A Lizmap **event** ``actionResultReceived`` is emitted with the returned data and action properties.
 
 The **created PostgreSQL query** is built up by Lizmap web client and
 uses the PostgreSQL function ``lizmap_get_data(json)``
@@ -230,9 +251,17 @@ Obviously, **you must adapt it to fit your needs**.
    COMMENT ON FUNCTION lizmap_get_data(json) IS 'Generate a valid GeoJSON from an action described by a name, PostgreSQL schema and table name of the source data, a QGIS layer name, a feature id and additional options.';
 
 
-* The function ``lizmap_get_data(json)`` is provided here as an example. Since it is the **key entry point**, you need to adapt it to fit your needs. It aims to **create a query for each action name**, dynamically created for the given parameters, and return a GeoJSON representation of the query result data. You should have **only one feature** returned: use aggregation if needed. In the example above, we use the ``format`` method to set the query text, and the function ``query_to_geojson`` to return the GeoJSON for this query.
+* The function ``lizmap_get_data(json)`` is provided here as an example.
+  Since it is the **key entry point**, you need to adapt it to fit your needs.
+  It aims to **create a query for each action name**, dynamically created for the given parameters, and return a GeoJSON
+  representation of the query result data. You should have **only one feature** returned: use aggregation if needed.
+  In the example above, we use the ``format`` method to set the query text, and the function ``query_to_geojson`` to
+  return the GeoJSON for this query.
 
-* You can use all the given parameters (action name, source data schema and table name, feature id, QGIS layer name) to create the appropriate query for your action(s), by using the PostgreSQL ``IF THEN ELSIF ELSE`` clauses. See the content of the ``parameters`` variable in the example above, containing some of the JSON configuration file properties, and some properties of the QGIS layer:
+* You can use all the given parameters (action name, source data schema and table name, feature id, QGIS layer name)
+  to create the appropriate query for your action(s), by using the PostgreSQL ``IF THEN ELSIF ELSE`` clauses.
+  See the content of the ``parameters`` variable in the example above, containing some of the JSON configuration file
+  properties, and some properties of the QGIS layer:
 
   - the **action name** ``action_name``, for example ``buffer_500``. You should use a simple word with only letters, digits and ``_``,
   - QGIS **layer name** (as in QGIS legend): ``layer_name``, for example ``Points``,
@@ -242,13 +271,17 @@ Obviously, **you must adapt it to fit your needs**.
 
 * The ``IF ELSE`` is used to do a different query, built in the ``datasource`` variable, by checking the **action name**
 
-* If the return data contains a ``message`` field, such as shown in the example above, the text contained in this field will be **displayed in the map** in a message bubble.
+* If the return data contains a ``message`` field, such as shown in the example above, the text contained in this field
+  will be **displayed in the map** in a message bubble.
 
 * The **geometry** returned by the function **will be displayed on the map**.
 
-* You could use your function to **edit some data** in your database, before returning a GeoJSON. To do so, you need to replace the ``IMMUTABLE`` property par ``VOLATILE``. Please **use it with care** !
+* You could use your function to **edit some data** in your database, before returning a GeoJSON.
+  To do so, you need to replace the ``IMMUTABLE`` property par ``VOLATILE``. Please **use it with care** !
 
-Since Lizmap Web Client **triggers an event** ``actionResultReceived`` any time the user clicks on an action button, and data is returned (in the same time as the result geometry is drawn on the map), you could use your own Javascript code to add some logic after the result is shown.
+Since Lizmap Web Client **triggers an event** ``actionResultReceived`` any time the user clicks on an action button,
+and data is returned (in the same time as the result geometry is drawn on the map), you could use your own Javascript
+code to add some logic after the result is shown.
 
 .. seealso::
     Chapter :ref:`adding-javascript`

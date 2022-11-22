@@ -11,7 +11,7 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
   layer
   legend
   popup
-  action_popup
+  actions
   media
   expression
   print
