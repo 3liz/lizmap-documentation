@@ -46,7 +46,7 @@ retrieve_po_and_build:
     # -f because of
     # https://github.com/transifex/transifex-client/issues/233
     # and https://github.com/transifex/transifex-client/issues/22
-    - tx pull -f -l es,fi,fr,it,ja,pt,ru --branch $TX_BRANCH
+    - tx pull -f -l es,fi,fr,it,ja,pt,ru,cs,uk_UA --branch $TX_BRANCH
     - make clean html
   artifacts:
     paths:

@@ -10,7 +10,7 @@ Installing Lizmap Web Client on Linux Debian or Ubuntu
 Generic Server Configuration with Nginx server
 ==============================================
 
-This documentation provides an example for configuring a server with the Debian 9 distribution. We assume you have base system installed and updated.
+This documentation provides an example for configuring a server with the Debian 11 distribution. We assume you have base system installed and updated.
 
 .. warning:: This page does not describe how to secure your Nginx server. It's just for a demonstration.
 
@@ -30,17 +30,10 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 
 .. note:: It is also necessary configure the other software so that they are using this default encoding if this is not the case.
 
-Nginx Server Configuration
-==========================
-
-This documentation provides an example for configuring a server with the Debian 11 distribution. We assume you have base system installed and updated.
-
-.. warning:: This page does not describe how to secure your Nginx server. It's just for a demonstration.
-
 Installing necessary packages
 -----------------------------
 
-.. warning:: Lizmap web client is based on Jelix 1.8. You must install at least the **7.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 7/8 installation)
+.. warning:: Lizmap web client 3.6 is based on Jelix 1.8. You must install at least the **7.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 7/8 installation)
 
 .. code-block:: bash
 

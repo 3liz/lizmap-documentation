@@ -3,7 +3,7 @@
 LOCALES_DIR="$(dirname $0)"
 
 export LOCALES_BRANCH=$(git branch | grep \* | cut -d ' ' -f2)
-export AVAILABLE_LOCALES="es fi fr it wq ja pt ru"
+export AVAILABLE_LOCALES="es fi fr it wq ja pt ru cs uk_UA"
 
 usage()
 {
@@ -59,4 +59,4 @@ fi
 
 echo $ALL_LOCALES
 
-tx pull $FORCE --mode developer -l "$ALL_LOCALES" --branch $LOCALES_BRANCH
+tx pull $FORCE --mode default -l "$ALL_LOCALES" --branch $LOCALES_BRANCH
