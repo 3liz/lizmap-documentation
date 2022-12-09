@@ -33,33 +33,26 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 Nginx Server Configuration
 ==========================
 
-This documentation provides an example for configuring a server with the Debian 9 distribution. We assume you have base system installed and updated.
+This documentation provides an example for configuring a server with the Debian 11 distribution. We assume you have base system installed and updated.
 
 .. warning:: This page does not describe how to secure your Nginx server. It's just for a demonstration.
 
 Installing necessary packages
 -----------------------------
 
-.. warning:: Lizmap web client is based on Jelix 1.6. You must install at least the **5.6** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 5.6/7.x installation)
+.. warning:: Lizmap web client is based on Jelix 1.8. You must install at least the **7.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 7/8 installation)
 
 .. code-block:: bash
 
    sudo su # only necessary if you are not logged in as root
    apt update # update packages list
-   apt-get install curl openssl libssl1.1 nginx-full nginx nginx-common
+   apt install curl openssl libssl1.1 nginx-full nginx nginx-common
 
-On debian 10, install these packages:
-
-.. code-block:: bash
-
-   apt-get install php7.3-fpm php7.3-cli php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-pgsql php7.3-sqlite3 php7.3-xml php7.3-ldap
-
-On Ubuntu 18.04 or later, install these packages:
+On Debian 11 or Ubuntu 20.04 LTS, install these packages:
 
 .. code-block:: bash
 
-   apt-get install php7.3-fpm php7.3-cli php7.3-bz2 php7.3-curl php7.3-gd php7.3-intl php7.3-json php7.3-mbstring php7.3-pgsql php7.3-sqlite3 php7.3-xml php7.3-ldap
-
+   apt install php7.4-fpm php7.4-cli php7.4-bz2 php7.4-curl php7.4-gd php7.4-intl php7.4-json php7.4-mbstring php7.4-pgsql php7.4-sqlite3 php7.4-xml php7.4-ldap php7.4-redis
 
 Web configuration
 -----------------
@@ -97,7 +90,7 @@ Create a new file /etc/nginx/sites-available/lizmap.conf:
            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
            fastcgi_param PATH_INFO $path_info;
            fastcgi_param PATH_TRANSLATED $document_root$path_info;
-           fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+           fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
            fastcgi_param SERVER_NAME $http_host;
         }
     }
@@ -120,130 +113,6 @@ You must restart the Nginx server to validate the configuration.
 
    service nginx restart
 
-
-Apache Server configuration
-===========================
-
-This documentation provides an example for configuring a server with the Debian 10 distribution. We assume you have base system installed and updated.
-
-.. warning:: This page does not describe how to secure your Apache server. It's just for a demonstration.
-
-Installing necessary packages
------------------------------
-
-
-Firstly update the packages list, then install these packages:
-
-.. code-block:: bash
-
-   sudo su # only necessary if you are not logged in as root
-   apt update
-   apt-get install xauth htop curl apache2 libapache2-mod-fcgid
-   apt-get install libapache2-mod-php7.3 php7.3-cgi php7.3-gd php7.3-sqlite php7.3-curl php7.3-xmlrpc php7.3-xml python-simplejson software-properties-common
-
-PHP 7.3 configuration
----------------------
-
-In this example, we use Apache mpm-worker. So we must manually configure the activation of PHP 7.3.
-
-.. code-block:: bash
-
-   # Create the configuration file
-   nano /etc/apache2/conf-available/php.conf
-   # Copy the following text in it
-   <Directory /usr/share>
-      AddHandler fcgid-script .php
-      FCGIWrapper /usr/lib/cgi-bin/php7.3 .php
-      Options ExecCGI FollowSymlinks Indexes
-   </Directory>
-
-   <Files ~ (\.php)>
-      AddHandler fcgid-script .php
-      FCGIWrapper /usr/lib/cgi-bin/php7.3 .php
-      Options +ExecCGI
-      allow from all
-   </Files>
-
-Enable the configuration with the following command line:
-
-.. code-block:: bash
-
-   a2enconf php
-
-Web configuration
------------------
-
-mpm-worker configuration
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-We modify the Apache configuration file to adapt the options to mpm_worker server configuration.
-
-.. code-block:: bash
-
-   nano /etc/apache2/apache2.conf
-   <IfModule mpm_worker_module>
-   StartServers       4
-   MinSpareThreads    25
-   MaxSpareThreads    100
-   ThreadLimit          64
-   ThreadsPerChild      25
-   MaxClients        150
-   MaxRequestsPerChild   0
-   </IfModule>
-
-mod_fcgid configuration
-^^^^^^^^^^^^^^^^^^^^^^^
-
-QGIS Server runs with the FastCGI protocole (a.k.a. fcgi). We must therefore configure the Apache mod_fcgid to suit to the server capabilities.
-
-.. code-block:: bash
-
-  # Open the mod_fcgid configuration file
-   nano /etc/apache2/mods-enabled/fcgid.conf
-   # Paste the following content and adapt it
-   <IfModule mod_fcgid.c>
-      AddHandler    fcgid-script .fcgi
-      FcgidConnectTimeout 300
-      FcgidIOTimeout 300
-      FcgidMaxProcessesPerClass 50
-      FcgidMinProcessesPerClass 20
-      FcgidMaxRequestsPerProcess 500
-      IdleTimeout   300
-      BusyTimeout   300
-   </IfModule>
-
-Setting the compression
-^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: bash
-
-   nano /etc/apache2/conf-available/mod_deflate.conf
-   # Add the bellow text in the file
-   <Location />
-      # Insert filter
-      SetOutputFilter DEFLATE
-      # Netscape 4.x encounters some problems ...
-      BrowserMatch ^Mozilla/4 gzip-only-text/html
-      # Netscape 4.06-4.08 encounter even more problems
-      BrowserMatch ^Mozilla/4\.0[678] no-gzip
-      # MSIE pretends it is Netscape, but all is well
-      BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
-      # Do not compress images
-      SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
-      # Ensure that proxy servers deliver the right content
-      Header append Vary User-Agent env=!dont-vary
-   </Location>
-
-Restart Apache
---------------
-
-You must restart the Apache server to validate the configuration.
-
-.. code-block:: bash
-
-   service apache2 restart
-   # or
-   systemctl restart apache2
 
 Enable geolocation
 ==================
@@ -279,27 +148,28 @@ PostgreSQL and PostGIS can be very useful to manage spatial data centralized man
 Install
 -------
 
+
+On Debian 11, you'll find PostgreSQL 13.
+
+First install packages:
+
 .. code-block:: bash
 
-   # Install packages
-   apt-get install postgresql postgresql-contrib postgis pgtune
+   apt install postgresql postgresql-contrib postgis pgtune
 
-   # A cluster is created in order to specify the storage directory
-   mkdir /home/data/postgresql
+
+You may have to recreate the cluster on a fresh install, in order to set the locale.
+You can jump this step if the locale is correctly set, or if you already have
+databases. Careful: these instructions destroy any existing databases!
+
+.. code-block:: bash
+
    service postgresql stop
-   pg_dropcluster --stop 9.6 main
-   chown postgres:postgres /home/data/postgresql
-   pg_createcluster 9.6 main -d /home/data/postgresql --locale fr_FR.UTF8 -p 5678 --start
+   pg_dropcluster --stop 13 main
+   pg_createcluster 13 main --locale fr_FR.UTF8 -p 5432 --start
 
-   # Creating a "superuser" user
-   su - postgres
-   createuser myuser --superuser
-   # Modifying passwords
-   psql
-   ALTER USER postgres WITH ENCRYPTED PASSWORD '************';
-   ALTER USER myuser WITH ENCRYPTED PASSWORD '************';
-   \q
-   exit
+Now You can create a user and a database for Lizmap, into Postgresql.
+
 
 Adapting the PostgreSQL configuration
 -------------------------------------
@@ -312,10 +182,10 @@ https://pgtune.leopard.in.ua/
 .. code-block:: bash
 
    # PostgreSQL Tuning with pgtune
-   pgtune -i /etc/postgresql/9.6/main/postgresql.conf -o /etc/postgresql/9.6/main/postgresql.conf.pgtune --type Web
-   cp /etc/postgresql/9.6/main/postgresql.conf /etc/postgresql/9.6/main/postgresql.conf.backup
-   cp /etc/postgresql/9.6/main/postgresql.conf.pgtune /etc/postgresql/9.6/main/postgresql.conf
-   nano /etc/postgresql/9.6/main/postgresql.conf
+   pgtune -i /etc/postgresql/13/main/postgresql.conf -o /etc/postgresql/13/main/postgresql.conf.pgtune --type Web
+   cp /etc/postgresql/13/main/postgresql.conf /etc/postgresql/13/main/postgresql.conf.backup
+   cp /etc/postgresql/13/main/postgresql.conf.pgtune /etc/postgresql/13/main/postgresql.conf
+   nano /etc/postgresql/13/main/postgresql.conf
    # Restart to check any problems
    service postgresql restart
    # If error messages, increase the linux kernel configuration variables
@@ -330,63 +200,6 @@ https://pgtune.leopard.in.ua/
 For installing Lizmap tables into the PostgreSQL database (instead of SqLite by default), you can continue until the next section
 below when you need to edit the file :file:`lizmap/var/config/profiles.ini.php`.
 
-FTP Server: pure-ftpd
-=====================
-
-.. note:: This section is optional, you can setup your own way of transferring data from QGIS GIS technicians to the Lizmap server.
-
-Install
--------
-
-.. code-block:: bash
-
-   apt-get install pure-ftpd pure-ftpd-common
-
-Configure
----------
-
-.. code-block:: bash
-
-   # Creating an empty shell for users
-   ln /bin/false /bin/ftponly
-   # Configuring FTP server
-   echo "/bin/ftponly" >> /etc/shells
-   # Each user is locked in his home
-   echo "yes" > /etc/pure-ftpd/conf/ChrootEveryone
-   # Allow to use secure FTP over SSL
-   echo "1" > /etc/pure-ftpd/conf/TLS
-   # Configure the properties of directories and files created by users
-   echo "133 022" > /etc/pure-ftpd/conf/Umask
-   # The port range for passive mode (opening outwards)
-   echo "5400 5600" > /etc/pure-ftpd/conf/PassivePortRange
-   # Creating an SSL certificate for FTP
-   openssl req -x509 -nodes -newkey rsa:1024 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
-   chmod 400 /etc/ssl/private/pure-ftpd.pem
-   # Restart FTP server
-   service pure-ftpd restart
-
-Creating a user account
------------------------
-
-.. code-block:: bash
-
-   # Creating a user account
-   MYUSER=demo
-   useradd -g client -d /home/data/ftp/$MYUSER -s /bin/ftponly -m $MYUSER -k /home/data/ftp/template/
-   passwd $MYUSER
-   # Fix the user's FTP root
-   chmod a-w /home/data/ftp/$MYUSER
-   # Creating empty directories that will be the future Lizmap Web Client directories
-   mkdir /home/data/ftp/$MYUSER/qgis/rep1 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep1
-   mkdir /home/data/ftp/$MYUSER/qgis/rep2 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep2
-   mkdir /home/data/ftp/$MYUSER/qgis/rep3 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep3
-   mkdir /home/data/ftp/$MYUSER/qgis/rep4 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep4
-   mkdir /home/data/ftp/$MYUSER/qgis/rep5 && chown $MYUSER:client /home/data/ftp/$MYUSER/qgis/rep5
-   # Create a directory to store the cached server
-   mkdir /home/data/cache/$MYUSER
-   chmod 700 /home/data/cache/$MYUSER -R
-   chown www-data:www-data /home/data/cache/$MYUSER -R
-
 Installing sources of Lizmap Web Client
 =======================================
 
@@ -395,24 +208,29 @@ Retrieve the latest available stable version from our `Github release page <http
 .. warning::
     Do not use the automatic ZIP file created by GitHub on the website. Only use ZIP attached to a release.
 
+We first set some variable to ease instructions. Let's set the version and
+the location where Lizmap will be installed. Adjuste these values to your
+requirements.
+
 .. code-block:: bash
 
-   # Options
-   # Check the latest version available, maybe it's not 3.5.1 anymore
-   # https://github.com/3liz/lizmap-web-client/releases
-   VERSION=3.5.1
-   # chose location where download your zip (e.g. /var/www or your home)
+   VERSION=3.6.0
    LOCATION=/var/www
-   # Archive recovery with wget
+
+Then you can install the zip file:
+
+.. code-block:: bash
+
    cd $LOCATION
    wget https://github.com/3liz/lizmap-web-client/releases/download/$VERSION/lizmap-web-client-$VERSION.zip
    # Unzip archive
-   unzip $VERSION.zip
+   unzip lizmap-web-client-$VERSION.zip
 
    # virtual link for http://localhost/lizmap/
    ln -s $LOCATION/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lizmap
    # Remove archive
-   rm $VERSION.zip
+   rm lizmap-web-client-$VERSION.zip
+
 
 Configure Lizmap with the database support
 ==========================================
@@ -437,8 +255,8 @@ to edit PostgreSQL layer. You must **only** check that the Lizmap server can acc
 
 .. code-block:: bash
 
-   sudo apt-get install php7.3-pgsql
-   sudo service nginx restart
+   apt install php7.4-pgsql
+   service php7.4-fpm restart
 
 For Lizmap logs, users and groups, it can be either stored in SqLite or PostgreSQL. To store these information in
 PostgreSQL, follow these instructions.
@@ -556,8 +374,6 @@ Set rights for Nginx/Apache, so PHP scripts could write some temporary files or 
 
    cd /var/www/lizmap-web-client-$VERSION/
    lizmap/install/set_rights.sh www-data www-data
-   chown :www-data lizmap/install/qgis/edition/ -R
-   chmod 775 lizmap/install/qgis/edition/ -R
 
 
 Setup configuration
@@ -693,6 +509,14 @@ If you want to install a new version of the module, execute:
 Read the documentation of the module to know if there are additional steps to
 configure it.
 
+You will have at least to launch the configurator of the module with this command:
+
+.. code-block:: bash
+
+    php lizmap/install/configurator.php name_of_the_module
+    # example:
+    php lizmap/install/configurator.php pgmetadata
+
 To finish the installation, run again the installer of Lizmap:
 
 .. code-block:: bash
@@ -726,16 +550,18 @@ To install a module without Composer, retrieve the zip file of the module.
     -rw-rw-r-- 1 etienne etienne  106 nov.   4 10:39 urls.xml
     drwxrwxr-x 2 etienne etienne 4,0K nov.  17 12:38 www
 
-* Edit the :file:`lizmap/var/config/localconfig.ini.php`, in the ``modules`` section, add a new line for the
-  given module (check the documentation of the module to setup the correct values):
-
-.. code-block:: ini
-
-    [modules]
-    pgmetadata.access=2
 
 * Read the documentation of the module to know if there are additional steps to
   configure it.
+
+You will have at least to launch the configurator of the module with this command:
+
+.. code-block:: bash
+
+    php lizmap/install/configurator.php name_of_the_module
+    # example:
+    php lizmap/install/configurator.php pgmetadata
+
 
 * Run the installation :
 

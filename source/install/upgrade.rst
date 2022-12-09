@@ -30,8 +30,8 @@ script of Lizmap 3.5.
 
 If you want to backup by hand, you should backup at least these files:
 
-- var/db/jauth.db
-- var/db/logs.db
+- var/db/jauth.db (if it exists)
+- var/db/logs.db (if it exists)
 - var/config/installer.ini.php
 - var/config/liveConfig.ini.php
 - var/config/localframework.ini.php (if it exists)
