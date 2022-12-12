@@ -108,3 +108,30 @@ Lizmap Web Client will then handle the relation as a N:M relation:
 
 * The pivot table will be displayed under each parent attribute table and show only the corresponding children.
 * The filter feature based on the attribute layers will trigger the cascading filter of the pivot and the other parent. For example, if the user uses the filter to show only one tramway line, Lizmap will also only show the corresponding stops in the map and in the Stops attribute tables
+
+Tips
+----
+
+If one of the field contains a media path, such as `media/a_folder/my_image.jpg`,
+Lizmap will display a link allowing the user to open the media file (image, video, PDF, etc.)
+in a new browser tab.
+
+If the media points to an image (a JPG or PNG file), you could add new column showing
+a small image preview of the source image by adding a new **virtual field** in your vector layer,
+with this **expression**. In the example below, the field containing the media path is **media_path**
+and the virtual field is named **vignette**:
+
+
+.. code-block:: sql
+
+    concat(
+       '<img data-src="',
+       "media_path" ,
+       '" src="/themes/default/css/img/logo_footer.png" style="height:60px;"
+       onload="this.src = `${lizUrls.media}?repository=${lizUrls.params.repository}&project=${lizUrls.params.project}&path=${this.getAttribute(\'data-src\')}`;">'
+    )
+
+The result will look like:
+
+..  image:: /images/interface-attribute-table-show-image-preview.jpg
+   :align: center
