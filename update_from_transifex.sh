@@ -59,4 +59,4 @@ fi
 
 echo $ALL_LOCALES
 
-tx pull $FORCE --mode developer -l "$ALL_LOCALES" --branch $LOCALES_BRANCH
+tx pull $FORCE --mode default -l "$ALL_LOCALES" --branch $LOCALES_BRANCH

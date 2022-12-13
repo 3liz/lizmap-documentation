@@ -35,11 +35,11 @@ We are using the tool [Sphinx](https://sphinx-doc.org) and its
 internationalization mechanism [sphinx-intl](https://sphinx-doc.org/intl.html) to
 generate the HTML content in all languages.
 
-So install these tools. On Linux / macOS, install Python, Pip and then:
+So install these tools. On Linux / macOS, install Python3, Pip and then:
 
 ```bash
-# In a venv
-pip install -r requirements.txt
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
 ```
 
 Then run `make gettext && make html`. It will build the docs in all available 
