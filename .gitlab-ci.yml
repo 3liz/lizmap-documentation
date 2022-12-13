@@ -93,6 +93,6 @@ deploy_production:
     - rsync -e "$DEPLOYDOC_PROD_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_PROD_HOST:$DEPLOYDOC_PROD_PATH/$VERSION
   environment:
     name: production
-#  when: manual
+  when: manual
   tags:
     - infrav2
