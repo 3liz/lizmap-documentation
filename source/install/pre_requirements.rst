@@ -18,7 +18,7 @@ QGIS Server
 
     The reason is QGIS Server version X might not be able to a QGIS project made with a QGIS Desktop version Y.
 
-Follow the QGIS Documentation how to install QGIS Server : https://docs.qgis.org/latest/en/docs/server_manual/
+Follow the `QGIS Server documentation on how to install QGIS Server <https://docs.qgis.org/latest/en/docs/server_manual/>`_.
 
 Using a webserver (Apache or Nginx), you must install QGIS Server. With Nginx, the preferred way is to use
 ``spawn-fcgi``. Do **not** use the ``fcgiwrap``, this solution is not efficient.
@@ -49,12 +49,16 @@ Keep this URL, we will use it later in the Lizmap admin panel.
 QGIS Server plugins
 -------------------
 
-Some plugins can be added to QGIS Server. This will enable some features in Lizmap. It's not compulsory but
-in some situations, it's better.
+Some plugins can be added to QGIS Server. Please check the `QGIS Server documentation <https://docs.qgis.org/latest/en/docs/server_manual/plugins.html>`_
+about plugins on the server side.
+
+.. warning::
+    The **Lizmap server** plugin is required.
+
+Plugins listed below will enable some features in Lizmap Web Client.
 
 Either you should setup the ``QGIS_PLUGINPATH`` environment variable during the installation of QGIS Server
-or use the default one provided by QGIS.
-https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-variables
+or use the `default one provided by QGIS <https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-variables>`_.
 
 .. tip::
     To manage QGIS Server plugins, we encourage you to use **qgis-plugin-manager**, a CLI tool to install and
@@ -75,7 +79,7 @@ https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-varia
 
     * Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server** called **Lizmap server**.
     * https://github.com/3liz/qgis-lizmap-server-plugin
-    * The plugin is **highly** recommended, a few features won't work as expected if the plugin is not installed or not upgraded.
+    * The plugin is **required**.
     * **Important**, read below for more information the Lizmap QGIS Server plugin. (:ref:`lizmap-server-plugin`)
 
 * WfsOutputExtension
@@ -94,7 +98,7 @@ https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-varia
 Lizmap QGIS Server plugin
 _________________________
 
-Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web Client :
+The Lizmap QGIS Server plugin **is required** and will add some features on Lizmap Web Client :
 
         * retrieve information from QGIS Server.
 
@@ -115,8 +119,7 @@ Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web Client
         * enable ``@lizmap_user`` and ``lizmap_user_groups`` variables in QGIS projects
 
     * https://github.com/3liz/qgis-lizmap-server-plugin
-    * The plugin is not required, but a few features won't work as expected if the plugin is not installed or not upgraded
-    * The name of the plugin is **Lizmap server**. Do not install the **Lizmap** plugin which is the **desktop** Python plugin.
+    * The name of the plugin is ``Lizmap server``. Do not install the ``Lizmap`` plugin which is the **desktop** Python plugin.
 
 Installation
 ^^^^^^^^^^^^
@@ -124,16 +127,18 @@ Installation
 QGIS Server side
 ****************
 
-The Lizmap server plugin must be installed in the correct folder for QGIS Server. The environment variable must be set
-in QGIS Server. The plugin name is **Lizmap server**.
+Please check the `QGIS Server documentation <https://docs.qgis.org/latest/en/docs/server_manual/plugins.html>`_ about plugins
+on the server side.
+
+The Lizmap server plugin, called ``Lizmap server``, **is required** in the correct folder for QGIS Server.
 
 .. warning::
-    You must install the "**Lizmap server**" plugin. The "**Lizmap**" plugin is designed only for QGIS desktop. Do not
+    You must install the ``Lizmap server`` plugin. The ``Lizmap`` plugin is designed only for QGIS desktop. Do not
     keep both on your server.
 
 .. warning::
-    For **security** reason, to enable all features on the QGIS server side, you must enable the environment variable
-    ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`` on QGIS server.
+    For **security** reason, to enable the API on the QGIS server side, you must enable the environment variable
+    ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS`` with the value set to ``True`` on QGIS server.
 
     You **must** be ensured that this API ``http://your.qgis.server.url/lizmap/server.json`` is protected on
     your webserver. The **best** is to restrict the access to QGIS server ``http://your.qgis.server.url`` on a
@@ -145,9 +150,6 @@ in QGIS Server. The plugin name is **Lizmap server**.
 
 Administration panel
 ********************
-
-You **must** have the table called "Server information" working correctly in your administration panel before trying a QGIS
-project.
 
 If your are using QGIS Server with **FCGI**, the Lizmap API URL **must** be empty.
 
