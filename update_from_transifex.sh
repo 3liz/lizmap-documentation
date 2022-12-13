@@ -2,7 +2,7 @@
 
 LOCALES_DIR="$(dirname $0)"
 
-export LOCALES_BRANCH=$(git branch | grep \* | cut -d ' ' -f2)
+export LOCALES_BRANCH=$(git branch | grep \* | cut -d ' ' -f2 | sed -r 's/_/-/g')
 export AVAILABLE_LOCALES="es fi fr it wq ja pt ru cs uk_UA"
 
 usage()
@@ -57,6 +57,6 @@ if [ "$ALL_LOCALES" == "" ]; then
   ALL_LOCALES=$(echo "$AVAILABLE_LOCALES" | sed -r 's/ /,/g')
 fi
 
-echo $ALL_LOCALES
+echo $ALL_LOCALES $LOCALES_BRANCH
 
 tx pull $FORCE --mode default -l "$ALL_LOCALES" --branch $LOCALES_BRANCH
