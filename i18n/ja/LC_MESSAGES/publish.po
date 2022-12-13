@@ -5,16 +5,16 @@
 # 
 # Translators:
 # Jin Igarashi <wushilan0623@gmail.com>, 2021
-# 山本　竜三 <ryu@yamakun.net>, 2022
+# yamamoto ryuzo <ryu@yamakun.net>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Lizmap 3.6\n"
+"Project-Id-Version: Lizmap 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-30 10:38+0200\n"
+"POT-Creation-Date: 2022-12-13 10:28+0000\n"
 "PO-Revision-Date: 2018-09-07 13:32+0000\n"
-"Last-Translator: 山本　竜三 <ryu@yamakun.net>, 2022\n"
+"Last-Translator: yamamoto ryuzo <ryu@yamakun.net>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/3liz-1/teams/62012/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,11 +22,11 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/publish/configuration/action_popup.rst:4
-msgid "Action in a popup"
-msgstr "地物情報でのアクション‎"
+#: ../../source/publish/configuration/actions.rst:4
+msgid "Actions"
+msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:7
+#: ../../source/publish/configuration/actions.rst:7
 #: ../../source/publish/configuration/layer.rst:7
 #: ../../source/publish/configuration/legend.rst:7
 #: ../../source/publish/configuration/media.rst:7
@@ -40,7 +40,7 @@ msgstr "地物情報でのアクション‎"
 #: ../../source/publish/customization/javascript.rst:10
 #: ../../source/publish/customization/themes.rst:7
 #: ../../source/publish/lizmap_plugin/atlas.rst:7
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:7
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:9
 #: ../../source/publish/lizmap_plugin/basemap.rst:7
 #: ../../source/publish/lizmap_plugin/dataviz.rst:7
 #: ../../source/publish/lizmap_plugin/edition.rst:9
@@ -58,19 +58,14 @@ msgstr "地物情報でのアクション‎"
 msgid "Contents"
 msgstr "‎内容‎"
 
-#: ../../source/publish/configuration/action_popup.rst:9
-#: ../../source/publish/configuration/legend.rst:20
-msgid "This is a feature in |lizmap_3_4|."
-msgstr "|lizmap_3_4|の機能です。‎"
-
-#: ../../source/publish/configuration/action_popup.rst:12
+#: ../../source/publish/configuration/actions.rst:10
 #: ../../source/publish/configuration/media.rst:10
 #: ../../source/publish/configuration/media.rst:140
 #: ../../source/publish/customization/iframe.rst:8
 #: ../../source/publish/customization/javascript.rst:13
 #: ../../source/publish/customization/themes.rst:10
 #: ../../source/publish/lizmap_plugin/atlas.rst:10
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:10
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:12
 #: ../../source/publish/lizmap_plugin/basemap.rst:10
 #: ../../source/publish/lizmap_plugin/dataviz.rst:10
 #: ../../source/publish/lizmap_plugin/edition.rst:12
@@ -85,16 +80,15 @@ msgstr "|lizmap_3_4|の機能です。‎"
 msgid "Principle"
 msgstr "定義"
 
-#: ../../source/publish/configuration/action_popup.rst:14
+#: ../../source/publish/configuration/actions.rst:12
 msgid ""
-"This module allows to add one or several **action buttons** in the **Lizmap "
-"popup** displayed for a **PostgreSQL** object, which will **trigger a "
-"query** in the database and return a **geometry** to display on the map."
+"This module allows to add one or several **action buttons** in web "
+"interface.the **Lizmap popup** displayed for a **PostgreSQL** object, which "
+"will **trigger a query** in the database and return a **geometry** to "
+"display on the map."
 msgstr ""
-"‎このモジュールでは、 **PostgreSQL** オブジェクトに対して表示される **Lizmap地物情報** に1つまたは複数の "
-"**アクションボタン** を追加することができ、データベース内で **クエリを起動** し、 マップ上に表示する ** ジオメトリ**を返します。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:18
+#: ../../source/publish/configuration/actions.rst:16
 msgid ""
 "It reads a **JSON configuration file** which must be placed **aside the QGIS"
 " project** in the same directory. This file lists the **PostgreSQL actions**"
@@ -103,12 +97,71 @@ msgstr ""
 "‎**JSON設定ファイル** は、 **QGISプロジェクトと同じディレクトリ** に配置する必要があります。このファイルには、1 つまたは複数の "
 "QGIS PostgreSQL ベクターレイヤーの **地物情報** に追加する **PostgreSQLアクション** がリストされています。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:26
+#: ../../source/publish/configuration/actions.rst:24
+msgid "Demonstration"
+msgstr ""
+
+#: ../../source/publish/configuration/actions.rst:26
+msgid "You can check the demo about fire hydrants on https://demo.lizmap.com"
+msgstr ""
+
+#: ../../source/publish/configuration/actions.rst:28
+msgid "Click on a fire hydrant and"
+msgstr ""
+
+#: ../../source/publish/configuration/actions.rst:30
+msgid "Either select buildings which are within 150m"
+msgstr ""
+
+#: ../../source/publish/configuration/actions.rst:31
+msgid "Or find the closest fire station"
+msgstr ""
+
+#: ../../source/publish/configuration/actions.rst:34
+#: ../../source/publish/configuration/spatial_search.rst:24
+#: ../../source/publish/configuration/spatial_search.rst:149
+#: ../../source/publish/customization/javascript.rst:24
+#: ../../source/publish/customization/template.rst:11
+#: ../../source/publish/customization/themes.rst:30
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:24
+#: ../../source/publish/lizmap_plugin/dataviz.rst:29
+#: ../../source/publish/lizmap_plugin/edition.rst:36
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:45
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:31
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:25
+#: ../../source/publish/lizmap_plugin/time_manager.rst:21
+#: ../../source/publish/lizmap_plugin/tooltip.rst:15
+msgid "Prerequisites"
+msgstr "‎前提条件‎"
+
+#: ../../source/publish/configuration/actions.rst:36
+msgid "Some knowledge in SQL and JSON"
+msgstr ""
+
+#: ../../source/publish/configuration/actions.rst:37
+msgid ""
+"To use the ``select`` callback, your layer must have the **selection** "
+"enabled for the layer. See :ref:`attribute_table`"
+msgstr ""
+
+#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
+#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
+#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
+#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
+#: ../../source/shared/wfs_layer.rst:1
+msgid ""
+"The layer must be published as WFS (see :ref:`publish_layer_wfs`) and the "
+"primary key must be published as well in the :guilabel:`Layer properties`."
+msgstr ""
+"‎レイヤーは WFS として公開する必要があり ( :ref:`publish_layer_wfs` を参照)、主キーは "
+"、同様に公開する必要があります。 :guilabel:` レイヤプロパティ ` で同様に公開する必要があります。‎"
+
+#: ../../source/publish/configuration/actions.rst:41
 #: ../../source/publish/customization/javascript.rst:30
 #: ../../source/publish/customization/template.rst:16
 #: ../../source/publish/customization/themes.rst:36
 #: ../../source/publish/lizmap_plugin/atlas.rst:23
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:22
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:29
 #: ../../source/publish/lizmap_plugin/basemap.rst:22
 #: ../../source/publish/lizmap_plugin/dataviz.rst:41
 #: ../../source/publish/lizmap_plugin/edition.rst:56
@@ -123,24 +176,22 @@ msgstr ""
 msgid "Configuring the tool"
 msgstr "‎ツールの設定"
 
-#: ../../source/publish/configuration/action_popup.rst:28
+#: ../../source/publish/configuration/actions.rst:43
 msgid ""
 "Each action is **characterized** by a ``layer id``, a ``name``, a ``title``,"
-" an ``icon``, some optional ``options``, ``style`` and ``callbacks``. A new "
-"``confirm`` property can be used since |lizmap_3_5|"
+" an ``icon``, some optional ``options``, ``style``, ``callbacks`` and "
+"``confirm`` property can be used."
 msgstr ""
-"‎各アクション ``layer "
-"id``、``name``、``title``、``icon``、オプションの``options``、``style``、``callbacks``によって表されます。|lizmap_3_5|以降、新しい``confirm``プロパティを使用できます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:29
+#: ../../source/publish/configuration/actions.rst:45
 msgid "A layer can have **one or several actions**"
 msgstr "‎レイヤーには **1つまたは複数のアクション** を設定できます"
 
-#: ../../source/publish/configuration/action_popup.rst:30
+#: ../../source/publish/configuration/actions.rst:46
 msgid "You can have **one or several layers** with their own actions"
 msgstr "独自のアクションで **1つまたは複数のレイヤー** を持つことができます‎"
 
-#: ../../source/publish/configuration/action_popup.rst:32
+#: ../../source/publish/configuration/actions.rst:48
 msgid ""
 "Example of this JSON configuration file, name :file:`myproject.qgs.action` "
 "if the QGIS project file is named :file:`myproject.qgs`. In this project, "
@@ -153,7 +204,7 @@ msgstr ""
 "ID``points_a7e8943b_7138_4788_a775_f94cbd0ad8b6``を持つ ``ポイント`` "
 "と呼ばれるベクトルレイヤーがあります (QGIS レイヤーの内部 ID を ``@layer_id`` という表現で取得できます)‎"
 
-#: ../../source/publish/configuration/action_popup.rst:69
+#: ../../source/publish/configuration/actions.rst:85
 msgid ""
 "The **JSON configuration** file lists the **QGIS layers** for which you want"
 " to declare actions. Each layer is defined by its **QGIS layer ID**, for "
@@ -163,49 +214,45 @@ msgstr ""
 "‎**JSON設定** ファイルには、アクションを宣言する **QGISレイヤー** がリストされています。各レイヤーは **QGISレイヤーID** "
 "、例えばここで``points_a7e8943b_7138_4788_a775_f94cbd0ad8b6``、および各IDに対して、許可するアクションを記述するオブジェクトのリストによって定義されます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:73
+#: ../../source/publish/configuration/actions.rst:89
 msgid "Each **action** is an object defined by:"
 msgstr "‎各 **アクション** は、次の式で定義されたオブジェクトです。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:75
+#: ../../source/publish/configuration/actions.rst:91
 msgid "a ``name`` which is the action identifier."
 msgstr "‎ ``name`` はアクション識別子です。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:76
+#: ../../source/publish/configuration/actions.rst:92
 msgid "a ``title`` which is used as a label in Lizmap interface"
 msgstr "``title``‎は‎Lizmap インターフェイスのラベルとして使用されます "
 
-#: ../../source/publish/configuration/action_popup.rst:77
+#: ../../source/publish/configuration/actions.rst:93
 msgid ""
-"an ``icon`` which is displayed on the action button ( See "
+"an ``icon`` which is displayed on the action button (See "
 "https://getbootstrap.com/2.3.2/base-css.html#icons )"
 msgstr ""
-"‎``icon``はアクション ボタンに表示されます ( https://getbootstrap.com/2.3.2/base-"
-"css.html#icons 参照 )‎"
 
-#: ../../source/publish/configuration/action_popup.rst:78
+#: ../../source/publish/configuration/actions.rst:94
 msgid ""
-"an optional ``confirm`` property, since |lizmap_3_5|, containing some text. "
-"If set, a confirmation dialog will be shown to the user to ask if the action"
-" should really be launched or not. Use it if the action can modify some data"
-" in your database."
+"an optional ``confirm`` property, containing some text. If set, a "
+"confirmation dialog will be shown to the user to ask if the action should "
+"really be launched or not. Use it if the action can modify some data in your"
+" database."
 msgstr ""
-"‎|lizmap_3_5|より，オプションの ``confirm`` "
-"プロパティはテキストみます。設定されている場合、アクションを実際に起動すべきかどうかを尋ねる確認ダイアログがユーザーに表示されます。アクションによってデータベース内の一部のデータが変更される場合に使用します。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:79
+#: ../../source/publish/configuration/actions.rst:96
 msgid ""
 "an ``options`` object, giving some additional parameters for this action. "
 "You can add any needed parameter."
 msgstr "‎``options`` オブジェクトで、このアクションに追加のパラメータを設定します。必要なパラメータを追加できます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:80
+#: ../../source/publish/configuration/actions.rst:97
 msgid ""
 "a ``style`` object allowing to configure the returned geometry style. It "
 "follows OpenLayers styling attributes."
 msgstr " ``style`` オブジェクトによりgeometryスタイルを設定できます。これは、OpenLayers スタイル属性に準じます‎"
 
-#: ../../source/publish/configuration/action_popup.rst:81
+#: ../../source/publish/configuration/actions.rst:98
 msgid ""
 "a ``callbacks`` object allows to trigger some actions after the generated "
 "geometry is returned. They are defined by a ``method`` name, which can at "
@@ -214,11 +261,11 @@ msgstr ""
 "‎``callbacks`` オブジェクトは、生成されたgeometryが返された後に、いくつかのアクションを起動することができます。これらは "
 "``method`` の名前で定義されています。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:83
+#: ../../source/publish/configuration/actions.rst:101
 msgid "``zoom``: zoom to the returned geometry"
 msgstr "‎``ズーム``:geometryにズームします。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:84
+#: ../../source/publish/configuration/actions.rst:102
 msgid ""
 "``select``: select the features from a given layer intersecting the returned"
 " geometry. The target layer **QGIS internal ID** must be added in the "
@@ -229,7 +276,7 @@ msgstr ""
 "は``layerId``プロパティに追加する必要があります。例では、建物を含むレイヤーのフィーチャ、ID "
 "``bati_1a016229_287a_4b5e_a4f7_a2080333f440`` が選択されます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:85
+#: ../../source/publish/configuration/actions.rst:105
 msgid ""
 "``redraw``: redraw (refresh) a given layer in the map. The target layer QGIS"
 " ID must be added in the ``layerId`` property."
@@ -237,7 +284,7 @@ msgstr ""
 "‎``再描画``:マップ内の特定のレイヤーを再描画(更新)します。ターゲットレイヤーQGIS "
 "IDは``layerId``プロパティに追加する必要があります。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:87
+#: ../../source/publish/configuration/actions.rst:107
 msgid ""
 "Lizmap detects the presence of this configuration file, and adds the needed "
 "logic when the map loads. When the users clicks on an object of one of this "
@@ -250,7 +297,7 @@ msgstr ""
 "‎**ツールバーは各レイヤーアクション** ごとに1つのボタンを表示します。‎アクションボタンをホバーすると、アクション ``title`` "
 "が表示されます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:90
+#: ../../source/publish/configuration/actions.rst:112
 msgid ""
 "Each button **triggers the corresponding action**, if it is not yet "
 "**active** (else it deactivates and erases the geometry):"
@@ -258,33 +305,31 @@ msgstr ""
 "‎まだ **有効** でない場合各ボタンは、 **対応するアクションをトリガ** "
 "します(それ以外の場合は、geometryを非有効化して消去します)。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:92
+#: ../../source/publish/configuration/actions.rst:114
 msgid "Lizmap backend checks if the action is well configured,"
 msgstr "‎Lizmapはバックエンドで、アクションが適切に設定されているかどうかをチェックします。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:93
+#: ../../source/publish/configuration/actions.rst:115
 msgid ""
 "creates the **PostgreSQL query** and execute it in the layer PostgreSQL "
 "database. (See example below)"
 msgstr "‎**PostgreSQL クエリ** を作成し、それを PostgreSQL データベースのレイヤーで実行します。(下記の例を参照)‎"
 
-#: ../../source/publish/configuration/action_popup.rst:94
+#: ../../source/publish/configuration/actions.rst:116
 msgid "This query returns a **GeoJSON** which is then displayed on the map."
 msgstr "‎このクエリは **GeoJSON** を返し、マップに表示されます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:95
+#: ../../source/publish/configuration/actions.rst:117
 msgid "If some **callbacks** have been configured, they are launched"
 msgstr "**callbacks** が設定されている場合は、起動されます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:96
+#: ../../source/publish/configuration/actions.rst:118
 msgid ""
-"Since |lizmap_3_5|, A Lizmap **event** ``actionResultReceived`` is emitted "
-"with the returned data and action properties."
+"A Lizmap **event** ``actionResultReceived`` is emitted with the returned "
+"data and action properties."
 msgstr ""
-"‎|lizmap_3_5|以降、返されるデータとアクションのプロパティを使用して、 Lizmap **event**  "
-"``actionResultReceived`` が生成されます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:98
+#: ../../source/publish/configuration/actions.rst:120
 msgid ""
 "The **created PostgreSQL query** is built up by Lizmap web client and uses "
 "the PostgreSQL function ``lizmap_get_data(json)`` which **must be created "
@@ -297,7 +342,7 @@ msgstr ""
 " を使用しています。この関数は、PostgreSQL **クエリ文字列** を **GeoJSON出力** "
 "に変換するより汎用関数``query_to_geojson(text)``を使用します。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:104
+#: ../../source/publish/configuration/actions.rst:126
 msgid ""
 "Here is **an example** below of the query executed in the PostgreSQL "
 "database by Lizmap Web Client internally, for the example configuration "
@@ -309,7 +354,7 @@ msgstr ""
 "アクションをクリックしたときに :guilabel:`buffer_500` 、 **PostgreSQL テーブル** "
 "``test.points``に対応する **layer**``Points`` の ID ``1`` を持つ **地物** をクリックします。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:121
+#: ../../source/publish/configuration/actions.rst:143
 msgid ""
 "You can see that Lizmap creates a JSON parameters with all needed "
 "information and run the PostgreSQL function ``lizmap_get_data(text)``."
@@ -317,7 +362,7 @@ msgstr ""
 "‎ Lizmap "
 "が必要なすべての情報を含むJSONパラメータを作成し、PostgreSQL関数``lizmap_get_data(text)``を実行します。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:123
+#: ../../source/publish/configuration/actions.rst:145
 msgid ""
 "You need to create this PostgreSQL function ``lizmap_get_data(text)`` which "
 "returns a valid GeoJSON text with one single object in it. The following SQL"
@@ -327,7 +372,7 @@ msgstr ""
 "‎この PostgreSQL 関数 ``lizmap_get_data(text)`` を作成して、1 つのオブジェクトを含む有効な GeoJSON "
 "テキストを返す必要があります。次の SQL コードは、必要な関数を作成するのに役立つ **例** です。必要に応じて修正する必要があります。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:232
+#: ../../source/publish/configuration/actions.rst:254
 msgid ""
 "The function ``lizmap_get_data(json)`` is provided here as an example. Since"
 " it is the **key entry point**, you need to adapt it to fit your needs. It "
@@ -344,7 +389,7 @@ msgstr ""
 "のみが返されている必要があります:必要に応じて集計を使用します。上記の例では、``format``メソッドを使用してクエリテキストを設定し、関数 "
 "``query_to_geojson`` を使用してこのクエリの GeoJSON を返します。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:234
+#: ../../source/publish/configuration/actions.rst:261
 msgid ""
 "You can use all the given parameters (action name, source data schema and "
 "table name, feature id, QGIS layer name) to create the appropriate query for"
@@ -357,7 +402,7 @@ msgstr ""
 "ELSE``句を使用して、すべてのパラメータ(アクション名、ソースデータスキーマとテーブル名、地物ID、QGISレイヤー名)を使用して、（複数の）アクションに適切なクエリを作成することができます。JSON"
 " 設定ファイルのプロパティの一部と QGIS レイヤーのいくつかのプロパティを含む例の ``parameters`` 変数の内容を参照してください。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:236
+#: ../../source/publish/configuration/actions.rst:266
 msgid ""
 "the **action name** ``action_name``, for example ``buffer_500``. You should "
 "use a simple word with only letters, digits and ``_``,"
@@ -365,13 +410,13 @@ msgstr ""
 "‎**action name** ``action_name``、例えば``buffer_500`` "
 "など、文字、数字、``_``を含む単純な単語を使用する必要があります。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:237
+#: ../../source/publish/configuration/actions.rst:267
 msgid ""
 "QGIS **layer name** (as in QGIS legend): ``layer_name``, for example "
 "``Points``,"
 msgstr "‎QGIS **レイヤー名** (QGISの凡例のように):``layer_name``、例えば``ポイント``"
 
-#: ../../source/publish/configuration/action_popup.rst:238
+#: ../../source/publish/configuration/actions.rst:268
 msgid ""
 "the PostgreSQL table **schema** ``layer_schema`` and **table name** "
 "``layer_table`` for this layer,"
@@ -379,13 +424,13 @@ msgstr ""
 "‎このレイヤーの PostgreSQL テーブル **スキーマ** ``layer_schema``と **テーブル名** "
 "``layer_table``‎"
 
-#: ../../source/publish/configuration/action_popup.rst:239
+#: ../../source/publish/configuration/actions.rst:269
 msgid ""
 "the object **feature id** ``feature_id``, which corresponds to the value of "
 "the **primary key** field for the popup object,"
 msgstr "‎オブジェクト **feature id** ``feature_id`` は，‎‎地物情報の **主キー** です。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:240
+#: ../../source/publish/configuration/actions.rst:270
 msgid ""
 "the other **properties** given in the JSON configuration file, in the "
 "``options`` property, such as ``buffer_size`` which is ``500`` in the "
@@ -394,7 +439,7 @@ msgstr ""
 "‎JSON 設定ファイルで指定されたその他の **プロパティー** は``options`` "
 "プロパティにあります。‎‎例では``buffer_size``、``500``など‎"
 
-#: ../../source/publish/configuration/action_popup.rst:242
+#: ../../source/publish/configuration/actions.rst:272
 msgid ""
 "The ``IF ELSE`` is used to do a different query, built in the ``datasource``"
 " variable, by checking the **action name**"
@@ -402,7 +447,7 @@ msgstr ""
 "‎``IF ELSE``は **アクション名** をチェックすることによって、``datasource`` "
 "変数に組み込まれた別のクエリを実行するために使用されます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:244
+#: ../../source/publish/configuration/actions.rst:274
 msgid ""
 "If the return data contains a ``message`` field, such as shown in the "
 "example above, the text contained in this field will be **displayed in the "
@@ -411,12 +456,12 @@ msgstr ""
 "‎上記の例のように、戻りデータに ``message`` フィールドが含まれている場合、このフィールドに含まれるテキストは吹き出しの "
 "**mapに表示**されます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:246
+#: ../../source/publish/configuration/actions.rst:277
 msgid ""
 "The **geometry** returned by the function **will be displayed on the map**."
 msgstr "‎関数によって返される **geometry**は、 **マップ上に表示** されます‎"
 
-#: ../../source/publish/configuration/action_popup.rst:248
+#: ../../source/publish/configuration/actions.rst:279
 msgid ""
 "You could use your function to **edit some data** in your database, before "
 "returning a GeoJSON. To do so, you need to replace the ``IMMUTABLE`` "
@@ -425,7 +470,7 @@ msgstr ""
 "‎GeoJSON を返す前に、関数を使用してデータベース内の **データを編集** することができます。これを行うには、``IMMUTABLE`` "
 "プロパティパー ``VOLATILE`` を置き換える必要があります。 **注意して使用してください** !‎ "
 
-#: ../../source/publish/configuration/action_popup.rst:250
+#: ../../source/publish/configuration/actions.rst:282
 msgid ""
 "Since Lizmap Web Client **triggers an event** ``actionResultReceived`` any "
 "time the user clicks on an action button, and data is returned (in the same "
@@ -436,16 +481,16 @@ msgstr ""
 "**ベントをトリガー** し、(結果、geometryがマップに描画されるのと同時に) "
 "データが返されるため、結果が表示された後にロジックを追加するために独自の JavaScript コードを使用できます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:253
+#: ../../source/publish/configuration/actions.rst:287
 msgid "Chapter :ref:`adding-javascript`"
 msgstr "‎章‎ :ref:`‎javaスクリプトの追加‎`"
 
-#: ../../source/publish/configuration/action_popup.rst:255
+#: ../../source/publish/configuration/actions.rst:289
 msgid ""
 "For example, here we just write in the browser console the content received:"
 msgstr "‎たとえば、ここでは、コンテンツが受信したブラウザコンソールに書き込みます。‎"
 
-#: ../../source/publish/configuration/action_popup.rst:279
+#: ../../source/publish/configuration/actions.rst:313
 msgid "You could use these data as you like in your JS code."
 msgstr "‎これらのデータは、JS コードで自由に使用できます。‎"
 
@@ -838,6 +883,10 @@ msgstr "‎標準で一部のグループを折りたたむ場合は、 :ref:`ad
 msgid "Theme switcher"
 msgstr "‎テーマ切替"
 
+#: ../../source/publish/configuration/legend.rst:20
+msgid "This is a feature in |lizmap_3_4|."
+msgstr "|lizmap_3_4|の機能です。‎"
+
 #: ../../source/publish/configuration/legend.rst:22
 msgid ""
 "Lizmap allows you to display and switch between themes configured in QGIS. "
@@ -969,7 +1018,7 @@ msgstr "‎ Lizmapを通じてドキュメントを提供することができ�
 #: ../../source/publish/configuration/media.rst:14
 msgid ""
 "Create a directory called :file:`media` (in lower case and without accents)"
-msgstr ""
+msgstr "file:`media`というディレクトリを作成します（小文字でアクセントなし）"
 
 #: ../../source/publish/configuration/media.rst:16
 msgid "either **at the same level as the QGIS project**"
@@ -980,6 +1029,8 @@ msgid ""
 "or for some specific use-cases, one level up related to the QGIS project, to"
 " make it available for **all** folders (:ref:`single-media-folder`)"
 msgstr ""
+"または、QGISプロジェクトに関連する1つ上のレベルの特定のユースケースで、**すべての**フォルダで利用できるようにする(:ref:`single-"
+"media-folder`)。"
 
 #: ../../source/publish/configuration/media.rst:20
 msgid ""
@@ -988,7 +1039,7 @@ msgstr "‎ドキュメントを入れる: 画像、レポート、PDF、ビデ�
 
 #: ../../source/publish/configuration/media.rst:21
 msgid "Icons such as SVG for vector layers"
-msgstr ""
+msgstr "ベクターレイヤー用のSVGなどのアイコン"
 
 #: ../../source/publish/configuration/media.rst:22
 msgid ""
@@ -1063,19 +1114,21 @@ msgstr ""
 
 #: ../../source/publish/configuration/media.rst:44
 msgid "On Linux, when you see dot ``.``, it means \"this directory\"."
-msgstr ""
+msgstr "Linuxでは、ドット ``.`` があると「このディレクトリ」という意味になります。"
 
 #: ../../source/publish/configuration/media.rst:46
 msgid ""
 "Two dots, ``..``, one after the other, means \"the directory immediately "
 "above the current one\"."
-msgstr ""
+msgstr "ドット2つ、``...`` を続けて入力すると、「現在のディレクトリのすぐ上のディレクトリ」を意味します。"
 
 #: ../../source/publish/configuration/media.rst:48
 msgid ""
 "The two dots notation is used in QGIS and Lizmap to go one level up in the "
 "tree related to the QGIS project, see :ref:`single-media-folder`."
 msgstr ""
+"QGISとLizmapでは、QGISプロジェクトに関連するツリーで1レベル上に移動するために、2つのドットの表記が使われています、参照： "
+":ref:`single-media-folder"
 
 #: ../../source/publish/configuration/media.rst:52
 msgid "Use for links"
@@ -1152,11 +1205,11 @@ msgstr "‎メディアが画像の場合は、 :guilabel:` 統合ドキュメ�
 
 #: ../../source/publish/configuration/media.rst:81
 msgid "Use for SVG"
-msgstr ""
+msgstr "SVGに使用する"
 
 #: ../../source/publish/configuration/media.rst:83
 msgid "In the QGIS, you can use custom SVG, in your layouts, symbology etc."
-msgstr ""
+msgstr "QGISでは、レイアウトやシンボルなどで、カスタムSVGを使用することができます。"
 
 #: ../../source/publish/configuration/media.rst:85
 msgid ""
@@ -1164,16 +1217,17 @@ msgid ""
 "saved. In the screenshot below, you can notice the absolute path whereas if "
 "you open the QGS file in a text editor, it's a relative path :"
 msgstr ""
+"QGISでは絶対パスが表示されますが、プロジェクトでは相対パスが保存されます。下のスクリーンショットでは、絶対パスが表示されていますが、テキストエディタでQGSファイルを開くと、相対パスになっていることがわかります。"
 
 #: ../../source/publish/configuration/media.rst:88
 msgid "``<prop v=\"../media/custom_svg/croissant.svg\" k=\"name\"/>``"
-msgstr ""
+msgstr "``<prop v=\"../media/custom_svg/croissant.svg\" k=\"name\"/>``"
 
 #: ../../source/publish/configuration/media.rst:93
 msgid ""
 "The path is starting with ``../media``, it's using the media folder "
 "described below."
-msgstr ""
+msgstr "パスが ``./media`` で始まっている場合は、後述のメディアフォルダを使用しています。"
 
 #: ../../source/publish/configuration/media.rst:98
 msgid "Use a single media folder for many Lizmap folders"
@@ -1239,7 +1293,7 @@ msgstr ""
 "フィールドを作成する必要があります。‎"
 
 #: ../../source/publish/configuration/media.rst:153
-#: ../../source/publish/configuration/popup.rst:58
+#: ../../source/publish/configuration/popup.rst:67
 #: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
@@ -1250,12 +1304,12 @@ msgid "id"
 msgstr "id"
 
 #: ../../source/publish/configuration/media.rst:153
-#: ../../source/publish/configuration/popup.rst:59
+#: ../../source/publish/configuration/popup.rst:68
 msgid "name"
 msgstr "‎名前‎"
 
 #: ../../source/publish/configuration/media.rst:153
-#: ../../source/publish/configuration/popup.rst:60
+#: ../../source/publish/configuration/popup.rst:69
 msgid "description"
 msgstr "説明"
 
@@ -1269,7 +1323,7 @@ msgid "pdf"
 msgstr "pdf"
 
 #: ../../source/publish/configuration/media.rst:155
-#: ../../source/publish/configuration/popup.rst:58
+#: ../../source/publish/configuration/popup.rst:67
 msgid "1"
 msgstr "1"
 
@@ -2082,56 +2136,56 @@ msgstr ""
 "‎:guilabel:` グループレイヤー ` "
 "オプションでは、グループのオプションを選択する必要があり、地物情報に表示したいすべてのレイヤーに対して:guilabel:`地物情報`オプションがオンになっているレイヤーのみが表示されます。‎"
 
-#: ../../source/publish/configuration/popup.rst:21
+#: ../../source/publish/configuration/popup.rst:22
 msgid "You have three types of popup sources:"
 msgstr "地物情報ソースには次の 3 種類があります。‎"
 
-#: ../../source/publish/configuration/popup.rst:23
-msgid "``auto``, read :ref:`auto-popup`"
-msgstr "‎``自動``読込 :ref:`auto-popup`"
-
 #: ../../source/publish/configuration/popup.rst:24
-msgid "``lizmap``, read :ref:`lizmap-popup`"
-msgstr "``lizmap``で読込 :ref:`lizmap-popup`"
+msgid "``Automatic``, read :ref:`auto-popup`"
+msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:25
-msgid "``qgis``, read :ref:`qgis-popup`"
-msgstr "``’qgis``で読込 :ref:`qgis-popup`"
+msgid "``Lizmap HTML``, read :ref:`lizmap-popup`"
+msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:26
-msgid "``form``, read :ref:`form-popup`"
-msgstr "‎``フォーム``で読込 :ref:`form-popup`"
+msgid "``QGIS HTML Maptip``, read :ref:`qgis-popup`"
+msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:28
+#: ../../source/publish/configuration/popup.rst:27
+msgid "``QGIS Drag&Drop form``, read :ref:`form-popup`"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:29
 msgid ""
-"In the web application Lizmap Web Client, a click on a feature will trigger "
-"the popup if (and only if):"
-msgstr "‎Web アプリケーション Lizmap Web クライアントでは、地物をクリックすると、(次の場合にのみ)地物情報が起動されます。‎"
+"In Lizmap Web Client, a click on a feature will trigger the popup if (and "
+"only if):"
+msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:30
+#: ../../source/publish/configuration/popup.rst:31
 msgid "the popup **has been activated**"
 msgstr "‎地物情報が **有効になりました**‎"
 
-#: ../../source/publish/configuration/popup.rst:32
+#: ../../source/publish/configuration/popup.rst:33
 msgid "through the plugin for the layer or the group"
 msgstr "‎レイヤーまたはグループのプラグインを通して‎"
 
-#: ../../source/publish/configuration/popup.rst:33
+#: ../../source/publish/configuration/popup.rst:34
 msgid "or the layer has edition capabilities for existing features"
 msgstr "‎または、レイヤーには既存の地物の編集機能があります‎"
 
-#: ../../source/publish/configuration/popup.rst:35
+#: ../../source/publish/configuration/popup.rst:36
 msgid ""
 "the layer is **active in the legend**, so that it is shown on the canvas"
 msgstr "‎レイヤーは、 **凡例で有効** になっているため、キャンバスに表示されます。‎"
 
-#: ../../source/publish/configuration/popup.rst:36
+#: ../../source/publish/configuration/popup.rst:37
 msgid ""
 "the user has clicked on an **area of the canvas** where data for the layer "
 "with active popups are displayed."
 msgstr "‎ユーザーが **キャンバス領域** をクリックし、有効な地物情報を含むレイヤーのデータが表示されます。‎"
 
-#: ../../source/publish/configuration/popup.rst:38
+#: ../../source/publish/configuration/popup.rst:40
 msgid ""
 "For point layers you need to click in the middle of the point to display the"
 " popup. The tolerance can be setup in :menuselection:`Lizmap plugin --> Map "
@@ -2140,7 +2194,7 @@ msgstr ""
 "‎ポイント レイヤーの場合は、ポイントの中央をクリックして地物情報を表示する必要があります。許容値は、 :menuselection:` "
 "Lizmapプラグイン -->マップオプション -->マップツール ` で設定できます。‎"
 
-#: ../../source/publish/configuration/popup.rst:40
+#: ../../source/publish/configuration/popup.rst:43
 msgid ""
 "You can update where the popup is displayed in the web interface in "
 ":menuselection:`Lizmap plugin --> Map options --> Map interface`. You can "
@@ -2149,73 +2203,80 @@ msgstr ""
 "‎Web インターフェイスで地物情報 が表示される場所を更新できます :menuselection:` Lizmap プラグイン --> マップ "
 "オプション --> Map インターフェイス` です。次のいずれかを選択できます。‎"
 
-#: ../../source/publish/configuration/popup.rst:42
+#: ../../source/publish/configuration/popup.rst:46
 msgid "``dock``"
 msgstr "`` 画面に表示 ``"
 
-#: ../../source/publish/configuration/popup.rst:43
+#: ../../source/publish/configuration/popup.rst:47
 msgid "``minidock``"
 msgstr "`` 最小サイズで表示 ``"
 
-#: ../../source/publish/configuration/popup.rst:44
+#: ../../source/publish/configuration/popup.rst:48
 msgid "``map``"
 msgstr "``地図に表示``"
 
-#: ../../source/publish/configuration/popup.rst:45
+#: ../../source/publish/configuration/popup.rst:49
 msgid "``bottomdock``"
 msgstr "`` 画面下に表示 ``"
 
-#: ../../source/publish/configuration/popup.rst:46
+#: ../../source/publish/configuration/popup.rst:50
 msgid "``right-dock``"
 msgstr "`` 画面右に表示 ``"
 
-#: ../../source/publish/configuration/popup.rst:51
-msgid "Auto popup"
-msgstr "‎自動地物情報表示"
-
 #: ../../source/publish/configuration/popup.rst:53
-msgid ""
-"The Lizmap Web Client ``auto`` popup displays a table showing the columns of"
-" the attribute table in two columns *Field* and *Value*, as shown below:"
+msgid "Media in popup"
 msgstr ""
-"‎Lizmap Web クライアント ``自動`` 地物情報には、次に示すように、属性テーブルの列を 2 つの列 *Field* と *Value* "
-"に表示するテーブルが表示されます。‎"
 
-#: ../../source/publish/configuration/popup.rst:56
+#: ../../source/publish/configuration/popup.rst:55
+msgid "See :ref:`use-in-popups` in the **media** chapter."
+msgstr "メディア**のチャプターにある :ref:`use-in-popups` を参照してください。"
+
+#: ../../source/publish/configuration/popup.rst:60
+msgid "Automatic popup"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:62
+msgid ""
+"The Lizmap Web Client ``Automatic`` popup displays a table showing the "
+"columns of the attribute table in two columns *Field* and *Value*, as shown "
+"below:"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:65
 msgid "Field"
 msgstr "フィールド"
 
-#: ../../source/publish/configuration/popup.rst:56
+#: ../../source/publish/configuration/popup.rst:65
 msgid "Value"
 msgstr "値‎"
 
-#: ../../source/publish/configuration/popup.rst:59
+#: ../../source/publish/configuration/popup.rst:68
 msgid "A name"
 msgstr "‎名前‎"
 
-#: ../../source/publish/configuration/popup.rst:60
+#: ../../source/publish/configuration/popup.rst:69
 msgid "This object ..."
 msgstr "‎このオブジェクト..‎"
 
-#: ../../source/publish/configuration/popup.rst:61
+#: ../../source/publish/configuration/popup.rst:70
 msgid "photo"
 msgstr "‎写真‎"
 
-#: ../../source/publish/configuration/popup.rst:61
+#: ../../source/publish/configuration/popup.rst:70
 msgid ":-)"
 msgstr ":-)"
 
-#: ../../source/publish/configuration/popup.rst:64
+#: ../../source/publish/configuration/popup.rst:73
 msgid ""
 "You can modify the info displayed through QGIS, and also display pictures or"
 " links."
 msgstr "‎QGISを通じて表示される情報を変更したり、画像やリンクを表示したりできます。‎"
 
-#: ../../source/publish/configuration/popup.rst:67
+#: ../../source/publish/configuration/popup.rst:76
 msgid "Simple popup configuration"
 msgstr "‎シンプルな地物情報設定"
 
-#: ../../source/publish/configuration/popup.rst:69
+#: ../../source/publish/configuration/popup.rst:78
 msgid ""
 "With the plugin, if you click on the checkbox **Activate popups** without "
 "modifying its content through the button *Configure* the default table is "
@@ -2224,7 +2285,7 @@ msgstr ""
 "‎プラグインでは、ボタン *設定* を使用してコンテンツを変更せずに、チェックボックス **地物情報を有効** "
 "をクリックすると、デフォルトのテーブルが表示されます。‎"
 
-#: ../../source/publish/configuration/popup.rst:71
+#: ../../source/publish/configuration/popup.rst:80
 msgid ""
 "Nevertheless, you can tune several things in QGIS and with the help of "
 "Lizmap plugin to **parametrize the fields displayed**, **rename fields**, "
@@ -2234,23 +2295,23 @@ msgstr ""
 "‎それにもかかわらず、あなたはQGISでいくつかのことを調整することができ、lizmapプラグインの助けを借りて **表示されたフィールドをパラメータ化"
 " 、 **フィールド名を変更** 、さらには **表示画像、写真、または内部または外部文書へのリンク** 。‎"
 
-#: ../../source/publish/configuration/popup.rst:74
+#: ../../source/publish/configuration/popup.rst:83
 msgid "Mask or rename a column"
 msgstr "‎列のマスクまたは名前の変更‎"
 
-#: ../../source/publish/configuration/popup.rst:76
+#: ../../source/publish/configuration/popup.rst:85
 msgid ""
 "This is working only using `Lizmap` or `Auto` popup. The `QGIS` popup "
 "follows the QGIS maptip."
 msgstr "‎これは'Lizmap'または'自動'地物情報を使用して動作します。「QGIS」地物情報はQGIS maptipに従います。‎"
 
-#: ../../source/publish/configuration/popup.rst:78
+#: ../../source/publish/configuration/popup.rst:87
 msgid ""
 "You need to use the :menuselection:`Layer Properties --> Fields` tab in "
 "QGIS:"
 msgstr "‎QGISの :menuselection:` レイヤープロパティ -->フィールド ` タブを使用する必要があります:‎"
 
-#: ../../source/publish/configuration/popup.rst:80
+#: ../../source/publish/configuration/popup.rst:89
 msgid ""
 "to **hide** a column in the popup, uncheck the corresponding WMS checkbox. "
 "The WMS column is on the right of the table. This will hide the field in "
@@ -2259,7 +2320,7 @@ msgstr ""
 "‎**非表示** 地物情報内の列には、対応するWMSチェックボックスをオフにします。WMS "
 "列はテーブルの右側にあります。これは、任意のWMS要求からQGISサーバーのフィールドを非表示にします。‎"
 
-#: ../../source/publish/configuration/popup.rst:82
+#: ../../source/publish/configuration/popup.rst:91
 msgid ""
 "to **rename** a column, you should use the alias column. But to edit this "
 "column, add it from the tab :menuselection:`Layer Properties --> Attributes "
@@ -2268,11 +2329,11 @@ msgstr ""
 "‎列の名前を変更するには、別名列を使用する必要があります。ただし、この列を編集するには、タブから追加します  :menuselection:` レイヤー"
 " プロパティ -->属性フォーム` 。‎"
 
-#: ../../source/publish/configuration/popup.rst:90
+#: ../../source/publish/configuration/popup.rst:99
 msgid "Usage of media: images, documents, etc."
 msgstr "‎メディアの利用:画像、文書等‎"
 
-#: ../../source/publish/configuration/popup.rst:92
+#: ../../source/publish/configuration/popup.rst:101
 msgid ""
 "If you want to use some media in your popup (pictures, PDF documents…) in "
 "your popup, you must use the :ref:`media` directory."
@@ -2280,57 +2341,57 @@ msgstr ""
 "‎地物情報中に，地物情報で一部のメディア (画像、PDF ドキュメント..) を使用する場合は、 :ref:`media` "
 "ディレクトリを使用する必要があります。‎"
 
-#: ../../source/publish/configuration/popup.rst:95
+#: ../../source/publish/configuration/popup.rst:104
 msgid ""
 "For a given feature, using a path in your field starting by ``media/``, "
 "Lizmap will display:"
 msgstr "‎ある地物の場合、``media/``で始まるフィールドのパスを使用すると、Lizmapは次のように表示されます。‎"
 
-#: ../../source/publish/configuration/popup.rst:97
+#: ../../source/publish/configuration/popup.rst:106
 msgid "**the image itself** for jpeg or png files"
 msgstr "‎jpeg または png ファイルの **画像自体**‎ "
 
-#: ../../source/publish/configuration/popup.rst:98
+#: ../../source/publish/configuration/popup.rst:107
 msgid "**the content** for txt or HTML files"
 msgstr "‎**コンテンツ** txt または HTML ファイルの場合‎"
 
-#: ../../source/publish/configuration/popup.rst:99
+#: ../../source/publish/configuration/popup.rst:108
 msgid "**a link** to any other file extension"
 msgstr "‎他のファイル拡張子への **リンク** "
 
-#: ../../source/publish/configuration/popup.rst:102
+#: ../../source/publish/configuration/popup.rst:111
 msgid ""
 "Chapter :ref:`media` for more details on the usage of documents of the "
 "directory media in the popups."
 msgstr "‎章  :ref:`media` 地物情報内のディレクトリメディアのドキュメントの使用法の詳細については、‎"
 
-#: ../../source/publish/configuration/popup.rst:105
+#: ../../source/publish/configuration/popup.rst:114
 msgid "Usage of external links"
 msgstr "‎外部リンクの使用‎"
 
-#: ../../source/publish/configuration/popup.rst:107
+#: ../../source/publish/configuration/popup.rst:116
 msgid ""
 "You can also use, in a field, **full web links to a specific page or "
 "image**:"
 msgstr "‎フィールドで、特定のページまたは画像への **完全なWebリンクを使用することもできます**‎ "
 
-#: ../../source/publish/configuration/popup.rst:109
+#: ../../source/publish/configuration/popup.rst:118
 msgid "the image referred to will be displayed, instead of the links"
 msgstr "‎リンクの代わりに、参照される画像が表示されます‎"
 
-#: ../../source/publish/configuration/popup.rst:110
+#: ../../source/publish/configuration/popup.rst:119
 msgid "the web link will be displayed and clickable"
 msgstr "‎Web リンクが表示され、クリック可能になります‎"
 
-#: ../../source/publish/configuration/popup.rst:115
-msgid "Lizmap popup"
-msgstr "Lizmap 地物情報"
+#: ../../source/publish/configuration/popup.rst:124
+msgid "Lizmap HTML popup"
+msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:118
+#: ../../source/publish/configuration/popup.rst:127
 msgid "Introduction"
 msgstr "はじめに"
 
-#: ../../source/publish/configuration/popup.rst:120
+#: ../../source/publish/configuration/popup.rst:129
 msgid ""
 "If the simple table display does not suit your needs, you can write a "
 "**popup template**. To do so, you should know some **HTML format**. See "
@@ -2339,21 +2400,19 @@ msgstr ""
 "‎単純なテーブル表示がニーズに合わない場合は、 **地物情報テンプレート** を作成できます。これを行うには、いくつかの **HTML形式** "
 "を知っている必要があります。https://www.w3schools.com/html/ 等を参照してください。‎"
 
-#: ../../source/publish/configuration/popup.rst:122
+#: ../../source/publish/configuration/popup.rst:132
 msgid ""
-"When you use the *lizmap* mode, the previous configuration to rename a field"
-" does not work anymore: you have to configure what is displayed and how "
-"through the template. Managing media is also possible, but you have to "
+"When you use the *Lizmap HTML* mode, the previous configuration to rename a "
+"field does not work anymore: you have to configure what is displayed and how"
+" through the template. Managing media is also possible, but you have to "
 "configure it as well."
 msgstr ""
-"‎*lizmap* モードを使用すると、フィールド名を変更するための前の設定が機能しなくなります。‎ "
-"‎テンプレートを使用して表示される内容と方法を設定する必要があります。‎ ‎メディアの管理も可能ですが、メディアを設定する必要もあります。‎"
 
-#: ../../source/publish/configuration/popup.rst:125
+#: ../../source/publish/configuration/popup.rst:136
 msgid "Deploying"
 msgstr "‎展開‎"
 
-#: ../../source/publish/configuration/popup.rst:127
+#: ../../source/publish/configuration/popup.rst:138
 msgid ""
 "You can edit the popup template with the button *Configure* in the Lizmap "
 "plugin. Clicking on it you'll get a window with two text areas:"
@@ -2361,15 +2420,15 @@ msgstr ""
 "‎Lizmap プラグインのボタン *設定* "
 "を使用して地物情報テンプレートを編集できます。それをクリックすると、2つのテキスト領域を持つウィンドウが表示されます。‎"
 
-#: ../../source/publish/configuration/popup.rst:129
+#: ../../source/publish/configuration/popup.rst:140
 msgid "an **area where you can type your text**"
 msgstr "‎**テキストを入力できる領域**‎"
 
-#: ../../source/publish/configuration/popup.rst:130
+#: ../../source/publish/configuration/popup.rst:141
 msgid "a **read-only area**, showing a preview of your template"
 msgstr "‎テンプレートのプレビューを表示する **読み取り専用エリア**‎ "
 
-#: ../../source/publish/configuration/popup.rst:136
+#: ../../source/publish/configuration/popup.rst:147
 msgid ""
 "You can type simple text, but we suggest to write in HTML format to give "
 "proper formatting. For instance, you can add paragraphs, headings, etc.:"
@@ -2377,40 +2436,41 @@ msgstr ""
 "‎単純なテキストを入力することもできますが、適切な書式を設定するために HTML "
 "形式で記述することをお勧めします。たとえば、段落や見出しなどを追加できます。‎"
 
-#: ../../source/publish/configuration/popup.rst:143
+#: ../../source/publish/configuration/popup.rst:154
 msgid "The behaviour is as follows:"
 msgstr "‎動作は次のとおりです。‎"
 
-#: ../../source/publish/configuration/popup.rst:145
+#: ../../source/publish/configuration/popup.rst:156
 msgid ""
 "if the content of the two areas is empty, a simple table will be shown in "
 "the popup (default template)"
 msgstr "‎2 つの領域の内容が空の場合、地物情報 (既定のテンプレート) に単純なテーブルが表示されます。‎"
 
-#: ../../source/publish/configuration/popup.rst:146
+#: ../../source/publish/configuration/popup.rst:157
 msgid ""
 "if the content is not empty, its content will be used as a template for the "
 "popup"
 msgstr "‎コンテンツが空でない場合、そのコンテンツは地物情報のテンプレートとして使用されます。‎"
 
-#: ../../source/publish/configuration/popup.rst:148
+#: ../../source/publish/configuration/popup.rst:159
 msgid ""
 "Lizmap Web Client will replace automatically a variable, identified by the "
 "name of a field, with its content. To add the content of a column to a "
 "popup, you should use the name of the column precede by a dollar sign (`$`),"
-" all surrounded by curly brackets (`{}`). For instance:"
+" all surrounded by curly brackets (`{}`)."
 msgstr ""
-"‎Lizmap Web "
-"クライアントは、フィールド名で識別される変数を自動的にその内容に置き換えます。列の内容を地物情報に追加するには、列の名前の前にドル記号 ('$') "
-"を付け、すべて中括弧 ('{}') で囲んで使用する必要があります。例えば：‎"
 
-#: ../../source/publish/configuration/popup.rst:157
+#: ../../source/publish/configuration/popup.rst:162
+msgid "For instance:"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:171
 msgid ""
 "If you have configured an alias for a field, you have to use the alias "
 "instead of the name, between the brackets."
 msgstr "‎フィールドのエイリアスを設定している場合は、名前の代わりに、角かっこの間にエイリアスを使用する必要があります。‎"
 
-#: ../../source/publish/configuration/popup.rst:159
+#: ../../source/publish/configuration/popup.rst:173
 msgid ""
 "You can also use the values of the columns as parameters to give styling to "
 "the text. An example here, to use the colour of a bus line as a background "
@@ -2418,11 +2478,11 @@ msgid ""
 msgstr ""
 "‎また、テキストにスタイルを設定するためのパラメーターとして、列の値を使用することもできます。ここでは、バスラインの色を背景色として使用する例を示します。‎"
 
-#: ../../source/publish/configuration/popup.rst:168
+#: ../../source/publish/configuration/popup.rst:183
 msgid "Usage of media and external links"
 msgstr "‎メディアと外部リンクの使用‎"
 
-#: ../../source/publish/configuration/popup.rst:170
+#: ../../source/publish/configuration/popup.rst:185
 msgid ""
 "You can **use the media** referred to in the table content, even if you use "
 "a *template model*. To do this, you should use the media column, taking into"
@@ -2434,27 +2494,27 @@ msgstr ""
 "Web Client がタイプ ``/media/myfile.jpg`` の相対パスを、Web インターフェイスからアクセス可能なファイルへの完全な "
 "URL に自動的に置き換えることを考慮して、メディア列を使用する必要があります。‎"
 
-#: ../../source/publish/configuration/popup.rst:172
+#: ../../source/publish/configuration/popup.rst:189
 msgid ""
 "You can also use full URLs pointing to the pages or images on another "
 "server."
 msgstr "‎別のサーバー上のページまたはイメージを指す完全な URL を使用することもできます。‎"
 
-#: ../../source/publish/configuration/popup.rst:174
+#: ../../source/publish/configuration/popup.rst:191
 msgid "Here an example of a template handling media and an external link:"
 msgstr "‎次に、テンプレート処理メディアと外部リンクの例を示します。‎"
 
-#: ../../source/publish/configuration/popup.rst:189
+#: ../../source/publish/configuration/popup.rst:206
 msgid ""
 "Chapter :ref:`media` for more details on the use of documents in the "
 "directory media."
 msgstr "‎ディレクトリ メディアでのドキュメントの使用の詳細については、章 :ref:`media` を参照してください。‎"
 
-#: ../../source/publish/configuration/popup.rst:194
-msgid "Form popup"
-msgstr "‎地物情報フォーム"
+#: ../../source/publish/configuration/popup.rst:211
+msgid "QGIS Drag&Drop Form popup"
+msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:196
+#: ../../source/publish/configuration/popup.rst:213
 msgid ""
 "If you have defined a form layout with the *Drag and drop form designer* for"
 " a layer in :menuselection:`Layer Properties --> Attributes Form`, you can "
@@ -2468,19 +2528,19 @@ msgstr ""
 "を地物情報に表示することもできます。「ドラッグアンドドロップ」フォームに関するQGISのドキュメントを参照してください。‎<https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#the-"
 "drag-and-drop-designer>`_."
 
-#: ../../source/publish/configuration/popup.rst:200
+#: ../../source/publish/configuration/popup.rst:217
 msgid ""
 "The QGIS Form, designed for HTML, is displayed in the popup directly. You "
 "can't alter the popup on runtime."
 msgstr "‎HTML用に設計されたQGISフォームは、地物情報に直接表示されます。ランタイムで地物情報を変更することはできません。‎"
 
-#: ../../source/publish/configuration/popup.rst:203
+#: ../../source/publish/configuration/popup.rst:220
 msgid ""
 "Tabs defined in the :guilabel:`Form Layout` in QGIS will also be displayed "
 "as HTML tabs in the popup."
 msgstr "‎QGISの :guilabel:` フォームレイアウト ` で定義されたタブも地物情報にHTMLタブとして表示されます。‎"
 
-#: ../../source/publish/configuration/popup.rst:205
+#: ../../source/publish/configuration/popup.rst:222
 msgid ""
 "If you want to alter the popup HTML, then you must use :guilabel:`QGIS "
 "Popup` instead of :guilabel:`Form Popup`."
@@ -2488,11 +2548,11 @@ msgstr ""
 "地物情報表示のHTMLを変更する場合は、 :guilabel:` 地物情報フォーム ` の代わりに :guilabel:` QGIS地物情報 ` "
 "を使用する必要があります。‎"
 
-#: ../../source/publish/configuration/popup.rst:210
-msgid "QGIS popup"
-msgstr "‎QGIS地物情報"
+#: ../../source/publish/configuration/popup.rst:227
+msgid "QGIS HTML Maptip popup"
+msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:212
+#: ../../source/publish/configuration/popup.rst:229
 msgid ""
 "*QGIS* popups can be configured via :menuselection:`QGIS --> Layer "
 "properties --> Display --> HTML Map Tip`. The main advantages of this "
@@ -2501,17 +2561,17 @@ msgstr ""
 "‎*QGIS* 地物情報は、 :menuselection:` QGIS -->レイヤープロパティ -->表示 --> HTMLマップヒント ` "
 "を介して設定することができます。このアプローチの主な利点は次のとおりです。‎"
 
-#: ../../source/publish/configuration/popup.rst:215
+#: ../../source/publish/configuration/popup.rst:232
 msgid "HTML is used"
 msgstr "‎HTML が使用されます。‎"
 
-#: ../../source/publish/configuration/popup.rst:216
+#: ../../source/publish/configuration/popup.rst:233
 msgid ""
 "you can use QGIS variables and expressions, thus adding information created "
 "dynamically"
 msgstr "‎QGIS変数とエクスプレッションを使用して、動的に作成された情報を追加することができます‎"
 
-#: ../../source/publish/configuration/popup.rst:217
+#: ../../source/publish/configuration/popup.rst:234
 msgid ""
 "the popup can be previewed in QGIS, using map tips. You can enable map tips "
 "in the menu :menuselection:`View --> Show Map Tips`"
@@ -2519,7 +2579,7 @@ msgstr ""
 "地物情報は、マップのヒントを使用して、QGISでプレビューすることができます。メニューでマップのヒントを有効にすることができます "
 ":menuselection:` 表示 --> マップヒントを表示する ` "
 
-#: ../../source/publish/configuration/popup.rst:218
+#: ../../source/publish/configuration/popup.rst:235
 msgid ""
 "the popup configurations are stored in QGIS project and layer style, so they"
 " can be reused in other Lizmap projects without replicating the "
@@ -2527,7 +2587,7 @@ msgid ""
 msgstr ""
 "地物情報設定はQGISプロジェクトとレイヤースタイルに保存されているため、設定を複製することなく他のLizmapプロジェクトで再利用できます。‎"
 
-#: ../../source/publish/configuration/popup.rst:220
+#: ../../source/publish/configuration/popup.rst:237
 msgid ""
 "Similar to :ref:`form-popup`, you have a *Drag and drop form designer* for a"
 " layer, you can click on the :guilabel:`Copy the drag and drop designer` "
@@ -2538,7 +2598,7 @@ msgstr ""
 "ドラッグ&ドロップデザイナー `のコピー ボタンをクリックできます。これは **消去** "
 "レイヤー上に設定されている既存のマップチップを消去し、フォームレイアウトに一致するQGIS式を生成します。‎"
 
-#: ../../source/publish/configuration/popup.rst:224
+#: ../../source/publish/configuration/popup.rst:241
 msgid ""
 "To have a similar popup as the **auto** one, you need to click the button in"
 " the Lizmap plugin :menuselection:`Generate the HTML table`."
@@ -2546,116 +2606,17 @@ msgstr ""
 "**auto** と同様の地物情報を表示させるには、Lizmapプラグイン :menuselection:`Generate the HTML "
 "table` にあるボタンをクリックする必要があります。"
 
-#: ../../source/publish/configuration/popup.rst:226
-msgid "To display some color with HTML, you can use this sample above :"
-msgstr "HTMLで色を表示するには、上記のサンプルを使用します。"
-
-#: ../../source/publish/configuration/popup.rst:234
-msgid "One to many relations"
-msgstr "‎一対多の関係‎"
-
-#: ../../source/publish/configuration/popup.rst:236
-msgid ""
-"It is possible to display multiple objects (photos, documents) for each "
-"geographical feature. To do so, you have to configure both the QGIS project "
-"and the Lizmap config."
-msgstr ""
-"‎各地理的な地物に対して、複数のオブジェクト(写真、ドキュメント)を表示することができます。そのためには、QGISプロジェクトとlizmap設定の両方を設定する必要があります。‎"
-
-#: ../../source/publish/configuration/popup.rst:239
-msgid "In QGIS project:"
-msgstr "‎QGISプロジェクトで:‎"
-
-#: ../../source/publish/configuration/popup.rst:241
-msgid ""
-"Use 2 separate layers to store the main features and the pictures. For "
-"example `trees` and `tree_pictures`. The child layer must contain a field "
-"referencing the parent layer id."
-msgstr ""
-"2つの別々のレイヤーを使用して、メイン地物と写真を格納します。例えば、 `trees` と `tree_pictures` "
-"です。子レイヤーは、親レイヤーの ID を参照するフィールドを含んでいなければなりません。"
-
 #: ../../source/publish/configuration/popup.rst:243
 msgid ""
-"Configure aliases and field types in :menuselection:`Layer Properties -> "
-"Fields`. Use `Photo` for the field which will contains the relative path to "
-"pictures."
+"To display some color with HTML according to the value of a field, you can "
+"use this QGIS expression :"
 msgstr ""
-"エイリアスやフィールドタイプを設定します :menuselection:`Layer Properties -> Fields`  "
-"。写真への相対パスを格納するフィールドには `Photo` を使用します。"
-
-#: ../../source/publish/configuration/popup.rst:245
-msgid ""
-"Add a relation in QGIS project properties between the main layer `trees` and"
-" the child layer `tree_pictures` in :menuselection:`Project properties -> "
-"Relations`."
-msgstr ""
-"QGISプロジェクトのプロパティで、メインレイヤー `trees` と子レイヤー  `tree_pictures`  "
-"の間にリレーションを追加することができるようになりました。 :menuselection:`Project properties -> "
-"Relations` "
-
-#: ../../source/publish/configuration/popup.rst:247
-msgid ""
-"Add data to the layers. You should use relative path to store the pictures "
-"path. Theses paths must refer to a project media subdirectory, for example: "
-"`media/photos/feature_1_a.jpg`"
-msgstr ""
-"‎レイヤーにデータを追加します。画像のパスを保存するには、相対パスを使用する必要があります。これらのパスは、プロジェクトメディアサブディレクトリを参照する必要があります"
-" `media/photos/feature_1_a.jpg`。‎"
 
 #: ../../source/publish/configuration/popup.rst:250
-msgid "In Lizmap plugin:"
-msgstr "lizmapプラグインで:‎"
-
-#: ../../source/publish/configuration/popup.rst:252
-msgid ""
-"In the :guilabel:`Layers` tab, activate popup for both layers. You can "
-"configure source of the popup if you need specific layouts"
-msgstr ""
-" :guilabel:` レイヤ ` "
-"タブで、両方のレイヤーに対して地物情報を有効にします。特定のレイアウトが必要な場合は、地物情報のソースを設定することができます。"
-
-#: ../../source/publish/configuration/popup.rst:253
-msgid ""
-"For the parent layer, activate the option :guilabel:`Display relative "
-"children under each object (use relations)`"
-msgstr "‎上位レイヤーの場合は、有効なオプション :guilabel:` 各オブジェクトの下に相対子を表示する(リレーションを使用) `"
-
-#: ../../source/publish/configuration/popup.rst:254
-msgid ""
-"*Optionally*, add the two layers in the :guilabel:`Attribute table` tab"
-msgstr " * オプション * で、 :guilabel:`Attribute table`  タブに2つのレイヤーを追加します。"
-
-#: ../../source/publish/configuration/popup.rst:255
-msgid ""
-"*Optionally*, you can activate editing for the two layers, to allow the web "
-"users to create new features and upload pictures"
-msgstr ""
-"* オプション * で、2つのレイヤーの編集を有効にし、Webユーザーが新しい地物を作成したり、画像をアップロードできるようにすることができます。"
-
-#: ../../source/publish/configuration/popup.rst:256
-msgid "Save and publish your project and Lizmap configuration"
-msgstr "‎プロジェクトと Lizmap の設定を保存して公開する‎"
-
-#: ../../source/publish/configuration/popup.rst:258
-msgid "In Lizmap Web Client:"
-msgstr "lizmap Web クライアントで次の手順を実行します。‎"
-
-#: ../../source/publish/configuration/popup.rst:263
-msgid ""
-"If relative children popup are defined as ``auto``, this button will be "
-"visible in the feature's popup at the top of related objects. Click it to "
-"compact all related objects in one table with search, sort and paging "
-"capabilities."
-msgstr ""
-"‎下位にある地物情報が ``自動`` として定義されている場合、このボタンは関連オブジェクトの上部にある地物の地物情報に表示されます。 "
-"検索、並べ替え、およびページング機能を備えた 1 つのテーブル内のすべての関連オブジェクトを圧縮するには、このボタンをクリックします。‎‎"
-
-#: ../../source/publish/configuration/popup.rst:267
 msgid "Link to a PDF QGIS layout"
 msgstr "‎PDF QGIS レイアウトへのリンク‎"
 
-#: ../../source/publish/configuration/popup.rst:269
+#: ../../source/publish/configuration/popup.rst:252
 msgid ""
 "Every feature of a layer with an atlas configured will have a link (1) at "
 "the end of its popup which open a PDF for this specific feature, using the "
@@ -2672,11 +2633,110 @@ msgstr ""
 "`AtlasPrint` QGISサーバープラグインをダウンロードするには、そのレイヤー **と** 有効なアトラスを持つQGISレイアウトが必要です。"
 " ‎https://github.com/3liz/qgis-atlasprint"
 
-#: ../../source/publish/configuration/popup.rst:277
+#: ../../source/publish/configuration/popup.rst:260
+msgid "One to many relations"
+msgstr "‎一対多の関係‎"
+
+#: ../../source/publish/configuration/popup.rst:262
+msgid ""
+"It is possible to display multiple objects (photos, documents) for each "
+"geographical feature. To do so, you have to configure both the QGIS project "
+"and the Lizmap config."
+msgstr ""
+"‎各地理的な地物に対して、複数のオブジェクト(写真、ドキュメント)を表示することができます。そのためには、QGISプロジェクトとlizmap設定の両方を設定する必要があります。‎"
+
+#: ../../source/publish/configuration/popup.rst:265
+msgid "In QGIS project:"
+msgstr "‎QGISプロジェクトで:‎"
+
+#: ../../source/publish/configuration/popup.rst:267
+msgid ""
+"Use 2 separate layers to store the main features and the pictures. For "
+"example `trees` and `tree_pictures`. The child layer must contain a field "
+"referencing the parent layer id."
+msgstr ""
+"2つの別々のレイヤーを使用して、メイン地物と写真を格納します。例えば、 `trees` と `tree_pictures` "
+"です。子レイヤーは、親レイヤーの ID を参照するフィールドを含んでいなければなりません。"
+
+#: ../../source/publish/configuration/popup.rst:269
+msgid ""
+"Configure aliases and field types in :menuselection:`Layer Properties -> "
+"Fields`. Use `Photo` for the field which will contains the relative path to "
+"pictures."
+msgstr ""
+"エイリアスやフィールドタイプを設定します :menuselection:`Layer Properties -> Fields`  "
+"。写真への相対パスを格納するフィールドには `Photo` を使用します。"
+
+#: ../../source/publish/configuration/popup.rst:271
+msgid ""
+"Add a relation in QGIS project properties between the main layer `trees` and"
+" the child layer `tree_pictures` in :menuselection:`Project properties -> "
+"Relations`."
+msgstr ""
+"QGISプロジェクトのプロパティで、メインレイヤー `trees` と子レイヤー  `tree_pictures`  "
+"の間にリレーションを追加することができるようになりました。 :menuselection:`Project properties -> "
+"Relations` "
+
+#: ../../source/publish/configuration/popup.rst:273
+msgid ""
+"Add data to the layers. You should use relative path to store the pictures "
+"path. Theses paths must refer to a project media subdirectory, for example: "
+"`media/photos/feature_1_a.jpg`"
+msgstr ""
+"‎レイヤーにデータを追加します。画像のパスを保存するには、相対パスを使用する必要があります。これらのパスは、プロジェクトメディアサブディレクトリを参照する必要があります"
+" `media/photos/feature_1_a.jpg`。‎"
+
+#: ../../source/publish/configuration/popup.rst:276
+msgid "In Lizmap plugin:"
+msgstr "lizmapプラグインで:‎"
+
+#: ../../source/publish/configuration/popup.rst:278
+msgid ""
+"In the :guilabel:`Layers` tab, activate popup for both layers. You can "
+"configure source of the popup if you need specific layouts"
+msgstr ""
+" :guilabel:` レイヤ ` "
+"タブで、両方のレイヤーに対して地物情報を有効にします。特定のレイアウトが必要な場合は、地物情報のソースを設定することができます。"
+
+#: ../../source/publish/configuration/popup.rst:279
+msgid ""
+"For the parent layer, activate the option :guilabel:`Display relative "
+"children under each object (use relations)`"
+msgstr "‎上位レイヤーの場合は、有効なオプション :guilabel:` 各オブジェクトの下に相対子を表示する(リレーションを使用) `"
+
+#: ../../source/publish/configuration/popup.rst:280
+msgid ""
+"*Optionally*, add the two layers in the :guilabel:`Attribute table` tab"
+msgstr " * オプション * で、 :guilabel:`Attribute table`  タブに2つのレイヤーを追加します。"
+
+#: ../../source/publish/configuration/popup.rst:281
+msgid ""
+"*Optionally*, you can activate editing for the two layers, to allow the web "
+"users to create new features and upload pictures"
+msgstr ""
+"* オプション * で、2つのレイヤーの編集を有効にし、Webユーザーが新しい地物を作成したり、画像をアップロードできるようにすることができます。"
+
+#: ../../source/publish/configuration/popup.rst:282
+msgid "Save and publish your project and Lizmap configuration"
+msgstr "‎プロジェクトと Lizmap の設定を保存して公開する‎"
+
+#: ../../source/publish/configuration/popup.rst:284
+msgid "In Lizmap Web Client:"
+msgstr "lizmap Web クライアントで次の手順を実行します。‎"
+
+#: ../../source/publish/configuration/popup.rst:289
+msgid ""
+"If relative children popup are defined as ``Automatic``, this button will be"
+" visible in the feature's popup at the top of related objects. Click it to "
+"compact all related objects in one table with search, sort and paging "
+"capabilities."
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:293
 msgid "Display children in a compact way"
 msgstr "下位をコンパクトに表示する‎"
 
-#: ../../source/publish/configuration/popup.rst:279
+#: ../../source/publish/configuration/popup.rst:295
 msgid ""
 "You can change the way children are displayed and make them look like a "
 "table. For that, you will need to adapt the HTML of your children layer and "
@@ -2685,17 +2745,17 @@ msgstr ""
 "下位の表示方法を変更し、下位をテーブルのように見せることができます。そのためには、下位レイヤーの HTML "
 "を調整し、いくつかのクラスを使用して操作する必要があります。‎"
 
-#: ../../source/publish/configuration/popup.rst:281
+#: ../../source/publish/configuration/popup.rst:297
 msgid "\"lizmap_merged\" : You need to attribute this class to your table"
 msgstr "‎\"lizmap_merged\" : このクラスをテーブルに属性付けする必要があります。‎"
 
-#: ../../source/publish/configuration/popup.rst:282
+#: ../../source/publish/configuration/popup.rst:298
 msgid ""
 "lizmapPopupHeader : If you want to have a better display of your headers, "
 "you will need to put this class in the '<tr>' who contains them"
 msgstr "‎lizmapPopupHeader : ヘッダーをより良く表示するには、このクラスを '‎<tr>‎' それらを含む人‎"
 
-#: ../../source/publish/configuration/popup.rst:283
+#: ../../source/publish/configuration/popup.rst:299
 msgid ""
 "lizmapPopupHidden : This class permit you to hide some elements of your "
 "children that you want to hide when there are used as a child but you still "
@@ -2704,7 +2764,7 @@ msgstr ""
 "lizmapPopupHidden: "
 "このクラスでは、下位として使用されているときに非表示にし、地物情報をメインポップアップとして表示する場合は、それらを表示したい下位の要素を非表示にできます。‎"
 
-#: ../../source/publish/configuration/popup.rst:285
+#: ../../source/publish/configuration/popup.rst:301
 msgid "Here an example:"
 msgstr "‎例を次に示します。‎"
 
@@ -2847,6 +2907,7 @@ msgstr ""
 "ブラウザーで定義できる領域であり、ユーザーはマップの説明とマップ タイトルを設定することもできます。‎"
 
 #: ../../source/publish/configuration/print.rst:57
+#: ../../source/publish/lizmap_plugin/map_options.rst:43
 msgid "Scales"
 msgstr "縮尺"
 
@@ -3231,22 +3292,6 @@ msgstr ""
 "‎プロジェクトやデータが多数ある場合、検索機能を提供する最善のソリューションは、データベース内に専用のリレーションシップ (テーブルまたはビュー) "
 "を設定することです。PostgreSQL データベースを使用して検索データを格納することができます。‎"
 
-#: ../../source/publish/configuration/spatial_search.rst:24
-#: ../../source/publish/configuration/spatial_search.rst:149
-#: ../../source/publish/customization/javascript.rst:24
-#: ../../source/publish/customization/template.rst:11
-#: ../../source/publish/customization/themes.rst:30
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:17
-#: ../../source/publish/lizmap_plugin/dataviz.rst:29
-#: ../../source/publish/lizmap_plugin/edition.rst:36
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:45
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:31
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:25
-#: ../../source/publish/lizmap_plugin/time_manager.rst:21
-#: ../../source/publish/lizmap_plugin/tooltip.rst:15
-msgid "Prerequisites"
-msgstr "‎前提条件‎"
-
 #: ../../source/publish/configuration/spatial_search.rst:26
 msgid "A PostgreSQL database, accessible from Lizmap Web Client."
 msgstr "lizmap Web クライアントからアクセスできるのは PostgreSQL データベース。‎"
@@ -3316,6 +3361,9 @@ msgid ""
 "set, the search will be done only for the specified Lizmap projects. The "
 "value can be ``NULL`` if you don't want to filter per project."
 msgstr ""
+"item_project`` (テキスト). "
+"Lizmapプロジェクトをカンマで区切ってリストアップする。設定すると、指定したLizmapのプロジェクトのみを検索対象とする。プロジェクト単位でフィルタリングを行わない場合は、この値を"
+" ``NULL`` にすることができます。"
 
 #: ../../source/publish/configuration/spatial_search.rst:60
 msgid ""
@@ -3323,6 +3371,9 @@ msgid ""
 " be filtered by authenticated user login and groups. For example, 'admins'. "
 "The value can be ``NULL`` if you don't want to filter per user."
 msgstr ""
+"item_filter`` (テキスト). "
+"ユーザー名またはグループ名。指定すると、認証されたユーザーのログイン名とグループ名でフィルタリングされた結果が得られる。例えば、'admins' "
+"といった具合である。ユーザーごとにフィルタリングしたくない場合は、値を ``NULL`` にすることができる。"
 
 #: ../../source/publish/configuration/spatial_search.rst:61
 msgid ""
@@ -4110,7 +4161,7 @@ msgid "Name of the current project"
 msgstr "Name of the current project"
 
 #: ../../source/publish/customization/javascript.rst:113
-#: ../../source/publish/lizmap_plugin/dataviz.rst:239
+#: ../../source/publish/lizmap_plugin/dataviz.rst:258
 #: ../../source/publish/lizmap_plugin/edition.rst:27
 msgid "Examples"
 msgstr "‎例‎"
@@ -4380,6 +4431,21 @@ msgid ""
 "By following these steps, we keep our custom theme as small as possible."
 msgstr "‎これらの手順に従うことで、カスタム テーマはできるだけ小さく保ちます。‎"
 
+#: ../../source/publish/customization/themes.rst:115
+msgid "Additional CSS"
+msgstr "追加CSS"
+
+#: ../../source/publish/customization/themes.rst:117
+msgid ""
+"In :menuselection:`Server administration panel -> Theme`, it's possible to "
+"add some CSS without creating files like the step before. For instance, a "
+"quick tip to remove the title `Projects` from the header in the landing page"
+" :"
+msgstr ""
+"menuselection:`Server administration panel -> "
+"Theme`では、前のステップのようにファイルを作成することなく、いくつかのCSSを追加することが可能です。例えば、ランディングページのヘッダーから "
+"`Projects` というタイトルを削除する簡単なヒントがあります。"
+
 #: ../../source/publish/index.rst:3
 msgid "Publisher guide"
 msgstr "公開ガイド‎"
@@ -4421,7 +4487,7 @@ msgstr ""
 "がチェックされている場合は、リストの最初のレイヤーが使用されます。‎"
 
 #: ../../source/publish/lizmap_plugin/atlas.rst:26
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:25
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:32
 #: ../../source/publish/lizmap_plugin/dataviz.rst:52
 #: ../../source/publish/lizmap_plugin/time_manager.rst:33
 msgid "At the layer level"
@@ -4431,26 +4497,11 @@ msgstr "‎レイヤー レベルで‎"
 msgid "For setting a atlas layer:"
 msgstr "地図帳レイヤーの設定:‎"
 
-#: ../../source/shared/add_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/atlas.rst>:1
-#: ../../source/shared/add_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/add_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/add_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/add_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/add_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/add_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/form_filtering.rst>:1
-#: ../../source/shared/add_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/locate_by_layer.rst>:1
-#: ../../source/shared/add_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/time_manager.rst>:1
-#: ../../source/shared/add_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/tooltip.rst>:1
+#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
+#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
+#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
+#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
+#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
 msgid "Click the |add_layer_svg| button."
 msgstr "ボタン |add_layer_svg| をクリックします。"
 
@@ -4504,71 +4555,39 @@ msgstr "地図帳によって選択された地物のフィルタを有効にす
 msgid "you can select the duration between each step"
 msgstr "‎各ステップ間の期間を選択できます‎"
 
-#: ../../source/shared/edit_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/atlas.rst>:1
-#: ../../source/shared/edit_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/edit_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/edit_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/edit_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/edit_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/edit_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/form_filtering.rst>:1
-#: ../../source/shared/edit_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/locate_by_layer.rst>:1
-#: ../../source/shared/edit_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/time_manager.rst>:1
-#: ../../source/shared/edit_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/tooltip.rst>:1
+#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
+#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
+#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
+#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
+#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
 msgid ""
 "To edit a layer in the table, select it and click the |edit_layer_svg| "
 "button or double click on the row."
 msgstr ""
 "‎テーブル内のレイヤーを編集するには、レイヤーを選択して、 |edit_layer_svg| ボタンをクリックするか、行をダブルクリックします。‎"
 
-#: ../../source/shared/remove_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/atlas.rst>:1
-#: ../../source/shared/remove_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/remove_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/remove_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/remove_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/remove_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/remove_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/form_filtering.rst>:1
-#: ../../source/shared/remove_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/locate_by_layer.rst>:1
-#: ../../source/shared/remove_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/time_manager.rst>:1
-#: ../../source/shared/remove_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/tooltip.rst>:1
+#: ../../source/shared/remove_layer.rst:1
+#: ../../source/shared/remove_layer.rst:1
+#: ../../source/shared/remove_layer.rst:1
+#: ../../source/shared/remove_layer.rst:1
+#: ../../source/shared/remove_layer.rst:1
+#: ../../source/shared/remove_layer.rst:1
+#: ../../source/shared/remove_layer.rst:1
+#: ../../source/shared/remove_layer.rst:1
+#: ../../source/shared/remove_layer.rst:1
+#: ../../source/shared/remove_layer.rst:1
 msgid ""
 "To remove a layer from the table, select it and click the |remove_layer_svg|"
 " button."
 msgstr "‎テーブルからレイヤーを削除するには、レイヤーを選択して、 |remove_layer_svg| ボタン。‎"
 
-#: ../../source/shared/move_up_down_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/atlas.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/form_filtering.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/locate_by_layer.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/time_manager.rst>:1
+#: ../../source/shared/move_up_down_layer.rst:1
+#: ../../source/shared/move_up_down_layer.rst:1
+#: ../../source/shared/move_up_down_layer.rst:1
+#: ../../source/shared/move_up_down_layer.rst:1
+#: ../../source/shared/move_up_down_layer.rst:1
+#: ../../source/shared/move_up_down_layer.rst:1
+#: ../../source/shared/move_up_down_layer.rst:1
 msgid ""
 "To move a layer up or down, select it and click |down_layer_svg| or "
 "|up_layer_svg| buttons. The order will change in Lizmap too."
@@ -4577,7 +4596,7 @@ msgstr ""
 "ボタン。lizmapでも順序が変わります。‎"
 
 #: ../../source/publish/lizmap_plugin/atlas.rst:50
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:51
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:58
 #: ../../source/publish/lizmap_plugin/dataviz.rst:89
 #: ../../source/publish/lizmap_plugin/time_manager.rst:57
 msgid "At the project level"
@@ -4597,11 +4616,11 @@ msgid ""
 "check if you want to launch the auto-play mode when you open your project"
 msgstr "‎プロジェクトを開くときに自動再生モードを起動する場合に確認します‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:4
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:6
 msgid "Attribute table"
 msgstr "‎属性テーブル‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:12
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:14
 msgid ""
 "Lizmap is designed to show spatial data in the main map, and you can propose"
 " users to see an object data through the \"popup\" feature (a small popup "
@@ -4612,7 +4631,7 @@ msgstr ""
 "データを表示するようユーザーに提案できます (「ユーザーがマップ上をクリックするたびにオブジェクトデータを含む小さな地物情報が表示されます」)。 "
 ":ref:`popup`"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:14
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:17
 msgid ""
 "Sometimes this is not enough, and as a map editor, you would like the user "
 "to see all the data of a specific layer, as you can do in QGIS by opening "
@@ -4620,30 +4639,13 @@ msgid ""
 msgstr ""
 "‎場合によっては、これは十分ではなく、マップエディタとして、属性テーブルを開くことによってQGISで行うことができるように、特定のレイヤーのすべてのデータをユーザーに表示したいと考えています。‎"
 
-#: ../../source/shared/wfs_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/form_filtering.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/locate_by_layer.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/time_manager.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/tooltip.rst>:1
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:21
 msgid ""
-"The layer must be published as WFS (see :ref:`publish_layer_wfs`) and the "
-"primary key must be published as well in the :guilabel:`Layer properties`."
+"When activating the attibute table on a layer, it also activates graphical "
+"**selection** tools."
 msgstr ""
-"‎レイヤーは WFS として公開する必要があり ( :ref:`publish_layer_wfs` を参照)、主キーは "
-"、同様に公開する必要があります。 :guilabel:` レイヤプロパティ ` で同様に公開する必要があります。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:30
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:37
 msgid ""
 "In the **Tools** tab of Lizmap plugin dialog, there is a group called "
 "\"Attribute layers\" which shows a table and some form fields dedicated to "
@@ -4652,12 +4654,12 @@ msgstr ""
 "‎Lizmap プラグインダイアログの **Tools** "
 "タブには、ベクターレイヤーを追加または削除するためのテーブルといくつかのフォームフィールドを表示する「属性レイヤー」というグループがあります。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:32
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:39
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:41
 msgid "To add a layer to this tool:"
 msgstr "‎このツールにレイヤーを追加するには:‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:35
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:42
 msgid ""
 "**Layer**: Choose one of the vector layers (spatial or not). This can be any"
 " vector layer format : GeoJSON, Shapefile, PostGIS, CSV, etc."
@@ -4665,7 +4667,7 @@ msgstr ""
 "‎**レイヤー** : ベクターレイヤーの1つを選択します(空間的かどうか)。これは、任意のベクターレイヤー形式にすることができます:GeoJSON, "
 "Shapefile, PostGIS, CSV,等.‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:36
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:43
 msgid ""
 "**Unique ID**: The attribute table tool needs to be able to defined each "
 "feature as unique. We strongly advise you to add such a field if your layer "
@@ -4678,13 +4680,13 @@ msgstr ""
 " フィールドには **整数** が含まれます。レイヤーにこの種類のフィールドがない場合は、*フィールド演算*で簡単に作成できます。コンボ "
 "ボックスで適切なフィールドを選択します。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:37
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:44
 msgid ""
 "**Fields to hide**: You have 2 ways of hiding fields in the published "
 "attribute table."
 msgstr "‎**非表示にするフィールド** : 公開された属性テーブルのフィールドを非表示にする 2 つの方法があります。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:39
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:46
 msgid ""
 "In the *vector layer properties dialog* of the QGIS vector layer, in the "
 "*Fields* tab, you can uncheck the checkbox of the column **WFS** for the "
@@ -4697,7 +4699,7 @@ msgstr ""
 "プロトコルを介して公開されません。これは、文書をいくつかのフィールドに制限する **最も簡単で最も簡単な方法** "
 "です(たとえば、機密フィールドを取り除くために)。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:40
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:47
 msgid ""
 "You can use this **Fields to hide** option to **hide** the given fields in "
 "the attribute table display. The hidden fields won't be visible for the end "
@@ -4711,64 +4713,58 @@ msgstr ""
 "**このオプションを使用して、固有のID フィールドを非表示にする必要があります** 最初の方法 (WFS 列のチェックを外す) "
 "を使用すると、固有のID は Lizmap で使用できなくなり、属性テーブルフィーチャの一部が正しく機能しません。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:41
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:48
 msgid "Let the :guilabel:`Pivot table` unchecked. This is for relation."
 msgstr "‎:guilabel:` ピボットテーブル ` をオフにします。これはリレーションのためのものです。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:42
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:49
 msgid ""
 "Let the :guilabel:`Hide in child subpanels` unchecked. This is for relation."
 msgstr "‎:guilabel:` 下位サブパネルで非表示にする ` チェックを外します。これはリレーションのためのものです。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:43
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:50
 msgid ""
 "Let the :guilabel:`Hide layer in the list` unchecked. This is for relation."
 msgstr "‎:guilabel:` リスト内のレイヤーを非表示にする ` チェックを外します。これはリレーションのためのものです。‎"
 
-#: ../../source/shared/field_alias.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/field_alias.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/field_alias.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/field_alias.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/tooltip.rst>:1
+#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
+#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
 msgid ""
 "Fields will be displayed with their alias if it's defined. See "
 ":ref:`alias_on_fields`."
 msgstr ""
 "‎フィールドが定義されている場合は、エイリアスとともにフィールドが表示されます。参照してください :ref:`alias_on_fields` 。"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:57
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:64
 msgid "Order of fields"
 msgstr "‎フィールドの順序‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:59
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:66
 msgid ""
 "Lizmap is reusing the order of the fields defined in the attribute table."
 msgstr "‎Lizmap は、属性テーブルで定義されているフィールドの順序を再利用しています。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:61
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:68
 msgid "Open your attribute table."
 msgstr "‎属性テーブルを開きます。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:62
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:69
 msgid "Right click on a column header."
 msgstr "‎列ヘッダーを右クリックします。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:63
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:70
 msgid "Click :guilabel:`organize Columns…`"
 msgstr ":guilabel:` 列を整理... `をクリックします。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:64
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:71
 msgid "Drag and drop columns."
 msgstr "‎列をドラッグ アンド ドロップします。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:70
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:77
 msgid "Download data"
 msgstr "‎データのダウンロード‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:72
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:79
 msgid ""
 "By adding the layer in the attribute table tool, this will also enable the "
 "download capability on that layer. By default, only GeoJSON and GML are "
@@ -4780,11 +4776,11 @@ msgstr ""
 "のみが使用できます。QGISサーバーに「WfsOutputExtension」プラグインをインストールすることで、ジオパッケージ、ODS、CSV、XLSXなどのフォーマットを追加できます。https://github.com/3liz/qgis-"
 "wfsOutputExtension を読む‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:80
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:87
 msgid "Using with relations"
 msgstr "‎リレーションとの使用‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:82
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:89
 msgid ""
 "In QGIS, you can configure **relations** between layers, in the **project "
 "properties** dialog. If you publish in Lizmap more than one layers in the "
@@ -4797,7 +4793,7 @@ msgstr ""
 "で複数のレイヤーを属性レイヤー ツールで公開し、一部のレイヤーがリレーションの一部である場合、エンド ユーザーは上位レイヤー "
 "テーブルの下に下位テーブルを表示でき、上位テーブルの 1 行をクリックすると下位テーブルコンテンツのフィルターが起動されます。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:84
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:91
 msgid ""
 "For example, you could have a layer of cities, and a child layer of public "
 "building. Clicking on one city in the attribute table will make the public "
@@ -4807,7 +4803,7 @@ msgstr ""
 "‎たとえば、都市のレイヤーと公共の建物の下位レイヤーを持つことができます。属性テーブル内の 1 "
 "つの都市をクリックすると、クリックした都市の公共の建物だけで、パブリック ビルの下位テーブルの内容が更新されます。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:86
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:93
 msgid ""
 "You can use \"many-to-many\" (N:M) relations in QGIS since version 2.14 but "
 "Lizmap doesn't use it automatically yet. You have to define the relations in"
@@ -4818,7 +4814,7 @@ msgstr ""
 "プラグインでもリレーションを定義する必要があります。多くの場合、N:M の関係は非常に便利です。たとえば、プロジェクトに次の 3 つのベクター "
 "レイヤーを使用できます。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:88
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:95
 msgid ""
 "**Tramway lines**: this layers name \"Lines\" contains one feature per tram "
 "line, and has a unique ID field *tram_id*"
@@ -4826,7 +4822,7 @@ msgstr ""
 "‎**Tramway lines** :このレイヤー名「Lines」は、トラムラインごとに1つの地物と固有のIDフィールド *tram_id*‎ "
 "を持ちます"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:89
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:96
 msgid ""
 "**Tramway stops**: this layer named \"Stops\" contains one feature per tram "
 "stop, with a unique ID field called *stop_id*"
@@ -4834,7 +4830,7 @@ msgstr ""
 "‎**Tramway stops** :このレイヤーは、 *stop_id* "
 "と呼ばれる固有のIDフィールドを持つトラム停留所ごとに1つの地物が含まれています‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:90
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:97
 msgid ""
 "**Correspondance table between lines and stops**: this layer named \"Pivot\""
 " is a pivot table between tram lines and stops, since a stop can be used for"
@@ -4846,7 +4842,7 @@ msgstr ""
 ":このレイヤーは、停留所が複数のラインに使用でき、ラインが多くの停留所に対応するため、トラムラインとストップ間のピボットテーブルです。このフィールドには、"
 " *tram_id* 、 *stop_id* 、および*order*のフィールドがあり、行のストップの順序を定義します。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:92
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:99
 msgid ""
 "You can add 2 relations in QGIS project properties : one between Lines and "
 "Pivot using the tram_id field, and one between Stops and Pivot using the "
@@ -4854,39 +4850,39 @@ msgid ""
 msgstr ""
 "‎QGISプロジェクトプロパティに2つのリレーションを追加できます:tram_idフィールドを使用してラインとピボットの間の1つと、stop_idフィールドを使用してストップとピボットの間の1つ。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:94
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:101
 msgid ""
 "In Lizmap, we added a simple way to configure the N:M relation. You can "
 "simply"
 msgstr "‎Lizmap では、N:M 関係を設定する簡単な方法を追加しました。あなたは、単にすることができます‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:96
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:103
 msgid ""
 "Create the two relations described above in QGIS project properties dialog, "
 "tab **Relations**"
 msgstr "‎QGISプロジェクトプロパティダイアログ、タブ **リレーション** で上記の2つの関係を作成します。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:97
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:104
 msgid "Add the Lines and Stops layers in the attribute layers tool"
 msgstr "‎属性レイヤー ツールでライン レイヤーとストップ レイヤーを追加する‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:98
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:105
 msgid ""
 "Add the Pivot layer in the attribute layers tool with the option **Pivot "
 "table** checked"
 msgstr "‎オプション **Pivot table** をオンにして、属性レイヤー ツールにピボット レイヤーを追加します。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:100
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:107
 msgid "Lizmap Web Client will then handle the relation as a N:M relation:"
 msgstr "‎その後、Lizmap Web クライアントは、リレーションを N:M リレーションとして処理します。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:102
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:109
 msgid ""
 "The pivot table will be displayed under each parent attribute table and show"
 " only the corresponding children."
 msgstr "‎ピボットテーブルは各親属性テーブルの下に表示され、対応する下位のみが表示されます。‎"
 
-#: ../../source/publish/lizmap_plugin/attribute_table.rst:103
+#: ../../source/publish/lizmap_plugin/attribute_table.rst:110
 msgid ""
 "The filter feature based on the attribute layers will trigger the cascading "
 "filter of the pivot and the other parent. For example, if the user uses the "
@@ -4945,100 +4941,97 @@ msgstr "‎*オープンストリートマップ* 、‎‎自由でオープン
 msgid "OSM Mapnik: service available on openstreetmap.org"
 msgstr "OSM Mapnik::‎‎openstreetmap.org で利用できるサービス‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:38
-msgid ""
-"*ThunderForest*, company using OSM data and providing tiles: * Open Cycle "
-"Map: OpenStreetMap cycling data including altitude information"
+#: ../../source/publish/lizmap_plugin/basemap.rst:37
+msgid "OSM stamen toner"
 msgstr ""
-"‎*ThunderForest* 、OSMデータを使用し、タイルを提供する会社:*Open Cycle "
-"Map:高度情報を含むOpenStreetMapサイクリングデータ‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:41
-msgid "*Google*, requires compliance to use licence agreement:"
-msgstr "‎*グーグル* 、‎‎ライセンス契約を使用するには、コンプライアンスが必要です。‎"
+#: ../../source/publish/lizmap_plugin/basemap.rst:38
+msgid "OpenTopoMap"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/basemap.rst:40
+msgid ""
+"*ThunderForest*, **API key required**: * Open Cycle Map: OpenStreetMap "
+"cycling data including altitude information"
+msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:43
+msgid "*Google*, **API key required**:"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/basemap.rst:45
 msgid "Streets: the default Google Maps background layer"
 msgstr "Streets：‎‎標準の Google マップの背景レイヤー‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:44
-#: ../../source/publish/lizmap_plugin/basemap.rst:51
+#: ../../source/publish/lizmap_plugin/basemap.rst:46
+#: ../../source/publish/lizmap_plugin/basemap.rst:53
 msgid ""
 "Satellite: the background map incorporating aerial and satellite images"
 msgstr "Satellite:航空写真と衛星画像を取り入れた背景地図‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:45
-#: ../../source/publish/lizmap_plugin/basemap.rst:52
+#: ../../source/publish/lizmap_plugin/basemap.rst:47
+#: ../../source/publish/lizmap_plugin/basemap.rst:54
 msgid "Hybrid: the background map mixing streets and satellite"
 msgstr "Hybrid:背景マップは、streets and satelliteを混合‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:46
+#: ../../source/publish/lizmap_plugin/basemap.rst:48
 msgid "Terrain"
 msgstr "Terrain"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:48
-msgid ""
-"*Bing Map*, requires compliance with the Microsoft license agreement and "
-"therefore a key:"
-msgstr "*Bing Map* ,‎‎には、マイクロソフトのライセンス契約に準拠する必要があります。‎"
-
 #: ../../source/publish/lizmap_plugin/basemap.rst:50
+msgid "*Bing Map*, **API key required**:"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/basemap.rst:52
 msgid "Streets: the default Bing Map background layer"
 msgstr "Streets: デフォルトのBing マップ背景レイヤー‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:54
-msgid ""
-"*IGN Géoportail*, requires compliance with the IGN license agreement and "
-"therefore a key:"
-msgstr "*IGN Géoportail* は、IGNライセンス契約に準拠する必要があり、したがってキーが必要:‎"
-
 #: ../../source/publish/lizmap_plugin/basemap.rst:56
+msgid "*IGN Géoportail*, **API key required** for one layer:"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/basemap.rst:58
 msgid "Plan: The IGN rendering for the Web"
 msgstr "‎Plan: Web 用の IGN レンダリング‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:57
+#: ../../source/publish/lizmap_plugin/basemap.rst:59
 msgid ""
 "Satellite: the background map incorporating IGN aerial and satellite images"
 msgstr "Satellite: IGN航空画像と衛星画像を取り入れた背景地図‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:58
-msgid "Scan: the background map mixing the various IGN scan"
-msgstr "Scan:さまざまなIGNスキャンを混合する背景マップ‎"
+#: ../../source/publish/lizmap_plugin/basemap.rst:60
+msgid "Scan: the background map mixing the various IGN scan, API key needed"
+msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:59
+#: ../../source/publish/lizmap_plugin/basemap.rst:61
 msgid "Cadastre"
 msgstr "Cadastre"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:61
+#: ../../source/publish/lizmap_plugin/basemap.rst:63
 msgid "The licenses are available at the following URLs:"
 msgstr "‎ライセンスは次の URL で入手できます。‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:63
-msgid "*OpenStreetMap*: https://wiki.openstreetmap.org/wiki/Tile_usage_policy"
+#: ../../source/publish/lizmap_plugin/basemap.rst:65
+msgid "*OpenStreetMap*: https://operations.osmfoundation.org/policies/tiles/"
 msgstr ""
-"*OpenStreetMap* : https://wiki.openstreetmap.org/wiki/Tile_usage_policy"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:64
+#: ../../source/publish/lizmap_plugin/basemap.rst:66
 msgid "*Google*: https://cloud.google.com/maps-platform/terms/"
 msgstr "*Google* : https://cloud.google.com/maps-platform/terms/"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:65
+#: ../../source/publish/lizmap_plugin/basemap.rst:67
 msgid "*Bing*: https://www.microsoft.com/en-us/maps/product"
 msgstr "*Bing* : https://www.microsoft.com/en-us/maps/product"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:66
-msgid ""
-"*IGN*: https://depot.ign.fr/geoportail/api/develop/tech-docs-"
-"js/fr/license.html"
+#: ../../source/publish/lizmap_plugin/basemap.rst:68
+msgid "*IGN*: https://geoservices.ign.fr/catalogue"
 msgstr ""
-"*IGN* : https://depot.ign.fr/geoportail/api/develop/tech-docs-"
-"js/fr/license.html"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:69
+#: ../../source/publish/lizmap_plugin/basemap.rst:71
 msgid "Scale with external base layer"
 msgstr "‎外部ベース レイヤーを使用したスケール‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:71
+#: ../../source/publish/lizmap_plugin/basemap.rst:73
 msgid ""
 "All these external base layer are provided only in **EPSG:3857 / Pseudo "
 "Mercator** from the provider. The scale of such layer are **fixed** by the "
@@ -5047,7 +5040,7 @@ msgstr ""
 "‎これらすべての外部ベースレイヤーは、プロバイダからの **EPSG:3857 /  Pseudo Mercator** "
 "でのみ提供されます。このようなレイヤのスケールは、投影EPSG:3857によって **固定** である。‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:75
+#: ../../source/publish/lizmap_plugin/basemap.rst:77
 msgid ""
 "As a result, if you choose an external base layer, the project **will be "
 "displayed** in Google Mercator EPSG:3857. Therefore, if you have specified "
@@ -5059,7 +5052,7 @@ msgstr ""
 "設定で複数の縮尺を指定した場合、これらの中間スケールは使用 **されません** 、**のみ** の場合は **最小** および **最大** "
 "縮尺が使用されます。おおよその縮尺については以下をお読みください。‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:84
+#: ../../source/publish/lizmap_plugin/basemap.rst:86
 msgid ""
 "QGIS Server will perform **on the fly reprojection** for your data. It is "
 "therefore necessary to prepare the QGIS project accordingly."
@@ -5067,7 +5060,7 @@ msgstr ""
 "‎QGISサーバーは、あなたのデータの **オンザフライ再投影** "
 "を実行します。したがって、それに応じてQGISプロジェクトを準備する必要があります。‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:87
+#: ../../source/publish/lizmap_plugin/basemap.rst:89
 msgid ""
 "The *Google Mercator* coordinate reference system must be added in the Web "
 "Services CRSs list with the :menuselection:`Project properties --> QGIS "
@@ -5076,33 +5069,33 @@ msgstr ""
 "‎*Google Mercator* 座標参照系は、WebサービスのCRSリストに :menuselection:` プロジェクトプロパティ "
 "-->QGISサーバー --> WMS ` と一緒に追加する必要があります。‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:90
+#: ../../source/publish/lizmap_plugin/basemap.rst:92
 msgid ""
 "This is a list of a **very approximate** integer scale for a given zoom "
 "level for the **EPSG:3857**::"
 msgstr "‎**EPSG:3857** ::の特定のズームレベルのための **非常に近似** 整数の縮尺のリストです:‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:115
+#: ../../source/publish/lizmap_plugin/basemap.rst:117
 msgid ""
 "These scales are just a hint of the scale. It is not possible to have "
 "rounded scale like this with EPSG:3857."
 msgstr "‎これらの縮尺は、縮尺のヒントに過ぎません。EPSG:3857では、このような丸め縮尺を持つことは不可能です。‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:118
+#: ../../source/publish/lizmap_plugin/basemap.rst:120
 msgid ""
 "Visit the OpenStreetMap website at the country level and check how the scale"
 " is changing while panning/zooming."
 msgstr "‎国レベルでOpenStreetMapのウェブサイトにアクセスし、パン/ズーム中に縮尺がどのように変化しているかを確認してください。‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:120
+#: ../../source/publish/lizmap_plugin/basemap.rst:122
 msgid "https://www.openstreetmap.org/#map=6/48.995/4.856"
 msgstr "https://www.openstreetmap.org/#map=6/48.995/4.856"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:123
+#: ../../source/publish/lizmap_plugin/basemap.rst:125
 msgid "External Lizmap layers"
 msgstr "‎外部 Lizmap レイヤー‎"
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:125
+#: ../../source/publish/lizmap_plugin/basemap.rst:127
 msgid ""
 "This feature has been removed. It's replaced by the possibility of using the"
 " menu :menuselection:`Layer --> Embed Layers and Groups`, and in the plugin "
@@ -5221,12 +5214,6 @@ msgstr "‎**Xフィールド** : グラフの X フィールド。いくつか�
 msgid "**Aggregation**"
 msgstr "‎** 集計 **‎"
 
-#: ../../source/publish/lizmap_plugin/dataviz.rst:65
-msgid ""
-"For a few types of charts like bar or pie, you can chose to aggregate the "
-"data in"
-msgstr ""
-
 #: ../../source/publish/lizmap_plugin/dataviz.rst:67
 msgid ""
 "the graph. There are a few aggregate functions available - average(avg), "
@@ -5249,10 +5236,8 @@ msgstr "‎グラフの種類に応じて、さまざまなオプションが表
 msgid ""
 "**Layout** : The layout can be customized. It must be a JSON dictionary. You"
 " can read the documentation of Plotly documentation about the layout "
-"configuration https://plotly.com/javascript/reference/#layout"
+"configuration https://plotly.com/javascript/reference/layout/"
 msgstr ""
-"‎**レイアウト** :レイアウトをカスタマイズすることができます。JSON ディクショナリである必要があります。レイアウト設定に関する Plotly "
-"ドキュメントのドキュメントを参照 https://plotly.com/javascript/reference/#layout"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:72
 msgid ""
@@ -5318,9 +5303,8 @@ msgstr "‎JSON レイアウト‎"
 msgid ""
 "The layout option, allows you to configure many options by writing up a JSON"
 " object. See the full reference: "
-"https://plotly.com/javascript/reference/#layout"
+"https://plotly.com/javascript/reference/layout/"
 msgstr ""
-"‎レイアウトオプションを使用すると、JSONオブジェクトを書き込み、多くのオプションを設定できます。完全なリファレンスを参照してください。‎https://plotly.com/javascript/reference/#layout"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:126
 msgid ""
@@ -5361,41 +5345,55 @@ msgid "You can combine any of the properties, for example:"
 msgstr "‎次の例に示すプロパティを組み合わせることができます。‎"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:194
+msgid "Other customisation with JavaScript scripts"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/dataviz.rst:196
+msgid "We can also modify charts with some JavaScript scripts."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/dataviz.rst:198
+msgid ""
+"You can decide to not have any number after the comma for the first chart "
+"(id: dataviz_plot_0), for example:"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/dataviz.rst:213
 msgid "Types of charts"
 msgstr "‎グラフの種類‎"
 
-#: ../../source/publish/lizmap_plugin/dataviz.rst:196
+#: ../../source/publish/lizmap_plugin/dataviz.rst:215
 msgid ""
 "The dataviz module will aggregate every **traces** for all unique **X** "
 "values."
 msgstr "データの可視化モジュールは、すべての固有の **X** 値に対してすべての **traces** を集計します。‎"
 
-#: ../../source/publish/lizmap_plugin/dataviz.rst:199
+#: ../../source/publish/lizmap_plugin/dataviz.rst:218
 msgid "HTML templates"
 msgstr "‎HTML テンプレート‎"
 
-#: ../../source/publish/lizmap_plugin/dataviz.rst:201
+#: ../../source/publish/lizmap_plugin/dataviz.rst:220
 msgid ""
 "A trace must be referenced by ``{y1}`` where ``1`` is the trace number."
 msgstr "トレースは  ``{y1}`` で参照する必要があり、 ``1`` はトレース番号です。"
 
-#: ../../source/publish/lizmap_plugin/dataviz.rst:233
+#: ../../source/publish/lizmap_plugin/dataviz.rst:252
 msgid "Miscellaneous"
 msgstr "その他"
 
-#: ../../source/publish/lizmap_plugin/dataviz.rst:235
+#: ../../source/publish/lizmap_plugin/dataviz.rst:254
 msgid ""
 "For **pie chart** : the items in the legend are ordered by X as a default "
 "behaviour."
 msgstr "‎**円グラフ** の場合: 凡例の項目は、デフォルトの動作として X で並べ替えられます。‎"
 
-#: ../../source/publish/lizmap_plugin/dataviz.rst:236
+#: ../../source/publish/lizmap_plugin/dataviz.rst:255
 msgid ""
 "QGIS Field **aliases** are used in the tooltip when hovering the bar or pie "
 "slices."
 msgstr "‎QGISフィールド **エイリアス** は、棒グラフや円グラフをホバリングするときにツールチップで使用されます。‎"
 
-#: ../../source/publish/lizmap_plugin/dataviz.rst:241
+#: ../../source/publish/lizmap_plugin/dataviz.rst:260
 msgid "You can visit the Cats project on https://demo.lizmap.com"
 msgstr "‎あなたはプロジェクトを訪問することができます‎ https://demo.lizmap.com"
 
@@ -6138,29 +6136,26 @@ msgstr "‎例を含むビデオを見ることができます。‎: https://vi
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:41
 msgid ""
-"There is a new tab in the Lizmap plugin which lets you configure the filter "
+"There is a tab in the Lizmap plugin which lets you configure the filter "
 "inputs based on the layer fields. You can add one or more fields for one or "
 "more layer. If you add fields from 2 or more different layers, Lizmap Web "
 "Client will show a combo box to allow the user to choose the layer to "
 "filter. Selecting a layer will refresh the form and deactivate the current "
 "filter."
 msgstr ""
-"‎Lizmap プラグインには新しいタブがあり、レイヤーフィールドに基づいてフィルター入力を設定できます。‎‎1 つ以上のレイヤーに 1 "
-"つ以上のフィールドを追加できます。‎‎2つ以上の複数の異なるレイヤーからフィールドを追加した場合、Lizmap Web "
-"クライアントは、ユーザーがフィルターするレイヤーを選択できるようにコンボボックスを表示します。‎‎レイヤーを選択すると、フォームが更新され、現在のフィルターが無効になります。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:43
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:46
 msgid ""
 "You need to add a line in the plugin table for each field you need to add in"
 " the filter form. For each field, you need to configure some options:"
 msgstr ""
 "‎フィルタフォームに追加する必要がある各フィールドに対して、プラグインテーブルに行を追加する必要があります。各フィールドに対して、いくつかのオプションを設定する必要があります。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:46
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:49
 msgid "**Layer**: the source layer."
 msgstr "‎**Layer** : ソースレイヤー。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:47
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:50
 msgid ""
 "**Title**: the title to give to the input, which will be displayed above the"
 " form input. For example \"Choose a category\" for a layer field called "
@@ -6168,19 +6163,19 @@ msgid ""
 msgstr ""
 "‎**Title** : タイトルは、フォーム入力の上に表示されます。例えば、「カテゴリ」という名前のレイヤーフィールドの「カテゴリを選択」。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:48
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:51
 msgid ""
 "**Type**: the type of the form input, among one of the following: **Text, "
 "Unique Values, Date, Numeric**."
 msgstr "‎**Type** : フォーム入力の種類はテキスト、固有の値、日付、数値 です。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:49
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:52
 msgid ""
 "**Field**: the field name (in the database table). Only for the Text, Unique"
 " Values and Numeric types."
 msgstr "‎**Field** : (データベーステーブル内の) フィールド名はテキスト、固有の値、および数値タイプのみです。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:50
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:53
 msgid ""
 "**Min date**: the field containing the start date of your object (ex: "
 "\"start_date\" of an event). This is only needed for the **Date** type. If "
@@ -6190,7 +6185,7 @@ msgstr ""
 "‎**Min date** : オブジェクトの開始日を含むフィールド (イベントの \"start_date\" など)。これは **Date** "
 "タイプでのみ必要です。データに日付フィールドが 1 つしかない場合は、最小日付フィールドで選択する必要があります。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:51
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:54
 msgid ""
 "**Max date**: the field containing the end date of your data. If you have 2 "
 "fields containing dates, one for the start date and another for the end "
@@ -6200,7 +6195,7 @@ msgstr ""
 "‎**最大日付** : データの終了日を含むフィールド。日付を含む 2 つのフィールドがあり、1 つは開始日、もう 1 "
 "つは終了日を区別できます。ない場合は、 **最小日付** と **最大日付** に同じフィールド名を使用する必要があります。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:52
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:55
 msgid ""
 "**Format**: the format of the **Unique values** type only. It can be "
 "**select**, which will show a combo box, or **checkboxes** which will show "
@@ -6211,7 +6206,7 @@ msgstr ""
 "、または各個別の値に対して1つのチェックボックスを表示する **チェックボックス** を指定できます。個別の値は、lizmap Web "
 "クライアントによって動的に照会されます。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:53
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:56
 msgid ""
 "**Splitter**: for the **Unique values** type only. Use if you want to split "
 "the field values by a separator. Ex: ``culture, environment`` can be split "
@@ -6220,15 +6215,15 @@ msgstr ""
 "‎**スプリッター** : **固有値** タイプのみ。区切り記号でフィールド値を分割する場合に使用します。例えば、``文化,環境``は、スプリッター "
 "**`, `** で``文化``と``環境``に分割することができます。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:60
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:63
 msgid "Description of the different form input types"
 msgstr "‎異なるフォーム入力タイプの説明"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:63
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:66
 msgid "Text"
 msgstr "‎テキスト‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:65
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:68
 msgid ""
 "This is the simplest type. With this type of input, the user will see a "
 "classical text input. You can type any text then validate. Autocompletion is"
@@ -6240,18 +6235,18 @@ msgstr ""
 " "
 "がこのフィールドの固有の値を取得することを意味します。これは、一部のデータセットが大きすぎて、このオートコンプリート地物が重すぎる場合に、将来的にオプションになる可能性があります。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:67
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:82
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:93
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:111
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:70
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:85
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:96
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:114
 msgid "The filter built will be like:"
 msgstr "‎作成されるフィルタは次のようになります。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:74
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:77
 msgid "Date"
 msgstr "日付"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:76
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:79
 msgid ""
 "This input type will show a slider with 2 handles to allow to search between"
 " the two selected values. The two text inputs are also shown and can be used"
@@ -6260,23 +6255,23 @@ msgstr ""
 "‎この入力タイプは、選択した 2 つの値の間を検索できるように、2 つのハンドルを持つスライダーを表示します。2 "
 "つのテキスト入力も表示され、手動で最小日付と最大日付を設定するために使用できます。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:78
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:81
 msgid ""
 "The date is \"truncated\" to a date (no time data such as hour, minutes or "
 "seconds yet)."
 msgstr "‎日付は日付に \"切り捨て\" されます (時間、分、秒などの時間データは表示されません)。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:80
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:83
 msgid ""
 "The slider step is hard coded and equals to 86400 seconds, which means 1 "
 "day."
 msgstr "‎スライダーステップはハードコードされており、1日86400 秒です。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:89
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:92
 msgid "Numeric"
 msgstr "‎数値‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:91
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:94
 msgid ""
 "This input type will show a slider with 2 handles to allow to search between"
 " the two selected values. Two text inputs are also shown and can be used to "
@@ -6285,11 +6280,11 @@ msgstr ""
 "‎この入力タイプは、選択した 2 つの値の間を検索できるように、2 つのハンドルを持つスライダーを表示します。2 "
 "つのテキスト入力も表示され、手動で最小値と最大値を設定するために使用できます。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:100
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:103
 msgid "Unique values"
 msgstr "‎固有値‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:102
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:105
 msgid ""
 "Lizmap will query the data to get the distinct values of the field. You can "
 "choose two different input types: **select** or **checkboxes**."
@@ -6297,7 +6292,7 @@ msgstr ""
 "‎Lizmap はデータを照会して、フィールドの個別の値を取得します。 **select** または **チェックボックス** "
 "の2つの異なる入力タイプを選択できます。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:104
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:107
 msgid ""
 "If you have specified a splitter text, for example **`, `**, Lizmap will "
 "find the unique values of the separated text values. For example the value "
@@ -6309,11 +6304,11 @@ msgstr ""
 "``文化,環境`` の値は、スプリッター **`, `** で``文化``と``環境``に分割されます。フォーム入力で ``文化`` または "
 "``環境`` を選択すると、この地物が表示されます。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:106
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:109
 msgid "You can choose to show two different input types:"
 msgstr "‎2 つの異なる入力タイプを表示することができます。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:108
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:111
 msgid ""
 "**Combo box**: this type will show a combo box with the list of distinct "
 "values for the field. The user will be able to choose only one item among "
@@ -6322,7 +6317,7 @@ msgstr ""
 "‎**コンボボックス** : このタイプは、フィールドの個別の値のリストをコンボボックスに表示します。ユーザーは、値の中から 1 "
 "つの項目のみを選択できます。‎"
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:109
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:112
 msgid ""
 "**Checkboxes**: this type will show as many comboboxes as distinct values "
 "for the field. The data will be filtered with a ``UNION`` between checked "
@@ -6385,7 +6380,19 @@ msgid ""
 msgstr ""
 "lizmap Web クライアント サーバーの URL を書き込みます。URL は、メインの Lizmap ランディング ページにする必要があります。‎"
 
-#: ../../source/publish/lizmap_plugin/information.rst:33
+#: ../../source/publish/lizmap_plugin/information.rst:31
+msgid ""
+"If possible, use a login and password of a Lizmap Web Client administrator. "
+"It will give you more information about the server. This is optional. QGIS "
+"might ask you to setup the **master password**. It's a password to protect "
+"the QGIS internal password manager. This password is used only on **your** "
+"computer. The Lizmap plugin is storing the login and password in the `QGIS "
+"password manager "
+"<https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-"
+"password>`_."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/information.rst:38
 msgid ""
 "Do not use the any URL redirection. For instance, https://demo.lizmap.com/ "
 "is a redirection to https://demo.lizmap.com/lizmap/. Only the second one "
@@ -6393,6 +6400,35 @@ msgid ""
 msgstr ""
 "‎URL リダイレクトは使用しないでください。たとえば、https://demo.lizmap.com/ は "
 "https://demo.lizmap.com/lizmap/ へのリダイレクトです。2つ目の場合のみ動作します。‎"
+
+#: ../../source/publish/lizmap_plugin/information.rst:42
+msgid "Request for support"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/information.rst:44
+msgid ""
+"When requesting support on a website, it might be required or highly "
+"recommended to copy/paste versions used on your server. This helps a lot to "
+"know your environment and to know if the bug is a new one or already fixed. "
+"So you should have your server available in the table mentioned above, "
+"**with** an administrator login."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/information.rst:48
+msgid ""
+"Then, right-click on your server, then :menuselection:`Copy all versions in "
+"your clipboard for a support request…`. You can go back on your support "
+"request and do a right click and paste."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/information.rst:52
+msgid ""
+"When clicking in the QGIS plugin, you might have some actions displayed **in"
+" a popup**. You **should** check these actions, like to be sure to provide "
+"an administrator login, have QGIS server installed correctly, running a "
+"maintained version of Lizmap Web Client etc. Check your version against "
+"latest released on https://github.com/3liz/lizmap-web-client/releases"
+msgstr ""
 
 #: ../../source/publish/lizmap_plugin/layers.rst:4
 msgid "Layers - settings for each layer"
@@ -6734,15 +6770,15 @@ msgid ""
 msgstr ""
 "‎タブ :guilabel:` マップオプション ` を使用すると、縮尺と初期範囲を選択して、基本的なLizmapツールを有効または無効にできます。‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:17
-msgid "The generic options:"
-msgstr "‎汎用オプション:‎"
+#: ../../source/publish/lizmap_plugin/map_options.rst:18
+msgid "Generic options"
+msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:19
+#: ../../source/publish/lizmap_plugin/map_options.rst:20
 msgid "hide the project in Lizmap Web Client:"
 msgstr "‎Lizmap Web クライアントでプロジェクトを非表示にします。‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:21
+#: ../../source/publish/lizmap_plugin/map_options.rst:22
 msgid ""
 "if this option is checked, the project will be hidden in the Lizmap home "
 "page that shows thumbnails for all directories and project of the "
@@ -6751,81 +6787,77 @@ msgstr ""
 "‎このオプションをオンにすると、アプリケーションのすべてのディレクトリとプロジェクトのサムネイルが表示される Lizmap ホーム "
 "ページでプロジェクトが非表示になります。このオプションを使用すると、プロジェクトを非表示にすることができます。‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:22
+#: ../../source/publish/lizmap_plugin/map_options.rst:24
 msgid ""
 "the project will still be accessible for WMS or WFS clients based on "
 "directories rights"
 msgstr "‎ディレクトリ権限に基づいて、WMS または WFS クライアントからプロジェクトにアクセスできます‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:23
+#: ../../source/publish/lizmap_plugin/map_options.rst:25
 msgid ""
 "this feature is interesting  in the case of using this project as an "
 "external project for other ones."
 msgstr "‎この地物は、このプロジェクトを他のプロジェクトの外部プロジェクトとして使用する場合に興味深いものです。‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:25
-msgid "The map tools:"
-msgstr "‎マップ ツール:‎"
-
-#: ../../source/publish/lizmap_plugin/map_options.rst:27
-msgid "*Draw*: |lizmap_3_4|, enables some drawing tools."
-msgstr "‎*描画* :|lizmap_3_4|、いくつかの描画ツールを有効にします。‎"
-
 #: ../../source/publish/lizmap_plugin/map_options.rst:28
+msgid "Map tools"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/map_options.rst:30
+msgid "*Draw*: enables some drawing tools."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/map_options.rst:31
 msgid "*Print*: enables the use of QGIS compositions for PDF generation map"
 msgstr "‎*印刷* :PDF生成マップのためのQGISの組成物の使用を可能にします‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:29
+#: ../../source/publish/lizmap_plugin/map_options.rst:32
 msgid ""
 "*Measure tools*: enables the measurement tools in the map (length, area, "
 "perimeter)"
 msgstr "‎*測定ツール* :マップ(長さ、面積、周囲)で測定ツールを有効にします‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:30
+#: ../../source/publish/lizmap_plugin/map_options.rst:33
 msgid ""
 "*Zoom history*: enables the navigation buttons in the history of zoom and "
 "move in the map"
 msgstr "‎*ズーム履歴* :ズームの歴史の中でナビゲーションボタンを有効にし、マップ内を移動‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:31
+#: ../../source/publish/lizmap_plugin/map_options.rst:34
 msgid ""
 "*Automatic geolocation*: enables the functions to use the HTML5 geolocation "
 "based on Wifi and/or GPS"
 msgstr "‎*自動ジオロケーション* :機能は、無線LANおよび/またはGPSに基づいてHTML5地理位置情報を使用することができます‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:32
+#: ../../source/publish/lizmap_plugin/map_options.rst:35
 msgid ""
 "*Address search*: to add an address search engine that is based on one of "
 "these services:"
 msgstr "‎*アドレス検索* :これらのサービスのいずれかに基づくアドレス検索エンジンを追加するには:‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:34
+#: ../../source/publish/lizmap_plugin/map_options.rst:37
 msgid "Nominatim (OpenStreetMap)"
 msgstr "Nominatim (OpenStreetMap)"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:35
-msgid "Google"
-msgstr "Google"
+#: ../../source/publish/lizmap_plugin/map_options.rst:38
+msgid "Google (API key required, see :ref:`lizmap-config-baselayers`)"
+msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:36
+#: ../../source/publish/lizmap_plugin/map_options.rst:39
 msgid "IGN France (Géoportail)"
 msgstr "IGN France (Géoportail)"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:37
+#: ../../source/publish/lizmap_plugin/map_options.rst:40
 msgid "BAN (France)"
 msgstr "BAN (France)"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:39
-msgid "The scales :"
-msgstr "縮尺:‎"
-
-#: ../../source/publish/lizmap_plugin/map_options.rst:41
+#: ../../source/publish/lizmap_plugin/map_options.rst:45
 msgid ""
 "a list of integer values separated by commas (and optional whitespace), eg: "
 "``250000, 100000, 50000``."
 msgstr "‎コンマ (およびオプションの空白) で区切られた整数値のリスト、例えば ``250000,100000,50000``‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:42
+#: ../../source/publish/lizmap_plugin/map_options.rst:46
 msgid ""
 "Lizmap also used these scales to restrict the application display between "
 "the minimum and maximum of these scales. This is why **it is mandatory to "
@@ -6834,7 +6866,7 @@ msgstr ""
 "‎また、Lizmap はこれらの縮尺を使用して、アプリケーションの表示をこれらの縮尺の最小値と最大値の間で制限しました。 "
 "**リストに少なくとも2つの縮尺** を入力することが必須である理由です。‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:46
+#: ../../source/publish/lizmap_plugin/map_options.rst:50
 msgid ""
 "As soon as there is an external basemap published in **EPSG:3857** such as "
 "OSM, Google Maps..., the application will only use the minimum and maximum "
@@ -6847,27 +6879,33 @@ msgstr ""
 "**ズームレベル** に最小および最大 **縮尺** のみを使用します。 **EPSG:3857** の外部ベースマップによって提供される**縮尺**と"
 " **ズームレベル** の間に厳密な一致がないため、定義した中間 **縮尺** は読み取れません。‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:51
-msgid "The initial map extent:"
-msgstr "‎初期マップ範囲:‎"
+#: ../../source/publish/lizmap_plugin/map_options.rst:56
+msgid "Initial map extent"
+msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:53
+#: ../../source/publish/lizmap_plugin/map_options.rst:58
 msgid ""
 "a list of coordinates in the Reference Coordinate System map in the format: "
 "``xmin, ymin, xmax, ymax``, setting the initial map extent"
 msgstr "‎``xmin、ymin、xmax、ymax`` の形式で参照座標系マップ内の座標のリスト、初期マップ範囲を設定します。‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:54
+#: ../../source/publish/lizmap_plugin/map_options.rst:59
 msgid ""
-"the maximal map extent is specified in the *OWS server* tab of *Project "
+"the maximal map extent is specified in the *QGIS server* tab of *Project "
 "Properties* window. The data will not be displayed if they are outside it"
 msgstr ""
-"‎最大マップ範囲は、*プロジェクトのプロパティ* ウィンドウの *OWS サーバー*  "
-"タブで指定します。データが外部にある場合、データは表示されません。‎"
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:55
+#: ../../source/publish/lizmap_plugin/map_options.rst:60
 msgid "by default, the initial extent is the maximal one."
 msgstr "‎デフォルトでは、初期範囲は最大の範囲です。‎"
+
+#: ../../source/publish/lizmap_plugin/map_options.rst:63
+msgid "Map interface"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/map_options.rst:65
+msgid "To hide by default some components in the user interface."
+msgstr ""
 
 #: ../../source/publish/lizmap_plugin/time_manager.rst:4
 msgid "Time Manager - animation of temporal vector layers"

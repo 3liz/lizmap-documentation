@@ -5,18 +5,18 @@
 # 
 # Translators:
 # Arnaud HANRY <arnaud.hanry@le64.fr>, 2020
-# Marjorie FANGAIN, 2021
 # rldhont <rldhont@gmail.com>, 2022
 # Nicolas Boisteault <nboisteault@gmail.com>, 2022
 # etrimaille <gustrimaille@yahoo.fr>, 2022
+# Marjorie FANGAIN, 2022
 # Laurent Jouanneau <dev@ljouanneau.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Lizmap 3.6\n"
+"Project-Id-Version: Lizmap 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-30 10:38+0200\n"
+"POT-Creation-Date: 2022-12-13 10:28+0000\n"
 "PO-Revision-Date: 2018-09-07 13:31+0000\n"
 "Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
@@ -174,6 +174,9 @@ msgid ""
 "In some server, additional settings should be done into Lizmap. Settings "
 "should be set into the ``lizmap/var/config/`` directory."
 msgstr ""
+"Sur certains serveurs, des paramétrages supplémentaires doivent être faits "
+"dans Lizmap. Leurs valeurs doivent être indiquées dans le répertoire "
+"``lizmap/var/config/``."
 
 #: ../../source/install/configuration.rst:9
 msgid "Configuration files"
@@ -181,7 +184,7 @@ msgstr "Fichiers de configuration"
 
 #: ../../source/install/configuration.rst:11
 msgid "There are several configuration files for Lizmap."
-msgstr ""
+msgstr "Il y a plusieurs fichiers de configuration pour Lizmap."
 
 #: ../../source/install/configuration.rst:13
 msgid "Framework configuration files:"
@@ -196,6 +199,13 @@ msgid ""
 "app/**. Set parameters with their new values into "
 "``var/config/localconfig.ini.php`` instead!"
 msgstr ""
+"``app/system/mainconfig.ini.php`` contient beaucoup de paramètres de "
+"configuration, avec leurs valeurs par défaut, principalement pour le "
+"framework utilisé par Lizmap. Vous aimeriez en modifier certaines, comme la "
+"liste des langues disponibles etc. Toutefois, vous **NE DEVEZ PAS MODIFIER "
+"mainconfig.ini.php ni aucun autre fichier de app/**. Mettez les paramètres "
+"avec leurs nouvelles valeurs plutôt dans ``var/config/localconfig.ini.php`` "
+"!"
 
 #: ../../source/install/configuration.rst:19
 msgid ""
@@ -203,12 +213,18 @@ msgid ""
 "are specific to your installation. So you put into it any parameters you can"
 " find into ``mainconfig.ini.php`` and you want to change."
 msgstr ""
+"``var/config/localconfig.ini.php`` contient des paramètres de configuration "
+"qui sont spécifiques à votre installation. Ainsi mettez-y tous les "
+"paramètres de ``mainconfig.ini.php`` que vous voulez modifier."
 
 #: ../../source/install/configuration.rst:22
 msgid ""
 "``var/config/liveconfig.ini.php`` is containing parameters from "
 "``mainconfig.ini.php`` that are changed by the application itself."
 msgstr ""
+"``var/config/liveconfig.ini.php`` contient des paramètres que l'on peut "
+"trouver dans ``mainconfig.ini.php`` mais qui sont modifiés par l'application"
+" elle-même."
 
 #: ../../source/install/configuration.rst:25
 msgid ""
@@ -291,14 +307,25 @@ msgstr ""
 
 #: ../../source/install/configuration.rst:55
 msgid ""
-"Available language into Lizmap are: fr_FR, en_US, it_IT, es_ES, eu_ES, "
-"pt_PT, el_GR, de_DE, pl_PL, ru_RU, fi_FI, gl_ES, sv_SE, nl_NL, ro_RO, hu_HU."
+"Available languages into Lizmap are shown on the `GitHub repository "
+"<https://github.com/3liz/lizmap-web-"
+"client/tree/master/lizmap/app/locales>`_. Be careful to select the correct "
+"branch on GitHub according to the version of Lizmap Web Client you are "
+"installing. Some languages might not be available in older versions of "
+"Lizmap Web Client, for instance on the `3.6 branch "
+"<https://github.com/3liz/lizmap-web-"
+"client/tree/release_3_6/lizmap/app/locales>`_."
 msgstr ""
-"Les langues disponibles dans Lizmap sont : fr_FR, en_US, it_IT, es_ES, "
-"eu_ES, pt_PT, el_GR, de_DE, pl_PL, ru_RU, fi_FI, gl_ES, sv_SE, nl_NL, ro_RO,"
-" hu_HU."
+"Les langues disponibles dans Lizmap sont affichées dans le `dépôt GitHub  "
+"<https://github.com/3liz/lizmap-web-"
+"client/tree/master/lizmap/app/locales>`_. Attention a sélectionner la bonne "
+"branche sur Github, qui correspond à la version de Lizmap Web Client que "
+"vous installez. Des langues peuvent ne pas être disponibles dans des "
+"vieilles versions de Lizmap. Par exemple, sur la `branche 3.6 "
+"<https://github.com/3liz/lizmap-web-"
+"client/tree/release_3_6/lizmap/app/locales>`_."
 
-#: ../../source/install/configuration.rst:58
+#: ../../source/install/configuration.rst:59
 msgid ""
 "If the browser of the user indicates an unsupported language code, the "
 "default language of Lizmap is used, and is en_US."
@@ -306,16 +333,16 @@ msgstr ""
 "Si le navigateur de l'utilisateur indique une langue non prise en charge, la"
 " langue par défaut de Lizmap, en_US, est utilisée."
 
-#: ../../source/install/configuration.rst:61
+#: ../../source/install/configuration.rst:62
 msgid ""
 "You can change the default language of Lizmap by setting the parameter "
-"``locale`` Into localconfig.ini.php, with your prefered language code."
+"``locale`` Into localconfig.ini.php, with your preferred language code."
 msgstr ""
 "Vous pouvez changer la langue par défaut de Lizmap en modifiant le paramètre"
 " de configuration ``locale`` dans localconfig.ini.php, qui doit contenir le "
 "code de votre langue préférée."
 
-#: ../../source/install/configuration.rst:64
+#: ../../source/install/configuration.rst:65
 msgid ""
 "You can also limit available language by changing the ``availableLocales`` "
 "option."
@@ -323,7 +350,7 @@ msgstr ""
 "Vous pouvez aussi limiter le nombre de langue prise en charge, en modifiant "
 "l'option ``availableLocales``."
 
-#: ../../source/install/configuration.rst:66
+#: ../../source/install/configuration.rst:67
 msgid ""
 "In this example, only 3 languages are available and the default language is "
 "italian:"
@@ -331,7 +358,7 @@ msgstr ""
 "Dans cet exemple, seulement 3 langues sont disponibles et la langue par "
 "défaut est l'italien :"
 
-#: ../../source/install/configuration.rst:73
+#: ../../source/install/configuration.rst:74
 msgid ""
 "There is also a ``fallbackLocale`` option but it is not recommended to "
 "change it."
@@ -343,8 +370,7 @@ msgstr ""
 msgid "Installing and upgrading Lizmap"
 msgstr "Installation et mise à jour de Lizmap"
 
-#: ../../source/shared/about_versions.rst <included from
-#: /home/laurent/projets/3liz/sites/lizmap-documentation/source/install/index.rst>:1
+#: ../../source/shared/about_versions.rst:1
 msgid ""
 "For more information on versions (Web-browsers, QGIS Server, PostgreSQL etc)"
 " which are supported, it's written on the Lizmap Web Client wiki page : "
@@ -801,6 +827,9 @@ msgid ""
 "In Debian distributions, you can work as administrator (log in with "
 "``root``), without using ``sudo`` on contrary to Ubuntu."
 msgstr ""
+"Dans les distributions Debian, vous pouvez travailler en tant "
+"qu'administrateur (``root``) sans avoir à utiliser ``sudo``, contrairement "
+"sur Ubuntu."
 
 #: ../../source/install/linux.rst:11
 msgid "Generic Server Configuration with Nginx server"
@@ -910,30 +939,38 @@ msgid ""
 "Debian 10 distribution. We assume you have base system installed and "
 "updated."
 msgstr ""
+"La documentation fournie un exemple pour configurer un serveur avec la "
+"distribution Debian 10. Nous supposons que vous avez un système fraîchement "
+"installé et mis à jour."
 
 #: ../../source/install/linux.rst:129
 msgid ""
 "This page does not describe how to secure your Apache server. It's just for "
 "a demonstration."
 msgstr ""
+"Cette page ne décrit pas comment sécuriser votre serveur Apache. C'est juste"
+" pour une démonstration."
 
 #: ../../source/install/linux.rst:135
 msgid "Firstly update the packages list, then install these packages:"
 msgstr ""
+"Premièrement mettez à jour les packages listés, puis installez ces packages:"
 
 #: ../../source/install/linux.rst:145
 msgid "PHP 7.3 configuration"
-msgstr ""
+msgstr "Configuration PHP 7.3"
 
 #: ../../source/install/linux.rst:147
 msgid ""
 "In this example, we use Apache mpm-worker. So we must manually configure the"
 " activation of PHP 7.3."
 msgstr ""
+"On utilise dans cet exemple le mpm-worker d'Apache. On doit donc configurer "
+"manuellement l'activation de PHP 7.3."
 
 #: ../../source/install/linux.rst:167
 msgid "Enable the configuration with the following command line:"
-msgstr ""
+msgstr "Autorisez la configuration avec la ligne de commande suivante:"
 
 #: ../../source/install/linux.rst:177
 msgid "mpm-worker configuration"
@@ -1017,7 +1054,7 @@ msgstr "Base de données spatiale : PostgreSQL"
 
 #: ../../source/install/linux.rst:275
 msgid "This section is optional. Please read :ref:`prerequisites-postgresql`."
-msgstr ""
+msgstr "Cette section est optionnelle. Lisez :ref:`prerequisites-postgresql`."
 
 #: ../../source/install/linux.rst:277
 msgid ""
@@ -1047,7 +1084,7 @@ msgstr ""
 
 #: ../../source/install/linux.rst:310
 msgid "https://pgtune.leopard.in.ua/"
-msgstr ""
+msgstr "https://pgtune.leopard.in.ua/"
 
 #: ../../source/install/linux.rst:330
 msgid ""
@@ -1055,6 +1092,9 @@ msgid ""
 " by default), you can continue until the next section below when you need to"
 " edit the file :file:`lizmap/var/config/profiles.ini.php`."
 msgstr ""
+"Pour installer les tables de Lizmap dans PostgreSQL, (au lieu de SqLite par "
+"défaut), vous pouvez sauter cette section, et vous devrez modifier le "
+"fichier  :file:`lizmap/var/config/profiles.ini.php`."
 
 #: ../../source/install/linux.rst:334
 msgid "FTP Server: pure-ftpd"
@@ -1116,7 +1156,7 @@ msgstr ""
 ":file:`profiles.ini.php.dist`."
 
 #: ../../source/install/linux.rst:432
-#: ../../source/install/pre_requirements.rst:167
+#: ../../source/install/pre_requirements.rst:176
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
@@ -1128,6 +1168,12 @@ msgid ""
 "the database with credentials which are stored in the QGIS project (or with "
 "a PostgreSQL service file)."
 msgstr ""
+"Pour l'édition des couches PostGIS dans Lizmap Web Client, il faut installer"
+" la prise en charge de PostgreSQL pour PHP. Aucun fichier de configuration "
+"n'a besoin d'être modifier pour éditer une couche PostGIS. Vous devez "
+"seulement vous assurer que le serveur Lizmap puisse accéder à la base de "
+"donnée avec les paramètres d'accès stockés dans le projet QGIS (ou dans une "
+"fichier de service PostgreSQL)."
 
 #: ../../source/install/linux.rst:443
 msgid ""
@@ -1135,6 +1181,9 @@ msgid ""
 "PostgreSQL. To store these information in PostgreSQL, follow these "
 "instructions."
 msgstr ""
+"Pour les logs Lizmap, les utilisateurs et les groupes, cela peut être stocké"
+" soit dans une base SqLite, soit une base PostgreSQL. Pour stocker ces "
+"informations dans PostgreSQL, suivez ces instructions."
 
 #: ../../source/install/linux.rst:446
 msgid ""
@@ -1263,6 +1312,8 @@ msgid ""
 "Set rights for Nginx/Apache, so PHP scripts could write some temporary files"
 " or do changes."
 msgstr ""
+"Mettez les droits pour Nginx/Apache, ainsi les scripts PHP pourront écrire "
+"des fichiers temporaires ou modifier des fichiers."
 
 #: ../../source/install/linux.rst:564
 msgid "Setup configuration"
@@ -1336,6 +1387,11 @@ msgid ""
 "properly. Versions about QGIS Server plugins **must** be visible from the "
 "administration interface. Please read :ref:`lizmap-server-plugin`."
 msgstr ""
+"Avant d'essayer d'avoir un projet QGIS s'affichant dans Lizmap, vous "
+"**devez** avoir une connexion qui fonctionne correctement entre QGIS Server "
+"et Lizmap Web Client. Les versions des plugins de QGIS Server **doivent** "
+"être visible dans l'interface d'administration. Lisez  :ref:`lizmap-server-"
+"plugin`."
 
 #: ../../source/install/linux.rst:620
 msgid ""
@@ -1459,9 +1515,8 @@ msgid "Then you can install the package of the module"
 msgstr "Ensuite vous pouvez installer le paquet du module"
 
 #: ../../source/install/linux.rst:687
-msgid "If you want to install a new version of the module, just execute:"
-msgstr ""
-"Si vous voulez installer une nouvelle version du module, lancez juste :"
+msgid "If you want to install a new version of the module, execute:"
+msgstr "Si vous voulez installer une nouvelle version du module, lancez :"
 
 #: ../../source/install/linux.rst:693 ../../source/install/linux.rst:737
 msgid ""
@@ -1544,11 +1599,9 @@ msgstr ""
 
 #: ../../source/install/pre_requirements.rst:21
 msgid ""
-"Follow the QGIS Documentation how to install QGIS Server : "
-"https://docs.qgis.org/latest/en/docs/server_manual/"
+"Follow the `QGIS Server documentation on how to install QGIS Server "
+"<https://docs.qgis.org/latest/en/docs/server_manual/>`_."
 msgstr ""
-"Suivez la documentation de QGIS pour installer QGIS Server : "
-"https://docs.qgis.org/latest/fr/docs/server_manual/index.html ."
 
 #: ../../source/install/pre_requirements.rst:23
 msgid ""
@@ -1622,22 +1675,29 @@ msgstr "Extensions QGIS serveur"
 
 #: ../../source/install/pre_requirements.rst:52
 msgid ""
-"Some plugins can be added to QGIS Server. This will enable some features in "
-"Lizmap. It's not compulsory but in some situations, it's better."
+"Some plugins can be added to QGIS Server. Please check the `QGIS Server "
+"documentation "
+"<https://docs.qgis.org/latest/en/docs/server_manual/plugins.html>`_ about "
+"plugins on the server side."
 msgstr ""
-"Certains plugins peuvent être ajoutés à QGIS serveur. Cela activera "
-"certaines fonctionnalités dans Lizmap. Ce n'est pas obligatoire mais dans "
-"certaines situations, c'est mieux."
 
-#: ../../source/install/pre_requirements.rst:55
-msgid ""
-"Either you should setup the ``QGIS_PLUGINPATH`` environment variable during "
-"the installation of QGIS Server or use the default one provided by QGIS. "
-"https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-"
-"variables"
+#: ../../source/install/pre_requirements.rst:56
+msgid "The **Lizmap server** plugin is required."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:58
+msgid "Plugins listed below will enable some features in Lizmap Web Client."
 msgstr ""
 
 #: ../../source/install/pre_requirements.rst:60
+msgid ""
+"Either you should setup the ``QGIS_PLUGINPATH`` environment variable during "
+"the installation of QGIS Server or use the `default one provided by QGIS "
+"<https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-"
+"variables>`_."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:64
 msgid ""
 "To manage QGIS Server plugins, we encourage you to use **qgis-plugin-"
 "manager**, a CLI tool to install and upgrade plugins. "
@@ -1647,39 +1707,39 @@ msgstr ""
 " de **qgis-plugin-manager**, un outil CLI pour installer et mettre à jour "
 "des extensions. https://pypi.org/project/qgis-plugin-manager/"
 
-#: ../../source/install/pre_requirements.rst:63
+#: ../../source/install/pre_requirements.rst:67
 msgid "AtlasPrint"
 msgstr "AtlasPrint"
 
-#: ../../source/install/pre_requirements.rst:65
+#: ../../source/install/pre_requirements.rst:69
 msgid "To enable the PDF based on a QGIS Layout Atlas"
 msgstr "Pour activer le PDF basé sur la mise en page d'un atlas QGIS"
 
-#: ../../source/install/pre_requirements.rst:66
+#: ../../source/install/pre_requirements.rst:70
 msgid "https://github.com/3liz/qgis-atlasprint"
 msgstr "https://github.com/3liz/qgis-atlasprint"
 
-#: ../../source/install/pre_requirements.rst:68
+#: ../../source/install/pre_requirements.rst:72
 msgid "Cadastre"
 msgstr "Cadastre"
 
-#: ../../source/install/pre_requirements.rst:70
+#: ../../source/install/pre_requirements.rst:74
 msgid "French use-case only"
 msgstr "Cas d'utilisation français uniquement"
 
-#: ../../source/install/pre_requirements.rst:71
+#: ../../source/install/pre_requirements.rst:75
 msgid "Needed for the Lizmap Cadastre module"
 msgstr "Nécessaire pour le module Cadastre de Lizmap"
 
-#: ../../source/install/pre_requirements.rst:72
+#: ../../source/install/pre_requirements.rst:76
 msgid "https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/"
 msgstr "https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/"
 
-#: ../../source/install/pre_requirements.rst:74
+#: ../../source/install/pre_requirements.rst:78
 msgid "Lizmap server"
-msgstr ""
+msgstr "Serveur Lizmap"
 
-#: ../../source/install/pre_requirements.rst:76
+#: ../../source/install/pre_requirements.rst:80
 msgid ""
 "Lizmap **is not only** a PHP application, there is also Python plugin for "
 "**QGIS Server** called **Lizmap server**."
@@ -1687,18 +1747,16 @@ msgstr ""
 "Lizmap **n'est pas seulement** une application PHP, il y a aussi une "
 "extension Python pour **QGIS Serveur** appelé **Lizmap server**."
 
-#: ../../source/install/pre_requirements.rst:77
-#: ../../source/install/pre_requirements.rst:117
+#: ../../source/install/pre_requirements.rst:81
+#: ../../source/install/pre_requirements.rst:121
 msgid "https://github.com/3liz/qgis-lizmap-server-plugin"
 msgstr "https://github.com/3liz/qgis-lizmap-server-plugin"
 
-#: ../../source/install/pre_requirements.rst:78
-msgid ""
-"The plugin is **highly** recommended, a few features won't work as expected "
-"if the plugin is not installed or not upgraded."
+#: ../../source/install/pre_requirements.rst:82
+msgid "The plugin is **required**."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:79
+#: ../../source/install/pre_requirements.rst:83
 msgid ""
 "**Important**, read below for more information the Lizmap QGIS Server "
 "plugin. (:ref:`lizmap-server-plugin`)"
@@ -1706,54 +1764,52 @@ msgstr ""
 "**Important**, lisez ci-dessous pour plus d'informations sur le plugin "
 "Lizmap QGIS Server. (:ref:`lizmap-serveur-plugin`)"
 
-#: ../../source/install/pre_requirements.rst:81
+#: ../../source/install/pre_requirements.rst:85
 msgid "WfsOutputExtension"
 msgstr "WfsOutputExtension"
 
-#: ../../source/install/pre_requirements.rst:83
+#: ../../source/install/pre_requirements.rst:87
 msgid "To add new format when exporting vector data"
 msgstr ""
 "Pour ajouter un nouveau format lors de l'export des données vectorielles"
 
-#: ../../source/install/pre_requirements.rst:84
+#: ../../source/install/pre_requirements.rst:88
 msgid "https://github.com/3liz/qgis-wfsOutputExtension"
 msgstr "https://github.com/3liz/qgis-wfsOutputExtension"
 
-#: ../../source/install/pre_requirements.rst:86
+#: ../../source/install/pre_requirements.rst:90
 msgid "Logging"
 msgstr "Journalisation"
 
-#: ../../source/install/pre_requirements.rst:88
+#: ../../source/install/pre_requirements.rst:92
 msgid "To log QGIS Servers log and to flush the cache on QGIS Server"
 msgstr ""
 "Pour enregistrer dans les journaux de QGIS Server et vider le cache dans "
 "QGIS Server"
 
-#: ../../source/install/pre_requirements.rst:89
+#: ../../source/install/pre_requirements.rst:93
 msgid "https://github.com/3liz/qgis-logging-plugin."
 msgstr "https://github.com/3liz/qgis-logging-plugin."
 
-#: ../../source/install/pre_requirements.rst:90
+#: ../../source/install/pre_requirements.rst:94
 msgid "This plugin is deprecated."
 msgstr "Ce plugin est obsolète."
 
-#: ../../source/install/pre_requirements.rst:95
-msgid "Lizmap QGIS Server plugin"
-msgstr ""
-
-#: ../../source/install/pre_requirements.rst:97
-msgid ""
-"Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web "
-"Client :"
-msgstr ""
-"L'ajout du plugin Lizmap QGIS Server ajoutera quelques fonctionnalités sur "
-"Lizmap Web Client :"
-
 #: ../../source/install/pre_requirements.rst:99
+msgid "Lizmap QGIS Server plugin"
+msgstr "Plugin Lizmap QGIS Server"
+
+#: ../../source/install/pre_requirements.rst:101
+msgid ""
+"The Lizmap QGIS Server plugin **is required** and will add some features on "
+"Lizmap Web Client :"
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:103
 msgid "retrieve information from QGIS Server."
 msgstr "récupérer les informations de QGIS Server."
 
-#: ../../source/install/pre_requirements.rst:101
+#: ../../source/install/pre_requirements.rst:105
 msgid ""
 "evaluate `QGIS Expressions "
 "<https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`_"
@@ -1763,41 +1819,41 @@ msgstr ""
 "<https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`_"
 " dans un formulaire sur :"
 
-#: ../../source/install/pre_requirements.rst:104
+#: ../../source/install/pre_requirements.rst:108
 msgid "constraints"
 msgstr "contraintes"
 
-#: ../../source/install/pre_requirements.rst:105
+#: ../../source/install/pre_requirements.rst:109
 msgid "default value"
 msgstr "valeur par défaut"
 
-#: ../../source/install/pre_requirements.rst:106
+#: ../../source/install/pre_requirements.rst:110
 msgid "group visibility"
 msgstr "visibilité des groupes"
 
-#: ../../source/install/pre_requirements.rst:107
+#: ../../source/install/pre_requirements.rst:111
 msgid "Read :ref:`edition-expressions`."
 msgstr "Lire :ref:`edition-expressions`."
 
-#: ../../source/install/pre_requirements.rst:109
+#: ../../source/install/pre_requirements.rst:113
 msgid "check User Access Rights (ACL) for features and layers :"
 msgstr ""
 "Vérification des listes de contrôle d'accès (ACL, Access Control List) pour "
 "les entités et les couches :"
 
-#: ../../source/install/pre_requirements.rst:111
+#: ../../source/install/pre_requirements.rst:115
 msgid "filter by polygon"
 msgstr "filtrage par polygone"
 
-#: ../../source/install/pre_requirements.rst:112
+#: ../../source/install/pre_requirements.rst:116
 msgid "by attribute"
 msgstr "par attribut"
 
-#: ../../source/install/pre_requirements.rst:114
+#: ../../source/install/pre_requirements.rst:118
 msgid "use the **Form** popup, read :ref:`form-popup`."
 msgstr "utilisation de la popup type **Formulaire**, lire :ref:`form-popup`."
 
-#: ../../source/install/pre_requirements.rst:115
+#: ../../source/install/pre_requirements.rst:119
 msgid ""
 "enable ``@lizmap_user`` and ``lizmap_user_groups`` variables in QGIS "
 "projects"
@@ -1805,46 +1861,47 @@ msgstr ""
 "activer les variables ``@lizmap_user`` et ``lizmap_user_groups`` dans les "
 "projets QGIS"
 
-#: ../../source/install/pre_requirements.rst:118
+#: ../../source/install/pre_requirements.rst:122
 msgid ""
-"The plugin is not required, but a few features won't work as expected if the"
-" plugin is not installed or not upgraded"
-msgstr ""
-"Le plugin n'est pas requis, mais quelques fonctionnalités ne fonctionneront "
-"pas comme attendue si le plugin n'est pas installé ou mis à jour."
-
-#: ../../source/install/pre_requirements.rst:119
-msgid ""
-"The name of the plugin is **Lizmap server**. Do not install the **Lizmap** "
+"The name of the plugin is ``Lizmap server``. Do not install the ``Lizmap`` "
 "plugin which is the **desktop** Python plugin."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:122
+#: ../../source/install/pre_requirements.rst:125
 msgid "Installation"
 msgstr "Installation"
 
-#: ../../source/install/pre_requirements.rst:125
+#: ../../source/install/pre_requirements.rst:128
 msgid "QGIS Server side"
 msgstr "Côté QGIS serveur"
 
-#: ../../source/install/pre_requirements.rst:127
+#: ../../source/install/pre_requirements.rst:130
 msgid ""
-"The Lizmap plugin must be installed in the correct folder for QGIS Server. "
-"The environment variable must be set in QGIS Server. The plugin name is "
-"**Lizmap server**."
+"Please check the `QGIS Server documentation "
+"<https://docs.qgis.org/latest/en/docs/server_manual/plugins.html>`_ about "
+"plugins on the server side."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:131
+#: ../../source/install/pre_requirements.rst:133
 msgid ""
-"For **security** reason, to enable all features on the QGIS server side, you"
-" must enable the environment variable "
-"``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`` on QGIS server."
+"The Lizmap server plugin, called ``Lizmap server``, **is required** in the "
+"correct folder for QGIS Server."
 msgstr ""
-"Pour des raisons de **sécurité**, pour activer toutes les fonctionnalités "
-"côté serveur QGIS, vous devez activer la variable d'environnement "
-"``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`` sur le QGIS server."
 
-#: ../../source/install/pre_requirements.rst:134
+#: ../../source/install/pre_requirements.rst:136
+msgid ""
+"You must install the ``Lizmap server`` plugin. The ``Lizmap`` plugin is "
+"designed only for QGIS desktop. Do not keep both on your server."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:140
+msgid ""
+"For **security** reason, to enable the API on the QGIS server side, you must"
+" enable the environment variable ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS`` with"
+" the value set to ``True`` on QGIS server."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:143
 msgid ""
 "You **must** be ensured that this API "
 "``http://your.qgis.server.url/lizmap/server.json`` is protected on your "
@@ -1867,7 +1924,7 @@ msgstr ""
 "par Lizmap Web Client, afin que Lizmap puisse vérifier les autorisations des"
 " utilisateurs."
 
-#: ../../source/install/pre_requirements.rst:140
+#: ../../source/install/pre_requirements.rst:149
 msgid ""
 "This variable will **expose** server settings such as QGIS server version, "
 "which is used by Lizmap Web Client."
@@ -1875,41 +1932,57 @@ msgstr ""
 "Cette variable **exposera** les paramètres du serveur tels que la version du"
 " serveur QGIS, qui est utilisée par Lizmap Web Client."
 
-#: ../../source/install/pre_requirements.rst:143
+#: ../../source/install/pre_requirements.rst:152
 msgid "Administration panel"
-msgstr ""
+msgstr "Interface d'administration"
 
-#: ../../source/install/pre_requirements.rst:145
-msgid ""
-"You **must** have the table called \"Server information\" working correctly "
-"in your administration panel before trying a QGIS project."
-msgstr ""
-
-#: ../../source/install/pre_requirements.rst:148
+#: ../../source/install/pre_requirements.rst:154
 msgid ""
 "If your are using QGIS Server with **FCGI**, the Lizmap API URL **must** be "
 "empty."
 msgstr ""
+"Si vous utilisez QGIS Server avec **FCGI**, l'URL API de Lizmap **doit** "
+"être vide."
 
-#: ../../source/install/pre_requirements.rst:150
+#: ../../source/install/pre_requirements.rst:156
 msgid ""
 "Otherwise, if you are using `Py-QGIS-Server <https://docs.3liz.org/py-qgis-"
 "server/>`_, the Lizmap API URL **must** be configured in the administration "
 "interface. In **Py-QGIS-Server**, you must explicitly publish the API as "
-"well :"
+"well."
 msgstr ""
+"Sinon, si vous utilisez `Py-QGIS-Server <https://docs.3liz.org/py-qgis-"
+"server/>`_, l'URL API de Lizmap **doit** être configurée dans "
+"l'administration. Dans la configuration de **Py-QGIS-Server**, vous devez "
+"également explicitement publier l'API."
 
-#: ../../source/install/pre_requirements.rst:161
+#: ../../source/install/pre_requirements.rst:159
+msgid ""
+"Starting from Py-QGIS-Server version 1.8.4, it's possible to enable the "
+"Lizmap API endpoint with the environment variable "
+"`QGSRV_API_ENDPOINTS_LIZMAP=yes` otherwise, add the configuration below in "
+"your configuration file :"
+msgstr ""
+"À partir de la version 1.8.4 de Py-QGIS-Server, il est possible d'activer le"
+" point d'entrée API Lizmap avec la variable d'environnement "
+"`QGSRV_API_ENDPOINTS_LIZMAP=yes`, ou alors ajoutez la configuration suivante"
+" dans le fichier de configuration :"
+
+#: ../../source/install/pre_requirements.rst:170
 msgid ""
 "Then, with Py-QGIS-Server, if your URL for OWS is `http://map:8080/ows/`, it"
 " means the URL for the Lizmap API endpoint is `http://map:8080/lizmap/`."
 msgstr ""
+"Puis, avec Py-QGIS-Server , si votre URL pour OWS est  "
+"`http://map:8080/ows/`, cela veut dire que l'URL du point d'entrée de l'API "
+"pour Lizmap est  `http://map:8080/lizmap/`."
 
-#: ../../source/install/pre_requirements.rst:169
+#: ../../source/install/pre_requirements.rst:178
 msgid "PostgreSQL can be used for **three** different purposes in Lizmap :"
 msgstr ""
+"PostgreSQL peut être utilisé pour trois usages différents dans Lizmap :"
 
-#: ../../source/install/pre_requirements.rst:171
+#: ../../source/install/pre_requirements.rst:180
 msgid ""
 "To store GIS data. **No** configuration is needed on the Lizmap Web Client "
 "server side, **only** the PostgreSQL server must be accessible from the "
@@ -1917,8 +1990,13 @@ msgid ""
 "Lizmap, but the layer **must** be stored in PostgreSQL. See :ref:`edition-"
 "prerequisites`."
 msgstr ""
+"Pour stocker des données SIG. Aucune configuration n'est nécessaire côté "
+"serveur Lizmap Web Client, **seul** le serveur PostgreSQL doit être "
+"accessible depuis le serveur Lizmap Web Client. Il est possible d'éditer des"
+" couches avec Lizmap, mais la couche **doit** être stockée dans PostgreSQL. "
+"Voir :ref:`edition-prerequisites`."
 
-#: ../../source/install/pre_requirements.rst:174
+#: ../../source/install/pre_requirements.rst:183
 msgid ""
 "To store Lizmap Web Client users and user actions. Lizmap uses tables. This "
 "setting must be done when **installing** Lizmap."
@@ -1927,11 +2005,13 @@ msgstr ""
 "Lizmap. Lizmap utilise des tableaux. Ce réglage doit être fait lors de "
 "l'**installation** de Lizmap."
 
-#: ../../source/install/pre_requirements.rst:175
+#: ../../source/install/pre_requirements.rst:184
 msgid ""
 "To use `lizmap_search`, see :ref:`postgresql-lizmap-search`. This setting on"
 " the Lizmap server can be set when you need it."
 msgstr ""
+"Pour utiliser `lizmap_search`, voyez :ref:`postgresql-lizmap-search`. Ce "
+"paramétrage sur le serveur de Lizmap peut être fait quand vous le souhaitez."
 
 #: ../../source/install/upgrade.rst:3
 msgid "Upgrade Lizmap Web Client"
@@ -1951,7 +2031,7 @@ msgstr ""
 
 #: ../../source/install/upgrade.rst:11
 msgid "Upgrading from Lizmap lower than 3.5 versions"
-msgstr ""
+msgstr "Mettre à jour à partir d'une version de Lizmap inférieure à 3.5"
 
 #: ../../source/install/upgrade.rst:13
 msgid ""
@@ -1959,14 +2039,17 @@ msgid ""
 "<https://docs.lizmap.com/3.5/en/install/upgrade.html>`_. Then you could "
 "migrate to 3.6"
 msgstr ""
+"Vous devez d'abord migrer vers 3.5. Voyez `la documentation de Lizmap 3.5 "
+"<https://docs.lizmap.com/3.5/fr/install/upgrade.html>`_. Vous pourrez "
+"ensuite migrer vers 3.6."
 
 #: ../../source/install/upgrade.rst:17
 msgid "Upgrading from Lizmap 3.5 version"
-msgstr ""
+msgstr "Mettre à jour la version 3.5 de Lizmap"
 
 #: ../../source/install/upgrade.rst:19
 msgid "Here is how to upgrade from Lizmap 3.5."
-msgstr ""
+msgstr "Voici comment mettre à jour Lizmap 3.5"
 
 #: ../../source/install/upgrade.rst:22
 msgid "Data backup"
@@ -1977,6 +2060,8 @@ msgid ""
 "Backup your data and configuration files into a directory (ex: ``/tmp``) "
 "with the ``lizmap/install/backup.sh`` script of Lizmap 3.5."
 msgstr ""
+"Sauvegardez vos données et fichiers de configuration dans un répertoire (ex:"
+" ``/tmp``) avec le script ``lizmap/install/backup.sh`` de Lizmap 3.5."
 
 #: ../../source/install/upgrade.rst:31
 msgid "If you want to backup by hand, you should backup at least these files:"
@@ -1998,11 +2083,11 @@ msgstr "var/config/installer.ini.php"
 
 #: ../../source/install/upgrade.rst:36
 msgid "var/config/liveConfig.ini.php"
-msgstr ""
+msgstr "var/config/liveConfig.ini.php"
 
 #: ../../source/install/upgrade.rst:37
 msgid "var/config/localframework.ini.php (if it exists)"
-msgstr ""
+msgstr "var/config/localframework.ini.php (s'il existe)"
 
 #: ../../source/install/upgrade.rst:38
 msgid "var/config/lizmapConfig.ini.php"
@@ -2025,30 +2110,36 @@ msgid ""
 "Get the Lizmap archive by downloading an archive on the `release "
 "<https://github.com/3liz/lizmap-web-client/releases>`_ page."
 msgstr ""
+"Récupérez l'archive de Lizmap en téléchargeant depuis `la page release de "
+"Github <https://github.com/3liz/lizmap-web-client/releases>`_."
 
 #: ../../source/install/upgrade.rst:48
 msgid "You should then :"
-msgstr ""
+msgstr "Vous devez alors :"
 
 #: ../../source/install/upgrade.rst:50
 msgid "rename the ``lizmap/`` directory to ``lizmap.bak/`` for example"
-msgstr ""
+msgstr "renommer le répertoire `lizmap/`` en ``lizmap.bak/`` par exemple"
 
 #: ../../source/install/upgrade.rst:51
 msgid ""
 "extract the ``lizmap/`` directory from the archive, so it will be become the"
 " new ``lizmap/`` directory."
 msgstr ""
+"extraire le répertoire ``lizmap/`` de l'archive, ainsi il devient le nouveau"
+" répertoire ``lizmap/``."
 
 #: ../../source/install/upgrade.rst:52
 msgid ""
 "execute the script ``lizmap/install/restore.sh /tmp`` or reinstall by hand "
 "the files you backup."
 msgstr ""
+"exécuter le script ``lizmap/install/restore.sh /tmp`` ou réinstallez à la "
+"main les fichiers que vous aviez sauvegardé."
 
 #: ../../source/install/upgrade.rst:54
 msgid "Note: there is not anymore a ``lib/`` directory."
-msgstr ""
+msgstr "Note : il n'y a plus de répertoire ``lib/``."
 
 #: ../../source/install/upgrade.rst:57
 msgid "Launch the installer"
@@ -2064,11 +2155,12 @@ msgstr ""
 
 #: ../../source/install/upgrade.rst:69
 msgid "Cleanup and test"
-msgstr ""
+msgstr "Nettoyez et testez"
 
 #: ../../source/install/upgrade.rst:71
 msgid "You should then delete all cache and temporary files:"
 msgstr ""
+"Vous devez alors supprimer tous les fichiers de caches et temporaires."
 
 #: ../../source/install/upgrade.rst:77
 msgid ""
@@ -2076,17 +2168,25 @@ msgid ""
 "the web user and the web group used by the web server to execute Lizmap. On "
 "a Debian server, it is often www-data."
 msgstr ""
+"Ensuite vous devez appeler le script qui applique des droits sur les "
+"fichiers. Les paramètres sont les noms de l'utilisateur et du groupe utilisé"
+" par le serveur web pour exécuter Lizmap. Su un serveur Debian, il s'agit en"
+" général de www-data."
 
 #: ../../source/install/upgrade.rst:86
 msgid ""
 "Then load Lizmap into your browser, you should see your maps without errors."
 msgstr ""
+"Ensuite chargez Lizmap dans votre navigateur, vous devriez voir vos cartes "
+"sans erreurs."
 
 #: ../../source/install/upgrade.rst:88
 msgid ""
 "If this is the case, you can delete the old directories ``lib/`` and "
 "``lizmap.bak/``."
 msgstr ""
+"Si c'est le cas, vous pouvez supprimer les vieux répertoires ``lib/`` et "
+"``lizmap.bak/``."
 
 #: ../../source/install/upgrade.rst:92
 msgid "Migrating from Sqlite to Postgresql"
