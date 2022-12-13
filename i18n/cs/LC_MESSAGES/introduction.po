@@ -4,8 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Jin Igarashi <wushilan0623@gmail.com>, 2021
-# yamamoto ryuzo <ryu@yamakun.net>, 2021
+# trendspotter <jirka.p@volny.cz>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -14,47 +13,48 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-13 13:45+0000\n"
 "PO-Revision-Date: 2021-12-19 13:43+0000\n"
-"Last-Translator: yamamoto ryuzo <ryu@yamakun.net>, 2021\n"
-"Language-Team: Japanese (https://www.transifex.com/3liz-1/teams/62012/ja/)\n"
+"Last-Translator: trendspotter <jirka.p@volny.cz>, 2022\n"
+"Language-Team: Czech (https://www.transifex.com/3liz-1/teams/62012/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: ../../source/introduction.rst:3
 msgid "Introduction"
-msgstr "はじめに"
+msgstr "Úvod"
 
 #: ../../source/introduction.rst:6
 msgid "Lizmap architecture"
-msgstr "Lizmapのアーキテクチャ"
+msgstr "Architektura Lizmap"
 
 #: ../../source/introduction.rst:11
 msgid "**Data preparation**"
-msgstr "**データの準備**"
+msgstr "**Příprava dat**"
 
 #: ../../source/introduction.rst:13
 msgid ""
 "The map's construction work is carried on his own computer with **QGIS "
 "Desktop**:"
-msgstr "マップの作成作業は、 **QGIS Desktop** をインストールしたご自身のコンピュータで行います。"
+msgstr ""
+"Tvorba mapy probíhá na vlastním počítači s programem **QGIS Desktop**:"
 
 #: ../../source/introduction.rst:15
 msgid "loading layers,"
-msgstr "レイヤの読み込み、"
+msgstr "načítání vrstev,"
 
 #: ../../source/introduction.rst:16
 msgid "map creation,"
-msgstr "地図の作成、"
+msgstr "vytvoření mapy,"
 
 #: ../../source/introduction.rst:17
 msgid "organising and preparing data."
-msgstr "データの整理と準備。"
+msgstr "uspořádání a příprava dat."
 
 #: ../../source/introduction.rst:19
 msgid "**Map configuration & publication**"
-msgstr "**地図の設定 & 公開**"
+msgstr "**Konfigurace a zveřejnění mapy**"
 
 #: ../../source/introduction.rst:21
 msgid ""
@@ -63,12 +63,14 @@ msgid ""
 "Desktop. Then he synchronizes his working folder with his server in intra- "
 "or extranet."
 msgstr ""
-"マップをオンラインで公開するために、公開する組織はQGIS Desktopの **Lizmapプラグイン** "
-"で公開用のオプション（縮尺、背景レイヤ、メタデータ）を設定します。その後、作業フォルダをイントラネットまたは外部ネットワークのサーバと同期させます。"
+"Aby mohl vydavatel umístit mapu online, nakonfiguruje možnosti publikování "
+"(měřítka, základní vrstvy, metadata) pomocí **zásuvného modulu Lizmap** v "
+"QGIS Desktop. Poté synchronizuje svou pracovní složku se serverem v "
+"intranetu nebo extranetu."
 
 #: ../../source/introduction.rst:23
 msgid "**Data vizualisation**"
-msgstr "**データの可視化**"
+msgstr "**Vizualizace dat**"
 
 #: ../../source/introduction.rst:25
 msgid ""
@@ -76,8 +78,9 @@ msgid ""
 "Internet at the same. It is available on the application **Lizmap Web "
 "Client** with a Web browser (Firefox, Safari, Chrome, Internet Explorer)."
 msgstr ""
-"同期が完了すると、QGISのマップはインターネット上で同様にアクセスできるようになります。Webブラウザ（Firefox、Safari、Chrome、Internet"
-" Explorer）を使用するアプリケーション **Lizmap Web Client** で利用できます。"
+"Po dokončení synchronizace lze mapu QGIS zobrazit na internetu na stejném "
+"místě. Je k dispozici v aplikaci **Lizmap Web Client** s webovým prohlížečem"
+" (Firefox, Safari, Chrome, Internet Explorer)."
 
 #: ../../source/shared/about_versions.rst:1
 msgid ""
@@ -85,105 +88,120 @@ msgid ""
 " which are supported, it's written on the Lizmap Web Client wiki page : "
 "https://github.com/3liz/lizmap-web-client/wiki/Versions"
 msgstr ""
-"サポートされているバージョン（Webブラウザ、QGISサーバ、PostgreSQLなど）の詳細については、Lizmap Web "
-"Clientのwikiページに書かれています： https://github.com/3liz/lizmap-web-"
-"client/wiki/Versions"
+"Další informace o podporovaných verzích (webové prohlížeče, QGIS Server, "
+"PostgreSQL atd.) jsou uvedeny na wiki stránce Lizmap Web Client : "
+"https://github.com/3liz/lizmap-web-client/wiki/Versions."
 
 #: ../../source/introduction.rst:30
 msgid "QGIS and QGIS Server"
-msgstr "QGISとQGIS Server"
+msgstr "QGIS a QGIS Server"
 
 #: ../../source/introduction.rst:32
 msgid "QGIS, a complete Desktop GIS software"
-msgstr "QGIS - 完全なデスクトップGISソフトウェア"
+msgstr "QGIS, kompletní desktopový software GIS"
 
 #: ../../source/introduction.rst:34
 msgid ""
 "Management of a wide range of data format for raster (GeoTIFF, ASC, NetCDF, "
 "etc.) and vector (SHP, TAB, MIF/MID, GML, GeoJSON, etc)"
 msgstr ""
-"ラスター（GeoTIFF、ASC、NetCDFなど）、ベクター（SHP、TAB、MIF/MID、GML、GeoJSONなど）の多様なデータフォーマットの管理"
+"Správa široké škály datových formátů pro rastry (GeoTIFF, ASC, NetCDF atd.) "
+"a vektory (SHP, TAB, MIF/MID, GML, GeoJSON atd.)."
 
 #: ../../source/introduction.rst:35
 msgid ""
 "Management of key geographic database (PostgreSQL/PostGIS, Oracle, MSSQL, "
 "etc.)"
-msgstr "主要なGISデータベース（PostgreSQL/PostGIS、Oracle、MSSQLなど）の管理"
+msgstr ""
+"Správa klíčové geografické databáze (PostgreSQL/PostGIS, Oracle, MSSQL atd.)"
 
 #: ../../source/introduction.rst:36
 msgid ""
 "Management of raster and vector layers, symbology, printing, processing"
-msgstr "ラスターおよびベクターレイヤー、シンボロジー、印刷、データ処理の管理"
+msgstr "Správa rastrových a vektorových vrstev, symbologie, tisk, zpracování"
 
 #: ../../source/introduction.rst:37
 msgid "Performance and functional richness of a desktop GIS Software"
-msgstr "デスクトップ型GISソフトの性能と機能の充実"
+msgstr "Výkon a funkční bohatost desktopového softwaru GIS"
 
 #: ../../source/introduction.rst:39
 msgid "Geographical standardized Web Services:"
-msgstr "地理的に標準化されたWebサービス"
+msgstr "Geografické standardizované webové služby:"
 
 #: ../../source/introduction.rst:41
 msgid ""
 "*Open Geospatial Consortium*, OGC, consortium for standardization of "
 "geographic information exchange through Internet"
-msgstr "*Open Geospatial Consortium* OGC：インターネットを介した地理情報データの標準化を行うコンソーシアム。"
+msgstr ""
+"*Open Geospatial Consortium*, OGC, konsorcium pro standardizaci výměny "
+"geografických informací prostřednictvím internetu."
 
 #: ../../source/introduction.rst:42
 msgid "*Web Mapping Service*, WMS: standard for publishing map as image"
-msgstr "*Web Mapping Service*, WMS: 画像として地図を配信する標準規格"
+msgstr ""
+"*Web Mapping Service*, WMS: standard pro publikování mapy jako obrázku"
 
 #: ../../source/introduction.rst:43
 msgid ""
 "*Web Feature Service*, WFS: standard for publishing geographic vector data"
-msgstr "*Web Feature Service*, WFS: ベクターデータとして地理情報を配信する標準規格"
+msgstr ""
+"*Web Feature Service*, WFS: standard pro publikování geografických "
+"vektorových dat."
 
 #: ../../source/introduction.rst:44
 msgid ""
 "*Web Coverage Service*, WCS: standard for publishing geographic raster data"
-msgstr "*Web Coverage Service*, WCS: 地理的なラスターデータを配信するための標準規格"
+msgstr ""
+"*Web Coverage Service*, WCS: standard pro publikování geografických "
+"rastrových dat."
 
 #: ../../source/introduction.rst:46
 msgid ""
 "QGIS Server allows you to easily publish 3 types of standardized Web "
 "Services Geographic:"
-msgstr "QGIS Serverでは、標準化された3種類のWebGISサービスを簡単に公開することができます。"
+msgstr ""
+"QGIS Server umožňuje snadno publikovat 3 typy standardizovaných webových "
+"služeb Geografické služby:"
 
 #: ../../source/introduction.rst:48
 msgid "Install QGIS Server on a server"
-msgstr "QGIS Serverをサーバーにインストールする"
+msgstr "Instalace serveru QGIS na server"
 
 #: ../../source/introduction.rst:49
 msgid "Configure properties of Geographic Web Services"
-msgstr "WebGISサービスのプロパティの設定をする"
+msgstr "Konfigurace vlastností geografických webových služeb"
 
 #: ../../source/introduction.rst:50
 msgid "Copy and paste the QGIS project and data files"
-msgstr "QGISプロジェクトとデータファイルをコピーアンドペーストする"
+msgstr "Zkopírujte a vložte projekt QGIS a datové soubory"
 
 #: ../../source/introduction.rst:51
 msgid "QGIS Server and QGIS Desktop share **the same rendering engine**"
-msgstr "QGIS ServerとQGISデスクトップは **同じレンダリングエンジン** を共有しています"
+msgstr "QGIS Server a QGIS Desktop sdílejí **stejný vykreslovací engine**."
 
 #: ../../source/introduction.rst:58
 msgid "Lizmap features"
-msgstr "Lizmapの機能"
+msgstr "Funkce Lizmap"
 
 #: ../../source/introduction.rst:61
 msgid "Open Source"
-msgstr "オープンソース"
+msgstr "Open Source"
 
 #: ../../source/introduction.rst:63
 msgid ""
 "Lizmap and the modules are opensource projects edited and managed by "
 "https://3liz.com"
-msgstr "‎Lizmapとモジュールは、https://3liz.com によって作成および管理されるオープンソースのプロジェクトです。‎"
+msgstr ""
+"Lizmap a moduly jsou opensource projekty, které upravuje a spravuje "
+"https://3liz.com."
 
 #: ../../source/introduction.rst:65
 msgid ""
 "The source code is currently available on https://github.com/3liz/ Help is "
 "available through :"
-msgstr "‎ソース コードは、 https://github.com/3liz/ で入手できます。‎"
+msgstr ""
+"Zdrojový kód je v současné době k dispozici na adrese "
+"https://github.com/3liz/. Nápověda je k dispozici prostřednictvím :"
 
 #: ../../source/introduction.rst:68
 msgid "https://gis.stackexchange.com/"
@@ -191,59 +209,61 @@ msgstr "https://gis.stackexchange.com/"
 
 #: ../../source/introduction.rst:69
 msgid "Github tickets"
-msgstr "Github tickets"
+msgstr "Tikety Github"
 
 #: ../../source/introduction.rst:70
 msgid "Our mailing-list : https://lists.osgeo.org/pipermail/lizmap/"
-msgstr "メーリングリスト : https://lists.osgeo.org/pipermail/lizmap/"
+msgstr "Náš mailing-list : https://lists.osgeo.org/pipermail/lizmap/"
 
 #: ../../source/introduction.rst:71
 msgid "On IRC on the #lizmap channel of https://libera.chat"
-msgstr "IRCのhttps://libera.chat の#lizmapチャンネルにて。"
+msgstr "Na IRC na kanálu #lizmap na https://libera.chat"
 
 #: ../../source/introduction.rst:72
 msgid ""
 "Commercial support through 3Liz, contact "
 "mailto:info@3liz.com?subject=CommercialSupportRequest"
 msgstr ""
-"‎3Lizによる商用サポート、お問い合わせ‎ mailto:info@3liz.com?subject=CommercialSupportRequest"
+"Komerční podpora prostřednictvím společnosti 3Liz, kontakt "
+"mailto:info@3liz.com?subject=CommercialSupportRequest"
 
 #: ../../source/introduction.rst:75
 msgid "Default features"
-msgstr "標準の機能"
+msgstr "Výchozí funkce"
 
 #: ../../source/introduction.rst:77
 msgid "By default, Lizmap offers web maps with the following features:"
-msgstr "Lizmapでは、標準で以下の機能を持つWebマップを提供しています。"
+msgstr ""
+"Ve výchozím nastavení nabízí Lizmap webové mapy s následujícími funkcemi:"
 
 #: ../../source/introduction.rst:79
 msgid "pan"
-msgstr "地図の移動"
+msgstr "panorama"
 
 #: ../../source/introduction.rst:80
 msgid "zoom on area drawn by the user"
-msgstr "ユーザーが描いた領域にズームインする"
+msgstr "přiblížení oblasti nakreslené uživatelem"
 
 #: ../../source/introduction.rst:81
 msgid "zoom more"
-msgstr "さらにズームインする"
+msgstr "přiblížit více"
 
 #: ../../source/introduction.rst:82
 msgid "selecting a zoom level with a level bar"
-msgstr "縮尺バーからズームレベルを選択する"
+msgstr "výběr úrovně přiblížení pomocí panelu úrovní"
 
 #: ../../source/introduction.rst:83
 msgid "zoom less"
-msgstr "ズームアウトする"
+msgstr "oddálit"
 
 #: ../../source/introduction.rst:84
 msgid "displaying the scale as a scale bar and digitally"
-msgstr "縮尺をスケールバーとしてデジタル表示する"
+msgstr "zobrazení měřítka jako stupnice a v číslicích."
 
 #: ../../source/introduction.rst:86
 msgid ""
 "The displayed legend respects the order and organization defined in QGIS."
-msgstr "表示される凡例は、QGIS で定義された順序と構成に従います。"
+msgstr "Zobrazená legenda respektuje pořadí a uspořádání definované v QGIS."
 
 #: ../../source/introduction.rst:88
 msgid ""
@@ -251,7 +271,9 @@ msgid ""
 "map in the entire width of the screen. It also lets you view the information"
 " on the map (description, extent, contact)."
 msgstr ""
-"凡例を非表示にして、画面の幅いっぱいにして地図を活用できるようなインターフェースを持っています。また、地図上の情報（説明、データの範囲、連絡先）を表示することもできます。"
+"Rozhraní umožňuje uživateli skrýt legendu a využít mapu v celé šířce "
+"obrazovky. Umožňuje také zobrazit informace na mapě (popis, rozsah, "
+"kontakt)."
 
 #: ../../source/introduction.rst:90
 msgid ""
@@ -260,15 +282,19 @@ msgid ""
 " to secure access to web services for access in QGIS or ArcGIS. It is also "
 "possible to share these addresses with web services systems cataloging."
 msgstr ""
-"最後に、Lizmapは、マップを構築するために使用されるWebサービスへのプロキシ的な役割も持っています。したがって、Lizmapを介してWMSまたはWFSのリクエストを使用することが可能です。QGISまたはArcGISからのアクセスに対して、安全なウェブサービスへのアクセスを提供することができます。また、これらのアドレスをWebサービスシステムのカタログと共有することも可能です。"
+"Lizmap je konečně proxy serverem pro webové služby používané k vytváření "
+"map. Prostřednictvím Lizmap je tedy možné používat požadavky WMS nebo WFS. "
+"Je možné zabezpečit přístup k webovým službám pro přístup v QGIS nebo "
+"ArcGIS. Je také možné sdílet tyto adresy s katalogizačními systémy webových "
+"služeb."
 
 #: ../../source/introduction.rst:99
 msgid "Additional Lizmap modules"
-msgstr "追加のLizmapのモジュール"
+msgstr "Další moduly Lizmap"
 
 #: ../../source/introduction.rst:101
 msgid "Some modules can be added to Lizmap :"
-msgstr "いくつかのモジュールは、Lizmapに追加することができます。"
+msgstr "Některé moduly lze přidat do aplikace Lizmap :"
 
 #: ../../source/introduction.rst:106
 msgid "AltiProfil"
@@ -278,7 +304,9 @@ msgstr "AltiProfil"
 msgid ""
 "Display a profil with altitude according to a line and a DEM (Digital "
 "Elevation Model)"
-msgstr "‎ラインと DEM (デジタル標高モデル) に従って高度を持つプロフィルを表示する‎"
+msgstr ""
+"Zobrazení profilu s nadmořskou výškou podle linie a DEM (digitálního modelu "
+"nadmořské výšky)"
 
 #: ../../source/introduction.rst:106
 msgid "https://github.com/arno974/lizmap-altiProfil"
@@ -290,7 +318,7 @@ msgstr "Map builder"
 
 #: ../../source/introduction.rst:109
 msgid "To combine many Lizmap projects into a single map viewer"
-msgstr "たくさんのLizmapプロジェクトを1つの地図ビューアにまとめます"
+msgstr "Spojení mnoha projektů Lizmap do jednoho prohlížeče map"
 
 #: ../../source/introduction.rst:111
 msgid "https://github.com/3liz/lizmap-mapbuilder-module"
@@ -305,8 +333,8 @@ msgid ""
 "For displaying metadata stored with the QGIS PgMetadata plugin. It is also "
 "providing a DCAT XML catalog, to be harvested by external services"
 msgstr ""
-"QGIS PgMetadataプラグインで保存されたメタデータを表示するためのものです。また、DCAT "
-"XMLカタログを提供しており、外部サービスから取得することができます。"
+"Pro zobrazení metadat uložených pomocí zásuvného modulu QGIS PgMetadata. "
+"Poskytuje také katalog DCAT XML, který mohou využívat externí služby."
 
 #: ../../source/introduction.rst:116
 msgid "https://github.com/3liz/lizmap-pgmetadata-module"
@@ -321,7 +349,8 @@ msgid ""
 "For displaying itinerary between two points using the `PgRouting "
 "<https://pgrouting.org/>`_ extension for PostGIS."
 msgstr ""
-"‎2 点間の経路を表示する場合は、PostGISの拡張機能 `PgRouting <https://pgrouting.org/>`を使用ください。"
+"Pro zobrazení trasy mezi dvěma body pomocí rozšíření `PgRouting "
+"<https://pgrouting.org/>`_ pro PostGIS."
 
 #: ../../source/introduction.rst:121
 msgid "https://github.com/3liz/lizmap-pgrouting-module"
@@ -329,13 +358,15 @@ msgstr "https://github.com/3liz/lizmap-pgrouting-module"
 
 #: ../../source/introduction.rst:126
 msgid "Web Processing Service"
-msgstr "Webプロセッシングサービス"
+msgstr "Služba webového zpracování"
 
 #: ../../source/introduction.rst:124
 msgid ""
 "To execute QGIS Processing algorithms or models on a server and view the "
 "results within Lizmap"
-msgstr "QGISプロセッシングアルゴリズムやモデルをサーバー上で実行し、その結果をLizmap内で表示します"
+msgstr ""
+"Spuštění algoritmů nebo modelů QGIS Processing na serveru a zobrazení "
+"výsledků v aplikaci Lizmap"
 
 #: ../../source/introduction.rst:126
 msgid "https://github.com/3liz/lizmap-wps-web-client-module"
@@ -343,15 +374,15 @@ msgstr "https://github.com/3liz/lizmap-wps-web-client-module"
 
 #: ../../source/introduction.rst:128
 msgid "Specific to France use-case :"
-msgstr "フランスでの利用には以下のものが利用できます"
+msgstr "Specifické pro případ použití ve Francii :"
 
 #: ../../source/introduction.rst:133
 msgid "French adresse"
-msgstr "French adresse"
+msgstr "Francouzská adresa"
 
 #: ../../source/introduction.rst:131
 msgid "For managing addresses"
-msgstr "住所の管理に"
+msgstr "Pro správu adres"
 
 #: ../../source/introduction.rst:133
 msgid "https://github.com/3liz/lizmap-adresse-module"
@@ -359,11 +390,11 @@ msgstr "https://github.com/3liz/lizmap-adresse-module"
 
 #: ../../source/introduction.rst:138
 msgid "French cadastre"
-msgstr "French cadastre"
+msgstr "Francouzský katastr"
 
 #: ../../source/introduction.rst:136
 msgid "For managing cadastre data"
-msgstr "地籍データの管理に"
+msgstr "Pro správu údajů katastru nemovitostí"
 
 #: ../../source/introduction.rst:138
 msgid "https://github.com/3liz/lizmap-cadastre-module"
@@ -375,7 +406,7 @@ msgstr "Naturaliz"
 
 #: ../../source/introduction.rst:141
 msgid "For managing species and observation data"
-msgstr "生物種や観測データの管理に"
+msgstr "Pro správu údajů o druzích a pozorování"
 
 #: ../../source/introduction.rst:143
 msgid "https://github.com/3liz/lizmap-naturaliz-module"
@@ -383,103 +414,105 @@ msgstr "https://github.com/3liz/lizmap-naturaliz-module"
 
 #: ../../source/introduction.rst:146
 msgid "Configuration with QGIS"
-msgstr "QGISでの設定"
+msgstr "Konfigurace s QGIS"
 
 #: ../../source/introduction.rst:148
 msgid "Map's configuration is done in QGIS."
-msgstr "地図の設定はQGIS上で行われます。"
+msgstr "Konfigurace mapy se provádí v QGIS."
 
 #: ../../source/introduction.rst:150
 msgid "One part comes directly from the **QGIS project**:"
-msgstr "1つの部分は、**QGISプロジェクト** から直接来ています。"
+msgstr "Jedna část pochází přímo z projektu **QGIS**:"
 
 #: ../../source/introduction.rst:152
 msgid "legend order and structure"
-msgstr "凡例の順序と構成"
+msgstr "pořadí a struktura legendy"
 
 #: ../../source/introduction.rst:153
 msgid "layer symbology"
-msgstr "レイヤのシンボル"
+msgstr "symbologie vrstev"
 
 #: ../../source/introduction.rst:154
 msgid "location map with a group Overview in the legend"
-msgstr "凡例にグループ概要を表示したロケーション・マップ"
+msgstr "mapa polohy se skupinou Přehled v legendě"
 
 #: ../../source/introduction.rst:155
 msgid "configure print templates via composers"
-msgstr "コンポージャを使用した印刷テンプレートの設定"
+msgstr "konfigurovat tiskové šablony prostřednictvím nástrojů pro kompozici."
 
 #: ../../source/introduction.rst:157
 msgid "The rest is done with the **Lizmap plugin**. This plugin allows to:"
-msgstr "残りの部分は **Lizmapプラグイン** で行われます。このプラグインは以下のことを行えます。"
+msgstr ""
+"Zbytek se provádí pomocí zásuvného modulu **Lizmap**. Tento zásuvný modul "
+"umožňuje:"
 
 #: ../../source/introduction.rst:159
 msgid "specify the layers and groups name in the Web interface"
-msgstr "ウェブインターフェースでのレイヤとグループ名の設定"
+msgstr "zadávání názvů vrstev a skupin ve webovém rozhraní."
 
 #: ../../source/introduction.rst:160
 msgid "group the layers into a single WMS layer"
-msgstr "レイヤを一つのWMSレイヤとしてグループ化する"
+msgstr "seskupit vrstvy do jedné vrstvy WMS."
 
 #: ../../source/introduction.rst:161
 msgid "set some layers as baselayer"
-msgstr "いくつかのレイヤをベースレイヤとして設定する"
+msgstr "nastavit některé vrstvy jako základní vrstvu"
 
 #: ../../source/introduction.rst:162
 msgid "set the display layer system: alone image or tiles"
-msgstr "単独の画像やタイルをレイヤとして表示するシステムの設定"
+msgstr "nastavit systém vrstev zobrazení: samotný obrázek nebo dlaždice"
 
 #: ../../source/introduction.rst:163
 msgid "set the lifetime of the images in the cache"
-msgstr "キャッシュした画像の有効期限を設定する"
+msgstr "nastavit dobu životnosti obrázků v mezipaměti."
 
 #: ../../source/introduction.rst:164
 msgid "set the lifetime of the images in the network"
-msgstr "ネットワークでの画像の有効期限を設定する"
+msgstr "nastavit dobu životnosti snímků v síti."
 
 #: ../../source/introduction.rst:165
 msgid "set the popups for querying layer"
-msgstr "レイヤへの問い合わせ時に表示するポップアップの設定"
+msgstr "nastavit vyskakovací okna pro dotazování vrstvy"
 
 #: ../../source/introduction.rst:166
 msgid "set a link to the metadata"
-msgstr "メタデータへのリンクの設定"
+msgstr "nastavit odkaz na metadata"
 
 #: ../../source/introduction.rst:167
 msgid "set the map scales"
-msgstr "地図の縮尺の設定"
+msgstr "nastavení měřítek map"
 
 #: ../../source/introduction.rst:168
 msgid "set the tools available with the map:"
-msgstr "地図で利用可能なツールの設定"
+msgstr "nastavit nástroje dostupné s mapou:"
 
 #: ../../source/introduction.rst:170
 msgid "printing"
-msgstr "印刷"
+msgstr "tisk"
 
 #: ../../source/introduction.rst:171
 msgid "measuring length, area and perimeter"
-msgstr "長さ、面積、外周の測定"
+msgstr "měření délky, plochy a obvodu"
 
 #: ../../source/introduction.rst:172
 msgid "using user geolocation (GPS)"
-msgstr "ユーザの測位情報 (GPS)の使用"
+msgstr "použití geolokace uživatele (GPS)"
 
 #: ../../source/introduction.rst:173
 msgid "address search in OpenStreetMap or Google"
-msgstr "OpenStreetMapまたはGoogleでの住所検索"
+msgstr "vyhledávání adres v OpenStreetMap nebo Google"
 
 #: ../../source/introduction.rst:175
 msgid "set external baselayers:"
-msgstr "サードパーティのベースレイヤの設定"
+msgstr "nastavit vnější základní vrstvy:"
 
 #: ../../source/introduction.rst:177
 msgid "Google Maps"
-msgstr "Googleマップ"
+msgstr "Google Maps"
 
 #: ../../source/introduction.rst:178
 msgid "Bing Maps"
-msgstr "Bingマップ"
+msgstr "Bing Maps"
 
 #: ../../source/introduction.rst:179
 msgid "OpenStreetMap"
@@ -491,98 +524,104 @@ msgstr "Géoportail IGN"
 
 #: ../../source/introduction.rst:182
 msgid "set layers for navigation shortcut:"
-msgstr "ナビゲーションのショートカットのためのレイヤの設定"
+msgstr "nastavení vrstev pro navigační zkratku:"
 
 #: ../../source/introduction.rst:184
 msgid "search in a layer field"
-msgstr "レイヤのフィールドでの検索"
+msgstr "vyhledávání v poli vrstvy"
 
 #: ../../source/introduction.rst:185
 msgid "zoom to the selected item"
-msgstr "選択された地物へのズーム"
+msgstr "přiblížení k vybrané položce"
 
 #: ../../source/introduction.rst:186
 msgid ""
 "cascaded search within 2 fields of the same layer or between joined layers"
-msgstr "同一レイヤーの2つのフィールド内、または結合されたレイヤー間でのカスケード検索"
+msgstr ""
+"kaskádové vyhledávání v rámci 2 polí stejné vrstvy nebo mezi spojenými "
+"vrstvami."
 
 #: ../../source/introduction.rst:194
 msgid "Configuring with the Web back-office"
-msgstr "Webバックオフィスとの連携"
+msgstr "Konfigurace s webovým back-office"
 
 #: ../../source/introduction.rst:196
 msgid "The Lizmap back-office defines:"
-msgstr "Lizmapバックオフィスとは以下の通りです。"
+msgstr "Back-office Lizmap definuje:"
 
 #: ../../source/introduction.rst:198
 msgid "the directory list containing maps"
-msgstr "地図を含むディレクトリの一覧"
+msgstr "seznam adresářů obsahující mapy"
 
 #: ../../source/introduction.rst:199
 msgid "users' rights by map directory"
-msgstr "地図のディレクトリごとのユーザー権限"
+msgstr "práva uživatelů podle adresáře map"
 
 #: ../../source/introduction.rst:200
 msgid "using subdomain to improve the responsiveness of the interface."
-msgstr "サブドメインを使用して、インターフェースの応答性を向上させます。"
+msgstr "pomocí subdomény zlepšit odezvu rozhraní."
 
 #: ../../source/introduction.rst:204
 msgid "In a nutshell"
-msgstr "手短にいえば、"
+msgstr "Stručně řečeno"
 
 #: ../../source/introduction.rst:206
 msgid "HTML5 interface compatible mobiles and tablets"
-msgstr "モバイルやタブレットに対応したHTML5インターフェース"
+msgstr "Rozhraní HTML5 kompatibilní s mobily a tablety"
 
 #: ../../source/introduction.rst:207
 msgid ""
 "Grouping maps by directory: application multi-directories and multi-projects"
-msgstr "ディレクトリによる地図のグループ化：アプリケーションのマルチディレクトリとマルチプロジェクト"
+msgstr ""
+"Seskupování map podle adresářů: aplikace s více adresáři a více projekty"
 
 #: ../../source/introduction.rst:208
 msgid "Management of access rights per directory for user groups"
-msgstr "ユーザーグループのディレクトリごとのアクセス権の管理"
+msgstr ""
+"Správa přístupových práv pro skupiny uživatelů v jednotlivých adresářích"
 
 #: ../../source/introduction.rst:209
 msgid "Automatic map cache management"
-msgstr "地図の自動キャッシュ管理"
+msgstr "Automatická správa mezipaměti map"
 
 #: ../../source/introduction.rst:210
 msgid ""
 "Multilingual interface: English, French, Italian, Spanish, Portuguese, Greek"
-msgstr "英語、フランス語、イタリア語、スペイン語、ポルトガル語、ギリシャ語などの多言語インターフェース"
+msgstr ""
+"Vícejazyčné rozhraní: angličtina, francouzština, italština, španělština, "
+"portugalština, řečtina"
 
 #: ../../source/introduction.rst:211
 msgid "Using external baselayers: OSM, Google, Bing"
-msgstr "OSM、Google、BIngなどのサードパーティのベースレイヤの使用"
+msgstr "Používání externích základních vrstev: OSM, Google, Bing"
 
 #: ../../source/introduction.rst:212
 msgid "Printing"
-msgstr "印刷/ファイル出力"
+msgstr "Tisk"
 
 #: ../../source/introduction.rst:213
 msgid "Online edition: adding, spatial and filed changing, deleting"
-msgstr "オンラインでの編集：追加、編集、削除"
+msgstr "Online edice: přidávání, prostorová a spisová změna, mazání"
 
 #: ../../source/introduction.rst:214
 msgid "Zoom with localisation"
-msgstr "ローカライズしたズーム"
+msgstr "Přiblížení s lokalizací"
 
 #: ../../source/introduction.rst:215
 msgid "Address search: Nominatim (OpenStreetMap engine), Google"
-msgstr "住所検索：Nominatim（OpenStreetMapエンジン）、Google"
+msgstr "Vyhledávání adres: Nominatim (engine OpenStreetMap), Google"
 
 #: ../../source/introduction.rst:216
 msgid "Access logs"
-msgstr "ログへのアクセス"
+msgstr "Přístupové protokoly"
 
 #: ../../source/introduction.rst:219
 msgid "Requirements"
-msgstr "必要要件"
+msgstr "Požadavky"
 
 #: ../../source/introduction.rst:221
 msgid "Version of Lizmap Web Client requires:"
-msgstr "‎Lizmap Web クライアントの次のバージョンが必要です‎："
+msgstr "Verze Lizmap Web Client vyžaduje:"
 
 #: ../../source/introduction.rst:223
 msgid "Firefox ≥ 63"

@@ -4,8 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Jin Igarashi <wushilan0623@gmail.com>, 2021
-# yamamoto ryuzo <ryu@yamakun.net>, 2021
+# Кадастр Муниципальный, 2022
 # 
 #, fuzzy
 msgid ""
@@ -14,47 +13,47 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-13 13:45+0000\n"
 "PO-Revision-Date: 2021-12-19 13:43+0000\n"
-"Last-Translator: yamamoto ryuzo <ryu@yamakun.net>, 2021\n"
-"Language-Team: Japanese (https://www.transifex.com/3liz-1/teams/62012/ja/)\n"
+"Last-Translator: Кадастр Муниципальный, 2022\n"
+"Language-Team: Ukrainian (Ukraine) (https://www.transifex.com/3liz-1/teams/62012/uk_UA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../source/introduction.rst:3
 msgid "Introduction"
-msgstr "はじめに"
+msgstr "Вступ"
 
 #: ../../source/introduction.rst:6
 msgid "Lizmap architecture"
-msgstr "Lizmapのアーキテクチャ"
+msgstr "Архітектура Lizmap"
 
 #: ../../source/introduction.rst:11
 msgid "**Data preparation**"
-msgstr "**データの準備**"
+msgstr "**Підготовка даних**"
 
 #: ../../source/introduction.rst:13
 msgid ""
 "The map's construction work is carried on his own computer with **QGIS "
 "Desktop**:"
-msgstr "マップの作成作業は、 **QGIS Desktop** をインストールしたご自身のコンピュータで行います。"
+msgstr "Побудова карти виконується на власному комп’ютері з **QGIS Desktop**:"
 
 #: ../../source/introduction.rst:15
 msgid "loading layers,"
-msgstr "レイヤの読み込み、"
+msgstr "завантаження шарів,"
 
 #: ../../source/introduction.rst:16
 msgid "map creation,"
-msgstr "地図の作成、"
+msgstr "створення карти,"
 
 #: ../../source/introduction.rst:17
 msgid "organising and preparing data."
-msgstr "データの整理と準備。"
+msgstr "організація та підготовка даних."
 
 #: ../../source/introduction.rst:19
 msgid "**Map configuration & publication**"
-msgstr "**地図の設定 & 公開**"
+msgstr "**Конфігурація та публікація карти**"
 
 #: ../../source/introduction.rst:21
 msgid ""
@@ -63,12 +62,14 @@ msgid ""
 "Desktop. Then he synchronizes his working folder with his server in intra- "
 "or extranet."
 msgstr ""
-"マップをオンラインで公開するために、公開する組織はQGIS Desktopの **Lizmapプラグイン** "
-"で公開用のオプション（縮尺、背景レイヤ、メタデータ）を設定します。その後、作業フォルダをイントラネットまたは外部ネットワークのサーバと同期させます。"
+"Щоб мати можливість розмістити карту в режимі онлайн, видавець налаштовує "
+"параметри публікації (масштаби, базові шари, метадані) за допомогою "
+"**плагіна Lizmap** у QGIS Desktop. Потім він синхронізує свою робочу папку "
+"зі своїм сервером у внутрішньому чи екстранеті."
 
 #: ../../source/introduction.rst:23
 msgid "**Data vizualisation**"
-msgstr "**データの可視化**"
+msgstr "**Візуалізація даних**"
 
 #: ../../source/introduction.rst:25
 msgid ""
@@ -76,8 +77,9 @@ msgid ""
 "Internet at the same. It is available on the application **Lizmap Web "
 "Client** with a Web browser (Firefox, Safari, Chrome, Internet Explorer)."
 msgstr ""
-"同期が完了すると、QGISのマップはインターネット上で同様にアクセスできるようになります。Webブラウザ（Firefox、Safari、Chrome、Internet"
-" Explorer）を使用するアプリケーション **Lizmap Web Client** で利用できます。"
+"Після завершення синхронізації карту QGIS можна буде отримати в Інтернеті. "
+"Він доступний у програмі **Lizmap Web Client** з веб-браузером (Firefox, "
+"Safari, Chrome, Internet Explorer)."
 
 #: ../../source/shared/about_versions.rst:1
 msgid ""
@@ -85,105 +87,126 @@ msgid ""
 " which are supported, it's written on the Lizmap Web Client wiki page : "
 "https://github.com/3liz/lizmap-web-client/wiki/Versions"
 msgstr ""
-"サポートされているバージョン（Webブラウザ、QGISサーバ、PostgreSQLなど）の詳細については、Lizmap Web "
-"Clientのwikiページに書かれています： https://github.com/3liz/lizmap-web-"
-"client/wiki/Versions"
+"Додаткову інформацію про версії (веб-браузери, сервер QGIS, PostgreSQL "
+"тощо), які підтримуються, написано на вікі-сторінці Lizmap Web Client: "
+"https://github.com/3liz/lizmap-web-client/wiki/Versions"
 
 #: ../../source/introduction.rst:30
 msgid "QGIS and QGIS Server"
-msgstr "QGISとQGIS Server"
+msgstr "QGIS і сервер QGIS"
 
 #: ../../source/introduction.rst:32
 msgid "QGIS, a complete Desktop GIS software"
-msgstr "QGIS - 完全なデスクトップGISソフトウェア"
+msgstr "QGIS, повне програмне забезпечення для настільних ГІС"
 
 #: ../../source/introduction.rst:34
 msgid ""
 "Management of a wide range of data format for raster (GeoTIFF, ASC, NetCDF, "
 "etc.) and vector (SHP, TAB, MIF/MID, GML, GeoJSON, etc)"
 msgstr ""
-"ラスター（GeoTIFF、ASC、NetCDFなど）、ベクター（SHP、TAB、MIF/MID、GML、GeoJSONなど）の多様なデータフォーマットの管理"
+"Керування широким діапазоном форматів даних для растрових (GeoTIFF, ASC, "
+"NetCDF тощо) та векторних (SHP, TAB, MIF/MID, GML, GeoJSON тощо)"
 
 #: ../../source/introduction.rst:35
 msgid ""
 "Management of key geographic database (PostgreSQL/PostGIS, Oracle, MSSQL, "
 "etc.)"
-msgstr "主要なGISデータベース（PostgreSQL/PostGIS、Oracle、MSSQLなど）の管理"
+msgstr ""
+"Керування ключовими географічними базами даних (PostgreSQL/PostGIS, Oracle, "
+"MSSQL тощо)"
 
 #: ../../source/introduction.rst:36
 msgid ""
 "Management of raster and vector layers, symbology, printing, processing"
-msgstr "ラスターおよびベクターレイヤー、シンボロジー、印刷、データ処理の管理"
+msgstr ""
+"Управління растровими та векторними шарами, символікою, друком, обробкою"
 
 #: ../../source/introduction.rst:37
 msgid "Performance and functional richness of a desktop GIS Software"
-msgstr "デスクトップ型GISソフトの性能と機能の充実"
+msgstr ""
+"Продуктивність і функціональне багатство настільного програмного "
+"забезпечення ГІС"
 
 #: ../../source/introduction.rst:39
 msgid "Geographical standardized Web Services:"
-msgstr "地理的に標準化されたWebサービス"
+msgstr "Географічні стандартизовані веб-сервіси:"
 
 #: ../../source/introduction.rst:41
 msgid ""
 "*Open Geospatial Consortium*, OGC, consortium for standardization of "
 "geographic information exchange through Internet"
-msgstr "*Open Geospatial Consortium* OGC：インターネットを介した地理情報データの標準化を行うコンソーシアム。"
+msgstr ""
+"*Відкритий геопросторовий консорціум*, OGC, консорціум стандартизації обміну"
+" географічними відомостями через Інтернет"
 
 #: ../../source/introduction.rst:42
 msgid "*Web Mapping Service*, WMS: standard for publishing map as image"
-msgstr "*Web Mapping Service*, WMS: 画像として地図を配信する標準規格"
+msgstr ""
+"*Служба веб сервісів*, WMS: стандарт для публікації карти як зображення"
 
 #: ../../source/introduction.rst:43
 msgid ""
 "*Web Feature Service*, WFS: standard for publishing geographic vector data"
-msgstr "*Web Feature Service*, WFS: ベクターデータとして地理情報を配信する標準規格"
+msgstr ""
+"*Служба веб-функцій*, WFS: стандарт для публікації географічних векторних "
+"даних"
 
 #: ../../source/introduction.rst:44
 msgid ""
 "*Web Coverage Service*, WCS: standard for publishing geographic raster data"
-msgstr "*Web Coverage Service*, WCS: 地理的なラスターデータを配信するための標準規格"
+msgstr ""
+"*Служба веб-покриття*, WCS: стандарт для публікації географічних растрових "
+"даних"
 
 #: ../../source/introduction.rst:46
 msgid ""
 "QGIS Server allows you to easily publish 3 types of standardized Web "
 "Services Geographic:"
-msgstr "QGIS Serverでは、標準化された3種類のWebGISサービスを簡単に公開することができます。"
+msgstr ""
+"Сервер QGIS дозволяє легко публікувати 3 типи стандартизованих географічних "
+"веб-сервісів:"
 
 #: ../../source/introduction.rst:48
 msgid "Install QGIS Server on a server"
-msgstr "QGIS Serverをサーバーにインストールする"
+msgstr "Встановіть сервер QGIS на сервер"
 
 #: ../../source/introduction.rst:49
 msgid "Configure properties of Geographic Web Services"
-msgstr "WebGISサービスのプロパティの設定をする"
+msgstr "Налаштувати властивості географічних веб-сервісів"
 
 #: ../../source/introduction.rst:50
 msgid "Copy and paste the QGIS project and data files"
-msgstr "QGISプロジェクトとデータファイルをコピーアンドペーストする"
+msgstr "Скопіюйте та вставте проект QGIS і файли даних"
 
 #: ../../source/introduction.rst:51
 msgid "QGIS Server and QGIS Desktop share **the same rendering engine**"
-msgstr "QGIS ServerとQGISデスクトップは **同じレンダリングエンジン** を共有しています"
+msgstr ""
+"QGIS Server і QGIS Desktop використовують **один і той самий механізм "
+"візуалізації**"
 
 #: ../../source/introduction.rst:58
 msgid "Lizmap features"
-msgstr "Lizmapの機能"
+msgstr "Особливості Lizmap"
 
 #: ../../source/introduction.rst:61
 msgid "Open Source"
-msgstr "オープンソース"
+msgstr "Відкритий код"
 
 #: ../../source/introduction.rst:63
 msgid ""
 "Lizmap and the modules are opensource projects edited and managed by "
 "https://3liz.com"
-msgstr "‎Lizmapとモジュールは、https://3liz.com によって作成および管理されるオープンソースのプロジェクトです。‎"
+msgstr ""
+"Lizmap і модулі — це проекти з відкритим кодом, редаговані та керовані "
+"https://3liz.com"
 
 #: ../../source/introduction.rst:65
 msgid ""
 "The source code is currently available on https://github.com/3liz/ Help is "
 "available through :"
-msgstr "‎ソース コードは、 https://github.com/3liz/ で入手できます。‎"
+msgstr ""
+"Вихідний код наразі доступний на https://github.com/3liz/ Довідка доступна "
+"через:"
 
 #: ../../source/introduction.rst:68
 msgid "https://gis.stackexchange.com/"
@@ -195,55 +218,57 @@ msgstr "Github tickets"
 
 #: ../../source/introduction.rst:70
 msgid "Our mailing-list : https://lists.osgeo.org/pipermail/lizmap/"
-msgstr "メーリングリスト : https://lists.osgeo.org/pipermail/lizmap/"
+msgstr "Наш список розсилки: https://lists.osgeo.org/pipermail/lizmap/"
 
 #: ../../source/introduction.rst:71
 msgid "On IRC on the #lizmap channel of https://libera.chat"
-msgstr "IRCのhttps://libera.chat の#lizmapチャンネルにて。"
+msgstr "На IRC на каналі #lizmap https://libera.chat"
 
 #: ../../source/introduction.rst:72
 msgid ""
 "Commercial support through 3Liz, contact "
 "mailto:info@3liz.com?subject=CommercialSupportRequest"
 msgstr ""
-"‎3Lizによる商用サポート、お問い合わせ‎ mailto:info@3liz.com?subject=CommercialSupportRequest"
+"Комерційна підтримка через 3Liz, зв’яжіться з "
+"mailto:info@3liz.com?subject=CommercialSupportRequest"
 
 #: ../../source/introduction.rst:75
 msgid "Default features"
-msgstr "標準の機能"
+msgstr "Функції за замовчуванням"
 
 #: ../../source/introduction.rst:77
 msgid "By default, Lizmap offers web maps with the following features:"
-msgstr "Lizmapでは、標準で以下の機能を持つWebマップを提供しています。"
+msgstr "За замовчуванням Lizmap пропонує веб-карти з такими функціями:"
 
 #: ../../source/introduction.rst:79
 msgid "pan"
-msgstr "地図の移動"
+msgstr "панель шарів"
 
 #: ../../source/introduction.rst:80
 msgid "zoom on area drawn by the user"
-msgstr "ユーザーが描いた領域にズームインする"
+msgstr "збільшити область, намальовану користувачем"
 
 #: ../../source/introduction.rst:81
 msgid "zoom more"
-msgstr "さらにズームインする"
+msgstr "збільшити до охвату карти"
 
 #: ../../source/introduction.rst:82
 msgid "selecting a zoom level with a level bar"
-msgstr "縮尺バーからズームレベルを選択する"
+msgstr "вибір рівня масштабування за допомогою панелі рівня"
 
 #: ../../source/introduction.rst:83
 msgid "zoom less"
-msgstr "ズームアウトする"
+msgstr "зменшити масштаб"
 
 #: ../../source/introduction.rst:84
 msgid "displaying the scale as a scale bar and digitally"
-msgstr "縮尺をスケールバーとしてデジタル表示する"
+msgstr "відображення масштабу у вигляді шкали та в цифровому вигляді"
 
 #: ../../source/introduction.rst:86
 msgid ""
 "The displayed legend respects the order and organization defined in QGIS."
-msgstr "表示される凡例は、QGIS で定義された順序と構成に従います。"
+msgstr ""
+"Відображена легенда відповідає порядку та організації, визначеним у QGIS."
 
 #: ../../source/introduction.rst:88
 msgid ""
@@ -251,7 +276,9 @@ msgid ""
 "map in the entire width of the screen. It also lets you view the information"
 " on the map (description, extent, contact)."
 msgstr ""
-"凡例を非表示にして、画面の幅いっぱいにして地図を活用できるようなインターフェースを持っています。また、地図上の情報（説明、データの範囲、連絡先）を表示することもできます。"
+"Інтерфейс дозволяє користувачеві приховати легенду і скористатися картою по "
+"всій ширині екрана. Він також дозволяє переглядати інформацію на карті "
+"(опис, масштаб, контакт)."
 
 #: ../../source/introduction.rst:90
 msgid ""
@@ -260,25 +287,30 @@ msgid ""
 " to secure access to web services for access in QGIS or ArcGIS. It is also "
 "possible to share these addresses with web services systems cataloging."
 msgstr ""
-"最後に、Lizmapは、マップを構築するために使用されるWebサービスへのプロキシ的な役割も持っています。したがって、Lizmapを介してWMSまたはWFSのリクエストを使用することが可能です。QGISまたはArcGISからのアクセスに対して、安全なウェブサービスへのアクセスを提供することができます。また、これらのアドレスをWebサービスシステムのカタログと共有することも可能です。"
+"Нарешті, Lizmap є проксі-сервером до веб-сервісів, які використовуються для "
+"створення карт. Тому через Lizmap можна використовувати запити WMS або WFS. "
+"Можна захистити доступ до веб-сервісів для доступу в QGIS або ArcGIS. Також "
+"можна поділитися цими адресами з системою каталогізації веб-сервісів."
 
 #: ../../source/introduction.rst:99
 msgid "Additional Lizmap modules"
-msgstr "追加のLizmapのモジュール"
+msgstr "Додаткові модулі Lizmap"
 
 #: ../../source/introduction.rst:101
 msgid "Some modules can be added to Lizmap :"
-msgstr "いくつかのモジュールは、Lizmapに追加することができます。"
+msgstr "Деякі модулі можна додати до Lizmap:"
 
 #: ../../source/introduction.rst:106
 msgid "AltiProfil"
-msgstr "AltiProfil"
+msgstr "Профіль висоти"
 
 #: ../../source/introduction.rst:104
 msgid ""
 "Display a profil with altitude according to a line and a DEM (Digital "
 "Elevation Model)"
-msgstr "‎ラインと DEM (デジタル標高モデル) に従って高度を持つプロフィルを表示する‎"
+msgstr ""
+"Відображення профілю з висотою відповідно до лінії та матриці висот (цифрова"
+" модель висот)"
 
 #: ../../source/introduction.rst:106
 msgid "https://github.com/arno974/lizmap-altiProfil"
@@ -286,11 +318,11 @@ msgstr "https://github.com/arno974/lizmap-altiProfil"
 
 #: ../../source/introduction.rst:111
 msgid "Map builder"
-msgstr "Map builder"
+msgstr "Конструктор карт"
 
 #: ../../source/introduction.rst:109
 msgid "To combine many Lizmap projects into a single map viewer"
-msgstr "たくさんのLizmapプロジェクトを1つの地図ビューアにまとめます"
+msgstr "Для об'єднаня багатьох проектів Lizmap в єдиний засіб перегляду карт"
 
 #: ../../source/introduction.rst:111
 msgid "https://github.com/3liz/lizmap-mapbuilder-module"
@@ -305,8 +337,8 @@ msgid ""
 "For displaying metadata stored with the QGIS PgMetadata plugin. It is also "
 "providing a DCAT XML catalog, to be harvested by external services"
 msgstr ""
-"QGIS PgMetadataプラグインで保存されたメタデータを表示するためのものです。また、DCAT "
-"XMLカタログを提供しており、外部サービスから取得することができます。"
+"Для відображення метаданих, збережених за допомогою плагіна QGIS PgMetadata."
+" Він також надає XML-каталог DCAT для збору зовнішніми службами"
 
 #: ../../source/introduction.rst:116
 msgid "https://github.com/3liz/lizmap-pgmetadata-module"
@@ -321,7 +353,8 @@ msgid ""
 "For displaying itinerary between two points using the `PgRouting "
 "<https://pgrouting.org/>`_ extension for PostGIS."
 msgstr ""
-"‎2 点間の経路を表示する場合は、PostGISの拡張機能 `PgRouting <https://pgrouting.org/>`を使用ください。"
+"Для відображення маршруту між двома точками за допомогою розширення "
+"`PgRouting <https://pgrouting.org/>`_ для PostGIS."
 
 #: ../../source/introduction.rst:121
 msgid "https://github.com/3liz/lizmap-pgrouting-module"
@@ -329,13 +362,15 @@ msgstr "https://github.com/3liz/lizmap-pgrouting-module"
 
 #: ../../source/introduction.rst:126
 msgid "Web Processing Service"
-msgstr "Webプロセッシングサービス"
+msgstr "Сервіс веб-обробки"
 
 #: ../../source/introduction.rst:124
 msgid ""
 "To execute QGIS Processing algorithms or models on a server and view the "
 "results within Lizmap"
-msgstr "QGISプロセッシングアルゴリズムやモデルをサーバー上で実行し、その結果をLizmap内で表示します"
+msgstr ""
+"Щоб виконати алгоритми чи моделі QGIS Processing на сервері та переглянути "
+"результати в Lizmap"
 
 #: ../../source/introduction.rst:126
 msgid "https://github.com/3liz/lizmap-wps-web-client-module"
@@ -343,15 +378,15 @@ msgstr "https://github.com/3liz/lizmap-wps-web-client-module"
 
 #: ../../source/introduction.rst:128
 msgid "Specific to France use-case :"
-msgstr "フランスでの利用には以下のものが利用できます"
+msgstr "Специфічний для Франції варіант використання:"
 
 #: ../../source/introduction.rst:133
 msgid "French adresse"
-msgstr "French adresse"
+msgstr "Французькі адреси"
 
 #: ../../source/introduction.rst:131
 msgid "For managing addresses"
-msgstr "住所の管理に"
+msgstr "Для керування адресами"
 
 #: ../../source/introduction.rst:133
 msgid "https://github.com/3liz/lizmap-adresse-module"
@@ -359,11 +394,11 @@ msgstr "https://github.com/3liz/lizmap-adresse-module"
 
 #: ../../source/introduction.rst:138
 msgid "French cadastre"
-msgstr "French cadastre"
+msgstr "Французький кадастр"
 
 #: ../../source/introduction.rst:136
 msgid "For managing cadastre data"
-msgstr "地籍データの管理に"
+msgstr "Для управління даними кадастру"
 
 #: ../../source/introduction.rst:138
 msgid "https://github.com/3liz/lizmap-cadastre-module"
@@ -375,7 +410,7 @@ msgstr "Naturaliz"
 
 #: ../../source/introduction.rst:141
 msgid "For managing species and observation data"
-msgstr "生物種や観測データの管理に"
+msgstr "Для керування видами та даними спостережень"
 
 #: ../../source/introduction.rst:143
 msgid "https://github.com/3liz/lizmap-naturaliz-module"
@@ -383,103 +418,103 @@ msgstr "https://github.com/3liz/lizmap-naturaliz-module"
 
 #: ../../source/introduction.rst:146
 msgid "Configuration with QGIS"
-msgstr "QGISでの設定"
+msgstr "Конфігурація з QGIS"
 
 #: ../../source/introduction.rst:148
 msgid "Map's configuration is done in QGIS."
-msgstr "地図の設定はQGIS上で行われます。"
+msgstr "Конфігурація карти виконується в QGIS."
 
 #: ../../source/introduction.rst:150
 msgid "One part comes directly from the **QGIS project**:"
-msgstr "1つの部分は、**QGISプロジェクト** から直接来ています。"
+msgstr "Одна частина надходить безпосередньо з **проекту QGIS**:"
 
 #: ../../source/introduction.rst:152
 msgid "legend order and structure"
-msgstr "凡例の順序と構成"
+msgstr "порядок і структура легенди"
 
 #: ../../source/introduction.rst:153
 msgid "layer symbology"
-msgstr "レイヤのシンボル"
+msgstr "символіка шару"
 
 #: ../../source/introduction.rst:154
 msgid "location map with a group Overview in the legend"
-msgstr "凡例にグループ概要を表示したロケーション・マップ"
+msgstr "карта розташування з групою Огляд в легенді"
 
 #: ../../source/introduction.rst:155
 msgid "configure print templates via composers"
-msgstr "コンポージャを使用した印刷テンプレートの設定"
+msgstr "налаштувати шаблони друку через макети"
 
 #: ../../source/introduction.rst:157
 msgid "The rest is done with the **Lizmap plugin**. This plugin allows to:"
-msgstr "残りの部分は **Lizmapプラグイン** で行われます。このプラグインは以下のことを行えます。"
+msgstr "Решта робиться за допомогою **плагіна Lizmap**. Цей плагін дозволяє:"
 
 #: ../../source/introduction.rst:159
 msgid "specify the layers and groups name in the Web interface"
-msgstr "ウェブインターフェースでのレイヤとグループ名の設定"
+msgstr "вкажіть назву шарів і груп у веб-інтерфейсі"
 
 #: ../../source/introduction.rst:160
 msgid "group the layers into a single WMS layer"
-msgstr "レイヤを一つのWMSレイヤとしてグループ化する"
+msgstr "згрупуйте шари в один шар WMS"
 
 #: ../../source/introduction.rst:161
 msgid "set some layers as baselayer"
-msgstr "いくつかのレイヤをベースレイヤとして設定する"
+msgstr "встановити деякі шари як базовий"
 
 #: ../../source/introduction.rst:162
 msgid "set the display layer system: alone image or tiles"
-msgstr "単独の画像やタイルをレイヤとして表示するシステムの設定"
+msgstr "встановіть систему шарів відображення: окремо зображення або плитки"
 
 #: ../../source/introduction.rst:163
 msgid "set the lifetime of the images in the cache"
-msgstr "キャッシュした画像の有効期限を設定する"
+msgstr "встановити час життя зображень у кеші"
 
 #: ../../source/introduction.rst:164
 msgid "set the lifetime of the images in the network"
-msgstr "ネットワークでの画像の有効期限を設定する"
+msgstr "встановити час життя зображень у мережі"
 
 #: ../../source/introduction.rst:165
 msgid "set the popups for querying layer"
-msgstr "レイヤへの問い合わせ時に表示するポップアップの設定"
+msgstr "встановити спливаючі вікна для запиту рівня"
 
 #: ../../source/introduction.rst:166
 msgid "set a link to the metadata"
-msgstr "メタデータへのリンクの設定"
+msgstr "встановити посилання на метадані"
 
 #: ../../source/introduction.rst:167
 msgid "set the map scales"
-msgstr "地図の縮尺の設定"
+msgstr "встановити масштаб карти"
 
 #: ../../source/introduction.rst:168
 msgid "set the tools available with the map:"
-msgstr "地図で利用可能なツールの設定"
+msgstr "встановити інструменти, доступні з картою:"
 
 #: ../../source/introduction.rst:170
 msgid "printing"
-msgstr "印刷"
+msgstr "друкування"
 
 #: ../../source/introduction.rst:171
 msgid "measuring length, area and perimeter"
-msgstr "長さ、面積、外周の測定"
+msgstr "вимірювання довжини, площі та периметра"
 
 #: ../../source/introduction.rst:172
 msgid "using user geolocation (GPS)"
-msgstr "ユーザの測位情報 (GPS)の使用"
+msgstr "використання геолокації користувача (GPS)"
 
 #: ../../source/introduction.rst:173
 msgid "address search in OpenStreetMap or Google"
-msgstr "OpenStreetMapまたはGoogleでの住所検索"
+msgstr "пошук адреси в OpenStreetMap або Google"
 
 #: ../../source/introduction.rst:175
 msgid "set external baselayers:"
-msgstr "サードパーティのベースレイヤの設定"
+msgstr "встановити зовнішні базові шари:"
 
 #: ../../source/introduction.rst:177
 msgid "Google Maps"
-msgstr "Googleマップ"
+msgstr "Google Maps"
 
 #: ../../source/introduction.rst:178
 msgid "Bing Maps"
-msgstr "Bingマップ"
+msgstr "Bing Maps"
 
 #: ../../source/introduction.rst:179
 msgid "OpenStreetMap"
@@ -491,98 +526,103 @@ msgstr "Géoportail IGN"
 
 #: ../../source/introduction.rst:182
 msgid "set layers for navigation shortcut:"
-msgstr "ナビゲーションのショートカットのためのレイヤの設定"
+msgstr "встановити шари для ярлика навігації:"
 
 #: ../../source/introduction.rst:184
 msgid "search in a layer field"
-msgstr "レイヤのフィールドでの検索"
+msgstr "пошук у полі шару"
 
 #: ../../source/introduction.rst:185
 msgid "zoom to the selected item"
-msgstr "選択された地物へのズーム"
+msgstr "збільшити масштаб до вибраного елемента"
 
 #: ../../source/introduction.rst:186
 msgid ""
 "cascaded search within 2 fields of the same layer or between joined layers"
-msgstr "同一レイヤーの2つのフィールド内、または結合されたレイヤー間でのカスケード検索"
+msgstr "каскадний пошук у 2-х полях одного шару або між об’єднаними шарами"
 
 #: ../../source/introduction.rst:194
 msgid "Configuring with the Web back-office"
-msgstr "Webバックオフィスとの連携"
+msgstr "Налаштування за допомогою веб-бек-офісу"
 
 #: ../../source/introduction.rst:196
 msgid "The Lizmap back-office defines:"
-msgstr "Lizmapバックオフィスとは以下の通りです。"
+msgstr "Бек-офіс Lizmap визначає:"
 
 #: ../../source/introduction.rst:198
 msgid "the directory list containing maps"
-msgstr "地図を含むディレクトリの一覧"
+msgstr "список каталогів, що містить карти"
 
 #: ../../source/introduction.rst:199
 msgid "users' rights by map directory"
-msgstr "地図のディレクトリごとのユーザー権限"
+msgstr "права користувачів до сховища карт"
 
 #: ../../source/introduction.rst:200
 msgid "using subdomain to improve the responsiveness of the interface."
-msgstr "サブドメインを使用して、インターフェースの応答性を向上させます。"
+msgstr ""
+"використання субдомену для покращення швидкості реагування інтерфейсу."
 
 #: ../../source/introduction.rst:204
 msgid "In a nutshell"
-msgstr "手短にいえば、"
+msgstr "Коротко"
 
 #: ../../source/introduction.rst:206
 msgid "HTML5 interface compatible mobiles and tablets"
-msgstr "モバイルやタブレットに対応したHTML5インターフェース"
+msgstr "Мобільні телефони та планшети з інтерфейсом HTML5"
 
 #: ../../source/introduction.rst:207
 msgid ""
 "Grouping maps by directory: application multi-directories and multi-projects"
-msgstr "ディレクトリによる地図のグループ化：アプリケーションのマルチディレクトリとマルチプロジェクト"
+msgstr ""
+"Групування карт за каталогами: програма мультикаталогів  та мультипроектів"
 
 #: ../../source/introduction.rst:208
 msgid "Management of access rights per directory for user groups"
-msgstr "ユーザーグループのディレクトリごとのアクセス権の管理"
+msgstr "Керування правами доступу до каталогу для груп користувачів"
 
 #: ../../source/introduction.rst:209
 msgid "Automatic map cache management"
-msgstr "地図の自動キャッシュ管理"
+msgstr "Автоматичне керування кешом карт"
 
 #: ../../source/introduction.rst:210
 msgid ""
 "Multilingual interface: English, French, Italian, Spanish, Portuguese, Greek"
-msgstr "英語、フランス語、イタリア語、スペイン語、ポルトガル語、ギリシャ語などの多言語インターフェース"
+msgstr ""
+"Багатомовний інтерфейс: англійська, французька, італійська, іспанська, "
+"португальська, грецька"
 
 #: ../../source/introduction.rst:211
 msgid "Using external baselayers: OSM, Google, Bing"
-msgstr "OSM、Google、BIngなどのサードパーティのベースレイヤの使用"
+msgstr "Використання зовнішніх базових рівнів: OSM, Google, Bing"
 
 #: ../../source/introduction.rst:212
 msgid "Printing"
-msgstr "印刷/ファイル出力"
+msgstr "Друкування"
 
 #: ../../source/introduction.rst:213
 msgid "Online edition: adding, spatial and filed changing, deleting"
-msgstr "オンラインでの編集：追加、編集、削除"
+msgstr ""
+"Онлайн редагування: додавання, просторове та атрибутивна зміна, видалення"
 
 #: ../../source/introduction.rst:214
 msgid "Zoom with localisation"
-msgstr "ローカライズしたズーム"
+msgstr "Масштабування з локалізацією"
 
 #: ../../source/introduction.rst:215
 msgid "Address search: Nominatim (OpenStreetMap engine), Google"
-msgstr "住所検索：Nominatim（OpenStreetMapエンジン）、Google"
+msgstr "Пошук за адресами: Nominatim (інструмент OpenStreetMap), Google"
 
 #: ../../source/introduction.rst:216
 msgid "Access logs"
-msgstr "ログへのアクセス"
+msgstr "Журнали доступу"
 
 #: ../../source/introduction.rst:219
 msgid "Requirements"
-msgstr "必要要件"
+msgstr "Вимоги"
 
 #: ../../source/introduction.rst:221
 msgid "Version of Lizmap Web Client requires:"
-msgstr "‎Lizmap Web クライアントの次のバージョンが必要です‎："
+msgstr "Версія веб-клієнта Lizmap вимагає:"
 
 #: ../../source/introduction.rst:223
 msgid "Firefox ≥ 63"

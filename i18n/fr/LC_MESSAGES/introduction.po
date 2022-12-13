@@ -1,27 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2021, 3liz
+# Copyright (C) 2014-2022, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# rldhont <rldhont@gmail.com>, 2018
-# Nicolas Boisteault <nboisteault@gmail.com>, 2020
-# etrimaille <gustrimaille@yahoo.fr>, 2020
+# Nicolas Boisteault <nboisteault@gmail.com>, 2021
+# Laurent Jouanneau <dev@ljouanneau.com>, 2021
+# rldhont <rldhont@gmail.com>, 2021
+# etrimaille <gustrimaille@yahoo.fr>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-13 10:30+0000\n"
-"PO-Revision-Date: 2018-09-07 13:32+0000\n"
-"Last-Translator: etrimaille <gustrimaille@yahoo.fr>, 2020\n"
+"POT-Creation-Date: 2022-12-13 13:45+0000\n"
+"PO-Revision-Date: 2021-12-19 13:43+0000\n"
+"Last-Translator: etrimaille <gustrimaille@yahoo.fr>, 2022\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../source/introduction.rst:3
 msgid "Introduction"
@@ -190,46 +191,90 @@ msgid "Lizmap features"
 msgstr "Caractéristique de Lizmap"
 
 #: ../../source/introduction.rst:61
+msgid "Open Source"
+msgstr "Open Source"
+
+#: ../../source/introduction.rst:63
+msgid ""
+"Lizmap and the modules are opensource projects edited and managed by "
+"https://3liz.com"
+msgstr ""
+"Lizmap et les modules sont des projets opensource édités et gérés par "
+"https://3liz.com"
+
+#: ../../source/introduction.rst:65
+msgid ""
+"The source code is currently available on https://github.com/3liz/ Help is "
+"available through :"
+msgstr ""
+"Le code source est actuellement disponible sur https://github.com/3liz/. De "
+"l'aide est disponible sur : "
+
+#: ../../source/introduction.rst:68
+msgid "https://gis.stackexchange.com/"
+msgstr "https://gis.stackexchange.com/"
+
+#: ../../source/introduction.rst:69
+msgid "Github tickets"
+msgstr "Tickets Github"
+
+#: ../../source/introduction.rst:70
+msgid "Our mailing-list : https://lists.osgeo.org/pipermail/lizmap/"
+msgstr "Notre mailing-list : https://lists.osgeo.org/pipermail/lizmap/"
+
+#: ../../source/introduction.rst:71
+msgid "On IRC on the #lizmap channel of https://libera.chat"
+msgstr "Sur IRC sur le canal #lizmap de https://libera.chat"
+
+#: ../../source/introduction.rst:72
+msgid ""
+"Commercial support through 3Liz, contact "
+"mailto:info@3liz.com?subject=CommercialSupportRequest"
+msgstr ""
+"Support commercial par 3Liz, contact "
+"mailto:info@3liz.com?subject=CommercialSupportRequest"
+
+#: ../../source/introduction.rst:75
 msgid "Default features"
 msgstr "Par défaut"
 
-#: ../../source/introduction.rst:63
+#: ../../source/introduction.rst:77
 msgid "By default, Lizmap offers web maps with the following features:"
 msgstr ""
 "Lizmap propose par défaut des cartes web ayant les fonctionnalités suivantes"
 " :"
 
-#: ../../source/introduction.rst:65
+#: ../../source/introduction.rst:79
 msgid "pan"
 msgstr "déplacement"
 
-#: ../../source/introduction.rst:66
+#: ../../source/introduction.rst:80
 msgid "zoom on area drawn by the user"
 msgstr "zoom sur une zone dessinée par l'utilisateur"
 
-#: ../../source/introduction.rst:67
+#: ../../source/introduction.rst:81
 msgid "zoom more"
 msgstr "zoom avant"
 
-#: ../../source/introduction.rst:68
+#: ../../source/introduction.rst:82
 msgid "selecting a zoom level with a level bar"
 msgstr "sélection d'un niveau de zoom via une barre de niveau"
 
-#: ../../source/introduction.rst:69
+#: ../../source/introduction.rst:83
 msgid "zoom less"
 msgstr "zoom arrière"
 
-#: ../../source/introduction.rst:70
+#: ../../source/introduction.rst:84
 msgid "displaying the scale as a scale bar and digitally"
 msgstr "affichage de l'échelle sous forme d'une barre et de façon numérique"
 
-#: ../../source/introduction.rst:72
+#: ../../source/introduction.rst:86
 msgid ""
 "The displayed legend respects the order and organization defined in QGIS."
 msgstr ""
 "La légende affichée respecte l'ordre et l'organisation définie dans QGIS."
 
-#: ../../source/introduction.rst:74
+#: ../../source/introduction.rst:88
 msgid ""
 "The interface allows the user to hide the legend and take advantage of the "
 "map in the entire width of the screen. It also lets you view the information"
@@ -239,7 +284,7 @@ msgstr ""
 " de la carte dans toute la largeur de l'écran. Elle permet aussi de "
 "consulter les informations sur la carte  (description, emprise, contact)."
 
-#: ../../source/introduction.rst:76
+#: ../../source/introduction.rst:90
 msgid ""
 "Finally Lizmap is a proxy to the web services used to construct maps. It is "
 "therefore possible to use WMS or WFS requests through Lizmap. It is possible"
@@ -252,324 +297,354 @@ msgstr ""
 "accès dans QGIS ou ArcGIS. Il est aussi possible de partager ces adresses de"
 " web services avec des systèmes de catalogages."
 
-#: ../../source/introduction.rst:85
+#: ../../source/introduction.rst:99
 msgid "Additional Lizmap modules"
 msgstr "Modules Lizmap additionnels"
 
-#: ../../source/introduction.rst:87
+#: ../../source/introduction.rst:101
 msgid "Some modules can be added to Lizmap :"
-msgstr ""
+msgstr "Certains modules peuvent être ajoutés à Lizmap :"
 
-#: ../../source/introduction.rst:92
+#: ../../source/introduction.rst:106
 msgid "AltiProfil"
-msgstr ""
+msgstr "AltiProfil"
 
-#: ../../source/introduction.rst:90
+#: ../../source/introduction.rst:104
 msgid ""
 "Display a profil with altitude according to a line and a DEM (Digital "
 "Elevation Model)"
 msgstr ""
+"Afficher un profil avec les altitudes selon une ligne et un MNT (Modèle "
+"Numérique de Terrain)"
 
-#: ../../source/introduction.rst:92
+#: ../../source/introduction.rst:106
 msgid "https://github.com/arno974/lizmap-altiProfil"
-msgstr ""
+msgstr "https://github.com/arno974/lizmap-altiProfil"
 
-#: ../../source/introduction.rst:97
+#: ../../source/introduction.rst:111
 msgid "Map builder"
-msgstr ""
+msgstr "Constructeur de carte"
 
-#: ../../source/introduction.rst:95
+#: ../../source/introduction.rst:109
 msgid "To combine many Lizmap projects into a single map viewer"
 msgstr ""
+"Pour combiner plusieurs projets Lizmap dans une seule visionneuse de carte"
 
-#: ../../source/introduction.rst:97
+#: ../../source/introduction.rst:111
 msgid "https://github.com/3liz/lizmap-mapbuilder-module"
-msgstr ""
+msgstr "https://github.com/3liz/lizmap-mapbuilder-module"
 
-#: ../../source/introduction.rst:102
+#: ../../source/introduction.rst:116
 msgid "PgMetadata"
-msgstr ""
+msgstr "PgMetadata"
 
-#: ../../source/introduction.rst:100
+#: ../../source/introduction.rst:114
 msgid ""
 "For displaying metadata stored with the QGIS PgMetadata plugin. It is also "
 "providing a DCAT XML catalog, to be harvested by external services"
 msgstr ""
+"Pour afficher les métadonnées stockées avec l'extension QGIS PgMetadata. Il "
+"fournit également un catalogue XML DCAT, prêt à être moissonné par des "
+"services externes"
 
-#: ../../source/introduction.rst:102
+#: ../../source/introduction.rst:116
 msgid "https://github.com/3liz/lizmap-pgmetadata-module"
-msgstr ""
+msgstr "https://github.com/3liz/lizmap-pgmetadata-module"
 
-#: ../../source/introduction.rst:107
+#: ../../source/introduction.rst:121
 msgid "PgRouting"
-msgstr ""
+msgstr "PgRouting"
 
-#: ../../source/introduction.rst:105
+#: ../../source/introduction.rst:119
 msgid ""
 "For displaying itinerary between two points using the `PgRouting "
 "<https://pgrouting.org/>`_ extension for PostGIS."
 msgstr ""
+"Pour afficher l'itinéraire entre deux points en utilisant l'extension "
+"`PgRouting <https://pgrouting.org/>`_ pour PostGIS."
 
-#: ../../source/introduction.rst:107
+#: ../../source/introduction.rst:121
 msgid "https://github.com/3liz/lizmap-pgrouting-module"
-msgstr ""
+msgstr "https://github.com/3liz/lizmap-pgrouting-module"
 
-#: ../../source/introduction.rst:112
+#: ../../source/introduction.rst:126
 msgid "Web Processing Service"
-msgstr ""
+msgstr "Web Processing Service"
 
-#: ../../source/introduction.rst:110
+#: ../../source/introduction.rst:124
 msgid ""
 "To execute QGIS Processing algorithms or models on a server and view the "
 "results within Lizmap"
 msgstr ""
+"Pour exécuter des algorithmes ou des modèles de traitement QGIS sur un "
+"serveur et afficher les résultats dans Lizmap"
 
-#: ../../source/introduction.rst:112
+#: ../../source/introduction.rst:126
 msgid "https://github.com/3liz/lizmap-wps-web-client-module"
-msgstr ""
+msgstr "https://github.com/3liz/lizmap-wps-web-client-module"
 
-#: ../../source/introduction.rst:114
+#: ../../source/introduction.rst:128
 msgid "Specific to France use-case :"
-msgstr ""
+msgstr "Cas d'utilisation spécifique à la France :"
 
-#: ../../source/introduction.rst:119
+#: ../../source/introduction.rst:133
 msgid "French adresse"
-msgstr ""
+msgstr "Adresse Française"
 
-#: ../../source/introduction.rst:117
+#: ../../source/introduction.rst:131
 msgid "For managing addresses"
-msgstr ""
+msgstr "Pour la gestion des adresses"
 
-#: ../../source/introduction.rst:119
+#: ../../source/introduction.rst:133
 msgid "https://github.com/3liz/lizmap-adresse-module"
-msgstr ""
+msgstr "https://github.com/3liz/lizmap-adresse-module"
 
-#: ../../source/introduction.rst:124
+#: ../../source/introduction.rst:138
 msgid "French cadastre"
-msgstr ""
+msgstr "Cadastre Français"
 
-#: ../../source/introduction.rst:122
+#: ../../source/introduction.rst:136
 msgid "For managing cadastre data"
-msgstr ""
+msgstr "Pour la gestion des données cadastrales"
 
-#: ../../source/introduction.rst:124
+#: ../../source/introduction.rst:138
 msgid "https://github.com/3liz/lizmap-cadastre-module"
-msgstr ""
+msgstr "https://github.com/3liz/lizmap-cadastre-module"
 
-#: ../../source/introduction.rst:129
+#: ../../source/introduction.rst:143
 msgid "Naturaliz"
-msgstr ""
+msgstr "Naturaliz"
 
-#: ../../source/introduction.rst:127
+#: ../../source/introduction.rst:141
 msgid "For managing species and observation data"
-msgstr ""
+msgstr "Pour la gestion des observations des espèces"
 
-#: ../../source/introduction.rst:129
+#: ../../source/introduction.rst:143
 msgid "https://github.com/3liz/lizmap-naturaliz-module"
-msgstr ""
+msgstr "https://github.com/3liz/lizmap-naturaliz-module"
 
-#: ../../source/introduction.rst:132
+#: ../../source/introduction.rst:146
 msgid "Configuration with QGIS"
 msgstr "Configuration avec QGIS"
 
-#: ../../source/introduction.rst:134
+#: ../../source/introduction.rst:148
 msgid "Map's configuration is done in QGIS."
 msgstr "La configuration des cartes se fait dans QGIS."
 
-#: ../../source/introduction.rst:136
+#: ../../source/introduction.rst:150
 msgid "One part comes directly from the **QGIS project**:"
 msgstr "Une partie provient directement du **projet QGIS** :"
 
-#: ../../source/introduction.rst:138
+#: ../../source/introduction.rst:152
 msgid "legend order and structure"
 msgstr "ordre et structure de la légende"
 
-#: ../../source/introduction.rst:139
+#: ../../source/introduction.rst:153
 msgid "layer symbology"
 msgstr "symbologie des couches"
 
-#: ../../source/introduction.rst:140
+#: ../../source/introduction.rst:154
 msgid "location map with a group Overview in the legend"
 msgstr "carte de situation grâce à la présence d'un groupe Overview"
 
-#: ../../source/introduction.rst:141
+#: ../../source/introduction.rst:155
 msgid "configure print templates via composers"
 msgstr "configuration des templates d'impression via les composeurs"
 
-#: ../../source/introduction.rst:143
+#: ../../source/introduction.rst:157
 msgid "The rest is done with the **Lizmap plugin**. This plugin allows to:"
 msgstr "Le reste se fait à l'aide du **plugin Lizmap**. Ce plugin permet de :"
 
-#: ../../source/introduction.rst:145
+#: ../../source/introduction.rst:159
 msgid "specify the layers and groups name in the Web interface"
 msgstr "préciser le nom des couches et des groupes dans l'interface Web"
 
-#: ../../source/introduction.rst:146
+#: ../../source/introduction.rst:160
 msgid "group the layers into a single WMS layer"
 msgstr "regrouper les couches en une seule couche WMS"
 
-#: ../../source/introduction.rst:147
+#: ../../source/introduction.rst:161
 msgid "set some layers as baselayer"
 msgstr "définir certaines couches comme couche de fond"
 
-#: ../../source/introduction.rst:148
+#: ../../source/introduction.rst:162
 msgid "set the display layer system: alone image or tiles"
 msgstr "définir le système d'affichage : image seule ou ensemble de tuile"
 
-#: ../../source/introduction.rst:149
+#: ../../source/introduction.rst:163
 msgid "set the lifetime of the images in the cache"
 msgstr "définir la durée de vie de l'image dans le cache"
 
-#: ../../source/introduction.rst:150
+#: ../../source/introduction.rst:164
 msgid "set the lifetime of the images in the network"
 msgstr "définir la durée de vie d'une image sur le réseau"
 
-#: ../../source/introduction.rst:151
+#: ../../source/introduction.rst:165
 msgid "set the popups for querying layer"
 msgstr "définir les popups d'interrogation des couches"
 
-#: ../../source/introduction.rst:152
+#: ../../source/introduction.rst:166
 msgid "set a link to the metadata"
 msgstr "définir un lien vers la fiche de métadonnées"
 
-#: ../../source/introduction.rst:153
+#: ../../source/introduction.rst:167
 msgid "set the map scales"
 msgstr "définir les échelles de consultation de la carte"
 
-#: ../../source/introduction.rst:154
+#: ../../source/introduction.rst:168
 msgid "set the tools available with the map:"
 msgstr "définir les outils accessibles avec la carte :"
 
-#: ../../source/introduction.rst:156
+#: ../../source/introduction.rst:170
 msgid "printing"
 msgstr "impressions"
 
-#: ../../source/introduction.rst:157
+#: ../../source/introduction.rst:171
 msgid "measuring length, area and perimeter"
 msgstr "mesures de longueurs, surfaces et périmètres"
 
-#: ../../source/introduction.rst:158
+#: ../../source/introduction.rst:172
 msgid "using user geolocation (GPS)"
 msgstr "utilisation de la géolocalisation de l'utilisateur (GPS)"
 
-#: ../../source/introduction.rst:159
+#: ../../source/introduction.rst:173
 msgid "address search in OpenStreetMap or Google"
 msgstr "recherche d'adresse dans OpenStreetMap, Google ou Géoportail IGN"
 
-#: ../../source/introduction.rst:161
+#: ../../source/introduction.rst:175
 msgid "set external baselayers:"
 msgstr "définir les fonds de plan externe :"
 
-#: ../../source/introduction.rst:163
+#: ../../source/introduction.rst:177
 msgid "Google Maps"
 msgstr "Google Maps"
 
-#: ../../source/introduction.rst:164
+#: ../../source/introduction.rst:178
 msgid "Bing Maps"
 msgstr "Bing Maps"
 
-#: ../../source/introduction.rst:165
+#: ../../source/introduction.rst:179
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
-#: ../../source/introduction.rst:166
+#: ../../source/introduction.rst:180
 msgid "Géoportail IGN"
 msgstr "Géoportail IGN"
 
-#: ../../source/introduction.rst:168
+#: ../../source/introduction.rst:182
 msgid "set layers for navigation shortcut:"
 msgstr "définir les couches servant de raccourci de navigation :"
 
-#: ../../source/introduction.rst:170
+#: ../../source/introduction.rst:184
 msgid "search in a layer field"
 msgstr "recherche dans le champ d'une couche"
 
-#: ../../source/introduction.rst:171
+#: ../../source/introduction.rst:185
 msgid "zoom to the selected item"
 msgstr "zoom sur l'élément sélectionné"
 
-#: ../../source/introduction.rst:172
+#: ../../source/introduction.rst:186
 msgid ""
 "cascaded search within 2 fields of the same layer or between joined layers"
 msgstr ""
 "recherche en cascade au sein de la même couche via 2 attributs ou entre "
 "couches jointes"
 
-#: ../../source/introduction.rst:180
+#: ../../source/introduction.rst:194
 msgid "Configuring with the Web back-office"
 msgstr "Configuration dans le back-office Web"
 
-#: ../../source/introduction.rst:182
+#: ../../source/introduction.rst:196
 msgid "The Lizmap back-office defines:"
 msgstr "Le back-office de Lizmap permet de définir :"
 
-#: ../../source/introduction.rst:184
+#: ../../source/introduction.rst:198
 msgid "the directory list containing maps"
 msgstr "la liste des répertoires contenant des cartes"
 
-#: ../../source/introduction.rst:185
+#: ../../source/introduction.rst:199
 msgid "users' rights by map directory"
 msgstr "les droits des utilisateurs par répertoire de carte"
 
-#: ../../source/introduction.rst:186
+#: ../../source/introduction.rst:200
 msgid "using subdomain to improve the responsiveness of the interface."
 msgstr ""
 "l'utilisation de sous-domaine pour améliorer la réactivité de l'interface."
 
-#: ../../source/introduction.rst:190
+#: ../../source/introduction.rst:204
 msgid "In a nutshell"
 msgstr "En résumé"
 
-#: ../../source/introduction.rst:192
+#: ../../source/introduction.rst:206
 msgid "HTML5 interface compatible mobiles and tablets"
 msgstr "Interface HTML5, compatible mobiles et tablettes"
 
-#: ../../source/introduction.rst:193
+#: ../../source/introduction.rst:207
 msgid ""
 "Grouping maps by directory: application multi-directories and multi-projects"
 msgstr ""
 "Regroupement des cartes par répertoire  : application multi-répertoires et "
 "multi-projets"
 
-#: ../../source/introduction.rst:194
+#: ../../source/introduction.rst:208
 msgid "Management of access rights per directory for user groups"
 msgstr ""
 "Gestion des droits d'accès par répertoire pour des groupes utilisateurs"
 
-#: ../../source/introduction.rst:195
+#: ../../source/introduction.rst:209
 msgid "Automatic map cache management"
 msgstr "Gestion automatique du cache des cartes"
 
-#: ../../source/introduction.rst:196
+#: ../../source/introduction.rst:210
 msgid ""
 "Multilingual interface: English, French, Italian, Spanish, Portuguese, Greek"
 msgstr ""
 "Interface multilingue : anglais, français, italien, espagnol, portugais, "
 "grecque"
 
-#: ../../source/introduction.rst:197
+#: ../../source/introduction.rst:211
 msgid "Using external baselayers: OSM, Google, Bing"
 msgstr ""
 "Utilisation de fonds référentiels externes : OSM, Google, Bing, Géoportail"
 
-#: ../../source/introduction.rst:198
+#: ../../source/introduction.rst:212
 msgid "Printing"
 msgstr "L'impression"
 
-#: ../../source/introduction.rst:199
+#: ../../source/introduction.rst:213
 msgid "Online edition: adding, spatial and filed changing, deleting"
 msgstr ""
 "Édition en ligne : ajout, modification spatiale et attributaire, suppression"
 
-#: ../../source/introduction.rst:200
+#: ../../source/introduction.rst:214
 msgid "Zoom with localisation"
 msgstr "Zoom par localisation"
 
-#: ../../source/introduction.rst:201
+#: ../../source/introduction.rst:215
 msgid "Address search: Nominatim (OpenStreetMap engine), Google"
 msgstr ""
 "Recherche d'adresse : Nominatim (moteur d'OpenStreetMap), Google, Géoportail"
 
-#: ../../source/introduction.rst:202
+#: ../../source/introduction.rst:216
 msgid "Access logs"
 msgstr "Logs d'accès"
+
+#: ../../source/introduction.rst:219
+msgid "Requirements"
+msgstr "Prérequis"
+
+#: ../../source/introduction.rst:221
+msgid "Version of Lizmap Web Client requires:"
+msgstr "La version de Lizmap Web Client requiert :"
+
+#: ../../source/introduction.rst:223
+msgid "Firefox ≥ 63"
+msgstr "Firefox ≥ 63"
+
+#: ../../source/introduction.rst:224
+msgid "Edge ≥ 79"
+msgstr "Edge ≥ 79"
+
+#: ../../source/introduction.rst:225
+msgid "Chromium ≥ 54"
+msgstr "Chromium ≥ 54"

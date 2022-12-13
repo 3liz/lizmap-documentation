@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# trendspotter <jirka.p@volny.cz>, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,20 +13,21 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-13 13:45+0000\n"
 "PO-Revision-Date: 2021-12-19 13:43+0000\n"
-"Language-Team: Russian (https://www.transifex.com/3liz-1/teams/62012/ru/)\n"
+"Last-Translator: trendspotter <jirka.p@volny.cz>, 2022\n"
+"Language-Team: Czech (https://www.transifex.com/3liz-1/teams/62012/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: ../../source/install/advanced_install.rst:3
 msgid "Advanced installation configuration"
-msgstr ""
+msgstr "Pokročilá konfigurace instalace"
 
 #: ../../source/install/advanced_install.rst:6
 msgid "Lizmap behind a proxy/reverse proxy"
-msgstr ""
+msgstr "Lizmap za proxy serverem/reverzním proxy serverem"
 
 #: ../../source/install/advanced_install.rst:8
 msgid ""
@@ -32,6 +36,11 @@ msgid ""
 " content an unwanted port ( ``http://mydomain:5468/`` instead of "
 "``http://mydomain/`` ). Or url may not contain the real domain name."
 msgstr ""
+"Někdy se může stát, že některé adresy URL v Lizmapě nebudou odpovídat vašim "
+"představám. Například se v nich používá protokol \"http\" místo protokolu "
+"\"https\". Nebo může obsahovat nežádoucí port ( ``http://mydomain:5468/`` "
+"místo ``http://mydomain/`` ). Nebo url nemusí obsahovat skutečný název "
+"domény."
 
 #: ../../source/install/advanced_install.rst:13
 msgid ""
@@ -40,36 +49,46 @@ msgid ""
 "environment parameters given by PHP or the backend web server to Lizmap are "
 "wrong."
 msgstr ""
+"Ve většině případů je to způsobeno tím, že webový server nebo PHP-fpm je za "
+"hlavním webovým serverem (který funguje jako proxy nebo reverzní proxy), a "
+"pak jsou parametry prostředí zadané PHP nebo backendovým webovým serverem "
+"Lizmapu chybné."
 
 #: ../../source/install/advanced_install.rst:17
 msgid ""
 "You can tell to Lizmap to force to HTTPS, to use the right domain or to use "
 "the right port."
 msgstr ""
+"Můžete Lizmapu nařídit, aby vynutil HTTPS, použil správnou doménu nebo "
+"správný port."
 
 #: ../../source/install/advanced_install.rst:19
 msgid ""
 "In ``localconfig.ini.php``, you can use these following configuration "
 "parameters."
 msgstr ""
+"V souboru ``localconfig.ini`` můžete použít tyto konfigurační parametry."
 
 #: ../../source/install/advanced_install.rst:22
 msgid ""
 "To force to use the port 80 (true) or the 8080 for example with the http "
 "protocol:"
 msgstr ""
+"Vynucení použití portu 80 (true) nebo 8080 například u protokolu http:"
 
 #: ../../source/install/advanced_install.rst:30
 msgid ""
 "To force to use the port 443 (true) or the 8443 for example with the https "
 "protocol:"
 msgstr ""
+"Vynucení použití portu 443 (true) nebo 8443 například s protokolem https:"
 
 #: ../../source/install/advanced_install.rst:38
 msgid ""
 "To specify the domain name of your Lizmap application, if Lizmap cannot "
 "guess it:"
 msgstr ""
+"Zadání názvu domény aplikace Lizmap, pokud jej Lizmap nedokáže odhadnout:"
 
 #: ../../source/install/advanced_install.rst:45
 msgid ""
@@ -79,12 +98,19 @@ msgid ""
 "``http://backend.example.com/foo/bar/index.php``, You have to indicate the "
 "\"public\" URL path (basePath) and the backend URL Path (backendBasePath):"
 msgstr ""
+"Pokud cesta URL backendového webového serveru neodpovídá cestě URL "
+"frontálního webového serveru (např.: proxy server přesměruje URL jako "
+"``http://example.com/index.php`` na váš webový server "
+"``http://backend.example.com/foo/bar/index.php``, musíte uvést \"veřejnou\" "
+"cestu URL (basePath) a backendovou cestu URL (backendBasePath):"
 
 #: ../../source/install/advanced_install.rst:56
 msgid ""
 "If the reverse proxy redirect HTTPS request to HTTP, you must deactivate the"
 " HTTPS check:"
 msgstr ""
+"Pokud reverzní proxy server přesměruje požadavek HTTPS na HTTP, musíte "
+"deaktivovat kontrolu HTTPS:"
 
 #: ../../source/install/advanced_install.rst:63
 msgid ""
@@ -92,10 +118,13 @@ msgid ""
 "generated URL with the HTTPS protocol, when Lizmap doesn't know what is the "
 "protocol used by requests on the reverse proxy:"
 msgstr ""
+"Počínaje verzí Lizmap 3.0.18 a 3.1.6 můžete určit, aby všechny generované "
+"adresy URL používaly protokol HTTPS, pokud Lizmap neví, jaký protokol "
+"používají požadavky na reverzní proxy server:"
 
 #: ../../source/install/advanced_install.rst:75
 msgid "Using environment variables"
-msgstr ""
+msgstr "Použití proměnných prostředí"
 
 #: ../../source/install/advanced_install.rst:77
 msgid ""
@@ -104,44 +133,53 @@ msgid ""
 "``profiles.ini.php`` files. Be sure the environment variables are available "
 "to the PHP-FPM process or the APACHE/NGINX process."
 msgstr ""
+"Pokud jsou některá pověření nebo parametry dostupné v proměnných prostředí, "
+"můžete je uvést do souborů ``localconfig.ini.php`` nebo "
+"``profiles.ini.php``. Ujistěte se, že jsou proměnné prostředí dostupné "
+"procesu PHP-FPM nebo procesu APACHE/NGINX."
 
 #: ../../source/install/advanced_install.rst:81
 msgid "Into this files, use the syntax ``${VARIABLE_NAME}``."
-msgstr ""
+msgstr "Do těchto souborů zadejte syntaxi ``${VARIABLE_NAME}``."
 
 #: ../../source/install/advanced_install.rst:83
 msgid ""
 "For example, to indicate postgresql credentials stored into these variables "
 ":"
 msgstr ""
+"Například pro označení pověření postgresql uložených do těchto proměnných :"
 
 #: ../../source/install/advanced_install.rst:92
 msgid "You write this configuration into profiles.ini.php:"
-msgstr ""
+msgstr "Tuto konfiguraci zapíšete do souboru profiles.ini.php:"
 
 #: ../../source/install/configuration.rst:3
 msgid "Configuration of Lizmap"
-msgstr ""
+msgstr "Konfigurace Lizmap"
 
 #: ../../source/install/configuration.rst:5
 msgid ""
 "In some server, additional settings should be done into Lizmap. Settings "
 "should be set into the ``lizmap/var/config/`` directory."
 msgstr ""
+"V některých serverech je třeba provést další nastavení do aplikace Lizmap. "
+"Nastavení by mělo být provedeno v adresáři ``lizmap/var/config/``."
 
 #: ../../source/install/configuration.rst:9
 msgid "Configuration files"
-msgstr ""
+msgstr "Konfigurační soubory"
 
 #: ../../source/install/configuration.rst:11
 msgid ""
 "There are several configuration files for Lizmap. There are into "
 "lizmap/var/config/."
 msgstr ""
+"Pro Lizmap existuje několik konfiguračních souborů. Nacházejí se v adresáři "
+"lizmap/var/config/."
 
 #: ../../source/install/configuration.rst:13
 msgid "Framework configuration files:"
-msgstr ""
+msgstr "Konfigurační soubory frameworku:"
 
 #: ../../source/install/configuration.rst:15
 msgid ""
@@ -150,6 +188,11 @@ msgid ""
 "available languages etc. **DON'T MODIFY mainconfig.ini.php**. Put parameters"
 " with their new values into ``localconfig.ini.php`` instead!"
 msgstr ""
+"``mainconfig.ini`` obsahuje mnoho konfiguračních parametrů, především pro "
+"framework používaný Lizmap. Některé z nich, jako například dostupné jazyky "
+"atd., budete chtít upravit. **NEMODIFIKUJTE soubor mainconfig.ini.php**. "
+"Místo toho vložte parametry s jejich novými hodnotami do souboru "
+"``localconfig.ini.php``!"
 
 #: ../../source/install/configuration.rst:19
 msgid ""
@@ -157,12 +200,17 @@ msgid ""
 "to your installation. So you put into it any parameters you can find into "
 "``mainconfig.ini.php`` and you want to change."
 msgstr ""
+"``localconfig.ini.php`` obsahuje konfigurační parametry specifické pro vaši "
+"instalaci. Vložíte do něj tedy všechny parametry, které najdete v souboru "
+"``mainconfig.ini.php`` a které chcete změnit."
 
 #: ../../source/install/configuration.rst:22
 msgid ""
 "``liveconfig.ini.php`` is containing parameters from ``mainconfig.ini.php`` "
 "that are changed by the application itself."
 msgstr ""
+"``liveconfig.ini.php`` obsahuje parametry ze souboru ``mainconfig.ini.php``,"
+" které mění sama aplikace."
 
 #: ../../source/install/configuration.rst:25
 msgid ""
@@ -172,22 +220,32 @@ msgid ""
 "those into ``localconfig.ini.php``, which in turn, have parameters having "
 "higher priority over parameters of ``mainconfig.ini.php``."
 msgstr ""
+"Během provádění Lizmap se v tomto pořadí sloučí soubory "
+"``mainconfig.ini.php``, ``localconfig.ini.php`` a ``liveconfig.ini.php``. "
+"Parametry do ``liveconfig.ini.php`` mají tedy vyšší prioritu než parametry "
+"do ``localconfig.ini.php``, které mají zase vyšší prioritu než parametry "
+"``mainconfig.ini.php``."
 
 #: ../../source/install/configuration.rst:30
 msgid ""
 "``liveconfig.ini.php`` and ``localconfig.ini.php`` may not exists on old "
 "releases."
 msgstr ""
+"``liveconfig.ini.php`` a ``localconfig.ini.php`` nemusí ve starších verzích "
+"existovat."
 
 #: ../../source/install/configuration.rst:33
 msgid "Other framework configuration files:"
-msgstr ""
+msgstr "Další konfigurační soubory rámce:"
 
 #: ../../source/install/configuration.rst:35
 msgid ""
 "``profiles.ini.php`` contains all credentials to access to databases, smtp "
 "servers, ldap etc. You should modify it to set these access parameters."
 msgstr ""
+"``profiles.ini.php`` obsahuje všechna pověření pro přístup k databázím, smtp"
+" serverům, ldap atd. Měli byste jej upravit a nastavit tyto přístupové "
+"parametry."
 
 #: ../../source/install/configuration.rst:37
 msgid ""
@@ -195,21 +253,26 @@ msgid ""
 "state. Don't touch it, and don't erase it between upgrades. You can delete "
 "it only if you want to reinstall Lizmap."
 msgstr ""
+"``installer.ini.php`` obsahuje informace o modulech Lizmap a jejich stavu. "
+"Nedotýkejte se ho a nemažte ho mezi aktualizacemi. Vymazat jej můžete pouze "
+"v případě, že chcete Lizmap přeinstalovat."
 
 #: ../../source/install/configuration.rst:41
 msgid "Lizmap configuration files:"
-msgstr ""
+msgstr "Konfigurační soubory Lizmap:"
 
 #: ../../source/install/configuration.rst:43
 msgid ""
 "``lizmapConfig.ini.php`` contains configuration parameters specific to "
 "Lizmap."
 msgstr ""
+"``lizmapConfig.ini.php`` obsahuje konfigurační parametry specifické pro "
+"Lizmap."
 
 #: ../../source/install/configuration.rst:45
 msgid ""
 "``lizmapLogConfig.ini.php`` contains configuration for the Lizmap logger"
-msgstr ""
+msgstr "``lizmapLogConfig.ini.php`` obsahuje konfiguraci pro logger Lizmap"
 
 #: ../../source/install/configuration.rst:47
 msgid ""
@@ -218,16 +281,22 @@ msgid ""
 "``lizmapLogConfig.ini.php`` and  ``installer.ini.php``. They are all "
 "modified during the life or the installation of the application."
 msgstr ""
+"Pro zálohování a aktualizace byste měli uchovávat soubory "
+"``localconfig.ini.php``, ``liveconfig.ini.php``, ``lizmapConfig.ini.php``, "
+"``profiles.ini.php``, ``lizmapLogConfig.ini.php`` a ``installer.ini.php``. "
+"Všechny jsou modifikovány v průběhu života nebo instalace aplikace."
 
 #: ../../source/install/configuration.rst:53
 msgid "Setting language"
-msgstr ""
+msgstr "Nastavení jazyka"
 
 #: ../../source/install/configuration.rst:55
 msgid ""
 "Lizmap detects automatically the language of the user (given by his "
 "browser), and it supports many languages."
 msgstr ""
+"Lizmap automaticky detekuje jazyk uživatele (zadaný jeho prohlížečem) a "
+"podporuje mnoho jazyků."
 
 #: ../../source/install/configuration.rst:58
 msgid ""
@@ -240,40 +309,55 @@ msgid ""
 "<https://github.com/3liz/lizmap-web-"
 "client/tree/release_3_6/lizmap/app/locales>`_."
 msgstr ""
+"Dostupné jazyky do Lizmap jsou uvedeny v repozitáři `GitHub "
+"<https://github.com/3liz/lizmap-web-"
+"client/tree/master/lizmap/app/locales>`_. Dejte pozor, abyste na GitHubu "
+"vybrali správnou větev podle verze webového klienta Lizmap, kterou "
+"instalujete. Některé jazyky nemusí být ve starších verzích Lizmap Web Client"
+" k dispozici, například ve větvi `3.6 <https://github.com/3liz/lizmap-web-"
+"client/tree/release_3_6/lizmap/app/locales>`_."
 
 #: ../../source/install/configuration.rst:62
 msgid ""
 "If the browser of the user indicates an unsupported language code, the "
 "default language of Lizmap is used, and is en_US."
 msgstr ""
+"Pokud prohlížeč uživatele uvede nepodporovaný kód jazyka, použije se výchozí"
+" jazyk Lizmap, kterým je en_US."
 
 #: ../../source/install/configuration.rst:65
 msgid ""
 "You can change the default language of Lizmap by setting the parameter "
 "``locale`` Into localconfig.ini.php, with your preferred language code."
 msgstr ""
+"Výchozí jazyk Lizmapu můžete změnit nastavením parametru ``locale`` Do "
+"souboru localconfig.ini.php zadejte preferovaný kód jazyka."
 
 #: ../../source/install/configuration.rst:68
 msgid ""
 "You can also limit available language by changing the ``availableLocales`` "
 "option."
 msgstr ""
+"Dostupný jazyk můžete také omezit změnou možnosti ``availableLocales``."
 
 #: ../../source/install/configuration.rst:70
 msgid ""
 "In this example, only 3 languages are available and the default language is "
 "italian:"
 msgstr ""
+"V tomto příkladu jsou k dispozici pouze 3 jazyky a výchozím jazykem je "
+"italština:"
 
 #: ../../source/install/configuration.rst:77
 msgid ""
 "There is also a ``fallbackLocale`` option but it is not recommended to "
 "change it."
 msgstr ""
+"Existuje také možnost ``fallbackLocale``, ale nedoporučuje se ji měnit."
 
 #: ../../source/install/index.rst:3
 msgid "Installing and upgrading Lizmap"
-msgstr ""
+msgstr "Instalace a aktualizace aplikace Lizmap"
 
 #: ../../source/shared/about_versions.rst:1
 msgid ""
@@ -281,40 +365,47 @@ msgid ""
 " which are supported, it's written on the Lizmap Web Client wiki page : "
 "https://github.com/3liz/lizmap-web-client/wiki/Versions"
 msgstr ""
+"Další informace o podporovaných verzích (webové prohlížeče, QGIS Server, "
+"PostgreSQL atd.) jsou uvedeny na wiki stránce Lizmap Web Client : "
+"https://github.com/3liz/lizmap-web-client/wiki/Versions."
 
 #: ../../source/install/ldap.rst:3
 msgid "LDAP authentication"
-msgstr ""
+msgstr "Ověřování LDAP"
 
 #: ../../source/install/ldap.rst:5
 msgid ""
 "The advantage of using LDAP is that all the users and groups information can"
 " be held on one server which is centrally managed."
 msgstr ""
+"Výhodou použití protokolu LDAP je, že všechny informace o uživatelích a "
+"skupinách mohou být uloženy na jednom serveru, který je centrálně spravován."
 
 #: ../../source/install/ldap.rst:7
 msgid ""
 "The first thing to do is to install the php ldap extension on your linux "
 "system:"
-msgstr ""
+msgstr "Nejprve je třeba do systému Linux nainstalovat rozšíření php ldap:"
 
 #: ../../source/install/ldap.rst:13
 msgid "or"
-msgstr ""
+msgstr "nebo"
 
 #: ../../source/install/ldap.rst:20
 msgid ""
 "Then, in order to enable the LDAP support Lizmap, you have to change the "
 "authentication method in the configuration as follows."
 msgstr ""
+"Chcete-li pak povolit podporu LDAP Lizmap, musíte v konfiguraci změnit "
+"metodu ověřování následujícím způsobem."
 
 #: ../../source/install/ldap.rst:24
 msgid "Enabling LDAP"
-msgstr ""
+msgstr "Povolení LDAP"
 
 #: ../../source/install/ldap.rst:26
 msgid "In the :file:`localconfig.ini.php`, you have to set these parameters:"
-msgstr ""
+msgstr "V souboru :`localconfig.ini.php` musíte nastavit tyto parametry:"
 
 #: ../../source/install/ldap.rst:36
 msgid ""
@@ -322,6 +413,9 @@ msgid ""
 "localconfig.ini.php from localconfig.ini.php.dist, you have already this "
 "parameters but they are commented."
 msgstr ""
+"Tyto parametry povolují modul ldapdao systému Lizmap. Pokud jste zkopírovali"
+" localconfig.ini.php z localconfig.ini.php.dist, tyto parametry již máte, "
+"ale jsou zakomentované."
 
 #: ../../source/install/ldap.rst:40
 msgid ""
@@ -330,10 +424,14 @@ msgid ""
 "server, and to search users into the ldap. The section may already exist if "
 "you copied profiles.ini.php from the profiles.ini.php.dist."
 msgstr ""
+"Pak musíte do souboru profiles.ini.php přidat sekci `[ldap:lizmapldap]` s "
+"některými nastaveními, která umožní připojení k serveru ldap a vyhledávání "
+"uživatelů v ldap. Sekce již může existovat, pokud jste zkopírovali "
+"profiles.ini.php z profiles.ini.php.dist."
 
 #: ../../source/install/ldap.rst:60
 msgid "See details about how to set these parameters in a section below."
-msgstr ""
+msgstr "Podrobnosti o nastavení těchto parametrů najdete v části níže."
 
 #: ../../source/install/ldap.rst:62
 msgid ""
@@ -341,59 +439,72 @@ msgid ""
 "configuration files, but it is not recommended to modify these files, as "
 "when you do upgrade, you should do modification again in them."
 msgstr ""
+"tyto parametry by mohly být v sekci ldapdao v konfiguračních souborech "
+"auth.coord.ini.php, ale nedoporučuje se tyto soubory upravovat, protože při "
+"aktualizaci byste v nich měli provést úpravy znovu."
 
 #: ../../source/install/ldap.rst:66
 msgid "To finish to enable the module, run *php lizmap/install/installer.php*"
-msgstr ""
+msgstr "Chcete-li modul povolit, spusťte *php lizmap/install/installer.php*."
 
 #: ../../source/install/ldap.rst:70
 msgid "ldap settings"
-msgstr ""
+msgstr "Nastavení ldap"
 
 #: ../../source/install/ldap.rst:74
 msgid "Configuration properties for user data"
-msgstr ""
+msgstr "Vlastnosti konfigurace pro uživatelská data"
 
 #: ../../source/install/ldap.rst:76
 msgid ""
 "To verify password, or to register the user into Lizmap the first time he "
 "authenticate himself, the plugin needs some data about the user."
 msgstr ""
+"K ověření hesla nebo k registraci uživatele do systému Lizmap při prvním "
+"ověření potřebuje zásuvný modul některé údaje o uživateli."
 
 #: ../../source/install/ldap.rst:79
 msgid ""
 "You should indicate to it which ldap attributes it can retrieve, and which "
 "database fields that will receive the ldap attributes values."
 msgstr ""
+"Měli byste mu určit, které atributy ldap může načítat a která pole databáze "
+"budou přijímat hodnoty atributů ldap."
 
 #: ../../source/install/ldap.rst:82
 msgid ""
 "You indicate such informations into the `searchAttributes` property. It is a"
 " pair of names, ``<ldap attribute>:<table field>``, separated by a comma."
 msgstr ""
+"Tyto informace uvedete do vlastnosti `searchAttributes`. Jedná se o dvojici "
+"jmen ``<ldap attribute>:<table field>``, oddělených čárkou."
 
 #: ../../source/install/ldap.rst:85
 msgid ""
 "In this example, "
 "``searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"``:"
 msgstr ""
+"V tomto příkladu, "
+"``searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"``:"
 
 #: ../../source/install/ldap.rst:87
 msgid ""
 "the value of the `uid` ldap attribute will be stored into the `login` field"
-msgstr ""
+msgstr "hodnota ldap atributu `uid` bude uložena do pole `login`."
 
 #: ../../source/install/ldap.rst:88
 msgid ""
 "the value of the `sn` ldap attribute will be stored into the `lastname` "
 "field"
-msgstr ""
+msgstr "hodnota ldap atributu `sn` bude uložena do pole `lastname`."
 
 #: ../../source/install/ldap.rst:89
 msgid ""
 "the value of the `firstname` ldap attribute will be stored into a field that"
 " have the same name, as there is no field name nor ``:``."
 msgstr ""
+"hodnota ldap atributu `firstname` bude uložena do pole se stejným názvem, "
+"protože neexistuje žádný název pole ani ``:``."
 
 #: ../../source/install/ldap.rst:91
 msgid ""
@@ -401,6 +512,9 @@ msgid ""
 "field name. It will be readed from ldap, and can be used into the "
 "`bindUserDN` DN template. (see below)."
 msgstr ""
+"nebude existovat mapování pro vlastnost `dn`. Je zde ``:`` bez názvu pole. "
+"Bude načteno z ldap a může být použito do šablony `bindUserDN` DN. (viz "
+"níže)."
 
 #: ../../source/install/ldap.rst:95
 msgid ""
@@ -408,10 +522,14 @@ msgid ""
 "`lastname`,  `organization`,  `phonenumber`, `street`, `postcode`, `city`, "
 "`country`. Only  `login` and `email` are required. Others are optional."
 msgstr ""
+"Seznam možných polí v aplikaci Lizmap je následující: `login`, `email`, "
+"`jméno`, `příjmení`, `organizace`, `telefonní číslo`, `ulice`, `PSČ`, "
+"`město`, `země`. Vyžadovány jsou pouze `login` a `email`. Ostatní jsou "
+"nepovinné."
 
 #: ../../source/install/ldap.rst:101
 msgid "Configuration properties for authentication"
-msgstr ""
+msgstr "Vlastnosti konfigurace pro ověřování"
 
 #: ../../source/install/ldap.rst:103
 msgid ""
@@ -419,30 +537,41 @@ msgid ""
 "retrieves user properties. It uses two configuration parameters : "
 "`searchUserFilter` and `searchAttributes`."
 msgstr ""
+"Před pokusem o ověření uživatele proti ldap zásuvný modul načte vlastnosti "
+"uživatele. Používá dva konfigurační parametry: `searchUserFilter` a "
+"`searchAttributes`."
 
 #: ../../source/install/ldap.rst:107
 msgid ""
 "The `searchUserFilter` should contain the ldap query, and a ``%%LOGIN%%`` "
 "placeholder that will be replaced by the login given by the user."
 msgstr ""
+"`searchUserFilter` by měl obsahovat dotaz ldap a zástupný znak "
+"``%%LOGIN%%``, který bude nahrazen přihlašovacím jménem zadaným uživatelem."
 
 #: ../../source/install/ldap.rst:110
 msgid ""
 "Example: "
 "``searchUserFilter=\"(&(objectClass=posixAccount)(uid=%%LOGIN%%))\"``"
 msgstr ""
+"Příklad: "
+"``searchUserFilter=\"(&(objectClass=posixAccount)(uid=%%LOGIN%%))\"``"
 
 #: ../../source/install/ldap.rst:112
 msgid ""
 "You may also indicate the base DN for the search, into `searchUserBaseDN`. "
 "Example: ``searchUserBaseDN=\"ou=ADAM users,o=Microsoft,c=US\"``."
 msgstr ""
+"Do pole `searchUserBaseDN` můžete také zadat základní DN pro vyhledávání. "
+"Příklad: ``searchUserBaseDN=\"ou=ADAM users,o=Microsoft,c=US\"``."
 
 #: ../../source/install/ldap.rst:115
 msgid ""
 "Note that you can indicate several search filters, if you have complex ldap "
 "structure. Use ``[]`` to indicate an item list:"
 msgstr ""
+"Všimněte si, že pokud máte složitou strukturu ldap, můžete zadat několik "
+"vyhledávacích filtrů. Pro označení seznamu položek použijte ``[]``:"
 
 #: ../../source/install/ldap.rst:124
 msgid ""
@@ -451,6 +580,10 @@ msgid ""
 "into the `bindUserDN` property, and from various data. These data can be the"
 " given login or one of the ldap attributes of the user."
 msgstr ""
+"K ověření hesla potřebuje zásuvný modul DN (Distinguished Name) odpovídající"
+" uživateli. DN sestaví ze \"šablony\" uvedené ve vlastnosti `bindUserDN` a z"
+" různých údajů. Těmito údaji může být zadané přihlašovací jméno nebo jeden z"
+" atributů ldap uživatele."
 
 #: ../../source/install/ldap.rst:129
 msgid ""
@@ -458,6 +591,9 @@ msgid ""
 "contain a DN, with a ``%%LOGIN%%`` placeholder that will be replaced by the "
 "login."
 msgstr ""
+"*Vytvoření DN z přihlašovacího jména zadaného uživatelem*: bindUserDN by "
+"mělo obsahovat DN se zástupným znakem ``%%LOGIN%%%``, který bude nahrazen "
+"přihlašovacím jménem."
 
 #: ../../source/install/ldap.rst:132
 msgid ""
@@ -465,6 +601,9 @@ msgid ""
 "give `john.smith` as a login, the authentication will be made with the DN "
 "``bindUserDN=\"uid=john.smith,ou=users,dc=XY,dc=fr\"``."
 msgstr ""
+"Příklad: ``bindUserDN=\"uid=%%LOGIN%%%,ou=users,dc=XY,dc=fr\"``. Pokud "
+"uživatel zadá jako přihlašovací jméno `john.smith`, bude ověření provedeno "
+"pomocí DN ``bindUserDN=\"uid=john.smith,ou=users,dc=XY,dc=fr\"``."
 
 #: ../../source/install/ldap.rst:136
 msgid ""
@@ -474,6 +613,11 @@ msgid ""
 "or an email or else.. (Probably it's not recommended to allow a user to type"
 " himself its full DN, it can be a security issue)"
 msgstr ""
+"U některých LDAP může být DN jednoduchý řetězec, například e-mail. Pak byste"
+" mohli nastavit ``bindUserDN=\"%%LOGIN%%@company.local\"``. Nebo dokonce "
+"``bindUserDN=\"%%LOGIN%%\"``, pokud přihlašovatel může zadat plnou hodnotu "
+"DN nebo e-mail, nebo jinak... (Pravděpodobně se nedoporučuje umožnit "
+"uživateli, aby sám zadal své plné DN, může to být bezpečnostní problém)."
 
 #: ../../source/install/ldap.rst:142
 msgid ""
@@ -484,6 +628,12 @@ msgid ""
 " or you can indicate a single attribute name, corresponding to an attribute "
 "that contain the full DN of the user."
 msgstr ""
+"*Vytvoření DN z jednoho z atributů ldap uživatele*. V tomto případě se "
+"zásuvný modul nejprve zeptá adresáře ldap pomocí filtru `searchUserFilter`, "
+"aby získal atributy ldap uživatele. Poté můžete v poli bindUserDN zadat DN, "
+"kde budou některé hodnoty nahrazeny hodnotami některých atributů, nebo "
+"můžete zadat jedno jméno atributu odpovídající atributu, který obsahuje "
+"úplné DN uživatele."
 
 #: ../../source/install/ldap.rst:149
 msgid ""
@@ -495,6 +645,12 @@ msgid ""
 " configuration property, even with no field mapping. Ex: ``...,uid:,...``. "
 "See above."
 msgstr ""
+"V prvním případě by měl bindUserDn obsahovat DN s některými ``%?%`` "
+"zástupnými znaky, které budou nahrazeny odpovídajícími hodnotami atributů. "
+"Příklad: ``bindUserDN=\"uid=%?%,ou=users,dc=XY,dc=fr\"```. Zde nahradí "
+"``%?%`` hodnotou atributu `uid` načtenou z atributů uživatele. Název "
+"atributu by měl být přítomen do konfigurační vlastnosti `searchAttributes`, "
+"a to i bez mapování polí. Příklad: ``...,uid:,...```. Viz výše."
 
 #: ../../source/install/ldap.rst:156
 msgid ""
@@ -506,16 +662,25 @@ msgid ""
 "present into the `searchAttributes` configuration property, even with no "
 "field mapping. Ex: ``...,dn:,...``. See above."
 msgstr ""
+"V druhém případě stačí uvést název atributu s předponou `$`. Příklad: "
+"``bindUserDN=\"$dn\"``. Zde se vezme atribut `dn` načtený z vyhledávání a "
+"jeho plná hodnota se použije jako DN pro přihlášení proti serveru ldap. Je "
+"to užitečné pro některé servery LDAP, jako je někdy Active Directory, které "
+"potřebují plné DN specifické pro každého uživatele. Název atributu by měl "
+"být přítomen do konfigurační vlastnosti `searchAttributes`, a to i bez "
+"mapování polí. Například: ``...,dn:,...``. Viz výše."
 
 #: ../../source/install/ldap.rst:164
 msgid ""
 "Note that you can indicate several dn templates, if you have complex ldap "
 "structure. Use ``[]`` to indicate an item list:"
 msgstr ""
+"Všimněte si, že pokud máte složitou strukturu ldap, můžete uvést několik "
+"šablon dn. Pro označení seznamu položek použijte ``[]``:"
 
 #: ../../source/install/ldap.rst:173
 msgid "Configuration properties for user rights"
-msgstr ""
+msgstr "Konfigurace vlastností uživatelských práv"
 
 #: ../../source/install/ldap.rst:175
 msgid ""
@@ -523,18 +688,25 @@ msgid ""
 "your ldap groups, you can indicate to the plugin to automatically put the "
 "user into the application groups, according to the user ldap groups."
 msgstr ""
+"Pokud jste nakonfigurovali práva skupin do Lizmap a pokud se tyto skupiny "
+"shodují se skupinami ldap, můžete zásuvnému modulu zadat, aby uživatele "
+"automaticky zařadil do skupin aplikace podle skupin ldap uživatele."
 
 #: ../../source/install/ldap.rst:179
 msgid ""
 "You should then indicate into `searchGroupFilter` the ldap query that will "
 "retrieve the groups of the user."
 msgstr ""
+"Do pole `searchGroupFilter` pak zadejte dotaz ldap, který získá skupiny "
+"uživatele."
 
 #: ../../source/install/ldap.rst:182
 msgid ""
 "Example: "
 "``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%USERDN%%))\"``"
 msgstr ""
+"Příklad: "
+"``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%USERDN%%))\"``"
 
 #: ../../source/install/ldap.rst:184
 msgid ""
@@ -543,6 +715,10 @@ msgid ""
 "`searchAttributes`, between `%%`. Example: "
 "``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%givenName%%))\"``"
 msgstr ""
+"``%%USERDN%%`` je nahrazeno uživatelským dn. ``%%LOGIN%%`` je nahrazen "
+"přihlašovacím jménem. Můžete také použít libovolné atributy ldap, které "
+"uvedete do `searchAttributes`, mezi `%%`. Příklad: "
+"``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%givenName%%))\"``"
 
 #: ../../source/install/ldap.rst:188
 msgid ""
@@ -550,32 +726,42 @@ msgid ""
 "application groups that don't match the ldap group. If you don't want a "
 "groups synchronization, leave `searchGroupFilter` empty."
 msgstr ""
+"Upozornění : Nastavení `searchGroupFilter` odstraní uživatele ze všech "
+"ostatních skupin aplikací, které neodpovídají skupině ldap. Pokud nechcete "
+"synchronizaci skupin, ponechte `searchGroupFilter` prázdný."
 
 #: ../../source/install/ldap.rst:192
 msgid ""
 "With `searchGroupProperty`, you must indicate the ldap attribute that "
 "contains the group name. Ex: ``searchGroupProperty=\"cn\"``."
 msgstr ""
+"Pomocí `searchGroupProperty` je třeba uvést atribut ldap, který obsahuje "
+"název skupiny. Například: ``searchGroupProperty=\"cn\"```."
 
 #: ../../source/install/ldap.rst:195
 msgid ""
 "You may also indicate the base DN for the search, into `searchGroupBaseDN`. "
 "Example: ``searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"``."
 msgstr ""
+"Do pole `searchGroupBaseDN` můžete zadat také základní DN pro vyhledávání. "
+"Příklad: ``searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"```."
 
 #: ../../source/install/ldap.rst:199
 msgid "Debugging"
-msgstr ""
+msgstr "Ladění"
 
 #: ../../source/install/ldap.rst:201
 msgid ""
 "If the authentication does not working, you can have more details on what is"
 " wrong. To see these details, you should activate the traces for ldapdao."
 msgstr ""
+"Pokud ověřování nefunguje, můžete získat podrobnější informace o tom, co je "
+"špatně. Chcete-li tyto podrobnosti zobrazit, měli byste aktivovat sledování "
+"pro ldapdao"
 
 #: ../../source/install/ldap.rst:204
 msgid "In your var/config/localconfig.ini.php, set these parameters"
-msgstr ""
+msgstr "V souboru var/config/localconfig.ini.php nastavte tyto parametry"
 
 #: ../../source/install/ldap.rst:214
 msgid ""
@@ -583,10 +769,13 @@ msgid ""
 "connector. Remove these settings when you don't need them, to avoid a huge "
 "auth.log file."
 msgstr ""
+"Pak se v souboru var/log/auth.log zobrazí několik zpráv z konektoru ldap. "
+"Pokud je nepotřebujete, odstraňte tato nastavení, abyste se vyhnuli "
+"obrovskému souboru auth.log."
 
 #: ../../source/install/linux.rst:3
 msgid "Installing Lizmap Web Client on Linux Debian or Ubuntu"
-msgstr ""
+msgstr "Instalace webového klienta Lizmap v systému Linux Debian nebo Ubuntu"
 
 #: ../../source/install/linux.rst:5
 #: ../../source/install/pre_requirements.rst:6
@@ -595,52 +784,66 @@ msgid ""
 "you can follow those `instructions <https://github.com/3liz/lizmap-docker-"
 "compose>`_ using Docker and Docker-Compose."
 msgstr ""
+"Pokud chcete rychle nainstalovat a otestovat Lizmap Web Client v několika "
+"krocích, můžete postupovat podle těchto `instrukcí "
+"<https://github.com/3liz/lizmap-docker-compose>`_ pomocí Dockeru a Docker-"
+"Compose."
 
 #: ../../source/install/linux.rst:8
 msgid ""
 "In Debian distributions, you can work as administrator (log in with "
 "``root``), without using ``sudo`` on contrary to Ubuntu."
 msgstr ""
+"V distribuci Debian můžete na rozdíl od Ubuntu pracovat jako správce "
+"(přihlásit se pod ``root``) bez použití ``sudo``."
 
 #: ../../source/install/linux.rst:11
 msgid "Generic Server Configuration with Nginx server"
-msgstr ""
+msgstr "Obecná konfigurace serveru se serverem Nginx"
 
 #: ../../source/install/linux.rst:13 ../../source/install/linux.rst:36
 msgid ""
 "This documentation provides an example for configuring a server with the "
 "Debian 9 distribution. We assume you have base system installed and updated."
 msgstr ""
+"Tato dokumentace obsahuje příklad konfigurace serveru s distribucí Debian 9."
+" Předpokládáme, že máte nainstalovaný a aktualizovaný základní systém."
 
 #: ../../source/install/linux.rst:15 ../../source/install/linux.rst:38
 msgid ""
 "This page does not describe how to secure your Nginx server. It's just for a"
 " demonstration."
 msgstr ""
+"Na této stránce není popsáno, jak zabezpečit server Nginx. Slouží pouze k "
+"demonstraci."
 
 #: ../../source/install/linux.rst:18
 msgid "Configure Locales"
-msgstr ""
+msgstr "Konfigurace místních názvů"
 
 #: ../../source/install/linux.rst:20
 msgid ""
 "For simplicity, it is interesting to configure the server with UTF-8 default"
 " encoding."
 msgstr ""
+"Pro zjednodušení je zajímavé nakonfigurovat server s výchozím kódováním "
+"UTF-8."
 
 #: ../../source/install/linux.rst:31
 msgid ""
 "It is also necessary configure the other software so that they are using "
 "this default encoding if this is not the case."
 msgstr ""
+"Pokud tomu tak není, je nutné nakonfigurovat i ostatní software tak, aby "
+"používal toto výchozí kódování."
 
 #: ../../source/install/linux.rst:34
 msgid "Nginx Server Configuration"
-msgstr ""
+msgstr "Konfigurace serveru Nginx"
 
 #: ../../source/install/linux.rst:41 ../../source/install/linux.rst:132
 msgid "Installing necessary packages"
-msgstr ""
+msgstr "Instalace potřebných balíčků"
 
 #: ../../source/install/linux.rst:43
 msgid ""
@@ -649,44 +852,50 @@ msgid ""
 "**tokenizer** and **spl** extensions are required (they are generally turned"
 " on in a standard PHP 5.6/7.x installation)"
 msgstr ""
+"Webový klient Lizmap je založen na verzi Jelix 1.6. Je nutné nainstalovat "
+"alespoň verzi PHP **5.6**. Jsou vyžadována rozšíření **dom**, **simplexml**,"
+" **pcre**, **session**, **tokenizer** a **spl** (ve standardní instalaci PHP"
+" 5.6/7.x jsou obvykle zapnuta)."
 
 #: ../../source/install/linux.rst:51
 msgid "On debian 10, install these packages:"
-msgstr ""
+msgstr "V debian 10 nainstalujte tyto balíčky:"
 
 #: ../../source/install/linux.rst:57
 msgid "On Ubuntu 18.04 or later, install these packages:"
-msgstr ""
+msgstr "V Ubuntu 18.04 nebo novějším nainstalujte tyto balíčky:"
 
 #: ../../source/install/linux.rst:65 ../../source/install/linux.rst:174
 msgid "Web configuration"
-msgstr ""
+msgstr "Konfigurace webu"
 
 #: ../../source/install/linux.rst:67
 msgid "Create a new file /etc/nginx/sites-available/lizmap.conf:"
-msgstr ""
+msgstr "Vytvořte nový soubor /etc/nginx/sites-available/lizmap.conf:"
 
 #: ../../source/install/linux.rst:105
 msgid ""
 "You should declare the lizmap.local domain name somewhere (in your "
 "/etc/hosts, or into your DNS..), or replace it by your own domain name."
 msgstr ""
+"Název domény lizmap.local byste měli někde deklarovat (v souboru /etc/hosts "
+"nebo v DNS..) nebo jej nahradit vlastním názvem domény."
 
 #: ../../source/install/linux.rst:108
 msgid "Enable the virtual host you just created:"
-msgstr ""
+msgstr "Povolte právě vytvořeného virtuálního hostitele:"
 
 #: ../../source/install/linux.rst:115
 msgid "Restart Nginx"
-msgstr ""
+msgstr "Restartování Nginx"
 
 #: ../../source/install/linux.rst:117
 msgid "You must restart the Nginx server to validate the configuration."
-msgstr ""
+msgstr "Pro ověření konfigurace je nutné restartovat server Nginx."
 
 #: ../../source/install/linux.rst:125
 msgid "Apache Server configuration"
-msgstr ""
+msgstr "Konfigurace serveru Apache"
 
 #: ../../source/install/linux.rst:127
 msgid ""
@@ -694,66 +903,77 @@ msgid ""
 "Debian 10 distribution. We assume you have base system installed and "
 "updated."
 msgstr ""
+"This documentation provides an example for configuring a server with the "
+"Debian 10 distribution. We assume you have base system installed and "
+"updated."
 
 #: ../../source/install/linux.rst:129
 msgid ""
 "This page does not describe how to secure your Apache server. It's just for "
 "a demonstration."
 msgstr ""
+"Na této stránce není popsáno, jak zabezpečit server Apache. Slouží pouze k "
+"demonstraci."
 
 #: ../../source/install/linux.rst:135
 msgid "Firstly update the packages list, then install these packages:"
-msgstr ""
+msgstr "Nejprve aktualizujte seznam balíčků a poté tyto balíčky nainstalujte:"
 
 #: ../../source/install/linux.rst:145
 msgid "PHP 7.3 configuration"
-msgstr ""
+msgstr "Konfigurace PHP 7.3"
 
 #: ../../source/install/linux.rst:147
 msgid ""
 "In this example, we use Apache mpm-worker. So we must manually configure the"
 " activation of PHP 7.3."
 msgstr ""
+"V tomto příkladu používáme Apache mpm-worker. Proto musíme ručně "
+"nakonfigurovat aktivaci PHP 7.3."
 
 #: ../../source/install/linux.rst:167
 msgid "Enable the configuration with the following command line:"
-msgstr ""
+msgstr "Konfiguraci povolte pomocí následujícího příkazového řádku:"
 
 #: ../../source/install/linux.rst:177
 msgid "mpm-worker configuration"
-msgstr ""
+msgstr "konfigurace mpm-worker"
 
 #: ../../source/install/linux.rst:179
 msgid ""
 "We modify the Apache configuration file to adapt the options to mpm_worker "
 "server configuration."
 msgstr ""
+"Upravíme konfigurační soubor Apache, abychom přizpůsobili možnosti "
+"konfiguraci serveru mpm_worker."
 
 #: ../../source/install/linux.rst:195
 msgid "mod_fcgid configuration"
-msgstr ""
+msgstr "konfigurace mod_fcgid"
 
 #: ../../source/install/linux.rst:197
 msgid ""
 "QGIS Server runs with the FastCGI protocole (a.k.a. fcgi). We must therefore"
 " configure the Apache mod_fcgid to suit to the server capabilities."
 msgstr ""
+"Server QGIS pracuje s protokolem FastCGI (známým také jako fcgi). Musíme "
+"proto nakonfigurovat mod_fcgid Apache tak, aby odpovídal možnostem serveru."
 
 #: ../../source/install/linux.rst:216
 msgid "Setting the compression"
-msgstr ""
+msgstr "Nastavení komprese"
 
 #: ../../source/install/linux.rst:238
 msgid "Restart Apache"
-msgstr ""
+msgstr "Restartování Apache"
 
 #: ../../source/install/linux.rst:240
 msgid "You must restart the Apache server to validate the configuration."
-msgstr ""
+msgstr "Pro ověření konfigurace je nutné restartovat server Apache."
 
 #: ../../source/install/linux.rst:249
 msgid "Enable geolocation"
-msgstr ""
+msgstr "Povolení geolokace"
 
 #: ../../source/install/linux.rst:251
 msgid ""
@@ -761,49 +981,61 @@ msgid ""
 "enable it, your webGIS must be placed under a secure protocol, like HTTPS. "
 "See for more details:"
 msgstr ""
+"Automatická geolokace poskytovaná službou Lizmap se spoléhá na služby "
+"společnosti Google. Abyste ji mohli aktivovat, musí být váš webGIS umístěn "
+"pod zabezpečeným protokolem, například HTTPS. Další podrobnosti naleznete na"
+" stránce:"
 
 #: ../../source/install/linux.rst:253
 msgid ""
 "https://sites.google.com/a/chromium.org/dev/Home/chromium-"
 "security/deprecating-powerful-features-on-insecure-origins"
 msgstr ""
+"https://sites.google.com/a/chromium.org/dev/Home/chromium-"
+"security/deprecating-powerful-features-on-insecure-origins"
 
 #: ../../source/install/linux.rst:255
 msgid ""
 "https://www.digitalocean.com/community/tutorials/how-to-create-a-self-"
 "signed-ssl-certificate-for-apache-in-ubuntu-16-04"
 msgstr ""
+"https://www.digitalocean.com/community/tutorials/how-to-create-a-self-"
+"signed-ssl-certificate-for-apache-in-ubuntu-16-04"
 
 #: ../../source/install/linux.rst:259
 msgid "Create directories for data"
-msgstr ""
+msgstr "Vytvoření adresářů pro data"
 
 #: ../../source/install/linux.rst:261
 msgid ""
 "QGIS files and other cache files will be stored into these directories."
 msgstr ""
+"Do těchto adresářů se ukládají soubory QGIS a další soubory mezipaměti."
 
 #: ../../source/install/linux.rst:273
 msgid "Spatial Database: PostgreSQL"
-msgstr ""
+msgstr "Prostorová databáze: PostgreSQL"
 
 #: ../../source/install/linux.rst:275
 msgid "This section is optional. Please read :ref:`prerequisites-postgresql`."
 msgstr ""
+"Tato část je nepovinná. Přečtěte si prosím :ref:`předpoklady-postgresql`."
 
 #: ../../source/install/linux.rst:277
 msgid ""
 "PostgreSQL and PostGIS can be very useful to manage spatial data centralized"
 " manner on the server."
 msgstr ""
+"PostgreSQL a PostGIS mohou být velmi užitečné pro centralizovanou správu "
+"prostorových dat na serveru."
 
 #: ../../source/install/linux.rst:280 ../../source/install/linux.rst:339
 msgid "Install"
-msgstr ""
+msgstr "Instalace"
 
 #: ../../source/install/linux.rst:305
 msgid "Adapting the PostgreSQL configuration"
-msgstr ""
+msgstr "Přizpůsobení konfigurace PostgreSQL"
 
 #: ../../source/install/linux.rst:307
 msgid ""
@@ -811,10 +1043,13 @@ msgid ""
 " PostgreSQL configuration file adapted to the properties of the server "
 "(memory, processors, etc.)"
 msgstr ""
+"Použijeme ``pgtune``, obslužný program, který dokáže automaticky vygenerovat"
+" konfigurační soubor PostgreSQL přizpůsobený vlastnostem serveru (paměť, "
+"procesory atd.)."
 
 #: ../../source/install/linux.rst:310
 msgid "https://pgtune.leopard.in.ua/"
-msgstr ""
+msgstr "https://pgtune.leopard.in.ua/"
 
 #: ../../source/install/linux.rst:330
 msgid ""
@@ -822,61 +1057,74 @@ msgid ""
 " by default), you can continue until the next section below when you need to"
 " edit the file :file:`lizmap/var/config/profiles.ini.php`."
 msgstr ""
+"Pro instalaci tabulek Lizmap do databáze PostgreSQL (namísto výchozího "
+"SqLite) můžete pokračovat až do následující části, kdy je třeba upravit "
+"soubor :file:`lizmap/var/config/profiles.ini.php`."
 
 #: ../../source/install/linux.rst:334
 msgid "FTP Server: pure-ftpd"
-msgstr ""
+msgstr "Server FTP: pure-ftpd"
 
 #: ../../source/install/linux.rst:336
 msgid ""
 "This section is optional, you can setup your own way of transferring data "
 "from QGIS GIS technicians to the Lizmap server."
 msgstr ""
+"Tato část je volitelná, můžete si nastavit vlastní způsob přenosu dat z "
+"techniků QGIS GIS na server Lizmap."
 
 #: ../../source/install/linux.rst:346
 msgid "Configure"
-msgstr ""
+msgstr "Konfigurace"
 
 #: ../../source/install/linux.rst:369
 msgid "Creating a user account"
-msgstr ""
+msgstr "Vytvoření uživatelského účtu"
 
 #: ../../source/install/linux.rst:391
 msgid "Installing sources of Lizmap Web Client"
-msgstr ""
+msgstr "Instalace zdrojů webového klienta Lizmap"
 
 #: ../../source/install/linux.rst:393
 msgid ""
 "Retrieve the latest available stable version from our `Github release page "
 "<https://github.com/3liz/lizmap-web-client/releases/>`_."
 msgstr ""
+"Získejte nejnovější dostupnou stabilní verzi z naší `Stránky vydání na "
+"Githubu <https://github.com/3liz/lizmap-web-client/releases/>`_."
 
 #: ../../source/install/linux.rst:396
 msgid ""
 "Do not use the automatic ZIP file created by GitHub on the website. Only use"
 " ZIP attached to a release."
 msgstr ""
+"Nepoužívejte automatický soubor ZIP vytvořený službou GitHub na webových "
+"stránkách. Používejte pouze soubor ZIP připojený k vydání."
 
 #: ../../source/install/linux.rst:418
 msgid "Configure Lizmap with the database support"
-msgstr ""
+msgstr "Konfigurace aplikace Lizmap s podporou databáze"
 
 #: ../../source/install/linux.rst:420
 msgid ""
 "Lizmap needs a database to store its own data and to access to data used in "
 "your Qgis projects, with its editing tool."
 msgstr ""
+"Lizmap potřebuje databázi pro ukládání vlastních dat a pro přístup k datům "
+"používaným v projektech Qgis pomocí svého editačního nástroje."
 
 #: ../../source/install/linux.rst:423
 msgid ""
 "Create :file:`profiles.ini.php` into :file:`lizmap/var/config` by copying "
 ":file:`profiles.ini.php.dist`."
 msgstr ""
+"Vytvořte :file:`profiles.ini.php` do :file:`lizmap/var/config` zkopírováním "
+":file:`profiles.ini.php.dist`."
 
 #: ../../source/install/linux.rst:432
 #: ../../source/install/pre_requirements.rst:170
 msgid "PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL"
 
 #: ../../source/install/linux.rst:434
 msgid ""
@@ -886,6 +1134,11 @@ msgid ""
 "the database with credentials which are stored in the QGIS project (or with "
 "a PostgreSQL service file)."
 msgstr ""
+"Pro editaci vrstev PostGIS v aplikaci Web Client Lizmap nainstalujte podporu"
+" PostgreSQL pro PHP. Pro úpravu vrstvy PostgreSQL není třeba upravovat žádný"
+" konfigurační soubor. Musíte pouze **zkontrolovat**, zda server Lizmap může "
+"přistupovat k databázi pomocí pověření, která jsou uložena v projektu QGIS "
+"(nebo pomocí souboru služby PostgreSQL)."
 
 #: ../../source/install/linux.rst:443
 msgid ""
@@ -893,12 +1146,16 @@ msgid ""
 "PostgreSQL. To store these information in PostgreSQL, follow these "
 "instructions."
 msgstr ""
+"Protokoly Lizmap, uživatelé a skupiny mohou být uloženy v SqLite nebo "
+"PostgreSQL. Chcete-li tyto informace uložit do PostgreSQL, postupujte podle "
+"následujících pokynů."
 
 #: ../../source/install/linux.rst:446
 msgid ""
 "Into a fresh copy of :file:`lizmap/var/config/profiles.ini.php`, you should "
 "have:"
 msgstr ""
+"Do čerstvé kopie :file:`lizmap/var/config/profiles.ini.php` byste měli mít:"
 
 #: ../../source/install/linux.rst:458
 msgid ""
@@ -906,6 +1163,8 @@ msgid ""
 "sections to use Postgresql, and indicate several parameters to access to "
 "your Postgresql database:"
 msgstr ""
+"Toto je výchozí konfigurace pro použití Sqlite. Tyto části byste měli změnit"
+" na Postgresql a zadat několik parametrů pro přístup k databázi Postgresql:"
 
 #: ../../source/install/linux.rst:483
 msgid ""
@@ -913,6 +1172,9 @@ msgid ""
 "lizmap could access to other schema. You then have to set search_path "
 "correctly. Example:"
 msgstr ""
+"K uložení tabulek lizmap můžete použít konkrétní schéma. A možná budete "
+"chtít, aby lizmap mohl přistupovat k jiným schématům. Pak musíte správně "
+"nastavit search_path. Příklad:"
 
 #: ../../source/install/linux.rst:490
 msgid ""
@@ -920,14 +1182,17 @@ msgid ""
 "want to indicate a postgresql service instead of indicating login, password "
 "and so on. Use then the service parameter:"
 msgstr ""
+"Pokud jste na serveru nastavili soubor služby pro postgresql, možná budete "
+"chtít uvést službu postgresql namísto přihlašovacího jména, hesla apod. Pak "
+"použijte parametr služby:"
 
 #: ../../source/install/linux.rst:509
 msgid "Spatialite"
-msgstr ""
+msgstr "Spatialite"
 
 #: ../../source/install/linux.rst:512
 msgid "Enable Spatialite extension"
-msgstr ""
+msgstr "Povolení rozšíření Spatialite"
 
 #: ../../source/install/linux.rst:514
 msgid ""
@@ -935,6 +1200,9 @@ msgid ""
 " in PHP. You can follow these instructions to do so: http://www.gaia-"
 "gis.it/gaia-sins/spatialite-cookbook-fr/html/php.html"
 msgstr ""
+"Chcete-li používat úpravy ve vrstvách spatialite, musíte v PHP přidat "
+"rozšíření spatialite. Můžete tak učinit podle těchto pokynů: "
+"http://www.gaia-gis.it/gaia-sins/spatialite-cookbook-fr/html/php.html."
 
 #: ../../source/install/linux.rst:517
 msgid ""
@@ -942,11 +1210,14 @@ msgid ""
 " it is not, then spatialite layers will not be used in the editing tool. You"
 " can always use PostgreSQL data for editing."
 msgstr ""
+"Lizmap Web Client testuje, zda je v PHP povolena podpora spatialite. Pokud "
+"tomu tak není, nebudou vrstvy spatialite v editačním nástroji použity. Pro "
+"úpravy můžete vždy použít data PostgreSQL."
 
 #: ../../source/install/linux.rst:520
 msgid ""
 "Give the appropriate rights to the directory containing Spatialite databases"
-msgstr ""
+msgstr "Přidělte příslušná práva adresáři obsahujícímu databáze Spatialite."
 
 #: ../../source/install/linux.rst:522
 msgid ""
@@ -954,6 +1225,9 @@ msgid ""
 "Spatialite, we must ensure that **the webserver user (www-data) has well "
 "write access to the directory containing each Spatialite file**"
 msgstr ""
+"Aby mohl Lizmap Web Client měnit data obsažená v databázích Spatialite, "
+"musíme zajistit, aby **uživatel webového serveru (www-data) měl právo zápisu"
+" do adresáře obsahujícího jednotlivé soubory Spatialite**."
 
 #: ../../source/install/linux.rst:524
 msgid ""
@@ -961,10 +1235,12 @@ msgid ""
 " database placed in a **db** directory at the same level as the QGIS "
 "project:"
 msgstr ""
+"Například pokud adresář obsahuje projekt QGIS, který používá databázi "
+"Spatialite umístěnou v adresáři **db** na stejné úrovni jako projekt QGIS:"
 
 #: ../../source/install/linux.rst:533
 msgid "So you have to give the rights in this way:"
-msgstr ""
+msgstr "Musíte tedy práva udělit tímto způsobem:"
 
 #: ../../source/install/linux.rst:541
 msgid ""
@@ -974,24 +1250,30 @@ msgid ""
 "will facilitate the admin work that just have to change the rights of this "
 "unique directory."
 msgstr ""
+"Pokud tedy chcete Lizmap nainstalovat tak, aby poskytoval přístup k více "
+"vydavatelům map, měli byste jim říci, aby vždy vytvořili adresář **db** na "
+"stejné úrovni jako projekty QGIS v adresáři Lizmap Web Client. To usnadní "
+"práci správci, kterému stačí změnit práva tohoto jedinečného adresáře."
 
 #: ../../source/install/linux.rst:548
 msgid "Configuring Lizmap and launching the installer"
-msgstr ""
+msgstr "Konfigurace aplikace Lizmap a spuštění instalačního programu"
 
 #: ../../source/install/linux.rst:551
 msgid "Give the appropriate rights to directories and files"
-msgstr ""
+msgstr "Přidělení příslušných práv k adresářům a souborům"
 
 #: ../../source/install/linux.rst:553
 msgid ""
 "Set rights for Nginx/Apache, so PHP scripts could write some temporary files"
 " or do changes."
 msgstr ""
+"Nastavení práv pro Nginx/Apache, aby skripty PHP mohly zapisovat dočasné "
+"soubory nebo provádět změny."
 
 #: ../../source/install/linux.rst:564
 msgid "Setup configuration"
-msgstr ""
+msgstr "Konfigurace nastavení"
 
 #: ../../source/install/linux.rst:567
 msgid ""
@@ -1000,48 +1282,60 @@ msgid ""
 ":file:`lizmapConfig.ini.php` to set the url of qgis map server and other "
 "things."
 msgstr ""
+"Vytvořte :file:`lizmapConfig.ini.php`, :file:`localconfig.ini.php` a upravte"
+" je tak, abyste nastavili parametry specifické pro vaši instalaci. Soubor "
+":file:`lizmapConfig.ini.php` můžete upravit tak, abyste nastavili url adresu"
+" mapového serveru qgis a další věci."
 
 #: ../../source/install/linux.rst:578
 msgid ""
 "In case you want to enable the demo repositories, just add to "
 ":file:`localconfig.ini.php` the following:"
 msgstr ""
+"V případě, že chcete povolit demo úložiště, stačí přidat do "
+":file:`localconfig.ini.php` následující text:"
 
 #: ../../source/install/linux.rst:588
 msgid "Launching the installer"
-msgstr ""
+msgstr "Spuštění instalačního programu"
 
 #: ../../source/install/linux.rst:590
 msgid "After creating configuration files, you can launch the installer"
 msgstr ""
+"Po vytvoření konfiguračních souborů můžete spustit instalační program."
 
 #: ../../source/install/linux.rst:596
 msgid ""
 "It will finished the installation, and will create all SQL tables needed by "
 "Lizmap."
 msgstr ""
+"Dokončí instalaci a vytvoří všechny tabulky SQL, které Lizmap potřebuje."
 
 #: ../../source/install/linux.rst:600
 msgid "First test"
-msgstr ""
+msgstr "První test"
 
 #: ../../source/install/linux.rst:602
 msgid "For testing launch: ``http://localhost/lizmap`` in your browser."
-msgstr ""
+msgstr "Pro testování spusťte v prohlížeči: ``http://localhost/lizmap``."
 
 #: ../../source/install/linux.rst:604
 msgid "In case you get a ``500 - internal server error``, run again:"
 msgstr ""
+"V případě, že se zobrazí hlášení ``500 - internal server error``, spusťte "
+"jej znovu:"
 
 #: ../../source/install/linux.rst:612
 msgid "Replace ``localhost`` with the address or IP number of your server."
-msgstr ""
+msgstr "Nahraďte ``localhost`` adresou nebo číslem IP vašeho serveru."
 
 #: ../../source/install/linux.rst:614
 msgid ""
 "In the administration panel, you should check the :guilabel:`QGIS server "
 "version` and the :guilabel:`WMS server URL` with the URL of QGIS Server."
 msgstr ""
+"V panelu administrace byste měli zkontrolovat :guilabel:`QGIS server "
+"version` a :guilabel:`WMS server URL` s URL QGIS Serveru."
 
 #: ../../source/install/linux.rst:617
 msgid ""
@@ -1050,6 +1344,10 @@ msgid ""
 "properly. Versions about QGIS Server plugins **must** be visible from the "
 "administration interface. Please read :ref:`lizmap-server-plugin`."
 msgstr ""
+"Než se pokusíte zprovoznit projekt QGIS v aplikaci Lizmap, je nutné, aby "
+"správně fungovala komunikace mezi serverem QGIS a webovým klientem Lizmap. "
+"Verze o zásuvných modulech QGIS Serveru **musí** být viditelné z "
+"administračního rozhraní. Přečtěte si prosím :ref:`lizmap-server-plugin`."
 
 #: ../../source/install/linux.rst:620
 msgid ""
@@ -1058,46 +1356,58 @@ msgid ""
 "``qgis_server`` section in this URL: "
 "http://localhost/lizmap/index.php/view/app/metadata"
 msgstr ""
+"Pokud jste demo nenainstalovali, můžete zkontrolovat, zda jste dobře "
+"nainstalovali Lizmap a nakonfigurovali QGIS Server v rámci Lizmap tak, že "
+"zkontrolujete sekci ``qgis_server`` na této adrese URL: "
+"http://localhost/lizmap/index.php/view/app/metadata."
 
 #: ../../source/install/linux.rst:632
 msgid ""
 "Lizmap is accessible, without further configurations, also as WMS and WFS "
 "server from a browser:"
 msgstr ""
+"Lizmap je bez další konfigurace přístupný také jako WMS a WFS server z "
+"prohlížeče:"
 
 #: ../../source/install/linux.rst:634
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities"
 msgstr ""
+"http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities"
 
 #: ../../source/install/linux.rst:636
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities"
 msgstr ""
+"http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities"
 
 #: ../../source/install/linux.rst:638
 msgid "and from QGIS:"
-msgstr ""
+msgstr "a z QGIS:"
 
 #: ../../source/install/linux.rst:640
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&"
 msgstr ""
+"http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&"
 
 #: ../../source/install/linux.rst:642
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 msgstr ""
+"http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 
 #: ../../source/install/linux.rst:645
 msgid ""
 "Access to the WMS and WFS servers can be limited by assigning privileges to "
 "specific repositories, see the administration section."
 msgstr ""
+"Přístup k serverům WMS a WFS lze omezit přiřazením oprávnění konkrétním "
+"úložištím, viz část administrace."
 
 #: ../../source/install/linux.rst:649
 msgid "Lizmap modules"
-msgstr ""
+msgstr "Lizmap moduly"
 
 #: ../../source/install/linux.rst:651
 msgid ""
@@ -1105,6 +1415,9 @@ msgid ""
 "features to QGIS Server. Now that we have Lizmap Web Client up and running, "
 "we can add some Lizmap modules to add again some features."
 msgstr ""
+"Dříve jsme si vysvětlili, jak můžeme přidat zásuvné moduly QGIS Serveru a "
+"přidat do něj další funkce. Nyní, když máme zprovozněného webového klienta "
+"Lizmap, můžeme přidat některé moduly Lizmap a přidat opět některé funkce."
 
 #: ../../source/install/linux.rst:654
 msgid ""
@@ -1113,10 +1426,14 @@ msgid ""
 "their is usually their install instructions. You should follow them. However"
 " here are the main instructions to install a module."
 msgstr ""
+"Seznam je k dispozici v mapě Lizmap "
+":ref:`introduction<additional_lizmap_modules>`. Na jejich repozitáři GitHub "
+"je obvykle jejich instalační návod. Měli byste se jimi řídit. Nicméně zde "
+"jsou hlavní pokyny k instalaci modulu."
 
 #: ../../source/install/linux.rst:660
 msgid "Installing modules with Composer"
-msgstr ""
+msgstr "Instalace modulů pomocí nástroje Composer"
 
 #: ../../source/install/linux.rst:662
 msgid ""
@@ -1125,12 +1442,18 @@ msgid ""
 " of his module. A such package has a name, for example `lizmap/lizmap-"
 "pgmetadata-module``. The documentation of the module should indicate it."
 msgstr ""
+"Moduly můžete instalovat pomocí nástroje Composer, správce balíčků pro PHP. "
+"To je samozřejmě možné pouze v případě, že autor modulu vytvořil balíček "
+"svého modulu. Takový balíček má název, například `lizmap/lizmap-pgmetadata-"
+"module``. To by mělo být uvedeno v dokumentaci modulu."
 
 #: ../../source/install/linux.rst:667
 msgid ""
 "You must install Composer. See instructions on its web site "
 "http://getcomposer.org."
 msgstr ""
+"Je nutné nainstalovat aplikaci Composer. Viz pokyny na jeho webových "
+"stránkách http://getcomposer.org."
 
 #: ../../source/install/linux.rst:669
 msgid ""
@@ -1138,39 +1461,48 @@ msgid ""
 "packages/` by copying the :file:`composer.json.dist` from this directory. "
 "And launching a first time Compose"
 msgstr ""
+"Musíte vytvořit soubor :file:`composer.json` do adresáře :file:`lizmap/my-"
+"packages/` zkopírováním souboru :file:`composer.json.dist` z tohoto "
+"adresáře. A při prvním spuštění Compose"
 
 #: ../../source/install/linux.rst:680
 msgid "Then you can install the package of the module"
-msgstr ""
+msgstr "Pak můžete nainstalovat balíček modulu"
 
 #: ../../source/install/linux.rst:687
 msgid "If you want to install a new version of the module, just execute:"
-msgstr ""
+msgstr "Pokud chcete nainstalovat novou verzi modulu, stačí spustit:"
 
 #: ../../source/install/linux.rst:693 ../../source/install/linux.rst:737
 msgid ""
 "Read the documentation of the module to know if there are additional steps "
 "to configure it."
 msgstr ""
+"Přečtěte si dokumentaci k modulu a zjistěte, zda existují další kroky pro "
+"jeho konfiguraci."
 
 #: ../../source/install/linux.rst:696
 msgid "To finish the installation, run again the installer of Lizmap:"
-msgstr ""
+msgstr "Instalaci dokončíte opětovným spuštěním instalačního programu Lizmap:"
 
 #: ../../source/install/linux.rst:706
 msgid "installing modules without Composer"
-msgstr ""
+msgstr "instalace modulů bez aplikace Composer"
 
 #: ../../source/install/linux.rst:708
 msgid ""
 "To install a module without Composer, retrieve the zip file of the module."
 msgstr ""
+"Chcete-li nainstalovat modul bez nástroje Composer, načtěte soubor zip "
+"modulu."
 
 #: ../../source/install/linux.rst:710
 msgid ""
 "Extract the module into :file:`lizmap/lizmap-modules/`. For instance, for "
 "the module ``PgMetadata`` :"
 msgstr ""
+"Rozbalte modul do :file:`lizmap/lizmap-modules/`. Například pro modul "
+"``PgMetadata`` :"
 
 #: ../../source/install/linux.rst:729
 msgid ""
@@ -1178,42 +1510,53 @@ msgid ""
 "section, add a new line for the given module (check the documentation of the"
 " module to setup the correct values):"
 msgstr ""
+"Upravte :file:`lizmap/var/config/localconfig.ini.php`, v sekci ``modules`` "
+"přidejte nový řádek pro daný modul (správné hodnoty nastavte v dokumentaci "
+"modulu):"
 
 #: ../../source/install/linux.rst:740
 msgid "Run the installation :"
-msgstr ""
+msgstr "Spusťte instalaci :"
 
 #: ../../source/install/pre_requirements.rst:3
 msgid "Requirements before installing Lizmap Web Client"
-msgstr ""
+msgstr "Požadavky před instalací webového klienta Lizmap"
 
 #: ../../source/install/pre_requirements.rst:10
 msgid "QGIS Server"
-msgstr ""
+msgstr "QGIS Server"
 
 #: ../../source/install/pre_requirements.rst:13
 msgid ""
 "Before installing the QGIS Server part, it is **very highly** recommended to"
 " use the **same** version between QGIS Desktop and QGIS Server."
 msgstr ""
+"Před instalací části QGIS Server se **velmi důrazně** doporučuje používat "
+"**stejnou** verzi QGIS Desktop a QGIS Server."
 
 #: ../../source/install/pre_requirements.rst:16
 msgid ""
 "Even if some functions might work, there is a probability that some "
 "configuration won't work if these two versions are **different**."
 msgstr ""
+"I když některé funkce mohou fungovat, je pravděpodobné, že některé "
+"konfigurace nebudou fungovat, pokud jsou tyto dvě verze **rozdílné**."
 
 #: ../../source/install/pre_requirements.rst:19
 msgid ""
 "The reason is QGIS Server version X might not be able to a QGIS project made"
 " with a QGIS Desktop version Y."
 msgstr ""
+"Důvodem je, že QGIS Server verze X nemusí umět projekt QGIS vytvořený pomocí"
+" QGIS Desktop verze Y."
 
 #: ../../source/install/pre_requirements.rst:21
 msgid ""
 "Follow the QGIS Documentation how to install QGIS Server : "
 "https://docs.qgis.org/latest/en/docs/server_manual/"
 msgstr ""
+"Postupujte podle dokumentace QGIS, jak nainstalovat QGIS Server : "
+"https://docs.qgis.org/latest/en/docs/server_manual/."
 
 #: ../../source/install/pre_requirements.rst:23
 msgid ""
@@ -1221,6 +1564,9 @@ msgid ""
 "Nginx, the preferred way is to use ``spawn-fcgi``. Do **not** use the "
 "``fcgiwrap``, this solution is not efficient."
 msgstr ""
+"Při použití webového serveru (Apache nebo Nginx) je nutné nainstalovat QGIS "
+"Server. V případě Nginxu se upřednostňuje použití ``spawn-fcgi``. "
+"Nepoužívejte** ``fcgiwrap``, toto řešení není efektivní."
 
 #: ../../source/install/pre_requirements.rst:26
 msgid ""
@@ -1228,6 +1574,9 @@ msgid ""
 "variable for a folder with write permissions for ``www-data``. These is "
 "explained in the QGIS Server documentation."
 msgstr ""
+"V konfiguraci Nginxu je dobré použít proměnnou ``QGIS_OPTIONS_PATH`` pro "
+"složku s právy zápisu pro ``www-data``. Ty jsou vysvětleny v dokumentaci k "
+"serveru QGIS."
 
 #: ../../source/install/pre_requirements.rst:29
 msgid ""
@@ -1235,16 +1584,23 @@ msgid ""
 "Documentation. This is useful for printing PDF. You can only skip this "
 "section if you don't plan to print PDF on the server side."
 msgstr ""
+"Měli byste si také nainstalovat a nakonfigurovat ``XVFB`` uvedený v "
+"dokumentaci QGIS. To je užitečné pro tisk PDF. Tuto část můžete přeskočit "
+"pouze v případě, že neplánujete tisknout PDF na straně serveru."
 
 #: ../../source/install/pre_requirements.rst:33
 msgid ""
 "After you have setup your web server with QGIS-Server, check that the URL of"
 " QGIS Server is working. You probably get a XML like:"
 msgstr ""
+"Po nastavení webového serveru s QGIS-Serverem zkontrolujte, zda je URL "
+"adresa QGIS Serveru funkční. Pravděpodobně se zobrazí XML jako:"
 
 #: ../../source/install/pre_requirements.rst:40
 msgid "Keep this URL, we will use it later in the Lizmap admin panel."
 msgstr ""
+"Tuto adresu URL si ponechte, budeme ji používat později v panelu správce "
+"Lizmap."
 
 #: ../../source/install/pre_requirements.rst:43
 msgid ""
@@ -1252,6 +1608,9 @@ msgid ""
 "host than Lizmap Web Client. QGIS Server URL should stay private, accessible"
 " by the Lizmap PHP application **only**."
 msgstr ""
+"**Důrazně** doporučujeme nastavit QGIS Server na jiném virtuálním hostiteli "
+"než Lizmap Web Client. Adresa URL serveru QGIS by měla zůstat neveřejná, "
+"přístupná **pouze** aplikaci Lizmap PHP."
 
 #: ../../source/install/pre_requirements.rst:46
 msgid ""
@@ -1259,16 +1618,22 @@ msgid ""
 "installed, your user might be able to access private data if they by-pass "
 "Lizmap, by using straight QGIS Server URL."
 msgstr ""
+"V opačném případě, zejména po instalaci zásuvného modulu **Lizmap** na "
+"server QGIS, může mít uživatel přístup k soukromým datům, pokud obejde "
+"Lizmap pomocí přímé adresy URL serveru QGIS."
 
 #: ../../source/install/pre_requirements.rst:50
 msgid "QGIS Server plugins"
-msgstr ""
+msgstr "Zásuvné moduly QGIS Server"
 
 #: ../../source/install/pre_requirements.rst:52
 msgid ""
 "Some plugins can be added to QGIS Server. This will enable some features in "
 "Lizmap. It's not compulsory but in some situations, it's better."
 msgstr ""
+"Některé zásuvné moduly lze přidat do serveru QGIS. Tím se v Lizmapu "
+"zpřístupní některé funkce. Není to povinné, ale v některých situacích je to "
+"lepší."
 
 #: ../../source/install/pre_requirements.rst:55
 msgid ""
@@ -1277,6 +1642,11 @@ msgid ""
 "https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-"
 "variables"
 msgstr ""
+"Buď byste měli nastavit proměnnou prostředí ``QGIS_PLUGINPATH`` během "
+"instalace QGIS Serveru, nebo použít výchozí proměnnou, kterou poskytuje "
+"QGIS. "
+"https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-"
+"variables."
 
 #: ../../source/install/pre_requirements.rst:60
 msgid ""
@@ -1284,103 +1654,114 @@ msgid ""
 "manager**, a CLI tool to install and upgrade plugins. "
 "https://pypi.org/project/qgis-plugin-manager/"
 msgstr ""
+"Pro správu zásuvných modulů serveru QGIS doporučujeme používat **qgis-"
+"plugin-manager**, nástroj CLI pro instalaci a aktualizaci zásuvných modulů. "
+"https://pypi.org/project/qgis-plugin-manager/"
 
 #: ../../source/install/pre_requirements.rst:63
 msgid "AtlasPrint"
-msgstr ""
+msgstr "AtlasPrint"
 
 #: ../../source/install/pre_requirements.rst:65
 msgid "To enable the PDF based on a QGIS Layout Atlas"
-msgstr ""
+msgstr "Zapnutí PDF na základě atlasu rozložení QGIS"
 
 #: ../../source/install/pre_requirements.rst:66
 msgid "https://github.com/3liz/qgis-atlasprint"
-msgstr ""
+msgstr "https://github.com/3liz/qgis-atlasprint"
 
 #: ../../source/install/pre_requirements.rst:68
 msgid "Cadastre"
-msgstr ""
+msgstr "Cadastre"
 
 #: ../../source/install/pre_requirements.rst:70
 msgid "French use-case only"
-msgstr ""
+msgstr "Pouze francouzský případ užití"
 
 #: ../../source/install/pre_requirements.rst:71
 msgid "Needed for the Lizmap Cadastre module"
-msgstr ""
+msgstr "Potřebné pro modul Lizmap Cadastre"
 
 #: ../../source/install/pre_requirements.rst:72
 msgid "https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/"
-msgstr ""
+msgstr "https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/"
 
 #: ../../source/install/pre_requirements.rst:74
 msgid "Lizmap server"
-msgstr ""
+msgstr "Lizmap server"
 
 #: ../../source/install/pre_requirements.rst:76
 msgid ""
 "Lizmap **is not only** a PHP application, there is also Python plugin for "
 "**QGIS Server** called **Lizmap server**."
 msgstr ""
+"Lizmap **není jen** aplikace PHP, existuje také plugin Python pro **QGIS "
+"Server** s názvem **Lizmap server**."
 
 #: ../../source/install/pre_requirements.rst:77
 #: ../../source/install/pre_requirements.rst:117
 msgid "https://github.com/3liz/qgis-lizmap-server-plugin"
-msgstr ""
+msgstr "https://github.com/3liz/qgis-lizmap-server-plugin"
 
 #: ../../source/install/pre_requirements.rst:78
 msgid ""
 "The plugin is **highly** recommended, a few features won't work as expected "
 "if the plugin is not installed or not upgraded."
 msgstr ""
+"Plugin je **vřele** doporučen, několik funkcí nebude fungovat tak, jak se "
+"očekává, pokud plugin není nainstalován nebo není aktualizován."
 
 #: ../../source/install/pre_requirements.rst:79
 msgid ""
 "**Important**, read below for more information the Lizmap QGIS Server "
 "plugin. (:ref:`lizmap-server-plugin`)"
 msgstr ""
+"**Důležité**, přečtěte si níže další informace o zásuvném modulu Lizmap QGIS"
+" Server. (:ref:`lizmap-server-plugin`)"
 
 #: ../../source/install/pre_requirements.rst:81
 msgid "WfsOutputExtension"
-msgstr ""
+msgstr "WfsOutputExtension"
 
 #: ../../source/install/pre_requirements.rst:83
 msgid "To add new format when exporting vector data"
-msgstr ""
+msgstr "Přidání nového formátu při exportu vektorových dat"
 
 #: ../../source/install/pre_requirements.rst:84
 msgid "https://github.com/3liz/qgis-wfsOutputExtension"
-msgstr ""
+msgstr "https://github.com/3liz/qgis-wfsOutputExtension"
 
 #: ../../source/install/pre_requirements.rst:86
 msgid "Logging"
-msgstr ""
+msgstr "Protokolování"
 
 #: ../../source/install/pre_requirements.rst:88
 msgid "To log QGIS Servers log and to flush the cache on QGIS Server"
-msgstr ""
+msgstr "K protokolování QGIS Serveru a pročištění mezipaměti QGIS Serveru"
 
 #: ../../source/install/pre_requirements.rst:89
 msgid "https://github.com/3liz/qgis-logging-plugin."
-msgstr ""
+msgstr "https://github.com/3liz/qgis-logging-plugin."
 
 #: ../../source/install/pre_requirements.rst:90
 msgid "This plugin is deprecated."
-msgstr ""
+msgstr "Tento zásuvný modul je zastaralý."
 
 #: ../../source/install/pre_requirements.rst:95
 msgid "Lizmap QGIS Server plugin"
-msgstr ""
+msgstr "Zásuvný modul Lizmap QGIS Server"
 
 #: ../../source/install/pre_requirements.rst:97
 msgid ""
 "Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web "
 "Client :"
 msgstr ""
+"Přidání zásuvného modulu Lizmap QGIS Server přidá některé funkce do webového"
+" klienta Lizmap :"
 
 #: ../../source/install/pre_requirements.rst:99
 msgid "retrieve information from QGIS Server."
-msgstr ""
+msgstr "načítání informací ze serveru QGIS."
 
 #: ../../source/install/pre_requirements.rst:101
 msgid ""
@@ -1388,64 +1769,73 @@ msgid ""
 "<https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`_"
 " in forms about :"
 msgstr ""
+"vyhodnotit `QGIS Expressions "
+"<https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`_"
+" ve formulářích o :"
 
 #: ../../source/install/pre_requirements.rst:104
 msgid "constraints"
-msgstr ""
+msgstr "omezení"
 
 #: ../../source/install/pre_requirements.rst:105
 msgid "default value"
-msgstr ""
+msgstr "výchozí hodnota"
 
 #: ../../source/install/pre_requirements.rst:106
 msgid "group visibility"
-msgstr ""
+msgstr "viditelnost skupiny"
 
 #: ../../source/install/pre_requirements.rst:107
 msgid "Read :ref:`edition-expressions`."
-msgstr ""
+msgstr "Přečtěte si :ref:`edition-expressions`."
 
 #: ../../source/install/pre_requirements.rst:109
 msgid "check User Access Rights (ACL) for features and layers :"
-msgstr ""
+msgstr "zkontrolujte přístupová práva uživatele (ACL) pro funkce a vrstvy :"
 
 #: ../../source/install/pre_requirements.rst:111
 msgid "filter by polygon"
-msgstr ""
+msgstr "filtrovat podle polygonu"
 
 #: ../../source/install/pre_requirements.rst:112
 msgid "by attribute"
-msgstr ""
+msgstr "podle atributu"
 
 #: ../../source/install/pre_requirements.rst:114
 msgid "use the **Form** popup, read :ref:`form-popup`."
-msgstr ""
+msgstr "použít vyskakovací okno **Form**, čtěte :ref:`form-popup`."
 
 #: ../../source/install/pre_requirements.rst:115
 msgid ""
 "enable ``@lizmap_user`` and ``lizmap_user_groups`` variables in QGIS "
 "projects"
 msgstr ""
+"povolení proměnných ``@lizmap_user`` a ``lizmap_user_groups`` v projektech "
+"QGIS."
 
 #: ../../source/install/pre_requirements.rst:118
 msgid ""
 "The plugin is not required, but a few features won't work as expected if the"
 " plugin is not installed or not upgraded"
 msgstr ""
+"Zásuvný modul není vyžadován, ale pokud není nainstalován nebo aktualizován,"
+" některé funkce nebudou fungovat podle očekávání."
 
 #: ../../source/install/pre_requirements.rst:119
 msgid ""
 "The name of the plugin is **Lizmap server**. Do not install the **Lizmap** "
 "plugin which is the **desktop** Python plugin."
 msgstr ""
+"Název zásuvného modulu je **Lizmap server**. Neinstalujte zásuvný modul "
+"**Lizmap**, což je zásuvný modul **desktop** pro Python."
 
 #: ../../source/install/pre_requirements.rst:122
 msgid "Installation"
-msgstr ""
+msgstr "Instalace"
 
 #: ../../source/install/pre_requirements.rst:125
 msgid "QGIS Server side"
-msgstr ""
+msgstr "Strana QGIS Server"
 
 #: ../../source/install/pre_requirements.rst:127
 msgid ""
@@ -1453,6 +1843,9 @@ msgid ""
 "The environment variable must be set in QGIS Server. The plugin name is "
 "**Lizmap server**."
 msgstr ""
+"Plugin Lizmap musí být nainstalován ve správné složce pro QGIS Server. "
+"Proměnná prostředí musí být nastavena v QGIS Serveru. Název zásuvného modulu"
+" je **Lizmap server**."
 
 #: ../../source/install/pre_requirements.rst:131
 msgid ""
@@ -1460,6 +1853,9 @@ msgid ""
 " must enable the environment variable "
 "``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`` on QGIS server."
 msgstr ""
+"Z **bezpečnostních** důvodů je pro povolení všech funkcí na straně serveru "
+"QGIS nutné na serveru QGIS povolit proměnnou prostředí "
+"``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True``."
 
 #: ../../source/install/pre_requirements.rst:134
 msgid ""
@@ -1473,28 +1869,43 @@ msgid ""
 "**must use** WFS/WMS links provided by Lizmap Web Client, so Lizmap can "
 "check user permissions."
 msgstr ""
+"Musíte se ujistit, že toto rozhraní API "
+"``http://your.qgis.server.url/lizmap/server.json`` je na vašem webovém "
+"serveru chráněno. Nejlepší** je omezit přístup k serveru QGIS "
+"``http://your.qgis.server.url`` na virtuálním hostiteli, který není "
+"přístupný z internetu. Všechny požadavky na server QGIS budou odesílány "
+"prostřednictvím webového klienta Lizmap. Server QGIS nesmí být přístupný "
+"zvenčí. Již dříve bylo **velmi** doporučeno chránit server QGIS před "
+"internetem. Uživatelé **musí používat** odkazy WFS/WMS poskytované Lizmap "
+"Web Client, aby Lizmap mohl kontrolovat oprávnění uživatelů."
 
 #: ../../source/install/pre_requirements.rst:140
 msgid ""
 "This variable will **expose** server settings such as QGIS server version, "
 "which is used by Lizmap Web Client."
 msgstr ""
+"Tato proměnná **odhalí** nastavení serveru, například verzi serveru QGIS, "
+"kterou používá Lizmap Web Client."
 
 #: ../../source/install/pre_requirements.rst:143
 msgid "Administration panel"
-msgstr ""
+msgstr "Administrační panel"
 
 #: ../../source/install/pre_requirements.rst:145
 msgid ""
 "You **must** have the table called \"Server information\" working correctly "
 "in your administration panel before trying a QGIS project."
 msgstr ""
+"Před vyzkoušením projektu QGIS je **nutné**, aby v panelu správy správně "
+"fungovala tabulka s názvem \"Informace o serveru\"."
 
 #: ../../source/install/pre_requirements.rst:148
 msgid ""
 "If your are using QGIS Server with **FCGI**, the Lizmap API URL **must** be "
 "empty."
 msgstr ""
+"Pokud používáte QGIS Server s **FCGI**, musí být adresa URL rozhraní Lizmap "
+"API **prázdná**."
 
 #: ../../source/install/pre_requirements.rst:150
 msgid ""
@@ -1503,6 +1914,10 @@ msgid ""
 "interface. In **Py-QGIS-Server**, you must explicitly publish the API as "
 "well."
 msgstr ""
+"V opačném případě, pokud používáte `Py-QGIS-Server "
+"<https://docs.3liz.org/py-qgis-server/>`_, musí být adresa API Lizmap "
+"**konfigurována** v administračním rozhraní. V systému **Py-QGIS-Server** "
+"musíte rozhraní API také explicitně zveřejnit."
 
 #: ../../source/install/pre_requirements.rst:153
 msgid ""
@@ -1511,16 +1926,21 @@ msgid ""
 "`QGSRV_API_ENDPOINTS_LIZMAP=yes` otherwise, add the configuration below in "
 "your configuration file :"
 msgstr ""
+"Od verze Py-QGIS-Server 1.8.4 je možné povolit koncový bod Lizmap API pomocí"
+" proměnné prostředí `QGSRV_API_ENDPOINTS_LIZMAP=yes`, v opačném případě "
+"přidejte níže uvedenou konfiguraci do konfiguračního souboru :"
 
 #: ../../source/install/pre_requirements.rst:164
 msgid ""
 "Then, with Py-QGIS-Server, if your URL for OWS is `http://map:8080/ows/`, it"
 " means the URL for the Lizmap API endpoint is `http://map:8080/lizmap/`."
 msgstr ""
+"Pokud je adresa URL pro OWS `http://map:8080/ows/`, znamená to, že adresa "
+"URL pro koncový bod Lizmap API je `http://map:8080/lizmap/`."
 
 #: ../../source/install/pre_requirements.rst:172
 msgid "PostgreSQL can be used for **three** different purposes in Lizmap :"
-msgstr ""
+msgstr "V aplikaci Lizmap lze PostgreSQL použít pro **tři** různé účely:"
 
 #: ../../source/install/pre_requirements.rst:174
 msgid ""
@@ -1530,44 +1950,54 @@ msgid ""
 "Lizmap, but the layer **must** be stored in PostgreSQL. See :ref:`edition-"
 "prerequisites`."
 msgstr ""
+"Ukládání dat GIS. **Na straně serveru Lizmap Web Client není potřeba žádná**"
+" konfigurace, ze serveru Lizmap Web Client a serveru QGIS musí být přístupný"
+" pouze** server PostgreSQL. Pomocí Lizmap je možné vrstvy upravovat, ale "
+"**musí** být uloženy v PostgreSQL. Viz :ref:`edition-prerequisites`."
 
 #: ../../source/install/pre_requirements.rst:177
 msgid ""
 "To store Lizmap Web Client users and user actions. Lizmap uses tables. This "
 "setting must be done when **installing** Lizmap."
 msgstr ""
+"Uložení uživatelů a uživatelských akcí klienta Lizmap Web Client. Lizmap "
+"používá tabulky. Toto nastavení je třeba provést při **instalaci** Lizmap."
 
 #: ../../source/install/pre_requirements.rst:178
 msgid ""
 "To use `lizmap_search`, see :ref:`postgresql-lizmap-search`. This setting on"
 " the Lizmap server can be set when you need it."
 msgstr ""
+"Chcete-li použít `lizmap_search`, viz :ref:`postgresql-lizmap-search`. Toto "
+"nastavení na serveru Lizmap lze nastavit, když ho potřebujete."
 
 #: ../../source/install/upgrade.rst:3
 msgid "Upgrade Lizmap Web Client"
-msgstr ""
+msgstr "Aktualizace webového klienta Lizmap"
 
 #: ../../source/install/upgrade.rst:6
 msgid "Upgrading from Lizmap 2.x"
-msgstr ""
+msgstr "Aktualizace z verze Lizmap 2.x"
 
 #: ../../source/install/upgrade.rst:8
 msgid ""
 "See `documentation of Lizmap 3.1 "
 "<https://docs.lizmap.com/3.1/en/install/upgrade.html>`_."
 msgstr ""
+"Viz `dokumentace Lizmap 3.1 "
+"<https://docs.lizmap.com/3.1/en/install/upgrade.html>`_."
 
 #: ../../source/install/upgrade.rst:11
 msgid "Upgrading from Lizmap 3.x versions"
-msgstr ""
+msgstr "Aktualizace z verze Lizmap 3.x"
 
 #: ../../source/install/upgrade.rst:13
 msgid "From 3.0 versions to upper, here is how to upgrade."
-msgstr ""
+msgstr "Jak upgradovat z verze 3.0 na vyšší, najdete zde."
 
 #: ../../source/install/upgrade.rst:16
 msgid "Data backup"
-msgstr ""
+msgstr "Záloha dat"
 
 #: ../../source/install/upgrade.rst:18
 msgid ""
@@ -1575,76 +2005,86 @@ msgid ""
 "lizmap/install/backup.sh script, so you could reinstall them if the "
 "installation failed."
 msgstr ""
+"Zálohujte data do adresáře (např.: /tmp) pomocí skriptu "
+"lizmap/install/backup.sh, abyste je mohli znovu nainstalovat, pokud "
+"instalace selže."
 
 #: ../../source/install/upgrade.rst:25
 msgid "If you want to backup by hand, you should backup at least these files:"
 msgstr ""
+"Pokud chcete zálohovat ručně, měli byste zálohovat alespoň tyto soubory:"
 
 #: ../../source/install/upgrade.rst:27
 msgid "var/db/jauth.db"
-msgstr ""
+msgstr "var/db/jauth.db"
 
 #: ../../source/install/upgrade.rst:28
 msgid "var/db/logs.db"
-msgstr ""
+msgstr "var/db/logs.db"
 
 #: ../../source/install/upgrade.rst:29
 msgid "var/config/installer.ini.php"
-msgstr ""
+msgstr "var/config/installer.ini.php"
 
 #: ../../source/install/upgrade.rst:30
 msgid "var/config/liveConfig.ini.php (if it exists)"
-msgstr ""
+msgstr "var/config/liveConfig.ini.php (pokud existuje)"
 
 #: ../../source/install/upgrade.rst:31
 msgid "var/config/lizmapConfig.ini.php"
-msgstr ""
+msgstr "var/config/lizmapConfig.ini.php"
 
 #: ../../source/install/upgrade.rst:32
 msgid "var/config/localconfig.ini.php"
-msgstr ""
+msgstr "var/config/localconfig.ini.php"
 
 #: ../../source/install/upgrade.rst:33
 msgid "var/config/profiles.ini.php"
-msgstr ""
+msgstr "var/config/profiles.ini.php"
 
 #: ../../source/install/upgrade.rst:37
 msgid "Replace Lizmap files"
-msgstr ""
+msgstr "Nahrazení souborů Lizmap"
 
 #: ../../source/install/upgrade.rst:39
 msgid ""
 "Get the Lizmap archive by downloading an archive on the `release "
 "<https://github.com/3liz/lizmap-web-client/releases>`_ page."
 msgstr ""
+"Archiv Lizmap získáte stažením archivu na stránce `release "
+"<https://github.com/3liz/lizmap-web-client/releases>`_."
 
 #: ../../source/install/upgrade.rst:41
 msgid "You should then :"
-msgstr ""
+msgstr "Pak byste měli :"
 
 #: ../../source/install/upgrade.rst:43
 msgid "replace the ``lib/`` directory by the new ``lib/`` directory"
-msgstr ""
+msgstr "nahradit adresář ``lib/`` novým adresářem ``lib/``"
 
 #: ../../source/install/upgrade.rst:44
 msgid "replace files into ``lizmap/`` directory by the new ``lizmap/`` files"
-msgstr ""
+msgstr "nahradit soubory v adresáři ``lizmap/`` novými soubory ``lizmap/``"
 
 #: ../../source/install/upgrade.rst:45
 msgid ""
 "If the replacement has erased some files that you haven't done any backup "
 "before, restore them with ``lizmap/install/restore.sh /tmp``"
 msgstr ""
+"Pokud výměna smazala některé soubory, které jste předtím nezálohovali, "
+"obnovte je pomocí ``lizmap/install/restore.sh /tmp```"
 
 #: ../../source/install/upgrade.rst:49
 msgid "Launch the installer"
-msgstr ""
+msgstr "Spuštění instalačního programu"
 
 #: ../../source/install/upgrade.rst:51
 msgid ""
 "You have to launch the installer, it will upgrade some stuff: database "
 "tables, configuration etc.."
 msgstr ""
+"Musíte spustit instalační program, který provede aktualizaci některých věcí:"
+" databázových tabulek, konfigurace atd.."
 
 #: ../../source/install/upgrade.rst:61
 msgid ""
@@ -1656,18 +2096,24 @@ msgid ""
 "different manner than when installing it by hand. See the ldap configuration"
 " section in this manual."
 msgstr ""
+"pokud přecházíte z verze 3.0 nebo 3.1 na Lizmap 3.2/3.3 a pokud používáte "
+"ověřování ldap pomocí modulu ldapdao, musíte vědět, že tento modul je "
+"součástí Lizmap 3.2/3.3 a je předkonfigurován. Před spuštěním instalátoru "
+"tedy musíte odebrat nainstalovaný modul ldapdao a modul ldapdao musíte "
+"nakonfigurovat trochu jinak než při ruční instalaci. Viz část o konfiguraci "
+"ldap v této příručce."
 
 #: ../../source/install/upgrade.rst:70
 msgid "Delete Jelix temporary files"
-msgstr ""
+msgstr "Odstranění dočasných souborů Jelix"
 
 #: ../../source/install/upgrade.rst:77
 msgid "Redefine the rights to the application files"
-msgstr ""
+msgstr "Nové definování práv k souborům aplikace"
 
 #: ../../source/install/upgrade.rst:87
 msgid "Migrating from Sqlite to Postgresql"
-msgstr ""
+msgstr "Migrace ze Sqlite na Postgresql"
 
 #: ../../source/install/upgrade.rst:89
 msgid ""
@@ -1676,12 +2122,17 @@ msgid ""
 " data like users, permissions and logs are stored. And you should have this "
 "configuration into :file:`lizmap/var/config/profiles.ini.php`:"
 msgstr ""
+"Je možné, že jste nainstalovali Lizmap se Sqlite. Pak byste měli mít tyto "
+"soubory :file:`lizmap/var/db/jauth.db` a :file:`lizmap/var/db/logs.db`, kde "
+"jsou uložena některá data, jako jsou uživatelé, oprávnění a logy. A tuto "
+"konfiguraci byste měli mít v :file:`lizmap/var/config/profiles.ini.php`:"
 
 #: ../../source/install/upgrade.rst:105
 msgid ""
 "It you have a such configuration, you can migrate data to a Postgresql "
 "database."
 msgstr ""
+"Pokud máte takovou konfiguraci, můžete data migrovat do databáze Postgresql."
 
 #: ../../source/install/upgrade.rst:107
 msgid ""
@@ -1690,19 +2141,24 @@ msgid ""
 "the Postgresql database. It is recommended to create a schema into the "
 "database, for example ``lizmap`` , if it contains already some tables."
 msgstr ""
+"Nejprve vytvořte databázi Postgresql a poté změňte konfiguraci v souboru "
+":`lizmap/var/config/profiles.ini.php` nastavením přístupových parametrů k "
+"databázi Postgresql. Doporučujeme vytvořit do databáze schéma, například "
+"``lizmap`` , pokud již obsahuje nějaké tabulky."
 
 #: ../../source/install/upgrade.rst:113
 msgid "For example :"
-msgstr ""
+msgstr "Například :"
 
 #: ../../source/install/upgrade.rst:135
 msgid ""
 "See the chapter about installation to know more about these parameters."
 msgstr ""
+"Další informace o těchto parametrech naleznete v kapitole o instalaci."
 
 #: ../../source/install/upgrade.rst:137
 msgid "Then you can launch these scripts which will migrate the data."
-msgstr ""
+msgstr "Poté můžete spustit tyto skripty, které provedou migraci dat."
 
 #: ../../source/install/upgrade.rst:145
 msgid ""
@@ -1711,6 +2167,10 @@ msgid ""
 "users into the administration panel. If this is the case, you can backup "
 "files jauth.db and logs.db and you can delete them."
 msgstr ""
+"Pokud se neobjeví žádné chyby, můžete pomocí prohlížeče přejít na lizmap a "
+"zkontrolovat, zda se můžete ověřit. Měli byste také vidět seznam uživatelů v"
+" panelu administrace. Pokud tomu tak je, můžete si zazálohovat soubory "
+"jauth.db a logs.db a můžete je smazat."
 
 #: ../../source/install/upgrade.rst:150
 msgid ""
@@ -1718,31 +2178,39 @@ msgid ""
 "access into :file:`lizmap/var/config/profiles.ini.php` as before, like this "
 ":"
 msgstr ""
+"Pokud se něco pokazí a nemůžete problém vyřešit, vraťte přístup k databázi "
+"do :file:`lizmap/var/config/profiles.ini.php` jako dříve, například takto :"
 
 #: ../../source/install/upgrade.rst:164
 msgid "And Lizmap should work well, but still with Sqlite."
-msgstr ""
+msgstr "A Lizmap by měl fungovat dobře, ale stále s Sqlite."
 
 #: ../../source/install/windows.rst:3
 msgid "Installing Lizmap Web Client on Windows"
-msgstr ""
+msgstr "Instalace webového klienta Lizmap v systému Windows"
 
 #: ../../source/install/windows.rst:5
 msgid "Lizmap Web Client is not officially supported on a Windows server."
 msgstr ""
+"Webový klient Lizmap není na serveru se systémem Windows oficiálně "
+"podporován."
 
 #: ../../source/install/windows.rst:7
 msgid "We recommend either :"
-msgstr ""
+msgstr "Doporučujeme buď :"
 
 #: ../../source/install/windows.rst:9
 msgid ""
 "using `Docker and Docker-Compose <https://github.com/3liz/lizmap-docker-"
 "compose>`_ to quickly test Lizmap Web Client."
 msgstr ""
+"pomocí `Docker a Docker-Compose <https://github.com/3liz/lizmap-docker-"
+"compose>`_ rychle otestovat Lizmap Web Client."
 
 #: ../../source/install/windows.rst:10
 msgid ""
 "using the tutorial and configuration from `NaturalGIS "
 "<https://github.com/NaturalGIS/qgis_server_and_lizmap_on_windows>`_."
 msgstr ""
+"pomocí návodu a konfigurace z `NaturalGIS "
+"<https://github.com/NaturalGIS/qgis_server_and_lizmap_on_windows>`_."
