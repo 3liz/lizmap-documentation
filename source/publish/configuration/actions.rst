@@ -21,7 +21,7 @@ for one or many QGIS PostgreSQL vector layers.
    :align: center
 
 Demonstration
-------------
+-------------
 
 You can check the demo about fire hydrants on https://demo.lizmap.com
 
@@ -41,7 +41,7 @@ Configuring the tool
 --------------------
 
 * Each action is **characterized** by a ``layer id``, a ``name``, a ``title``, an ``icon``, some optional ``options``,
-``style``, ``callbacks`` and ``confirm`` property can be used.
+  ``style``, ``callbacks`` and ``confirm`` property can be used.
 * A layer can have **one or several actions**
 * You can have **one or several layers** with their own actions
 
