@@ -1,7 +1,7 @@
 stages:
-  - build_pot
   - build_html
   - deploy
+  - deploy_prod
 
 # CI_COMMIT_REF_NAME could be a tag name, and in this case VERSION and TX_BRANCH
 # cannot be set correctly, so we don't build and deploy on tags
@@ -11,55 +11,10 @@ before_script:
   - export TX_BRANCH="$CI_COMMIT_REF_NAME"
   - echo "VERSION=$VERSION TX_BRANCH=$TX_BRANCH"
 
-build_pot:
-  only:
-    - schedules
-    - master
-    - lizmap_3_4
-  stage: build_pot
-  script:
-    - make gettext
-  tags:
-    - infrav2
-
-build_and_publish_pot:
-  except:
-    - schedules
-    - tags
-  only:
-    - master
-    - lizmap_3_4
-  stage: build_pot
-  script:
-    - make gettext
-    - tx push -s --no-interactive --branch $TX_BRANCH
-  tags:
-    - infrav2
-
-retrieve_po_and_build:
-  only:
-    - schedules
-  stage: build_html
-  script:
-    # -f because of
-    # https://github.com/transifex/transifex-client/issues/233
-    # and https://github.com/transifex/transifex-client/issues/22
-    - tx pull -f -l es,fi,fr,it,pt,ru --branch $TX_BRANCH
-    - make clean html
-  artifacts:
-    paths:
-      - build/html/
-    name: "lizmapdoc-$CI_COMMIT_REF_NAME"
-  tags:
-    - infrav2
-
 build_html:
-  except:
-    - schedules
-    - tags
   stage: build_html
   script:
-    - make clean html
+    - make clean html SPHINXBUILD=sphinx-build SPHINXINTL=sphinx-intl
   artifacts:
     paths:
       - build/html/
@@ -69,10 +24,7 @@ build_html:
 
 deploy_snap:
   stage: deploy
-  except:
-    - tags
   dependencies:
-    - retrieve_po_and_build
     - build_html
   script:
     - rsync -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/$VERSION
@@ -82,11 +34,9 @@ deploy_snap:
     - infrav2
 
 deploy_production:
-  only:
-    - schedules
-  stage: deploy
+  stage: deploy_prod
   dependencies:
-    - retrieve_po_and_build
+    - build_html
   script:
     - rsync -e "$DEPLOYDOC_PROD_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_PROD_HOST:$DEPLOYDOC_PROD_PATH/$VERSION
   environment:

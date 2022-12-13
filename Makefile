@@ -3,7 +3,8 @@
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
+SPHINXBUILD?= .venv/bin/sphinx-build
+SPHINXINTL?= .venv/bin/sphinx-intl
 PAPER         =
 BUILDDIR      = build
 TRANSLATIONS  = fr it es pt fi
@@ -45,7 +46,7 @@ clean:
 	-rm i18n/*/LC_MESSAGES/*.mo
 
 html:
-	sphinx-intl build -d i18n
+	$(SPHINXINTL) build -d i18n
 	@for lang in $(LANGUAGES);\
 	do \
 		mkdir -p $(BUILDDIR)/html/$$lang $(BUILDDIR)/doctrees/$$lang; \
@@ -122,7 +123,7 @@ latexpdf:
 
 
 latexpdfmulti:
-	sphinx-intl build -d i18n
+	$(SPHINXINTL) build -d i18n
 	@for lang in $(LANGUAGES);\
 	do \
 		mkdir -p $(BUILDDIR)/latex/$$lang $(BUILDDIR)/doctrees/$$lang; \
