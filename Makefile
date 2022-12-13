@@ -3,7 +3,8 @@
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
+SPHINXBUILD?= .venv/bin/sphinx-build
+SPHINXINTL?= .venv/bin/sphinx-intl
 PAPER         =
 BUILDDIR      = build
 TRANSLATIONS  = fr it es pt fi
@@ -45,7 +46,7 @@ clean:
 	-rm i18n/*/LC_MESSAGES/*.mo
 
 html:
-	sphinx-intl build -d i18n
+	$(SPHINXINTL) build -d i18n
 	@for lang in $(LANGUAGES);\
 	do \
 		mkdir -p $(BUILDDIR)/html/$$lang $(BUILDDIR)/doctrees/$$lang; \
@@ -119,6 +120,18 @@ latexpdf:
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
+
+latexpdfmulti:
+	$(SPHINXINTL) build -d i18n
+	@for lang in $(LANGUAGES);\
+	do \
+		mkdir -p $(BUILDDIR)/latex/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		echo "$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) -D language=$$lang $(BUILDDIR)/latex/$$lang";\
+		$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) -D language=$$lang $(BUILDDIR)/latex/$$lang;\
+		@echo "Running LaTeX files through pdflatex...";\
+		$(MAKE) -C $(BUILDDIR)/latex/$$lang all-pdf;\
+		@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex/$$lang.";\
+	done
 
 text:
 	$(SPHINXBUILD) -b text $(ALLSPHINXOPTS) $(BUILDDIR)/text

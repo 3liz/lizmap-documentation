@@ -7,15 +7,21 @@ Installing Transifex cli and Sphinx
 We are using Transifex, and so you will need their cli tool to push or pull
 translations.
 
-It is recommended to install Virtualenv and to install Sphinx and 
-Transifex into a dedicated Python environnement. For exemple:
+It is recommended to install Sphinx into a dedicated Python environment. For example:
 
 ```
-virtualenv env/
-env/bin/pip install sphinx
-env/bin/pip install sphinx-intl
-env/bin/pip install transifex-client
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
 ``` 
+
+To install Transifex, see https://developers.transifex.com/docs/cli.
+For linux, the fastest way:
+
+```
+cd /tmp; \
+curl -L "https://github.com/transifex/cli/releases/latest/download/tx-linux-amd64.tar.gz" | tar xz --skip-old-files; \
+sudo mv tx /usr/local/bin/tx
+```
 
 You should create a `~/.transifexrc` file containing:
 
@@ -23,11 +29,13 @@ You should create a `~/.transifexrc` file containing:
 [https://www.transifex.com]
 api_hostname = https://api.transifex.com
 hostname = https://www.transifex.com
+rest_hostname = https://rest.api.transifex.com
 username = api
 password = 
+token
 ```
 
-In the password parameter, you should set an API Key [you have to generate from your
+In the password parameter and in the token parameter, you should set an API Key [you have to generate from your
 Transifex account](https://www.transifex.com/user/settings/api/).
 
 Updating the list of strings to translate
@@ -39,16 +47,13 @@ You must first generate the `.pot` files, from the `.rst` files:
 make gettext
 ```
 
-Then you push them to Transifex, by indicating the branch (indicate the good branch name !!)
+Then you push them to Transifex
 
 ```
 tx push -s --branch master
 #or 
 tx push -s --branch lizmap_3_1
 ```
-
-Note: our continuous integration system Gitlab-CI generates and pushes pot files to
-Transifex at each commit.
 
 Updating translated strings
 ---------------------------
@@ -66,9 +71,6 @@ tx pull -l es,fi,fr,it,pt,ru --branch lizmap_3_1
 
 You can then commit them.
 
-Note: our continuous integration system regularly retrieves translated strings
-to publish the web site. It doesn't rely on `.po` files stored into the repository.
-
 Adding a new language
 ----------------------
 
@@ -76,8 +78,8 @@ The language should be created into Transifex. When there are enough translated
 strings, you can download translated files with `tx pull`. See above.
 Update the list of available language into the Makefile file (in the TRANSLATIONS variable).
 
-Releasing a new version 
-------------------------
+Releasing a new version of Lizmap 
+---------------------------------
 
 When a new major version of lizmap has been released, be sure the documentation
 is updated into the master branch.
