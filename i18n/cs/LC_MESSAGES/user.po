@@ -4,8 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# yamamoto ryuzo <ryu@yamakun.net>, 2022
-# Jin Igarashi <wushilan0623@gmail.com>, 2022
+# trendspotter <jirka.p@volny.cz>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -14,17 +13,17 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-30 10:38+0200\n"
 "PO-Revision-Date: 2022-08-02 09:23+0000\n"
-"Last-Translator: Jin Igarashi <wushilan0623@gmail.com>, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/3liz-1/teams/62012/ja/)\n"
+"Last-Translator: trendspotter <jirka.p@volny.cz>, 2022\n"
+"Language-Team: Czech (https://www.transifex.com/3liz-1/teams/62012/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: ../../source/user/attribute_table.rst:2
 msgid "Attribute layers"
-msgstr "属性レイヤー"
+msgstr "Atributy vrstev"
 
 #: ../../source/user/attribute_table.rst:4
 msgid ""
@@ -34,8 +33,10 @@ msgid ""
 "icon will also be displayed for a layer for which the attribute table has "
 "been activated."
 msgstr ""
-"地図の発行者がこの機能を1つまたは複数のベクターレイヤーに対して有効にした場合、メニューバーの下部に新しいメニュー項目が表示され、 **データ** "
-"と表示されます。また、属性テーブルが有効になっているレイヤーには、星印のついた **選択** という名前のエントリが表示されます。"
+"Pokud tuto funkci povolí vydavatel mapy pro jednu nebo více vektorových "
+"vrstev, objeví se v dolní části panelu nabídek nová položka nabídky označená"
+" jako **Data**. Pro vrstvu, pro kterou byla aktivována atributová tabulka, "
+"se zobrazí také další položka označená **Výběr** s ikonou hvězdičky."
 
 #: ../../source/user/attribute_table.rst:7
 msgid ""
@@ -43,12 +44,13 @@ msgid ""
 "interface, containing one single **Data** tab with a list of published "
 "vector layers."
 msgstr ""
-"このアイコンをクリックすると、インターフェースの下部に新しいパネルが表示され、公開されているベクターレイヤーのリストを含む **データ** "
-"タブが表示されます。"
+"Kliknutím na tuto ikonu se otevře nový panel umístěný ve spodní části "
+"rozhraní, který obsahuje jedinou kartu **Data** se seznamem zveřejněných "
+"vektorových vrstev."
 
 #: ../../source/user/attribute_table.rst:14
 msgid "Attribute table panel behaviour"
-msgstr "属性テーブルパネルの動作"
+msgstr "Chování panelu atributové tabulky"
 
 #: ../../source/user/attribute_table.rst:16
 msgid ""
@@ -56,24 +58,30 @@ msgid ""
 "been proposed to ease the consultation of the data in the map and in the "
 "table at the same time."
 msgstr ""
-"このパネルはマップの上に配置されているので、マップとテーブルのデータを同時に参照できるように、いくつかのデフォルトの動作が設定されています。"
+"Vzhledem k tomu, že se tento panel nachází nad mapou, bylo navrženo několik "
+"výchozích chování, která usnadňují prohlížení údajů v mapě a zároveň v "
+"tabulce."
 
 #: ../../source/user/attribute_table.rst:18
 msgid "The attribute table panel takes half the size of the screen"
-msgstr "属性テーブルパネルはスクリーンサイズの半分になります"
+msgstr "Panel atributové tabulky zabírá polovinu obrazovky."
 
 #: ../../source/user/attribute_table.rst:19
 msgid ""
 "It is automatically reduced at the bottom when the mouse is out of it, and "
 "automatically displayed back when the user moves the mouse over the bottom "
 "of the map."
-msgstr "マウスが外れると自動的に下部に縮小され、ユーザーが地図の下部にマウスを移動させると自動的に元通りに表示されます。"
+msgstr ""
+"Ta se automaticky zmenší v dolní části, když je myš mimo ni, a automaticky "
+"se zobrazí zpět, když uživatel najede myší na spodní část mapy."
 
 #: ../../source/user/attribute_table.rst:21
 msgid ""
 "You can change the default behaviour by using the buttons displayed at the "
 "bottom of the attribute table panel"
-msgstr "属性テーブルパネルの下部に表示されているボタンを使って、デフォルトの動作を変更することができます。"
+msgstr ""
+"Výchozí chování můžete změnit pomocí tlačítek zobrazených v dolní části "
+"panelu atributové tabulky."
 
 #: ../../source/user/attribute_table.rst:23
 msgid ""
@@ -81,8 +89,9 @@ msgid ""
 " user mouse leaves it. But in this case, the whole panel will be displayed "
 "half transparent to allow the user to see the map underneath."
 msgstr ""
-"**ピン** "
-"ボタンは、ユーザーのマウスがパネルから離れたときにパネルを自動的に縮小する機能を無効にします。ただし、この場合、パネル全体が半透明で表示され、下にある地図が見えるようになります。"
+"Tlačítko **Pin** deaktivuje automatické zmenšení panelu, když jej "
+"uživatelská myš opustí. V tomto případě se však celý panel zobrazí napůl "
+"průhledný, aby uživatel viděl mapu pod ním."
 
 #: ../../source/user/attribute_table.rst:24
 msgid ""
@@ -94,26 +103,32 @@ msgid ""
 "legend. But in this case, only the opacity of the attribute table panel will"
 " change so that you can see the map underneath."
 msgstr ""
-"**最大化** "
-"ボタンは、左パネルと地図のヘッダーの間で余っている場所をすべて埋めるようにパネルを拡大します。これはレイヤーデータを見やすくするために便利な機能です。この設定では、属性テーブルパネルも"
-" **ピン留め** "
-"され、例えば、凡例のある左パネルをホバリングしたときなど、マウスがパネルから離れても縮小されません。しかし、この場合、属性テーブルパネルの透明度だけが変わり、下にある地図が見えるようになります。"
+"Tlačítko **Maximalizovat** rozšíří panel tak, aby zabíral celé místo, které "
+"zbývá mezi levým panelem a záhlavím mapy. To se hodí, když potřebujete mít "
+"pohodlný pohled na data vrstvy. V této konfiguraci je panel atributové "
+"tabulky také **připnut** a nezmenší se, když myš opustí panel, například při"
+" najetí na levý panel s legendou. V tomto případě se však změní pouze "
+"neprůhlednost panelu atributové tabulky, aby byla vidět mapa pod ním."
 
 #: ../../source/user/attribute_table.rst:26
 msgid ""
 "You can click back on any of these 2 **Pin** and **Maximise** button to get "
 "back to the default behaviour."
-msgstr "これらの2つの **ピン** と **最大化** ボタンのいずれかをクリックすると、デフォルトの動作に戻ります。"
+msgstr ""
+"Kliknutím na kterékoli z těchto 2 tlačítek **Pin** a **Maximise** se vrátíte"
+" k výchozímu chování."
 
 #: ../../source/user/attribute_table.rst:28
 msgid ""
 "The **Close** button closes the attribute table tool completely (as if you "
 "clicked in the menu bar icon)."
-msgstr "**閉じる** ボタンは、（メニューバーのアイコンをクリックしたときのように）属性テーブルツールを完全に閉じます。"
+msgstr ""
+"Tlačítko **Zavřít** nástroj atributové tabulky zcela zavře (jako byste "
+"klikli na ikonu na panelu nabídek)."
 
 #: ../../source/user/attribute_table.rst:35
 msgid "Open an attribute table for a layer"
-msgstr "レイヤーの属性テーブルを開く"
+msgstr "Otevření atributové tabulky pro vrstvu"
 
 #: ../../source/user/attribute_table.rst:37
 msgid ""
@@ -122,17 +137,22 @@ msgid ""
 "layer name. This will open a new tab labelled with the layer title which "
 "will show the attribute table for the chose layer."
 msgstr ""
-"属性テーブルパネルが表示されたら、レイヤー名の右にあるボタンをクリックして、各ベクターレイヤーの属性テーブルを開くことができます。そうすると、レイヤーのタイトルが表示された新しいタブが開き、選択したレイヤーの属性テーブルが表示されます。"
+"Po zobrazení panelu atributové tabulky můžete otevřít atributovou tabulku "
+"každé vektorové vrstvy kliknutím na tlačítko umístěné vpravo vedle názvu "
+"vrstvy. Tím se otevře nová karta označená názvem vrstvy, na které se zobrazí"
+" atributová tabulka vybrané vrstvy."
 
 #: ../../source/user/attribute_table.rst:39
 msgid ""
 "*Opening an attribute table can take some time depending on the data size "
 "and complexity.*"
-msgstr "*属性テーブルを開くには、データのサイズや複雑さによってある程度の時間がかかることがあります。*"
+msgstr ""
+"*Otevření atributové tabulky může trvat určitou dobu v závislosti na "
+"velikosti a složitosti dat.*"
 
 #: ../../source/user/attribute_table.rst:47
 msgid "Description of the attribute table functionality"
-msgstr "属性テーブル機能の説明"
+msgstr "Popis funkcí atributové tabulky"
 
 #: ../../source/user/attribute_table.rst:49
 msgid ""
@@ -140,8 +160,9 @@ msgid ""
 "shows 100 lines at a time. You can change this behaviour by using the list "
 "situated in the bottom left side of the tab content."
 msgstr ""
-"レイヤーデータは、**ページングテーブル** "
-"で表示されます。デフォルトでは、テーブルは一度に100行表示されます。この動作は、タブコンテンツの左下にあるリストを使って変更することができます。"
+"Data vrstvy jsou zobrazena v **paginované tabulce**. Ve výchozím nastavení "
+"se v tabulce zobrazuje 100 řádků najednou. Toto chování můžete změnit pomocí"
+" seznamu umístěného v levé dolní části obsahu karty."
 
 #: ../../source/user/attribute_table.rst:51
 msgid ""
@@ -149,18 +170,20 @@ msgid ""
 "corresponding to . If you click again on the column, the order will be "
 "reversed."
 msgstr ""
-"データの表は、フィールドに対応する列をクリックすることで、フィールドごとに **並び替える** ことができます。 "
-"もう一度列をクリックすると、順序が逆になります。"
+"Tabulku dat lze **uspořádat podle pole** kliknutím na sloupec odpovídající ."
+" Pokud na sloupec kliknete znovu, pořadí se změní."
 
 #: ../../source/user/attribute_table.rst:59
 msgid "Actions on lines"
-msgstr "ライン上での動作"
+msgstr "Akce na linkách"
 
 #: ../../source/user/attribute_table.rst:61
 msgid ""
 "When you **click on a table line**, the line will be displayed with a border"
 " to help viewing which line is **highlighted**."
-msgstr "**テーブルの行をクリック** すると、その行が枠線付きで表示され、どの行が **強調されているか** がわかりやすくなります。"
+msgstr ""
+"Když **kliknete na řádek tabulky**, zobrazí se řádek s rámečkem, který vám "
+"pomůže zobrazit, který řádek je **zvýrazněn**."
 
 #: ../../source/user/attribute_table.rst:63
 msgid ""
@@ -170,14 +193,19 @@ msgid ""
 " This will open a panel right to the table, which will display the detailed "
 "information on the highlighted table line. Furthermore:"
 msgstr ""
-"公開者がレイヤーの **ポップアップ** を有効にしている場合、(i)ボタン（マウスを乗せると *地物情報表示* "
-"と表示される）をクリックすると、ハイライトされた地物のポップアップの内容を見ることができます。これにより、テーブルの右側にパネルが開き、ハイライトされたテーブルの行の詳細情報が表示されます。さらに、"
+"Pokud vydavatel povolil pro vrstvu **vyskakovací okno**, budete moci "
+"zobrazit obsah vyskakovacího okna pro zvýrazněnou funkci kliknutím na "
+"tlačítko (i) (označené *Zobrazit informace*, když na něj najedete myší). Tím"
+" se otevře panel napravo od tabulky, který zobrazí podrobné informace o "
+"zvýrazněném řádku tabulky. Dále:"
 
 #: ../../source/user/attribute_table.rst:65
 msgid ""
 "Clicking on another line will refresh the right panel content with the new "
 "highlighted feature."
-msgstr "別の行をクリックすると、右パネルの内容がハイライトされた新しい地物で更新されます。"
+msgstr ""
+"Kliknutím na další řádek se obnoví obsah pravého panelu s novým zvýrazněným "
+"prvkem."
 
 #: ../../source/user/attribute_table.rst:66
 msgid ""
@@ -185,11 +213,14 @@ msgid ""
 "side of the information panel will hide the panel. To have the (i) button, "
 "you need to have activated the popup for the current layer."
 msgstr ""
-"(i)ボタンをクリックし直すか、情報パネルの右上にある十字をクリックすると、パネルが非表示になります。(i)ボタンを表示するには、現在のレイヤーのポップアップを有効にしておく必要があります。"
+"Kliknutím zpět na tlačítko (i) nebo na křížek v pravém horním rohu "
+"informačního panelu se panel skryje. Abyste měli k dispozici tlačítko (i), "
+"musíte mít aktivované vyskakovací okno pro aktuální vrstvu."
 
 #: ../../source/user/attribute_table.rst:69
 msgid "Each line of the table shows some buttons at the left side:"
-msgstr "テーブルの各行には、左側にいくつかのボタンが表示されています。"
+msgstr ""
+"Na každém řádku tabulky jsou na levé straně zobrazena některá tlačítka:"
 
 #: ../../source/user/attribute_table.rst:71
 msgid ""
@@ -199,9 +230,10 @@ msgid ""
 "Yellow color. You can click again on the \"Select\" to unselect a selected "
 "feature."
 msgstr ""
-"**選択** "
-"ボタン：クリックすると、対応する地物が選択されます。このボタンを別のラインで使うことで、多くのラインを選択することができます。選択された地物は、地図上に異なるスタイルで表示されます。通常は黄色で表示されます。選択された地物を解除するには、\"選択\""
-" ボタンを再度クリックします。"
+"Tlačítko **Vybrat** : po kliknutí se vybere příslušná funkce. Pomocí tohoto "
+"tlačítka můžete vybrat mnoho řádků na různých řádcích. Vybrané prvky se na "
+"mapě zobrazí jiným stylem, obvykle žlutou barvou. Opětovným kliknutím na "
+"tlačítko \"Vybrat\" můžete výběr vybraného prvku zrušit."
 
 #: ../../source/user/attribute_table.rst:72
 msgid ""
@@ -209,18 +241,21 @@ msgid ""
 "geometry in the map. The scale will be chosen so that the feature geometry "
 "uses most of the available space."
 msgstr ""
-"**拡大** "
-"ボタン：このボタンをクリックすると、地図上の対応するジオメトリにズームします。縮尺は、地物のジオメトリが最大限に表示されるように拡大されます。"
+"Tlačítko **Zoom** : kliknutím na toto tlačítko se přiblížíte na příslušnou "
+"geometrii v mapě. Měřítko bude zvoleno tak, aby geometrie prvku využívala "
+"většinu dostupného prostoru."
 
 #: ../../source/user/attribute_table.rst:73
 msgid ""
 "**Center** button : clicking on this button will just pan the map to the "
 "corresponding feature, without changing scale."
-msgstr "**中心** ボタン：このボタンをクリックすると、縮尺を変えずにマップを対応する地物の場所に移動します。"
+msgstr ""
+"Tlačítko **Center** : kliknutím na toto tlačítko se mapa pouze posune na "
+"příslušný prvek, aniž by se změnilo měřítko."
 
 #: ../../source/user/attribute_table.rst:80
 msgid "More about selection tools"
-msgstr "選択ツールについて"
+msgstr "Další informace o výběrových nástrojích"
 
 #: ../../source/user/attribute_table.rst:82
 msgid ""
@@ -231,8 +266,12 @@ msgid ""
 "can use it to select only this object. Previous selection will be replaced "
 "by only this object."
 msgstr ""
-"また、そのオブジェクトの **ポップアップを表示** "
-"させて、レイヤーオブジェクトを選択することができます（公開者がレイヤーのポップアップ機能を有効にしている場合、マップ上でクリックすると、クリックした地物の詳細情報を含むポップアップウィンドウが表示されます）。ポップアップの中に、選択ボタンがあれば、それを使ってこのオブジェクトだけを選択することができます。それまでに選択していた場合、このオブジェクトだけに選択が置き換えられます。"
+"Objekt vrstvy můžete vybrat také **zobrazením vyskakovacího okna** pro tento"
+" objekt (pokud vydavatel mapy vyskakovací okno pro vrstvu povolil, zobrazí "
+"se po kliknutí na mapu vyskakovací okno s podrobnými informacemi o kliknutém"
+" prvku). Uvnitř vyskakovacího okna, pokud vidíte tlačítko výběru, můžete "
+"pomocí něj vybrat pouze tento objekt. Předchozí výběr bude nahrazen pouze "
+"tímto objektem."
 
 #: ../../source/user/attribute_table.rst:88
 msgid ""
@@ -240,18 +279,21 @@ msgid ""
 "become yellow), you can use the black \"arrow up\" button situated above the"
 " table to **move the selected lines at the top of the table**."
 msgstr ""
-"属性テーブルで1つ以上の行が選択される（黄色になる）と、テーブルの上にある黒い上矢印ボタンを使って、**選択された行をテーブルの一番上に移動させる** "
-"ことができます。"
+"Pokud je v atributové tabulce vybrán jeden nebo více řádků (jsou žluté), "
+"můžete pomocí černého tlačítka \"šipka nahoru\" umístěného nad tabulkou "
+"**posunout vybrané řádky na začátek tabulky**."
 
 #: ../../source/user/attribute_table.rst:90
 msgid ""
 "You can **unselect all the selected objects** by clicking on the \"white "
 "star\" button situated above the table."
-msgstr "**選択されたすべてのオブジェクトの選択を解除する** には、テーブルの上にある”白い星\"のボタンをクリックします。"
+msgstr ""
+"Všechny vybrané objekty můžete **odebrat** kliknutím na tlačítko \"bílá "
+"hvězda\" umístěné nad tabulkou."
 
 #: ../../source/user/attribute_table.rst:97
 msgid "Quickly search through data"
-msgstr "データを素早く検索する"
+msgstr "Rychlé vyhledávání v datech"
 
 #: ../../source/user/attribute_table.rst:99
 msgid ""
@@ -261,14 +303,18 @@ msgid ""
 "content manually or by clicking on the cross button situated inside the "
 "field."
 msgstr ""
-"タブコンテンツの左上にある **検索フィールド** にいくつかの文字を入力することで、テーブルに **表示される行を絞り込む** "
-"ことができます。すべての地物を再表示したい場合は、手動で検索フィールドの内容を消去するか、フィールド内の十字ボタンをクリックします。"
+"Zobrazené řádky** v tabulce můžete **filtrovat** zadáním několika písmen do "
+"pole **Vyhledávání** umístěného v levé horní části obsahu karty. Pokud "
+"chcete znovu zobrazit všechny funkce, stačí obsah vyhledávacího pole vymazat"
+" ručně nebo kliknutím na tlačítko s křížkem umístěné uvnitř pole."
 
 #: ../../source/user/attribute_table.rst:101
 msgid ""
 "The text entered in the search field launches a search among the data for "
 "**all the fields of the table.**"
-msgstr "検索フィールドに入力されたテキストは、 **テーブルのすべてのフィールド** のデータの中から検索を開始します。"
+msgstr ""
+"Text zadaný do vyhledávacího pole spustí vyhledávání mezi daty pro **všechna"
+" pole tabulky**."
 
 #: ../../source/user/attribute_table.rst:103
 msgid ""
@@ -276,8 +322,9 @@ msgid ""
 "matching your textual search. **The objects on the map will not be filtered "
 "dynamically** (but you could use select and filter to do so, see below)"
 msgstr ""
-"なお、テーブルの内容は、テキスト検索にマッチした行にのみ制限されます。 **マップ上のオブジェクトは動的にはフィルタリングされません** "
-"（ただし、下のように選択とフィルタ機能を使ってフィルタリングすることは可能です）。"
+"Všimněte si, že obsah tabulky bude omezen pouze na řádky odpovídající "
+"textovému vyhledávání. **Objekty na mapě nebudou dynamicky filtrovány** (ale"
+" můžete k tomu použít select a filter, viz níže)."
 
 #: ../../source/user/attribute_table.rst:105
 msgid ""
@@ -288,12 +335,16 @@ msgid ""
 "also change their color in the map (usually in yellow too, depending on the "
 "configuration done by the map publisher)"
 msgstr ""
-"属性テーブルにテキストを入力してデータをフィルタリングした後、「検索されたラインを選択」というラベルの付いた「黒い星」のボタンをクリックすることで、 "
-"**簡単にすべてのデータを選択できます**。これにより、属性テーブル内の対応するオブジェクトがすべて選択され（黄色で表示）、マップ上の色も変更されます（地図の公開者の設定によりますが、通常は黄色で表示されます）。"
+"Po vyfiltrování některých údajů v atributové tabulce zadáním textu je můžete"
+" snadno vybrat všechny** kliknutím na tlačítko s černou hvězdičkou označené "
+"\"Vybrat vyhledané řádky\". Tím se vyberou všechny odpovídající objekty v "
+"atributové tabulce (zobrazí se žlutě) a také se změní jejich barva v mapě "
+"(obvykle také žlutě, v závislosti na konfiguraci provedené vydavatelem "
+"mapy)."
 
 #: ../../source/user/attribute_table.rst:112
 msgid "Filter data"
-msgstr "データのフィルタ"
+msgstr "Filtrování dat"
 
 #: ../../source/user/attribute_table.rst:114
 msgid ""
@@ -302,25 +353,29 @@ msgid ""
 "just click on the \"Funnel\" button labelled \"Filter\" situated above the "
 "table (only available if some the selection contains at least one object)."
 msgstr ""
-"レイヤーの属性テーブルで1つまたは複数のオブジェクトを選択すると、そのレイヤーの **Lizmapに表示されるデータをフィルタリングする** "
-"ことができます。これを行うには、テーブルの上にある「フィルタ」というラベルの付いた「煙突」状のボタンをクリックするだけです（選択範囲に少なくとも1つのオブジェクトが含まれている場合のみ利用可能）。"
+"Po výběru jednoho nebo více objektů v tabulce atributů vrstvy můžete "
+"**filtrovat data zobrazená v Lizmapě** pro tuto vrstvu. Za tímto účelem "
+"stačí kliknout na tlačítko \"Trychtýř\" označené \"Filtr\", které se nachází"
+" nad tabulkou (je k dispozici pouze v případě, že některý výběr obsahuje "
+"alespoň jeden objekt)."
 
 #: ../../source/user/attribute_table.rst:116
 msgid "Filtering will have the following consequences:"
-msgstr "フィルタリングを行うと、以下のような影響があります。"
+msgstr "Filtrování bude mít následující důsledky:"
 
 #: ../../source/user/attribute_table.rst:118
 msgid "The attribute table will **show only the filtered data**"
-msgstr "属性テーブルでは、 **フィルタリングされたデータのみが表示** されます。"
+msgstr "V atributové tabulce se **zobrazí pouze filtrovaná data**."
 
 #: ../../source/user/attribute_table.rst:119
 msgid ""
 "The Search input field will allow to **search only among filtered data**"
-msgstr "検索フィールドでは、 **フィルタリングされたデータのみを検索する** ことができます。"
+msgstr ""
+"Vstupní pole Hledat umožní **vyhledávat pouze mezi filtrovanými daty**."
 
 #: ../../source/user/attribute_table.rst:120
 msgid "The map will show **only the filtered objects**"
-msgstr "マップには、 **フィルタリングされたオブジェクトだけが表示** されます。"
+msgstr "Mapa zobrazí **pouze filtrované objekty**."
 
 #: ../../source/user/attribute_table.rst:121
 msgid ""
@@ -329,30 +384,40 @@ msgid ""
 "example, the bus stops could be filtered automatically if you have filtered "
 "one bus line, to show only the ones served by the filtered line."
 msgstr ""
-"リレーションでリンクされている子レイヤー（属性テーブルツールで公開されている）もフィルタリングされます。これを「カスケードフィルタリング」と呼んでいます。例えば、あるバス路線をフィルタリングした場合、バス停も自動的にフィルタリングされ、フィルタリングされた路線で運行されているものだけが表示されるようになります。"
+"Podřízené vrstvy propojené se vztahy (a rovněž zveřejněné v nástroji "
+"atributové tabulky) budou rovněž filtrovány. Říkáme tomu \"kaskádové "
+"filtrování\". Například autobusové zastávky by se mohly automaticky "
+"filtrovat, pokud jste vyfiltrovali jednu autobusovou linku, aby se zobrazily"
+" pouze ty, které jsou obsluhovány filtrovanou linkou."
 
 #: ../../source/user/attribute_table.rst:122
 msgid ""
 "The filtered layers will be marked in the left panel legend with an orange "
 "background, and a new orange \"Funnel\" button will be displayed above the "
 "legend."
-msgstr "フィルタリングされたレイヤーは、左パネルの凡例にオレンジ色の背景で表示され、凡例の上にはオレンジ色の「煙突」状のボタンが表示されます。"
+msgstr ""
+"Filtrované vrstvy budou v legendě levého panelu označeny oranžovým pozadím a"
+" nad legendou se zobrazí nové oranžové tlačítko \"Trychtýř\"."
 
 #: ../../source/user/attribute_table.rst:124
 msgid "You can cancel the filter to go back to previous state:"
-msgstr "フィルターをキャンセルすると元の状態に戻ります。"
+msgstr "Filtr můžete zrušit a vrátit se do předchozího stavu:"
 
 #: ../../source/user/attribute_table.rst:126
 msgid ""
 "by clicking on the orange \"Funnel\" button at the top of the legend in "
 "Lizmap left panel"
-msgstr "Lizmap左パネルの凡例の上部にあるオレンジ色の 「煙突」状のボタンをクリックします"
+msgstr ""
+"kliknutím na oranžové tlačítko \"Trychtýř\" v horní části legendy v levém "
+"panelu Lizmap."
 
 #: ../../source/user/attribute_table.rst:127
 msgid ""
 "by clicking back on the filter button just above the attribute table "
 "concerned by the filter"
-msgstr "フィルターをかけた属性テーブルのすぐ上にあるフィルターボタンをクリックして戻ります"
+msgstr ""
+"kliknutím zpět na tlačítko filtru přímo nad tabulkou atributů, kterých se "
+"filtr týká."
 
 #: ../../source/user/attribute_table.rst:133
 msgid ""
@@ -363,12 +428,16 @@ msgid ""
 "parameters from the permalink URL. **This is not a safe way to protect some "
 "data, but a way to focus on some data only**."
 msgstr ""
-"パーマリンクツール（メニューバーにあります）でマップビューをエクスポートすると、リンクされたマップで **フィルタが有効** "
-"になり、ユーザーが簡単にデータのフィルタリング解除することができません：フィルタリング解除ボタンはLizmapインターフェイスに表示されません。**これは一部のデータを保護するための安全な方法ではなく、一部のデータのみにフォーカスするための方法です**。"
+"Při exportu zobrazení mapy pomocí nástroje permalink (umístěného v panelu "
+"nabídek) bude **filtrování aktivováno** v propojené mapě a uživatelé nebudou"
+" moci data snadno odfiltrovat : v rozhraní Lizmap se nezobrazí tlačítko pro "
+"odfiltrování Jediným způsobem by bylo odstranění parametrů filtru z adresy "
+"URL permalink. **To není bezpečný způsob ochrany některých dat, ale způsob, "
+"jak se zaměřit pouze na některá data**."
 
 #: ../../source/user/authentication.rst:2
 msgid "Authentication"
-msgstr "認証"
+msgstr "Autentizace"
 
 #: ../../source/user/authentication.rst:4
 msgid ""
@@ -376,50 +445,57 @@ msgid ""
 "you must authenticate. Authentication is accessible through the button "
 "*Connect* at the top left."
 msgstr ""
-"管理者は、特定のマップグループへのアクセスを制限することができます。これらのマップにアクセスするには、認証を行う必要があります。認証は、左上のボタン "
-"*接続* から行えます。"
+"Správce může omezit přístup k určitým skupinám map. Pro přístup k těmto "
+"mapám se musíte ověřit. Ověření je dostupné prostřednictvím tlačítka "
+"*Připojit* v levém horním rohu."
 
 #: ../../source/user/authentication.rst:10
 msgid ""
 "Once authentication is enabled, depending on your rights, you should have "
 "access to new maps."
-msgstr "認証が有効になると、権限に応じて、新しいマップにアクセスできるようになります。"
+msgstr ""
+"Po povolení ověřování byste měli mít v závislosti na svých právech přístup k"
+" novým mapám."
 
 #: ../../source/user/authentication.rst:16
 msgid "You can log out and edit your user information."
-msgstr "ログアウトやユーザー情報の編集ができます。"
+msgstr "Můžete se odhlásit a upravit své uživatelské údaje."
 
 #: ../../source/user/edition.rst:2
 msgid "Editing spatial data"
-msgstr "空間データの編集"
+msgstr "Úprava prostorových dat"
 
 #: ../../source/user/edition.rst:4
 msgid ""
 "The map publisher can allow users to edit certain data. It also has the "
 "ability to limit possible changes:"
-msgstr "地図の公開者は、ユーザーが特定のデータを編集できるようにすることができます。また、利用可能な変更内容を制限する機能もあります。"
+msgstr ""
+"Vydavatel mapy může uživatelům umožnit úpravu některých údajů. Má také "
+"možnost omezit možné změny:"
 
 #: ../../source/user/edition.rst:6
 msgid "adding spatial object"
-msgstr "空間オブジェクトの追加"
+msgstr "přidání prostorového objektu"
 
 #: ../../source/user/edition.rst:7
 msgid "geometric modification"
-msgstr "位置情報の修正"
+msgstr "geometrická úprava"
 
 #: ../../source/user/edition.rst:8
 msgid "fields modification"
-msgstr "フィールドの修正"
+msgstr "úprava polí"
 
 #: ../../source/user/edition.rst:9
 msgid "deleting spatial object"
-msgstr "空間オブジェクトの削除"
+msgstr "mazání prostorového objektu"
 
 #: ../../source/user/edition.rst:11
 msgid ""
 "The feature is available in the Lizmap menu bar. The edit menu allows you to"
 " select the data you want to update."
-msgstr "この機能は、Lizmapのメニューバーで利用できます。編集メニューでは、更新したいデータを選択することができます。"
+msgstr ""
+"Tato funkce je k dispozici na panelu nabídek Lizmap. Nabídka úprav umožňuje "
+"vybrat data, která chcete aktualizovat."
 
 #: ../../source/user/edition.rst:17
 msgid ""
@@ -427,44 +503,53 @@ msgid ""
 "the configuration desired by the map publisher. If any changes are available"
 " you have to choose between *Add* a new object or *Select* one."
 msgstr ""
-"レイヤーが選択されると、編集画面が表示されます。これは、地図の公開者が求める設定に応じて異なります。変更が可能な場合は、新しいオブジェクトを *追加* "
-"するか、 *選択* するかを選ぶ必要があります。"
+"Po výběru vrstvy se zobrazí panel úprav. Ten se liší v závislosti na "
+"konfiguraci požadované vydavatelem mapy. Pokud jsou k dispozici nějaké "
+"změny, musíte si vybrat mezi *Přidat* nový objekt nebo *Vybrat*."
 
 #: ../../source/user/edition.rst:23
 msgid ""
 "If you have selected *Add*, you will be asked to draw a simple form that "
 "depends on the selected data layer:"
-msgstr "*追加* を選択した場合は、選択したデータレイヤーに依存する簡単な形を描くように求められます。"
+msgstr ""
+"Pokud jste vybrali možnost *Přidat*, budete vyzváni k nakreslení "
+"jednoduchého formuláře, který závisí na vybrané datové vrstvě:"
 
 #: ../../source/user/edition.rst:25
 msgid "point"
-msgstr "ポイント"
+msgstr "bod"
 
 #: ../../source/user/edition.rst:26
 msgid "line"
-msgstr "ライン"
+msgstr "linka"
 
 #: ../../source/user/edition.rst:27
 msgid "polygon"
-msgstr "ポリゴン"
+msgstr "polygon"
 
 #: ../../source/user/edition.rst:29
 msgid ""
 "In the case of line and polygon, you need to click several times to draw the"
 " shape you want."
-msgstr "ラインやポリゴンの場合は、何度かクリックして思い通りの形を描く必要があります。"
+msgstr ""
+"V případě čáry a mnohoúhelníku musíte několikrát kliknout, abyste nakreslili"
+" požadovaný tvar."
 
 #: ../../source/user/edition.rst:35
 msgid ""
 "To finish your line or your polygon you must add the last point by double-"
 "clicking the desired location. Once drawing finished, an editing form for "
 "fields will be displayed."
-msgstr "ラインやポリゴンを完成させるには、最後の点をダブルクリックして追加する必要があります。描画が完了すると、属性の編集フォームが表示されます。"
+msgstr ""
+"Chcete-li dokončit čáru nebo mnohoúhelník, musíte přidat poslední bod "
+"poklepáním na požadované místo. Po dokončení kreslení se zobrazí formulář "
+"pro úpravu polí."
 
 #: ../../source/user/edition.rst:41
 msgid ""
 "If you want to restart drawing the geometry, you should click *Cancel*."
-msgstr "ジオメトリの描画をやり直したい場合は、*キャンセル*をクリックします。"
+msgstr ""
+"Pokud chcete znovu začít kreslit geometrii, klikněte na tlačítko *Zrušit*."
 
 #: ../../source/user/edition.rst:43
 msgid ""
@@ -472,167 +557,197 @@ msgid ""
 "information, you can *Save*. The new object will be added. You will be able "
 "to update it by selecting it."
 msgstr ""
-"ジオメトリが正しく、必要な情報も入力されていれば、 *保存* "
-"することができます。新しいオブジェクトが追加されます。選択して更新することができるようになります。"
+"Pokud vám geometrie vyhovuje a zadali jste požadované informace, můžete "
+"*Uložit*. Nový objekt bude přidán. Budete jej moci aktualizovat výběrem."
 
 #: ../../source/user/edition.rst:45
 msgid ""
 "To select an object to update, you will need to click on it on the map then "
 "click on the button *Edit*."
-msgstr "更新するオブジェクトを選択するには、マップ上でオブジェクトをクリックし、 *編集* ボタンをクリックする必要があります。"
+msgstr ""
+"Chcete-li vybrat objekt, který chcete aktualizovat, musíte na něj kliknout "
+"na mapě a poté kliknout na tlačítko *Upravit*."
 
 #: ../../source/user/edition.rst:51
 msgid ""
 "The selected object appears on the map and its geometry may be changed "
 "immediatly."
-msgstr "選択されたオブジェクトはマップ上に表示され、そのジオメトリはすぐに変更することができます。"
+msgstr ""
+"Vybraný objekt se zobrazí na mapě a jeho geometrii lze okamžitě změnit."
 
 #: ../../source/user/edition.rst:52
 msgid ""
 "You can undo geometry changes and stop edition using the *Cancel* button."
-msgstr "ジオメトリの変更を取り消したり、 *キャンセル* ボタンで編集を止めることができます。"
+msgstr ""
+"Změny geometrie můžete zrušit a editaci zastavit pomocí tlačítka *Zrušit*."
 
 #: ../../source/user/edition.rst:53
 msgid "To validate your geometry modifications, you must click *Save*."
-msgstr "ジオメトリの変更を有効にするためには、*保存*をクリックする必要があります。"
+msgstr ""
+"Chcete-li potvrdit platnost úprav geometrie, musíte kliknout na tlačítko "
+"*Uložit*."
 
 #: ../../source/user/edition.rst:59
 msgid ""
 "If you want to remove a point on a geometry, you must hover it and type "
 "*Del* on your keyboard."
-msgstr "ジオメトリ上のポイントを削除したい場合は、そのポイントにカーソルを合わせて、キーボードで *Del* をタイプする必要があります。"
+msgstr ""
+"Pokud chcete odstranit bod geometrie, musíte na něj najet a na klávesnici "
+"napsat *Del*."
 
 #: ../../source/user/edition.rst:61
 msgid ""
 "*Digitizing* button is displayed with line and polygon geometries, by "
 "clicking it, you'll access those tools:"
-msgstr "*デジタイズ* ボタンは、ラインとポリゴンのジオメトリで表示され、それをクリックすると、それらのツールにアクセスできます。"
+msgstr ""
+"Tlačítko *Digitalizace* je zobrazeno u geometrie čar a mnohoúhelníků, "
+"kliknutím na něj získáte přístup k těmto nástrojům:"
 
 #: ../../source/user/edition.rst:63
 msgid ""
 "Node tool (default). Move or delete the geom nodes (vertices) and also "
 "create new ones by dragging virtual nodes in the middle of the segments."
 msgstr ""
-"ノードツール（デフォルト）。ジオメトリのノード（頂点）を移動・削除したり、セグメントの途中にある仮想ノードをドラッグして新しいノードを作成したりします。"
+"Nástroj uzel (výchozí). Přesouvejte nebo odstraňujte geom. uzly (vrcholy) a "
+"také vytvářejte nové přetažením virtuálních uzlů uprostřed segmentů."
 
 #: ../../source/user/edition.rst:64
 msgid ""
 "Drag tool. Translate a geometry by dragging the displayed point at the "
 "center of the geometry."
-msgstr "ドラッグツール。ジオメトリの中心に表示された点をドラッグすることで、ジオメトリを移動させることができます。"
+msgstr ""
+"Nástroj pro přetahování. Přemístěte geometrii přetažením zobrazeného bodu ve"
+" středu geometrie."
 
 #: ../../source/user/edition.rst:65
 msgid ""
 "Rotate tool. Rotate a geometry by dragging the displayed point at bottom "
 "right of the geometry."
-msgstr "回転ツール。ジオメトリの右下に表示されているポイントをドラッグして、ジオメトリを回転させます。"
+msgstr ""
+"Nástroj pro otáčení. Geometrii otočíte přetažením zobrazeného bodu v pravém "
+"dolním rohu geometrie."
 
 #: ../../source/user/edition.rst:66
 msgid "Reshape tool."
-msgstr "リシェイプツール。"
+msgstr "Nástroj Změna tvaru."
 
 #: ../../source/user/edition.rst:67
 msgid "Split tool."
-msgstr "分割ツール。"
+msgstr "Nástroj Rozdělení"
 
 #: ../../source/user/edition.rst:68
 msgid ""
 "Reverse geom (To be used with the node tool). Reverse nodes (vertices) "
 "order. Useful for streets when their circulation orientation is reversed for"
 " example."
-msgstr "ジオメトリのリバース（ノードツールで使用）。ノード（頂点）の順序を逆にします。道路が循環する方向が逆になっている場合などに便利です。"
+msgstr ""
+"Reverzní geometrie (Používá se s nástrojem uzel). Obrátí pořadí uzlů "
+"(vrcholů). Užitečné například pro ulice, když je opačná orientace jejich "
+"směru."
 
 #: ../../source/user/index.rst:3
 msgid "User guide"
-msgstr "ユーザーガイド"
+msgstr "Uživatelská příručka"
 
 #: ../../source/user/index.rst:5
 msgid "This guide is for the end user, when using the web client."
-msgstr "このガイドは、エンドユーザーがウェブクライアントを使用する際の指針となるものです。"
+msgstr ""
+"Tato příručka je určena koncovému uživateli, který používá webového klienta."
 
 #: ../../source/user/locate_by_layer.rst:2
 msgid "Locate by layer"
-msgstr "レイヤで検索"
+msgstr "Vyhledat podle vrstvy"
 
 #: ../../source/user/locate_by_layer.rst:4
 msgid ""
 "This feature is displayed by default if it has been activated by the map "
 "publisher."
-msgstr "この機能は、地図の公開者が有効にしている場合、デフォルトで表示されます。"
+msgstr ""
+"Tato funkce se zobrazuje ve výchozím nastavení, pokud byla aktivována "
+"vydavatelem mapy."
 
 #: ../../source/user/locate_by_layer.rst:6
 msgid ""
 "It is located above the layer management panel and is in the form of lists. "
 "Some lists need to enter a few characters before proposing locations."
-msgstr "レイヤー管理パネルの上にあり、リストの形をしています。リストの中には、場所を検索する前にいくつか文字の入力が必要なものもあります。"
+msgstr ""
+"Nachází se nad panelem správy vrstev a má podobu seznamů. U některých "
+"seznamů je třeba před návrhem umístění zadat několik znaků."
 
 #: ../../source/user/locate_by_layer.rst:13
 msgid "Simply select a location from the list to zoom to the item."
-msgstr "リストから場所を選択するだけで、その項目にズームインします。"
+msgstr "Pro přiblížení položky stačí vybrat místo ze seznamu."
 
 #: ../../source/user/measurement.rst:2
 msgid "Measurement"
-msgstr "計測"
+msgstr "Měření"
 
 #: ../../source/user/measurement.rst:4
 msgid "Measurement feature give you the ability to calculate:"
-msgstr "測定機能を使うと自由に計算できるようになります。"
+msgstr "Funkce měření umožňuje vypočítat:"
 
 #: ../../source/user/measurement.rst:6
 msgid "a distance"
-msgstr "距離"
+msgstr "vzdálenost"
 
 #: ../../source/user/measurement.rst:7
 msgid "an area"
-msgstr "面積"
+msgstr "oblast"
 
 #: ../../source/user/measurement.rst:8
 msgid "a perimeter"
-msgstr "周囲長"
+msgstr "obvod"
 
 #: ../../source/user/measurement.rst:9
 msgid "an angle"
-msgstr "角度"
+msgstr "úhel"
 
 #: ../../source/user/measurement.rst:11
 msgid "It is available in the Lizmap menu bar."
-msgstr "Lizmapのメニューバーから利用できます。"
+msgstr "Je k dispozici na panelu nabídek Lizmap."
 
 #: ../../source/user/measurement.rst:17
 msgid ""
 "The tool is activated by selecting the measurement type. Once activated, a "
 "message tells you what to do."
-msgstr "このツールは、測定タイプを選択することで使用開始します。開始すると、何をすべきかを示すメッセージが表示されます。"
+msgstr ""
+"Nástroj se aktivuje výběrem typu měření. Po aktivaci se zobrazí zpráva, co "
+"je třeba udělat."
 
 #: ../../source/user/measurement.rst:23
 msgid "The measurement is displayed in the status bar."
-msgstr "計測値はステータスバーに表示されます。"
+msgstr "Měření se zobrazí ve stavovém řádku."
 
 #: ../../source/user/measurement.rst:29
 msgid ""
 "By double-clicking on the map, the measurement is fixed. To start over, you "
 "can click on the map and restart the measurement calculation."
-msgstr "地図をダブルクリックすると、測定値が確定します。最初からやり直す場合は、地図をクリックして測定を再開します。"
+msgstr ""
+"Dvojitým kliknutím na mapu se měření zafixuje. Chcete-li začít znovu, můžete"
+" kliknout na mapu a znovu spustit výpočet měření."
 
 #: ../../source/user/measurement.rst:31
 msgid "In the feature bar, the button on the right allows to stop using it."
-msgstr "計測バーでは、右にあるボタンで測定を止めることができます。"
+msgstr "Tlačítko vpravo na panelu funkcí umožňuje jejich používání ukončit."
 
 #: ../../source/user/measurement.rst:37
 msgid ""
 "It is also possible to change the measurement functionality without having "
 "to stop the feature."
-msgstr "また、機能を停止することなく、計測機能を変更することも可能です。"
+msgstr ""
+"Je také možné změnit funkci měření, aniž by bylo nutné funkci zastavit."
 
 #: ../../source/user/printing.rst:2
 msgid "Printing"
-msgstr "印刷/ファイル出力"
+msgstr "Tisk"
 
 #: ../../source/user/printing.rst:4
 msgid ""
 "The print feature is available in the Lizmap menu bar. It depends on the "
 "number of print compositions published by the map publisher."
-msgstr "印刷機能は、Lizmapのメニューバーにあります。地図の公開者が公開しているプリントコンポジションの数に依存します。"
+msgstr ""
+"Funkce tisku je k dispozici na panelu nabídek Lizmap. Záleží na počtu "
+"tiskových kompozic vydaných vydavatelem mapy."
 
 #: ../../source/user/printing.rst:10
 msgid ""
@@ -640,49 +755,59 @@ msgid ""
 " displayed on the map. Use this area to define the area to be printed. You "
 "can move it."
 msgstr ""
-"この機能が有効になると、コンポジションの形をした印刷エリアが地図上に表示されます。このエリアを使って、印刷する範囲を定義します。エリアを移動することもできます。"
+"Po aktivaci funkce se na mapě zobrazí tisková oblast s podobou kompozice. "
+"Pomocí této oblasti definujte oblast, která se má vytisknout. Můžete ji "
+"přesouvat."
 
 #: ../../source/user/printing.rst:16
 msgid ""
 "On the left, above the panel layer management, you can select the scale of "
 "printing."
-msgstr "左側の、レイヤ管理パネルの上で、印刷する際の縮尺を選択することができます。"
+msgstr "Vlevo nad správou vrstev panelu můžete vybrat měřítko tisku."
 
 #: ../../source/user/printing.rst:22
 msgid ""
 "Depending on the configuration of the printing composition, you can have the"
 " possibility to enter your own text."
-msgstr "印刷の構成によっては、独自のテキストの入力が求められることもあります。"
+msgstr ""
+"V závislosti na konfiguraci tiskové sestavy můžete mít možnost zadat vlastní"
+" text."
 
 #: ../../source/user/printing.rst:28
 msgid ""
 "To begin building the print file, you can click on *Print*. You will get a "
 "PDF file with the layout defined by the map publisher."
-msgstr "印刷するファイルの作成を開始するには、*印刷*をクリックします。地図の公開者によって定義されたレイアウトのPDFファイルが取得できます。"
+msgstr ""
+"Chcete-li zahájit vytváření souboru pro tisk, klikněte na tlačítko *Tisk*. "
+"Získáte soubor PDF s rozvržením definovaným vydavatelem mapy."
 
 #: ../../source/user/project_page.rst:2
 msgid "The projects page"
-msgstr "プロジェクトのページ"
+msgstr "Stránka projektů"
 
 #: ../../source/user/project_page.rst:4
 msgid "The default lizmap page offers a list maps organized by folder."
-msgstr "デフォルトのlizmapページでは、フォルダごとに整理された地図の一覧が表示されます。"
+msgstr "Výchozí stránka lizmap nabízí seznam map uspořádaných podle složek."
 
 #: ../../source/user/project_page.rst:10
 msgid ""
 "You can access to the map information sheet. This informations come directly"
 " from QGIS project."
-msgstr "地図の情報シートにアクセスできます。この情報は、QGISプロジェクトから直接提供されています。"
+msgstr ""
+"Můžete si prohlédnout informační list s mapou. Tyto informace pocházejí "
+"přímo z projektu QGIS."
 
 #: ../../source/user/project_page.rst:16
 msgid ""
 "Access to the map is done either by clicking the **Load the map** buttons or"
 " the image that accompanies the project."
-msgstr "地図へのアクセスは、**地図を読み込む**ボタンをクリックするか、プロジェクトに添付されている画像をクリックして行います。"
+msgstr ""
+"Přístup k mapě je možný buď kliknutím na tlačítka **Načíst mapu**, nebo na "
+"obrázek, který je k projektu přiložen."
 
 #: ../../source/user/select_basemap.rst:2
 msgid "Selecting a basemap"
-msgstr "ベースマップの選択"
+msgstr "Výběr základní mapy"
 
 #: ../../source/user/select_basemap.rst:4
 msgid ""
@@ -690,45 +815,49 @@ msgid ""
 "empty base layer to the map. These base maps are available in the layer "
 "management panel as a list."
 msgstr ""
-"Lizmapプラグインを使用して、編集者が外部のベースマップや空のベースレイヤーを地図に追加している場合があります。これらのベースマップは、レイヤー管理パネルにリストとして表示されます。"
+"Pomocí zásuvného modulu Lizmap mohl editor do mapy přidat externí podkladové"
+" mapy nebo prázdnou podkladovou vrstvu. Tyto základní mapy jsou k dispozici "
+"na panelu správy vrstev jako seznam."
 
 #: ../../source/user/simple_map.rst:2
 msgid "A simple map"
-msgstr "シンプルな地図"
+msgstr "Jednoduchá mapa"
 
 #: ../../source/user/simple_map.rst:4
 msgid "Lizmap offers default web maps with the following features:"
-msgstr "Lizmapは以下の機能をデフォルトで持つウェブ地図を提供します。"
+msgstr "Lizmap nabízí výchozí webové mapy s následujícími funkcemi:"
 
 #: ../../source/user/simple_map.rst:6
 msgid "pan"
-msgstr "地図の移動"
+msgstr "panorama"
 
 #: ../../source/user/simple_map.rst:7
 msgid "zoom on area drawn by the user"
-msgstr "ユーザーが描いた領域にズームインする"
+msgstr "přiblížení oblasti nakreslené uživatelem"
 
 #: ../../source/user/simple_map.rst:8
 msgid "zoom more"
-msgstr "さらにズームインする"
+msgstr "přiblížit více"
 
 #: ../../source/user/simple_map.rst:9
 msgid "selecting a zoom level with a scale bar"
-msgstr "縮尺バーからズームレベルを選択する"
+msgstr "výběr úrovně přiblížení pomocí měřítka"
 
 #: ../../source/user/simple_map.rst:10
 msgid "zoom less"
-msgstr "ズームアウトする"
+msgstr "oddálit"
 
 #: ../../source/user/simple_map.rst:11
 msgid "scale display as a scale bar and numerically"
-msgstr "縮尺表示を縮尺バーで表示したり、数値で表示したりします。"
+msgstr "zobrazení stupnice jako sloupce stupnice a číselně"
 
 #: ../../source/user/simple_map.rst:13
 msgid ""
 "The order and organization of layers in the layers panel management meet "
 "those defined in the QGIS by the map publisher."
-msgstr "レイヤー管理パネルにおけるレイヤーの順序と構成は、地図の公開者がQGISで定義したものと一致します。"
+msgstr ""
+"Pořadí a uspořádání vrstev ve správě panelu vrstev odpovídá pořadí a "
+"uspořádání definovanému v QGIS vydavatelem mapy."
 
 #: ../../source/user/simple_map.rst:19
 msgid ""
@@ -736,36 +865,38 @@ msgid ""
 "area, you need to select the *zoom by rectangle* and drag to draw a "
 "rectangle defining the area to reach."
 msgstr ""
-"地図の右側には、ズームとパンの機能があります。特定のエリアにズームするには、 *矩形でズーム* "
-"を選択し、ドラッグして範囲を指定する矩形を描く必要があります。"
+"V pravé části mapy je k dispozici zvětšování a posouvání. Chcete-li oblast "
+"přiblížit, musíte vybrat *přiblížení pomocí obdélníku* a tažením nakreslit "
+"obdélník vymezující oblast, do které chcete zasáhnout."
 
 #: ../../source/user/simple_map.rst:25
 msgid ""
 "You can using the *triangle*, left the layers title, bring up the legend of "
 "the layer."
-msgstr "レイヤーのタイトルの左にある *三角形* をクリックすると、そのレイヤーの凡例を表示することができます。"
+msgstr ""
+"Pomocí *trojúhelníku* vlevo od názvu vrstvy můžete vyvolat legendu vrstvy."
 
 #: ../../source/user/simple_map.rst:31
 msgid "Selection boxes allow you to hide and display the proposed layers."
-msgstr "選択ボックスでは、レイヤーそれぞれの非表示と表示を切り替えることができます。"
+msgstr "Výběrová pole umožňují skrýt a zobrazit navrhované vrstvy."
 
 #: ../../source/user/simple_map.rst:37
 msgid "Themes allow you to change layers visibility following a context."
-msgstr "テーマでは、コンテキストに従ってレイヤーの表示を変更することができます。"
+msgstr "Motivy umožňují měnit viditelnost vrstev podle kontextu."
 
 #: ../../source/user/simple_map.rst:43
 msgid ""
 "To take full advantage of the map, you can hide the panel management layers."
-msgstr "地図を最大限に活用するために、レイヤ管理パネルを非表示にすることができます。"
+msgstr "Chcete-li mapu plně využít, můžete skrýt vrstvy pro správu panelů."
 
 #: ../../source/user/simple_map.rst:50
 msgid "Finally you can:"
-msgstr "最後に、"
+msgstr "Nakonec můžete:"
 
 #: ../../source/user/simple_map.rst:50
 msgid "go back to the projects page"
-msgstr "プロジェクトページに戻ることができます"
+msgstr "vrátit se na stránku projektů"
 
 #: ../../source/user/simple_map.rst:51
 msgid "display the map information sheet"
-msgstr "地図情報シートを表示することができます"
+msgstr "zobrazit informační list mapy"

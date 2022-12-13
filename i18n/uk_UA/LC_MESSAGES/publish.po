@@ -4,8 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# rldhont <rldhont@gmail.com>, 2022
-# Arturo Lorenzo <shroomeater@gmail.com>, 2022
+# Кадастр Муниципальный, 2022
 # 
 #, fuzzy
 msgid ""
@@ -14,13 +13,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-09 16:51+0000\n"
 "PO-Revision-Date: 2022-08-02 09:23+0000\n"
-"Last-Translator: Arturo Lorenzo <shroomeater@gmail.com>, 2022\n"
-"Language-Team: Spanish (https://www.transifex.com/3liz-1/teams/62012/es/)\n"
+"Last-Translator: Кадастр Муниципальный, 2022\n"
+"Language-Team: Ukrainian (Ukraine) (https://www.transifex.com/3liz-1/teams/62012/uk_UA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../source/publish/configuration/action_popup.rst:4
 msgid "Action in a popup"
@@ -56,7 +55,7 @@ msgstr ""
 #: ../../source/publish/quick_start/project_for_web.rst:8
 #: ../../source/publish/quick_start/publish_with_ftp.rst:6
 msgid "Contents"
-msgstr ""
+msgstr "Зміст"
 
 #: ../../source/publish/configuration/action_popup.rst:9
 #: ../../source/publish/configuration/legend.rst:20
@@ -784,14 +783,12 @@ msgstr ""
 
 #: ../../source/publish/configuration/legend.rst:49
 msgid "Create an overview map"
-msgstr "Crear un mapa de localización"
+msgstr ""
 
 #: ../../source/publish/configuration/legend.rst:51
 msgid ""
 "To add an **overview map**, or location map, in the Lizmap's map, you must:"
 msgstr ""
-"Para añadir un **overview map**, o mapa de localización, en el mapa de "
-"Lizmap, debes:"
 
 #: ../../source/publish/configuration/legend.rst:53
 msgid ""
@@ -2050,7 +2047,7 @@ msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:127
 msgid "Introduction"
-msgstr "Introducción"
+msgstr "Вступ"
 
 #: ../../source/publish/configuration/popup.rst:129
 msgid ""
@@ -2383,7 +2380,7 @@ msgstr ""
 
 #: ../../source/publish/configuration/print.rst:4
 msgid "Printing"
-msgstr "Impresión"
+msgstr "Друкування"
 
 #: ../../source/publish/configuration/print.rst:10
 msgid "Extent defined by the user on the fly in Lizmap"
@@ -2846,7 +2843,7 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/time_manager.rst:21
 #: ../../source/publish/lizmap_plugin/tooltip.rst:15
 msgid "Prerequisites"
-msgstr "Prerrequisitos"
+msgstr ""
 
 #: ../../source/publish/configuration/spatial_search.rst:26
 msgid "A PostgreSQL database, accessible from Lizmap Web Client."
@@ -4097,7 +4094,7 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:32
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:41
 msgid "To add a layer to this tool:"
-msgstr "Para añadir una capa a esta herramienta:"
+msgstr ""
 
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:35
 msgid ""
@@ -5842,7 +5839,7 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:5
 msgid "Locate by layer"
-msgstr "Localización por capas"
+msgstr "Знайдіть за шарами"
 
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:13
 msgid ""
@@ -5853,7 +5850,7 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:16
 msgid "Use case"
-msgstr "Casos de uso"
+msgstr ""
 
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:18
 msgid ""
@@ -5934,15 +5931,10 @@ msgid ""
 " district, the dropdown of sub-districts is automatically filtered to "
 "display only the sub-districts of the chosen district."
 msgstr ""
-"Si tomamos el ejemplo de los distritos, puede ser interesante facilitar al "
-"ususario un menú desplegable de *subdistritos*. Lo que se quiere conseguir "
-"es que cuando el usuario seleccione un distrito, el menú desplegable de "
-"subdistritos, muestre automáticamente solamente los subdistritos del "
-"distrito seleccionado."
 
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:60
 msgid "For this, there are 2 methods:"
-msgstr "Para conseguir esto, existen dos métodos:"
+msgstr ""
 
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:62
 msgid ""
@@ -5950,9 +5942,6 @@ msgid ""
 "districts. So you have to use a **field join** between the two layers to "
 "enable automatic filtering lists in Lizmap"
 msgstr ""
-"o bien tiene **2 separate vector layers**: una para distritos y "
-"subdistritos. Por lo tanto, debe usar una **field join** entre las dos capas"
-" para habilitar el filtrado automático de listas en Lizmap"
 
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:63
 msgid ""
@@ -5960,9 +5949,6 @@ msgid ""
 "with the plugin a **group field**. Two dropdowns will be created instead of "
 "one in the Web application."
 msgstr ""
-"o bien se tiene **only 1 layer for sub-districts**, y entonces se puede "
-"especificar mediante el plugin un **group field**. Dos menúes desplegable se"
-" crearán en lugar de uno en la aplicación Web."
 
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:65
 msgid ""

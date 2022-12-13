@@ -4,13 +4,13 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Jean-Louis Stanus <rammstan@msn.com>, 2018
-# rldhont <rldhont@gmail.com>, 2018
-# Laurent Jouanneau <dev@ljouanneau.com>, 2019
-# Nicolas Boisteault <nboisteault@gmail.com>, 2020
-# Michael Douchin <kimaidou@gmail.com>, 2021
-# Arnaud HANRY <arnaud.hanry@le64.fr>, 2021
-# etrimaille <gustrimaille@yahoo.fr>, 2021
+# Michael Douchin <kimaidou@gmail.com>, 2022
+# Arnaud HANRY <arnaud.hanry@le64.fr>, 2022
+# Jean-Louis Stanus <rammstan@msn.com>, 2022
+# Nicolas Boisteault <nboisteault@gmail.com>, 2022
+# etrimaille <gustrimaille@yahoo.fr>, 2022
+# Laurent Jouanneau <dev@ljouanneau.com>, 2022
+# rldhont <rldhont@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: Lizmap 3.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-30 10:38+0200\n"
-"PO-Revision-Date: 2018-09-07 13:31+0000\n"
-"Last-Translator: etrimaille <gustrimaille@yahoo.fr>, 2021\n"
+"PO-Revision-Date: 2022-08-02 09:23+0000\n"
+"Last-Translator: rldhont <rldhont@gmail.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -205,8 +205,8 @@ msgid ""
 "First you **must** get the cache capabilities of one project and some "
 "details on a specific layer."
 msgstr ""
-"Tout d'abord, vous pouvez obtenir les possibilités de cache d'un projet, et "
-"quelques détails sur une couche spécifique."
+"Tout d'abord, vous **devez** obtenir les possibilités de cache d'un projet, "
+"et quelques détails sur une couche spécifique."
 
 #: ../../source/admin/cache.rst:94
 msgid ""
@@ -298,7 +298,8 @@ msgid ""
 "bin/qgis_mapserv.fcgi or http://localhost/cgi-bin/qgis_mapserv.fcgi.exe."
 msgstr ""
 "**URL du serveur WMS** : L'url complète du serveur QGIS, par exemple "
-"http://localhost/cgi-bin/qgis_mapserv.fcgi ."
+"http://localhost/cgi-bin/qgis_mapserv.fcgi ou http://localhost/cgi-"
+"bin/qgis_mapserv.fcgi.exe."
 
 #: ../../source/admin/lizmap-configuration.rst:26
 msgid ""
@@ -534,7 +535,8 @@ msgstr "*Modifier*: affiche le formulaire de modification du répertoire"
 #: ../../source/admin/lizmap-configuration.rst:102
 msgid ""
 "*Remove*: delete the repository from the Lizmap Web Client configuration"
-msgstr "*Supprimer* : permet de supprimer le répertoire"
+msgstr ""
+"*Supprimer* : permet de supprimer le répertoire de la configuration Lizmap"
 
 #: ../../source/admin/lizmap-configuration.rst:103
 msgid ""
@@ -550,7 +552,7 @@ msgid ""
 "located at the top and bottom of the section *Repositories*."
 msgstr ""
 "On peut créer un nouveau répertoire avec le bouton **Ajouter un répertoire**"
-" situé tout en bas de la page"
+" situé tout en haut ou en bas de la section \"Répertoires\""
 
 #: ../../source/admin/lizmap-configuration.rst:111
 msgid "Add a repository"
@@ -936,7 +938,9 @@ msgstr "Donner un *identifiant* : un seul mot sans caractères spéciaux"
 msgid ""
 "In the page *Groups of users for rights*, it is also possible to *Change the"
 " name* and *Delete a group*."
-msgstr "Via cette page, on peut aussi *renommer ou supprimer un groupe*"
+msgstr ""
+"Dans la page \"Groupes d'utilisateur pour les droits\", on peut aussi "
+"*renommer ou supprimer un groupe*"
 
 #: ../../source/admin/users-groups.rst:31
 msgid ""
@@ -1015,7 +1019,7 @@ msgstr "Mettre les utilisateurs dans des groupes"
 
 #: ../../source/admin/users-groups.rst:64
 msgid "In the left menu click on *Rights of users*"
-msgstr "Menu *Droits des utilisateurs*"
+msgstr "Dans le menu gauche, cliquez sur *Droits des utilisateurs*"
 
 #: ../../source/admin/users-groups.rst:65
 msgid "it is possible to filter the visible users with the dropdown menu"
