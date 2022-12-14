@@ -31,7 +31,7 @@ Configuring the tool
     3. If possible, use a login and password of a Lizmap Web Client administrator. It will give you more information about the server.
        This is optional.
        QGIS might ask you to setup the **master password**. It's a password to protect the QGIS internal password manager. This password
-       is used only on **your** computer. The Lizmap plugin is storing the login and password in the `QGIS password manager<https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-password>`_.
+       is used only on **your** computer. The Lizmap plugin is storing the login and password in the `QGIS password manager <https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-password>`_.
 
 .. warning::
     Do not use the any URL redirection. For instance, https://demo.lizmap.com/ is a redirection to
