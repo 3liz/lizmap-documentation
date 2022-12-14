@@ -204,7 +204,7 @@ For this, you have to click on the :guilabel:`Copy the drag and drop designer` b
 
 To have a similar popup as the **auto** one, you need to use :
 
-.. code-block:: html
+.. code-block::
 
     <table class="table table-condensed table-striped table-bordered lizmapPopupTable">
       <thead>
