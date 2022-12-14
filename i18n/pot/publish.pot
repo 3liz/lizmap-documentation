@@ -8,13 +8,41 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-30 10:38+0200\n"
+"POT-Creation-Date: 2022-12-14 14:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/substitutions.rst:7
+msgid "add_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:8
+msgid "edit_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:9
+msgid "remove_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:10
+msgid "down_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:11
+msgid "up_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:12
+msgid "refresh_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:13
+msgid "properties_svg"
+msgstr ""
 
 #: ../../source/publish/configuration/action_popup.rst:4
 msgid "Action in a popup"
@@ -38,11 +66,11 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/basemap.rst:7
 #: ../../source/publish/lizmap_plugin/dataviz.rst:7
 #: ../../source/publish/lizmap_plugin/edition.rst:9
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:8
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:9
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:7
 #: ../../source/publish/lizmap_plugin/information.rst:7
 #: ../../source/publish/lizmap_plugin/layers.rst:7
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:8
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:9
 #: ../../source/publish/lizmap_plugin/map_options.rst:9
 #: ../../source/publish/lizmap_plugin/time_manager.rst:7
 #: ../../source/publish/lizmap_plugin/tooltip.rst:7
@@ -68,12 +96,12 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/basemap.rst:10
 #: ../../source/publish/lizmap_plugin/dataviz.rst:10
 #: ../../source/publish/lizmap_plugin/edition.rst:12
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:11
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:34
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:12
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:35
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:10
 #: ../../source/publish/lizmap_plugin/information.rst:10
 #: ../../source/publish/lizmap_plugin/layers.rst:10
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:11
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:12
 #: ../../source/publish/lizmap_plugin/time_manager.rst:10
 #: ../../source/publish/lizmap_plugin/tooltip.rst:10
 msgid "Principle"
@@ -96,182 +124,182 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/basemap.rst:22
 #: ../../source/publish/lizmap_plugin/dataviz.rst:41
 #: ../../source/publish/lizmap_plugin/edition.rst:56
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:54
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:84
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:55
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:85
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:36
 #: ../../source/publish/lizmap_plugin/information.rst:22
 #: ../../source/publish/lizmap_plugin/layers.rst:15
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:36
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:37
 #: ../../source/publish/lizmap_plugin/time_manager.rst:26
 #: ../../source/publish/lizmap_plugin/tooltip.rst:20
 msgid "Configuring the tool"
 msgstr ""
 
 #: ../../source/publish/configuration/action_popup.rst:28
-msgid "Each action is **characterized** by a ``layer id``, a ``name``, a ``title``, an ``icon``, some optional ``options``, ``style`` and ``callbacks``. A new ``confirm`` property can be used since |lizmap_3_5|"
-msgstr ""
-
-#: ../../source/publish/configuration/action_popup.rst:29
-msgid "A layer can have **one or several actions**"
+msgid "Each action is **characterized** by a ``layer id``, a ``name``, a ``title``, an ``icon``, some optional ``options``, ``style``, ``callbacks`` and ``confirm`` property can be used."
 msgstr ""
 
 #: ../../source/publish/configuration/action_popup.rst:30
+msgid "A layer can have **one or several actions**"
+msgstr ""
+
+#: ../../source/publish/configuration/action_popup.rst:31
 msgid "You can have **one or several layers** with their own actions"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:32
+#: ../../source/publish/configuration/action_popup.rst:33
 msgid "Example of this JSON configuration file, name :file:`myproject.qgs.action` if the QGIS project file is named :file:`myproject.qgs`. In this project, there is a vector layer called ``Points`` with the internal layer ID ``points_a7e8943b_7138_4788_a775_f94cbd0ad8b6`` (you can get the QGIS layer internal ID with the expression ``@layer_id``)"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:69
+#: ../../source/publish/configuration/action_popup.rst:70
 msgid "The **JSON configuration** file lists the **QGIS layers** for which you want to declare actions. Each layer is defined by its **QGIS layer ID**, for example here ``points_a7e8943b_7138_4788_a775_f94cbd0ad8b6``, and for each ID, a list of objects describing the actions to allow."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:73
+#: ../../source/publish/configuration/action_popup.rst:74
 msgid "Each **action** is an object defined by:"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:75
+#: ../../source/publish/configuration/action_popup.rst:76
 msgid "a ``name`` which is the action identifier."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:76
+#: ../../source/publish/configuration/action_popup.rst:77
 msgid "a ``title`` which is used as a label in Lizmap interface"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:77
+#: ../../source/publish/configuration/action_popup.rst:78
 msgid "an ``icon`` which is displayed on the action button ( See https://getbootstrap.com/2.3.2/base-css.html#icons )"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:78
+#: ../../source/publish/configuration/action_popup.rst:79
 msgid "an optional ``confirm`` property, since |lizmap_3_5|, containing some text. If set, a confirmation dialog will be shown to the user to ask if the action should really be launched or not. Use it if the action can modify some data in your database."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:79
+#: ../../source/publish/configuration/action_popup.rst:80
 msgid "an ``options`` object, giving some additional parameters for this action. You can add any needed parameter."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:80
+#: ../../source/publish/configuration/action_popup.rst:81
 msgid "a ``style`` object allowing to configure the returned geometry style. It follows OpenLayers styling attributes."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:81
+#: ../../source/publish/configuration/action_popup.rst:82
 msgid "a ``callbacks`` object allows to trigger some actions after the generated geometry is returned. They are defined by a ``method`` name, which can at present be:"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:83
+#: ../../source/publish/configuration/action_popup.rst:84
 msgid "``zoom``: zoom to the returned geometry"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:84
+#: ../../source/publish/configuration/action_popup.rst:85
 msgid "``select``: select the features from a given layer intersecting the returned geometry. The target layer **QGIS internal ID** must be added in the ``layerId`` property. In the example, the features of the layer containing buildings, ID ``bati_1a016229_287a_4b5e_a4f7_a2080333f440`` will be selected"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:85
+#: ../../source/publish/configuration/action_popup.rst:86
 msgid "``redraw``: redraw (refresh) a given layer in the map. The target layer QGIS ID must be added in the ``layerId`` property."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:87
+#: ../../source/publish/configuration/action_popup.rst:88
 msgid "Lizmap detects the presence of this configuration file, and adds the needed logic when the map loads. When the users clicks on an object of one of this layer in the map, the **popup panel** shows the feature data. At the top of each popup item, **a toolbar will show one button per each layer action**. The action ``title`` will be displayed on hovering the action button."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:90
+#: ../../source/publish/configuration/action_popup.rst:91
 msgid "Each button **triggers the corresponding action**, if it is not yet **active** (else it deactivates and erases the geometry):"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:92
+#: ../../source/publish/configuration/action_popup.rst:93
 msgid "Lizmap backend checks if the action is well configured,"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:93
+#: ../../source/publish/configuration/action_popup.rst:94
 msgid "creates the **PostgreSQL query** and execute it in the layer PostgreSQL database. (See example below)"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:94
+#: ../../source/publish/configuration/action_popup.rst:95
 msgid "This query returns a **GeoJSON** which is then displayed on the map."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:95
+#: ../../source/publish/configuration/action_popup.rst:96
 msgid "If some **callbacks** have been configured, they are launched"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:96
+#: ../../source/publish/configuration/action_popup.rst:97
 msgid "Since |lizmap_3_5|, A Lizmap **event** ``actionResultReceived`` is emitted with the returned data and action properties."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:98
+#: ../../source/publish/configuration/action_popup.rst:99
 msgid "The **created PostgreSQL query** is built up by Lizmap web client and uses the PostgreSQL function ``lizmap_get_data(json)`` which **must be created beforehand** in the PostgreSQL table database. This function also uses a more generic function ``query_to_geojson(text)`` which transforms any PostgreSQL **query string** into a **GeoJSON output**."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:104
+#: ../../source/publish/configuration/action_popup.rst:105
 msgid "Here is **an example** below of the query executed in the PostgreSQL database by Lizmap Web Client internally, for the example configuration given above, when the users clicks on the button action :guilabel:`buffer_500`, for the **feature** with id ``1`` of the **layer** ``Points`` corresponding to the **PostgreSQL table** ``test.points``:"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:121
+#: ../../source/publish/configuration/action_popup.rst:122
 msgid "You can see that Lizmap creates a JSON parameters with all needed information and run the PostgreSQL function ``lizmap_get_data(text)``."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:123
+#: ../../source/publish/configuration/action_popup.rst:124
 msgid "You need to create this PostgreSQL function ``lizmap_get_data(text)`` which returns a valid GeoJSON text with one single object in it. The following SQL code is **an example** to help you create the needed functions. Obviously, **you must adapt it to fit your needs**."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:232
+#: ../../source/publish/configuration/action_popup.rst:233
 msgid "The function ``lizmap_get_data(json)`` is provided here as an example. Since it is the **key entry point**, you need to adapt it to fit your needs. It aims to **create a query for each action name**, dynamically created for the given parameters, and return a GeoJSON representation of the query result data. You should have **only one feature** returned: use aggregation if needed. In the example above, we use the ``format`` method to set the query text, and the function ``query_to_geojson`` to return the GeoJSON for this query."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:234
+#: ../../source/publish/configuration/action_popup.rst:235
 msgid "You can use all the given parameters (action name, source data schema and table name, feature id, QGIS layer name) to create the appropriate query for your action(s), by using the PostgreSQL ``IF THEN ELSIF ELSE`` clauses. See the content of the ``parameters`` variable in the example above, containing some of the JSON configuration file properties, and some properties of the QGIS layer:"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:236
+#: ../../source/publish/configuration/action_popup.rst:237
 msgid "the **action name** ``action_name``, for example ``buffer_500``. You should use a simple word with only letters, digits and ``_``,"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:237
+#: ../../source/publish/configuration/action_popup.rst:238
 msgid "QGIS **layer name** (as in QGIS legend): ``layer_name``, for example ``Points``,"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:238
+#: ../../source/publish/configuration/action_popup.rst:239
 msgid "the PostgreSQL table **schema** ``layer_schema`` and **table name** ``layer_table`` for this layer,"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:239
+#: ../../source/publish/configuration/action_popup.rst:240
 msgid "the object **feature id** ``feature_id``, which corresponds to the value of the **primary key** field for the popup object,"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:240
+#: ../../source/publish/configuration/action_popup.rst:241
 msgid "the other **properties** given in the JSON configuration file, in the ``options`` property, such as ``buffer_size`` which is ``500`` in the example"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:242
+#: ../../source/publish/configuration/action_popup.rst:243
 msgid "The ``IF ELSE`` is used to do a different query, built in the ``datasource`` variable, by checking the **action name**"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:244
+#: ../../source/publish/configuration/action_popup.rst:245
 msgid "If the return data contains a ``message`` field, such as shown in the example above, the text contained in this field will be **displayed in the map** in a message bubble."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:246
+#: ../../source/publish/configuration/action_popup.rst:247
 msgid "The **geometry** returned by the function **will be displayed on the map**."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:248
+#: ../../source/publish/configuration/action_popup.rst:249
 msgid "You could use your function to **edit some data** in your database, before returning a GeoJSON. To do so, you need to replace the ``IMMUTABLE`` property par ``VOLATILE``. Please **use it with care** !"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:250
+#: ../../source/publish/configuration/action_popup.rst:251
 msgid "Since Lizmap Web Client **triggers an event** ``actionResultReceived`` any time the user clicks on an action button, and data is returned (in the same time as the result geometry is drawn on the map), you could use your own Javascript code to add some logic after the result is shown."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:253
+#: ../../source/publish/configuration/action_popup.rst:254
 msgid "Chapter :ref:`adding-javascript`"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:255
+#: ../../source/publish/configuration/action_popup.rst:256
 msgid "For example, here we just write in the browser console the content received:"
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:279
+#: ../../source/publish/configuration/action_popup.rst:280
 msgid "You could use these data as you like in your JS code."
 msgstr ""
 
@@ -804,7 +832,7 @@ msgstr ""
 #: ../../source/publish/customization/iframe.rst:16
 #: ../../source/publish/customization/template.rst:21
 #: ../../source/publish/customization/themes.rst:78
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:79
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:80
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:25
 #: ../../source/publish/lizmap_plugin/time_manager.rst:15
 msgid "Example"
@@ -815,23 +843,18 @@ msgid "Here for example the attribute table of a layer *landscape* configured to
 msgstr ""
 
 #: ../../source/publish/configuration/media.rst:153
-#: ../../source/publish/configuration/popup.rst:58
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
+#: ../../source/publish/configuration/popup.rst:67
 #: ../../source/publish/customization/javascript.rst:1
 msgid "id"
 msgstr ""
 
 #: ../../source/publish/configuration/media.rst:153
-#: ../../source/publish/configuration/popup.rst:59
+#: ../../source/publish/configuration/popup.rst:68
 msgid "name"
 msgstr ""
 
 #: ../../source/publish/configuration/media.rst:153
-#: ../../source/publish/configuration/popup.rst:60
+#: ../../source/publish/configuration/popup.rst:69
 msgid "description"
 msgstr ""
 
@@ -845,7 +868,7 @@ msgid "pdf"
 msgstr ""
 
 #: ../../source/publish/configuration/media.rst:155
-#: ../../source/publish/configuration/popup.rst:58
+#: ../../source/publish/configuration/popup.rst:67
 msgid "1"
 msgstr ""
 
@@ -1281,415 +1304,427 @@ msgstr ""
 msgid "For the :guilabel:`Group as layer` option you must select the option for the group and for all the layers included you want to show in the popup: in this case, only the layers with the option :guilabel:`Popup` checked will be shown."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:21
+#: ../../source/publish/configuration/popup.rst:22
 msgid "You have three types of popup sources:"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:23
-msgid "``auto``, read :ref:`auto-popup`"
-msgstr ""
-
 #: ../../source/publish/configuration/popup.rst:24
-msgid "``lizmap``, read :ref:`lizmap-popup`"
+msgid "``Automatic``, read :ref:`auto-popup`"
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:25
-msgid "``qgis``, read :ref:`qgis-popup`"
+msgid "``Lizmap HTML``, read :ref:`lizmap-popup`"
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:26
-msgid "``form``, read :ref:`form-popup`"
+msgid "``QGIS HTML Maptip``, read :ref:`qgis-popup`"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:28
-msgid "In the web application Lizmap Web Client, a click on a feature will trigger the popup if (and only if):"
+#: ../../source/publish/configuration/popup.rst:27
+msgid "``QGIS Drag&Drop form``, read :ref:`form-popup`"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:30
+#: ../../source/publish/configuration/popup.rst:29
+msgid "In Lizmap Web Client, a click on a feature will trigger the popup if (and only if):"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:31
 msgid "the popup **has been activated**"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:32
+#: ../../source/publish/configuration/popup.rst:33
 msgid "through the plugin for the layer or the group"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:33
+#: ../../source/publish/configuration/popup.rst:34
 msgid "or the layer has edition capabilities for existing features"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:35
+#: ../../source/publish/configuration/popup.rst:36
 msgid "the layer is **active in the legend**, so that it is shown on the canvas"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:36
+#: ../../source/publish/configuration/popup.rst:37
 msgid "the user has clicked on an **area of the canvas** where data for the layer with active popups are displayed."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:38
+#: ../../source/publish/configuration/popup.rst:40
 msgid "For point layers you need to click in the middle of the point to display the popup. The tolerance can be setup in :menuselection:`Lizmap plugin --> Map options --> Map tools`."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:40
+#: ../../source/publish/configuration/popup.rst:43
 msgid "You can update where the popup is displayed in the web interface in :menuselection:`Lizmap plugin --> Map options --> Map interface`. You can choose between:"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:42
+#: ../../source/publish/configuration/popup.rst:46
 msgid "``dock``"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:43
+#: ../../source/publish/configuration/popup.rst:47
 msgid "``minidock``"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:44
+#: ../../source/publish/configuration/popup.rst:48
 msgid "``map``"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:45
+#: ../../source/publish/configuration/popup.rst:49
 msgid "``bottomdock``"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:46
+#: ../../source/publish/configuration/popup.rst:50
 msgid "``right-dock``"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:51
-msgid "Auto popup"
-msgstr ""
-
 #: ../../source/publish/configuration/popup.rst:53
-msgid "The Lizmap Web Client ``auto`` popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:"
+msgid "Media in popup"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:56
-msgid "Field"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:56
-msgid "Value"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:59
-msgid "A name"
+#: ../../source/publish/configuration/popup.rst:55
+msgid "See :ref:`use-in-popups` in the **media** chapter."
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:60
-msgid "This object ..."
+msgid "Automatic popup"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:61
-msgid "photo"
+#: ../../source/publish/configuration/popup.rst:62
+msgid "The Lizmap Web Client ``Automatic`` popup displays a table showing the columns of the attribute table in two columns *Field* and *Value*, as shown below:"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:61
-msgid ":-)"
+#: ../../source/publish/configuration/popup.rst:65
+msgid "Field"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:64
-msgid "You can modify the info displayed through QGIS, and also display pictures or links."
+#: ../../source/publish/configuration/popup.rst:65
+msgid "Value"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:67
-msgid "Simple popup configuration"
+#: ../../source/publish/configuration/popup.rst:68
+msgid "A name"
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:69
-msgid "With the plugin, if you click on the checkbox **Activate popups** without modifying its content through the button *Configure* the default table is shown."
+msgid "This object ..."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:71
-msgid "Nevertheless, you can tune several things in QGIS and with the help of Lizmap plugin to **parametrize the fields displayed**, **rename fields**, and even **display images, photos, or links to internal or external documents**."
+#: ../../source/publish/configuration/popup.rst:70
+msgid "photo"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:74
-msgid "Mask or rename a column"
+#: ../../source/publish/configuration/popup.rst:70
+msgid ":-)"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:73
+msgid "You can modify the info displayed through QGIS, and also display pictures or links."
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:76
-msgid "This is working only using `Lizmap` or `Auto` popup. The `QGIS` popup follows the QGIS maptip."
+msgid "Simple popup configuration"
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:78
-msgid "You need to use the :menuselection:`Layer Properties --> Fields` tab in QGIS:"
+msgid "With the plugin, if you click on the checkbox **Activate popups** without modifying its content through the button *Configure* the default table is shown."
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:80
+msgid "Nevertheless, you can tune several things in QGIS and with the help of Lizmap plugin to **parametrize the fields displayed**, **rename fields**, and even **display images, photos, or links to internal or external documents**."
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:83
+msgid "Mask or rename a column"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:85
+msgid "This is working only using `Lizmap` or `Auto` popup. The `QGIS` popup follows the QGIS maptip."
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:87
+msgid "You need to use the :menuselection:`Layer Properties --> Fields` tab in QGIS:"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:89
 msgid "to **hide** a column in the popup, uncheck the corresponding WMS checkbox. The WMS column is on the right of the table. This will hide the field in QGIS Server from any WMS requests."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:82
+#: ../../source/publish/configuration/popup.rst:91
 msgid "to **rename** a column, you should use the alias column. But to edit this column, add it from the tab :menuselection:`Layer Properties --> Attributes Form`."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:90
+#: ../../source/publish/configuration/popup.rst:99
 msgid "Usage of media: images, documents, etc."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:92
+#: ../../source/publish/configuration/popup.rst:101
 msgid "If you want to use some media in your popup (pictures, PDF documents…) in your popup, you must use the :ref:`media` directory."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:95
+#: ../../source/publish/configuration/popup.rst:104
 msgid "For a given feature, using a path in your field starting by ``media/``, Lizmap will display:"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:97
+#: ../../source/publish/configuration/popup.rst:106
 msgid "**the image itself** for jpeg or png files"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:98
+#: ../../source/publish/configuration/popup.rst:107
 msgid "**the content** for txt or HTML files"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:99
+#: ../../source/publish/configuration/popup.rst:108
 msgid "**a link** to any other file extension"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:102
+#: ../../source/publish/configuration/popup.rst:111
 msgid "Chapter :ref:`media` for more details on the usage of documents of the directory media in the popups."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:105
+#: ../../source/publish/configuration/popup.rst:114
 msgid "Usage of external links"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:107
+#: ../../source/publish/configuration/popup.rst:116
 msgid "You can also use, in a field, **full web links to a specific page or image**:"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:109
+#: ../../source/publish/configuration/popup.rst:118
 msgid "the image referred to will be displayed, instead of the links"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:110
+#: ../../source/publish/configuration/popup.rst:119
 msgid "the web link will be displayed and clickable"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:115
-msgid "Lizmap popup"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:118
-msgid "Introduction"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:120
-msgid "If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know some **HTML format**. See e.g.: https://www.w3schools.com/html/"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:122
-msgid "When you use the *lizmap* mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the template. Managing media is also possible, but you have to configure it as well."
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:125
-msgid "Deploying"
+#: ../../source/publish/configuration/popup.rst:124
+msgid "Lizmap HTML popup"
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:127
-msgid "You can edit the popup template with the button *Configure* in the Lizmap plugin. Clicking on it you'll get a window with two text areas:"
+msgid "Introduction"
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:129
-msgid "an **area where you can type your text**"
+msgid "If the simple table display does not suit your needs, you can write a **popup template**. To do so, you should know some **HTML format**. See e.g.: https://www.w3schools.com/html/"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:130
-msgid "a **read-only area**, showing a preview of your template"
+#: ../../source/publish/configuration/popup.rst:132
+msgid "When you use the *Lizmap HTML* mode, the previous configuration to rename a field does not work anymore: you have to configure what is displayed and how through the template. Managing media is also possible, but you have to configure it as well."
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:136
+msgid "Deploying"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:138
+msgid "You can edit the popup template with the button *Configure* in the Lizmap plugin. Clicking on it you'll get a window with two text areas:"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:140
+msgid "an **area where you can type your text**"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:141
+msgid "a **read-only area**, showing a preview of your template"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:147
 msgid "You can type simple text, but we suggest to write in HTML format to give proper formatting. For instance, you can add paragraphs, headings, etc.:"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:143
+#: ../../source/publish/configuration/popup.rst:154
 msgid "The behaviour is as follows:"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:145
+#: ../../source/publish/configuration/popup.rst:156
 msgid "if the content of the two areas is empty, a simple table will be shown in the popup (default template)"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:146
+#: ../../source/publish/configuration/popup.rst:157
 msgid "if the content is not empty, its content will be used as a template for the popup"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:148
-msgid "Lizmap Web Client will replace automatically a variable, identified by the name of a field, with its content. To add the content of a column to a popup, you should use the name of the column precede by a dollar sign (`$`), all surrounded by curly brackets (`{}`). For instance:"
+#: ../../source/publish/configuration/popup.rst:159
+msgid "Lizmap Web Client will replace automatically a variable, identified by the name of a field, with its content. To add the content of a column to a popup, you should use the name of the column precede by a dollar sign (`$`), all surrounded by curly brackets (`{}`)."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:157
+#: ../../source/publish/configuration/popup.rst:162
+msgid "For instance:"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:171
 msgid "If you have configured an alias for a field, you have to use the alias instead of the name, between the brackets."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:159
+#: ../../source/publish/configuration/popup.rst:173
 msgid "You can also use the values of the columns as parameters to give styling to the text. An example here, to use the colour of a bus line as a background colour:"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:168
+#: ../../source/publish/configuration/popup.rst:183
 msgid "Usage of media and external links"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:170
+#: ../../source/publish/configuration/popup.rst:185
 msgid "You can **use the media** referred to in the table content, even if you use a *template model*. To do this, you should use the media column, taking into account the fact that Lizmap Web Client automatically replaces the relative path of the type ``/media/myfile.jpg`` with the full URL to the file, accessible through the web interface."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:172
+#: ../../source/publish/configuration/popup.rst:189
 msgid "You can also use full URLs pointing to the pages or images on another server."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:174
+#: ../../source/publish/configuration/popup.rst:191
 msgid "Here an example of a template handling media and an external link:"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:189
+#: ../../source/publish/configuration/popup.rst:206
 msgid "Chapter :ref:`media` for more details on the use of documents in the directory media."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:194
-msgid "Form popup"
+#: ../../source/publish/configuration/popup.rst:211
+msgid "QGIS Drag&Drop Form popup"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:196
+#: ../../source/publish/configuration/popup.rst:213
 msgid "If you have defined a form layout with the *Drag and drop form designer* for a layer in :menuselection:`Layer Properties --> Attributes Form`, you can also display it in its popup. See the QGIS documentation about `Drag and Drop form <https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#the-drag-and-drop-designer>`_."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:200
+#: ../../source/publish/configuration/popup.rst:217
 msgid "The QGIS Form, designed for HTML, is displayed in the popup directly. You can't alter the popup on runtime."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:203
+#: ../../source/publish/configuration/popup.rst:220
 msgid "Tabs defined in the :guilabel:`Form Layout` in QGIS will also be displayed as HTML tabs in the popup."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:205
+#: ../../source/publish/configuration/popup.rst:222
 msgid "If you want to alter the popup HTML, then you must use :guilabel:`QGIS Popup` instead of :guilabel:`Form Popup`."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:210
-msgid "QGIS popup"
+#: ../../source/publish/configuration/popup.rst:227
+msgid "QGIS HTML Maptip popup"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:212
+#: ../../source/publish/configuration/popup.rst:229
 msgid "*QGIS* popups can be configured via :menuselection:`QGIS --> Layer properties --> Display --> HTML Map Tip`. The main advantages of this approach are:"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:215
+#: ../../source/publish/configuration/popup.rst:232
 msgid "HTML is used"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:216
+#: ../../source/publish/configuration/popup.rst:233
 msgid "you can use QGIS variables and expressions, thus adding information created dynamically"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:217
+#: ../../source/publish/configuration/popup.rst:234
 msgid "the popup can be previewed in QGIS, using map tips. You can enable map tips in the menu :menuselection:`View --> Show Map Tips`"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:218
+#: ../../source/publish/configuration/popup.rst:235
 msgid "the popup configurations are stored in QGIS project and layer style, so they can be reused in other Lizmap projects without replicating the configuration."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:220
+#: ../../source/publish/configuration/popup.rst:237
 msgid "Similar to :ref:`form-popup`, you have a *Drag and drop form designer* for a layer, you can click on the :guilabel:`Copy the drag and drop designer` button. This will **erase** any existing maptip set on the layer and will generate the QGIS Expression matching the form layout."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:224
+#: ../../source/publish/configuration/popup.rst:241
 msgid "To have a similar popup as the **auto** one, you need to click the button in the Lizmap plugin :menuselection:`Generate the HTML table`."
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:226
-msgid "To display some color with HTML, you can use this sample above :"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:234
-msgid "One to many relations"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:236
-msgid "It is possible to display multiple objects (photos, documents) for each geographical feature. To do so, you have to configure both the QGIS project and the Lizmap config."
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:239
-msgid "In QGIS project:"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:241
-msgid "Use 2 separate layers to store the main features and the pictures. For example `trees` and `tree_pictures`. The child layer must contain a field referencing the parent layer id."
-msgstr ""
-
 #: ../../source/publish/configuration/popup.rst:243
-msgid "Configure aliases and field types in :menuselection:`Layer Properties -> Fields`. Use `Photo` for the field which will contains the relative path to pictures."
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:245
-msgid "Add a relation in QGIS project properties between the main layer `trees` and the child layer `tree_pictures` in :menuselection:`Project properties -> Relations`."
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:247
-msgid "Add data to the layers. You should use relative path to store the pictures path. Theses paths must refer to a project media subdirectory, for example: `media/photos/feature_1_a.jpg`"
+msgid "To display some color with HTML according to the value of a field, you can use this QGIS expression above :"
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:250
-msgid "In Lizmap plugin:"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:252
-msgid "In the :guilabel:`Layers` tab, activate popup for both layers. You can configure source of the popup if you need specific layouts"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:253
-msgid "For the parent layer, activate the option :guilabel:`Display relative children under each object (use relations)`"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:254
-msgid "*Optionally*, add the two layers in the :guilabel:`Attribute table` tab"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:255
-msgid "*Optionally*, you can activate editing for the two layers, to allow the web users to create new features and upload pictures"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:256
-msgid "Save and publish your project and Lizmap configuration"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:258
-msgid "In Lizmap Web Client:"
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:263
-msgid "If relative children popup are defined as ``auto``, this button will be visible in the feature's popup at the top of related objects. Click it to compact all related objects in one table with search, sort and paging capabilities."
-msgstr ""
-
-#: ../../source/publish/configuration/popup.rst:267
 msgid "Link to a PDF QGIS layout"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:269
+#: ../../source/publish/configuration/popup.rst:252
 msgid "Every feature of a layer with an atlas configured will have a link (1) at the end of its popup which open a PDF for this specific feature, using the QGIS Atlas layout. If the layout contains custom text fields, a button (2) will be displayed. Clicking this button, allows you to type values for those custom text fields before printing. To enable this feature, you need a QGIS Layout with atlas enabled on that layer **and** to download the `AtlasPrint` QGIS Server plugin on GitHub : https://github.com/3liz/qgis-atlasprint"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:277
-msgid "Display children in a compact way"
+#: ../../source/publish/configuration/popup.rst:260
+msgid "One to many relations"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:262
+msgid "It is possible to display multiple objects (photos, documents) for each geographical feature. To do so, you have to configure both the QGIS project and the Lizmap config."
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:265
+msgid "In QGIS project:"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:267
+msgid "Use 2 separate layers to store the main features and the pictures. For example `trees` and `tree_pictures`. The child layer must contain a field referencing the parent layer id."
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:269
+msgid "Configure aliases and field types in :menuselection:`Layer Properties -> Fields`. Use `Photo` for the field which will contains the relative path to pictures."
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:271
+msgid "Add a relation in QGIS project properties between the main layer `trees` and the child layer `tree_pictures` in :menuselection:`Project properties -> Relations`."
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:273
+msgid "Add data to the layers. You should use relative path to store the pictures path. Theses paths must refer to a project media subdirectory, for example: `media/photos/feature_1_a.jpg`"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:276
+msgid "In Lizmap plugin:"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:278
+msgid "In the :guilabel:`Layers` tab, activate popup for both layers. You can configure source of the popup if you need specific layouts"
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:279
-msgid "You can change the way children are displayed and make them look like a table. For that, you will need to adapt the HTML of your children layer and use a few classes to manipulate it."
+msgid "For the parent layer, activate the option :guilabel:`Display relative children under each object (use relations)`"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:280
+msgid "*Optionally*, add the two layers in the :guilabel:`Attribute table` tab"
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:281
-msgid "\"lizmap_merged\" : You need to attribute this class to your table"
+msgid "*Optionally*, you can activate editing for the two layers, to allow the web users to create new features and upload pictures"
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:282
+msgid "Save and publish your project and Lizmap configuration"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:284
+msgid "In Lizmap Web Client:"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:289
+msgid "If relative children popup are defined as ``Automatic``, this button will be visible in the feature's popup at the top of related objects. Click it to compact all related objects in one table with search, sort and paging capabilities."
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:293
+msgid "Display children in a compact way"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:295
+msgid "You can change the way children are displayed and make them look like a table. For that, you will need to adapt the HTML of your children layer and use a few classes to manipulate it."
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:297
+msgid "\"lizmap_merged\" : You need to attribute this class to your table"
+msgstr ""
+
+#: ../../source/publish/configuration/popup.rst:298
 msgid "lizmapPopupHeader : If you want to have a better display of your headers, you will need to put this class in the '<tr>' who contains them"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:283
+#: ../../source/publish/configuration/popup.rst:299
 msgid "lizmapPopupHidden : This class permit you to hide some elements of your children that you want to hide when there are used as a child but you still want to see them if you display their popup as a main Popup"
 msgstr ""
 
-#: ../../source/publish/configuration/popup.rst:285
+#: ../../source/publish/configuration/popup.rst:301
 msgid "Here an example:"
 msgstr ""
 
@@ -1786,6 +1821,7 @@ msgid "The preview in Lizmap will be similar to this screenshot. The red rectang
 msgstr ""
 
 #: ../../source/publish/configuration/print.rst:57
+#: ../../source/publish/lizmap_plugin/map_options.rst:43
 msgid "Scales"
 msgstr ""
 
@@ -2037,9 +2073,9 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:17
 #: ../../source/publish/lizmap_plugin/dataviz.rst:29
 #: ../../source/publish/lizmap_plugin/edition.rst:36
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:45
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:46
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:31
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:25
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:26
 #: ../../source/publish/lizmap_plugin/time_manager.rst:21
 #: ../../source/publish/lizmap_plugin/tooltip.rst:15
 msgid "Prerequisites"
@@ -2209,7 +2245,7 @@ msgstr ""
 msgid "This section shows how to customize Lizmap with some lines of code."
 msgstr ""
 
-#: ../../source/publish/customization/javascript.rst:1
+#: ../../source/publish/customization/javascript.rst:-1
 msgid "js,script,javascript,code"
 msgstr ""
 
@@ -2308,7 +2344,6 @@ msgstr ""
 msgid "Event name"
 msgstr ""
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "Description"
 msgstr ""
@@ -2430,10 +2465,6 @@ msgid "Fired when a layer style has been changed"
 msgstr ""
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType"
 msgstr ""
 
@@ -2505,7 +2536,6 @@ msgstr ""
 msgid "Fired when a layer feature has been created with the edition tool"
 msgstr ""
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "layerId"
 msgstr ""
@@ -2591,7 +2621,6 @@ msgid "Fired when a filter has been applied to the map for a layer. This event a
 msgstr ""
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | featureIds | updateDrawing"
 msgstr ""
 
@@ -2631,7 +2660,6 @@ msgstr ""
 msgid "Fire this event to select all the features corresponding to the displayed lines of the attribute table, which can be visually filterd by the user by entering some characters in the search text input."
 msgstr ""
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | updateDrawing"
 msgstr ""
@@ -2890,6 +2918,14 @@ msgstr ""
 msgid "By following these steps, we keep our custom theme as small as possible."
 msgstr ""
 
+#: ../../source/publish/customization/themes.rst:115
+msgid "Additional CSS"
+msgstr ""
+
+#: ../../source/publish/customization/themes.rst:117
+msgid "In :menuselection:`Server administration panel -> Theme`, it's possible to add some CSS without creating files like the step before. For instance, a quick tip to remove the title `Projects` from the header in the landing page :"
+msgstr ""
+
 #: ../../source/publish/index.rst:3
 msgid "Publisher guide"
 msgstr ""
@@ -2929,16 +2965,7 @@ msgstr ""
 msgid "For setting a atlas layer:"
 msgstr ""
 
-#: ../../source/shared/add_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/atlas.rst>:1
-#: ../../source/shared/add_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/add_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/add_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/add_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/add_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/add_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/form_filtering.rst>:1
-#: ../../source/shared/add_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/locate_by_layer.rst>:1
-#: ../../source/shared/add_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/time_manager.rst>:1
-#: ../../source/shared/add_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/tooltip.rst>:1
+#: ../../source/shared/add_layer.rst:1
 msgid "Click the |add_layer_svg| button."
 msgstr ""
 
@@ -2982,39 +3009,15 @@ msgstr ""
 msgid "you can select the duration between each step"
 msgstr ""
 
-#: ../../source/shared/edit_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/atlas.rst>:1
-#: ../../source/shared/edit_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/edit_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/edit_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/edit_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/edit_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/edit_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/form_filtering.rst>:1
-#: ../../source/shared/edit_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/locate_by_layer.rst>:1
-#: ../../source/shared/edit_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/time_manager.rst>:1
-#: ../../source/shared/edit_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/tooltip.rst>:1
+#: ../../source/shared/edit_layer.rst:1
 msgid "To edit a layer in the table, select it and click the |edit_layer_svg| button or double click on the row."
 msgstr ""
 
-#: ../../source/shared/remove_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/atlas.rst>:1
-#: ../../source/shared/remove_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/remove_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/remove_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/remove_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/remove_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/filtered_layers_login.rst>:1
-#: ../../source/shared/remove_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/form_filtering.rst>:1
-#: ../../source/shared/remove_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/locate_by_layer.rst>:1
-#: ../../source/shared/remove_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/time_manager.rst>:1
-#: ../../source/shared/remove_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/tooltip.rst>:1
+#: ../../source/shared/remove_layer.rst:1
 msgid "To remove a layer from the table, select it and click the |remove_layer_svg| button."
 msgstr ""
 
-#: ../../source/shared/move_up_down_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/atlas.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/form_filtering.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/locate_by_layer.rst>:1
-#: ../../source/shared/move_up_down_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/time_manager.rst>:1
+#: ../../source/shared/move_up_down_layer.rst:1
 msgid "To move a layer up or down, select it and click |down_layer_svg| or |up_layer_svg| buttons. The order will change in Lizmap too."
 msgstr ""
 
@@ -3050,14 +3053,7 @@ msgstr ""
 msgid "Sometimes this is not enough, and as a map editor, you would like the user to see all the data of a specific layer, as you can do in QGIS by opening the attribute table."
 msgstr ""
 
-#: ../../source/shared/wfs_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/form_filtering.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/locate_by_layer.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/time_manager.rst>:1
-#: ../../source/shared/wfs_layer.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/tooltip.rst>:1
+#: ../../source/shared/wfs_layer.rst:1
 msgid "The layer must be published as WFS (see :ref:`publish_layer_wfs`) and the primary key must be published as well in the :guilabel:`Layer properties`."
 msgstr ""
 
@@ -3066,7 +3062,7 @@ msgid "In the **Tools** tab of Lizmap plugin dialog, there is a group called \"A
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:32
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:41
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:42
 msgid "To add a layer to this tool:"
 msgstr ""
 
@@ -3102,10 +3098,7 @@ msgstr ""
 msgid "Let the :guilabel:`Hide layer in the list` unchecked. This is for relation."
 msgstr ""
 
-#: ../../source/shared/field_alias.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/attribute_table.rst>:1
-#: ../../source/shared/field_alias.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/dataviz.rst>:1
-#: ../../source/shared/field_alias.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/edition.rst>:1
-#: ../../source/shared/field_alias.rst <included from /home/laurent/projets/3liz/sites/lizmap-documentation/source/publish/lizmap_plugin/tooltip.rst>:1
+#: ../../source/shared/field_alias.rst:1
 msgid "Fields will be displayed with their alias if it's defined. See :ref:`alias_on_fields`."
 msgstr ""
 
@@ -3233,121 +3226,129 @@ msgstr ""
 msgid "OSM Mapnik: service available on openstreetmap.org"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:38
-msgid "*ThunderForest*, company using OSM data and providing tiles: * Open Cycle Map: OpenStreetMap cycling data including altitude information"
+#: ../../source/publish/lizmap_plugin/basemap.rst:37
+msgid "OSM stamen toner"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:41
-msgid "*Google*, requires compliance to use licence agreement:"
+#: ../../source/publish/lizmap_plugin/basemap.rst:38
+msgid "OpenTopoMap"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/basemap.rst:40
+msgid "*ThunderForest*, **API key required**: * Open Cycle Map: OpenStreetMap cycling data including altitude information"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:43
-msgid "Streets: the default Google Maps background layer"
-msgstr ""
-
-#: ../../source/publish/lizmap_plugin/basemap.rst:44
-#: ../../source/publish/lizmap_plugin/basemap.rst:51
-msgid "Satellite: the background map incorporating aerial and satellite images"
+msgid "*Google*, **API key required**:"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:45
-#: ../../source/publish/lizmap_plugin/basemap.rst:52
-msgid "Hybrid: the background map mixing streets and satellite"
+msgid "Streets: the default Google Maps background layer"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:46
-msgid "Terrain"
+#: ../../source/publish/lizmap_plugin/basemap.rst:53
+msgid "Satellite: the background map incorporating aerial and satellite images"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/basemap.rst:47
+#: ../../source/publish/lizmap_plugin/basemap.rst:54
+msgid "Hybrid: the background map mixing streets and satellite"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:48
-msgid "*Bing Map*, requires compliance with the Microsoft license agreement and therefore a key:"
+msgid "Terrain"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:50
+msgid "*Bing Map*, **API key required**:"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/basemap.rst:52
 msgid "Streets: the default Bing Map background layer"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:54
-msgid "*IGN Géoportail*, requires compliance with the IGN license agreement and therefore a key:"
-msgstr ""
-
 #: ../../source/publish/lizmap_plugin/basemap.rst:56
-msgid "Plan: The IGN rendering for the Web"
-msgstr ""
-
-#: ../../source/publish/lizmap_plugin/basemap.rst:57
-msgid "Satellite: the background map incorporating IGN aerial and satellite images"
+msgid "*IGN Géoportail*, **API key required** for one layer:"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:58
-msgid "Scan: the background map mixing the various IGN scan"
+msgid "Plan: The IGN rendering for the Web"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:59
-msgid "Cadastre"
+msgid "Satellite: the background map incorporating IGN aerial and satellite images"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/basemap.rst:60
+msgid "Scan: the background map mixing the various IGN scan, API key needed"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:61
-msgid "The licenses are available at the following URLs:"
+msgid "Cadastre"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:63
-msgid "*OpenStreetMap*: https://wiki.openstreetmap.org/wiki/Tile_usage_policy"
-msgstr ""
-
-#: ../../source/publish/lizmap_plugin/basemap.rst:64
-msgid "*Google*: https://cloud.google.com/maps-platform/terms/"
+msgid "The licenses are available at the following URLs:"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:65
-msgid "*Bing*: https://www.microsoft.com/en-us/maps/product"
+msgid "*OpenStreetMap*: https://operations.osmfoundation.org/policies/tiles/"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:66
-msgid "*IGN*: https://depot.ign.fr/geoportail/api/develop/tech-docs-js/fr/license.html"
+msgid "*Google*: https://cloud.google.com/maps-platform/terms/"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:69
-msgid "Scale with external base layer"
+#: ../../source/publish/lizmap_plugin/basemap.rst:67
+msgid "*Bing*: https://www.microsoft.com/en-us/maps/product"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/basemap.rst:68
+msgid "*IGN*: https://geoservices.ign.fr/catalogue"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:71
+msgid "Scale with external base layer"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/basemap.rst:73
 msgid "All these external base layer are provided only in **EPSG:3857 / Pseudo Mercator** from the provider. The scale of such layer are **fixed** by the projection EPSG:3857."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:75
+#: ../../source/publish/lizmap_plugin/basemap.rst:77
 msgid "As a result, if you choose an external base layer, the project **will be displayed** in Google Mercator EPSG:3857. Therefore, if you have specified multiple scales in the Lizmap configuration, these intermediate scales **won't** be used. **Only** the **minimum** and **maximum** scale are used in this case. Read below about approximate scales."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:84
+#: ../../source/publish/lizmap_plugin/basemap.rst:86
 msgid "QGIS Server will perform **on the fly reprojection** for your data. It is therefore necessary to prepare the QGIS project accordingly."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:87
+#: ../../source/publish/lizmap_plugin/basemap.rst:89
 msgid "The *Google Mercator* coordinate reference system must be added in the Web Services CRSs list with the :menuselection:`Project properties --> QGIS Server --> WMS`."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:90
+#: ../../source/publish/lizmap_plugin/basemap.rst:92
 msgid "This is a list of a **very approximate** integer scale for a given zoom level for the **EPSG:3857**::"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:115
+#: ../../source/publish/lizmap_plugin/basemap.rst:117
 msgid "These scales are just a hint of the scale. It is not possible to have rounded scale like this with EPSG:3857."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:118
+#: ../../source/publish/lizmap_plugin/basemap.rst:120
 msgid "Visit the OpenStreetMap website at the country level and check how the scale is changing while panning/zooming."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:120
+#: ../../source/publish/lizmap_plugin/basemap.rst:122
 msgid "https://www.openstreetmap.org/#map=6/48.995/4.856"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:123
+#: ../../source/publish/lizmap_plugin/basemap.rst:125
 msgid "External Lizmap layers"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/basemap.rst:125
+#: ../../source/publish/lizmap_plugin/basemap.rst:127
 msgid "This feature has been removed. It's replaced by the possibility of using the menu :menuselection:`Layer --> Embed Layers and Groups`, and in the plugin *Layers* tab declare the parent project and the Lizmap repository for the embed layers and groups. See :ref:`lizmap-cache-centralized`"
 msgstr ""
 
@@ -3439,7 +3440,7 @@ msgstr ""
 msgid "**Aggregation**"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/dataviz.rst:65
+#: ../../source/publish/lizmap_plugin/dataviz.rst:-1
 msgid "For a few types of charts like bar or pie, you can chose to aggregate the data in"
 msgstr ""
 
@@ -3564,7 +3565,7 @@ msgid "You can visit the Cats project on https://demo.lizmap.com"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/edition.rst:6
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:124
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:125
 msgid "Edition"
 msgstr ""
 
@@ -3845,187 +3846,187 @@ msgstr ""
 msgid "tree_pictures/ <-- to store images in this folder, use: :file:`media/tree_pictures/`"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:5
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:6
 msgid "Filtered layer by user"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:13
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:14
 msgid "The filtering feature presented allows you to filter the data displayed on the map based on the logged in user. It is possible to filter only vector layers because Lizmap uses a column in the attribute table."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:16
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:17
 msgid "Filtering currently uses the ID of the user group connected. It's active for all requests to QGIS server, and thus concerns:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:19
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:20
 msgid "the vector layers images displayed on the map"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:20
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:21
 msgid "the popups. See :ref:`popup`"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:21
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:22
 msgid "the *Locate by layer* feature lists. See :ref:`locate-by-layer`"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:22
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:23
 msgid "drop-down lists of *Editing forms* from *Value relation*. See :ref:`edition`"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:23
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:24
 msgid "the attribute table display etc"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:25
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:26
 msgid "There are two kinds of filtering :"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:27
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:28
 msgid "based on attributes"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:28
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:29
 msgid "based on spatial relationship"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:31
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:32
 msgid "Filtering by spatial relationship"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:36
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:37
 msgid "In this panel, we can:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:38
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:39
 msgid "configure a polygon layer to use for spatial filtering"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:39
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:40
 msgid "configure layers which must be filtered by the filtering layer"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:47
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:48
 msgid "This is a feature in |lizmap_3_5|."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:49
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:50
 msgid "The Lizmap plugin in QGIS Server **must** be installed with at least **Lizmap QGIS plugin 3.6**. Otherwise, the filter won't work and all data will be visible. See :ref:`lizmap-server-plugin`."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:59
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:60
 msgid "Choose the polygon layer used for filtering"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:60
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:61
 msgid "Choose the field in this layer which has Lizmap groups, separated by a comma."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:61
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:62
 msgid "Add a layer to filter to this tool:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:64
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:65
 msgid "Choose the layer to filter"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:65
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:66
 msgid "Choose the primary key of the layer"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:66
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:67
 msgid "Choose if the filtering if for both visualisation and editing or only editing"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:67
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:68
 msgid "Choose either **intersection** or **contain** spatial relationship."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:72
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:73
 msgid "For your information, performance will be better when using PostgreSQL layers : either filtering or filtered layers or both."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:76
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:77
 msgid "Filtering by attribute"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:81
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:82
 msgid "A video tutorial is available at: https://vimeo.com/83966790"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:86
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:87
 msgid "To use data filtering tool in Lizmap Web Client, you must:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:88
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:89
 msgid "have **access to the administration interface** of Lizmap Web Client"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:90
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:91
 msgid "Here are the detailed steps to configure this feature:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:93
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:94
 msgid "In Lizmap Web Client administration, in the repository properties, be sure that ``anonymous`` and other relevant groups are not checked for :guilabel:`Always see complete layers data, even if filtered by login`. See :ref:`define-group-rights`."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:96
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:97
 msgid "Check group ID or user ID in the administration interface:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:98
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:99
 msgid "To know group ID, you must go to the administration interface :menuselection:`SYSTEM --> Groups of users for rights`: ID appears in parentheses after the name of each group (under the title :guilabel:`Groups of new users`)"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:99
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:100
 msgid "Or to know the user ID, just use its login."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:101
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:102
 msgid "For all vector layers which is desired filter data, just add a text column that will hold the ID for each line who has the right to display this feature."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:103
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:104
 msgid "*Fill this column* for each line of the attribute table with the ID (using the calculator, for example)."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:104
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:105
 msgid "It is possible to set ``all`` as the value in some lines to disable the filter: All users will see the data for these lines."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:105
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:106
 msgid "If the value in this column for a row does not correspond to a user group, then the data will be displayed for no user."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:110
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:111
 msgid "Add the layer in the table :guilabel:`Filter Data by User` panel:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:113
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:114
 msgid "Select layer from the dropdown list"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:114
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:115
 msgid "Select the field with the ID"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:115
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:116
 msgid "Check the box if the field contains user ID, instead of group ID"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:121
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:122
 msgid "Disable the client cache and cache server for all filtered layers. Otherwise, the data displayed will not be updated between each connection or user logout!"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:126
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:127
 msgid "If you have enabled the edition (see :ref:`edition`) on the filtered layer, the field containing the ID will be editable with:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:128
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:129
 msgid "either a combobox for a non admin user with either his own login or ``all``"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:129
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:130
 msgid "or a line edit to write a value for a admin user"
 msgstr ""
 
@@ -4066,109 +4067,109 @@ msgid "You can see a video with an example: https://vimeo.com/331395259"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:41
-msgid "There is a new tab in the Lizmap plugin which lets you configure the filter inputs based on the layer fields. You can add one or more fields for one or more layer. If you add fields from 2 or more different layers, Lizmap Web Client will show a combo box to allow the user to choose the layer to filter. Selecting a layer will refresh the form and deactivate the current filter."
-msgstr ""
-
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:43
-msgid "You need to add a line in the plugin table for each field you need to add in the filter form. For each field, you need to configure some options:"
+msgid "There is a tab in the Lizmap plugin which lets you configure the filter inputs based on the layer fields. You can add one or more fields for one or more layer. If you add fields from 2 or more different layers, Lizmap Web Client will show a combo box to allow the user to choose the layer to filter. Selecting a layer will refresh the form and deactivate the current filter."
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:46
-msgid "**Layer**: the source layer."
-msgstr ""
-
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:47
-msgid "**Title**: the title to give to the input, which will be displayed above the form input. For example \"Choose a category\" for a layer field called \"category\"."
-msgstr ""
-
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:48
-msgid "**Type**: the type of the form input, among one of the following: **Text, Unique Values, Date, Numeric**."
+msgid "You need to add a line in the plugin table for each field you need to add in the filter form. For each field, you need to configure some options:"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:49
-msgid "**Field**: the field name (in the database table). Only for the Text, Unique Values and Numeric types."
+msgid "**Layer**: the source layer."
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:50
-msgid "**Min date**: the field containing the start date of your object (ex: \"start_date\" of an event). This is only needed for the **Date** type. If you have only one date field in your data, you should select it in the Min Date field."
+msgid "**Title**: the title to give to the input, which will be displayed above the form input. For example \"Choose a category\" for a layer field called \"category\"."
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:51
-msgid "**Max date**: the field containing the end date of your data. If you have 2 fields containing dates, one for the start date and another for the end date, you can differentiate them. If not, you need to use the same field name for **Min date** and **Max date**."
+msgid "**Type**: the type of the form input, among one of the following: **Text, Unique Values, Date, Numeric**."
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:52
-msgid "**Format**: the format of the **Unique values** type only. It can be **select**, which will show a combo box, or **checkboxes** which will show one checkbox for each distinct value. The distinct values are dynamically queried by Lizmap Web Client."
+msgid "**Field**: the field name (in the database table). Only for the Text, Unique Values and Numeric types."
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:53
+msgid "**Min date**: the field containing the start date of your object (ex: \"start_date\" of an event). This is only needed for the **Date** type. If you have only one date field in your data, you should select it in the Min Date field."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:54
+msgid "**Max date**: the field containing the end date of your data. If you have 2 fields containing dates, one for the start date and another for the end date, you can differentiate them. If not, you need to use the same field name for **Min date** and **Max date**."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:55
+msgid "**Format**: the format of the **Unique values** type only. It can be **select**, which will show a combo box, or **checkboxes** which will show one checkbox for each distinct value. The distinct values are dynamically queried by Lizmap Web Client."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:56
 msgid "**Splitter**: for the **Unique values** type only. Use if you want to split the field values by a separator. Ex: ``culture, environment`` can be split into ``culture`` and ``environment`` with the splitter **`, `**."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:60
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:63
 msgid "Description of the different form input types"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:63
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:66
 msgid "Text"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:65
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:68
 msgid "This is the simplest type. With this type of input, the user will see a classical text input. You can type any text then validate. Autocompletion is enabled by default, which means Lizmap will retrieve the unique values for this field. This could be an option in the future if some datasets are too big and this autocompletion feature is too heavy."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:67
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:82
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:93
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:111
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:70
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:85
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:96
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:114
 msgid "The filter built will be like:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:74
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:77
 msgid "Date"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:76
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:79
 msgid "This input type will show a slider with 2 handles to allow to search between the two selected values. The two text inputs are also shown and can be used to manually set the min and max dates."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:78
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:81
 msgid "The date is \"truncated\" to a date (no time data such as hour, minutes or seconds yet)."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:80
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:83
 msgid "The slider step is hard coded and equals to 86400 seconds, which means 1 day."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:89
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:92
 msgid "Numeric"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:91
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:94
 msgid "This input type will show a slider with 2 handles to allow to search between the two selected values. Two text inputs are also shown and can be used to manually set the min and max values."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:100
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:103
 msgid "Unique values"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:102
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:105
 msgid "Lizmap will query the data to get the distinct values of the field. You can choose two different input types: **select** or **checkboxes**."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:104
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:107
 msgid "If you have specified a splitter text, for example **`, `**, Lizmap will find the unique values of the separated text values. For example the value of one feature ``culture, environment`` will be split into ``culture`` and ``environment`` with the splitter **`, `**. Selecting ``culture`` or ``environment`` in the form input will show this feature."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:106
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:109
 msgid "You can choose to show two different input types:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:108
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:111
 msgid "**Combo box**: this type will show a combo box with the list of distinct values for the field. The user will be able to choose only one item among the values."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/form_filtering.rst:109
+#: ../../source/publish/lizmap_plugin/form_filtering.rst:112
 msgid "**Checkboxes**: this type will show as many comboboxes as distinct values for the field. The data will be filtered with a ``UNION`` between checked items."
 msgstr ""
 
@@ -4216,8 +4217,28 @@ msgstr ""
 msgid "Write the URL of the Lizmap Web Client server. The URL should be the main Lizmap landing page."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/information.rst:33
+#: ../../source/publish/lizmap_plugin/information.rst:31
+msgid "If possible, use a login and password of a Lizmap Web Client administrator. It will give you more information about the server. This is optional. QGIS might ask you to setup the **master password**. It's a password to protect the QGIS internal password manager. This password is used only on **your** computer. The Lizmap plugin is storing the login and password in the `QGIS password manager <https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-password>`_."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/information.rst:37
 msgid "Do not use the any URL redirection. For instance, https://demo.lizmap.com/ is a redirection to https://demo.lizmap.com/lizmap/. Only the second one will work."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/information.rst:41
+msgid "Request for support"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/information.rst:43
+msgid "When requesting support on a website, it might be required or highly recommended to copy/paste versions used on your server. This helps a lot to know your environment and to know if the bug is a new one or already fixed. So you should have your server available in the table mentioned above, **with** an administrator login."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/information.rst:47
+msgid "Then, right-click on your server, then :menuselection:`Copy all versions in your clipboard for a support request…`. You can go back on your support request and do a right click and paste."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/information.rst:51
+msgid "When clicking in the QGIS plugin, you might have some actions displayed **in a popup**. You **should** check these actions, like to be sure to provide an administrator login, have QGIS server installed correctly, running a maintained version of Lizmap Web Client etc. Check your version against latest released on https://github.com/3liz/lizmap-web-client/releases"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/layers.rst:4
@@ -4344,79 +4365,79 @@ msgstr ""
 msgid "Server tile cache"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:5
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:6
 msgid "Locate by layer"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:13
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:14
 msgid "The idea of this tool is to present to the Lizmap Web Client user a drop down list that gives the ability to zoom on one or more spatial objects of the layer."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:16
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:17
 msgid "Use case"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:18
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:19
 msgid "Consider a spatial vector layer **districts** contained in the QGIS project. We choose to add these districts in the tool *Locate by layer*, to allow Lizmap Web Client users to quickly position on one of the districts."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:20
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:21
 msgid "Once this layer added in the tool *Locate by layer*, a drop down list of the districts appears on the Lizmap Web interface."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:22
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:23
 msgid "When the Web map user selects one name in this list, the map will automatically refocuses on the selected district and the district's geometry is displayed (optional)."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:30
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:31
 msgid "This tool is not designed for layers having a lot of features or a lot of complex geometries. The web browser will indeed have to download **all** features with vector geometries so it will make the loading the application slower. To reduce the loading time, you can reduce the decimals in the WFS settings for instance if your layer is in meters. For better performance if your layer is stored in PostGIS, use :ref:`postgresql-lizmap-search`."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:44
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:45
 msgid "**choose the layer** with the first dropdown from the list of the project vector layers"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:45
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:46
 msgid "then **the column that contains the label** you want to display in the dropdown list"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:46
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:47
 msgid "if you want to add pre-filter your data if a optional group by, use the :guilabel:`Optional group by` field."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:47
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:48
 msgid "if you want the geometry of the related objects is also displayed on the map when the user selects an item from the list, then check the option *Display the geometry*"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:48
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:49
 msgid "If you set a value above 0, autocompletion will be used after this amount of characters while the user types. The classical combobox will be replaced by a editable text input."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:49
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:50
 msgid "If Lizmap must trigger the filter on the layer. Only the selected feature will be visible on the map."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:56
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:57
 msgid "Hierarchical Lists"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:58
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:59
 msgid "If we take the example of districts, it may be interesting to also provide to the user a *sub-districts* dropdown. We wish that when the user chooses a district, the dropdown of sub-districts is automatically filtered to display only the sub-districts of the chosen district."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:60
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:61
 msgid "For this, there are 2 methods:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:62
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:63
 msgid "you either have **2 separate vector layers**: one for districts and for sub-districts. So you have to use a **field join** between the two layers to enable automatic filtering lists in Lizmap"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:63
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:64
 msgid "either we have **only 1 layer for sub-districts**, and then you can specify with the plugin a **group field**. Two dropdowns will be created instead of one in the Web application."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:65
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:66
 msgid "Don't forget to check if your configuration of QGIS server is the right one (in Lizmap : My account -> Lizmap configuration -> check if the qgis server version is the right one, if not, you can use the button 'modify' below). If the configuration is not right the location will be wrong!"
 msgstr ""
 
@@ -4428,100 +4449,104 @@ msgstr ""
 msgid "The tab :guilabel:`Map options` allows you to enable or disable basic Lizmap tools, choosing scales and the initial extent."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:17
-msgid "The generic options:"
+#: ../../source/publish/lizmap_plugin/map_options.rst:18
+msgid "Generic options"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:19
+#: ../../source/publish/lizmap_plugin/map_options.rst:20
 msgid "hide the project in Lizmap Web Client:"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:21
+#: ../../source/publish/lizmap_plugin/map_options.rst:22
 msgid "if this option is checked, the project will be hidden in the Lizmap home page that shows thumbnails for all directories and project of the application. You can use this option to hide the project"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:22
+#: ../../source/publish/lizmap_plugin/map_options.rst:24
 msgid "the project will still be accessible for WMS or WFS clients based on directories rights"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:23
+#: ../../source/publish/lizmap_plugin/map_options.rst:25
 msgid "this feature is interesting  in the case of using this project as an external project for other ones."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:25
-msgid "The map tools:"
-msgstr ""
-
-#: ../../source/publish/lizmap_plugin/map_options.rst:27
-msgid "*Draw*: |lizmap_3_4|, enables some drawing tools."
-msgstr ""
-
 #: ../../source/publish/lizmap_plugin/map_options.rst:28
-msgid "*Print*: enables the use of QGIS compositions for PDF generation map"
-msgstr ""
-
-#: ../../source/publish/lizmap_plugin/map_options.rst:29
-msgid "*Measure tools*: enables the measurement tools in the map (length, area, perimeter)"
+msgid "Map tools"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:30
-msgid "*Zoom history*: enables the navigation buttons in the history of zoom and move in the map"
+msgid "*Draw*: enables some drawing tools."
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:31
-msgid "*Automatic geolocation*: enables the functions to use the HTML5 geolocation based on Wifi and/or GPS"
+msgid "*Print*: enables the use of QGIS compositions for PDF generation map"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:32
-msgid "*Address search*: to add an address search engine that is based on one of these services:"
+msgid "*Measure tools*: enables the measurement tools in the map (length, area, perimeter)"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/map_options.rst:33
+msgid "*Zoom history*: enables the navigation buttons in the history of zoom and move in the map"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:34
-msgid "Nominatim (OpenStreetMap)"
+msgid "*Automatic geolocation*: enables the functions to use the HTML5 geolocation based on Wifi and/or GPS"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:35
-msgid "Google"
-msgstr ""
-
-#: ../../source/publish/lizmap_plugin/map_options.rst:36
-msgid "IGN France (Géoportail)"
+msgid "*Address search*: to add an address search engine that is based on one of these services:"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:37
-msgid "BAN (France)"
+msgid "Nominatim (OpenStreetMap)"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/map_options.rst:38
+msgid "Google (API key required, see :ref:`lizmap-config-baselayers`)"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:39
-msgid "The scales :"
+msgid "IGN France (Géoportail)"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:41
+#: ../../source/publish/lizmap_plugin/map_options.rst:40
+msgid "BAN (France)"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/map_options.rst:45
 msgid "a list of integer values separated by commas (and optional whitespace), eg: ``250000, 100000, 50000``."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:42
+#: ../../source/publish/lizmap_plugin/map_options.rst:46
 msgid "Lizmap also used these scales to restrict the application display between the minimum and maximum of these scales. This is why **it is mandatory to enter at least 2 scales** in the list."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:46
+#: ../../source/publish/lizmap_plugin/map_options.rst:50
 msgid "As soon as there is an external basemap published in **EPSG:3857** such as OSM, Google Maps..., the application will only use the minimum and maximum **scale** to the minimum and maximum **zoom level**. Intermediate **scale** that you might have defined won't be read, because there isn't a strict match between your **scale** and **zoom level** provided by external base map in **EPSG:3857**."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:51
-msgid "The initial map extent:"
+#: ../../source/publish/lizmap_plugin/map_options.rst:56
+msgid "Initial map extent"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:53
+#: ../../source/publish/lizmap_plugin/map_options.rst:58
 msgid "a list of coordinates in the Reference Coordinate System map in the format: ``xmin, ymin, xmax, ymax``, setting the initial map extent"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:54
-msgid "the maximal map extent is specified in the *OWS server* tab of *Project Properties* window. The data will not be displayed if they are outside it"
+#: ../../source/publish/lizmap_plugin/map_options.rst:59
+msgid "the maximal map extent is specified in the *QGIS server* tab of *Project Properties* window. The data will not be displayed if they are outside it"
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/map_options.rst:55
+#: ../../source/publish/lizmap_plugin/map_options.rst:60
 msgid "by default, the initial extent is the maximal one."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/map_options.rst:63
+msgid "Map interface"
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/map_options.rst:65
+msgid "To hide by default some components in the user interface."
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/time_manager.rst:4
@@ -5009,4 +5034,3 @@ msgstr ""
 #: ../../source/publish/quick_start/publish_with_ftp.rst:38
 msgid "**overwrite files manually**: QGIS project :file:`*.qgs` and Lizmap configuration :file:`*.qgs.cfg`."
 msgstr ""
-

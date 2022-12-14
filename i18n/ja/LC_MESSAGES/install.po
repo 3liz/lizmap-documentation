@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-09 16:51+0000\n"
+"POT-Creation-Date: 2022-12-14 14:03+0100\n"
 "PO-Revision-Date: 2022-08-02 09:23+0000\n"
 "Last-Translator: yamamoto ryuzo <ryu@yamakun.net>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/3liz-1/teams/62012/ja/)\n"
@@ -921,7 +921,7 @@ msgstr ""
 ":file:`lizmap/var/config`に作成します。"
 
 #: ../../source/install/linux.rst:243
-#: ../../source/install/pre_requirements.rst:174
+#: ../../source/install/pre_requirements.rst:176
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
@@ -1305,11 +1305,9 @@ msgstr ""
 
 #: ../../source/install/pre_requirements.rst:21
 msgid ""
-"Follow the QGIS Documentation how to install QGIS Server : "
-"https://docs.qgis.org/latest/en/docs/server_manual/"
+"Follow the `QGIS Server documentation on how to install QGIS Server "
+"<https://docs.qgis.org/latest/en/docs/server_manual/>`_."
 msgstr ""
-"QGIS ドキュメントに記載されている QGIS Server "
-"のインストール方法に従ってください。https://docs.qgis.org/latest/en/docs/server_manual/"
 
 #: ../../source/install/pre_requirements.rst:23
 msgid ""
@@ -1375,23 +1373,29 @@ msgstr "QGIS Serverプラグイン"
 
 #: ../../source/install/pre_requirements.rst:52
 msgid ""
-"Some plugins can be added to QGIS Server. This will enable some features in "
-"Lizmap. It's not compulsory but in some situations, it's better."
+"Some plugins can be added to QGIS Server. Please check the `QGIS Server "
+"documentation "
+"<https://docs.qgis.org/latest/en/docs/server_manual/plugins.html>`_ about "
+"plugins on the server side."
 msgstr ""
-"いくつかのプラグインは、QGISサーバーに追加することができます。これにより、Lizmapのいくつかの機能が有効になります。必須ではありませんが、場合によってはその方が良い場合もあります。"
 
-#: ../../source/install/pre_requirements.rst:55
-msgid ""
-"Either you should setup the ``QGIS_PLUGINPATH`` environment variable during "
-"the installation of QGIS Server or use the default one provided by QGIS. "
-"https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-"
-"variables"
+#: ../../source/install/pre_requirements.rst:56
+msgid "The **Lizmap server** plugin is required."
 msgstr ""
-"QGIS Server のインストール時に ``QGIS_PLUGINPATH`` 環境変数を設定するか、QGIS "
-"が提供するデフォルトのものを使用する必要があります。https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-"
-"variables"
+
+#: ../../source/install/pre_requirements.rst:58
+msgid "Plugins listed below will enable some features in Lizmap Web Client."
+msgstr ""
 
 #: ../../source/install/pre_requirements.rst:60
+msgid ""
+"Either you should setup the ``QGIS_PLUGINPATH`` environment variable during "
+"the installation of QGIS Server or use the `default one provided by QGIS "
+"<https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-"
+"variables>`_."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:64
 msgid ""
 "To manage QGIS Server plugins, we encourage you to use **qgis-plugin-"
 "manager**, a CLI tool to install and upgrade plugins. "
@@ -1400,59 +1404,55 @@ msgstr ""
 "QGIS サーバのプラグインを管理するには、プラグインをインストールおよびアップグレードするための CLI ツールである **qgis-plugin-"
 "manager** を使用することをお勧めします。 https://pypi.org/project/qgis-plugin-manager/"
 
-#: ../../source/install/pre_requirements.rst:63
+#: ../../source/install/pre_requirements.rst:67
 msgid "AtlasPrint"
 msgstr "地図帳"
 
-#: ../../source/install/pre_requirements.rst:65
+#: ../../source/install/pre_requirements.rst:69
 msgid "To enable the PDF based on a QGIS Layout Atlas"
 msgstr "‎QGIS 地図帳レイアウトによる PDF を有効にするには‎"
 
-#: ../../source/install/pre_requirements.rst:66
+#: ../../source/install/pre_requirements.rst:70
 msgid "https://github.com/3liz/qgis-atlasprint"
 msgstr "https://github.com/3liz/qgis-atlasprint"
 
-#: ../../source/install/pre_requirements.rst:68
+#: ../../source/install/pre_requirements.rst:72
 msgid "Cadastre"
 msgstr "Cadastre"
 
-#: ../../source/install/pre_requirements.rst:70
+#: ../../source/install/pre_requirements.rst:74
 msgid "French use-case only"
 msgstr "フランスでの利用のみを想定"
 
-#: ../../source/install/pre_requirements.rst:71
+#: ../../source/install/pre_requirements.rst:75
 msgid "Needed for the Lizmap Cadastre module"
 msgstr "Lizmap Cadastre モジュールに必要です"
 
-#: ../../source/install/pre_requirements.rst:72
+#: ../../source/install/pre_requirements.rst:76
 msgid "https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/"
 msgstr "https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/"
 
-#: ../../source/install/pre_requirements.rst:74
+#: ../../source/install/pre_requirements.rst:78
 msgid "Lizmap server"
 msgstr "Lizmap server"
 
-#: ../../source/install/pre_requirements.rst:76
+#: ../../source/install/pre_requirements.rst:80
 msgid ""
 "Lizmap **is not only** a PHP application, there is also Python plugin for "
 "**QGIS Server** called **Lizmap server**."
 msgstr ""
 "LizmapはPHP **だけでなく** 、 **QGISサーバー** のPythonプラグインである **Lizmap server** もあります。"
 
-#: ../../source/install/pre_requirements.rst:77
-#: ../../source/install/pre_requirements.rst:117
+#: ../../source/install/pre_requirements.rst:81
+#: ../../source/install/pre_requirements.rst:121
 msgid "https://github.com/3liz/qgis-lizmap-server-plugin"
 msgstr "https://github.com/3liz/qgis-lizmap-server-plugin"
 
-#: ../../source/install/pre_requirements.rst:78
-msgid ""
-"The plugin is **highly** recommended, a few features won't work as expected "
-"if the plugin is not installed or not upgraded."
+#: ../../source/install/pre_requirements.rst:82
+msgid "The plugin is **required**."
 msgstr ""
-"プラグインは **highly** "
-"推奨されています。プラグインがインストールされていないか、またはアップグレードされていない場合、いくつかの機能は期待どおりに動作しません。"
 
-#: ../../source/install/pre_requirements.rst:79
+#: ../../source/install/pre_requirements.rst:83
 msgid ""
 "**Important**, read below for more information the Lizmap QGIS Server "
 "plugin. (:ref:`lizmap-server-plugin`)"
@@ -1460,49 +1460,49 @@ msgstr ""
 "‎ **重要**  lizmap QGISサーバープラグインの詳細については、以下をお読みください‎. (:ref:`lizmap-server-"
 "plugin`)"
 
-#: ../../source/install/pre_requirements.rst:81
+#: ../../source/install/pre_requirements.rst:85
 msgid "WfsOutputExtension"
 msgstr "WfsOutputExtension"
 
-#: ../../source/install/pre_requirements.rst:83
+#: ../../source/install/pre_requirements.rst:87
 msgid "To add new format when exporting vector data"
 msgstr "‎ベクター データをエクスポートするときに新しい形式を追加するには‎"
 
-#: ../../source/install/pre_requirements.rst:84
+#: ../../source/install/pre_requirements.rst:88
 msgid "https://github.com/3liz/qgis-wfsOutputExtension"
 msgstr "https://github.com/3liz/qgis-wfsOutputExtension"
 
-#: ../../source/install/pre_requirements.rst:86
+#: ../../source/install/pre_requirements.rst:90
 msgid "Logging"
 msgstr "ロギング"
 
-#: ../../source/install/pre_requirements.rst:88
+#: ../../source/install/pre_requirements.rst:92
 msgid "To log QGIS Servers log and to flush the cache on QGIS Server"
 msgstr "‎QGISサーバーログを記録し、QGISサーバー上のキャッシュを清浄化するには‎"
 
-#: ../../source/install/pre_requirements.rst:89
+#: ../../source/install/pre_requirements.rst:93
 msgid "https://github.com/3liz/qgis-logging-plugin."
 msgstr "https://github.com/3liz/qgis-logging-plugin."
 
-#: ../../source/install/pre_requirements.rst:90
+#: ../../source/install/pre_requirements.rst:94
 msgid "This plugin is deprecated."
 msgstr "‎このプラグインは廃止されました。‎"
 
-#: ../../source/install/pre_requirements.rst:95
+#: ../../source/install/pre_requirements.rst:99
 msgid "Lizmap QGIS Server plugin"
 msgstr "Lizmap QGISサーバープラグイン"
 
-#: ../../source/install/pre_requirements.rst:97
+#: ../../source/install/pre_requirements.rst:101
 msgid ""
-"Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web "
-"Client :"
-msgstr "lizmap QGISサーバープラグインを追加すると、lizmap Web Client にいくつかの機能が追加されます:‎"
+"The Lizmap QGIS Server plugin **is required** and will add some features on "
+"Lizmap Web Client :"
+msgstr ""
 
-#: ../../source/install/pre_requirements.rst:99
+#: ../../source/install/pre_requirements.rst:103
 msgid "retrieve information from QGIS Server."
 msgstr "‎QGISサーバーから情報を取得します。‎"
 
-#: ../../source/install/pre_requirements.rst:101
+#: ../../source/install/pre_requirements.rst:105
 msgid ""
 "evaluate `QGIS Expressions "
 "<https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`_"
@@ -1512,91 +1512,85 @@ msgstr ""
 "<https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`　を使った表現"
 " :"
 
-#: ../../source/install/pre_requirements.rst:104
+#: ../../source/install/pre_requirements.rst:108
 msgid "constraints"
 msgstr "‎制約‎"
 
-#: ../../source/install/pre_requirements.rst:105
+#: ../../source/install/pre_requirements.rst:109
 msgid "default value"
 msgstr "‎既定値‎"
 
-#: ../../source/install/pre_requirements.rst:106
+#: ../../source/install/pre_requirements.rst:110
 msgid "group visibility"
 msgstr "‎グループの見え方"
 
-#: ../../source/install/pre_requirements.rst:107
+#: ../../source/install/pre_requirements.rst:111
 msgid "Read :ref:`edition-expressions`."
 msgstr " :ref:` 編集方法 ‎`を読んでください。"
 
-#: ../../source/install/pre_requirements.rst:109
+#: ../../source/install/pre_requirements.rst:113
 msgid "check User Access Rights (ACL) for features and layers :"
 msgstr "地物とレイヤーのユーザーアクセス権（ACL）の確認 :"
 
-#: ../../source/install/pre_requirements.rst:111
+#: ../../source/install/pre_requirements.rst:115
 msgid "filter by polygon"
 msgstr "ポリゴンでフィルタ‎"
 
-#: ../../source/install/pre_requirements.rst:112
+#: ../../source/install/pre_requirements.rst:116
 msgid "by attribute"
 msgstr "‎属性による"
 
-#: ../../source/install/pre_requirements.rst:114
+#: ../../source/install/pre_requirements.rst:118
 msgid "use the **Form** popup, read :ref:`form-popup`."
 msgstr " **フォーム** を使った地物情報は :ref:` フォーム－地物情報 ` を読んでください。"
 
-#: ../../source/install/pre_requirements.rst:115
+#: ../../source/install/pre_requirements.rst:119
 msgid ""
 "enable ``@lizmap_user`` and ``lizmap_user_groups`` variables in QGIS "
 "projects"
 msgstr "‎QGISプロジェクトで ``@lizmap_user`` と ``lizmap_user_groups`` 変数を有効にする‎"
 
-#: ../../source/install/pre_requirements.rst:118
+#: ../../source/install/pre_requirements.rst:122
 msgid ""
-"The plugin is not required, but a few features won't work as expected if the"
-" plugin is not installed or not upgraded"
-msgstr ""
-"プラグインは必須ではありませんが、プラグインがインストールされていなかったり、アップグレードされていないと、いくつかの機能が期待通りに動作しません。"
-
-#: ../../source/install/pre_requirements.rst:119
-msgid ""
-"The name of the plugin is **Lizmap server**. Do not install the **Lizmap** "
+"The name of the plugin is ``Lizmap server``. Do not install the ``Lizmap`` "
 "plugin which is the **desktop** Python plugin."
 msgstr ""
-"プラグイン名は、**Lizmap server** です。 **デスクトップ用** Pythonプラグインである **Lizmap** "
-"プラグインはインストールしないでください。"
 
-#: ../../source/install/pre_requirements.rst:122
+#: ../../source/install/pre_requirements.rst:125
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/install/pre_requirements.rst:125
+#: ../../source/install/pre_requirements.rst:128
 msgid "QGIS Server side"
 msgstr "‎QGISサーバー側‎"
 
-#: ../../source/install/pre_requirements.rst:127
+#: ../../source/install/pre_requirements.rst:130
 msgid ""
-"The Lizmap server plugin must be installed in the correct folder for QGIS "
-"Server. The environment variable must be set in QGIS Server. The plugin name"
-" is **Lizmap server**."
+"Please check the `QGIS Server documentation "
+"<https://docs.qgis.org/latest/en/docs/server_manual/plugins.html>`_ about "
+"plugins on the server side."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:131
+#: ../../source/install/pre_requirements.rst:133
 msgid ""
-"You must install the \"**Lizmap server**\" plugin. The \"**Lizmap**\" plugin"
-" is designed only for QGIS desktop. Do not keep both on your server."
+"The Lizmap server plugin, called ``Lizmap server``, **is required** in the "
+"correct folder for QGIS Server."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:135
+#: ../../source/install/pre_requirements.rst:136
 msgid ""
-"For **security** reason, to enable all features on the QGIS server side, you"
-" must enable the environment variable "
-"``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`` on QGIS server."
+"You must install the ``Lizmap server`` plugin. The ``Lizmap`` plugin is "
+"designed only for QGIS desktop. Do not keep both on your server."
 msgstr ""
-"‎**安全** "
-"のために、QGISサーバー側のすべての機能を有効にするには、QGISサーバー上の環境変数　``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True``"
-" を有効にする必要があります。‎"
 
-#: ../../source/install/pre_requirements.rst:138
+#: ../../source/install/pre_requirements.rst:140
+msgid ""
+"For **security** reason, to enable the API on the QGIS server side, you must"
+" enable the environment variable ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS`` with"
+" the value set to ``True`` on QGIS server."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:143
 msgid ""
 "You **must** be ensured that this API "
 "``http://your.qgis.server.url/lizmap/server.json`` is protected on your "
@@ -1611,29 +1605,23 @@ msgstr ""
 "Webサーバー上でこのAPI ``http://your.qgis.server.url/lizmap/server.json`` が保護されていることを **確認** する必要があります。 **一番良い** のは、インターネットからアクセスできないバーチャルホスト上のQGISサーバー \n"
 "``http://your.qgis.server.url`` へのアクセスを制限することです。QGISサーバーへのすべてのリクエストは、Lizmap Web Clientから送信されます。QGISサーバーは、外部からアクセスできないようにする必要があります。以前からQGISサーバーをインターネットから保護することを **強く** 推奨しています。Lizmap Web Clientが提供するWFS/WMSリンクをユーザーが使用する **必要** があり、Lizmapはユーザーの権限を確認することができます。"
 
-#: ../../source/install/pre_requirements.rst:144
+#: ../../source/install/pre_requirements.rst:149
 msgid ""
 "This variable will **expose** server settings such as QGIS server version, "
 "which is used by Lizmap Web Client."
 msgstr "この変数は、Lizmap Web Clientで使用されるQGISサーバーのバージョンなどのサーバー設定を **公開** するものです。"
 
-#: ../../source/install/pre_requirements.rst:147
+#: ../../source/install/pre_requirements.rst:152
 msgid "Administration panel"
 msgstr "‎管理パネル‎"
 
-#: ../../source/install/pre_requirements.rst:149
-msgid ""
-"You **must** have the table called \"Server information\" working correctly "
-"in your administration panel before trying a QGIS project."
-msgstr "QGISプロジェクトを試す前に、管理パネルで「サーバー情報」というテーブルが正しく動作していることが **必要** です。"
-
-#: ../../source/install/pre_requirements.rst:152
+#: ../../source/install/pre_requirements.rst:154
 msgid ""
 "If your are using QGIS Server with **FCGI**, the Lizmap API URL **must** be "
 "empty."
 msgstr " **FCGI** でQGISサーバーを使用している場合、Lizmap API URL **は空でなければなりません** 。‎"
 
-#: ../../source/install/pre_requirements.rst:154
+#: ../../source/install/pre_requirements.rst:156
 msgid ""
 "Otherwise, if you are using `Py-QGIS-Server <https://docs.3liz.org/py-qgis-"
 "server/>`_, the Lizmap API URL **must** be configured in the administration "
@@ -1641,7 +1629,7 @@ msgid ""
 "well."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:157
+#: ../../source/install/pre_requirements.rst:159
 msgid ""
 "Starting from Py-QGIS-Server version 1.8.4, it's possible to enable the "
 "Lizmap API endpoint with the environment variable "
@@ -1649,7 +1637,7 @@ msgid ""
 "your configuration file :"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:168
+#: ../../source/install/pre_requirements.rst:170
 msgid ""
 "Then, with Py-QGIS-Server, if your URL for OWS is `http://map:8080/ows/`, it"
 " means the URL for the Lizmap API endpoint is `http://map:8080/lizmap/`."
@@ -1657,11 +1645,11 @@ msgstr ""
 "Py-QGIS-Serverでは、OWSのURLが `http://map:8080/ows/` であれば、Lizmap "
 "APIのエンドポイントのURLは `http://map:8080/lizmap/` であることを意味します。"
 
-#: ../../source/install/pre_requirements.rst:176
+#: ../../source/install/pre_requirements.rst:178
 msgid "PostgreSQL can be used for **three** different purposes in Lizmap :"
 msgstr "PostgreSQLは、Lizmapの中で **3つ** の異なる目的で使用することができます。"
 
-#: ../../source/install/pre_requirements.rst:178
+#: ../../source/install/pre_requirements.rst:180
 msgid ""
 "To store GIS data. **No** configuration is needed on the Lizmap Web Client "
 "server side, **only** the PostgreSQL server must be accessible from the "
@@ -1674,7 +1662,7 @@ msgstr ""
 "が必要です。Lizmapでレイヤーを編集することは可能ですが、レイヤーはPostgreSQLに保存されている必要があります。 "
 ":ref:`edition-prerequisites` を参照してください。"
 
-#: ../../source/install/pre_requirements.rst:181
+#: ../../source/install/pre_requirements.rst:183
 msgid ""
 "To store Lizmap Web Client users and user actions. Lizmap uses tables. This "
 "setting must be done when **installing** Lizmap."
@@ -1682,7 +1670,7 @@ msgstr ""
 " Lizmap Web Client ユーザーとユーザーアクションを保存します。lizmapはユーザーテーブルを使用します。‎‎この設定は、lizmap"
 " **インストール** するときに行う必要があります。‎"
 
-#: ../../source/install/pre_requirements.rst:182
+#: ../../source/install/pre_requirements.rst:184
 msgid ""
 "To use `lizmap_search`, see :ref:`postgresql-lizmap-search`. This setting on"
 " the Lizmap server can be set when you need it."

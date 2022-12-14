@@ -6,26 +6,54 @@
 # Translators:
 # Michael Douchin <kimaidou@gmail.com>, 2022
 # Arnaud HANRY <arnaud.hanry@le64.fr>, 2022
-# Laurent Jouanneau <dev@ljouanneau.com>, 2022
 # rldhont <rldhont@gmail.com>, 2022
-# etrimaille <gustrimaille@yahoo.fr>, 2022
 # Marjorie FANGAIN, 2022
 # Nicolas Boisteault <nboisteault@gmail.com>, 2022
+# etrimaille <gustrimaille@yahoo.fr>, 2022
+# Laurent Jouanneau <dev@ljouanneau.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-09 16:51+0000\n"
+"POT-Creation-Date: 2022-12-14 14:03+0100\n"
 "PO-Revision-Date: 2022-08-02 09:23+0000\n"
-"Last-Translator: Nicolas Boisteault <nboisteault@gmail.com>, 2022\n"
+"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../source/substitutions.rst:7
+msgid "add_layer_svg"
+msgstr "add_layer_svg"
+
+#: ../../source/substitutions.rst:8
+msgid "edit_layer_svg"
+msgstr "edit_layer_svg"
+
+#: ../../source/substitutions.rst:9
+msgid "remove_layer_svg"
+msgstr "remove_layer_svg"
+
+#: ../../source/substitutions.rst:10
+msgid "down_layer_svg"
+msgstr "down_layer_svg"
+
+#: ../../source/substitutions.rst:11
+msgid "up_layer_svg"
+msgstr "up_layer_svg"
+
+#: ../../source/substitutions.rst:12
+msgid "refresh_svg"
+msgstr "refresh_svg"
+
+#: ../../source/substitutions.rst:13
+msgid "properties_svg"
+msgstr "properties_svg"
 
 #: ../../source/publish/configuration/action_popup.rst:4
 msgid "Action in a popup"
@@ -49,11 +77,11 @@ msgstr "Action dans une popup"
 #: ../../source/publish/lizmap_plugin/basemap.rst:7
 #: ../../source/publish/lizmap_plugin/dataviz.rst:7
 #: ../../source/publish/lizmap_plugin/edition.rst:9
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:8
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:9
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:7
 #: ../../source/publish/lizmap_plugin/information.rst:7
 #: ../../source/publish/lizmap_plugin/layers.rst:7
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:8
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:9
 #: ../../source/publish/lizmap_plugin/map_options.rst:9
 #: ../../source/publish/lizmap_plugin/time_manager.rst:7
 #: ../../source/publish/lizmap_plugin/tooltip.rst:7
@@ -79,12 +107,12 @@ msgstr "C'est une fonctionnalité dans |lizmap_3_4|."
 #: ../../source/publish/lizmap_plugin/basemap.rst:10
 #: ../../source/publish/lizmap_plugin/dataviz.rst:10
 #: ../../source/publish/lizmap_plugin/edition.rst:12
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:11
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:34
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:12
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:35
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:10
 #: ../../source/publish/lizmap_plugin/information.rst:10
 #: ../../source/publish/lizmap_plugin/layers.rst:10
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:11
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:12
 #: ../../source/publish/lizmap_plugin/time_manager.rst:10
 #: ../../source/publish/lizmap_plugin/tooltip.rst:10
 msgid "Principle"
@@ -121,12 +149,12 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/basemap.rst:22
 #: ../../source/publish/lizmap_plugin/dataviz.rst:41
 #: ../../source/publish/lizmap_plugin/edition.rst:56
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:54
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:84
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:55
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:85
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:36
 #: ../../source/publish/lizmap_plugin/information.rst:22
 #: ../../source/publish/lizmap_plugin/layers.rst:15
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:36
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:37
 #: ../../source/publish/lizmap_plugin/time_manager.rst:26
 #: ../../source/publish/lizmap_plugin/tooltip.rst:20
 msgid "Configuring the tool"
@@ -135,17 +163,21 @@ msgstr "Configurer l'outil"
 #: ../../source/publish/configuration/action_popup.rst:28
 msgid ""
 "Each action is **characterized** by a ``layer id``, a ``name``, a ``title``,"
-" an ``icon``, some optional ``options``,"
+" an ``icon``, some optional ``options``, ``style``, ``callbacks`` and "
+"``confirm`` property can be used."
 msgstr ""
-"Chaque action est **caractérisée** par un ``identifiant de couche``, un "
-"``nom``, un ``titre``, une ``icône``, quelques ``options`` facultatives,"
+"Chaque action est **caractérisée** par un ``layer_id``, un ``name``, un "
+"``title``, une ``icon``, quelques ``options`` facultatives, ``style``, "
+"``callbacks`` et ``confirm`` peut être utilisées."
 
-#: ../../source/publish/configuration/action_popup.rst:29
-msgid ""
-"``style``, ``callbacks`` and ``confirm`` property can be used. * A layer can"
-" have **one or several actions** * You can have **one or several layers** "
-"with their own actions"
+#: ../../source/publish/configuration/action_popup.rst:30
+msgid "A layer can have **one or several actions**"
+msgstr "Un calque peut avoir **une ou plusieurs actions**"
+
+#: ../../source/publish/configuration/action_popup.rst:31
+msgid "You can have **one or several layers** with their own actions"
 msgstr ""
+"Vous pouvez avoir **un ou plusieurs calques** avec leurs propres actions"
 
 #: ../../source/publish/configuration/action_popup.rst:33
 msgid ""
@@ -1400,7 +1432,7 @@ msgstr ""
 #: ../../source/publish/customization/iframe.rst:16
 #: ../../source/publish/customization/template.rst:21
 #: ../../source/publish/customization/themes.rst:78
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:79
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:80
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:25
 #: ../../source/publish/lizmap_plugin/time_manager.rst:15
 msgid "Example"
@@ -1422,11 +1454,6 @@ msgstr ""
 
 #: ../../source/publish/configuration/media.rst:153
 #: ../../source/publish/configuration/popup.rst:67
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "id"
 msgstr "id"
@@ -2909,6 +2936,9 @@ msgid ""
 "properties --> Display --> HTML Map Tip`. The main advantages of this "
 "approach are:"
 msgstr ""
+"Les popups *QGIS* peuvent être configurées via `QGIS --> Propriétés de la "
+"couche --> Infobulles --> HTML`. Les principaux avantages de cette approche "
+"sont :"
 
 #: ../../source/publish/configuration/popup.rst:232
 msgid "HTML is used"
@@ -3032,6 +3062,9 @@ msgid ""
 "path. Theses paths must refer to a project media subdirectory, for example: "
 "`media/photos/feature_1_a.jpg`"
 msgstr ""
+"Ajouter des données aux couches. Vous devez utiliser un chemin relatif pour "
+"stocker le chemin des images. Ces chemins doivent faire référence à un sous-"
+"répertoire media du projet, par exemple : `media/photos/feature_1_a.jpg`"
 
 #: ../../source/publish/configuration/popup.rst:276
 msgid "In Lizmap plugin:"
@@ -3042,12 +3075,17 @@ msgid ""
 "In the :guilabel:`Layers` tab, activate popup for both layers. You can "
 "configure source of the popup if you need specific layouts"
 msgstr ""
+"Dans l'onglet :guilabel:`Couches`, activez la popup pour les deux couches. "
+"Vous pouvez configurer la popup si vous avez besoin de mises en page "
+"spécifiques."
 
 #: ../../source/publish/configuration/popup.rst:279
 msgid ""
 "For the parent layer, activate the option :guilabel:`Display relative "
 "children under each object (use relations)`"
 msgstr ""
+"Pour la couche parente, activez l'option \"Afficher les enfants relatifs "
+"sous chaque objet (utiliser les relations)\""
 
 #: ../../source/publish/configuration/popup.rst:280
 msgid ""
@@ -3130,6 +3168,11 @@ msgid ""
 "<https://docs.qgis.org/latest/en/docs/user_manual/print_composer/index.html>`_"
 " without atlas enabled."
 msgstr ""
+"Pour proposer l’impression sur la carte en ligne, il faut avoir activer "
+"l'outil d'impression dans l'onglet *Carte* du plugin (:ref:`lizmap-config-"
+"map`) et que le projet QGIS possède au moins `un composeur d'impression "
+"<https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/index.html>`_"
+" sans \"atlas\" activé."
 
 #: ../../source/publish/configuration/print.rst:16
 msgid "Creating the layout"
@@ -3180,6 +3223,8 @@ msgid ""
 "A location map, a map for which you have enabled and configured the function"
 " of *Overview*, read :ref:`overview-map`"
 msgstr ""
+"une carte de localisation soit une carte pour laquelle vous aurez activé et "
+"configuré la fonction d'*Aperçu*. Lisez :ref:`overview-map`"
 
 #: ../../source/publish/configuration/print.rst:29
 msgid ""
@@ -3189,6 +3234,11 @@ msgid ""
 "https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#id4"
 " on the QGIS Documentation."
 msgstr ""
+"Depuis QGIS 3, vous pouvez utiliser des expressions QGIS, dans vos labels "
+"par exemple. Vous pouvez créer un label automatique selon les couches "
+"visibles en suivant l'exemple :  "
+"https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/composer_items/composer_label.html#id4"
+" "
 
 #: ../../source/publish/configuration/print.rst:32
 msgid "Dynamic content"
@@ -3688,9 +3738,9 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:17
 #: ../../source/publish/lizmap_plugin/dataviz.rst:29
 #: ../../source/publish/lizmap_plugin/edition.rst:36
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:45
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:46
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:31
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:25
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:26
 #: ../../source/publish/lizmap_plugin/time_manager.rst:21
 #: ../../source/publish/lizmap_plugin/tooltip.rst:15
 msgid "Prerequisites"
@@ -3723,6 +3773,10 @@ msgid ""
 "the tool as simple as possible and avoid the need to create FTS \"vectors\" "
 "in your search data."
 msgstr ""
+"Nous avons choisi d'utiliser l'extension pg_trgm et sa fonction habituelle "
+"f_unaccent plutôt que l'outil de PostgreSQL de recherche plein texte (FTS), "
+"pour garder l'outil aussi simple que possible et éviter de devoir créer des "
+"vecteurs FTS pour votre recherche de données."
 
 #: ../../source/publish/configuration/spatial_search.rst:49
 msgid "Create the lizmap_search table or view"
@@ -3735,6 +3789,11 @@ msgid ""
 "(you can put it in the public schema, or configure the ``search_path`` "
 "variable for the database or the user which connects to the database)."
 msgstr ""
+"L'administrateur de la base de données doit créer une table, vue ou vue "
+"matérialisée nommée \"lizmap_search\". Cette relation doit être accessible "
+"dans le search_path (vous pouvez la mettre dans le schéma public, ou "
+"configurer la variable search_path pour la base de données ou l'utilisateur "
+"qui se connecte à la base de données)."
 
 #: ../../source/publish/configuration/spatial_search.rst:55
 msgid "The relation ``lizmap_search`` must contain the following columns:"
@@ -3742,7 +3801,7 @@ msgstr "La relation ``lizmap_search`` doit contenir les colonnes suivantes :"
 
 #: ../../source/publish/configuration/spatial_search.rst:57
 msgid "``item_layer`` (text). Name of the layer. For example \"Countries\""
-msgstr ""
+msgstr "\"item_layer\" (texte). Nom de la couche. Par exemple, \"Pays\""
 
 #: ../../source/publish/configuration/spatial_search.rst:58
 msgid ""
@@ -3993,7 +4052,7 @@ msgstr ""
 "Cette section montre comment personnaliser Lizmap avec quelques lignes de "
 "code."
 
-#: ../../source/publish/customization/javascript.rst:1
+#: ../../source/publish/customization/javascript.rst-1
 msgid "js,script,javascript,code"
 msgstr "js,script,javascript,code"
 
@@ -4158,7 +4217,6 @@ msgid "Event name"
 msgstr "Nom de l'évènement"
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "Description"
 msgstr "Description"
 
@@ -4282,10 +4340,6 @@ msgid "Fired when a layer style has been changed"
 msgstr "Déclenché quand le style d'une couche a été changé"
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType"
 msgstr "featureType"
 
@@ -4365,7 +4419,6 @@ msgid "Fired when a layer feature has been created with the edition tool"
 msgstr ""
 "Déclenché quand une entité de couche a été créée avec l'outil d'édition"
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "layerId"
 msgstr "layerId"
@@ -4484,7 +4537,6 @@ msgstr ""
 "tables attributaires."
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | featureIds | updateDrawing"
 msgstr "featureType | featureIds | updateDrawing"
 
@@ -4546,7 +4598,6 @@ msgstr ""
 "être filtrées visuellement par l'utilisateur en entrant du texte dans le "
 "champs de saisie de recherche."
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | updateDrawing"
 msgstr "featureType | updateDrawing"
@@ -4992,11 +5043,7 @@ msgstr "Au niveau de la couche"
 msgid "For setting a atlas layer:"
 msgstr "Pour paramétrer un atlas sur une couche:"
 
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
+#: ../../source/shared/add_layer.rst:1
 msgid "Click the |add_layer_svg| button."
 msgstr "Cliquer sur le bouton |add_layer_svg|."
 
@@ -5063,11 +5110,7 @@ msgstr ""
 msgid "you can select the duration between each step"
 msgstr "vous pouvez sélectionner la durée entre chaque étape"
 
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
+#: ../../source/shared/edit_layer.rst:1
 msgid ""
 "To edit a layer in the table, select it and click the |edit_layer_svg| "
 "button or double click on the row."
@@ -5076,15 +5119,6 @@ msgstr ""
 "bouton |edit_layer_svg| ou alors double-cliquer sur la ligne."
 
 #: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
 msgid ""
 "To remove a layer from the table, select it and click the |remove_layer_svg|"
 " button."
@@ -5092,12 +5126,6 @@ msgstr ""
 "Pour supprimer une couche de la table, cliquez sur celle-ci puis sur le "
 "bouton |remove_layer_svg|."
 
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
 #: ../../source/shared/move_up_down_layer.rst:1
 msgid ""
 "To move a layer up or down, select it and click |down_layer_svg| or "
@@ -5158,10 +5186,7 @@ msgstr ""
 "que l'utilisateur puisse voir toutes les données d'une couche spécifique, "
 "comme vous pouvez le faire dans QGIS en ouvrant la table attributaire."
 
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
+#: ../../source/shared/wfs_layer.rst:1
 msgid ""
 "The layer must be published as WFS (see :ref:`publish_layer_wfs`) and the "
 "primary key must be published as well in the :guilabel:`Layer properties`."
@@ -5181,7 +5206,7 @@ msgstr ""
 "de formulaire permettant l'ajout et la suppression de couches vectorielles."
 
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:32
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:41
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:42
 msgid "To add a layer to this tool:"
 msgstr "Pour ajouter une couche à cet outil :"
 
@@ -5270,8 +5295,7 @@ msgstr ""
 "Laissez la coche :guilabel:`Masquer la couche dans la liste` décoché. C'est "
 "pour la relation."
 
-#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
-#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
+#: ../../source/shared/field_alias.rst:1
 msgid ""
 "Fields will be displayed with their alias if it's defined. See "
 ":ref:`alias_on_fields`."
@@ -5584,6 +5608,8 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/basemap.rst:60
 msgid "Scan: the background map mixing the various IGN scan, API key needed"
 msgstr ""
+"Scan : le fond de carte mixant les différents scan de l'IGN, clé API "
+"nécessaire"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:61
 msgid "Cadastre"
@@ -5595,7 +5621,7 @@ msgstr "Les licences d'utilisation sont disponibles aux adresses suivantes :"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:65
 msgid "*OpenStreetMap*: https://operations.osmfoundation.org/policies/tiles/"
-msgstr ""
+msgstr "*OpenStreetMap*: https://operations.osmfoundation.org/policies/tiles/"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:66
 msgid "*Google*: https://cloud.google.com/maps-platform/terms/"
@@ -5824,6 +5850,12 @@ msgstr ""
 msgid "**Aggregation**"
 msgstr "**Aggrégation**"
 
+#: ../../source/publish/lizmap_plugin/dataviz.rst-1
+msgid ""
+"For a few types of charts like bar or pie, you can chose to aggregate the "
+"data in"
+msgstr ""
+
 #: ../../source/publish/lizmap_plugin/dataviz.rst:67
 msgid ""
 "the graph. There are a few aggregate functions available - average(avg), "
@@ -6019,7 +6051,7 @@ msgid "You can visit the Cats project on https://demo.lizmap.com"
 msgstr "Vous pouvez visiter le projet des Chats sur https://demo.lizmap.com"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:6
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:124
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:125
 msgid "Edition"
 msgstr "Édition"
 
@@ -6030,6 +6062,10 @@ msgid ""
 " allows you to add one or more layers and choose what actions for each will "
 "be possible in the web interface:"
 msgstr ""
+"Il est possible d'autoriser des utilisateurs à **éditer des données "
+"spatiales et attributaires** depuis Lizmap Web Client pour les couches "
+"**PostgreSQL**. Le plugin Lizmap vous permet d'ajouter une ou plusieurs "
+"couches et de choisir quelles actions seront permises dans l'interface web :"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:17
 msgid "creating elements"
@@ -6530,11 +6566,11 @@ msgstr ""
 "tree_pictures/ <-- pour stocker les images dans ce dossier, utilisez : "
 ":file:`media/tree_pictures/`'."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:5
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:6
 msgid "Filtered layer by user"
 msgstr "Filtrer les données par utilisateur"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:13
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:14
 msgid ""
 "The filtering feature presented allows you to filter the data displayed on "
 "the map based on the logged in user. It is possible to filter only vector "
@@ -6545,7 +6581,7 @@ msgstr ""
 "filtrer uniquement les couches vectorielles car Lizmap utilise une colonne "
 "dans la table attributaire."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:16
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:17
 msgid ""
 "Filtering currently uses the ID of the user group connected. It's active for"
 " all requests to QGIS server, and thus concerns:"
@@ -6553,63 +6589,65 @@ msgstr ""
 "Le filtrage utilise actuellement l'ID du groupe d'utilisateurs connectés. Il"
 " est actif pour toutes les requêtes au serveur QGIS, et donc concerne :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:19
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:20
 msgid "the vector layers images displayed on the map"
 msgstr "les images des couches vectorielles affichées sur la carte"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:20
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:21
 msgid "the popups. See :ref:`popup`"
 msgstr "les popups. Lire :ref:`popup`"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:21
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:22
 msgid "the *Locate by layer* feature lists. See :ref:`locate-by-layer`"
 msgstr ""
 "les listes de la fonction *Localiser par couche*. Voir :ref:`locate-by-"
 "layer`"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:22
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:23
 msgid ""
 "drop-down lists of *Editing forms* from *Value relation*. See :ref:`edition`"
 msgstr ""
+"les listes déroulantes des *formulaires d'édition* issues de *Valeur "
+"relationnelle*. Voir :ref:`edition`"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:23
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:24
 msgid "the attribute table display etc"
 msgstr "l'affichage de la table des attributs, etc."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:25
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:26
 msgid "There are two kinds of filtering :"
 msgstr "Il y a deux sortes de filtrage :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:27
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:28
 msgid "based on attributes"
 msgstr "sur les attributs"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:28
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:29
 msgid "based on spatial relationship"
 msgstr "sur une relation spatiale"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:31
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:32
 msgid "Filtering by spatial relationship"
 msgstr "Filtrage par relation spatiale"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:36
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:37
 msgid "In this panel, we can:"
 msgstr "Dans ce panneau, vous pouvez :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:38
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:39
 msgid "configure a polygon layer to use for spatial filtering"
 msgstr "configurer une couche polygonale comme une couche filtrante"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:39
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:40
 msgid "configure layers which must be filtered by the filtering layer"
 msgstr ""
 "configurer des couches qui doivent être filtrées par la couche filtrante"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:47
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:48
 msgid "This is a feature in |lizmap_3_5|."
 msgstr "C'est une fonctionnalité dans |lizmap_3_5|."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:49
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:50
 msgid ""
 "The Lizmap plugin in QGIS Server **must** be installed with at least "
 "**Lizmap QGIS plugin 3.6**. Otherwise, the filter won't work and all data "
@@ -6619,11 +6657,11 @@ msgstr ""
 "plugin QGIS Lizmap 3.6**. Sinon, le filtre ne fonctionnera pas et toutes les"
 " données seront visibles. Voir :ref:`lizmap-server-plugin`."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:59
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:60
 msgid "Choose the polygon layer used for filtering"
 msgstr "Choisir la couche polygonale à utiliser pour filtrer"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:60
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:61
 msgid ""
 "Choose the field in this layer which has Lizmap groups, separated by a "
 "comma."
@@ -6631,19 +6669,19 @@ msgstr ""
 "Choisir le champ dans cette couche qui possède les groupes Lizmap, séparés "
 "par virgule."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:61
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:62
 msgid "Add a layer to filter to this tool:"
 msgstr "Pour ajouter une couche filtrée à cet outil :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:64
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:65
 msgid "Choose the layer to filter"
 msgstr "Choisir la couche qu'il faut filtrer"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:65
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:66
 msgid "Choose the primary key of the layer"
 msgstr "Choisir la clé primaire de la couche"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:66
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:67
 msgid ""
 "Choose if the filtering if for both visualisation and editing or only "
 "editing"
@@ -6651,11 +6689,11 @@ msgstr ""
 "Choisir si le filtrage s'effectue sur l'affichage et l'édition ou alors "
 "seulement sur l'édition"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:67
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:68
 msgid "Choose either **intersection** or **contain** spatial relationship."
 msgstr "Choisir la relation spatiale soit **intersection** ou **contient**"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:72
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:73
 msgid ""
 "For your information, performance will be better when using PostgreSQL "
 "layers : either filtering or filtered layers or both."
@@ -6663,31 +6701,31 @@ msgstr ""
 "Pour votre information, les performances sont meilleures avec des couches "
 "PostgreSQL : soit filtrante ou filtrée ou alors même les deux."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:76
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:77
 msgid "Filtering by attribute"
 msgstr "Filtrage par attribut"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:81
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:82
 msgid "A video tutorial is available at: https://vimeo.com/83966790"
 msgstr ""
 "Un tutoriel vidéo est disponible à cette adresse : "
 "https://vimeo.com/83966790"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:86
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:87
 msgid "To use data filtering tool in Lizmap Web Client, you must:"
 msgstr ""
 "Pour utiliser l'outil de filtrage des données dans Lizmap Web Client, il "
 "faut :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:88
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:89
 msgid "have **access to the administration interface** of Lizmap Web Client"
 msgstr "avoir **accès à l'interface d'administration** de Lizmap Web Client"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:90
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:91
 msgid "Here are the detailed steps to configure this feature:"
 msgstr "Voici le détail des étapes pour configurer cette fonctionnalité :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:93
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:94
 msgid ""
 "In Lizmap Web Client administration, in the repository properties, be sure "
 "that ``anonymous`` and other relevant groups are not checked for "
@@ -6699,13 +6737,13 @@ msgstr ""
 " sont pas cochés pour :guilabel:`Toujours voir les données de couches, même "
 "si filtrées par login`. Voir :ref:`define-group-rights`."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:96
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:97
 msgid "Check group ID or user ID in the administration interface:"
 msgstr ""
 "Vérifiez l'ID de groupe ou l'ID utilisateur dans l'interface "
 "d'administration :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:98
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:99
 msgid ""
 "To know group ID, you must go to the administration interface "
 ":menuselection:`SYSTEM --> Groups of users for rights`: ID appears in "
@@ -6717,13 +6755,13 @@ msgstr ""
 "droits` : L'ID apparaît entre parenthèses après le nom de chaque groupe "
 "(sous le titre :guilabel:`Groupes de nouveaux utilisateurs`)"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:99
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:100
 msgid "Or to know the user ID, just use its login."
 msgstr ""
 "Ou pour connaître l'identifiant de l'utilisateur, il suffit d'utiliser son "
 "login."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:101
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:102
 msgid ""
 "For all vector layers which is desired filter data, just add a text column "
 "that will hold the ID for each line who has the right to display this "
@@ -6733,7 +6771,7 @@ msgstr ""
 "suffit d'ajouter une colonne de texte qui contiendra l'ID de chaque ligne "
 "qui a le droit d'afficher cette caractéristique."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:103
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:104
 msgid ""
 "*Fill this column* for each line of the attribute table with the ID (using "
 "the calculator, for example)."
@@ -6741,7 +6779,7 @@ msgstr ""
 "*Remplir cette colonne* pour chaque ligne de la table attributaire avec l'ID"
 " (en utilisant la calculatrice, par exemple)."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:104
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:105
 msgid ""
 "It is possible to set ``all`` as the value in some lines to disable the "
 "filter: All users will see the data for these lines."
@@ -6750,7 +6788,7 @@ msgstr ""
 "désactiver le filtre : Tous les utilisateurs verront les données de ces "
 "entités."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:105
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:106
 msgid ""
 "If the value in this column for a row does not correspond to a user group, "
 "then the data will be displayed for no user."
@@ -6759,27 +6797,27 @@ msgstr ""
 "un des groupes d'utilisateurs, alors la donnée ne sera affichée pour aucun "
 "utilisateur."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:110
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:111
 msgid "Add the layer in the table :guilabel:`Filter Data by User` panel:"
 msgstr ""
 "Ajoutez la couche dans le panneau :guilabel:`Filtrer les données par "
 "utilisateur` :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:113
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:114
 msgid "Select layer from the dropdown list"
 msgstr "Sélectionnez la couche dans la liste déroulante"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:114
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:115
 msgid "Select the field with the ID"
 msgstr "Sélectionnez la champ avec l'ID"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:115
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:116
 msgid "Check the box if the field contains user ID, instead of group ID"
 msgstr ""
 "Cochez la case si le champ contient un ID utilisateur, plutôt qu'un ID de "
 "groupe"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:121
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:122
 msgid ""
 "Disable the client cache and cache server for all filtered layers. "
 "Otherwise, the data displayed will not be updated between each connection or"
@@ -6789,7 +6827,7 @@ msgstr ""
 " cela, les données affichées ne seront pas mises à jour entre chaque "
 "connexion ou déconnexion de l'utilisateur !"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:126
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:127
 msgid ""
 "If you have enabled the edition (see :ref:`edition`) on the filtered layer, "
 "the field containing the ID will be editable with:"
@@ -6797,14 +6835,14 @@ msgstr ""
 "Si vous avez activé l'édition (voir :ref:`edition`) sur la couche filtrée, "
 "le champ contenant l'ID sera éditable avec :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:128
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:129
 msgid ""
 "either a combobox for a non admin user with either his own login or ``all``"
 msgstr ""
 "soit une liste déroulante pour un non administrateur avec soit son propre "
 "login ou ``all``"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:129
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:130
 msgid "or a line edit to write a value for a admin user"
 msgstr ""
 "ou un éditeur de texte pour écrire une valeur lors d'un utilisateur admin"
@@ -7151,8 +7189,8 @@ msgid ""
 "might ask you to setup the **master password**. It's a password to protect "
 "the QGIS internal password manager. This password is used only on **your** "
 "computer. The Lizmap plugin is storing the login and password in the `QGIS "
-"password "
-"manager<https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-"
+"password manager "
+"<https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-"
 "password>`_."
 msgstr ""
 
@@ -7421,11 +7459,11 @@ msgstr "si le groupe est une couche les autres options s'appliquent à lui"
 msgid "Server tile cache"
 msgstr "Cache des tuiles serveurs"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:5
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:6
 msgid "Locate by layer"
 msgstr "La localisation par couche"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:13
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:14
 msgid ""
 "The idea of this tool is to present to the Lizmap Web Client user a drop "
 "down list that gives the ability to zoom on one or more spatial objects of "
@@ -7435,11 +7473,11 @@ msgstr ""
 "une liste déroulante qui permet de zoomer automatiquement sur un ou "
 "plusieurs objets spatiaux de la couche."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:16
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:17
 msgid "Use case"
 msgstr "Cas d'utilisation"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:18
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:19
 msgid ""
 "Consider a spatial vector layer **districts** contained in the QGIS project."
 " We choose to add these districts in the tool *Locate by layer*, to allow "
@@ -7450,7 +7488,7 @@ msgstr ""
 "*Localiser par couche*, pour permettre aux utilisateurs de Lizmap Web Client"
 " de se positionner rapidement sur un des quartiers."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:20
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:21
 msgid ""
 "Once this layer added in the tool *Locate by layer*, a drop down list of the"
 " districts appears on the Lizmap Web interface."
@@ -7458,7 +7496,7 @@ msgstr ""
 "Une fois cette couche ajoutée dans l'outil *Localiser par couche*, une liste"
 " déroulante contenant les quartiers s'affiche sur l'interface web de Lizmap."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:22
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:23
 msgid ""
 "When the Web map user selects one name in this list, the map will "
 "automatically refocuses on the selected district and the district's geometry"
@@ -7468,7 +7506,7 @@ msgstr ""
 "la carte se recentre automatiquement sur le quartier sélectionné, et la "
 "géométrie du quartier s'affiche (en option)."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:30
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:31
 msgid ""
 "This tool is not designed for layers having a lot of features or a lot of "
 "complex geometries. The web browser will indeed have to download **all** "
@@ -7478,7 +7516,7 @@ msgid ""
 "your layer is stored in PostGIS, use :ref:`postgresql-lizmap-search`."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:44
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:45
 msgid ""
 "**choose the layer** with the first dropdown from the list of the project "
 "vector layers"
@@ -7486,7 +7524,7 @@ msgstr ""
 "**choisissez la couche** via la première liste déroulante parmi les couches "
 "vectorielles du projet,"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:45
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:46
 msgid ""
 "then **the column that contains the label** you want to display in the "
 "dropdown list"
@@ -7494,7 +7532,7 @@ msgstr ""
 "puis **la colonne qui contient le libellé** que vous souhaitez afficher dans"
 " la liste déroulante."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:46
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:47
 msgid ""
 "if you want to add pre-filter your data if a optional group by, use the "
 ":guilabel:`Optional group by` field."
@@ -7502,7 +7540,7 @@ msgstr ""
 "si vous souhaitez ajouter un pré-filtre sur vos données avec un "
 "regroupement, utilisez le champ :guilabel:`Regroupement optionnel`."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:47
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:48
 msgid ""
 "if you want the geometry of the related objects is also displayed on the map"
 " when the user selects an item from the list, then check the option *Display"
@@ -7512,14 +7550,14 @@ msgstr ""
 "sur la carte lorsque l'utilisateur sélectionne un élément de la liste, alors"
 " on coche l'option *Afficher la géométrie*."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:48
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:49
 msgid ""
 "If you set a value above 0, autocompletion will be used after this amount of"
 " characters while the user types. The classical combobox will be replaced by"
 " a editable text input."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:49
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:50
 msgid ""
 "If Lizmap must trigger the filter on the layer. Only the selected feature "
 "will be visible on the map."
@@ -7527,11 +7565,11 @@ msgstr ""
 "Si Lizmap doit déclencher le filtre sur la couche. Seulement les entités "
 "sélectionnées seront visibles sur la carte."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:56
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:57
 msgid "Hierarchical Lists"
 msgstr "Listes hiérarchiques"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:58
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:59
 msgid ""
 "If we take the example of districts, it may be interesting to also provide "
 "to the user a *sub-districts* dropdown. We wish that when the user chooses a"
@@ -7544,11 +7582,11 @@ msgstr ""
 "des sous-quartiers soit automatiquement filtrée pour n'afficher que les "
 "sous-quartiers du quartier choisi."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:60
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:61
 msgid "For this, there are 2 methods:"
 msgstr "Pour cela, il existe 2 méthodes :"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:62
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:63
 msgid ""
 "you either have **2 separate vector layers**: one for districts and for sub-"
 "districts. So you have to use a **field join** between the two layers to "
@@ -7559,7 +7597,7 @@ msgstr ""
 "attributaire** entre les 2 couches pour activer le filtrage automatique des "
 "listes dans Lizmap."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:63
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:64
 msgid ""
 "either we have **only 1 layer for sub-districts**, and then you can specify "
 "with the plugin a **group field**. Two dropdowns will be created instead of "
@@ -7569,7 +7607,7 @@ msgstr ""
 "spécifier via le plugin l'**attribut de regroupement**. Deux listes "
 "déroulantes seront créées au lieu d'une seule dans l'application Web."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:65
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:66
 msgid ""
 "Don't forget to check if your configuration of QGIS server is the right one "
 "(in Lizmap : My account -> Lizmap configuration -> check if the qgis server "

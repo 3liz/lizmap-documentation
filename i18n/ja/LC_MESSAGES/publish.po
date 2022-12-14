@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-09 16:51+0000\n"
+"POT-Creation-Date: 2022-12-14 14:03+0100\n"
 "PO-Revision-Date: 2022-08-02 09:23+0000\n"
 "Last-Translator: yamamoto ryuzo <ryu@yamakun.net>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/3liz-1/teams/62012/ja/)\n"
@@ -21,6 +21,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/substitutions.rst:7
+msgid "add_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:8
+msgid "edit_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:9
+msgid "remove_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:10
+msgid "down_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:11
+msgid "up_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:12
+msgid "refresh_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:13
+msgid "properties_svg"
+msgstr ""
 
 #: ../../source/publish/configuration/action_popup.rst:4
 msgid "Action in a popup"
@@ -44,11 +72,11 @@ msgstr "地物情報でのアクション‎"
 #: ../../source/publish/lizmap_plugin/basemap.rst:7
 #: ../../source/publish/lizmap_plugin/dataviz.rst:7
 #: ../../source/publish/lizmap_plugin/edition.rst:9
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:8
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:9
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:7
 #: ../../source/publish/lizmap_plugin/information.rst:7
 #: ../../source/publish/lizmap_plugin/layers.rst:7
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:8
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:9
 #: ../../source/publish/lizmap_plugin/map_options.rst:9
 #: ../../source/publish/lizmap_plugin/time_manager.rst:7
 #: ../../source/publish/lizmap_plugin/tooltip.rst:7
@@ -74,12 +102,12 @@ msgstr "|lizmap_3_4|の機能です。‎"
 #: ../../source/publish/lizmap_plugin/basemap.rst:10
 #: ../../source/publish/lizmap_plugin/dataviz.rst:10
 #: ../../source/publish/lizmap_plugin/edition.rst:12
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:11
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:34
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:12
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:35
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:10
 #: ../../source/publish/lizmap_plugin/information.rst:10
 #: ../../source/publish/lizmap_plugin/layers.rst:10
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:11
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:12
 #: ../../source/publish/lizmap_plugin/time_manager.rst:10
 #: ../../source/publish/lizmap_plugin/tooltip.rst:10
 msgid "Principle"
@@ -112,12 +140,12 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/basemap.rst:22
 #: ../../source/publish/lizmap_plugin/dataviz.rst:41
 #: ../../source/publish/lizmap_plugin/edition.rst:56
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:54
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:84
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:55
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:85
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:36
 #: ../../source/publish/lizmap_plugin/information.rst:22
 #: ../../source/publish/lizmap_plugin/layers.rst:15
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:36
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:37
 #: ../../source/publish/lizmap_plugin/time_manager.rst:26
 #: ../../source/publish/lizmap_plugin/tooltip.rst:20
 msgid "Configuring the tool"
@@ -126,15 +154,17 @@ msgstr "‎ツールの設定"
 #: ../../source/publish/configuration/action_popup.rst:28
 msgid ""
 "Each action is **characterized** by a ``layer id``, a ``name``, a ``title``,"
-" an ``icon``, some optional ``options``,"
+" an ``icon``, some optional ``options``, ``style``, ``callbacks`` and "
+"``confirm`` property can be used."
 msgstr ""
 
-#: ../../source/publish/configuration/action_popup.rst:29
-msgid ""
-"``style``, ``callbacks`` and ``confirm`` property can be used. * A layer can"
-" have **one or several actions** * You can have **one or several layers** "
-"with their own actions"
-msgstr ""
+#: ../../source/publish/configuration/action_popup.rst:30
+msgid "A layer can have **one or several actions**"
+msgstr "‎レイヤーには **1つまたは複数のアクション** を設定できます"
+
+#: ../../source/publish/configuration/action_popup.rst:31
+msgid "You can have **one or several layers** with their own actions"
+msgstr "独自のアクションで **1つまたは複数のレイヤー** を持つことができます‎"
 
 #: ../../source/publish/configuration/action_popup.rst:33
 msgid ""
@@ -1221,7 +1251,7 @@ msgstr ""
 #: ../../source/publish/customization/iframe.rst:16
 #: ../../source/publish/customization/template.rst:21
 #: ../../source/publish/customization/themes.rst:78
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:79
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:80
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:25
 #: ../../source/publish/lizmap_plugin/time_manager.rst:15
 msgid "Example"
@@ -1241,11 +1271,6 @@ msgstr ""
 
 #: ../../source/publish/configuration/media.rst:153
 #: ../../source/publish/configuration/popup.rst:67
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "id"
 msgstr "id"
@@ -3247,9 +3272,9 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:17
 #: ../../source/publish/lizmap_plugin/dataviz.rst:29
 #: ../../source/publish/lizmap_plugin/edition.rst:36
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:45
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:46
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:31
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:25
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:26
 #: ../../source/publish/lizmap_plugin/time_manager.rst:21
 #: ../../source/publish/lizmap_plugin/tooltip.rst:15
 msgid "Prerequisites"
@@ -3541,7 +3566,7 @@ msgstr "‎カスタマイズ‎"
 msgid "This section shows how to customize Lizmap with some lines of code."
 msgstr "‎このセクションでは、いくつかのコード行で Lizmap をカスタマイズする方法を示します。‎"
 
-#: ../../source/publish/customization/javascript.rst:1
+#: ../../source/publish/customization/javascript.rst-1
 msgid "js,script,javascript,code"
 msgstr "js,script,javascript,code"
 
@@ -3684,7 +3709,6 @@ msgid "Event name"
 msgstr "‎イベント名‎"
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "Description"
 msgstr "説明"
 
@@ -3805,10 +3829,6 @@ msgid "Fired when a layer style has been changed"
 msgstr "‎レイヤー スタイルが変更されたとき"
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType"
 msgstr "地物タイプ‎"
 
@@ -3882,7 +3902,6 @@ msgstr "lizmap編集地物作成"
 msgid "Fired when a layer feature has been created with the edition tool"
 msgstr "‎レイヤー 、地物が編集 ツールで作成されたとき"
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "layerId"
 msgstr "layerId"
@@ -3988,7 +4007,6 @@ msgid ""
 msgstr "‎レイヤーのマップにフィルターが適用されたときに発生します。このイベントは、マップと属性テーブルのコンテンツの再描画も起動します。‎"
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | featureIds | updateDrawing"
 msgstr "featureType | featureIds | updateDrawing"
 
@@ -4043,7 +4061,6 @@ msgid ""
 msgstr ""
 "‎このイベントを発生させると、属性テーブルの表示行に対応するすべてのフィーチャが選択され、検索テキスト入力に文字を入力してユーザーが視覚的にフィルター処理できます。‎"
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | updateDrawing"
 msgstr "featureType | updateDrawing"
@@ -4460,11 +4477,7 @@ msgstr "‎レイヤー レベルで‎"
 msgid "For setting a atlas layer:"
 msgstr "地図帳レイヤーの設定:‎"
 
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
+#: ../../source/shared/add_layer.rst:1
 msgid "Click the |add_layer_svg| button."
 msgstr "ボタン |add_layer_svg| をクリックします。"
 
@@ -4518,11 +4531,7 @@ msgstr "地図帳によって選択された地物のフィルタを有効にす
 msgid "you can select the duration between each step"
 msgstr "‎各ステップ間の期間を選択できます‎"
 
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
+#: ../../source/shared/edit_layer.rst:1
 msgid ""
 "To edit a layer in the table, select it and click the |edit_layer_svg| "
 "button or double click on the row."
@@ -4530,26 +4539,11 @@ msgstr ""
 "‎テーブル内のレイヤーを編集するには、レイヤーを選択して、 |edit_layer_svg| ボタンをクリックするか、行をダブルクリックします。‎"
 
 #: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
 msgid ""
 "To remove a layer from the table, select it and click the |remove_layer_svg|"
 " button."
 msgstr "‎テーブルからレイヤーを削除するには、レイヤーを選択して、 |remove_layer_svg| ボタン。‎"
 
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
 #: ../../source/shared/move_up_down_layer.rst:1
 msgid ""
 "To move a layer up or down, select it and click |down_layer_svg| or "
@@ -4602,10 +4596,7 @@ msgid ""
 msgstr ""
 "‎場合によっては、これは十分ではなく、マップエディタとして、属性テーブルを開くことによってQGISで行うことができるように、特定のレイヤーのすべてのデータをユーザーに表示したいと考えています。‎"
 
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
+#: ../../source/shared/wfs_layer.rst:1
 msgid ""
 "The layer must be published as WFS (see :ref:`publish_layer_wfs`) and the "
 "primary key must be published as well in the :guilabel:`Layer properties`."
@@ -4623,7 +4614,7 @@ msgstr ""
 "タブには、ベクターレイヤーを追加または削除するためのテーブルといくつかのフォームフィールドを表示する「属性レイヤー」というグループがあります。‎"
 
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:32
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:41
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:42
 msgid "To add a layer to this tool:"
 msgstr "‎このツールにレイヤーを追加するには:‎"
 
@@ -4695,8 +4686,7 @@ msgid ""
 "Let the :guilabel:`Hide layer in the list` unchecked. This is for relation."
 msgstr "‎:guilabel:` リスト内のレイヤーを非表示にする ` チェックを外します。これはリレーションのためのものです。‎"
 
-#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
-#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
+#: ../../source/shared/field_alias.rst:1
 msgid ""
 "Fields will be displayed with their alias if it's defined. See "
 ":ref:`alias_on_fields`."
@@ -5182,6 +5172,12 @@ msgstr "‎**Xフィールド** : グラフの X フィールド。いくつか�
 msgid "**Aggregation**"
 msgstr "‎** 集計 **‎"
 
+#: ../../source/publish/lizmap_plugin/dataviz.rst-1
+msgid ""
+"For a few types of charts like bar or pie, you can chose to aggregate the "
+"data in"
+msgstr ""
+
 #: ../../source/publish/lizmap_plugin/dataviz.rst:67
 msgid ""
 "the graph. There are a few aggregate functions available - average(avg), "
@@ -5355,7 +5351,7 @@ msgid "You can visit the Cats project on https://demo.lizmap.com"
 msgstr "‎あなたはプロジェクトを訪問することができます‎ https://demo.lizmap.com"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:6
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:124
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:125
 msgid "Edition"
 msgstr "編集"
 
@@ -5809,11 +5805,11 @@ msgid ""
 msgstr ""
 "‎tree_pictures/ < -- このフォルダに画像を保存するには、 :file:`media/tree_pictures/` を使用します。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:5
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:6
 msgid "Filtered layer by user"
 msgstr "‎ユーザーによるフィルターされたレイヤー‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:13
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:14
 msgid ""
 "The filtering feature presented allows you to filter the data displayed on "
 "the map based on the logged in user. It is possible to filter only vector "
@@ -5822,66 +5818,66 @@ msgstr ""
 "‎表示されるフィルター機能を使用すると、ログインしているユーザーに基づいてマップに表示されるデータをフィルター処理できます。Lizmap "
 "は属性テーブルの列を使用するため、ベクター レイヤーのみをフィルター処理できます。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:16
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:17
 msgid ""
 "Filtering currently uses the ID of the user group connected. It's active for"
 " all requests to QGIS server, and thus concerns:"
 msgstr "‎現在、フィルタ処理は、接続されているユーザー グループの ID が使用されています。QGISサーバーへのすべての要求に有効です:‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:19
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:20
 msgid "the vector layers images displayed on the map"
 msgstr "‎地図上に表示されるベクターレイヤー画像‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:20
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:21
 msgid "the popups. See :ref:`popup`"
 msgstr "地物情報。 :ref:`popup` を参照"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:21
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:22
 msgid "the *Locate by layer* feature lists. See :ref:`locate-by-layer`"
 msgstr "‎*レイヤー別に検索* 地物リストを表示します。 :ref:`locate-by-layer` を参照。"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:22
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:23
 msgid ""
 "drop-down lists of *Editing forms* from *Value relation*. See :ref:`edition`"
 msgstr "‎*値リレーション* からの *編集フォーム* のドロップダウン リスト。 :ref:`edition` を参照。"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:23
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:24
 msgid "the attribute table display etc"
 msgstr "‎属性テーブルの表示など‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:25
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:26
 msgid "There are two kinds of filtering :"
 msgstr "‎フィルタリングには次の 2 種類があります。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:27
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:28
 msgid "based on attributes"
 msgstr "‎属性に基づく‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:28
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:29
 msgid "based on spatial relationship"
 msgstr "‎空間的な関係に基づく‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:31
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:32
 msgid "Filtering by spatial relationship"
 msgstr "‎空間リレーションシップによるフィルタリング‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:36
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:37
 msgid "In this panel, we can:"
 msgstr "‎このパネルでは、次のことができます‎："
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:38
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:39
 msgid "configure a polygon layer to use for spatial filtering"
 msgstr "‎空間フィルタリングに使用するポリゴン レイヤーを設定する‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:39
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:40
 msgid "configure layers which must be filtered by the filtering layer"
 msgstr "‎フィルタリングレイヤーでフィルタリングする必要があるレイヤーを設定する‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:47
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:48
 msgid "This is a feature in |lizmap_3_5|."
 msgstr "‎これは|lizmap_3_5|の機能です。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:49
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:50
 msgid ""
 "The Lizmap plugin in QGIS Server **must** be installed with at least "
 "**Lizmap QGIS plugin 3.6**. Otherwise, the filter won't work and all data "
@@ -5891,39 +5887,39 @@ msgstr ""
 "**必要** があります。そうでない場合は、フィルタが機能せず、すべてのデータが表示されます。 :ref:`lizmap-server-plugin` "
 "を参照してください。"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:59
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:60
 msgid "Choose the polygon layer used for filtering"
 msgstr "‎フィルタリングに使用するポリゴン レイヤーを選択する‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:60
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:61
 msgid ""
 "Choose the field in this layer which has Lizmap groups, separated by a "
 "comma."
 msgstr "‎このレイヤー内で、Lizmap グループを持つフィールドをカンマで区切って選択します。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:61
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:62
 msgid "Add a layer to filter to this tool:"
 msgstr "‎このツールにフィルターするレイヤーを追加します。‎:"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:64
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:65
 msgid "Choose the layer to filter"
 msgstr "‎フィルター処理するレイヤーを選択する‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:65
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:66
 msgid "Choose the primary key of the layer"
 msgstr "‎レイヤーの主キーを選択します。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:66
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:67
 msgid ""
 "Choose if the filtering if for both visualisation and editing or only "
 "editing"
 msgstr "‎表示と編集の両方の場合、または編集のみでフィルタリングするかを選択します。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:67
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:68
 msgid "Choose either **intersection** or **contain** spatial relationship."
 msgstr "‎**交差** または **包含** 空間リレーションシップのいずれかを選択します。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:72
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:73
 msgid ""
 "For your information, performance will be better when using PostgreSQL "
 "layers : either filtering or filtered layers or both."
@@ -5931,27 +5927,27 @@ msgstr ""
 "‎ご参考までに、PostgreSQL "
 "レイヤーを使用する場合のパフォーマンスが向上します：フィルタリングまたはフィルター処理されたレイヤー、またはその両方。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:76
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:77
 msgid "Filtering by attribute"
 msgstr "‎属性によるフィルタリング‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:81
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:82
 msgid "A video tutorial is available at: https://vimeo.com/83966790"
 msgstr "‎ビデオチュートリアルは次の: https://vimeo.com/83966790"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:86
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:87
 msgid "To use data filtering tool in Lizmap Web Client, you must:"
 msgstr "‎Lizmap Web クライアントでデータ フィルタリング ツールを使用するには、次の操作を行う必要があります。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:88
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:89
 msgid "have **access to the administration interface** of Lizmap Web Client"
 msgstr "Lizmap Web クライアントの **管理インターフェイスへのアクセス権** を持つ‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:90
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:91
 msgid "Here are the detailed steps to configure this feature:"
 msgstr "‎この地物を設定する詳細な手順を次に示します。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:93
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:94
 msgid ""
 "In Lizmap Web Client administration, in the repository properties, be sure "
 "that ``anonymous`` and other relevant groups are not checked for "
@@ -5962,11 +5958,11 @@ msgstr ""
 "ログインでフィルタリングされている場合でも、常に完全なレイヤーデータを表示する ` にチェックされていないことを確認してください。 "
 ":ref:`define-group-rights` を参照。"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:96
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:97
 msgid "Check group ID or user ID in the administration interface:"
 msgstr "‎管理インターフェースでグループ ID またはユーザー ID を確認します。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:98
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:99
 msgid ""
 "To know group ID, you must go to the administration interface "
 ":menuselection:`SYSTEM --> Groups of users for rights`: ID appears in "
@@ -5976,11 +5972,11 @@ msgstr ""
 "‎グループ ID を知るには、管理インターフェイスに移動する必要があります :menuselection:` システム --> ユーザーグループ ` :"
 " ID は、各グループの名前の後に括弧で囲まれて表示されます (タイトル :guilabel:` 新規ユーザーのグループ ` )‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:99
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:100
 msgid "Or to know the user ID, just use its login."
 msgstr "‎または、ユーザー ID を知るために、そのログインを使用します。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:101
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:102
 msgid ""
 "For all vector layers which is desired filter data, just add a text column "
 "that will hold the ID for each line who has the right to display this "
@@ -5988,41 +5984,41 @@ msgid ""
 msgstr ""
 "‎必要なフィルタデータであるすべてのベクターレイヤーに対して、この機能を表示する権限を持つ各行のIDを保持するテキスト列を追加するだけです。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:103
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:104
 msgid ""
 "*Fill this column* for each line of the attribute table with the ID (using "
 "the calculator, for example)."
 msgstr "‎*この列* を属性テーブルの各行に ID (電卓などを使用) で入力します。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:104
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:105
 msgid ""
 "It is possible to set ``all`` as the value in some lines to disable the "
 "filter: All users will see the data for these lines."
 msgstr "‎``all`` を一部の行の値として設定して、フィルタを無効にできます: すべてのユーザーにこれらの行のデータが表示されます。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:105
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:106
 msgid ""
 "If the value in this column for a row does not correspond to a user group, "
 "then the data will be displayed for no user."
 msgstr "‎行のこの列の値がユーザー グループに対応していない場合、データはユーザーのデータとして表示されません。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:110
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:111
 msgid "Add the layer in the table :guilabel:`Filter Data by User` panel:"
 msgstr "‎テーブルにレイヤーを追加 :guilabel:` ユーザー別にデータをフィルター ` パネル。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:113
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:114
 msgid "Select layer from the dropdown list"
 msgstr "‎ドロップダウンリストからレイヤーを選択する‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:114
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:115
 msgid "Select the field with the ID"
 msgstr "‎ID を持つフィールドを選択します。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:115
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:116
 msgid "Check the box if the field contains user ID, instead of group ID"
 msgstr "‎フィールドにグループ ID ではなくユーザー ID が含まれている場合は、チェックボックスをオンにします。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:121
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:122
 msgid ""
 "Disable the client cache and cache server for all filtered layers. "
 "Otherwise, the data displayed will not be updated between each connection or"
@@ -6031,19 +6027,19 @@ msgstr ""
 "‎すべてのフィルター対象のレイヤーに対して、クライアント キャッシュとキャッシュ "
 "サーバーを無効にします。そうしないと、各接続間またはユーザーログアウトの間に表示されるデータは更新されません。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:126
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:127
 msgid ""
 "If you have enabled the edition (see :ref:`edition`) on the filtered layer, "
 "the field containing the ID will be editable with:"
 msgstr ""
 "‎フィルター処理されたレイヤーで編集 ( :ref:`edition` を参照) を有効にした場合、ID を含むフィールドは次のように編集できます。‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:128
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:129
 msgid ""
 "either a combobox for a non admin user with either his own login or ``all``"
 msgstr "‎自分のログインまたは ``all`` のいずれかの管理者以外のユーザーのコンボボックス‎"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:129
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:130
 msgid "or a line edit to write a value for a admin user"
 msgstr "‎または、管理者ユーザーの値を書き込む行編集‎"
 
@@ -6344,8 +6340,8 @@ msgid ""
 "might ask you to setup the **master password**. It's a password to protect "
 "the QGIS internal password manager. This password is used only on **your** "
 "computer. The Lizmap plugin is storing the login and password in the `QGIS "
-"password "
-"manager<https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-"
+"password manager "
+"<https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-"
 "password>`_."
 msgstr ""
 
@@ -6571,11 +6567,11 @@ msgstr "‎グループがレイヤーの場合は、他のオプションが適
 msgid "Server tile cache"
 msgstr "‎サーバー タイル キャッシュ‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:5
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:6
 msgid "Locate by layer"
 msgstr "レイヤで検索"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:13
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:14
 msgid ""
 "The idea of this tool is to present to the Lizmap Web Client user a drop "
 "down list that gives the ability to zoom on one or more spatial objects of "
@@ -6584,11 +6580,11 @@ msgstr ""
 "‎このツールは、Lizmapウェブクライアント ユーザーに、レイヤーの 1 つまたは複数の空間オブジェクトをズームする機能を提供するドロップダウン "
 "リストを提示します。‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:16
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:17
 msgid "Use case"
 msgstr "使用事例"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:18
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:19
 msgid ""
 "Consider a spatial vector layer **districts** contained in the QGIS project."
 " We choose to add these districts in the tool *Locate by layer*, to allow "
@@ -6597,7 +6593,7 @@ msgstr ""
 "‎QGISプロジェクトに含まれる空間ベクトルレイヤ **districts** を考えてみましょう。これらのdistrictsをツール *Locate "
 "by layer* に追加して、Lizmap Webクライアントユーザーがdistrictsの 1 つを表示します。‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:20
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:21
 msgid ""
 "Once this layer added in the tool *Locate by layer*, a drop down list of the"
 " districts appears on the Lizmap Web interface."
@@ -6605,7 +6601,7 @@ msgstr ""
 "‎このレイヤーがツール *Locate by layer* に追加されると、地区のドロップダウン リストが Lizmap Web "
 "インターフェイスに表示されます。‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:22
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:23
 msgid ""
 "When the Web map user selects one name in this list, the map will "
 "automatically refocuses on the selected district and the district's geometry"
@@ -6614,7 +6610,7 @@ msgstr ""
 "‎Web マップ ユーザーがこのリストで 1 "
 "つの名前を選択すると、マップは自動的に選択したdistrictを再び参照し、そのdistrictのgeometryが表示されます (オプション)。‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:30
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:31
 msgid ""
 "This tool is not designed for layers having a lot of features or a lot of "
 "complex geometries. The web browser will indeed have to download **all** "
@@ -6629,33 +6625,33 @@ msgstr ""
 " WFS 設定で小数点以下の桁数を減らすことができます。レイヤーが PostGIS に保存されている場合のパフォーマンスを向上させるには、 "
 ":ref:`postgresql-lizmap-search` を使用します。‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:44
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:45
 msgid ""
 "**choose the layer** with the first dropdown from the list of the project "
 "vector layers"
 msgstr "‎プロジェクトベクターレイヤーのリストから最初のドロップダウンで **レイヤーを選択** してください‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:45
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:46
 msgid ""
 "then **the column that contains the label** you want to display in the "
 "dropdown list"
 msgstr "‎次にドロップダウンリストに表示する **ラベルを含む列**‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:46
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:47
 msgid ""
 "if you want to add pre-filter your data if a optional group by, use the "
 ":guilabel:`Optional group by` field."
 msgstr ""
 "任意のグループ分けでデータを事前にフィルタリングしたい場合は、 :guilabel:` 任意のグループでフィルタ ` フィールドを使用します。"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:47
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:48
 msgid ""
 "if you want the geometry of the related objects is also displayed on the map"
 " when the user selects an item from the list, then check the option *Display"
 " the geometry*"
 msgstr "‎ユーザーがリストから項目を選択したときに、関連オブジェクトの地物もマップ上に表示する場合は、オプション *地物を表示*‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:48
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:49
 msgid ""
 "If you set a value above 0, autocompletion will be used after this amount of"
 " characters while the user types. The classical combobox will be replaced by"
@@ -6664,17 +6660,17 @@ msgstr ""
 "‎0 "
 "を超える値を設定すると、ユーザーが入力する間、この文字数の後に自動補完が使用されます。クラシックコンボボックスは編集可能なテキスト入力に置き換えられます。‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:49
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:50
 msgid ""
 "If Lizmap must trigger the filter on the layer. Only the selected feature "
 "will be visible on the map."
 msgstr "‎Lizmap がレイヤーのフィルターを起動する必要がある場合。選択した地物のみがマップ上に表示されます。‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:56
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:57
 msgid "Hierarchical Lists"
 msgstr "‎階層リスト‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:58
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:59
 msgid ""
 "If we take the example of districts, it may be interesting to also provide "
 "to the user a *sub-districts* dropdown. We wish that when the user chooses a"
@@ -6684,11 +6680,11 @@ msgstr ""
 "‎地区の例を挙げると、ユーザーに *サブ地区* "
 "のドロップダウンを提供することも興味深いかもしれません。ユーザーが地区を選択すると、サブ地区のドロップダウンが自動的にフィルタリングされ、選択した地区のサブ地区のみが表示されるようにします。‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:60
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:61
 msgid "For this, there are 2 methods:"
 msgstr "‎このためには、2つの方法があります。‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:62
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:63
 msgid ""
 "you either have **2 separate vector layers**: one for districts and for sub-"
 "districts. So you have to use a **field join** between the two layers to "
@@ -6697,7 +6693,7 @@ msgstr ""
 "‎**2のベクトルレイヤー** を持っている:地区とサブ地区用の1つ。したがって、2 つのレイヤー間で **フィールド結合** を使用して、Lizmap"
 " で自動フィルタリングリストを有効にする必要があります。‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:63
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:64
 msgid ""
 "either we have **only 1 layer for sub-districts**, and then you can specify "
 "with the plugin a **group field**. Two dropdowns will be created instead of "
@@ -6706,7 +6702,7 @@ msgstr ""
 "**only 1 layer for sub-districts** 、プラグインで **group field** を指定できます。Web "
 "アプリケーションで 1 つではなく、2 つのドロップダウンが作成されます。‎"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:65
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:66
 msgid ""
 "Don't forget to check if your configuration of QGIS server is the right one "
 "(in Lizmap : My account -> Lizmap configuration -> check if the qgis server "
