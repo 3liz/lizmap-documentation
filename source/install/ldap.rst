@@ -8,13 +8,7 @@ The first thing to do is to install the php ldap extension on your linux system:
 
 .. code-block:: bash
 
-   apt-get install php5.6-ldap
-
-or
-
-.. code-block:: bash
-
-   apt-get install php7.x-ldap
+   apt install php7.4-ldap
 
 
 Then, in order to enable the LDAP support Lizmap, you have to change the
@@ -23,19 +17,11 @@ authentication method in the configuration as follows.
 Enabling LDAP
 =============
 
-In the :file:`localconfig.ini.php`, you have to set these parameters:
+You have to enable the module ldapdao with this command
 
 .. code-block:: ini
 
-    [modules]
-    ldapdao.access=1
-
-    [coordplugin_auth]
-    driver=ldapdao
-
-These parameters enable the ldapdao module of Lizmap. If you copied localconfig.ini.php
-from localconfig.ini.php.dist, you have already this parameters but they are
-commented.
+    php lizmap/install/configurator.php ldapdao
 
 Then you have to add a section `[ldap:lizmapldap]` into your profiles.ini.php,
 with some settings that allow to connect to your ldap server, and to search
@@ -58,10 +44,6 @@ from the profiles.ini.php.dist.
     searchGroupBaseDN=""
 
 See details about how to set these parameters in a section below.
-
-.. note:: these parameters could be in the ldapdao section of auth.coord.ini.php
-          configuration files, but it is not recommended to modify these files,
-          as when you do upgrade, you should do modification again in them.
 
 To finish to enable the module, run *php lizmap/install/installer.php*
 
