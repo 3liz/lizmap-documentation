@@ -4,28 +4,56 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Arnaud HANRY <arnaud.hanry@le64.fr>, 2020
-# Michael Douchin <kimaidou@gmail.com>, 2021
-# rldhont <rldhont@gmail.com>, 2021
-# Marjorie FANGAIN, 2021
-# Laurent Jouanneau <dev@ljouanneau.com>, 2021
-# Nicolas Boisteault <nboisteault@gmail.com>, 2021
+# Michael Douchin <kimaidou@gmail.com>, 2022
+# Arnaud HANRY <arnaud.hanry@le64.fr>, 2022
+# Marjorie FANGAIN, 2022
+# rldhont <rldhont@gmail.com>, 2022
 # etrimaille <gustrimaille@yahoo.fr>, 2022
+# Nicolas Boisteault <nboisteault@gmail.com>, 2022
+# Laurent Jouanneau <dev@ljouanneau.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-21 15:25+0000\n"
-"PO-Revision-Date: 2020-11-26 13:55+0000\n"
-"Last-Translator: etrimaille <gustrimaille@yahoo.fr>, 2022\n"
+"POT-Creation-Date: 2022-12-15 13:09+0100\n"
+"PO-Revision-Date: 2022-12-09 13:31+0000\n"
+"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../source/substitutions.rst:6
+msgid "add_layer_svg"
+msgstr "add_layer_svg"
+
+#: ../../source/substitutions.rst:7
+msgid "edit_layer_svg"
+msgstr "edit_layer_svg"
+
+#: ../../source/substitutions.rst:8
+msgid "remove_layer_svg"
+msgstr "remove_layer_svg"
+
+#: ../../source/substitutions.rst:9
+msgid "down_layer_svg"
+msgstr "down_layer_svg"
+
+#: ../../source/substitutions.rst:10
+msgid "up_layer_svg"
+msgstr "up_layer_svg"
+
+#: ../../source/substitutions.rst:11
+msgid "refresh_svg"
+msgstr "refresh_svg"
+
+#: ../../source/substitutions.rst:12
+msgid "properties_svg"
+msgstr "properties_svg"
 
 #: ../../source/publish/configuration/action_popup.rst:4
 msgid "Action in a popup"
@@ -49,11 +77,11 @@ msgstr "Action dans une popup"
 #: ../../source/publish/lizmap_plugin/basemap.rst:7
 #: ../../source/publish/lizmap_plugin/dataviz.rst:7
 #: ../../source/publish/lizmap_plugin/edition.rst:9
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:8
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:9
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:7
 #: ../../source/publish/lizmap_plugin/information.rst:7
 #: ../../source/publish/lizmap_plugin/layers.rst:7
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:8
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:9
 #: ../../source/publish/lizmap_plugin/map_options.rst:9
 #: ../../source/publish/lizmap_plugin/time_manager.rst:7
 #: ../../source/publish/lizmap_plugin/tooltip.rst:7
@@ -79,11 +107,11 @@ msgstr "C'est une fonctionnalité dans |lizmap_3_4|."
 #: ../../source/publish/lizmap_plugin/basemap.rst:10
 #: ../../source/publish/lizmap_plugin/dataviz.rst:10
 #: ../../source/publish/lizmap_plugin/edition.rst:12
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:11
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:12
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:10
 #: ../../source/publish/lizmap_plugin/information.rst:10
 #: ../../source/publish/lizmap_plugin/layers.rst:10
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:11
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:12
 #: ../../source/publish/lizmap_plugin/time_manager.rst:10
 #: ../../source/publish/lizmap_plugin/tooltip.rst:10
 msgid "Principle"
@@ -117,11 +145,11 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/basemap.rst:22
 #: ../../source/publish/lizmap_plugin/dataviz.rst:34
 #: ../../source/publish/lizmap_plugin/edition.rst:56
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:31
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:32
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:36
 #: ../../source/publish/lizmap_plugin/information.rst:22
 #: ../../source/publish/lizmap_plugin/layers.rst:15
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:36
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:37
 #: ../../source/publish/lizmap_plugin/time_manager.rst:26
 #: ../../source/publish/lizmap_plugin/tooltip.rst:20
 msgid "Configuring the tool"
@@ -312,6 +340,9 @@ msgid ""
 "<https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/expression.html>`_"
 " ."
 msgstr ""
+"Comme dans QGIS Bureautique, Lizmap peut utiliser les `expressions QGIS "
+"<https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/expression.html>`_"
+" ."
 
 #: ../../source/publish/configuration/expression.rst:9
 msgid "Project level"
@@ -327,12 +358,16 @@ msgid ""
 "``@lizmap_user`` : *string*, the current user connected in Lizmap. It might "
 "be empty."
 msgstr ""
+"``@lizmap_user`` : *chaîne*, l'utilisateur actuel connecté à Lizmap. Cela "
+"peut-être vide."
 
 #: ../../source/publish/configuration/expression.rst:14
 msgid ""
 "``@lizmap_user_groups`` : *array*, the current user groups as a list. It "
 "might be empty."
 msgstr ""
+"``@lizmap_user_groups`` : *tableau*, les groupes d'utilisateurs actuels sous"
+" forme de liste. Il est peut-être vide."
 
 #: ../../source/publish/configuration/expression.rst:17
 msgid ""
@@ -340,6 +375,9 @@ msgid ""
 "different color for a given user, or to print the current Lizmap user in a "
 "layout."
 msgstr ""
+"Il est possible d'utiliser ces variables dans une symbologie par exemple, "
+"pour définir une couleur différente pour un utilisateur donné, ou pour "
+"imprimer l'utilisateur actuel de Lizmap dans une mise en page."
 
 #: ../../source/publish/configuration/expression.rst:21
 msgid "Advanced forms"
@@ -350,6 +388,9 @@ msgid ""
 "For editing, it's possible to use expressions for constraints, default "
 "value, group visibility. Read :ref:`edition-expressions`."
 msgstr ""
+"Pour l'édition, il est possible d'utiliser des expressions pour les "
+"contraintes, la valeur par défaut, la visibilité du groupe. Lisez "
+":ref:`edition-expressions`."
 
 #: ../../source/publish/configuration/expression.rst:27
 msgid "Layouts"
@@ -369,6 +410,10 @@ msgid ""
 "<https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#exploring-"
 "expressions-in-a-label-item>`_ are useful."
 msgstr ""
+"Dans une mise en page, l'expression ``map_credits`` ou `expressions plus "
+"complexes "
+"<https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/composer_items/composer_label.html#exploring-"
+"expressions-in-a -label-item>`_ sont utiles."
 
 #: ../../source/publish/configuration/index.rst:3
 #: ../../source/publish/configuration/spatial_search.rst:154
@@ -381,7 +426,7 @@ msgid ""
 "are set in the QGIS project itself such as project properties, the legend, "
 "forms etc."
 msgstr ""
-"Les configurations Lizmap ne sont pas que dans le plugin QGIS Lizmap. "
+"Les configurations Lizmap ne sont pas que dans l'extension QGIS Lizmap. "
 "Quelques configurations se font aussi dans le projet QGIS, tel que les "
 "propriétés du projet, la légende, les formulaires etc."
 
@@ -424,8 +469,8 @@ msgid ""
 "this tab."
 msgstr ""
 "Si le lien est vide dans l'onglet :menuselection:`Lizmap --> Couches`, le "
-"lien dans Lizmap sera automatiquement renseigné par le plugin Lizmap défini "
-"dans cet onglet."
+"lien dans Lizmap sera automatiquement renseigné par l'extension Lizmap "
+"défini dans cet onglet."
 
 #: ../../source/publish/configuration/layer.rst:24
 msgid "You can use the |refresh_svg| button in Lizmap to pick this value."
@@ -499,6 +544,9 @@ msgid ""
 "in the form. There will be no content inserting. *Use it for the primary "
 "key*."
 msgstr ""
+"Pour masquer un champ, choisissez :guilabel:`Cachée`. L'utilisateur ne verra"
+" pas le champ dans le formulaire. Il n'y aura pas d'insertion de contenu. "
+"*Utilisez-le pour la clé primaire*."
 
 #: ../../source/publish/configuration/layer.rst:51
 msgid "To add a read-only field, unchecked :guilabel:`Editable` checkbox."
@@ -511,6 +559,8 @@ msgid ""
 "Special case of the option :guilabel:`Value Relation`. You can use this "
 "option for a Lizmap map."
 msgstr ""
+"Cas particulier de l'option :guilabel:`Valeur de la relation`. Vous pouvez "
+"utiliser cette option pour une carte Lizmap."
 
 #: ../../source/publish/configuration/layer.rst:53
 msgid ""
@@ -540,6 +590,9 @@ msgid ""
 "properties of the table, **in the database**, not in :guilabel:`QGIS --> "
 "Layer Properties`."
 msgstr ""
+"Pour rendre le champ obligatoire, vous devez le définir comme ``NOT NULL`` "
+"dans les propriétés de la table, **dans la base de données**, pas dans "
+":guilabel:`QGIS --> Propriétés de la couche`."
 
 #: ../../source/publish/configuration/layer.rst:60
 msgid ""
@@ -616,6 +669,9 @@ msgid ""
 "**Control visibility by expression**. For example, you can toggle tab's "
 "visibility based on a checkbox state."
 msgstr ""
+"**Contrôlez la visibilité par expression**. Par exemple, vous pouvez "
+"basculer la visibilité de l'onglet en fonction de l'état d'une case à "
+"cocher."
 
 #: ../../source/publish/configuration/layer.rst:86
 msgid ""
@@ -623,10 +679,14 @@ msgid ""
 "``Checkbox`` and a ``photo`` tab having ``Control Visibility by Expression``"
 " checked and ``\"has_photo\" = true OR \"has_photo\" = 't'`` as Expression."
 msgstr ""
+"Pour cela, nous pouvons créer un champ nommé ``has_photo`` défini comme une "
+"``case à cocher`` et un onglet ``photo`` ayant le ``Contrôle de la "
+"Visibilité par Expression`` coché et ``\"has_photo\" = true OR \" "
+"has_photo\" = 't'`` comme expression."
 
 #: ../../source/publish/configuration/layer.rst:94
 msgid "**Constraints defined by expression**."
-msgstr ""
+msgstr "**Contraintes définies par expression**."
 
 #: ../../source/publish/configuration/layer.rst:90
 msgid ""
@@ -634,6 +694,9 @@ msgid ""
 "beginning by `http` (of course, regex would be better but we keep it "
 "simple)."
 msgstr ""
+"Par exemple, vous voulez simplement affirmer que les utilisateurs tapent "
+"correctement une URL de site Web commençant par `http` (bien sûr, une regex "
+"serait mieux mais nous gardons les choses simples)."
 
 #: ../../source/publish/configuration/layer.rst:93
 msgid ""
@@ -642,10 +705,13 @@ msgid ""
 "expression and ``Web site URL must start with 'http'`` as Expression "
 "description."
 msgstr ""
+"Par exemple, vous voulez simplement affirmer que les utilisateurs tapent "
+"correctement une URL de site Web commençant par `http` (bien sûr, une regex "
+"serait mieux mais nous gardons les choses simples)."
 
 #: ../../source/publish/configuration/layer.rst:101
 msgid "**Filter expression for a Value Relation field**."
-msgstr ""
+msgstr "**Expression de filtre pour un champ Valeur de la Relation**."
 
 #: ../../source/publish/configuration/layer.rst:97
 msgid ""
@@ -656,6 +722,13 @@ msgid ""
 "Filter expression. We can also check ``Not null`` and ``Enforce not null "
 "contraint`` to assert no NULL value can be set."
 msgstr ""
+"Par exemple, vous souhaitez qu'un champ obtienne automatiquement la valeur "
+"associée du champ d'une autre couche lors du dessin d'un point sur la carte."
+" Pour cela, nous pouvons créer un nom de champ ``quartier`` défini comme une"
+" relation de valeur à une couche ``quartiers`` et définir "
+"``intersects($geometry, @current_geometry)`` comme expression de filtre. "
+"Nous pouvons également cocher ``Non null`` et ``Renforcer la contrainte non "
+"null`` pour affirmer qu'aucune valeur NULL ne peut être définie."
 
 #: ../../source/publish/configuration/layer.rst:112
 msgid "Server side simplification"
@@ -722,7 +795,7 @@ msgid ""
 msgstr ""
 "Vous pouvez exclure des couches de votre publication avec l'onglet "
 ":guilabel:`QGIS Server` des :guilabel:`Propriétés du projet QGIS`. Dans ce "
-"cas, les couches ne seront pas du tout disponibles dans Lizmap **. Avec "
+"cas, les couches **ne seront pas du tout** disponibles dans Lizmap. Avec "
 "cette méthode, vous ne pouvez pas utiliser une couche dans la fonction de "
 "localisation par couche ni l'afficher dans la carte."
 
@@ -740,12 +813,17 @@ msgid ""
 "into this group. This group (and its layers) won't be displayed in the "
 "Lizmap legend."
 msgstr ""
+"Soit créez un groupe dans votre légende appelé ``hidden`` et placez votre "
+"calque dans ce groupe. Ce groupe (et ses calques) ne seront pas affichés "
+"dans la légende de Lizmap."
 
 #: ../../source/publish/configuration/legend.rst:38
 msgid ""
 "Or use the check box :guilabel:`Hide in legend` in :menuselection:`Lizmap "
 "--> Layers` for the specific layer."
 msgstr ""
+"Ou utilisez la case à cocher :guilabel:`Cacher dans la légende` dans "
+":menuselection:`Lizmap --> Couches` pour la couche en question."
 
 #: ../../source/publish/configuration/legend.rst:40
 msgid "This feature can be used for:"
@@ -799,6 +877,9 @@ msgid ""
 "All layers and groups in the *Overview* group will **not be shown in the "
 "Lizmap's map legend**. They are drawn only in the Overview map."
 msgstr ""
+"Toutes les couches et tous les groupes du groupe *Overview* ne seront **pas "
+"affichés dans la légende de la carte de Lizmap**. Ils sont dessinés "
+"uniquement dans la carte de localisation."
 
 #: ../../source/publish/configuration/legend.rst:58
 msgid "It is advisable to use:"
@@ -820,6 +901,8 @@ msgid ""
 "The location map will use the extent of the WMS Capabilities, "
 ":menuselection:`Project Properties -> QGIS Server -> WMS`."
 msgstr ""
+"La carte de localisation utilisera l'étendue des capacités WMS, "
+":menuselection:`Propriétés du projet -> QGIS Serveur -> WMS`."
 
 #: ../../source/publish/configuration/legend.rst:66
 msgid "Here is an example of use:"
@@ -912,6 +995,8 @@ msgid ""
 "the **link** provided for each group or layer in the Lizmap plugin "
 ":guilabel:`Layers` tab."
 msgstr ""
+"le **lien** fourni pour chaque groupe ou calque dans l'onglet "
+":guilabel:`Couches` de l'extension Lizmap."
 
 #: ../../source/publish/configuration/media.rst:30
 msgid "Details of these uses is specified below."
@@ -994,6 +1079,9 @@ msgid ""
 " Form`, for the given field, you should choose ``Attachment`` widget and set"
 " the path relative to the project."
 msgstr ""
+"Pour les capacités d'édition, dans :menuselection:`Propriétés de la couche "
+"--> Formulaire d'attributs`, pour le champ donné, vous devez choisir le type"
+" d'outil ``Pièce jointe`` et définir le chemin par rapport au projet."
 
 #: ../../source/publish/configuration/media.rst:62
 msgid ""
@@ -1047,7 +1135,7 @@ msgstr ""
 #: ../../source/publish/configuration/media.rst:85
 #: ../../source/publish/customization/iframe.rst:16
 #: ../../source/publish/customization/themes.rst:78
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:26
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:27
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:25
 #: ../../source/publish/lizmap_plugin/time_manager.rst:15
 msgid "Example"
@@ -1069,11 +1157,6 @@ msgstr ""
 
 #: ../../source/publish/configuration/media.rst:91
 #: ../../source/publish/configuration/popup.rst:57
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "id"
 msgstr "id"
@@ -1204,6 +1287,9 @@ msgid ""
 "For any other file types, the popup will display a link to the document that"
 " users can download by clicking on the link."
 msgstr ""
+"Pour tous les autres types de fichiers, la fenêtre contextuelle affichera un"
+" lien vers le document que les utilisateurs peuvent télécharger en cliquant "
+"sur le lien."
 
 #: ../../source/publish/configuration/media.rst:111
 msgid ""
@@ -1278,12 +1364,18 @@ msgid ""
 "hundreds of users, you can easily understand that optimising your web "
 "application is an important task."
 msgstr ""
+"chaque utilisateur peut envoyer des requêtes à la même application ; si vous"
+" avez des dizaines ou des centaines d'utilisateurs, vous pouvez facilement "
+"comprendre que l'optimisation de votre application Web est une tâche "
+"importante."
 
 #: ../../source/publish/configuration/optimization.rst:15
 msgid ""
 "You have to think about a web publication for many users rather than the "
 "display of a map to a single user."
 msgstr ""
+"Vous devez penser à une publication Web pour de nombreux utilisateurs plutôt"
+" qu'à l'affichage d'une carte pour un seul utilisateur."
 
 #: ../../source/publish/configuration/optimization.rst:17
 msgid ""
@@ -1294,6 +1386,12 @@ msgid ""
 "e.g. 30 layers, Lizmap at startup will send a request to QGIS server for "
 "each of them."
 msgstr ""
+"Par défaut, pour chaque couche QGIS que vous ajoutez à votre projet Lizmap, "
+"vous pouvez choisir depuis le plugin Lizmap si la visibilité de la couche "
+"doit être activée (case à cocher :guilabel:`Cochée`) au démarrage de "
+"l'application. Vous devez faire attention à ne pas abuser de cette "
+"fonctionnalité, car si le projet contient par exemple 30 couches, Lizmap au "
+"démarrage enverra une requête au serveur QGIS pour chacune d'entre elles."
 
 #: ../../source/publish/configuration/optimization.rst:19
 msgid ""
@@ -1304,10 +1402,17 @@ msgid ""
 "zooming level. Therefore, subsequent users will zoom in the same area, the "
 "tiles already generated will be reused."
 msgstr ""
+"Si la case :guilabel:`Tuile unique` est cochée, cela demandera 30 images de "
+"la taille de la fenêtre de votre navigateur. Sinon, Lizmap, via OpenLayers, "
+"demandera 30 séries de tuiles (environ 250 par 250 pixels). Chaque tuile est"
+" une image, et est créée en fonction de la taille totale de la fenêtre et du"
+" niveau de zoom. Par conséquent, si les utilisateurs suivants zooment sur la"
+" même zone, les tuiles déjà générées seront réutilisées."
 
 #: ../../source/publish/configuration/optimization.rst:21
 msgid "The tiles can be cached with two non exclusive systems:"
 msgstr ""
+"Les tuiles peuvent être mises en cache avec deux systèmes non exclusifs:"
 
 #: ../../source/publish/configuration/optimization.rst:23
 msgid ""
@@ -1316,6 +1421,10 @@ msgid ""
 "will reuse it and send it to the client, avoiding a new request to QGIS "
 "server."
 msgstr ""
+"*Côté serveur*, sur la machine où le serveur QGIS et Lizmap sont installés. "
+"Si la tuile a été demandée et générée précédemment, et qu'elle n'a pas "
+"expiré, Lizmap la réutilisera et l'enverra au client, évitant ainsi une "
+"nouvelle demande au serveur QGIS."
 
 #: ../../source/publish/configuration/optimization.rst:24
 msgid ""
@@ -1323,12 +1432,17 @@ msgid ""
 "they expire. This avoid both the request to QGIS server and the internet "
 "traffic."
 msgstr ""
+"*Côté client* : les tuiles seront enregistrées dans le cache du navigateur "
+"et réutilisées jusqu'à leur expiration. Cela évite à la fois la demande au "
+"serveur QGIS et le trafic internet."
 
 #: ../../source/publish/configuration/optimization.rst:26
 msgid ""
 "The server cache has to be generated. Read :ref:`seed-cache` to know how to "
 "generate the cache."
 msgstr ""
+"Le cache du serveur doit être généré. Lisez :ref:`seed-cache` pour savoir "
+"comment générer le cache."
 
 #: ../../source/publish/configuration/optimization.rst:28
 msgid ""
@@ -1353,6 +1467,19 @@ msgid ""
 "tile will depend heavily on the performance of the server and the complexity"
 " of the project."
 msgstr ""
+"Disons que vous avez un écran de 1280 par 768 pixels. Si vous avez toutes "
+"vos couches tuilées, Lizmap doit donc afficher environ 5 par 3 = 15 tuiles "
+"(256 par 256 pixels chacune) par couche, et plus pour un écran plus grand. "
+"Si les tuiles environnantes ne sont que partiellement affichées, le nombre "
+"total sera encore plus élevé. Une moyenne de 20 tuiles par couche est une "
+"estimation raisonnable. Avec 30 couches, comme dans notre exemple, cela "
+"signifie un total d'environ 20 fois 30 = 600 tuiles (donc 600 requêtes au "
+"serveur Lizmap) par utilisateur, à chaque démarrage de Lizmap et pour chaque"
+" zoom et déplacement. Si vous avez 10 utilisateurs simultanés, cela devient "
+"assez lourd pour le serveur, si le cache n'a pas été généré précédemment, et"
+" que QGIS Server doit donc les créer. Le temps requis pour chaque tuile "
+"dépendra fortement de la performance du serveur et de la complexité du "
+"projet."
 
 #: ../../source/publish/configuration/optimization.rst:37
 msgid "The size of each tile will depend on:"
@@ -1377,6 +1504,12 @@ msgid ""
 "(lots of connection bandwidth consumed) and for the users (long delay, even "
 "with a reasonably fast connection)."
 msgstr ""
+"Une tuile standard est à peu près d'environ 30 Kb. Dans notre exemple, le "
+"client va donc télécharger environ 20 par 30 = 600 Ko par couche, ce qui, "
+"pour 30 couches, donnera un total d'environ 18 Mo, ce qui est lourd à la "
+"fois pour le serveur (beaucoup de bande passante consommée) et pour les "
+"utilisateurs (délai important, même avec une connexion raisonnablement "
+"rapide)."
 
 #: ../../source/publish/configuration/optimization.rst:44
 msgid ""
@@ -1439,7 +1572,7 @@ msgid ""
 " share some of the layers among different projects, through the embedding "
 "mechanism in QGIS."
 msgstr ""
-"Créez des projets QGIS distincts, et donc des cartes Lizmap différentes, "
+"Créer des projets QGIS distincts, et donc des cartes Lizmap différentes, "
 "pour différents objectifs, regroupant ainsi les données dans des thèmes "
 "logiques. Par exemple, une carte sur le développement urbain avec peut-être "
 "10 couches et une sur l'environnement, avec environ 5 couches, est "
@@ -1459,7 +1592,7 @@ msgid ""
 "user is directed automatically to one of the projects, at the administrator "
 "choice."
 msgstr ""
-"Utilisez l'option :guilabel:`Seulement des cartes` dans l'interface Web "
+"Utiliser l'option :guilabel:`Seulement des cartes` dans l'interface Web "
 "d'administration. Cette option permet à l'utilisateur de passer "
 "automatiquement d'une carte à une autre, via le bouton :guilabel:`Accueil`, "
 "en conservant autant que possible la localisation et le niveau de zoom. Dans"
@@ -1475,6 +1608,11 @@ msgid ""
 "This allow a sensible reduction in the number of requests, and of the total "
 "network traffic."
 msgstr ""
+"Ne pas afficher toutes les couches au démarrage (désactivez la case à cocher"
+" :guilabel:`Cochée` comme décrit ci-dessus). Seules les couches très "
+"importantes doivent être visibles par défaut, et les utilisateurs doivent "
+"activer uniquement la couche dont ils ont besoin. Cela permet une réduction "
+"sensible du nombre de requêtes et du trafic réseau total."
 
 #: ../../source/publish/configuration/optimization.rst:58
 msgid ""
@@ -1486,6 +1624,14 @@ msgid ""
 " the number of tiles and server requests, and the total volume of data to be"
 " downloaded. The legend of the group will be displayed."
 msgstr ""
+"Créer des groupes de couches et utiliser l'option :guilabel:`Groupe comme "
+"une couche` dans le plugin Lizmap. Généralement, une série de couches du "
+"même thème général peuvent être affichée ensemble, avec un choix approprié "
+"de styles. Dans ce cas, Lizmap affichera seulement une case à cocher pour "
+"l'ensemble du groupe, et surtout il ne demandera qu'une seule série de "
+"tuiles pour tout le groupe, réduisant ainsi le nombre de tuiles et de "
+"requêtes au serveur, et le volume total de données à télécharger. La légende"
+" du groupe sera affichée."
 
 #: ../../source/publish/configuration/optimization.rst:59
 msgid ""
@@ -1504,6 +1650,23 @@ msgid ""
 "group (:guilabel:`Group as layer`), tiled and cached. A simple linear layer,"
 " like a series of bus lines, can be displayed as a single tile."
 msgstr ""
+"Utiliser l'option :guilabel:`Image non tuilée` pour certaines couches. Dans "
+"ce cas, Lizmap va requêter une seule image par couche, d'à peu près la "
+"taille de la fenêtre du navigateur, plutôt qu'un ensemble de tuiles. Cela va"
+" permettre de grandement réduire le nombre de requêtes vers le serveur. Dans"
+" l'exemple ci-dessus, sans les optimisations décrites, si toutes les couches"
+" sont affichées, chaque utilisateur va requêter 30 images (une par couche) "
+"pour chaque zoom ou déplacement, plutôt que 480. La taille totale des "
+"données à télécharger est cependant à peu près la même. Par contre, il est "
+"peu probable que différents utilisateurs requêtent exactement la même image,"
+" par conséquent utiliser un cache n'a pas d'intérêt dans ce cas, et est "
+"évité par Lizmap (les deux options sont mutuellement exclusives). Le choix "
+"optimal (tuile unique ou tuiles multiples) se fait selon le type de couche. "
+"Par exemple, un fond de carte complexe, créé en combinant 15 couches "
+"individuelles, sera optimisé en regroupant ces dernières dans un groupe "
+"(:guilabel:`Groupe comme une couche`), tuilé et mis en cache. Une couche "
+"simple linéaire, comme un ensemble de lignes de bus, peut être affiché avec "
+"une tuile unique."
 
 #: ../../source/publish/configuration/optimization.rst:60
 msgid ""
@@ -1512,6 +1675,11 @@ msgid ""
 "firing a big series of requests to the server. In any case, avoiding groups "
 "of more than 5-10 layers is usually good practice."
 msgstr ""
+"Utiliser l'option :guilabel:`Cacher les cases à cocher des groupes` : ceci "
+"permet d'éviter que les utilisateurs ne cliquent sur un groupe avec par "
+"exemple 20 couches sans que ça leur soit vraiment utile, ceci provoquant un "
+"grand nombre de requêtes vers le serveur. Dans tous les cas, il est bon "
+"d'éviter d'avoir des groupes de plus de 5-10 couches."
 
 #: ../../source/publish/configuration/optimization.rst:61
 msgid ""
@@ -1528,12 +1696,12 @@ msgstr ""
 
 #: ../../source/publish/configuration/optimization.rst:63
 msgid "create a spatial index for all your vector layers"
-msgstr "créer un index spatial pour toutes vos couches vectorielles"
+msgstr "Créer un index spatial pour toutes vos couches vectorielles"
 
 #: ../../source/publish/configuration/optimization.rst:64
 msgid "pyramidize all your raster layers (except the very small ones)"
 msgstr ""
-"faire une pyramide de toutes vos couches rasters (sauf les très petites)"
+"Faire une pyramide de toutes vos couches rasters (sauf les très petites)"
 
 #: ../../source/publish/configuration/optimization.rst:65
 msgid ""
@@ -1541,7 +1709,7 @@ msgid ""
 "building layer at 1:500,000 is meaningless, as the image is almost "
 "unreadable, and puts a lot of stress on the server"
 msgstr ""
-"n'afficher les données qu'à l'échelle appropriée : par exemple, afficher la "
+"N'afficher les données qu'à l'échelle appropriée : par exemple, afficher la "
 "couche détaillé d'un bâtiment à l'échelle 1:500 000 n'a pas d'intérêt, "
 "puisque l'image est quasi illisible, et surcharge fortement le serveur"
 
@@ -1553,6 +1721,13 @@ msgid ""
 "etc.), and :guilabel:`Goup as a layer` to let the user see this as a single "
 "layer, using the most appropriate data at each scale"
 msgstr ""
+"Utiliser des versions simplifiées d'une couche pour l'afficher à différentes"
+" échelles. Vous pouvez ensuite grouper la couche originale (afin qu'elle "
+"soit affichée à l'échelle 1: 1 000 par exemple) avec ses versions "
+"simplifiées (qui elles seront affichées aux échelles 1:10 000, 1:50 000; "
+"etc. par exemple) et utiliser :guilabel:`Groupe comme une couche` permettant"
+" ainsi à l'utilisateur de voir ceci comme une seule couche, et d'utiliser la"
+" donnée la plus appropriée à chaque échelle"
 
 #: ../../source/publish/configuration/optimization.rst:67
 msgid ""
@@ -1563,7 +1738,7 @@ msgid ""
 "rendering times for large and complex layers. In France, you can avoid "
 "reprojection by using the base map from IGN Géoportail directly in EPSG:2154"
 msgstr ""
-"faire attention à la reprojection 'à la volée' (ALV). Si, par exemple, vous "
+"Faire attention à la reprojection 'à la volée' (ALV). Si, par exemple, vous "
 "affichez des données en Lambert 93 (EPSG:2154) sur un fond de carte "
 "OpenStreetmap ou Google (en Pseudo Mercator, EPSG:3857), QGIS Server "
 "nécessite de reprojeter les couches rasters et vectorielles avant de générer"
@@ -1576,7 +1751,7 @@ msgid ""
 "be aware of the fact that certain rendering options (e.g. labels, "
 "expressions, etc.) can be very demanding from the server"
 msgstr ""
-"d'être attentif au fait que certaines options de rendu ( par exemples les "
+"Etre attentif au fait que certaines options de rendu ( par exemples les "
 "labels, les expressions, etc.) peuvent demander beaucoup de ressources au "
 "serveur"
 
@@ -1587,7 +1762,7 @@ msgid ""
 "configuration of PostgreSQL, possibly a connection through Unix socket "
 "instead of TCP/IP (you can do this through the use of services), etc."
 msgstr ""
-"si vous utilisez PostGIS, optimisez le : créer toujours un index spatial, "
+"Si vous utilisez PostGIS, optimisez le : créer toujours un index spatial, "
 "des indexes pour les données filtrées et  pour les clés étrangères, utilisez"
 " les paramètres appropriées pour la configuration PostgreSQL, si possible "
 "une connexion par socket UNIX plutôt qu'en TCP/IP (pour ceci utilisez des "
@@ -1601,13 +1776,20 @@ msgid ""
 "8bit): for some symbols, the visual result may be the same, and the tiles "
 "smaller. Have a check to see if the image quality is acceptable in your case"
 msgstr ""
+"Utiliser un format d'image approprié. Pour les fonds de carte, pour lesquels"
+" la transparence n'est pas nécessaire, JPEG est souvent la meilleure option "
+": les tuiles seront plus légères et donc plus rapides à télécharger. Pour "
+"les autres couches, essayez le format PNG avec moins de profondeur (16 bit "
+"ou 8 bit) : pour certains symboles, le rendu visuel peut être le même avec "
+"des tuiles plus légères. Contrôlez si la qualité d'image vous semble "
+"acceptable dans votre cas"
 
 #: ../../source/publish/configuration/optimization.rst:71
 msgid ""
 "Use server side simplification if possible. Read "
 ":ref:`server_side_simplification`."
 msgstr ""
-"Utilisez la simplification côté serveur si possible. Lire "
+"Utiliser la simplification côté serveur si possible. Lire "
 ":ref:`server_side_simplification`."
 
 #: ../../source/publish/configuration/optimization.rst:73
@@ -1631,6 +1813,10 @@ msgid ""
 "zoom level. This will be done exclusively on demand, if the legend is "
 "displayed, thus saving one request per layer for each zoom."
 msgstr ""
+"Lizmap évite le téléchargement automatique des légendes au démarrage et à "
+"chaque niveau de zoom. Cela sera fait exclusivement à la demande, si la "
+"légende est affichée, ce qui permet d'économiser une requête par couche pour"
+" chaque zoom."
 
 #: ../../source/publish/configuration/optimization.rst:78
 msgid "In detail: how to activate the caches"
@@ -1641,6 +1827,9 @@ msgid ""
 "In :menuselection:`Lizmap plugin --> Layers`, you can enable for each layer "
 "or group the cache (client and server side) for generated images."
 msgstr ""
+"Dans :menuselection:``Lizmap plugin --> Couches`, vous pouvez activer pour "
+"chaque couche ou groupe le cache (côté client et serveur) pour les images "
+"générées."
 
 #: ../../source/publish/configuration/optimization.rst:83
 msgid "Server side"
@@ -1656,6 +1845,14 @@ msgid ""
 "the server, since we do not want more QGIS-Server tiles that have already "
 "been made."
 msgstr ""
+"Cette fonctionnalité n'est pas compatible avec l'option :guilabel:`Tuile "
+"unique`. Lizmap Web Client peut créer dynamiquement un cache de tuiles sur "
+"le serveur. Ce cache est le stockage des images déjà générées par QGIS-"
+"Server sur le serveur. L'application Lizmap Web Client génère "
+"automatiquement le cache au fur et à mesure que les tuiles sont demandées. "
+"L'activation du cache permet d'alléger considérablement la charge du "
+"serveur, puisque nous ne voulons plus de tuiles QGIS-Server qui ont déjà été"
+" réalisées."
 
 #: ../../source/publish/configuration/optimization.rst:90
 msgid "To activate it, you must:"
@@ -1671,6 +1868,10 @@ msgid ""
 ":guilabel:`Expiration (seconds)`. `0` means no expiration on the server, the"
 " tile will be kept on the server until the cache is cleared."
 msgstr ""
+"spécifier le temps d'expiration du serveur de cache en secondes : "
+":guilabel:`Expiration (secondes)`. `0` signifie qu'il n'y a pas d'expiration"
+" sur le serveur, la tuile sera conservée sur le serveur jusqu'à ce que le "
+"cache soit effacé."
 
 #: ../../source/publish/configuration/optimization.rst:96
 msgid ""
@@ -1683,6 +1884,15 @@ msgid ""
 "equal to 5 times the width and height request. This option is useless for "
 "rasters."
 msgstr ""
+"L'option :guilabel:`Metatile` permet de préciser la taille de l'image "
+"supplémentaire servant à générer une tuile. Le principe du "
+":guilabel:`Metatile` est de demander au serveur une image plus grande que "
+"celle souhaitée, de la découper à la taille de la requête et de la retourner"
+" au client Web. Cette méthode évite les étiquettes tronquées aux bords et "
+"les discontinuités entre tuiles, mais est plus gourmande en ressources. La "
+"valeur par défaut est `3,3` soit une image dont la largeur et la hauteur "
+"sont égales à 5 fois la largeur et la hauteur demandées. Cette option est "
+"inutile pour les rasters."
 
 #: ../../source/publish/configuration/optimization.rst:103
 msgid ""
@@ -1691,6 +1901,11 @@ msgid ""
 "function or to increase the metatile size a little bit. So labels are "
 "displayed in the same area."
 msgstr ""
+"Pour les couches vectorielles avec métatiles, vous devez définir la position"
+" de l'étiquette à une position fixe. Si l'étiquette est très longue, "
+"n'oubliez pas d'utiliser une fonction de retour à la ligne ou d'augmenter un"
+" peu la taille de la métatile. Ainsi, les étiquettes sont affichées dans la "
+"même zone."
 
 #: ../../source/publish/configuration/optimization.rst:106
 msgid "Client side"
@@ -1705,6 +1920,13 @@ msgid ""
 "cache can greatly optimize Lizmap because the browser does not re-request "
 "the server for tiles already in cache that are not expired."
 msgstr ""
+"L'option :guilabel:`cache du navigateur` vous permet de spécifier une date "
+"d’expiration en secondes pour les tuiles dans le cache du navigateur "
+"(Mozilla Firefox, Chrome, Internet Exploreur, Opéra, etc). Quand vous "
+"parcourez la carte avec le navigateur, celui-ci stocke les tuiles affichées "
+"dans son cache. Activer le cache client permet grandement d'optimiser Lizmap"
+" parce que le navigateur n'a pas à redemander au serveur les tuiles qui sont"
+" dans le cache et non expirées."
 
 #: ../../source/publish/configuration/optimization.rst:113
 msgid "Values `0` and `1` are equivalent and do not activate the option."
@@ -1733,6 +1955,9 @@ msgid ""
 "of one another. But of course, it is interesting to use the two together to "
 "optimize the application and free server resources."
 msgstr ""
+"**Ces 2 modes de cache, Serveur et Client, sont complètement indépendants** "
+"l'un de l'autre. Mais bien sûr, il est intéressant d'utiliser les 2 en même "
+"temps pour optimiser l'application et libérer les ressources du serveur."
 
 #: ../../source/publish/configuration/optimization.rst:124
 msgid ""
@@ -1751,6 +1976,12 @@ msgid ""
 "the \"child\" projects that integrate these layers, it is not possible to "
 "change these properties."
 msgstr ""
+"Dans QGIS, il est possible d'intégrer dans un projet des groupes ou des "
+"couches depuis un autre projet (qu'on appellera \"parent\"). Cette technique"
+" est intéressante, car elle permet de définir les propriétés des couches une"
+" seule fois dans un projet et de les utiliser dans plusieurs autres projets,"
+" par exemple pour les fonds de carte. Dans les projets \"fils\" qui "
+"intègrent ces couches, il n'est pas possible de modifier ces propriétés."
 
 #: ../../source/publish/configuration/optimization.rst:128
 msgid ""
@@ -1760,6 +1991,12 @@ msgid ""
 "cache will be centralized at the parent project and all child projects that "
 "use layers benefit the shared cache."
 msgstr ""
+"Lizmap utilise cette fonctionnalité pour centraliser le cache des tuiles. "
+"Pour tous les projets fils qui utilisent des couches intégrées du projet "
+"parent, Lizmap demandera à QGIS Server les tuiles du projet parent, et non "
+"des projets fils. Le cache sera donc centralisé au niveau du projet parent, "
+"et tous les projets fils qui utilisent les couches bénéficieront de ce cache"
+" partagé."
 
 #: ../../source/publish/configuration/optimization.rst:130
 msgid "To use this feature, you must:"
@@ -1794,6 +2031,9 @@ msgid ""
 "It is possible to hide the project from the main page of Lizmap with the "
 "check box  in :menuselection:`Map --> Hide the project Web Client Lizmap`."
 msgstr ""
+"Il est possible de masquer le projet dans la page d’accueil de Lizmap via la"
+" case à cocher :menuselection:`Carte --> Masquer le projet dans Lizmap Web "
+"Client`."
 
 #: ../../source/publish/configuration/optimization.rst:138
 msgid ""
@@ -1808,6 +2048,9 @@ msgid ""
 "verify that the **announced extent** in :menuselection:`QGIS project "
 "properties --> QGIS Server` is **exactly the same as the parent project**."
 msgstr ""
+"vérifier que l'**emprise annoncée** dans :menuselection:`Propriétés du "
+"projet QGIS --> QGIS Server` est **exactement la même que celle du projet "
+"parent**."
 
 #: ../../source/publish/configuration/optimization.rst:141
 msgid ""
@@ -1835,6 +2078,9 @@ msgid ""
 "without the `.qgs` extension) is automatically entered for layers and "
 "integrated groups."
 msgstr ""
+"le code du \"Projet source\" (le nom du projet QGIS parent sans l'extension "
+"`.qgs`) est renseigné automatiquement pour les couches et les groupes "
+"intégrés."
 
 #: ../../source/publish/configuration/optimization.rst:145
 msgid "Publish the child project to the Lizmap Web Client as usual."
@@ -1882,8 +2128,8 @@ msgid ""
 "With the plugin, you can activate popups for a **layer** or for a **group** "
 "configured with the :guilabel:`Group as layer` option."
 msgstr ""
-"Avec le plugin, vous pouvez activer des popups pour une **couche** ou pour "
-"un **groupe** configuré avec l'option :guilabel:`Group as layer`."
+"Avec l'extension, vous pouvez activer des popups pour une **couche** ou pour"
+" un **groupe** configuré avec l'option :guilabel:`Grouper comme couche`."
 
 #: ../../source/publish/configuration/popup.rst:14
 msgid ""
@@ -1897,6 +2143,10 @@ msgid ""
 "this case, only the layers with the option :guilabel:`Popup` checked will be"
 " shown."
 msgstr ""
+"Pour l'option  :guilabel:`Groupe comme une couche` vous devez activer "
+"l'option pour le groupe et pour toutes les couches incluses que vous "
+"souhaitez voir dans la popup : dans ce cas, seules les couches qui ont aussi"
+" l'option :guilabel:`Popup` activée seront visibles."
 
 #: ../../source/publish/configuration/popup.rst:21
 msgid "You have three types of popup sources:"
@@ -1953,6 +2203,9 @@ msgid ""
 " popup. The tolerance can be setup in :menuselection:`Lizmap plugin --> Map "
 "options --> Map tools`."
 msgstr ""
+"Pour les couches ponctuelles, vous devez cliquer au milieu du point pour "
+"afficher la popup. La tolérance peut être paramétrée dans "
+":menuselection:`Plugin Lizmap --> Options de carte --> Outils de la carte`."
 
 #: ../../source/publish/configuration/popup.rst:39
 msgid ""
@@ -2039,7 +2292,7 @@ msgid ""
 "modifying its content through the button *Configure* the default table is "
 "shown."
 msgstr ""
-"Via le plugin, si on clique seulement sur la case à cocher *Activer les "
+"Via l'extension, si on clique seulement sur la case à cocher *Activer les "
 "popups* sans modifier le contenu via le bouton *Contenu*, alors c'est "
 "l'affichage par défaut ou *mode simple* qui est utilisé."
 
@@ -2050,7 +2303,7 @@ msgid ""
 "and even **display images, photos, or links to internal or external "
 "documents**."
 msgstr ""
-"On peut néanmoins jouer sur plusieurs choses dans QGIS et via le plugin "
+"On peut néanmoins jouer sur plusieurs choses dans QGIS et via l'extension "
 "Lizmap pour **paramétrer les champs qu'on veut afficher**, **renommer les "
 "champs**, et même **afficher des images, des photos ou des liens vers des "
 "documents internes ou externes**."
@@ -2194,9 +2447,9 @@ msgid ""
 "You can edit the popup template with the button *Configure* in the Lizmap "
 "plugin. Clicking on it you'll get a window with two text areas:"
 msgstr ""
-"Via le **bouton Configurer** du plugin Lizmap, on peut modifier le modèle de"
-" la popup. En cliquant sur ce bouton, une fenêtre s'affiche avec 2 zones de "
-"texte :"
+"Via le **bouton Configurer** de l'extension Lizmap, on peut modifier le "
+"modèle de la popup. En cliquant sur ce bouton, une fenêtre s'affiche avec 2 "
+"zones de texte :"
 
 #: ../../source/publish/configuration/popup.rst:128
 msgid "an **area where you can type your text**"
@@ -2318,6 +2571,9 @@ msgid ""
 "properties --> Display --> HTML Map Tip`. The main advantages of this "
 "approach are:"
 msgstr ""
+"Les popups *QGIS* peuvent être configurées via `QGIS --> Propriétés de la "
+"couche --> Infobulles --> HTML`. Les principaux avantages de cette approche "
+"sont :"
 
 #: ../../source/publish/configuration/popup.rst:197
 msgid "HTML is used"
@@ -2374,6 +2630,9 @@ msgid ""
 "geographical feature. To do so, you have to configure both the QGIS project "
 "and the Lizmap config."
 msgstr ""
+"Il est possible d'afficher plusieurs objets (photos, documents) pour chaque "
+"entité géographique. Pour ce faire, vous devez configurer à la fois le "
+"projet QGIS et la configuration de Lizmap."
 
 #: ../../source/publish/configuration/popup.rst:234
 msgid "In QGIS project:"
@@ -2385,6 +2644,9 @@ msgid ""
 "example `trees` and `tree_pictures`. The child layer must contain a field "
 "referencing the parent layer id."
 msgstr ""
+"Utilisez 2 couches distinctes pour stocker les caractéristiques principales "
+"et les images. Par exemple `trees` et `tree_pictures`. La couche enfant doit"
+" contenir un champ faisant référence à l'identifiant de la couche parent."
 
 #: ../../source/publish/configuration/popup.rst:238
 msgid ""
@@ -2392,6 +2654,9 @@ msgid ""
 "Fields`. Use `Photo` for the field which will contains the relative path to "
 "pictures."
 msgstr ""
+"Configurez les alias et les types de champs dans :menuselection:`Propriétés "
+"de la couche -> Champs`. Utilisez `Photo` pour le champ qui contiendra le "
+"chemin relatif des images."
 
 #: ../../source/publish/configuration/popup.rst:240
 msgid ""
@@ -2406,22 +2671,30 @@ msgid ""
 "path. Theses paths must refer to a project media subdirectory, for example: "
 "`media/photos/feature_1_a.jpg`"
 msgstr ""
+"Ajouter des données aux couches. Vous devez utiliser un chemin relatif pour "
+"stocker le chemin des images. Ces chemins doivent faire référence à un sous-"
+"répertoire media du projet, par exemple : `media/photos/feature_1_a.jpg`"
 
 #: ../../source/publish/configuration/popup.rst:245
 msgid "In Lizmap plugin:"
-msgstr "Dans le plugin Lizmap :"
+msgstr "Dans l'extension Lizmap :"
 
 #: ../../source/publish/configuration/popup.rst:247
 msgid ""
 "In the :guilabel:`Layers` tab, activate popup for both layers. You can "
 "configure source of the popup if you need specific layouts"
 msgstr ""
+"Dans l'onglet :guilabel:`Couches`, activez la popup pour les deux couches. "
+"Vous pouvez configurer la popup si vous avez besoin de mises en page "
+"spécifiques."
 
 #: ../../source/publish/configuration/popup.rst:248
 msgid ""
 "For the parent layer, activate the option :guilabel:`Display relative "
 "children under each object (use relations)`"
 msgstr ""
+"Pour la couche parente, activez l'option \"Afficher les enfants relatifs "
+"sous chaque objet (utiliser les relations)\""
 
 #: ../../source/publish/configuration/popup.rst:249
 msgid ""
@@ -2433,6 +2706,9 @@ msgid ""
 "*Optionally*, you can activate editing for the two layers, to allow the web "
 "users to create new features and upload pictures"
 msgstr ""
+"*En option*, vous pouvez activer l'édition pour les deux couches, afin de "
+"permettre aux utilisateurs Web de créer de nouvelles fonctionnalités et de "
+"télécharger des images."
 
 #: ../../source/publish/configuration/popup.rst:251
 msgid "Save and publish your project and Lizmap configuration"
@@ -2517,6 +2793,11 @@ msgid ""
 "<https://docs.qgis.org/latest/en/docs/user_manual/print_composer/index.html>`_"
 " without atlas enabled."
 msgstr ""
+"Pour proposer l’impression sur la carte en ligne, il faut avoir activer "
+"l'outil d'impression dans l'onglet *Carte* du plugin (:ref:`lizmap-config-"
+"map`) et que le projet QGIS possède au moins `un composeur d'impression "
+"<https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/index.html>`_"
+" sans \"atlas\" activé."
 
 #: ../../source/publish/configuration/print.rst:16
 msgid "Creating the layout"
@@ -2567,6 +2848,8 @@ msgid ""
 "A location map, a map for which you have enabled and configured the function"
 " of *Overview*, read :ref:`overview-map`"
 msgstr ""
+"une carte de localisation soit une carte pour laquelle vous aurez activé et "
+"configuré la fonction d'*Aperçu*. Lisez :ref:`overview-map`"
 
 #: ../../source/publish/configuration/print.rst:29
 msgid ""
@@ -2576,6 +2859,11 @@ msgid ""
 "https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#id4"
 " on the QGIS Documentation."
 msgstr ""
+"Depuis QGIS 3, vous pouvez utiliser des expressions QGIS, dans vos labels "
+"par exemple. Vous pouvez créer un label automatique selon les couches "
+"visibles en suivant l'exemple :  "
+"https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/composer_items/composer_label.html#id4"
+" "
 
 #: ../../source/publish/configuration/print.rst:32
 msgid "Dynamic content"
@@ -2587,12 +2875,18 @@ msgid ""
 "description, comment, etc). To do this, you need to add an identifier to "
 "your label in the composer."
 msgstr ""
+"Vous pouvez permettre à l'utilisateur de modifier le contenu de certaines "
+"étiquettes (titre, description, commentaire, etc.). Pour ce faire, vous "
+"devez ajouter un identifiant à votre étiquette dans le composeur."
 
 #: ../../source/publish/configuration/print.rst:38
 msgid ""
 "Each identifier must be unique for the whole composer. Identifiers must be "
 "strings **not** integers (e.g. 'my_title' **not** '1')."
 msgstr ""
+"Chaque identifiant doit être unique pour l'ensemble du composeur. Les "
+"identifiants doivent être des chaînes de caractères **et non** des nombres "
+"entiers (par exemple, 'mon_titre' **et non** '1')."
 
 #: ../../source/publish/configuration/print.rst:43
 msgid ""
@@ -2626,6 +2920,9 @@ msgid ""
 "is the area that the user can define in the webbrowser and the user can also"
 " set the map description and the map title."
 msgstr ""
+"L'aperçu dans Lizmap sera similaire à cette capture d'écran. Le rectangle "
+"rouge est la zone que l'utilisateur peut définir dans le navigateur web et "
+"l'utilisateur peut également définir la description et le titre de la carte."
 
 #: ../../source/publish/configuration/print.rst:57
 msgid "Scales"
@@ -2636,6 +2933,8 @@ msgid ""
 "The print function will be based on the map scales that you set in the "
 "plugin *Map* (:ref:`lizmap-config-map`)."
 msgstr ""
+"The print function will be based on the map scales that you set in the "
+"plugin *Map* (:ref:`lizmap-config-map`)."
 
 #: ../../source/publish/configuration/print.rst:62
 msgid "Excluding a layout"
@@ -2648,6 +2947,11 @@ msgid ""
 "exclude 2 compositions in the :menuselection:`Project properties --> QGIS "
 "server`. Only the published compositions will be presented in Lizmap."
 msgstr ""
+"Il est possible d'exclure des compositions d'impression pour le web. Par "
+"exemple, si le projet QGIS contient 4 compositions, l'administrateur du "
+"projet peut exclure 2 compositions dans le :menuselection:`Propriétés du "
+"projet --> QGIS Server`. Seules les compositions publiées seront présentées "
+"dans Lizmap."
 
 #: ../../source/publish/configuration/print.rst:75
 msgid "Layout with an atlas when using a popup"
@@ -2717,6 +3021,7 @@ msgstr "Vous devez ajouter la couche équivalente dans le projet QGIS."
 #: ../../source/publish/configuration/print.rst:100
 msgid "You need to hide it from the Lizmap legend, see :ref:`hide-layers`."
 msgstr ""
+"Vous devez le masquer dans la légende de Lizmap, voir :ref:`hide-layers`."
 
 #: ../../source/publish/configuration/print.rst:101
 msgid "Rename the layer to one of these names:"
@@ -2795,12 +3100,22 @@ msgid ""
 " (using the file :file:`QGIS3.ini` and the section ``[proxy]``). Refer to "
 "the QGIS Server documentation for these settings."
 msgstr ""
+"Si cela ne fonctionne pas, vérifiez que votre serveur est en mesure "
+"d'accéder à Internet. Ces couches de fond sont fournies en ligne uniquement."
+" Certains proxy ou pare-feu peuvent bloquer certaines requêtes vers "
+"Internet. Si votre serveur est derrière un proxy, vérifiez que QGIS Server "
+"est configuré avec les paramètres du proxy (en utilisant le fichier "
+":file:`QGIS3.ini` et la section ``[proxy]``). Reportez-vous à la "
+"documentation de QGIS Server pour connaître ces paramètres."
 
 #: ../../source/publish/configuration/print.rst:125
 msgid ""
 "To add these layers, you can use existing WMS/WMTS services, XYZ providers "
 "(with QuickMapServices), local files..."
 msgstr ""
+"Pour ajouter ces couches, vous pouvez utiliser les services WMS/WMTS "
+"existants, les fournisseurs XYZ (avec QuickMapServices), les fichiers "
+"locaux..."
 
 #: ../../source/publish/configuration/print.rst:127
 msgid ""
@@ -2827,6 +3142,14 @@ msgid ""
 "separated by a comma. Beware, if you use IGN WMS or WMTS layers, QGIS "
 "project's EPSG code should be 3857."
 msgstr ""
+"Pour les couches de fond IGN, vous pouvez utiliser l'url WMS ou WMTS de "
+"l'IGN. La clé utilisée pour cette url doit être protégée par referer et IP. "
+"Dans referer, vous devez indiquer l'URL de votre page de projet comme ceci :"
+" ``.*votre-url.fr.*``. Dans IP, vous devez indiquer l'IP de votre serveur "
+"Lizmap et l'IP de votre ordinateur (pour ouvrir l'url WMS de l'IGN dans QGIS"
+" sur votre ordinateur). Les deux adresses IP doivent être séparées par une "
+"virgule. Attention, si vous utilisez des couches WMS ou WMTS de l'IGN, le "
+"code EPSG du projet QGIS doit être 3857."
 
 #: ../../source/publish/configuration/print.rst:132
 msgid "Adding your own images in a layout"
@@ -2923,8 +3246,8 @@ msgid ""
 "features."
 msgstr ""
 "Pour de nombreuses fonctionnalités de Lizmap, il est nécessaire de publier "
-"votre couche en WFS. Cela sera obligatoire quand vous utiliserez le plugin "
-"QGIS Lizmap afin d'activer certaines fonctionnalités."
+"votre couche en WFS. Cela sera obligatoire quand vous utiliserez l'extension"
+" QGIS Lizmap afin d'activer certaines fonctionnalités."
 
 #: ../../source/publish/configuration/project.rst:24
 msgid ""
@@ -2995,8 +3318,8 @@ msgid ""
 "For |qgis_2| only, you can use the plugin ``QuickFinder`` to configure a "
 "data search per QGIS project."
 msgstr ""
-"Pour |qgis_2| seulement, vous pouvez utiliser le plugin ``QuickFinder`` pour"
-" configurer les données de recherche par projet QGIS."
+"Pour |qgis_2| seulement, vous pouvez utiliser l'extension ``QuickFinder`` "
+"pour configurer les données de recherche par projet QGIS."
 
 #: ../../source/publish/configuration/spatial_search.rst:19
 msgid "PostgreSQL search"
@@ -3009,6 +3332,10 @@ msgid ""
 "database. It's possible to use a PostgreSQL database to store the search "
 "data."
 msgstr ""
+"Lorsque vous avez de nombreux projets et données, la meilleure solution pour"
+" fournir des capacités de recherche est de mettre en place une relation "
+"dédiée (table ou vue) dans votre base de données. Il est possible d'utiliser"
+" une base de données PostgreSQL pour stocker les données de recherche."
 
 #: ../../source/publish/configuration/spatial_search.rst:24
 #: ../../source/publish/configuration/spatial_search.rst:149
@@ -3018,7 +3345,7 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/dataviz.rst:29
 #: ../../source/publish/lizmap_plugin/edition.rst:36
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:31
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:25
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:26
 #: ../../source/publish/lizmap_plugin/time_manager.rst:21
 #: ../../source/publish/lizmap_plugin/tooltip.rst:15
 msgid "Prerequisites"
@@ -3051,6 +3378,10 @@ msgid ""
 "the tool as simple as possible and avoid the need to create FTS \"vectors\" "
 "in your search data."
 msgstr ""
+"Nous avons choisi d'utiliser l'extension pg_trgm et sa fonction habituelle "
+"f_unaccent plutôt que l'outil de PostgreSQL de recherche plein texte (FTS), "
+"pour garder l'outil aussi simple que possible et éviter de devoir créer des "
+"vecteurs FTS pour votre recherche de données."
 
 #: ../../source/publish/configuration/spatial_search.rst:49
 msgid "Create the lizmap_search table or view"
@@ -3063,6 +3394,11 @@ msgid ""
 "(you can put it in the public schema, or configure the ``search_path`` "
 "variable for the database or the user which connects to the database)."
 msgstr ""
+"L'administrateur de la base de données doit créer une table, vue ou vue "
+"matérialisée nommée \"lizmap_search\". Cette relation doit être accessible "
+"dans le search_path (vous pouvez la mettre dans le schéma public, ou "
+"configurer la variable search_path pour la base de données ou l'utilisateur "
+"qui se connecte à la base de données)."
 
 #: ../../source/publish/configuration/spatial_search.rst:55
 msgid "The relation ``lizmap_search`` must contain the following columns:"
@@ -3070,7 +3406,7 @@ msgstr "La relation ``lizmap_search`` doit contenir les colonnes suivantes :"
 
 #: ../../source/publish/configuration/spatial_search.rst:57
 msgid "``item_layer`` (text). Name of the layer. For example \"Countries\""
-msgstr ""
+msgstr "\"item_layer\" (texte). Nom de la couche. Par exemple, \"Pays\""
 
 #: ../../source/publish/configuration/spatial_search.rst:58
 msgid ""
@@ -3097,6 +3433,8 @@ msgid ""
 "``geom`` (geometry). We advise to store all the geometries with the same "
 "SRID."
 msgstr ""
+"``geom`` (géométrie). Nous conseillons de stocker toutes les géométries avec"
+" le même SRID."
 
 #: ../../source/publish/configuration/spatial_search.rst:63
 msgid ""
@@ -3135,6 +3473,10 @@ msgid ""
 " with Z or M values. You have to use the ``ST_Force2D(geom)`` function to "
 "convert geometries into 2D geometries."
 msgstr ""
+"Actuellement, la recherche Lizmap PostgreSQL ne peut pas utiliser les "
+"géométries 3D, ou les géométries avec des valeurs Z ou M. Vous devez "
+"utiliser la fonction ``ST_Force2D(geom)`` pour convertir les géométries en "
+"géométries 2D."
 
 #: ../../source/publish/configuration/spatial_search.rst:108
 msgid "Configure access"
@@ -3156,6 +3498,10 @@ msgid ""
 "just add the ``lizmap_search`` relation inside this database (in the "
 "``public`` schema)."
 msgstr ""
+"Si votre instance de Lizmap utilise PostgreSQL pour stocker les "
+"utilisateurs, groupes et droits, un profil de connexion existe déjà pour "
+"votre base de données. Vous pouvez alors simplement ajouter la relation "
+"``lizmap_search`` dans cette base de données (dans le schéma ``public``)."
 
 #: ../../source/publish/configuration/spatial_search.rst:114
 msgid ""
@@ -3175,6 +3521,12 @@ msgid ""
 "application. You **mustn't** specify the schema where the lizmap_search "
 "table is located. It **must** work without specifying the schema."
 msgstr ""
+"Vous n'avez pas besoin de configurer l'outil :guilabel:`localiser par "
+"couche`. Le lien avec Lizmap Web Client se fait automatiquement si vous "
+"pouvez exécuter la requête ci-dessous avec succès dans PgAdmin en utilisant "
+"les mêmes informations d'identification que l'application Lizmap. Vous **ne "
+"devez pas** spécifier le schéma où se trouve la table lizmap_search. Elle "
+"**doit** fonctionner sans spécifier le schéma."
 
 #: ../../source/publish/configuration/spatial_search.rst:135
 msgid ""
@@ -3186,13 +3538,13 @@ msgstr ""
 
 #: ../../source/publish/configuration/spatial_search.rst:142
 msgid "QuickFinder Plugin"
-msgstr "Plugin QuickFinder"
+msgstr "Extension QuickFinder"
 
 #: ../../source/publish/configuration/spatial_search.rst:144
 msgid ""
 "This is for |qgis_2| only. This plugin has not been ported to |qgis_3|."
 msgstr ""
-"Ceci est pour |qgis_2| seulement. Ce plugin n'est pas disponible sur "
+"Ceci est pour |qgis_2| seulement. Cette extension n'est pas disponible sur "
 "|qgis_3|."
 
 #: ../../source/publish/configuration/spatial_search.rst:146
@@ -3200,9 +3552,9 @@ msgid ""
 "The purpose of this plugin is to provide fast searching among big datasets, "
 "searching in a qtfs file generated by QGIS Desktop."
 msgstr ""
-"Le but de ce plugin est de fournir une recherche rapide au sein d'un grand "
-"volumes de données, en réalisant des recherches dans un fichier qtfs généré "
-"par QGIS Desktop."
+"Le but de cette extension est de fournir une recherche rapide au sein d'un "
+"grand volumes de données, en réalisant des recherches dans un fichier qtfs "
+"généré par QGIS Bureautique."
 
 #: ../../source/publish/configuration/spatial_search.rst:151
 msgid ""
@@ -3218,7 +3570,7 @@ msgstr "Depuis QGIS :"
 
 #: ../../source/publish/configuration/spatial_search.rst:158
 msgid "install QuickFinder Plugin, for |qgis_2| only"
-msgstr "installer le plugin ``QuickFinder``, pour |qgis_2| seulement"
+msgstr "installer l'extension ``QuickFinder``, pour |qgis_2| seulement"
 
 #: ../../source/publish/configuration/spatial_search.rst:159
 msgid ""
@@ -3228,6 +3580,12 @@ msgid ""
 " filename. Ex: :file:`myproject.qfts` for a QGIS project stored as "
 ":file:`myproject.qgs`."
 msgstr ""
+"choisissez une ou plusieurs couches, définissez les champs parmi lesquels "
+"effectuer la recherche, choisissez le format de stockage de la géométrie "
+"(WKT ou Extent) et stockez le vecteur Full Text Searchs (FTS) dans un "
+"fichier base de données (.qfts). Le nom de fichier doit être identique au "
+"nom de fichier du projet QGIS. Ex : :file:`myproject.qfts` pour un projet "
+"QGIS stocké sous :file:`myproject.qgs`."
 
 #: ../../source/publish/configuration/spatial_search.rst:161
 msgid ""
@@ -3260,12 +3618,17 @@ msgid ""
 "suggest you to change the view ``map`` by ``embed`` in the URL to have "
 "lighter version of the interface."
 msgstr ""
+"Il est possible d'intégrer Lizmap dans une autre page web en utilisant une "
+"iframe. Nous vous suggérons de changer la vue ``map`` par ``embed`` dans "
+"l'URL pour avoir une version allégée de l'interface."
 
 #: ../../source/publish/customization/iframe.rst:13
 msgid ""
 "For instance, use this URL : "
 "``/index.php/view/embed/?repository=my_repo&project=my_project``."
 msgstr ""
+"Par exemple, utilisez cette URL : "
+"``/index.php/view/embed/?repository=my_repo&project=my_project``."
 
 #: ../../source/publish/customization/iframe.rst:18
 msgid "You can visit both links to see the difference :"
@@ -3275,11 +3638,13 @@ msgstr "Vous pouvez visiter les deux liens pour voir la différence :"
 msgid ""
 "https://demo.lizmap.com/lizmap/index.php/view/map/?repository=feat1&project=lampadaires"
 msgstr ""
+"https://demo.lizmap.com/lizmap/index.php/view/map/?repository=feat1&project=lampadaires"
 
 #: ../../source/publish/customization/iframe.rst:21
 msgid ""
 "https://demo.lizmap.com/lizmap/index.php/view/embed/?repository=feat1&project=lampadaires"
 msgstr ""
+"https://demo.lizmap.com/lizmap/index.php/view/embed/?repository=feat1&project=lampadaires"
 
 #: ../../source/publish/customization/index.rst:3
 msgid "Customization"
@@ -3291,7 +3656,7 @@ msgstr ""
 "Cette section montre comment personnaliser Lizmap avec quelques lignes de "
 "code."
 
-#: ../../source/publish/customization/javascript.rst:1
+#: ../../source/publish/customization/javascript.rst-1
 msgid "js,script,javascript,code"
 msgstr "js,script,javascript,code"
 
@@ -3304,10 +3669,14 @@ msgid ""
 "Adding some JavaScript (JS) is useful for a variety of advanced usage. For "
 "instance, you can:"
 msgstr ""
+"L'ajout de JavaScript (JS) est utile pour une variété d'utilisations "
+"avancées. Par exemple, vous pouvez :"
 
 #: ../../source/publish/customization/javascript.rst:18
 msgid "hide some UI elements that you don't want to display by default"
 msgstr ""
+"cacher certains éléments de l'interface utilisateur que vous ne voulez pas "
+"afficher par défaut"
 
 #: ../../source/publish/customization/javascript.rst:19
 msgid "add a custom button in the UI"
@@ -3316,12 +3685,17 @@ msgstr "ajouter un bouton personnalisé dans l'UI"
 #: ../../source/publish/customization/javascript.rst:20
 msgid "add a popup when the project is opened (to display funders, credits…)"
 msgstr ""
+"ajouter une popup à l'ouverture du projet (pour afficher les financeurs, les"
+" crédits...)"
 
 #: ../../source/publish/customization/javascript.rst:21
 msgid ""
 "avoid people being able to download elements of the page by right clicking "
 "on them, and of course much more."
 msgstr ""
+"éviter que les gens puissent télécharger des éléments de la page en cliquant"
+" dessus avec le bouton droit de la souris, et bien sûr, bien d'autres choses"
+" encore."
 
 #: ../../source/publish/customization/javascript.rst:26
 #: ../../source/publish/customization/themes.rst:32
@@ -3329,6 +3703,7 @@ msgid ""
 "This function needs to be activated by the administrator of the Lizmap "
 "instance."
 msgstr ""
+"Cette fonction doit être activée par l'administrateur de l'instance Lizmap."
 
 #: ../../source/publish/customization/javascript.rst:27
 #: ../../source/publish/customization/themes.rst:33
@@ -3352,18 +3727,26 @@ msgid ""
 ":file:`/home/data/rep1/media/js/myproject/` directory will be executed by "
 "Lizmap for this **specific** project only."
 msgstr ""
+"All the JavaScript code you copy in the "
+":file:`/home/data/rep1/media/js/myproject/` directory will be executed by "
+"Lizmap for this **specific** project only."
 
 #: ../../source/publish/customization/javascript.rst:40
 msgid ""
 "All the JavaScript code in ``default`` will be executed for **all** "
 "projects."
 msgstr ""
+"Tout le code JavaScript dans ``default`` sera exécuté pour **tous** les "
+"projets."
 
 #: ../../source/publish/customization/javascript.rst:41
 msgid ""
 "To allow the execution of JavaScript code, in the Lizmap admin interface, "
 "you **must** add the privilege :guilabel:`Allow themes for this repository`."
 msgstr ""
+"Pour autoriser l'exécution de code JavaScript, dans l'interface "
+"d'administration de Lizmap, vous **devez** ajouter le privilège "
+":guilabel:`Autoriser les thèmes/codes javascript pour ce répertoire`."
 
 #: ../../source/publish/customization/javascript.rst:44
 msgid "Video tutorial"
@@ -3374,6 +3757,8 @@ msgid ""
 "This video is an quick start how to add a JavaScript to change the default "
 "panel in Lizmap."
 msgstr ""
+"Cette vidéo montre comment ajouter un JavaScript pour changer le panneau par"
+" défaut dans Lizmap."
 
 #: ../../source/publish/customization/javascript.rst:48
 msgid "https://www.youtube.com/embed/xQQ34nvRZ-w"
@@ -3388,6 +3773,8 @@ msgid ""
 "You can find some examples in the repository https://github.com/3liz/lizmap-"
 "javascript-scripts."
 msgstr ""
+"Vous pouvez trouver quelques exemples dans le dépôt "
+"https://github.com/3liz/lizmap-javascript-scripts."
 
 #: ../../source/publish/customization/javascript.rst:55
 msgid ""
@@ -3397,12 +3784,19 @@ msgid ""
 "modules/lizmapdemo/qgis-projects/demoqgis/media/js/montpellier), you can "
 "find examples of suitable JavaScript code."
 msgstr ""
+"En outre, dans le répertoire :file:`lizmap-web-"
+"client/lizmap/install/qgis/media/js/` (ou dans GitHub "
+"https://github.com/3liz/lizmap-web-client/tree/master/extra-"
+"modules/lizmapdemo/qgis-projects/demoqgis/media/js/montpellier), vous pouvez"
+" trouver des exemples de code JavaScript approprié."
 
 #: ../../source/publish/customization/javascript.rst:57
 msgid ""
 "Remove the extension ``.example`` and copy them to your "
 ":file:`media/js/default/` folder to activate them."
 msgstr ""
+"Retirez l'extension ``.example`` et copiez-les dans votre dossier "
+":file:`media/js/default/`` pour les activer."
 
 #: ../../source/publish/customization/javascript.rst:60
 msgid "Available Javascript events"
@@ -3425,7 +3819,6 @@ msgstr "Évènements Lizmap Web Client disponibles"
 msgid "Event name"
 msgstr "Nom de l'évènement"
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "Description"
 msgstr "Description"
@@ -3550,10 +3943,6 @@ msgid "Fired when a layer style has been changed"
 msgstr "Déclenché quand le style d'une couche a été changé"
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType"
 msgstr "featureType"
 
@@ -3598,7 +3987,7 @@ msgstr "Déclenché quand toutes les popups enfants sont affichées"
 
 #: ../../source/publish/customization/javascript.rst:1
 msgid "parentPopupElement | childPopupElements"
-msgstr ""
+msgstr "parentPopupElement | childPopupElements"
 
 #: ../../source/publish/customization/javascript.rst:1
 msgid "lizmappopupdisplayed_inattributetable"
@@ -3633,7 +4022,6 @@ msgid "Fired when a layer feature has been created with the edition tool"
 msgstr ""
 "Déclenché quand une entité de couche a été créée avec l'outil d'édition"
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "layerId"
 msgstr "layerId"
@@ -3752,7 +4140,6 @@ msgstr ""
 "tables attributaires."
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | featureIds | updateDrawing"
 msgstr "featureType | featureIds | updateDrawing"
 
@@ -3815,7 +4202,6 @@ msgstr ""
 "champs de saisie de recherche."
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | updateDrawing"
 msgstr "featureType | updateDrawing"
 
@@ -3841,6 +4227,8 @@ msgid ""
 "Fired when the user has selected an item listed in the results of the header"
 " search input"
 msgstr ""
+"S'active lorsque l'utilisateur a sélectionné un élément figurant dans les "
+"résultats de la recherche d'en-tête."
 
 #: ../../source/publish/customization/javascript.rst:1
 msgid "feature"
@@ -3910,16 +4298,23 @@ msgid ""
 ":file:`/home/data/rep1/media/js/default/` rather than in "
 ":file:`/home/data/rep1/media/js/myproject/`."
 msgstr ""
+"Si vous voulez que ce code soit exécuté pour tous les projets de votre "
+"référentiel, vous devez copier le fichier dans le répertoire "
+":file:`/home/data/rep1/media/js/default/` plutôt que dans "
+":file:`/home/data/rep1/media/js/myproject/`."
 
 #: ../../source/publish/customization/javascript.rst:141
 msgid "Send current login user-ID"
-msgstr ""
+msgstr "Envoyer l'ID utilisateur de la connexion actuelle"
 
 #: ../../source/publish/customization/javascript.rst:143
 msgid ""
 "An example allowing you to send current login User-ID (and/or other user "
 "data) to PostgreSQL table column, using edition tool:"
 msgstr ""
+"Un exemple vous permettant d'envoyer l'identifiant de connexion actuel "
+"(et/ou d'autres données d'utilisateur) vers une colonne de table PostgreSQL,"
+" en utilisant l'outil d'édition :"
 
 #: ../../source/publish/customization/javascript.rst:187
 msgid "URL of a static file"
@@ -4047,9 +4442,9 @@ msgid ""
 "default theme from the Lizmap *instance*:"
 msgstr ""
 "Nous voulons changer le logo et la couleur d'arrière-plan de la barre de "
-"navigation (par exemple le bleu) *uniquement* dans un projet spécifique "
-"appelé ``roads`` et nous voulons conserver le thème par défaut de "
-"l'*instance* de Lizmap :"
+"navigation (p. ex. le bleu) *uniquement* dans un projet spécifique appelé "
+"``roads`` et nous voulons conserver le thème par défaut de l'*instance* de "
+"Lizmap :"
 
 #: ../../source/publish/customization/themes.rst:83
 msgid "We don't need the :file:`media/themes/default` folder."
@@ -4164,10 +4559,6 @@ msgstr "Au niveau de la couche"
 msgid "For setting a atlas layer:"
 msgstr "Pour paramétrer un atlas sur une couche:"
 
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
 #: ../../source/shared/add_layer.rst:1
 msgid "Click the |add_layer_svg| button."
 msgstr "Cliquer sur le bouton |add_layer_svg|."
@@ -4235,10 +4626,6 @@ msgstr ""
 msgid "you can select the duration between each step"
 msgstr "vous pouvez sélectionner la durée entre chaque étape"
 
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
 #: ../../source/shared/edit_layer.rst:1
 msgid ""
 "To edit a layer in the table, select it and click the |edit_layer_svg| "
@@ -4248,14 +4635,6 @@ msgstr ""
 "bouton |edit_layer_svg| ou alors double-cliquer sur la ligne."
 
 #: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
 msgid ""
 "To remove a layer from the table, select it and click the |remove_layer_svg|"
 " button."
@@ -4263,12 +4642,6 @@ msgstr ""
 "Pour supprimer une couche de la table, cliquez sur celle-ci puis sur le "
 "bouton |remove_layer_svg|."
 
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
 #: ../../source/shared/move_up_down_layer.rst:1
 msgid ""
 "To move a layer up or down, select it and click |down_layer_svg| or "
@@ -4329,10 +4702,7 @@ msgstr ""
 "que l'utilisateur puisse voir toutes les données d'une couche spécifique, "
 "comme vous pouvez le faire dans QGIS en ouvrant la table attributaire."
 
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
+#: ../../source/shared/wfs_layer.rst:1
 msgid ""
 "The layer must be published as WFS (see :ref:`publish_layer_wfs`) and the "
 "primary key must be published as well in the :guilabel:`Layer properties`."
@@ -4347,12 +4717,13 @@ msgid ""
 "\"Attribute layers\" which shows a table and some form fields dedicated to "
 "add or remove vector layers."
 msgstr ""
-"Dans l'onglet **Outils** de la boîte de dialogue du plugin Lizmap, il y a un"
-" groupe nommé \"Table attributaire\" qui contient un tableau et des champs "
-"de formulaire permettant l'ajout et la suppression de couches vectorielles."
+"Dans l'onglet **Outils** de la boîte de dialogue de l'extension Lizmap, il y"
+" a un groupe nommé \"Table attributaire\" qui contient un tableau et des "
+"champs de formulaire permettant l'ajout et la suppression de couches "
+"vectorielles."
 
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:32
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:41
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:42
 msgid "To add a layer to this tool:"
 msgstr "Pour ajouter une couche à cet outil :"
 
@@ -4424,14 +4795,15 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:41
 msgid "Let the :guilabel:`Pivot table` unchecked. This is for relation."
-msgstr "Laissez le :guilabel:`Table pivot` décoché. C'est pour la relation."
+msgstr ""
+"Laissez la coche :guilabel:`Table pivot` décoché. C'est pour la relation."
 
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:42
 msgid ""
 "Let the :guilabel:`Hide in child subpanels` unchecked. This is for relation."
 msgstr ""
-"Laissez le :guilabel:`Masquer dans les sous-popups enfants` décoché. C'est "
-"pour la relation."
+"Laissez la coche :guilabel:`Masquer dans les sous-popups enfants` décoché. "
+"C'est pour la relation."
 
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:43
 msgid ""
@@ -4440,8 +4812,7 @@ msgstr ""
 "Laissez la coche :guilabel:`Masquer la couche dans la liste` décoché. C'est "
 "pour la relation."
 
-#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
-#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
+#: ../../source/shared/field_alias.rst:1
 msgid ""
 "Fields will be displayed with their alias if it's defined. See "
 ":ref:`alias_on_fields`."
@@ -4489,7 +4860,7 @@ msgid ""
 msgstr ""
 "En ajoutant la couche dans l'outil de table attributaire, cela activera "
 "également la capacité de téléchargement sur cette couche. Par défaut, seuls "
-"GeoJSON et GML sont disponibles. En installant le plugin "
+"GeoJSON et GML sont disponibles. En installant l'extension "
 "`WfsOutputExtension` sur QGIS Serveur, vous pouvez ajouter plus de formats "
 "tels que Geopackage, ODS, CSV, XLSX…. Lire https://github.com/3liz/qgis-"
 "wfsOutputExtension"
@@ -4535,7 +4906,7 @@ msgid ""
 msgstr ""
 "Vous pouvez utiliser des relations \"plusieurs-à-plusieurs\" (N:M) dans QGIS"
 " depuis la version 2.14 mais à ce jour Lizmap ne les utilisent pas "
-"automatiquement. Vous devez aussi définir les relations dans le plugin "
+"automatiquement. Vous devez aussi définir les relations dans l'extension "
 "Lizmap. Dans de nombreux cas, les relations N:M sont très pratiques. Par "
 "exemple, vous pouvez avoir les trois couches vectorielles suivantes dans "
 "votre projet :"
@@ -4954,13 +5325,15 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:51
 msgid "To enable a layer with dataviz capabilities:"
-msgstr ""
+msgstr "Pour activer une couche avec des capacités de dataviz :"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:54
 msgid ""
 "Select the type of chart to add. According to your choices, the form will "
 "adapt it self. Read below the kind of charts."
 msgstr ""
+"Sélectionnez le type de graphique à ajouter. En fonction de vos choix, le "
+"formulaire s'adaptera de lui-même. Lisez ci-dessous les types de graphiques."
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:55
 msgid "**Title** : Here you can write the title you want for your chart."
@@ -4986,6 +5359,12 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:59
 msgid "**Aggregation**"
+msgstr "**Aggrégation**"
+
+#: ../../source/publish/lizmap_plugin/dataviz.rst-1
+msgid ""
+"For a few types of charts like bar or pie, you can chose to aggregate the "
+"data in"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:60
@@ -4993,6 +5372,8 @@ msgid ""
 "the graph. There are a few aggregate functions available - average(avg), "
 "sum, count, median, stddev, min, max, first, last."
 msgstr ""
+"le graphique. Quelques fonctions d'agrégation sont disponibles : "
+"average(avg), sum, count, median, stddev, min, max, first, last."
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:61
 msgid ""
@@ -5035,6 +5416,10 @@ msgid ""
 "container and only the filtered graph of the relation of the layer will be "
 "displayed in the popup when you select the element."
 msgstr ""
+"**Montrer seulement dans la popup des enfants** : Le graphique principal ne "
+"sera pas affiché dans le conteneur principal et seul le graphique filtré de "
+"la relation de la couche sera affiché dans la popup lorsque vous "
+"sélectionnez l'élément."
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:70
 msgid "**Display the legend**, sometimes, the legend is not necessary."
@@ -5061,6 +5446,10 @@ msgid ""
 "located in your Lizmap's project. You have 3 positions available, at the "
 "right of the screen, bottom and right."
 msgstr ""
+"1. Vous avez la possibilité de changer la valeur pour **dock**, "
+"**bottomdock** ou **right-dock** ces options changent l'emplacement de votre"
+" panneau dataviz dans votre projet Lizmap. Vous avez 3 positions "
+"disponibles, à droite de l'écran, en bas et à droite."
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:91
 msgid ""
@@ -5068,6 +5457,10 @@ msgid ""
 "your charts. If you are proficient in the HTML language, there are a lot of "
 "possibilities and you can customize your container the way you want."
 msgstr ""
+"2. Vous avez la possibilité d'écrire en HTML la disposition du conteneur de "
+"vos graphiques. Si vous maîtrisez le langage HTML, les possibilités sont "
+"nombreuses et vous pouvez personnaliser votre conteneur comme vous le "
+"souhaitez."
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:94
 msgid "For instance, this bootstrap HTML code will produce the layout below:"
@@ -5083,6 +5476,9 @@ msgid ""
 " object. See the full reference: "
 "https://plotly.com/javascript/reference/#layout"
 msgstr ""
+"L'option de mise en page, vous permet de configurer de nombreuses options en"
+" écrivant un objet JSON. Voir la référence complète : "
+"https://plotly.com/javascript/reference/#layout"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:119
 msgid ""
@@ -5094,7 +5490,7 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:121
 msgid "Add units in the Y (vertical) axis numbers:"
-msgstr "Ajoutez des unités sur l'axe Y (vertical) :"
+msgstr "Ajouter des unités sur l'axe Y (vertical) :"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:129
 msgid "Remove labels in the X (horizontal) axis:"
@@ -5118,15 +5514,15 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:162
 msgid "Define font properties:"
-msgstr ""
+msgstr "Définir les propriétés de la police :"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:170
 msgid "You can combine any of the properties, for example:"
-msgstr ""
+msgstr "Vous pouvez combiner toutes les propriétés, par exemple :"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:187
 msgid "Types of charts"
-msgstr ""
+msgstr "Types de graphiques"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:189
 msgid ""
@@ -5136,12 +5532,14 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:192
 msgid "HTML templates"
-msgstr ""
+msgstr "Modèles HTML"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:194
 msgid ""
 "A trace must be referenced by ``{y1}`` where ``1`` is the trace number."
 msgstr ""
+"Une trace doit être référencée par ``{y1}`` où ``1`` est le numéro de la "
+"trace."
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:226
 msgid "Miscellaneous"
@@ -5164,7 +5562,7 @@ msgid "You can visit the Cats project on https://demo.lizmap.com"
 msgstr "Vous pouvez visiter le projet des Chats sur https://demo.lizmap.com"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:6
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:72
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:73
 msgid "Edition"
 msgstr "Édition"
 
@@ -5175,6 +5573,10 @@ msgid ""
 " allows you to add one or more layers and choose what actions for each will "
 "be possible in the web interface:"
 msgstr ""
+"Il est possible d'autoriser des utilisateurs à **éditer des données "
+"spatiales et attributaires** depuis Lizmap Web Client pour les couches "
+"**PostgreSQL**. Le plugin Lizmap vous permet d'ajouter une ou plusieurs "
+"couches et de choisir quelles actions seront permises dans l'interface web :"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:17
 msgid "creating elements"
@@ -5205,7 +5607,7 @@ msgstr ""
 "l'onglet *Champs* des *propriétés de la couche* vectorielle QGIS. On peut "
 "donc configurer une liste déroulante, masquer une colonne, la rendre non-"
 "éditable, utiliser une case à cocher, un champ texte, etc. Toute la "
-"configuration se fait à la souris, dans QGIS et dans le plugin Lizmap."
+"configuration se fait à la souris, dans QGIS et dans l'extension Lizmap."
 
 #: ../../source/publish/lizmap_plugin/edition.rst:24
 msgid ""
@@ -5245,11 +5647,13 @@ msgstr "Pour permettre l'édition de données dans Lizmap Web Client, il faut"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:40
 msgid "Have vector layer stored in PostgreSQL."
-msgstr ""
+msgstr "Avoir une couche vectorielle stockée dans PostgreSQL."
 
 #: ../../source/publish/lizmap_plugin/edition.rst:41
 msgid "The vector layer mustn't have space in field names."
 msgstr ""
+"La couche vectorielle ne doit pas comporter d'espace dans les noms de "
+"champs."
 
 #: ../../source/publish/lizmap_plugin/edition.rst:42
 msgid ""
@@ -5258,6 +5662,11 @@ msgid ""
 "data entered by users. See :ref:`form` for more information about layout, "
 "widgets, expressions, constraints in a form."
 msgstr ""
+"Configurez l'outil d'édition de la couche dans :menuselection:`Propriétés de"
+" la couche --> Formulaire d'attributs`. Ce n'est pas obligatoire mais "
+"recommandé pour contrôler les données saisies par les utilisateurs. Voir "
+":ref:`form` pour plus d'informations sur la disposition, les widgets, les "
+"expressions, les contraintes dans un formulaire."
 
 #: ../../source/publish/lizmap_plugin/edition.rst:44
 msgid ""
@@ -5285,6 +5694,12 @@ msgid ""
 "the **QGS** project file or in the PostgreSQL service file (recommended, "
 "more secure because credentials are not stored in the QGIS project) :"
 msgstr ""
+"Les informations d'identification **ne doivent pas** utiliser le **système "
+"d'authentification fourni par QGIS** pour une couche avec des capacités "
+"d'édition. Les informations d'identification doivent se trouver soit dans le"
+" fichier du projet **QGS**, soit dans le fichier du service PostgreSQL "
+"(recommandé, plus sûr car les informations d'identification ne sont pas "
+"stockées dans le projet QGIS) :"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:50
 msgid ""
@@ -5292,12 +5707,17 @@ msgid ""
 "<https://docs.qgis.org/3.16/en/docs/user_manual/managing_data_source/opening_data.html#postgresql-"
 "service-connection-file>`_"
 msgstr ""
+"`Comment utiliser le fichier de service sur docs.qgis.org "
+"<https://docs.qgis.org/3.16/en/docs/user_manual/managing_data_source/opening_data.html#postgresql-"
+"service-connection-file>`_"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:51
 msgid ""
 "`How to use service file on postgresql.org "
 "<https://www.postgresql.org/docs/current/libpq-pgservice.html>`_"
 msgstr ""
+"`Comment utiliser le fichier de service sur postgresql.org "
+"<https://www.postgresql.org/docs/current/libpq-pgservice.html>`_"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:53
 msgid ""
@@ -5354,6 +5774,9 @@ msgid ""
 "in a PostgreSQL database: "
 "https://docs.qgis.org/latest/en/docs/user_manual/managing_data_source/index.html"
 msgstr ""
+"Veuillez vous référer à la documentation QGIS pour voir comment créer une "
+"couche spatiale dans une base de données PostgreSQL : "
+"https://docs.qgis.org/latest/en/docs/user_manual/managing_data_source/index.html."
 
 #: ../../source/publish/lizmap_plugin/edition.rst:72
 msgid "To enable a layer with edition capabilities:"
@@ -5494,6 +5917,8 @@ msgid ""
 "It is possible to upload your files, including images, for each feature, "
 "during online editing; to achieve this, you need to:"
 msgstr ""
+"Il est possible de téléverser vos fichiers, y compris les images, pour "
+"chaque fonctionnalité, lors de l'édition en ligne ; pour cela, vous devez :"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:118
 msgid ""
@@ -5501,6 +5926,9 @@ msgid ""
 ":guilabel:`edit type` ``Photo`` or ``File``. For example, let say the field "
 "name is ``photo``"
 msgstr ""
+"Configurez l'édition pour la couche, avec un ou plusieurs champs avec le "
+":guilabel:``type d'édition`` `Photo`` ou ``Fichier``. Par exemple, disons "
+"que le nom du champ est \"photo\"."
 
 #: ../../source/publish/lizmap_plugin/edition.rst:119
 msgid ""
@@ -5508,6 +5936,9 @@ msgid ""
 "subfolder :file:`media/upload` (obviously you need to do that locally in "
 "your computer and server side)."
 msgstr ""
+"Créez un dossier à la racine du fichier du projet QGIS : :file:`media/` et "
+"un sous-dossier :file:`media/upload` (évidemment vous devez faire cela "
+"localement sur votre ordinateur et côté serveur)."
 
 #: ../../source/publish/lizmap_plugin/edition.rst:120
 msgid ""
@@ -5515,6 +5946,9 @@ msgid ""
 "upload folder, so that it can create files and folders in "
 ":file:`media/upload`:"
 msgstr ""
+"Donnez à l'utilisateur du serveur web (généralement www-data) **les droits "
+"d'écriture** sur le dossier upload, afin qu'il puisse créer des fichiers et "
+"des dossiers dans :file:`media/upload` :"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:122
 msgid "chmod 775 -R media/upload && chown :www-data -R media/upload"
@@ -5538,6 +5972,12 @@ msgid ""
 " image in "
 ":file:`media/upload/environment/observations/species_picture/my_picture.png`."
 msgstr ""
+"Lizmap va ensuite créer des dossiers pour stocker les données, en fonction "
+"du nom de la couche, du nom du champ, etc. Par exemple, un fichier sera "
+"stocké dans le dossier "
+":file:`media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT` et une"
+" image dans "
+":file:`media/upload/environment/observations/species_picture/my_picture.png`."
 
 #: ../../source/publish/lizmap_plugin/edition.rst:128
 msgid ""
@@ -5560,6 +6000,11 @@ msgid ""
 "project. To do so, you must use the :guilabel:`External resource` field edit"
 " widget, and configure it with:"
 msgstr ""
+"Vous pouvez remplacer le dossier de destination par défaut "
+":file:`media/upload/PROJECT_NAME/LAYER_NAME/FIELD_NAME/FILE_NAME.EXT` en "
+"définissant manuellement le chemin où stocker les médias, par rapport au "
+"projet. Pour ce faire, vous devez utiliser le widget d'édition de champ "
+":guilabel:`Pièce jointe`, et le configurer avec :"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:135
 msgid ""
@@ -5569,12 +6014,19 @@ msgid ""
 "inside the project media folder. For example "
 ":file:`media/my_target_folder/`."
 msgstr ""
+"un :guilabel:`Chemin par défaut` écrit relativement au projet. Par exemple "
+":file:`../media/images/` si vous souhaitez stocker les fichiers de ce champ "
+"dans un dossier media situé à côté du dossier du projet. Vous pouvez "
+"également choisir de définir un chemin à l'intérieur du dossier media du "
+"projet. Par exemple :file:`media/my_target_folder/`."
 
 #: ../../source/publish/lizmap_plugin/edition.rst:136
 msgid ""
 "check the :guilabel:`Relative path` checkbox, with the default "
 ":guilabel:`Relative to project path` option"
 msgstr ""
+"cochez la case :guilabel:`Chemin relatif`, avec l'option par défaut "
+":guilabel:`Relative to project path`."
 
 #: ../../source/publish/lizmap_plugin/edition.rst:137
 msgid ""
@@ -5589,6 +6041,9 @@ msgid ""
 " for example a directory :file:`media` at the same level than the Lizmap "
 "repositories folders:"
 msgstr ""
+"Cela permet de stocker les fichiers médias et les images envoyés dans un "
+"dossier centralisé, par exemple un répertoire :file:`media` au même niveau "
+"que les dossiers des dépôts de Lizmap :"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:141
 #: ../../source/publish/lizmap_plugin/edition.rst:150
@@ -5599,6 +6054,8 @@ msgstr "media"
 msgid ""
 "images <-- to store images in this folder, use :file:`../media/images/`"
 msgstr ""
+"images <-- Pour stocker les images dans ce dossier, utilisez "
+":file:`../media/images/`."
 
 #: ../../source/publish/lizmap_plugin/edition.rst:146
 msgid "environment"
@@ -5617,12 +6074,14 @@ msgid ""
 "tree_pictures/ <-- to store images in this folder, use: "
 ":file:`media/tree_pictures/`"
 msgstr ""
+"tree_pictures/ <-- pour stocker les images dans ce dossier, utilisez : "
+":file:`media/tree_pictures/`'."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:5
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:6
 msgid "Filtered layer by user"
 msgstr "Filtrer les données par utilisateur"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:13
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:14
 msgid ""
 "Usually, the management of projects Lizmap access rights is via directory. "
 "Configuration is done in this case in the Lizmap Web Client administration "
@@ -5636,7 +6095,7 @@ msgstr ""
 " permet de masquer complètement certains projets en fonction des groupes "
 "d'utilisateurs, mais oblige une gestion par répertoire et projet."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:15
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:16
 msgid ""
 "Instead, the filtering feature presented here allows you to publish a single"
 " project QGIS, and filter the data displayed on the map based on the logged "
@@ -5649,7 +6108,7 @@ msgstr ""
 "les couches vectorielles, car Lizmap se base sur une colonne de la table "
 "attributaire."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:17
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:18
 msgid ""
 "Filtering currently uses the ID of the user group connected to the Web "
 "application. He is active for all requests to the QGIS server, and thus "
@@ -5659,56 +6118,58 @@ msgstr ""
 "actuellement connecté à l'application Web. Il est actif pour toutes les "
 "requêtes vers le serveur QGIS, et concerne donc :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:19
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:20
 msgid "the vector layers images displayed on the map"
 msgstr "les images des couches vectorielles affichées sur la carte"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:20
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:21
 msgid "the popups. See :ref:`popup`"
 msgstr "les popups. Lire :ref:`popup`"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:21
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:22
 msgid "the *Locate by layer* feature lists. See :ref:`locate-by-layer`"
 msgstr ""
 "les listes de la fonction *Localiser par couche*. Voir :ref:`locate-by-"
 "layer`"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:22
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:23
 msgid ""
 "drop-down lists of *Editing forms* from *Value relation*. See :ref:`edition`"
 msgstr ""
+"les listes déroulantes des *formulaires d'édition* issues de *Valeur "
+"relationnelle*. Voir :ref:`edition`"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:23
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:24
 msgid "upcoming features (the attribute table display, search features, etc.)"
 msgstr ""
 "les fonctionnalités à venir (affichage de la table attributaire, fonctions "
 "de recherche, etc.)"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:28
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:29
 msgid "A video tutorial is available at: https://vimeo.com/83966790"
 msgstr ""
 "Un tutoriel vidéo est disponible à cette adresse : "
 "https://vimeo.com/83966790"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:33
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:34
 msgid "To use data filtering tool in Lizmap Web Client, you must:"
 msgstr ""
 "Pour utiliser l'outil de filtrage des données dans Lizmap Web Client, il "
 "faut :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:35
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:36
 msgid "use |qgis_2| on the server"
 msgstr "Besoin de |qgis_2| sur le serveur"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:36
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:37
 msgid "have **access to the administration interface** of Lizmap Web Client"
 msgstr "avoir **accès à l'interface d'administration** de Lizmap Web Client"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:38
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:39
 msgid "Here are the detailed steps to configure this feature:"
 msgstr "Voici le détail des étapes pour configurer cette fonctionnalité :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:41
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:42
 msgid ""
 "In Lizmap Web Client administration, in the repository properties, be sure "
 "that ``anonymous`` and other relevant groups are not checked for "
@@ -5720,40 +6181,49 @@ msgstr ""
 " sont pas cochés pour :guilabel:`Toujours voir les données de couches, même "
 "si filtrées par login`. Voir :ref:`define-group-rights`."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:44
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:45
 msgid "Check group ID or user ID in the administration interface:"
 msgstr ""
 "Vérifiez l'ID de groupe ou l'ID utilisateur dans l'interface "
 "d'administration :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:46
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:47
 msgid ""
 "To know group ID, you must go to the administration interface "
 ":menuselection:`SYSTEM --> Groups of users for rights`: ID appears in "
 "parentheses after the name of each group (under the title :guilabel:`Groups "
 "of new users`)"
 msgstr ""
+"Pour connaître l'ID du groupe, vous devez vous rendre dans l'interface "
+"d'administration :menuselection:`SYSTEM --> Groupes d'utilisateurs pour les "
+"droits` : L'ID apparaît entre parenthèses après le nom de chaque groupe "
+"(sous le titre :guilabel:`Groupes de nouveaux utilisateurs`)"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:47
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:48
 msgid "Or to know the user ID, just use its login."
 msgstr ""
 "Ou pour connaître l'identifiant de l'utilisateur, il suffit d'utiliser son "
 "login."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:49
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:50
 msgid ""
 "For all vector layers which is desired filter data, just add a text column "
 "that will hold the ID for each line who has the right to display this "
 "feature."
 msgstr ""
+"Pour toutes les couches vectorielles dont on veut filtrer les données, il "
+"suffit d'ajouter une colonne de texte qui contiendra l'ID de chaque ligne "
+"qui a le droit d'afficher cette caractéristique."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:51
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:52
 msgid ""
 "*Fill this column* for each line of the attribute table with the ID (using "
 "the calculator, for example)."
 msgstr ""
+"*Remplir cette colonne* pour chaque ligne de la table attributaire avec l'ID"
+" (en utilisant la calculatrice, par exemple)."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:52
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:53
 msgid ""
 "It is possible to set ``all`` as the value in some lines to disable the "
 "filter: All users will see the data for these lines."
@@ -5762,7 +6232,7 @@ msgstr ""
 "désactiver le filtre : Tous les utilisateurs verront les données de ces "
 "entités."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:53
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:54
 msgid ""
 "If the value in this column for a row does not correspond to a user group, "
 "then the data will be displayed for no user."
@@ -5771,25 +6241,27 @@ msgstr ""
 "un des groupes d'utilisateurs, alors la donnée ne sera affichée pour aucun "
 "utilisateur."
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:58
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:59
 msgid "Add the layer in the table :guilabel:`Filter Data by User` panel:"
 msgstr ""
+"Ajoutez la couche dans le panneau :guilabel:`Filtrer les données par "
+"utilisateur` :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:61
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:62
 msgid "Select layer from the dropdown list"
 msgstr "Sélectionnez la couche dans la liste déroulante"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:62
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:63
 msgid "Select the field with the ID"
 msgstr "Sélectionnez la champ avec l'ID"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:63
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:64
 msgid "Check the box if the field contains user ID, instead of group ID"
 msgstr ""
 "Cochez la case si le champ contient un ID utilisateur, plutôt qu'un ID de "
 "groupe"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:69
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:70
 msgid ""
 "Disable the client cache and cache server for all filtered layers. "
 "Otherwise, the data displayed will not be updated between each connection or"
@@ -5799,7 +6271,7 @@ msgstr ""
 " cela, les données affichées ne seront pas mises à jour entre chaque "
 "connexion ou déconnexion de l'utilisateur !"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:74
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:75
 msgid ""
 "If you have enabled the edition (see :ref:`edition`) on the filtered layer, "
 "the field containing the ID will be editable with:"
@@ -5807,14 +6279,14 @@ msgstr ""
 "Si vous avez activé l'édition (voir :ref:`edition`) sur la couche filtrée, "
 "le champ contenant l'ID sera éditable avec :"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:76
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:77
 msgid ""
 "either a combobox for a non admin user with either his own login or ``all``"
 msgstr ""
 "soit une liste déroulante pour un non administrateur avec soit son propre "
 "login ou ``all``"
 
-#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:77
+#: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:78
 msgid "or a line edit to write a value for a admin user"
 msgstr ""
 "ou un éditeur de texte pour écrire une valeur lors d'un utilisateur admin"
@@ -5884,20 +6356,20 @@ msgid ""
 "filter. Selecting a layer will refresh the form and deactivate the current "
 "filter."
 msgstr ""
-"Il existe un nouvel onglet dans le plugin Lizmap qui vous permet de "
+"Il existe un nouvel onglet dans l'extension Lizmap qui vous permet de "
 "configurer les entrées de filtre en rapport aux champs de couche. Si vous "
 "ajoutez des champs de 2 couches différentes ou plus, Lizmap Web Client "
-"affichera une combobox  permettant la sélection de la couche à filtrer. La "
-"sélection d'une couche va rafraîchir le formulaire et désactiver le filtre "
-"courant."
+"affichera un menu déroulant  permettant la sélection de la couche à filtrer."
+" La sélection d'une couche va rafraîchir le formulaire et désactiver le "
+"filtre courant."
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:43
 msgid ""
 "You need to add a line in the plugin table for each field you need to add in"
 " the filter form. For each field, you need to configure some options:"
 msgstr ""
-"Vous devez ajouter une ligne dans le tableau du plugin pour chaque champ "
-"souhaité dans le formulaire de filtre. Pour chaque champ vous devez "
+"Vous devez ajouter une ligne dans le tableau de l'extension pour chaque "
+"champ souhaité dans le formulaire de filtre. Pour chaque champ vous devez "
 "configurer des options :"
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:46
@@ -6017,6 +6489,10 @@ msgid ""
 " the two selected values. The two text inputs are also shown and can be used"
 " to manually set the min and max dates."
 msgstr ""
+"Ce type de saisie affiche un curseur avec deux poignées pour permettre la "
+"recherche entre les deux valeurs sélectionnées. Les deux entrées de texte "
+"sont également affichées et peuvent être utilisées pour définir manuellement"
+" les dates minimale et maximale."
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:78
 msgid ""
@@ -6044,6 +6520,10 @@ msgid ""
 " the two selected values. Two text inputs are also shown and can be used to "
 "manually set the min and max values."
 msgstr ""
+"Ce type de saisie affiche un curseur avec deux poignées pour permettre la "
+"recherche entre les deux valeurs sélectionnées. Deux entrées de texte sont "
+"également affichées et peuvent être utilisées pour définir manuellement les "
+"valeurs minimale et maximale."
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:100
 msgid "Unique values"
@@ -6112,6 +6592,10 @@ msgid ""
 " maintained simultaneously. If you branch is not listed, it's not maintained"
 " anymore, except if you are using the `master` branch."
 msgstr ""
+"prendre connaissance d'une nouvelle version concernant Lizmap Web Client. "
+"Seules deux branches sont maintenues simultanément. Si votre branche n'est "
+"pas listée, elle n'est plus maintenue, sauf si vous utilisez la branche "
+"`master`."
 
 #: ../../source/publish/lizmap_plugin/information.rst:17
 msgid ""
@@ -6141,7 +6625,19 @@ msgstr ""
 "Écrire l'URL du serveur Lizmap Web Client. L'URL doit être celle de la page "
 "d'accueil de Lizmap."
 
-#: ../../source/publish/lizmap_plugin/information.rst:33
+#: ../../source/publish/lizmap_plugin/information.rst:31
+msgid ""
+"If possible, use a login and password of a Lizmap Web Client administrator. "
+"It will give you more information about the server. This is optional. QGIS "
+"might ask you to setup the **master password**. It's a password to protect "
+"the QGIS internal password manager. This password is used only on **your** "
+"computer. The Lizmap plugin is storing the login and password in the `QGIS "
+"password manager "
+"<https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-"
+"password>`_."
+msgstr ""
+
+#: ../../source/publish/lizmap_plugin/information.rst:37
 msgid ""
 "Do not use the any URL redirection. For instance, https://demo.lizmap.com/ "
 "is a redirection to https://demo.lizmap.com/lizmap/. Only the second one "
@@ -6367,11 +6863,11 @@ msgstr "si le groupe est une couche les autres options s'appliquent à lui"
 msgid "Server tile cache"
 msgstr "Cache des tuiles serveurs"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:5
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:6
 msgid "Locate by layer"
 msgstr "La localisation par couche"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:13
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:14
 msgid ""
 "The idea of this tool is to present to the Lizmap Web Client user a drop "
 "down list that gives the ability to zoom on one or more spatial objects of "
@@ -6381,11 +6877,11 @@ msgstr ""
 "une liste déroulante qui permet de zoomer automatiquement sur un ou "
 "plusieurs objets spatiaux de la couche."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:16
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:17
 msgid "Use case"
 msgstr "Cas d'utilisation"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:18
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:19
 msgid ""
 "Consider a spatial vector layer **districts** contained in the QGIS project."
 " We choose to add these districts in the tool *Locate by layer*, to allow "
@@ -6396,7 +6892,7 @@ msgstr ""
 "*Localiser par couche*, pour permettre aux utilisateurs de Lizmap Web Client"
 " de se positionner rapidement sur un des quartiers."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:20
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:21
 msgid ""
 "Once this layer added in the tool *Locate by layer*, a drop down list of the"
 " districts appears on the Lizmap Web interface."
@@ -6404,7 +6900,7 @@ msgstr ""
 "Une fois cette couche ajoutée dans l'outil *Localiser par couche*, une liste"
 " déroulante contenant les quartiers s'affiche sur l'interface web de Lizmap."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:22
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:23
 msgid ""
 "When the Web map user selects one name in this list, the map will "
 "automatically refocuses on the selected district and the district's geometry"
@@ -6414,7 +6910,7 @@ msgstr ""
 "la carte se recentre automatiquement sur le quartier sélectionné, et la "
 "géométrie du quartier s'affiche (en option)."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:30
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:31
 msgid ""
 "This tool is not designed for layers having a lot of features or a lot of "
 "complex geometries. The web browser will indeed have to download **all** "
@@ -6424,7 +6920,7 @@ msgid ""
 "your layer is stored in PostGIS, use :ref:`postgresql-lizmap-search`."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:44
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:45
 msgid ""
 "**choose the layer** with the first dropdown from the list of the project "
 "vector layers"
@@ -6432,7 +6928,7 @@ msgstr ""
 "**choisissez la couche** via la première liste déroulante parmi les couches "
 "vectorielles du projet,"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:45
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:46
 msgid ""
 "then **the column that contains the label** you want to display in the "
 "dropdown list"
@@ -6440,7 +6936,7 @@ msgstr ""
 "puis **la colonne qui contient le libellé** que vous souhaitez afficher dans"
 " la liste déroulante."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:46
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:47
 msgid ""
 "if you want to add pre-filter your data if a optional group by, use the "
 ":guilabel:`Optional group by` field."
@@ -6448,7 +6944,7 @@ msgstr ""
 "si vous souhaitez ajouter un pré-filtre sur vos données avec un "
 "regroupement, utilisez le champ :guilabel:`Regroupement optionnel`."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:47
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:48
 msgid ""
 "if you want the geometry of the related objects is also displayed on the map"
 " when the user selects an item from the list, then check the option *Display"
@@ -6458,14 +6954,14 @@ msgstr ""
 "sur la carte lorsque l'utilisateur sélectionne un élément de la liste, alors"
 " on coche l'option *Afficher la géométrie*."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:48
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:49
 msgid ""
 "If you set a value above 0, autocompletion will be used after this amount of"
 " characters while the user types. The classical combobox will be replaced by"
 " a editable text input."
 msgstr ""
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:49
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:50
 msgid ""
 "If Lizmap must trigger the filter on the layer. Only the selected feature "
 "will be visible on the map."
@@ -6473,11 +6969,11 @@ msgstr ""
 "Si Lizmap doit déclencher le filtre sur la couche. Seulement les entités "
 "sélectionnées seront visibles sur la carte."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:56
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:57
 msgid "Hierarchical Lists"
 msgstr "Listes hiérarchiques"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:58
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:59
 msgid ""
 "If we take the example of districts, it may be interesting to also provide "
 "to the user a *sub-districts* dropdown. We wish that when the user chooses a"
@@ -6490,11 +6986,11 @@ msgstr ""
 "des sous-quartiers soit automatiquement filtrée pour n'afficher que les "
 "sous-quartiers du quartier choisi."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:60
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:61
 msgid "For this, there are 2 methods:"
 msgstr "Pour cela, il existe 2 méthodes :"
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:62
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:63
 msgid ""
 "you either have **2 separate vector layers**: one for districts and for sub-"
 "districts. So you have to use a **field join** between the two layers to "
@@ -6505,23 +7001,28 @@ msgstr ""
 "attributaire** entre les 2 couches pour activer le filtrage automatique des "
 "listes dans Lizmap."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:63
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:64
 msgid ""
 "either we have **only 1 layer for sub-districts**, and then you can specify "
 "with the plugin a **group field**. Two dropdowns will be created instead of "
 "one in the Web application."
 msgstr ""
 "soit on n'a qu'**1 seule couche des sous-quartiers**, et alors on peut "
-"spécifier via le plugin l'**attribut de regroupement**. Deux listes "
+"spécifier via l'extension l'**attribut de regroupement**. Deux listes "
 "déroulantes seront créées au lieu d'une seule dans l'application Web."
 
-#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:65
+#: ../../source/publish/lizmap_plugin/locate_by_layer.rst:66
 msgid ""
 "Don't forget to check if your configuration of QGIS server is the right one "
 "(in Lizmap : My account -> Lizmap configuration -> check if the qgis server "
 "version is the right one, if not, you can use the button 'modify' below). If"
 " the configuration is not right the location will be wrong!"
 msgstr ""
+"N'oubliez pas de vérifier si votre configuration de QGIS Server est la bonne"
+" (dans Lizmap : Mon compte -> Configuration de Lizmap -> vérifier si la "
+"version du serveur QGIS est la bonne, sinon, vous pouvez utiliser le bouton "
+"'modifier' ci-dessous). Si la configuration n'est pas correcte, "
+"l'emplacement sera erroné !"
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:6
 msgid "Map options"
@@ -6724,6 +7225,12 @@ msgid ""
 "will load the entire table, so if you have thousands of objects you may need"
 " to wait for several seconds before the application is available."
 msgstr ""
+"Après la configuration, votre application web affichera le symbole d'une "
+"montre ; en cliquant dessus, vous ouvrirez un petit panneau qui vous "
+"permettra de vous déplacer entre les étapes, ou de jouer l'animation "
+"entière. Au démarrage, l'application chargera le tableau entier, donc si "
+"vous avez des milliers d'objets, vous devrez peut-être attendre plusieurs "
+"secondes avant que l'application soit disponible."
 
 #: ../../source/publish/lizmap_plugin/time_manager.rst:30
 msgid ""
@@ -6755,13 +7262,15 @@ msgstr "Le champ de fin avec la date/heure. Ceci est optionnel."
 
 #: ../../source/publish/lizmap_plugin/time_manager.rst:45
 msgid "Date/time resolution of the chosen attribute(s)."
-msgstr ""
+msgstr "Résolution date/heure du ou des attributs choisis."
 
 #: ../../source/publish/lizmap_plugin/time_manager.rst:46
 msgid ""
 "For not database based layer, you must compute the minimum and maximum "
 "values."
 msgstr ""
+"Pour une couche non basée sur une base de données, vous devez calculer les "
+"valeurs minimale et maximale."
 
 #: ../../source/publish/lizmap_plugin/time_manager.rst:49
 msgid ""
@@ -6769,6 +7278,9 @@ msgid ""
 " select ``years`` for *Frame type* but your date field could have a ``Days``"
 " resolution."
 msgstr ""
+"La résolution de date/heure peut avoir une valeur différente de *Unité du "
+"pas*. Vous pouvez sélectionner ``années`` pour *Unité du pas* mais votre "
+"champ de date peut avoir une résolution de ``Jours``."
 
 #: ../../source/publish/lizmap_plugin/time_manager.rst:64
 msgid "Time frame size"
@@ -6832,19 +7344,20 @@ msgstr "Configurer un projet pour Lizmap"
 
 #: ../../source/publish/quick_start/lizmap_configuration.rst:9
 msgid "Install the Lizmap plugin"
-msgstr "Installer le plugin Lizmap"
+msgstr "Installer l'extension Lizmap"
 
 #: ../../source/publish/quick_start/lizmap_configuration.rst:11
 msgid ""
 "The Lizmap plugin is available through the official QGIS project repository:"
 " https://plugins.qgis.org/plugins/lizmap/"
 msgstr ""
-"Le plugin Lizmap est dans les dépôts officiels du projet QGIS : "
+"L'extension Lizmap est dans les dépôts officiels du projet QGIS : "
 "https://plugins.qgis.org/plugins/lizmap/"
 
 #: ../../source/publish/quick_start/lizmap_configuration.rst:14
 msgid "To install it, just do it like any QGIS plugin:"
-msgstr "Pour l'installer, il suffit de faire comme tout plugin QGIS :"
+msgstr ""
+"Pour l'installer, il suffit de faire comme toutes les extensions QGIS :"
 
 #: ../../source/publish/quick_start/lizmap_configuration.rst:16
 msgid ":menuselection:`Menu --> Plugins --> Manage and Install Plugins`"
@@ -6857,7 +7370,7 @@ msgstr "Rechercher ``Lizmap``"
 
 #: ../../source/publish/quick_start/lizmap_configuration.rst:18
 msgid "Install the plugin"
-msgstr "Installer le plugin"
+msgstr "Installer l'extension"
 
 #: ../../source/publish/quick_start/lizmap_configuration.rst:19
 msgid "It's available in the menu and toolbar :menuselection:`Web`"
@@ -6872,15 +7385,15 @@ msgid ""
 "Plugins --> Manage and Install Plugins --> Settings`, check that QGIS will "
 "check for updates on a regular basis automatically."
 msgstr ""
-"Le plugin QGIS Lizmap est régulièrement mise à jour. Pour profiter des "
+"L'extension QGIS Lizmap est régulièrement mise à jour. Pour profiter des "
 "nouvelles fonctionnalités ou avant de rapporter un bug, veuillez être sur de"
-" mettre à jour le plugin. Dans :menuselection:`Menu Extensions --> "
+" mettre à jour l'extension. Dans :menuselection:`Menu Extensions --> "
 "Installer/Gérer les extensions`, vérifiez que QGIS va vérifier les mises à "
 "jours disponibles régulièrement."
 
 #: ../../source/publish/quick_start/lizmap_configuration.rst:29
 msgid "The plugin is organized in 13 tabs:"
-msgstr "Le plugin est organisé en 13 onglets :"
+msgstr "L'extension est organisé en 13 onglets :"
 
 #: ../../source/publish/quick_start/lizmap_configuration.rst:31
 msgid ""
@@ -6956,7 +7469,7 @@ msgstr ""
 #: ../../source/publish/quick_start/lizmap_configuration.rst:44
 msgid ":guilabel:`Log`: displays information of performed actions"
 msgstr ""
-":guilabel:`Log`: affiche des informations sur les actions dans le plugin"
+":guilabel:`Log`: affiche des informations sur les actions dans l'extension"
 
 #: ../../source/publish/quick_start/lizmap_configuration.rst:46
 msgid "And it has 5 action buttons:"
@@ -7312,7 +7825,7 @@ msgid ""
 msgstr ""
 "Pour cela, il faut donc **synchroniser le répertoire local avec celui du "
 "serveur** à chaque fois qu'on a mis à jour le projet QGIS, modifié la "
-"configuration Lizmap via le plugin, ou encore ajouté des fichiers dans le "
+"configuration Lizmap via l'extension, ou encore ajouté des fichiers dans le "
 "répertoire local."
 
 #: ../../source/publish/quick_start/publish_with_ftp.rst:18

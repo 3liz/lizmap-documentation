@@ -4,16 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Jin Igarashi <wushilan0623@gmail.com>, 2021
+# yamamoto ryuzo <ryu@yamakun.net>, 2022
+# Jin Igarashi <wushilan0623@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-21 15:25+0000\n"
-"PO-Revision-Date: 2020-11-26 13:55+0000\n"
-"Last-Translator: Jin Igarashi <wushilan0623@gmail.com>, 2021\n"
+"POT-Creation-Date: 2022-12-15 13:09+0100\n"
+"PO-Revision-Date: 2022-12-09 13:31+0000\n"
+"Last-Translator: Jin Igarashi <wushilan0623@gmail.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/3liz-1/teams/62012/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +35,7 @@ msgid ""
 "been activated."
 msgstr ""
 "地図の発行者がこの機能を1つまたは複数のベクターレイヤーに対して有効にした場合、メニューバーの下部に新しいメニュー項目が表示され、 **データ** "
-"と表示されます。また、属性テーブルが有効になっているレイヤーには、星印のついた **選択** という名前のエントリーが表示されます。"
+"と表示されます。また、属性テーブルが有効になっているレイヤーには、星印のついた **選択** という名前のエントリが表示されます。"
 
 #: ../../source/user/attribute_table.rst:7
 msgid ""
@@ -96,7 +97,7 @@ msgstr ""
 "**最大化** "
 "ボタンは、左パネルと地図のヘッダーの間で余っている場所をすべて埋めるようにパネルを拡大します。これはレイヤーデータを見やすくするために便利な機能です。この設定では、属性テーブルパネルも"
 " **ピン留め** "
-"され、マウスがパネルから離れても縮小されません（例えば、凡例のある左パネルをホバリングしたときなど）。しかし、この場合、属性テーブルパネルの透明度だけが変わり、下にある地図が見えるようになります。"
+"され、例えば、凡例のある左パネルをホバリングしたときなど、マウスがパネルから離れても縮小されません。しかし、この場合、属性テーブルパネルの透明度だけが変わり、下にある地図が見えるようになります。"
 
 #: ../../source/user/attribute_table.rst:26
 msgid ""
@@ -108,7 +109,7 @@ msgstr "これらの2つの **ピン** と **最大化** ボタンのいずれ�
 msgid ""
 "The **Close** button closes the attribute table tool completely (as if you "
 "clicked in the menu bar icon)."
-msgstr "**閉じる** ボタンは、メニューバーのアイコンをクリックしたときのように、属性テーブルツールを完全に閉じます。"
+msgstr "**閉じる** ボタンは、（メニューバーのアイコンをクリックしたときのように）属性テーブルツールを完全に閉じます。"
 
 #: ../../source/user/attribute_table.rst:35
 msgid "Open an attribute table for a layer"
@@ -159,7 +160,7 @@ msgstr "ライン上での動作"
 msgid ""
 "When you **click on a table line**, the line will be displayed with a border"
 " to help viewing which line is **highlighted**."
-msgstr "**表の行をクリック** すると、その行が枠線付きで表示され、どの行が **強調されているか** がわかりやすくなります。"
+msgstr "**テーブルの行をクリック** すると、その行が枠線付きで表示され、どの行が **強調されているか** がわかりやすくなります。"
 
 #: ../../source/user/attribute_table.rst:63
 msgid ""
@@ -288,8 +289,7 @@ msgid ""
 "configuration done by the map publisher)"
 msgstr ""
 "属性テーブルにテキストを入力してデータをフィルタリングした後、「検索されたラインを選択」というラベルの付いた「黒い星」のボタンをクリックすることで、 "
-"**簡単にすべてのデータを選択できます** "
-"。これにより、属性テーブル内の対応するオブジェクトがすべて選択され（黄色で表示）、マップ上の色も変更されます（地図の公開者の設定によりますが、通常は黄色で表示されます）。"
+"**簡単にすべてのデータを選択できます**。これにより、属性テーブル内の対応するオブジェクトがすべて選択され（黄色で表示）、マップ上の色も変更されます（地図の公開者の設定によりますが、通常は黄色で表示されます）。"
 
 #: ../../source/user/attribute_table.rst:112
 msgid "Filter data"
@@ -316,11 +316,11 @@ msgstr "属性テーブルでは、 **フィルタリングされたデータの
 #: ../../source/user/attribute_table.rst:119
 msgid ""
 "The Search input field will allow to **search only among filtered data**"
-msgstr "検索フィールドでは、**フィルタリングされたデータのみを検索する**ことができます。"
+msgstr "検索フィールドでは、 **フィルタリングされたデータのみを検索する** ことができます。"
 
 #: ../../source/user/attribute_table.rst:120
 msgid "The map will show **only the filtered objects**"
-msgstr "マップには、**フィルタリングされたオブジェクトだけが表示**されます。"
+msgstr "マップには、 **フィルタリングされたオブジェクトだけが表示** されます。"
 
 #: ../../source/user/attribute_table.rst:121
 msgid ""
@@ -346,7 +346,7 @@ msgstr "フィルターをキャンセルすると元の状態に戻ります。
 msgid ""
 "by clicking on the orange \"Funnel\" button at the top of the legend in "
 "Lizmap left panel"
-msgstr "Lizmap左パネルの凡例の上部にあるオレンジ色の 「煙突」状のボタンをクリックします。"
+msgstr "Lizmap左パネルの凡例の上部にあるオレンジ色の 「煙突」状のボタンをクリックします"
 
 #: ../../source/user/attribute_table.rst:127
 msgid ""
@@ -427,13 +427,14 @@ msgid ""
 "the configuration desired by the map publisher. If any changes are available"
 " you have to choose between *Add* a new object or *Select* one."
 msgstr ""
-"レイヤーが選択されると、編集画面が表示されます。これは、地図の公開者が求める設定に応じて異なります。変更が可能な場合は、新しいオブジェクトを*追加*するか、*選択*するかを選ぶ必要があります。"
+"レイヤーが選択されると、編集画面が表示されます。これは、地図の公開者が求める設定に応じて異なります。変更が可能な場合は、新しいオブジェクトを *追加* "
+"するか、 *選択* するかを選ぶ必要があります。"
 
 #: ../../source/user/edition.rst:23
 msgid ""
 "If you have selected *Add*, you will be asked to draw a simple form that "
 "depends on the selected data layer:"
-msgstr "*追加*を選択した場合は、選択したデータレイヤーに依存する簡単な形を描くように求められます。"
+msgstr "*追加* を選択した場合は、選択したデータレイヤーに依存する簡単な形を描くように求められます。"
 
 #: ../../source/user/edition.rst:25
 msgid "point"
@@ -471,13 +472,14 @@ msgid ""
 "information, you can *Save*. The new object will be added. You will be able "
 "to update it by selecting it."
 msgstr ""
-"ジオメトリが正しく、必要な情報も入力されていれば、*保存*することができます。新しいオブジェクトが追加されます。選択して更新することができるようになります。"
+"ジオメトリが正しく、必要な情報も入力されていれば、 *保存* "
+"することができます。新しいオブジェクトが追加されます。選択して更新することができるようになります。"
 
 #: ../../source/user/edition.rst:45
 msgid ""
 "To select an object to update, you will need to click on it on the map then "
 "click on the button *Edit*."
-msgstr "更新するオブジェクトを選択するには、マップ上でオブジェクトをクリックし、*編集*ボタンをクリックする必要があります。"
+msgstr "更新するオブジェクトを選択するには、マップ上でオブジェクトをクリックし、 *編集* ボタンをクリックする必要があります。"
 
 #: ../../source/user/edition.rst:51
 msgid ""
@@ -488,7 +490,7 @@ msgstr "選択されたオブジェクトはマップ上に表示され、その
 #: ../../source/user/edition.rst:52
 msgid ""
 "You can undo geometry changes and stop edition using the *Cancel* button."
-msgstr "ジオメトリの変更を取り消したり、*キャンセル*ボタンで編集を止めることができます。"
+msgstr "ジオメトリの変更を取り消したり、 *キャンセル* ボタンで編集を止めることができます。"
 
 #: ../../source/user/edition.rst:53
 msgid "To validate your geometry modifications, you must click *Save*."
@@ -498,13 +500,13 @@ msgstr "ジオメトリの変更を有効にするためには、*保存*をク�
 msgid ""
 "If you want to remove a point on a geometry, you must hover it and type "
 "*Del* on your keyboard."
-msgstr "ジオメトリ上のポイントを削除したい場合は、そのポイントにカーソルを合わせて、キーボードで*Del*をタイプする必要があります。"
+msgstr "ジオメトリ上のポイントを削除したい場合は、そのポイントにカーソルを合わせて、キーボードで *Del* をタイプする必要があります。"
 
 #: ../../source/user/edition.rst:61
 msgid ""
 "*Digitizing* button is displayed with line and polygon geometries, by "
 "clicking it, you'll access those tools:"
-msgstr "*デジタイズ*ボタンは、ラインとポリゴンのジオメトリで表示され、それをクリックすると、それらのツールにアクセスできます。"
+msgstr "*デジタイズ* ボタンは、ラインとポリゴンのジオメトリで表示され、それをクリックすると、それらのツールにアクセスできます。"
 
 #: ../../source/user/edition.rst:63
 msgid ""
@@ -624,7 +626,7 @@ msgstr "また、機能を停止することなく、計測機能を変更する
 
 #: ../../source/user/printing.rst:2
 msgid "Printing"
-msgstr "印刷"
+msgstr "印刷/ファイル出力"
 
 #: ../../source/user/printing.rst:4
 msgid ""
@@ -664,7 +666,7 @@ msgstr "プロジェクトのページ"
 
 #: ../../source/user/project_page.rst:4
 msgid "The default lizmap page offers a list maps organized by folder."
-msgstr "デフォルトのlizmapページでは、フォルダごとに整理されたマップの一覧が表示されます。"
+msgstr "デフォルトのlizmapページでは、フォルダごとに整理された地図の一覧が表示されます。"
 
 #: ../../source/user/project_page.rst:10
 msgid ""
@@ -704,11 +706,11 @@ msgstr "地図の移動"
 
 #: ../../source/user/simple_map.rst:7
 msgid "zoom on area drawn by the user"
-msgstr "ユーザーが描いた領域にズームする"
+msgstr "ユーザーが描いた領域にズームインする"
 
 #: ../../source/user/simple_map.rst:8
 msgid "zoom more"
-msgstr "さらにズームする"
+msgstr "さらにズームインする"
 
 #: ../../source/user/simple_map.rst:9
 msgid "selecting a zoom level with a scale bar"
@@ -716,7 +718,7 @@ msgstr "縮尺バーからズームレベルを選択する"
 
 #: ../../source/user/simple_map.rst:10
 msgid "zoom less"
-msgstr "縮尺を引く"
+msgstr "ズームアウトする"
 
 #: ../../source/user/simple_map.rst:11
 msgid "scale display as a scale bar and numerically"
@@ -734,13 +736,14 @@ msgid ""
 "area, you need to select the *zoom by rectangle* and drag to draw a "
 "rectangle defining the area to reach."
 msgstr ""
-"地図の右側には、ズームとパンの機能があります。特定のエリアにズームするには、*矩形でズーム*を選択し、ドラッグして範囲を指定する矩形を描く必要があります。"
+"地図の右側には、ズームとパンの機能があります。特定のエリアにズームするには、 *矩形でズーム* "
+"を選択し、ドラッグして範囲を指定する矩形を描く必要があります。"
 
 #: ../../source/user/simple_map.rst:25
 msgid ""
 "You can using the *triangle*, left the layers title, bring up the legend of "
 "the layer."
-msgstr "レイヤーのタイトルの左にある*三角形*をクリックすると、そのレイヤーの凡例を表示することができます。"
+msgstr "レイヤーのタイトルの左にある *三角形* をクリックすると、そのレイヤーの凡例を表示することができます。"
 
 #: ../../source/user/simple_map.rst:31
 msgid "Selection boxes allow you to hide and display the proposed layers."

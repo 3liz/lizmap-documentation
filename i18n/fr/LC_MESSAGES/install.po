@@ -4,22 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Bobo Plateau <bobo-romania@users.noreply.github.com>, 2020
-# rldhont <rldhont@gmail.com>, 2020
-# Arnaud HANRY <arnaud.hanry@le64.fr>, 2021
-# Marjorie FANGAIN, 2021
-# Laurent Jouanneau <dev@ljouanneau.com>, 2021
+# Marjorie FANGAIN, 2022
 # Nicolas Boisteault <nboisteault@gmail.com>, 2022
+# Arnaud HANRY <arnaud.hanry@le64.fr>, 2022
+# rldhont <rldhont@gmail.com>, 2022
+# Bobo Plateau <bobo-romania@users.noreply.github.com>, 2022
 # etrimaille <gustrimaille@yahoo.fr>, 2022
+# Laurent Jouanneau <dev@ljouanneau.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-21 15:25+0000\n"
-"PO-Revision-Date: 2020-11-26 13:55+0000\n"
-"Last-Translator: etrimaille <gustrimaille@yahoo.fr>, 2022\n"
+"POT-Creation-Date: 2022-12-15 13:09+0100\n"
+"PO-Revision-Date: 2022-12-09 13:31+0000\n"
+"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -914,8 +914,8 @@ msgid ""
 "To install QGIS-server on apache refer to the official QGIS documentation "
 "https://docs.qgis.org/latest/en/docs/server_manual/index.html"
 msgstr ""
-"Pour installer Qgis Server sur apache, référez-vous à la documentation "
-"officielle Qgis "
+"Pour installer QGIS Serveur sur apache, référez-vous à la documentation "
+"officielle QGIS "
 "https://docs.qgis.org/latest/en/docs/server_manual/index.html"
 
 #: ../../source/install/linux.rst:111
@@ -989,7 +989,7 @@ msgstr "Création des répertoires pour les données"
 msgid ""
 "QGIS files and other cache files will be stored into these directories."
 msgstr ""
-"Les fichiers Qgis et les autres fichiers de cache seront stockés dans ces "
+"Les fichiers QGIS et les autres fichiers de cache seront stockés dans ces "
 "répertoires."
 
 #: ../../source/install/linux.rst:170
@@ -1544,7 +1544,7 @@ msgstr "Prérequis pour l'installation de Lizmap Web Client"
 
 #: ../../source/install/pre_requirements.rst:8
 msgid "QGIS Server"
-msgstr "Qgis serveur"
+msgstr "QGIS serveur"
 
 #: ../../source/install/pre_requirements.rst:11
 msgid ""
@@ -1615,8 +1615,8 @@ msgid ""
 "After you have setup your web server with QGIS-Server, check that the URL of"
 " QGIS Server is working. You probably get a XML like:"
 msgstr ""
-"Après avoir configurer votre serveur web avec Qgis serveur, vérifiez que "
-"l'URL de Qgis serveur fonctionne. Vous obtiendrez probablement un XML "
+"Après avoir configurer votre serveur web avec QGIS serveur, vérifiez que "
+"l'URL de QGIS serveur fonctionne. Vous obtiendrez probablement un XML "
 "semblable à :"
 
 #: ../../source/install/pre_requirements.rst:38
@@ -1631,9 +1631,9 @@ msgid ""
 "host than Lizmap Web Client. QGIS Server URL should stay private, accessible"
 " by the Lizmap PHP application **only**."
 msgstr ""
-"Nous vous encourageons **fortement** de configurer QGIS Server sur un hôte "
-"virtuel différent que celui de Lizmap Web Client. L'URL de QGIS Server doit "
-"rester privée, accessible **uniquement** depuis le PHP de Lizmap."
+"Nous vous encourageons **fortement** de configurer QGIS Serveur sur un hôte "
+"virtuel différent que celui de Lizmap Web Client. L'URL de QGIS Serveur doit"
+" rester privée, accessible **uniquement** depuis le PHP de Lizmap."
 
 #: ../../source/install/pre_requirements.rst:44
 msgid ""
@@ -1647,14 +1647,14 @@ msgstr ""
 
 #: ../../source/install/pre_requirements.rst:48
 msgid "QGIS Server plugins"
-msgstr "Plugins Qgis serveur"
+msgstr "Extensions QGIS serveur"
 
 #: ../../source/install/pre_requirements.rst:50
 msgid ""
 "Some plugins can be added to QGIS Server. This will enable some features in "
 "Lizmap. It's not compulsory but in some situations, it's better."
 msgstr ""
-"Certains plugins peuvent être ajoutés à Qgis serveur. Cela activera "
+"Certains plugins peuvent être ajoutés à QGIS serveur. Cela activera "
 "certaines fonctionnalités dans Lizmap. Ce n'est pas obligatoire mais dans "
 "certaines situations, c'est mieux."
 
@@ -1666,8 +1666,8 @@ msgid ""
 "variables"
 msgstr ""
 "Soit vous configurez la variable d'environnement ``QGIS_PLUGIN_PATH`` "
-"pendant l'installation de Qgis serveur, soit utiliser celle par défaut "
-"fournie par Qgis. "
+"pendant l'installation de QGIS serveur, soit utiliser celle par défaut "
+"fournie par QGIS. "
 "https://docs.qgis.org/latest/fr/docs/server_manual/config.html#environment-"
 "variables"
 
@@ -1782,6 +1782,8 @@ msgid ""
 "The name of the plugin is **Lizmap server**. Do not install the **Lizmap** "
 "plugin which is the **desktop** Python plugin."
 msgstr ""
+"Le nom du plugin est **Lizmap server**. N'installez pas le plugin "
+"**Lizmap**, qui est le plugin pour Qgis Desktop."
 
 #: ../../source/install/pre_requirements.rst:94
 msgid "WfsOutputExtension"
@@ -1922,24 +1924,30 @@ msgid ""
 "Get the Lizmap archive by downloading an archive on the `release "
 "<https://github.com/3liz/lizmap-web-client/releases>`_ page."
 msgstr ""
+"Récupérez l'archive de Lizmap en téléchargeant depuis `la page release de "
+"Github <https://github.com/3liz/lizmap-web-client/releases>`_."
 
 #: ../../source/install/upgrade.rst:41
 msgid "You should then :"
-msgstr ""
+msgstr "Vous devez alors :"
 
 #: ../../source/install/upgrade.rst:43
 msgid "replace the ``lib/`` directory by the new ``lib/`` directory"
-msgstr ""
+msgstr "remplacez le répertoire lib/ par le nouveau répertoire lib/"
 
 #: ../../source/install/upgrade.rst:44
 msgid "replace files into ``lizmap/`` directory by the new ``lizmap/`` files"
 msgstr ""
+"remplacez les fichiers dans le répertoire lizmap/ par les nouveaux fichiers "
+"dans lizmap/"
 
 #: ../../source/install/upgrade.rst:45
 msgid ""
 "If the replacement has erased some files that you haven't done any backup "
 "before, restore them with ``lizmap/install/restore.sh /tmp``"
 msgstr ""
+"Si le remplacement a effacé des fichiers que vous avez sauvegardé, "
+"restaurez-les avec \"lizmap/install/restore.sh /tmp\""
 
 #: ../../source/install/upgrade.rst:49
 msgid "Launch the installer"
@@ -2442,7 +2450,7 @@ msgstr ""
 
 #: ../../source/install/windows.rst:247
 msgid "QGIS Server Installation"
-msgstr "Installation de QGIS Server"
+msgstr "Installation de QGIS Serveur"
 
 #: ../../source/install/windows.rst:249
 msgid ""
