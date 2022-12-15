@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-13 13:45+0000\n"
+"POT-Creation-Date: 2022-12-14 15:14+0100\n"
 "PO-Revision-Date: 2021-12-19 13:43+0000\n"
 "Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
@@ -1000,6 +1000,8 @@ msgid ""
 "QGIS Server runs with the FastCGI protocole (a.k.a. fcgi). We must therefore"
 " configure the Apache mod_fcgid to suit to the server capabilities."
 msgstr ""
+"QGIS Server fonctionne en mode fcgi. Il faut donc configurer le mod_fcgid "
+"d'Apache pour l'adapter aux capacités du serveur."
 
 #: ../../source/install/linux.rst:216
 msgid "Setting the compression"
@@ -1112,6 +1114,9 @@ msgid ""
 "This section is optional, you can setup your own way of transferring data "
 "from QGIS GIS technicians to the Lizmap server."
 msgstr ""
+"Cette section est optionnelle, vous pouvez configurer d'autres moyens de "
+"transfert de données depuis les ordinateurs des techniciens CGI vers le "
+"serveur Lizmap."
 
 #: ../../source/install/linux.rst:346
 msgid "Configure"
@@ -1906,6 +1911,9 @@ msgid ""
 "The environment variable must be set in QGIS Server. The plugin name is "
 "**Lizmap server**."
 msgstr ""
+"Le plugin Lizmap server  doit être installé dans le bon dossier pour Qgis "
+"Server. La variable d'environnement doit être défini dans Qgis Server. Le "
+"plugin s'appelle **Lizmap server**."
 
 #: ../../source/install/pre_requirements.rst:131
 msgid ""
@@ -2129,17 +2137,21 @@ msgstr "Vous devez alors :"
 
 #: ../../source/install/upgrade.rst:43
 msgid "replace the ``lib/`` directory by the new ``lib/`` directory"
-msgstr ""
+msgstr "remplacez le répertoire lib/ par le nouveau répertoire lib/"
 
 #: ../../source/install/upgrade.rst:44
 msgid "replace files into ``lizmap/`` directory by the new ``lizmap/`` files"
 msgstr ""
+"remplacez les fichiers dans le répertoire lizmap/ par les nouveaux fichiers "
+"dans lizmap/"
 
 #: ../../source/install/upgrade.rst:45
 msgid ""
 "If the replacement has erased some files that you haven't done any backup "
 "before, restore them with ``lizmap/install/restore.sh /tmp``"
 msgstr ""
+"Si le remplacement a effacé des fichiers que vous avez sauvegardé, "
+"restaurez-les avec \"lizmap/install/restore.sh /tmp\""
 
 #: ../../source/install/upgrade.rst:49
 msgid "Launch the installer"
