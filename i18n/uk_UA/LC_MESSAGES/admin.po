@@ -1,0 +1,1021 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, 3liz
+# This file is distributed under the same license as the Lizmap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Кадастр Муниципальный, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lizmap 3.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-15 14:32+0100\n"
+"PO-Revision-Date: 2018-09-07 13:31+0000\n"
+"Last-Translator: Кадастр Муниципальный, 2022\n"
+"Language-Team: Ukrainian (Ukraine) (https://www.transifex.com/3liz-1/teams/62012/uk_UA/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../source/admin/cache.rst:5
+msgid "Cache management as administrator"
+msgstr "Керування кешом від імені адміністратора"
+
+#: ../../source/admin/cache.rst:8
+#: ../../source/admin/lizmap-configuration.rst:6 ../../source/admin/logs.rst:6
+#: ../../source/admin/presentation.rst:6 ../../source/admin/users-groups.rst:6
+msgid "Contents"
+msgstr "Зміст"
+
+#: ../../source/admin/cache.rst:10
+msgid ""
+"For a layer with server cache activated, Lizmap will keep the cache when the"
+" user pan and zoom on the map. To have better performance, Lizmap Web Client"
+" can also automatically generate the tile cache on the server."
+msgstr ""
+"Для шару з активованим кеш-пам’яттю сервера Lizmap зберігатиме кеш-пам’ять, "
+"коли користувач панорамує та масштабує карту. Для кращої продуктивності "
+"Lizmap Web Client також може автоматично генерувати кеш плиток на сервері."
+
+#: ../../source/admin/cache.rst:13
+msgid ""
+"In some cases, it is desirable to remove the server cache, for example, when"
+" the style has changed and the tiles need to be updated. For this, two "
+"solutions are possible:"
+msgstr ""
+"У деяких випадках бажано видалити кеш сервера, наприклад, коли стиль "
+"змінився і плитки потрібно оновити. Для цього можливі два рішення:"
+
+#: ../../source/admin/cache.rst:18
+msgid "Remove all the cache by Lizmap repository"
+msgstr "Видаліть весь кеш репозиторію Lizmap"
+
+#: ../../source/admin/cache.rst:20
+msgid ""
+"In the administration interface, in the :guilabel:`Maps management` page, "
+"for each repository, the administrator can delete the cache for all layers "
+"of all the projects repository by clicking the button :guilabel:`Empty "
+"cache`."
+msgstr ""
+"В інтерфейсі адміністрування, на сторінці :guilabel:`Управління картами` для"
+" кожного сховища адміністратор може видалити кеш для всіх шарів усіх сховищ "
+"проектів, натиснувши кнопку :guilabel:`Очистити кеш`."
+
+#: ../../source/admin/cache.rst:25
+msgid "Delete the cache, layer by layer, for each Lizmap project"
+msgstr "Видаліть кеш, шар за шаром, для кожного проекту Lizmap"
+
+#: ../../source/admin/cache.rst:27
+msgid ""
+"When the administrator is connected and consults a Lizmap map, a **little "
+"red cross** is displayed on the right of the name of each layer that is "
+"configured with server cache. Clicking on the cross allows, after "
+"confirmation, to delete the server cache only for this layer in the QGIS "
+"project."
+msgstr ""
+"Коли адміністратор під’єднано та переглядає карту Lizmap, праворуч від назви"
+" кожного шару, який налаштовано на кеш сервера, відображається **маленький "
+"червоний хрест**. Натискання на хрестик дозволяє після підтвердження "
+"видалити кеш сервера лише для цього шару в проекті QGIS."
+
+#: ../../source/admin/cache.rst:31
+msgid ""
+"Only logged administrator sees these red crosses and has the right to delete"
+" the cache."
+msgstr ""
+"Тільки зареєстрований адміністратор бачить ці червоні хрестики і має право "
+"видалити кеш."
+
+#: ../../source/admin/cache.rst:35
+msgid "Configuring the caching system"
+msgstr "Налаштування системи кешування"
+
+#: ../../source/admin/cache.rst:37
+msgid ""
+"In the :menuselection:`Administration -> Lizmap Configuration -> Cache`, you"
+" can configure the caching system which is used. You can choose between "
+"different kind of caching :"
+msgstr ""
+"В :меню вибору:`Адміністрування -> Конфігурація Lizmap -> Кеш` ви можете "
+"налаштувати систему кешування, яка використовується. Ви можете вибрати між "
+"різними видами кешування:"
+
+#: ../../source/admin/cache.rst:41
+msgid "Files"
+msgstr "Файли"
+
+#: ../../source/admin/cache.rst:42
+msgid "Sqlite"
+msgstr "Sqlite"
+
+#: ../../source/admin/cache.rst:43
+msgid "Redis (You would need a Redis server)"
+msgstr "Redis (Вам знадобиться сервер Redis)"
+
+#: ../../source/admin/cache.rst:46
+msgid "Seeding"
+msgstr "Сітка"
+
+#: ../../source/admin/cache.rst:48
+msgid ""
+"You can pre-generate the tiles for any layers of a QGIS project configured "
+"with server-side caching on. You need to have full access on the server "
+"where Lizmap is installed and use a terminal to connect to it. You also need"
+" to know the ids of Lizmap repositories and the code name of the project "
+"(the QGIS project filename without the extension)."
+msgstr ""
+"Ви можете попередньо згенерувати плитки для будь-яких шарів проекту QGIS, "
+"налаштованого з увімкненим кешуванням на стороні сервера. Вам потрібно мати "
+"повний доступ до сервера, на якому встановлено Lizmap, і використовувати "
+"термінал для підключення до нього. Вам також потрібно знати ідентифікатори "
+"репозиторіїв Lizmap та кодове ім’я проекту (ім’я файлу проекту QGIS без "
+"розширення)."
+
+#: ../../source/admin/cache.rst:53
+msgid ""
+"In this example, we will show commands to manage the tiles cache for the "
+"demo project ``Montpellier``, shipped with Lizmap Web Client. We also assume"
+" that your Lizmap application is installed in the folder "
+":file:`/var/www/lizmap-web-client/`."
+msgstr ""
+"У цьому прикладі ми покажемо команди для керування кешом плиток для "
+"демонстраційного проекту ``Montpellier``, що постачається разом із веб-"
+"клієнтом Lizmap. Ми також припускаємо, що ваша програма Lizmap встановлена в"
+" папці :file:`/var/www/lizmap-web-client/`."
+
+#: ../../source/admin/cache.rst:62
+msgid ""
+"It is important to know that Lizmap publish the cached layers in WMTS (Web "
+"Map Tiled Service). The following concepts are used as options of Lizmap "
+"tile cache seeder:"
+msgstr ""
+"Важливо знати, що Lizmap публікує кешовані шари в WMTS (Web Map Tiled "
+"Service). Наступні концепції використовуються як варіанти сітки кешу Lizmap:"
+
+#: ../../source/admin/cache.rst:64
+msgid ""
+"**TileMatrixSet** - In Lizmap, this represents the projection code, for "
+"example `EPSG:3857` (Pseudo mercator)."
+msgstr ""
+"**TileMatrixSet** — у Lizmap це представляє код проекції, наприклад, "
+"`EPSG:3857` (псевдомеркатор)."
+
+#: ../../source/admin/cache.rst:65
+msgid "**TileMatrixMin** - This is the minimum zoom level."
+msgstr "**TileMatrixMin** – це мінімальний рівень масштабування."
+
+#: ../../source/admin/cache.rst:66
+msgid "**TileMatrixMax** - This is the maximum zoom level."
+msgstr "**TileMatrixMax** – це максимальний рівень масштабування."
+
+#: ../../source/admin/cache.rst:69
+msgid ""
+"The zoom level is **not** a map scale, but the the zoom level. In Lizmap "
+"plugin, the project publisher can configure scales for the published "
+"project, for example the list : `100000, 50000, 25000, 10000`. The zoom "
+"level ID depends on some CRS and how you configured your Lizmap project. You"
+" can have a idea of the scale ID by typing `lizMap.map.getZoom()` in your "
+"webbrowser Javascript console when zooming on your map."
+msgstr ""
+"Рівень масштабування — це **не** масштаб карти, а рівень масштабування. У "
+"плагіні Lizmap видавець проекту може налаштувати масштаби для опублікованого"
+" проекту, наприклад, список: `100000, 50000, 25000, 10000`. Ідентифікатор "
+"рівня масштабування залежить від деяких CRS і від того, як ви налаштували "
+"свій проект Lizmap. Ви можете отримати уявлення про ідентифікатор масштабу, "
+"ввівши `lizMap.map.getZoom()` у консолі Javascript веб-браузера під час "
+"масштабування карти."
+
+#: ../../source/admin/cache.rst:75
+msgid ""
+"First you **must** get the cache capabilities of one project and some "
+"details on a specific layer."
+msgstr ""
+"Спочатку ви **повинні** отримати можливості кешу одного проекту та деякі "
+"деталі на певному шарі."
+
+#: ../../source/admin/cache.rst:94
+msgid ""
+"In this example, you see that the bus layer has 3 different TileMatrixSet, "
+"corresponding to the 3 different spatial coordinate systems available for "
+"this project in Lizmap (configured in the :menuselection:`Project properties"
+" --> QGIS Server`)."
+msgstr ""
+"У цьому прикладі ви бачите, що базові шари мають 3 різні  TileMatrixSet, що "
+"відповідають 3 різним просторовим системам координат, доступним для цього "
+"проекту в Lizmap (налаштованих у :меню вибору:`Властивості проекту --> QGIS "
+"Server`)."
+
+#: ../../source/admin/cache.rst:98
+msgid "If your layer name has some spaces, you need to use `\"\"`."
+msgstr "Якщо у назві шару є пробіли, потрібно використовувати `\"\"`."
+
+#: ../../source/admin/cache.rst:100
+msgid ""
+"It's important to generate the cache capabilities **before** generating the "
+"cache for a specific layer. The cache capabilities is used in the next "
+"command. The next command might fail if the cache capabilities is not "
+"present."
+msgstr ""
+"Важливо створити можливості кешу **перед** створенням кешу для певного шару."
+" Можливості кешу використовуються в наступній команді. Наступна команда може"
+" вийти з ладу, якщо можливості кешу відсутні."
+
+#: ../../source/admin/cache.rst:103
+msgid ""
+"Once you have a good knowledge of a layer, you can generate the cache for "
+"it:"
+msgstr "Якщо ви добре знаєте шар, ви можете створити для нього кеш:"
+
+#: ../../source/admin/cache.rst:136
+msgid "After seeding, update rights on cache :"
+msgstr "Після заповнення оновіть права на кеш:"
+
+#: ../../source/admin/index.rst:3
+msgid "Administrator guide"
+msgstr "Посібник адміністратора"
+
+#: ../../source/admin/index.rst:5
+msgid "This guide is for the system administrator on the server."
+msgstr "Цей посібник призначений для системного адміністратора на сервері."
+
+#: ../../source/admin/lizmap-configuration.rst:3
+msgid "Lizmap Web Client configuration"
+msgstr "Конфігурація веб-клієнта Lizmap"
+
+#: ../../source/admin/lizmap-configuration.rst:9
+msgid "Introduction"
+msgstr "Вступ"
+
+#: ../../source/admin/lizmap-configuration.rst:11
+msgid "The *Lizmap configuration* menu is divided into 2 parts:"
+msgstr "Меню *Конфігурація Lizmap* розділене на 2 частини:"
+
+#: ../../source/admin/lizmap-configuration.rst:13
+msgid ""
+"**Services**: the general configuration of Lizmap Web client - server, "
+"cache, etc."
+msgstr ""
+"**Служби**: загальна конфігурація веб-клієнта Lizmap - сервер, кеш тощо."
+
+#: ../../source/admin/lizmap-configuration.rst:14
+msgid "**Repositories**: create and configure Lizmap repositories"
+msgstr "**Репозиторії**: створюйте та налаштовуйте репозиторії Lizmap"
+
+#: ../../source/admin/lizmap-configuration.rst:20
+msgid "Services"
+msgstr "Сервіси"
+
+#: ../../source/admin/lizmap-configuration.rst:22
+msgid ""
+"To configure **Services**, click the *Modify* button under the summary."
+msgstr "Щоб налаштувати **Служби**, натисніть кнопку *Змінити* під підсумком."
+
+#: ../../source/admin/lizmap-configuration.rst:24
+msgid ""
+"**WMS server URL**: The full QGIS Server URL, such as http://localhost/cgi-"
+"bin/qgis_mapserv.fcgi or http://localhost/cgi-bin/qgis_mapserv.fcgi.exe."
+msgstr ""
+"**URL-адреса сервера WMS**: повна URL-адреса сервера QGIS, наприклад "
+"http://localhost/cgi-bin/qgis_mapserv.fcgi або http://localhost/cgi-"
+"bin/qgis_mapserv.fcgi.exe."
+
+#: ../../source/admin/lizmap-configuration.rst:26
+msgid ""
+"QGIS Server must be installed on the same computer as Lizmap Web Client"
+msgstr ""
+"Сервер QGIS має бути встановлений на тому ж комп’ютері, що й Lizmap Web "
+"Client"
+
+#: ../../source/admin/lizmap-configuration.rst:28
+msgid ""
+"**WMS subdomain URLs list (optional)**: The use of multiple domain names is "
+"one of the classic optimizations when a web application uses OpenLayers (as "
+"Lizmap Web Client). You can enter a list of subdomains separated by comma."
+msgstr ""
+"**Список URL-адрес субдоменів WMS (необов’язково)**: використання кількох "
+"доменних імен є однією з класичних оптимізацій, коли веб-додаток "
+"використовує OpenLayers (як веб-клієнт Lizmap). Ви можете ввести список "
+"субдоменів, розділених комами."
+
+#: ../../source/admin/lizmap-configuration.rst:30
+msgid ""
+"You must use a **list of subdomains** relative to the domain with which is "
+"used Lizmap Web Client. For example, if your main domain name is "
+"**maps.example.com**, then you can use **a.maps.example.com, "
+"b.maps.example.com, c.maps.example.com, d.maps.example.com**."
+msgstr ""
+"Ви повинні використовувати **список субдоменів** щодо домену, з яким "
+"використовується веб-клієнт Lizmap. Наприклад, якщо ваше основне доменне "
+"ім’я **maps.example.com**, ви можете використовувати **a.maps.example.com, "
+"b.maps.example.com, c.maps.example.com, d .maps.example.com**."
+
+#: ../../source/admin/lizmap-configuration.rst:32
+msgid ""
+"Of course you must have configured the Apache/Nginx server *virtual host* to"
+" take into account these subdomains, for example with the variable:"
+msgstr ""
+"Звичайно, ви повинні налаштувати сервер Apache/Nginx *віртуальний хост*, щоб"
+" враховувати ці субдомени, наприклад, за допомогою змінної:"
+
+#: ../../source/admin/lizmap-configuration.rst:38
+msgid "**Server cache storage type**"
+msgstr "**Тип зберігання кешу сервера**"
+
+#: ../../source/admin/lizmap-configuration.rst:40
+msgid "*file*: Tiles cached are stored in a server directory by layer"
+msgstr "*файл*: кешовані плитки зберігаються в каталозі сервера за рівнем"
+
+#: ../../source/admin/lizmap-configuration.rst:41
+msgid "*sqlite*: The tiles are stored in a sqlite database by layer"
+msgstr "*sqlite*: плитки зберігаються в базі даних sqlite за шарами"
+
+#: ../../source/admin/lizmap-configuration.rst:42
+msgid "*redis*: the tiles are stored into a Redis database"
+msgstr "*redis*: плитки зберігаються в базі даних Redis"
+
+#: ../../source/admin/lizmap-configuration.rst:44
+msgid ""
+"**Cache root directory**: the folder where the cache is stored. It must be "
+"writable by the Apache/Nginx server."
+msgstr ""
+"**Корневий каталог кешу**: папка, в якій зберігається кеш. Він повинен бути "
+"доступним для запису на сервері Apache/Nginx."
+
+#: ../../source/admin/lizmap-configuration.rst:46
+msgid ""
+"**Server cache expiration time (s)**: the time in seconds during which each "
+"tile is retained. This is a default value for layers whose time has not been"
+" configured with the plugin."
+msgstr ""
+"**Час закінчення терміну дії кешу сервера (с)**: час у секундах, протягом "
+"якого зберігається кожна плитка. Це значення за замовчуванням для шарів, час"
+" яких не було налаштовано за допомогою плагіна."
+
+#: ../../source/admin/lizmap-configuration.rst:48
+msgid "The cached tiles older than that time are automatically refreshed."
+msgstr "Кешовані фрагменти, старіші за цей час, автоматично оновлюються."
+
+#: ../../source/admin/lizmap-configuration.rst:49
+msgid "A value of 0 means that the tiles do not expire."
+msgstr "Значення 0 означає, що термін дії плиток не закінчується"
+
+#: ../../source/admin/lizmap-configuration.rst:50
+msgid "The expiration time must be adapted to changing data."
+msgstr "Термін дії має бути адаптований до змінених даних."
+
+#: ../../source/admin/lizmap-configuration.rst:52
+msgid ""
+"**Send request to QGIS Server or external service with**: 2 methods *php* or"
+" *curl*. Use first if curl is not installed on the server."
+msgstr ""
+"**Надіслати запит на сервер QGIS або зовнішній сервіс за допомогою**: 2 "
+"методів *php* або *curl*. Використовуйте перший, якщо curl не встановлено на"
+" сервері."
+
+#: ../../source/admin/lizmap-configuration.rst:55
+msgid ""
+"**Debug mode**: saves some queries to a log file: "
+"*lizmap/var/log/messages.log*"
+msgstr ""
+"**Режим налагодження**: зберігає деякі запити до файлу журналу: "
+"*lizmap/var/log/messages.log*"
+
+#: ../../source/admin/lizmap-configuration.rst:57
+msgid ""
+"**Allow visitors to request an account**: If this option is enabled, a new "
+"link 'Registration' will be added in the public menu. By clicking on this "
+"link, the visitor displays a form that allows it to request an account to "
+"administrator. He must complete some fields (name, email, due to demand) "
+"then validates the form to send the request."
+msgstr ""
+"**Дозволити відвідувачам запитувати обліковий запис**: якщо цей параметр "
+"увімкнено, у загальнодоступне меню буде додано нове посилання «Реєстрація». "
+"Натиснувши на це посилання, відвідувач відображає форму, яка дозволяє йому "
+"запитати обліковий запис адміністратору. Він повинен заповнити деякі поля "
+"(ім’я, електронна адреса, у зв’язку з попитом), а потім підтвердить форму, "
+"щоб надіслати запит."
+
+#: ../../source/admin/lizmap-configuration.rst:59
+msgid ""
+"**Administrator e-mail**: If a valid e-mail address is given, then the "
+"Lizmap Web Client notifications will be sent. For example, each account "
+"creation request via the registration form generates an email sent to this "
+"address."
+msgstr ""
+"**Електронна пошта адміністратора**: якщо вказана дійсна адреса електронної "
+"пошти, буде надіслано сповіщення від веб-клієнта Lizmap. Наприклад, кожен "
+"запит на створення облікового запису через реєстраційну форму створює "
+"електронний лист, надісланий на цю адресу."
+
+#: ../../source/admin/lizmap-configuration.rst:63
+msgid ""
+"**sender e-mail** and **sender name**: when Lizmap sends an e-mail like "
+"notifications or for password reset, if needs the email address and the name"
+" of a sender."
+msgstr ""
+"**електронна пошта відправника** та **ім’я відправника**: коли Lizmap "
+"надсилає електронний лист, як-от сповіщення або для скидання пароля, якщо "
+"потрібна адреса електронної пошти та ім’я відправника."
+
+#: ../../source/admin/lizmap-configuration.rst:72
+msgid "proxy for External requests"
+msgstr "проксі для зовнішніх запитів"
+
+#: ../../source/admin/lizmap-configuration.rst:74
+msgid ""
+"Lizmap may need to access to some internet services. So, if it is installed "
+"behind a web proxy (typically in an intranet), you need to indicate what is "
+"the proxy."
+msgstr ""
+"Lizmap може знадобитися доступ до деяких інтернет-сервісів. Отже, якщо він "
+"встановлений за веб-проксі (зазвичай у інтранеті), вам потрібно вказати, що "
+"таке проксі-сервер."
+
+#: ../../source/admin/lizmap-configuration.rst:78
+msgid ""
+"You should check the checkbox \"Use a proxy server\" and fill these fields:"
+msgstr ""
+"Вам слід поставити прапорець «Використовувати проксі-сервер» і заповнити ці "
+"поля:"
+
+#: ../../source/admin/lizmap-configuration.rst:80
+msgid "**Host of the proxy server**: the address of the proxy"
+msgstr "**Хост проксі-сервера**: адреса проксі-сервера"
+
+#: ../../source/admin/lizmap-configuration.rst:81
+msgid "**Port of the proxy server**: the tcp port of the proxy"
+msgstr "**Порт проксі-сервера**: tcp-порт проксі-сервера"
+
+#: ../../source/admin/lizmap-configuration.rst:82
+msgid ""
+"**Type of the proxy**: the protocol used to access to the proxy: http or "
+"socks5. It is only supported when curl is used."
+msgstr ""
+"**Тип проксі**: протокол, який використовується для доступу до проксі: http "
+"або socks5. Він підтримується лише тоді, коли використовується curl."
+
+#: ../../source/admin/lizmap-configuration.rst:84
+msgid ""
+"**Login** and **password**: sometimes an authentication is needed to access "
+"to the proxy"
+msgstr ""
+"**Логін** та **пароль**: іноді для доступу до проксі потрібна аутентифікація"
+
+#: ../../source/admin/lizmap-configuration.rst:85
+msgid ""
+"**Domains for which the proxy will not be used**: there are some requests "
+"that should not go to the proxy, typically requests to your QGIS server, or "
+"requests to a local server that serves map backgrounds etc... You have at "
+"least to set it with \"localhost,127.0.0.1\"."
+msgstr ""
+"**Домени, для яких не буде використовуватися проксі-сервер**: є деякі "
+"запити, які не повинні надходити до проксі-сервера, як правило, запити до "
+"вашого сервера QGIS або запити до локального сервера, який обслуговує фони "
+"карти тощо... принаймні встановити його за допомогою "
+"\"localhost,127.0.0.1\"."
+
+#: ../../source/admin/lizmap-configuration.rst:92
+msgid "Repositories"
+msgstr "Репозиторії"
+
+#: ../../source/admin/lizmap-configuration.rst:94
+msgid "For each Lizmap repository, are listed:"
+msgstr "Для кожного репозиторію Lizmap наведено:"
+
+#: ../../source/admin/lizmap-configuration.rst:96
+msgid "**The main informations**: label and path"
+msgstr "**Основна інформація**: мітка та шлях"
+
+#: ../../source/admin/lizmap-configuration.rst:97
+msgid "**The list of rights** with the groups concerned"
+msgstr "**Список прав** із зацікавленими групами"
+
+#: ../../source/admin/lizmap-configuration.rst:98
+msgid "**Action buttons**:"
+msgstr "**Кнопки дій**:"
+
+#: ../../source/admin/lizmap-configuration.rst:100
+msgid "*View*: displays a page that lists the maps in this repository"
+msgstr "*Перегляд*: відображає сторінку зі списком карт у цьому сховищі"
+
+#: ../../source/admin/lizmap-configuration.rst:101
+msgid "*Modify*: displays the repository modification form"
+msgstr "*Змінити*: відображає форму модифікації репозиторію"
+
+#: ../../source/admin/lizmap-configuration.rst:102
+msgid ""
+"*Remove*: delete the repository from the Lizmap Web Client configuration"
+msgstr "*Видалити*: видалити репозиторій із конфігурації веб-клієнта Lizmap"
+
+#: ../../source/admin/lizmap-configuration.rst:103
+msgid ""
+"*Empty cache*: deletes the entire cache of all layers of the repository "
+"projects"
+msgstr "*Порожній кеш*: видаляє весь кеш усіх шарів проектів репозиторію"
+
+#: ../../source/admin/lizmap-configuration.rst:108
+msgid ""
+"You can create a new repository using the button **Create a repository** "
+"located at the top and bottom of the section *Repositories*."
+msgstr ""
+"Ви можете створити нове сховище за допомогою кнопки **Створити "
+"репозиторій**, розташованої у верхній і нижній частині розділу "
+"*Репозиторії*."
+
+#: ../../source/admin/lizmap-configuration.rst:111
+msgid "Add a repository"
+msgstr "Додати репозиторій"
+
+#: ../../source/admin/lizmap-configuration.rst:113
+msgid "To create a repository, you must give:"
+msgstr "Щоб створити репозиторій, ви повинні надати:"
+
+#: ../../source/admin/lizmap-configuration.rst:115
+msgid "**an id**: a word without spaces, accents or special characters"
+msgstr ""
+"**ідентифікатор**: слово без пробілів, наголосів або спеціальних символів"
+
+#: ../../source/admin/lizmap-configuration.rst:116
+msgid ""
+"**a label**: the name that will be displayed for this repository, accents "
+"and spaces allowed"
+msgstr ""
+"**мітка**: назва, яка буде відображатися для цього сховища, дозволені "
+"акценти та пробіли"
+
+#: ../../source/admin/lizmap-configuration.rst:117
+msgid ""
+"**a local folder path**: the full path on the server to the folder that "
+"contains the QGIS projects and data"
+msgstr ""
+"**шлях локальної папки**: повний шлях на сервері до папки, яка містить "
+"проекти та дані QGIS"
+
+#: ../../source/admin/lizmap-configuration.rst:118
+msgid ""
+"**Allow repository themes**: This option enables the possibility for the "
+"publisher to set a theme for the repository and themes for each map. See "
+":ref:`creating-simple-themes`."
+msgstr ""
+"**Дозволити теми сховища**: ця опція дає змогу видавцеві встановити тему для"
+" сховища та теми для кожної карти. Дивіться :ref:`creating-simple-themes`."
+
+#: ../../source/admin/lizmap-configuration.rst:123
+msgid "Define the rights for each group"
+msgstr "Визначте права для кожної групи"
+
+#: ../../source/admin/lizmap-configuration.rst:125
+msgid ""
+"After creating the directory, the repository modification form is displayed "
+"automatically and defines the following rights for each group:"
+msgstr ""
+"Після створення каталогу автоматично відображається форма модифікації "
+"сховища та визначає такі права для кожної групи:"
+
+#: ../../source/admin/lizmap-configuration.rst:127
+msgid "**View repository** :"
+msgstr "**Переглянути сховище** :"
+
+#: ../../source/admin/lizmap-configuration.rst:129
+msgid "all users of checked groups can access maps of this repository"
+msgstr "всі користувачі позначених груп мають доступ до карт цього сховища"
+
+#: ../../source/admin/lizmap-configuration.rst:130
+msgid ""
+"the group *anonymous* is unregistered users and allows to make public maps"
+msgstr ""
+"група *аноніми* є незареєстрованими користувачами і дозволяє робити "
+"загальнодоступні карти"
+
+#: ../../source/admin/lizmap-configuration.rst:132
+msgid "**Use the Edition tool**"
+msgstr "**Використовуйте інструмент Редагування**"
+
+#: ../../source/admin/lizmap-configuration.rst:134
+msgid ""
+"When this option is checked, the group users have access to the editing tool"
+" for all of Lizmap repository maps for which the edition was configured."
+msgstr ""
+"Якщо цей параметр позначено, користувачі групи мають доступ до інструменту "
+"редагування для всіх карт репозиторію Lizmap, для яких було налаштовано "
+"видання."
+
+#: ../../source/admin/lizmap-configuration.rst:136
+msgid "**Always see complete layers data, even if filtered by login**"
+msgstr ""
+"**Завжди переглядати повні дані шарів, навіть якщо їх відфільтровано за "
+"логіном**"
+
+#: ../../source/admin/lizmap-configuration.rst:138
+msgid ""
+"This option is in connection with the filtering feature data layers per "
+"group. See :ref:`filtered-layer-by-user`. Check the box for deciding which "
+"groups can see all the time all the data, even when a filter is active on "
+"some layers."
+msgstr ""
+"Ця опція пов’язана з фільтрацією шарів даних елементів на групу. Дивіться "
+":ref:`filtered-layer-by-user`. Установіть прапорець, щоб визначити, які "
+"групи можуть бачити всі дані весь час, навіть якщо на деяких шарах активний "
+"фільтр."
+
+#: ../../source/admin/logs.rst:3
+msgid "Log management in Lizmap"
+msgstr "Керування журналами в Lizmap"
+
+#: ../../source/admin/logs.rst:9
+msgid "Principle and description"
+msgstr "Принцип і опис"
+
+#: ../../source/admin/logs.rst:11
+msgid ""
+"Since version 2.8, you can configure *Lizmap Web Client* so that certain "
+"user actions are stored in a SQLite database:"
+msgstr ""
+"Починаючи з версії 2.8, ви можете налаштувати *Lizmap Web Client* так, щоб "
+"певні дії користувача зберігалися в базі даних SQLite:"
+
+#: ../../source/admin/logs.rst:13
+msgid "User Login"
+msgstr "Користувацький логін"
+
+#: ../../source/admin/logs.rst:14
+msgid "Displaying a Lizmap map"
+msgstr "Відображення карти Lizmap"
+
+#: ../../source/admin/logs.rst:15
+msgid "Printing a map"
+msgstr "Друк карти"
+
+#: ../../source/admin/logs.rst:16
+msgid "Displaying a popup"
+msgstr "Відображення спливаючого вікна"
+
+#: ../../source/admin/logs.rst:17
+msgid "Using the editing tool"
+msgstr "Використання інструменту редагування"
+
+#: ../../source/admin/logs.rst:19
+msgid "For each of these actions can be chosen:"
+msgstr "Для кожної з цих дій можна вибрати:"
+
+#: ../../source/admin/logs.rst:21
+msgid ""
+"to record a new line in the logs containing various information: user, date "
+"and time, action, Lizmap repository, QGIS project, IP address"
+msgstr ""
+"записувати новий рядок у журнали, що містять різну інформацію: користувача, "
+"дату та час, дію, репозиторій Lizmap, проект QGIS, IP-адресу"
+
+#: ../../source/admin/logs.rst:22
+msgid ""
+"to increment the counter for this action, the Lizmap repository and QGIS "
+"project."
+msgstr ""
+"щоб збільшити лічильник для цієї дії, репозиторій Lizmap і проект QGIS."
+
+#: ../../source/admin/logs.rst:25
+msgid "Configure logs"
+msgstr "Налаштувати журнали"
+
+#: ../../source/admin/logs.rst:27
+msgid ""
+"For now, it is not possible to change the configuration of logs in the "
+"administration interface. It is necessary to manually edit the configuration"
+" file **lizmap/var/config/lizmapLogConfig.ini.php**. This file is in *ini* "
+"format and contains many sections as action to save. For each action, you "
+"can choose to activate with *on* or off with *off* the recording of the log."
+msgstr ""
+"Наразі неможливо змінити конфігурацію журналів в інтерфейсі адміністрування."
+" Необхідно вручну відредагувати файл конфігурації "
+"**lizmap/var/config/lizmapLogConfig.ini.php**. Цей файл у форматі *ini* і "
+"містить багато розділів для збереження. Для кожної дії ви можете активувати "
+"за допомогою *увімкнено* або вимкнути за допомогою *вимкнення* запис "
+"журналу."
+
+#: ../../source/admin/logs.rst:29
+msgid ""
+"For example, the following section shows that the administrator has chosen "
+"to record a count in the logs every time a user connects. But he does not "
+"want to save the details for each connection."
+msgstr ""
+"Наприклад, у наступному розділі показано, що адміністратор вирішив "
+"записувати кількість у журналах кожного разу, коли користувач підключається."
+" Але він не хоче зберігати деталі для кожного підключення."
+
+#: ../../source/admin/logs.rst:40
+msgid "View logs"
+msgstr "Переглянути журнали"
+
+#: ../../source/admin/logs.rst:42
+msgid ""
+"To view logs, simply connect to the Lizmap administration interface as an "
+"administrator. Then the logs can be accessed through the menu **Lizmap "
+"Logs**. This page shows the general statistics on the 2 log tables: *Log "
+"count* and *Log detail*. For each, it is possible to:"
+msgstr ""
+"Щоб переглянути журнали, просто підключіться до інтерфейсу адміністрування "
+"Lizmap як адміністратор. Потім до журналів можна отримати доступ через меню "
+"**Журнали Lizmap**. На цій сторінці показано загальну статистику для 2 "
+"таблиць журналів: *Кількість журналів* та *Деталі журналу*. Для кожного "
+"можна:"
+
+#: ../../source/admin/logs.rst:44
+msgid "**View Tables** containing the raw data"
+msgstr "**Перегляд таблиць**, що містять вихідні дані"
+
+#: ../../source/admin/logs.rst:45
+msgid "**Completely empty logs**: completly reset!"
+msgstr "**Повністю порожні журнали**: повністю скинути!"
+
+#: ../../source/admin/logs.rst:48
+msgid "Log storage file"
+msgstr "Файл зберігання журналів"
+
+#: ../../source/admin/logs.rst:50
+msgid ""
+"The log database is located here in relation to the installation directory: "
+"**lizmap/var/logs.db**. For example:"
+msgstr ""
+"База даних журналів розташована тут по відношенню до каталогу встановлення: "
+"**lizmap/var/logs.db**. Наприклад:"
+
+#: ../../source/admin/logs.rst:57
+msgid ""
+"This database can be accessed with a Sqlite database reading tool, like "
+"*SQLite Browser* or the Firefox add-on *SQlite Manager*. If you know SQL, so"
+" you can make queries to extract information from the detailed logs."
+msgstr ""
+"До цієї бази даних можна отримати доступ за допомогою інструмента для "
+"читання бази даних Sqlite, наприклад *SQLite Browser* або доповнення Firefox"
+" *SQlite Manager*. Якщо ви знаєте SQL, ви можете робити запити для вилучення"
+" інформації з докладних журналів."
+
+#: ../../source/admin/presentation.rst:3
+msgid "Overview of the administration interface"
+msgstr "Огляд інтерфейсу адміністрування"
+
+#: ../../source/admin/presentation.rst:9
+msgid "Access the administration interface"
+msgstr "Доступ до інтерфейсу адміністрування"
+
+#: ../../source/admin/presentation.rst:11
+msgid ""
+"For safety reasons, no link leads to the administration interface. The "
+"address is:"
+msgstr ""
+"З міркувань безпеки жодне посилання не веде до інтерфейсу адміністрування. "
+"Адреса:"
+
+#: ../../source/admin/presentation.rst:13
+msgid "http://mydomain.lizmap.3liz.com/admin.php"
+msgstr "http://mydomain.lizmap.3liz.com/admin.php"
+
+#: ../../source/admin/presentation.rst:15
+msgid "Temporary identifiers"
+msgstr "Тимчасові ідентифікатори"
+
+#: ../../source/admin/presentation.rst:17
+msgid "login = admin"
+msgstr "логін = admin"
+
+#: ../../source/admin/presentation.rst:18
+msgid "password = admin"
+msgstr "пароль = admin"
+
+#: ../../source/admin/presentation.rst:24
+msgid "Change password"
+msgstr "Змінити пароль"
+
+#: ../../source/admin/presentation.rst:26
+msgid "Once connected, it is possible to change the password:"
+msgstr "Після підключення можна змінити пароль:"
+
+#: ../../source/admin/presentation.rst:28
+msgid "Click on your login at the top right menu and then *Your account*"
+msgstr ""
+"Натисніть свій логін у верхньому правому меню, а потім *Ваш обліковий запис*"
+
+#: ../../source/admin/presentation.rst:29
+msgid "Click on the button *Change your password*"
+msgstr "Натисніть на кнопку *Змінити пароль*"
+
+#: ../../source/admin/presentation.rst:30
+msgid "Type the new password, confirme it and save"
+msgstr "Введіть новий пароль, підтвердьте його та збережіть"
+
+#: ../../source/admin/presentation.rst:32
+msgid ""
+"It is imperative to change your password. Use a complex password that mixes "
+"numbers, letters and punctuation."
+msgstr ""
+"Необхідно змінити пароль. Використовуйте складний пароль, який поєднує "
+"цифри, літери та розділові знаки."
+
+#: ../../source/admin/presentation.rst:36
+msgid "Reminder on Lizmap Web Client repositories"
+msgstr "Нагадування про сховища Lizmap Web Client"
+
+#: ../../source/admin/presentation.rst:38
+msgid ""
+"Lizmap Web Client can use QGIS maps stored in different folders on the "
+"server."
+msgstr ""
+"Веб-клієнт Lizmap може використовувати карти QGIS, що зберігаються в різних "
+"папках на сервері."
+
+#: ../../source/admin/presentation.rst:40
+msgid ""
+"A *Lizmap Web CLient repository* is a folder on the server that stores one "
+"or more QGIS projects and their related data."
+msgstr ""
+"*Сховище веб-клієнта Lizmap* — це папка на сервері, яка зберігає один або "
+"кілька проектів QGIS та пов’язані з ними дані."
+
+#: ../../source/admin/presentation.rst:41
+msgid "Repositories can be used to *group related projects by theme*."
+msgstr ""
+"Сховища можна використовувати для *групування пов’язаних проектів за "
+"темами*."
+
+#: ../../source/admin/presentation.rst:42
+msgid "Repositories can be used to *manage the access rights on maps*."
+msgstr ""
+"Сховища можна використовувати для *керування правами доступу до карт*."
+
+#: ../../source/admin/users-groups.rst:3
+msgid "Manage groups and users in Lizmap Web Client"
+msgstr "Керуйте групами та користувачами у веб-клієнті Lizmap"
+
+#: ../../source/admin/users-groups.rst:9
+msgid "The groups and users: principles"
+msgstr "Групи та користувачі: принципи"
+
+#: ../../source/admin/users-groups.rst:11
+msgid "As an administrator, you can:"
+msgstr "Як адміністратор, ви можете:"
+
+#: ../../source/admin/users-groups.rst:13
+msgid "create, rename, delete user groups"
+msgstr "створювати, перейменовувати, видаляти групи користувачів"
+
+#: ../../source/admin/users-groups.rst:14
+msgid "create, modify, delete users"
+msgstr "створювати, змінювати, видаляти користувачів"
+
+#: ../../source/admin/users-groups.rst:15
+msgid "linking a user to one or more groups"
+msgstr "прив’язування користувача до однієї або кількох груп"
+
+#: ../../source/admin/users-groups.rst:17
+msgid ""
+"Rights on Lizmap Web Client repositories are managed at group level, not at "
+"the user level."
+msgstr ""
+"Права на репозиторії Lizmap Web Client керуються на рівні групи, а не на "
+"рівні користувача."
+
+#: ../../source/admin/users-groups.rst:20
+msgid "Manage Groups: create, rename, delete"
+msgstr "Керувати групами: створювати, перейменовувати, видаляти"
+
+#: ../../source/admin/users-groups.rst:22
+msgid ""
+"*Create a group*: In the left menu click on *Groups of users for rights* and"
+" scroll down to *Create a group*."
+msgstr ""
+"*Створити групу*: у лівому меню клацніть на *Групи користувачів для прав* і "
+"прокрутіть униз до *Створити групу*."
+
+#: ../../source/admin/users-groups.rst:23
+msgid "Define the *label*: it is possible to use spaces and accents"
+msgstr "Визначте *мітку*: можна використовувати пробіли та акценти"
+
+#: ../../source/admin/users-groups.rst:24
+msgid "Define the *ident*: one word without special characters"
+msgstr "Визначте *ідентифікатор*: одне слово без спеціальних символів"
+
+#: ../../source/admin/users-groups.rst:26
+msgid ""
+"In the page *Groups of users for rights*, it is also possible to *Change the"
+" name* and *Delete a group*."
+msgstr ""
+"На сторінці *Групи користувачів для прав* також можна *Змінити ім'я* та "
+"*Видалити групу*."
+
+#: ../../source/admin/users-groups.rst:31
+msgid ""
+"The **users** group is a group system to give the rights to authenticated "
+"users to edit their own user information including passwords. We excluded "
+"this group of Lizmap Web Client configuration because all identified users "
+"must be part of this group."
+msgstr ""
+"Група **користувачі** — це групова система, яка надає права автентифікованим"
+" користувачам редагувати власну інформацію користувача, включаючи паролі. Ми"
+" виключили цю групу конфігурації веб-клієнта Lizmap, оскільки всі "
+"ідентифіковані користувачі мають бути частиною цієї групи."
+
+#: ../../source/admin/users-groups.rst:34
+msgid "Manage Users"
+msgstr "Керування користувачами"
+
+#: ../../source/admin/users-groups.rst:36
+msgid ""
+"*Create a user* : In the left menu click on *Users* and click on the button "
+"*Create a new user*:"
+msgstr ""
+"*Створити користувача*: У лівому меню клацніть на *Користувачі* і натисніть "
+"кнопку *Створити нового користувача*:"
+
+#: ../../source/admin/users-groups.rst:38
+msgid "give a *Nickname* which will be used for the login"
+msgstr "дайте *Нікнейм*, який буде використовуватися для входу"
+
+#: ../../source/admin/users-groups.rst:39
+msgid "give an email"
+msgstr "дати електронний лист"
+
+#: ../../source/admin/users-groups.rst:40
+msgid "set name and firstname"
+msgstr "встановити ім'я та прізвище"
+
+#: ../../source/admin/users-groups.rst:42
+msgid ""
+"The user will have an email for setting up his password. If you want to set "
+"the password yourself, read the section below."
+msgstr ""
+"Користувач отримає електронний лист для встановлення свого пароля. Якщо ви "
+"хочете встановити пароль самостійно, прочитайте розділ нижче."
+
+#: ../../source/admin/users-groups.rst:43
+msgid "It is also possible to *view* and *edit* informations about users."
+msgstr ""
+"Також можна *переглядати* та *редагувати* інформацію про користувачів."
+
+#: ../../source/admin/users-groups.rst:45
+msgid ""
+"Once users created, you must put them into groups to assign the associated "
+"rights."
+msgstr ""
+"Після створення користувачів ви повинні об’єднати їх у групи, щоб призначити"
+" пов’язані права."
+
+#: ../../source/admin/users-groups.rst:51
+msgid "Setting password for users"
+msgstr "Встановлення пароля для користувачів"
+
+#: ../../source/admin/users-groups.rst:53
+msgid ""
+"By default, in Lizmap, when a new user is created, the user will get an "
+"email for setting up his own password. If for some reasons, the "
+"administrator needs to setup the password, the :file:`localconfig.ini.php` "
+"needs to be edited:"
+msgstr ""
+"За замовчуванням у Lizmap, коли створюється новий користувач, користувач "
+"отримує електронний лист для встановлення власного пароля. Якщо з якихось "
+"причин адміністратору потрібно встановити пароль, "
+":file:`localconfig.ini.php` потрібно відредагувати:"
+
+#: ../../source/admin/users-groups.rst:62
+msgid "Putting users in groups"
+msgstr "Об’єднання користувачів у групи"
+
+#: ../../source/admin/users-groups.rst:64
+msgid "In the left menu click on *Rights of users*"
+msgstr "У лівому меню натисніть на *Права користувачів*"
+
+#: ../../source/admin/users-groups.rst:65
+msgid "it is possible to filter the visible users with the dropdown menu"
+msgstr "можна відфільтрувати видимих користувачів за допомогою спадного меню"
+
+#: ../../source/admin/users-groups.rst:66
+msgid "to put a user in groups, click on the its button *rights*"
+msgstr "щоб помістити користувача в групи, натисніть його кнопку *права*"
+
+#: ../../source/admin/users-groups.rst:68
+msgid "The page displays a table with *rights online and groups on column*"
+msgstr ""
+"На сторінці відображається таблиця з *правами онлайн та групами в стовпці*"
+
+#: ../../source/admin/users-groups.rst:69
+msgid "The last column shows *the resulting rights*"
+msgstr "Останній стовпець показує *отримані права*"
+
+#: ../../source/admin/users-groups.rst:70
+msgid ""
+"In the *head row*, the + and - buttons allow to set / remove the user from a"
+" group"
+msgstr ""
+"У рядку *голова* кнопки + і - дозволяють встановити або видалити користувача"
+" з групи"
+
+#: ../../source/admin/users-groups.rst:72
+msgid "Do not use the *Personal rights* column."
+msgstr "Не використовуйте стовпець *Особисті права*."
+
+#: ../../source/admin/users-groups.rst:75
+msgid "Assigning groups for each user created"
+msgstr "Призначення груп для кожного створеного користувача"

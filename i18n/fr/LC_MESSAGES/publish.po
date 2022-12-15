@@ -7,25 +7,53 @@
 # rldhont <rldhont@gmail.com>, 2020
 # Michael Douchin <kimaidou@gmail.com>, 2021
 # Arnaud HANRY <arnaud.hanry@le64.fr>, 2021
-# Laurent Jouanneau <dev@ljouanneau.com>, 2021
 # Marjorie FANGAIN, 2022
-# Nicolas Boisteault <nboisteault@gmail.com>, 2022
 # etrimaille <gustrimaille@yahoo.fr>, 2022
+# Nicolas Boisteault <nboisteault@gmail.com>, 2022
+# Laurent Jouanneau <dev@ljouanneau.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-13 10:28+0000\n"
+"POT-Creation-Date: 2022-12-15 14:32+0100\n"
 "PO-Revision-Date: 2018-09-07 13:32+0000\n"
-"Last-Translator: etrimaille <gustrimaille@yahoo.fr>, 2022\n"
+"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../source/substitutions.rst:7
+msgid "add_layer_svg"
+msgstr "add_layer_svg"
+
+#: ../../source/substitutions.rst:8
+msgid "edit_layer_svg"
+msgstr "edit_layer_svg"
+
+#: ../../source/substitutions.rst:9
+msgid "remove_layer_svg"
+msgstr "remove_layer_svg"
+
+#: ../../source/substitutions.rst:10
+msgid "down_layer_svg"
+msgstr "down_layer_svg"
+
+#: ../../source/substitutions.rst:11
+msgid "up_layer_svg"
+msgstr "up_layer_svg"
+
+#: ../../source/substitutions.rst:12
+msgid "refresh_svg"
+msgstr "refresh_svg"
+
+#: ../../source/substitutions.rst:13
+msgid "properties_svg"
+msgstr "properties_svg"
 
 #: ../../source/publish/configuration/actions.rst:4
 msgid "Actions"
@@ -153,10 +181,6 @@ msgid ""
 "enabled for the layer. See :ref:`attribute_table`"
 msgstr ""
 
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
 #: ../../source/shared/wfs_layer.rst:1
 msgid ""
 "The layer must be published as WFS (see :ref:`publish_layer_wfs`) and the "
@@ -192,6 +216,9 @@ msgid ""
 " an ``icon``, some optional ``options``, ``style``, ``callbacks`` and "
 "``confirm`` property can be used."
 msgstr ""
+"Chaque action est **caractérisée** par un ``layer_id``, un ``name``, un "
+"``title``, une ``icon``, quelques ``options`` facultatives, ``style``, "
+"``callbacks`` et ``confirm`` peut être utilisées."
 
 #: ../../source/publish/configuration/actions.rst:45
 msgid "A layer can have **one or several actions**"
@@ -1472,11 +1499,6 @@ msgstr ""
 
 #: ../../source/publish/configuration/media.rst:153
 #: ../../source/publish/configuration/popup.rst:67
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "id"
 msgstr "id"
@@ -2959,6 +2981,9 @@ msgid ""
 "properties --> Display --> HTML Map Tip`. The main advantages of this "
 "approach are:"
 msgstr ""
+"Les popups *QGIS* peuvent être configurées via `QGIS --> Propriétés de la "
+"couche --> Infobulles --> HTML`. Les principaux avantages de cette approche "
+"sont :"
 
 #: ../../source/publish/configuration/popup.rst:232
 msgid "HTML is used"
@@ -3010,10 +3035,10 @@ msgstr ""
 #: ../../source/publish/configuration/popup.rst:243
 msgid ""
 "To display some color with HTML according to the value of a field, you can "
-"use this QGIS expression :"
+"use this QGIS expression above :"
 msgstr ""
 "Pour afficher une couleur en HTML en fonction de la valeur d'un champ, vous "
-"pouvez utiliser cette expression QGIS :"
+"pouvez utiliser l'expression QGIS ci-dessus :"
 
 #: ../../source/publish/configuration/popup.rst:250
 msgid "Link to a PDF QGIS layout"
@@ -3082,6 +3107,9 @@ msgid ""
 "path. Theses paths must refer to a project media subdirectory, for example: "
 "`media/photos/feature_1_a.jpg`"
 msgstr ""
+"Ajouter des données aux couches. Vous devez utiliser un chemin relatif pour "
+"stocker le chemin des images. Ces chemins doivent faire référence à un sous-"
+"répertoire media du projet, par exemple : `media/photos/feature_1_a.jpg`"
 
 #: ../../source/publish/configuration/popup.rst:276
 msgid "In Lizmap plugin:"
@@ -3092,12 +3120,17 @@ msgid ""
 "In the :guilabel:`Layers` tab, activate popup for both layers. You can "
 "configure source of the popup if you need specific layouts"
 msgstr ""
+"Dans l'onglet :guilabel:`Couches`, activez la popup pour les deux couches. "
+"Vous pouvez configurer la popup si vous avez besoin de mises en page "
+"spécifiques."
 
 #: ../../source/publish/configuration/popup.rst:279
 msgid ""
 "For the parent layer, activate the option :guilabel:`Display relative "
 "children under each object (use relations)`"
 msgstr ""
+"Pour la couche parente, activez l'option \"Afficher les enfants relatifs "
+"sous chaque objet (utiliser les relations)\""
 
 #: ../../source/publish/configuration/popup.rst:280
 msgid ""
@@ -3180,6 +3213,11 @@ msgid ""
 "<https://docs.qgis.org/latest/en/docs/user_manual/print_composer/index.html>`_"
 " without atlas enabled."
 msgstr ""
+"Pour proposer l’impression sur la carte en ligne, il faut avoir activer "
+"l'outil d'impression dans l'onglet *Carte* du plugin (:ref:`lizmap-config-"
+"map`) et que le projet QGIS possède au moins `un composeur d'impression "
+"<https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/index.html>`_"
+" sans \"atlas\" activé."
 
 #: ../../source/publish/configuration/print.rst:16
 msgid "Creating the layout"
@@ -3230,6 +3268,8 @@ msgid ""
 "A location map, a map for which you have enabled and configured the function"
 " of *Overview*, read :ref:`overview-map`"
 msgstr ""
+"une carte de localisation soit une carte pour laquelle vous aurez activé et "
+"configuré la fonction d'*Aperçu*. Lisez :ref:`overview-map`"
 
 #: ../../source/publish/configuration/print.rst:29
 msgid ""
@@ -3239,6 +3279,11 @@ msgid ""
 "https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#id4"
 " on the QGIS Documentation."
 msgstr ""
+"Depuis QGIS 3, vous pouvez utiliser des expressions QGIS, dans vos labels "
+"par exemple. Vous pouvez créer un label automatique selon les couches "
+"visibles en suivant l'exemple :  "
+"https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/composer_items/composer_label.html#id4"
+" "
 
 #: ../../source/publish/configuration/print.rst:32
 msgid "Dynamic content"
@@ -3757,6 +3802,10 @@ msgid ""
 "the tool as simple as possible and avoid the need to create FTS \"vectors\" "
 "in your search data."
 msgstr ""
+"Nous avons choisi d'utiliser l'extension pg_trgm et sa fonction habituelle "
+"f_unaccent plutôt que l'outil de PostgreSQL de recherche plein texte (FTS), "
+"pour garder l'outil aussi simple que possible et éviter de devoir créer des "
+"vecteurs FTS pour votre recherche de données."
 
 #: ../../source/publish/configuration/spatial_search.rst:49
 msgid "Create the lizmap_search table or view"
@@ -3769,6 +3818,11 @@ msgid ""
 "(you can put it in the public schema, or configure the ``search_path`` "
 "variable for the database or the user which connects to the database)."
 msgstr ""
+"L'administrateur de la base de données doit créer une table, vue ou vue "
+"matérialisée nommée \"lizmap_search\". Cette relation doit être accessible "
+"dans le search_path (vous pouvez la mettre dans le schéma public, ou "
+"configurer la variable search_path pour la base de données ou l'utilisateur "
+"qui se connecte à la base de données)."
 
 #: ../../source/publish/configuration/spatial_search.rst:55
 msgid "The relation ``lizmap_search`` must contain the following columns:"
@@ -3776,7 +3830,7 @@ msgstr "La relation ``lizmap_search`` doit contenir les colonnes suivantes :"
 
 #: ../../source/publish/configuration/spatial_search.rst:57
 msgid "``item_layer`` (text). Name of the layer. For example \"Countries\""
-msgstr ""
+msgstr "\"item_layer\" (texte). Nom de la couche. Par exemple, \"Pays\""
 
 #: ../../source/publish/configuration/spatial_search.rst:58
 msgid ""
@@ -4027,7 +4081,7 @@ msgstr ""
 "Cette section montre comment personnaliser Lizmap avec quelques lignes de "
 "code."
 
-#: ../../source/publish/customization/javascript.rst:1
+#: ../../source/publish/customization/javascript.rst-1
 msgid "js,script,javascript,code"
 msgstr "js,script,javascript,code"
 
@@ -4192,7 +4246,6 @@ msgid "Event name"
 msgstr "Nom de l'évènement"
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "Description"
 msgstr "Description"
 
@@ -4316,10 +4369,6 @@ msgid "Fired when a layer style has been changed"
 msgstr "Déclenché quand le style d'une couche a été changé"
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType"
 msgstr "featureType"
 
@@ -4399,7 +4448,6 @@ msgid "Fired when a layer feature has been created with the edition tool"
 msgstr ""
 "Déclenché quand une entité de couche a été créée avec l'outil d'édition"
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "layerId"
 msgstr "layerId"
@@ -4518,7 +4566,6 @@ msgstr ""
 "tables attributaires."
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | featureIds | updateDrawing"
 msgstr "featureType | featureIds | updateDrawing"
 
@@ -4580,7 +4627,6 @@ msgstr ""
 "être filtrées visuellement par l'utilisateur en entrant du texte dans le "
 "champs de saisie de recherche."
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | updateDrawing"
 msgstr "featureType | updateDrawing"
@@ -5026,11 +5072,7 @@ msgstr "Au niveau de la couche"
 msgid "For setting a atlas layer:"
 msgstr "Pour paramétrer un atlas sur une couche:"
 
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
+#: ../../source/shared/add_layer.rst:1
 msgid "Click the |add_layer_svg| button."
 msgstr "Cliquer sur le bouton |add_layer_svg|."
 
@@ -5097,11 +5139,7 @@ msgstr ""
 msgid "you can select the duration between each step"
 msgstr "vous pouvez sélectionner la durée entre chaque étape"
 
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
+#: ../../source/shared/edit_layer.rst:1
 msgid ""
 "To edit a layer in the table, select it and click the |edit_layer_svg| "
 "button or double click on the row."
@@ -5110,15 +5148,6 @@ msgstr ""
 "bouton |edit_layer_svg| ou alors double-cliquer sur la ligne."
 
 #: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
 msgid ""
 "To remove a layer from the table, select it and click the |remove_layer_svg|"
 " button."
@@ -5126,12 +5155,6 @@ msgstr ""
 "Pour supprimer une couche de la table, cliquez sur celle-ci puis sur le "
 "bouton |remove_layer_svg|."
 
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
 #: ../../source/shared/move_up_down_layer.rst:1
 msgid ""
 "To move a layer up or down, select it and click |down_layer_svg| or "
@@ -5299,8 +5322,7 @@ msgstr ""
 "Laissez la coche :guilabel:`Masquer la couche dans la liste` décoché. C'est "
 "pour la relation."
 
-#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
-#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
+#: ../../source/shared/field_alias.rst:1
 msgid ""
 "Fields will be displayed with their alias if it's defined. See "
 ":ref:`alias_on_fields`."
@@ -5613,6 +5635,8 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/basemap.rst:60
 msgid "Scan: the background map mixing the various IGN scan, API key needed"
 msgstr ""
+"Scan : le fond de carte mixant les différents scan de l'IGN, clé API "
+"nécessaire"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:61
 msgid "Cadastre"
@@ -5624,7 +5648,7 @@ msgstr "Les licences d'utilisation sont disponibles aux adresses suivantes :"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:65
 msgid "*OpenStreetMap*: https://operations.osmfoundation.org/policies/tiles/"
-msgstr ""
+msgstr "*OpenStreetMap*: https://operations.osmfoundation.org/policies/tiles/"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:66
 msgid "*Google*: https://cloud.google.com/maps-platform/terms/"
@@ -5853,6 +5877,12 @@ msgstr ""
 msgid "**Aggregation**"
 msgstr "**Aggrégation**"
 
+#: ../../source/publish/lizmap_plugin/dataviz.rst-1
+msgid ""
+"For a few types of charts like bar or pie, you can chose to aggregate the "
+"data in"
+msgstr ""
+
 #: ../../source/publish/lizmap_plugin/dataviz.rst:67
 msgid ""
 "the graph. There are a few aggregate functions available - average(avg), "
@@ -5877,8 +5907,12 @@ msgstr "Selon le type de graphique, il existe maintenant différentes options."
 msgid ""
 "**Layout** : The layout can be customized. It must be a JSON dictionary. You"
 " can read the documentation of Plotly documentation about the layout "
-"configuration https://plotly.com/javascript/reference/layout/"
+"configuration https://plotly.com/javascript/reference/#layout"
 msgstr ""
+"**Mise en page** : La mise en page peut être personnalisée. Il doit s'agir "
+"d'un dictionnaire JSON. Vous pouvez lire la documentation de la "
+"documentation Plotly sur la configuration de la mise en page "
+"https://plotly.com/javascript/reference/#layout"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:72
 msgid ""
@@ -5952,8 +5986,11 @@ msgstr "Mise en page JSON"
 msgid ""
 "The layout option, allows you to configure many options by writing up a JSON"
 " object. See the full reference: "
-"https://plotly.com/javascript/reference/layout/"
+"https://plotly.com/javascript/reference/#layout"
 msgstr ""
+"L'option de mise en page, vous permet de configurer de nombreuses options en"
+" écrivant un objet JSON. Voir la référence complète : "
+"https://plotly.com/javascript/reference/#layout"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:126
 msgid ""
@@ -6064,6 +6101,10 @@ msgid ""
 " allows you to add one or more layers and choose what actions for each will "
 "be possible in the web interface:"
 msgstr ""
+"Il est possible d'autoriser des utilisateurs à **éditer des données "
+"spatiales et attributaires** depuis Lizmap Web Client pour les couches "
+"**PostgreSQL**. Le plugin Lizmap vous permet d'ajouter une ou plusieurs "
+"couches et de choisir quelles actions seront permises dans l'interface web :"
 
 #: ../../source/publish/lizmap_plugin/edition.rst:17
 msgid "creating elements"
@@ -6605,6 +6646,8 @@ msgstr ""
 msgid ""
 "drop-down lists of *Editing forms* from *Value relation*. See :ref:`edition`"
 msgstr ""
+"les listes déroulantes des *formulaires d'édition* issues de *Valeur "
+"relationnelle*. Voir :ref:`edition`"
 
 #: ../../source/publish/lizmap_plugin/filtered_layers_login.rst:23
 msgid "the attribute table display etc"

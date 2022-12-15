@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-13 10:28+0000\n"
+"POT-Creation-Date: 2022-12-15 14:32+0100\n"
 "PO-Revision-Date: 2018-09-07 13:31+0000\n"
 "Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
@@ -401,11 +401,7 @@ msgstr ""
 "La première chose à faire est d'installer l'extension ldap pour PHP sur "
 "votre serveur linux :"
 
-#: ../../source/install/ldap.rst:13
-msgid "or"
-msgstr "ou"
-
-#: ../../source/install/ldap.rst:20
+#: ../../source/install/ldap.rst:14
 msgid ""
 "Then, in order to enable the LDAP support Lizmap, you have to change the "
 "authentication method in the configuration as follows."
@@ -413,26 +409,15 @@ msgstr ""
 "Ensuite, pour que lizmap prenne en charge LDAP, vous devez modifier la "
 "méthode d'authentification dans la configuration comme ici."
 
-#: ../../source/install/ldap.rst:24
+#: ../../source/install/ldap.rst:18
 msgid "Enabling LDAP"
 msgstr "Activation LDAP"
 
+#: ../../source/install/ldap.rst:20
+msgid "You have to enable the module ldapdao with this command"
+msgstr "Vous devez activer le module ldapdao avec cette commande"
+
 #: ../../source/install/ldap.rst:26
-msgid "In the :file:`localconfig.ini.php`, you have to set these parameters:"
-msgstr ""
-"Dans le fichier `localconfig.ini.php`, vous avez à définir ces paramètres :"
-
-#: ../../source/install/ldap.rst:36
-msgid ""
-"These parameters enable the ldapdao module of Lizmap. If you copied "
-"localconfig.ini.php from localconfig.ini.php.dist, you have already this "
-"parameters but they are commented."
-msgstr ""
-"Ces paramètres active le module ldapdao de Lizmap. Si vous avez créé "
-"localconfig.ini.php à partir de localconfig.ini.php.dist, vous avez déjà ces"
-" paramètres mais elles sont sous forme de commentaires. "
-
-#: ../../source/install/ldap.rst:40
 msgid ""
 "Then you have to add a section `[ldap:lizmapldap]` into your "
 "profiles.ini.php, with some settings that allow to connect to your ldap "
@@ -445,37 +430,27 @@ msgstr ""
 "section peut déjà exister si vous avez créé profiles.ini.php à partir de "
 "profiles.ini.php.dist."
 
-#: ../../source/install/ldap.rst:60
+#: ../../source/install/ldap.rst:46
 msgid "See details about how to set these parameters in a section below."
 msgstr ""
 "Voyez les détails sur comment écrire ces paramètres dans une section plus "
 "bas."
 
-#: ../../source/install/ldap.rst:62
-msgid ""
-"these parameters could be in the ldapdao section of auth.coord.ini.php "
-"configuration files, but it is not recommended to modify these files, as "
-"when you do upgrade, you should do modification again in them."
-msgstr ""
-"Ces paramètres peuvent être dans la section ldapdao du fichier "
-"auth.coord.ini.php, mais cela n'est pas recommendé de modifier ce fichier, "
-"car ces modifications peuvent être écrasées par une mise à jour."
-
-#: ../../source/install/ldap.rst:66
+#: ../../source/install/ldap.rst:48
 msgid "To finish to enable the module, run *php lizmap/install/installer.php*"
 msgstr ""
 "Pour terminer l'activation du module, lancez en ligne de commande *php "
 "lizmap/install/installer.php*."
 
-#: ../../source/install/ldap.rst:70
+#: ../../source/install/ldap.rst:52
 msgid "ldap settings"
 msgstr "Configuration ldap"
 
-#: ../../source/install/ldap.rst:74
+#: ../../source/install/ldap.rst:56
 msgid "Configuration properties for user data"
 msgstr "Propriétés de configuration pour les données de l'utilisateur"
 
-#: ../../source/install/ldap.rst:76
+#: ../../source/install/ldap.rst:58
 msgid ""
 "To verify password, or to register the user into Lizmap the first time he "
 "authenticate himself, the plugin needs some data about the user."
@@ -484,7 +459,7 @@ msgstr ""
 "Lizmap la première que l'utilisateur s'authentifie, le plugin a besoin "
 "d'informations sur celui-ci."
 
-#: ../../source/install/ldap.rst:79
+#: ../../source/install/ldap.rst:61
 msgid ""
 "You should indicate to it which ldap attributes it can retrieve, and which "
 "database fields that will receive the ldap attributes values."
@@ -492,7 +467,7 @@ msgstr ""
 "Vous devez lui indiquer quels attributs ldap il doit récupérer, et quel "
 "champs de la base de donnée recevra les attributs ldap."
 
-#: ../../source/install/ldap.rst:82
+#: ../../source/install/ldap.rst:64
 msgid ""
 "You indicate such informations into the `searchAttributes` property. It is a"
 " pair of names, ``<ldap attribute>:<table field>``, separated by a comma."
@@ -501,7 +476,7 @@ msgstr ""
 "doit contenir une paire de noms, \"<ldap attribute>:<table field>\", séparé "
 "par une virgule"
 
-#: ../../source/install/ldap.rst:85
+#: ../../source/install/ldap.rst:67
 msgid ""
 "In this example, "
 "``searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"``:"
@@ -509,20 +484,20 @@ msgstr ""
 "Dans cet exemple, "
 "``searchAttributes=\"uid:login,firstname,sn:lastname,mail:email,dn:\"``:"
 
-#: ../../source/install/ldap.rst:87
+#: ../../source/install/ldap.rst:69
 msgid ""
 "the value of the `uid` ldap attribute will be stored into the `login` field"
 msgstr ""
 "la valeur de l'attribut ldap 'uid' sera stockée dans le champs 'login'"
 
-#: ../../source/install/ldap.rst:88
+#: ../../source/install/ldap.rst:70
 msgid ""
 "the value of the `sn` ldap attribute will be stored into the `lastname` "
 "field"
 msgstr ""
 "la valeur de l'attribut ldap `sn` sera stocké dans le champs `lastname`"
 
-#: ../../source/install/ldap.rst:89
+#: ../../source/install/ldap.rst:71
 msgid ""
 "the value of the `firstname` ldap attribute will be stored into a field that"
 " have the same name, as there is no field name nor ``:``."
@@ -530,7 +505,7 @@ msgstr ""
 "la valeur de l'attribut ldap  `firstname` sera stocké dans le champs de même"
 " nom, comme il n'y pas de nom de champs ou de ``:``."
 
-#: ../../source/install/ldap.rst:91
+#: ../../source/install/ldap.rst:73
 msgid ""
 "there will not be mapping for the `dn` property. There is a ``:`` without "
 "field name. It will be readed from ldap, and can be used into the "
@@ -540,7 +515,7 @@ msgstr ""
 "\":\" sans de nom de champs. Elle sera cependant quand même récupérée, et "
 "peut être utilisée dans le template `bindUserDN`  (voir ci-dessous)."
 
-#: ../../source/install/ldap.rst:95
+#: ../../source/install/ldap.rst:77
 msgid ""
 "The list of possible fields in Lizmap are: `login`, `email`,  `firstname`, "
 "`lastname`,  `organization`,  `phonenumber`, `street`, `postcode`, `city`, "
@@ -551,11 +526,11 @@ msgstr ""
 "`postcode`, `city`, `country`. Seul  `login` et `email` sont obligatoires, "
 "les autres sont optionnels."
 
-#: ../../source/install/ldap.rst:101
+#: ../../source/install/ldap.rst:83
 msgid "Configuration properties for authentication"
 msgstr "Propriétés de configuration pour l'authentification"
 
-#: ../../source/install/ldap.rst:103
+#: ../../source/install/ldap.rst:85
 msgid ""
 "Before to try to authenticate the user against the ldap, the plugin "
 "retrieves user properties. It uses two configuration parameters : "
@@ -565,7 +540,7 @@ msgstr ""
 "récupére les propriétés de l'utilisateur. Il utilise deux paramètres de "
 "configuration : `searchUserFilter` et `searchAttributes`."
 
-#: ../../source/install/ldap.rst:107
+#: ../../source/install/ldap.rst:89
 msgid ""
 "The `searchUserFilter` should contain the ldap query, and a ``%%LOGIN%%`` "
 "placeholder that will be replaced by the login given by the user."
@@ -573,7 +548,7 @@ msgstr ""
 "La propriété `searchUserFilter` doit contenir la requête ldap, et un masque "
 "\"%%LOGIN%%\" qui sera remplacé par le login donné par l'utilisateur."
 
-#: ../../source/install/ldap.rst:110
+#: ../../source/install/ldap.rst:92
 msgid ""
 "Example: "
 "``searchUserFilter=\"(&(objectClass=posixAccount)(uid=%%LOGIN%%))\"``"
@@ -581,7 +556,7 @@ msgstr ""
 "Exemple : "
 "``searchUserFilter=\"(&(objectClass=posixAccount)(uid=%%LOGIN%%))\"``"
 
-#: ../../source/install/ldap.rst:112
+#: ../../source/install/ldap.rst:94
 msgid ""
 "You may also indicate the base DN for the search, into `searchUserBaseDN`. "
 "Example: ``searchUserBaseDN=\"ou=ADAM users,o=Microsoft,c=US\"``."
@@ -590,7 +565,7 @@ msgstr ""
 "`searchUserBaseDN`. Exemple : ``searchUserBaseDN=\"ou=ADAM "
 "users,o=Microsoft,c=US\"``."
 
-#: ../../source/install/ldap.rst:115
+#: ../../source/install/ldap.rst:97
 msgid ""
 "Note that you can indicate several search filters, if you have complex ldap "
 "structure. Use ``[]`` to indicate an item list:"
@@ -599,7 +574,7 @@ msgstr ""
 "une structure ldap complexe. Utilisez \"[]\" pour indiquer une liste "
 "d’élément :"
 
-#: ../../source/install/ldap.rst:124
+#: ../../source/install/ldap.rst:106
 msgid ""
 "To verify the password, the plugin needs the DN (Distinguished Name) "
 "corresponding to the user. It builds the DN from a \"template\" indicated "
@@ -611,7 +586,7 @@ msgstr ""
 "indiqué dans la propriété  `bindUserDN` et de données variées. Ces données "
 "peuvent être le login ou l'un des attributs ldap de l'utilisateur."
 
-#: ../../source/install/ldap.rst:129
+#: ../../source/install/ldap.rst:111
 msgid ""
 "*Building the DN from the login given by the user*: bindUserDN should "
 "contain a DN, with a ``%%LOGIN%%`` placeholder that will be replaced by the "
@@ -621,7 +596,7 @@ msgstr ""
 "doit contenir un DN, avec le masque \"%%LOGIN%%\" qui sera remplacé par le "
 "login."
 
-#: ../../source/install/ldap.rst:132
+#: ../../source/install/ldap.rst:114
 msgid ""
 "Example: ``bindUserDN=\"uid=%%LOGIN%%,ou=users,dc=XY,dc=fr\"``. If the user "
 "give `john.smith` as a login, the authentication will be made with the DN "
@@ -631,7 +606,7 @@ msgstr ""
 "l'utilisateur donne `john.smith` comme login, l'authentification se fera "
 "avec le DN ``bindUserDN=\"uid=john.smith,ou=users,dc=XY,dc=fr\"``."
 
-#: ../../source/install/ldap.rst:136
+#: ../../source/install/ldap.rst:118
 msgid ""
 "For some LDAP, the DN could be a simple string, for example an email. You "
 "could then set ``bindUserDN=\"%%LOGIN%%@company.local\"``. Or even "
@@ -646,7 +621,7 @@ msgstr ""
 "permettre à l'utilisateur d'indiquer lui même le DN complet, cela peut avoir"
 " des problèmes de sécurité)."
 
-#: ../../source/install/ldap.rst:142
+#: ../../source/install/ldap.rst:124
 msgid ""
 "*Building the DN from one of the ldap attributes of the user*. In this case,"
 " the plugin will first query the ldap directory with the `searchUserFilter` "
@@ -663,7 +638,7 @@ msgstr ""
 "d'attribut, correspondant à un attribut contenant le DN complet d'un "
 "utilisateur."
 
-#: ../../source/install/ldap.rst:149
+#: ../../source/install/ldap.rst:131
 msgid ""
 "For the first case, bindUserDn should contain a DN, with some ``%?%`` "
 "placeholders that will be replaced by corresponding attributes value. "
@@ -681,7 +656,7 @@ msgstr ""
 "configuration `searchAttributes` , même si il n'est pas assigné à un champs."
 " Ex : ``...,uid:,...``. Voir plus haut."
 
-#: ../../source/install/ldap.rst:156
+#: ../../source/install/ldap.rst:138
 msgid ""
 "For the second case, just indicate the attribute name, prefixed with a `$`. "
 "Example: ``bindUserDN=\"$dn\"``. Here it takes the `dn` attribute readed "
@@ -700,7 +675,7 @@ msgstr ""
 " configuration `searchAttributes`, même si il n'est pas assigné à un champs."
 " Ex : ``...,dn:,...``.  Voir plus haut."
 
-#: ../../source/install/ldap.rst:164
+#: ../../source/install/ldap.rst:146
 msgid ""
 "Note that you can indicate several dn templates, if you have complex ldap "
 "structure. Use ``[]`` to indicate an item list:"
@@ -708,11 +683,11 @@ msgstr ""
 "Notez que vous pouvez indiquer plusieurs template de DN, si vous avez une "
 "structure ldap complexe. Utilisez \"[]\" pour indiquer une liste d’élément :"
 
-#: ../../source/install/ldap.rst:173
+#: ../../source/install/ldap.rst:155
 msgid "Configuration properties for user rights"
 msgstr "Paramètres de configuration pour les droits utilisateurs"
 
-#: ../../source/install/ldap.rst:175
+#: ../../source/install/ldap.rst:157
 msgid ""
 "If you have configured groups rights into Lizmap, and if these groups match "
 "your ldap groups, you can indicate to the plugin to automatically put the "
@@ -723,7 +698,7 @@ msgstr ""
 " de mettre automatiquement l'utilisateur dans les groupes de lizmap "
 "correspondant aux groupes ldap dans lequel il est."
 
-#: ../../source/install/ldap.rst:179
+#: ../../source/install/ldap.rst:161
 msgid ""
 "You should then indicate into `searchGroupFilter` the ldap query that will "
 "retrieve the groups of the user."
@@ -731,7 +706,7 @@ msgstr ""
 "Vous devez alors indiquer dans  `searchGroupFilter`, la requête ldap qui "
 "permet de récupérer les groupes de l'utilisateur."
 
-#: ../../source/install/ldap.rst:182
+#: ../../source/install/ldap.rst:164
 msgid ""
 "Example: "
 "``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%USERDN%%))\"``"
@@ -739,7 +714,7 @@ msgstr ""
 "Exemple : "
 "``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%USERDN%%))\"``"
 
-#: ../../source/install/ldap.rst:184
+#: ../../source/install/ldap.rst:166
 msgid ""
 "``%%USERDN%%`` is replaced by the user dn. ``%%LOGIN%%`` is replaced by the "
 "login. You can also use any ldap attributes you indicate into "
@@ -751,7 +726,7 @@ msgstr ""
 "ldap indiqué dans `searchAttributes`, entre `%%`. Exemple : "
 "``searchGroupFilter=\"(&(objectClass=posixGroup)(member=%%givenName%%))\"``"
 
-#: ../../source/install/ldap.rst:188
+#: ../../source/install/ldap.rst:170
 msgid ""
 "Warning : setting `searchGroupFilter` will remove the user from any other "
 "application groups that don't match the ldap group. If you don't want a "
@@ -762,7 +737,7 @@ msgstr ""
 " ne voulez pas de synchronisation des groupes, laissez  `searchGroupFilter` "
 "vide."
 
-#: ../../source/install/ldap.rst:192
+#: ../../source/install/ldap.rst:174
 msgid ""
 "With `searchGroupProperty`, you must indicate the ldap attribute that "
 "contains the group name. Ex: ``searchGroupProperty=\"cn\"``."
@@ -770,7 +745,7 @@ msgstr ""
 "Avec `searchGroupProperty`, vous devez indiquer l'attribut ldap qui contient"
 " le nom du group. Ex :  ``searchGroupProperty=\"cn\"``."
 
-#: ../../source/install/ldap.rst:195
+#: ../../source/install/ldap.rst:177
 msgid ""
 "You may also indicate the base DN for the search, into `searchGroupBaseDN`. "
 "Example: ``searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"``."
@@ -779,11 +754,11 @@ msgstr ""
 "`searchGroupBaseDN`. Exemple : "
 "``searchGroupBaseDN=\"ou=Groups,dc=Acme,dc=pt\"``."
 
-#: ../../source/install/ldap.rst:199
+#: ../../source/install/ldap.rst:181
 msgid "Debugging"
 msgstr "Déboggage"
 
-#: ../../source/install/ldap.rst:201
+#: ../../source/install/ldap.rst:183
 msgid ""
 "If the authentication does not working, you can have more details on what is"
 " wrong. To see these details, you should activate the traces for ldapdao."
@@ -792,11 +767,11 @@ msgstr ""
 "sur ce qui s'est mal passé. Pour voir ces détails, vous devez activer les "
 "traces pour ldapdao."
 
-#: ../../source/install/ldap.rst:204
+#: ../../source/install/ldap.rst:186
 msgid "In your var/config/localconfig.ini.php, set these parameters"
 msgstr "Dans votre var/config/localconfig.ini.php, mettez ces paramètres"
 
-#: ../../source/install/ldap.rst:214
+#: ../../source/install/ldap.rst:196
 msgid ""
 "Then, in var/log/auth.log, you will have some messages from the ldap "
 "connector. Remove these settings when you don't need them, to avoid a huge "
@@ -835,16 +810,17 @@ msgstr ""
 msgid "Generic Server Configuration with Nginx server"
 msgstr "Configuration générique du serveur avec serveur Nginx "
 
-#: ../../source/install/linux.rst:13 ../../source/install/linux.rst:36
+#: ../../source/install/linux.rst:13
 msgid ""
 "This documentation provides an example for configuring a server with the "
-"Debian 9 distribution. We assume you have base system installed and updated."
+"Debian 11 distribution. We assume you have base system installed and "
+"updated."
 msgstr ""
-"La documentation fournie un exemple pour configurer un serveur avec la "
-"distribution Debian 9. Nous supposons que vous avez un système fraîchement "
+"Cette documentation fournis un exemple pour configurer un serveur avec une "
+"distribution Debian 11. Nous supposons que vous avez un système fraîchement "
 "installé et mis à jour."
 
-#: ../../source/install/linux.rst:15 ../../source/install/linux.rst:38
+#: ../../source/install/linux.rst:15
 msgid ""
 "This page does not describe how to secure your Nginx server. It's just for a"
 " demonstration."
@@ -873,42 +849,34 @@ msgstr ""
 "encodage par défaut si ce n'est pas le cas."
 
 #: ../../source/install/linux.rst:34
-msgid "Nginx Server Configuration"
-msgstr "Configuration serveur Nginx"
-
-#: ../../source/install/linux.rst:41 ../../source/install/linux.rst:132
 msgid "Installing necessary packages"
 msgstr "Installation des paquets nécessaires"
 
-#: ../../source/install/linux.rst:43
+#: ../../source/install/linux.rst:36
 msgid ""
-"Lizmap web client is based on Jelix 1.6. You must install at least the "
-"**5.6** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, "
+"Lizmap web client 3.6 is based on Jelix 1.8. You must install at least the "
+"**7.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, "
 "**tokenizer** and **spl** extensions are required (they are generally turned"
-" on in a standard PHP 5.6/7.x installation)"
+" on in a standard PHP 7/8 installation)"
 msgstr ""
-"Lizmap Web Client s'appuie sur Jelix 1.6. Vous devez installer au minimum la"
-" version **5.6** de PHP. Les extensions **dom**, **simplexml**, **pcre**, "
+"Lizmap Web Client s'appuie sur Jelix 1.8. Vous devez installer au minimum la"
+" version **7.4** de PHP. Les extensions **dom**, **simplexml**, **pcre**, "
 "**session**, **tokenizer** et **spl** sont requises (elles sont actives en "
-"général dans une installation standard de PHP 5.6/7.x)."
+"général dans une installation standard de PHP 7 ou 8)."
+
+#: ../../source/install/linux.rst:44
+msgid "On Debian 11 or Ubuntu 20.04 LTS, install these packages:"
+msgstr "Sur un système Debian 11 ou Ubuntu 20.04 LTS, installez ces paquets :"
 
 #: ../../source/install/linux.rst:51
-msgid "On debian 10, install these packages:"
-msgstr "Sur un système Debian 10, installez ces paquets :"
-
-#: ../../source/install/linux.rst:57
-msgid "On Ubuntu 18.04 or later, install these packages:"
-msgstr "Sur un système Ubuntu 18.04 ou plus, installez ces paquets :"
-
-#: ../../source/install/linux.rst:65 ../../source/install/linux.rst:174
 msgid "Web configuration"
 msgstr "Configuration web"
 
-#: ../../source/install/linux.rst:67
+#: ../../source/install/linux.rst:53
 msgid "Create a new file /etc/nginx/sites-available/lizmap.conf:"
 msgstr "Créez un nouveau fichier /etc/nginx/sites-available/lizmap.conf :"
 
-#: ../../source/install/linux.rst:105
+#: ../../source/install/linux.rst:91
 msgid ""
 "You should declare the lizmap.local domain name somewhere (in your "
 "/etc/hosts, or into your DNS..), or replace it by your own domain name."
@@ -917,100 +885,23 @@ msgstr ""
 " /etc/hosts, ou sur vos DNS), ou remplacez le par votre propre nom de "
 "domaine."
 
-#: ../../source/install/linux.rst:108
+#: ../../source/install/linux.rst:94
 msgid "Enable the virtual host you just created:"
 msgstr "Activez l'hôte virtuel que vous venez juste de créer."
 
-#: ../../source/install/linux.rst:115
+#: ../../source/install/linux.rst:101
 msgid "Restart Nginx"
 msgstr "Redémarrer Nginx"
 
-#: ../../source/install/linux.rst:117
+#: ../../source/install/linux.rst:103
 msgid "You must restart the Nginx server to validate the configuration."
 msgstr "Vous devez redémarrer le serveur Nginx pour valider la configuration."
 
-#: ../../source/install/linux.rst:125
-msgid "Apache Server configuration"
-msgstr "Configuration serveur Apache"
-
-#: ../../source/install/linux.rst:127
-msgid ""
-"This documentation provides an example for configuring a server with the "
-"Debian 10 distribution. We assume you have base system installed and "
-"updated."
-msgstr ""
-"La documentation fournie un exemple pour configurer un serveur avec la "
-"distribution Debian 10. Nous supposons que vous avez un système fraîchement "
-"installé et mis à jour."
-
-#: ../../source/install/linux.rst:129
-msgid ""
-"This page does not describe how to secure your Apache server. It's just for "
-"a demonstration."
-msgstr ""
-"Cette page ne décrit pas comment sécuriser votre serveur Apache. C'est juste"
-" pour une démonstration."
-
-#: ../../source/install/linux.rst:135
-msgid "Firstly update the packages list, then install these packages:"
-msgstr ""
-"Premièrement mettez à jour les packages listés, puis installez ces packages:"
-
-#: ../../source/install/linux.rst:145
-msgid "PHP 7.3 configuration"
-msgstr "Configuration PHP 7.3"
-
-#: ../../source/install/linux.rst:147
-msgid ""
-"In this example, we use Apache mpm-worker. So we must manually configure the"
-" activation of PHP 7.3."
-msgstr ""
-"On utilise dans cet exemple le mpm-worker d'Apache. On doit donc configurer "
-"manuellement l'activation de PHP 7.3."
-
-#: ../../source/install/linux.rst:167
-msgid "Enable the configuration with the following command line:"
-msgstr "Autorisez la configuration avec la ligne de commande suivante:"
-
-#: ../../source/install/linux.rst:177
-msgid "mpm-worker configuration"
-msgstr "Configuration du mpm-worker"
-
-#: ../../source/install/linux.rst:179
-msgid ""
-"We modify the Apache configuration file to adapt the options to mpm_worker "
-"server configuration."
-msgstr ""
-"On modifie le fichier de configuration d'Apache pour adapter les options du "
-"mpm_worker à la configuration du serveur."
-
-#: ../../source/install/linux.rst:195
-msgid "mod_fcgid configuration"
-msgstr "Configuration de mod_fcgid"
-
-#: ../../source/install/linux.rst:197
-msgid ""
-"QGIS Server runs with the FastCGI protocole (a.k.a. fcgi). We must therefore"
-" configure the Apache mod_fcgid to suit to the server capabilities."
-msgstr ""
-
-#: ../../source/install/linux.rst:216
-msgid "Setting the compression"
-msgstr "Configuration de la compression"
-
-#: ../../source/install/linux.rst:238
-msgid "Restart Apache"
-msgstr "Redémarrer Apache"
-
-#: ../../source/install/linux.rst:240
-msgid "You must restart the Apache server to validate the configuration."
-msgstr "Il faut redémarrer le serveur Apache pour valider la configuration"
-
-#: ../../source/install/linux.rst:249
+#: ../../source/install/linux.rst:111
 msgid "Enable geolocation"
 msgstr "Activer la géolocalisation"
 
-#: ../../source/install/linux.rst:251
+#: ../../source/install/linux.rst:113
 msgid ""
 "The automatic geolocation provided by Lizmap relies on Google services. To "
 "enable it, your webGIS must be placed under a secure protocol, like HTTPS. "
@@ -1021,7 +912,7 @@ msgstr ""
 "accessible grâce à un protocole sécurisé comme https. Pour plus "
 "d'informations :"
 
-#: ../../source/install/linux.rst:253
+#: ../../source/install/linux.rst:115
 msgid ""
 "https://sites.google.com/a/chromium.org/dev/Home/chromium-"
 "security/deprecating-powerful-features-on-insecure-origins"
@@ -1029,7 +920,7 @@ msgstr ""
 "https://sites.google.com/a/chromium.org/dev/Home/chromium-"
 "security/deprecating-powerful-features-on-insecure-origins"
 
-#: ../../source/install/linux.rst:255
+#: ../../source/install/linux.rst:117
 msgid ""
 "https://www.digitalocean.com/community/tutorials/how-to-create-a-self-"
 "signed-ssl-certificate-for-apache-in-ubuntu-16-04"
@@ -1037,26 +928,26 @@ msgstr ""
 "https://www.digitalocean.com/community/tutorials/how-to-create-a-self-"
 "signed-ssl-certificate-for-apache-in-ubuntu-16-04"
 
-#: ../../source/install/linux.rst:259
+#: ../../source/install/linux.rst:121
 msgid "Create directories for data"
 msgstr "Création des répertoires pour les données"
 
-#: ../../source/install/linux.rst:261
+#: ../../source/install/linux.rst:123
 msgid ""
 "QGIS files and other cache files will be stored into these directories."
 msgstr ""
 "Les fichiers QGIS et les autres fichiers de cache seront stockés dans ces "
 "répertoires."
 
-#: ../../source/install/linux.rst:273
+#: ../../source/install/linux.rst:135
 msgid "Spatial Database: PostgreSQL"
 msgstr "Base de données spatiale : PostgreSQL"
 
-#: ../../source/install/linux.rst:275
+#: ../../source/install/linux.rst:137
 msgid "This section is optional. Please read :ref:`prerequisites-postgresql`."
 msgstr "Cette section est optionnelle. Lisez :ref:`prerequisites-postgresql`."
 
-#: ../../source/install/linux.rst:277
+#: ../../source/install/linux.rst:139
 msgid ""
 "PostgreSQL and PostGIS can be very useful to manage spatial data centralized"
 " manner on the server."
@@ -1064,15 +955,42 @@ msgstr ""
 "Il peut être très intéressant d'utiliser PostGreSQL et PostGIS pour gérer "
 "les données spatiales de manière centralisée sur le serveur."
 
-#: ../../source/install/linux.rst:280 ../../source/install/linux.rst:339
+#: ../../source/install/linux.rst:142
 msgid "Install"
 msgstr "Installation"
 
-#: ../../source/install/linux.rst:305
+#: ../../source/install/linux.rst:145
+msgid "On Debian 11, you'll find PostgreSQL 13."
+msgstr "Sur Debian 11, vous trouverez PostgreSQL 13."
+
+#: ../../source/install/linux.rst:147
+msgid "First install packages:"
+msgstr "Installez d'abord ces paquets :"
+
+#: ../../source/install/linux.rst:154
+msgid ""
+"You may have to recreate the cluster on a fresh install, in order to set the"
+" locale. You can jump this step if the locale is correctly set, or if you "
+"already have databases. Careful: these instructions destroy any existing "
+"databases!"
+msgstr ""
+"Vous aurez peut-être à recréer un cluster Postgresql sur une installation "
+"tout fraîche, pour pouvoir indiquer la locale à utiliser. Vous pouvez sauter"
+" cette étape si la locale est déjà celle attendue, ou si vous avez déjà des "
+"bases de données. Attention : ces instructions détruisent toutes bases de "
+"données existantes !"
+
+#: ../../source/install/linux.rst:164
+msgid "Now You can create a user and a database for Lizmap, into Postgresql."
+msgstr ""
+"Maintenant vous pouvez dans PostgreSQL, créer un utilisateur et une base de "
+"donnée pour Lizmap."
+
+#: ../../source/install/linux.rst:168
 msgid "Adapting the PostgreSQL configuration"
 msgstr "Adapatation de la configuration de PostgreSQL"
 
-#: ../../source/install/linux.rst:307
+#: ../../source/install/linux.rst:170
 msgid ""
 "We will use ``pgtune``, an utility program that can automatically generate a"
 " PostgreSQL configuration file adapted to the properties of the server "
@@ -1082,11 +1000,11 @@ msgstr ""
 "un fichier de configuration PostgreSQL adapté aux propriétés du serveur "
 "(mémoire, processeurs, etc.)"
 
-#: ../../source/install/linux.rst:310
+#: ../../source/install/linux.rst:173
 msgid "https://pgtune.leopard.in.ua/"
 msgstr "https://pgtune.leopard.in.ua/"
 
-#: ../../source/install/linux.rst:330
+#: ../../source/install/linux.rst:193
 msgid ""
 "For installing Lizmap tables into the PostgreSQL database (instead of SqLite"
 " by default), you can continue until the next section below when you need to"
@@ -1096,29 +1014,11 @@ msgstr ""
 "défaut), vous pouvez sauter cette section, et vous devrez modifier le "
 "fichier  :file:`lizmap/var/config/profiles.ini.php`."
 
-#: ../../source/install/linux.rst:334
-msgid "FTP Server: pure-ftpd"
-msgstr "Serveur FTP : pure-ftpd"
-
-#: ../../source/install/linux.rst:336
-msgid ""
-"This section is optional, you can setup your own way of transferring data "
-"from QGIS GIS technicians to the Lizmap server."
-msgstr ""
-
-#: ../../source/install/linux.rst:346
-msgid "Configure"
-msgstr "Configuration"
-
-#: ../../source/install/linux.rst:369
-msgid "Creating a user account"
-msgstr "Création d'un compte utilisateur"
-
-#: ../../source/install/linux.rst:391
+#: ../../source/install/linux.rst:197
 msgid "Installing sources of Lizmap Web Client"
 msgstr "Installer les sources de Lizmap Web Client"
 
-#: ../../source/install/linux.rst:393
+#: ../../source/install/linux.rst:199
 msgid ""
 "Retrieve the latest available stable version from our `Github release page "
 "<https://github.com/3liz/lizmap-web-client/releases/>`_."
@@ -1126,7 +1026,7 @@ msgstr ""
 "Vous pouvez trouver la dernière version stable disponible sur `la page "
 "release de Github <https://github.com/3liz/lizmap-web-client/releases/>`_."
 
-#: ../../source/install/linux.rst:396
+#: ../../source/install/linux.rst:202
 msgid ""
 "Do not use the automatic ZIP file created by GitHub on the website. Only use"
 " ZIP attached to a release."
@@ -1134,11 +1034,25 @@ msgstr ""
 "N'utilisez pas les zip générés automatiquement par Github sur son site. "
 "Utilisez uniquement les zip attachés à la release."
 
-#: ../../source/install/linux.rst:418
+#: ../../source/install/linux.rst:204
+msgid ""
+"We first set some variable to ease instructions. Let's set the version and "
+"the location where Lizmap will be installed. Adjuste these values to your "
+"requirements."
+msgstr ""
+"Nous définissons d'abord des variables pour simplifier les instructions. "
+"Définissons la version et le répertoire où Lizmap sera installé. Ajustez ces"
+" valeurs en fonction de vos besoins."
+
+#: ../../source/install/linux.rst:213
+msgid "Then you can install the zip file:"
+msgstr "Ensuite vous pouvez installer le fichier zip :"
+
+#: ../../source/install/linux.rst:229
 msgid "Configure Lizmap with the database support"
 msgstr "Configurer Lizmap pour la prise en charge des bases de données"
 
-#: ../../source/install/linux.rst:420
+#: ../../source/install/linux.rst:231
 msgid ""
 "Lizmap needs a database to store its own data and to access to data used in "
 "your Qgis projects, with its editing tool."
@@ -1147,7 +1061,7 @@ msgstr ""
 "pour accéder aux données utilisées par vos projets Qgis, dans l'outils "
 "d'édition."
 
-#: ../../source/install/linux.rst:423
+#: ../../source/install/linux.rst:234
 msgid ""
 "Create :file:`profiles.ini.php` into :file:`lizmap/var/config` by copying "
 ":file:`profiles.ini.php.dist`."
@@ -1155,12 +1069,12 @@ msgstr ""
 "Créer :file:`profiles.ini.php` dans :file:`lizmap/var/config` en copiant "
 ":file:`profiles.ini.php.dist`."
 
-#: ../../source/install/linux.rst:432
+#: ../../source/install/linux.rst:243
 #: ../../source/install/pre_requirements.rst:176
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
-#: ../../source/install/linux.rst:434
+#: ../../source/install/linux.rst:245
 msgid ""
 "For the editing of PostGIS layers in Web Client Lizmap operate, install "
 "PostgreSQL support for PHP. No configuration file need to be edited to edit "
@@ -1175,7 +1089,7 @@ msgstr ""
 "donnée avec les paramètres d'accès stockés dans le projet QGIS (ou dans une "
 "fichier de service PostgreSQL)."
 
-#: ../../source/install/linux.rst:443
+#: ../../source/install/linux.rst:254
 msgid ""
 "For Lizmap logs, users and groups, it can be either stored in SqLite or "
 "PostgreSQL. To store these information in PostgreSQL, follow these "
@@ -1185,7 +1099,7 @@ msgstr ""
 " soit dans une base SqLite, soit une base PostgreSQL. Pour stocker ces "
 "informations dans PostgreSQL, suivez ces instructions."
 
-#: ../../source/install/linux.rst:446
+#: ../../source/install/linux.rst:257
 msgid ""
 "Into a fresh copy of :file:`lizmap/var/config/profiles.ini.php`, you should "
 "have:"
@@ -1193,7 +1107,7 @@ msgstr ""
 "Dans une copie toute fraiche de :file:`lizmap/var/config/profiles.ini.php`, "
 "vous devriez avoir :"
 
-#: ../../source/install/linux.rst:458
+#: ../../source/install/linux.rst:269
 msgid ""
 "This is the configuration by default to use Sqlite. You should change these "
 "sections to use Postgresql, and indicate several parameters to access to "
@@ -1203,7 +1117,7 @@ msgstr ""
 "ces sections pour utiliser Postgresql, et indiquer les paramètres d’accès à "
 "votre base de données Postgresql :"
 
-#: ../../source/install/linux.rst:483
+#: ../../source/install/linux.rst:294
 msgid ""
 "You can use a specific schema to store lizmap tables. And you may want that "
 "lizmap could access to other schema. You then have to set search_path "
@@ -1213,7 +1127,7 @@ msgstr ""
 " vous voudriez peut-être que Lizmap accède à d'autres schéma. Vous devez "
 "alors paramétrer correctement search_path. Exemple :"
 
-#: ../../source/install/linux.rst:490
+#: ../../source/install/linux.rst:301
 msgid ""
 "If you have setup a service file for postgresql onto your server, you may "
 "want to indicate a postgresql service instead of indicating login, password "
@@ -1223,15 +1137,15 @@ msgstr ""
 "serveur, vous voudriez peut-être indiquer le nom du service  au lieu "
 "d'indiquer le login, mot de passe etc. Utilisez alors le paramètre service :"
 
-#: ../../source/install/linux.rst:509
+#: ../../source/install/linux.rst:320
 msgid "Spatialite"
 msgstr "Spatialite"
 
-#: ../../source/install/linux.rst:512
+#: ../../source/install/linux.rst:323
 msgid "Enable Spatialite extension"
 msgstr "Activer l'extension Spatialite"
 
-#: ../../source/install/linux.rst:514
+#: ../../source/install/linux.rst:325
 msgid ""
 "To use editing on layers spatialite,you have to add the spatialite extension"
 " in PHP. You can follow these instructions to do so: http://www.gaia-"
@@ -1242,7 +1156,7 @@ msgstr ""
 " faire : http://www.gaia-gis.it/gaia-sins/spatialite-cookbook-"
 "fr/html/php.html"
 
-#: ../../source/install/linux.rst:517
+#: ../../source/install/linux.rst:328
 msgid ""
 "Lizmap Web Client tests whether the spatialite support is enabled in PHP. If"
 " it is not, then spatialite layers will not be used in the editing tool. You"
@@ -1253,14 +1167,14 @@ msgstr ""
 "l'outil d'édition. Vous pouvez toujours utiliser Postgresql pour l'édition "
 "de données."
 
-#: ../../source/install/linux.rst:520
+#: ../../source/install/linux.rst:331
 msgid ""
 "Give the appropriate rights to the directory containing Spatialite databases"
 msgstr ""
 "Donner les droits adéquats au répertoire contenant les bases de données "
 "Spatialite"
 
-#: ../../source/install/linux.rst:522
+#: ../../source/install/linux.rst:333
 msgid ""
 "So that Lizmap Web Client can modify the data contained in databases "
 "Spatialite, we must ensure that **the webserver user (www-data) has well "
@@ -1271,7 +1185,7 @@ msgstr ""
 " (www-data) a les droits en écriture dans le répertoire contenant les "
 "fichiers Spatialite**"
 
-#: ../../source/install/linux.rst:524
+#: ../../source/install/linux.rst:335
 msgid ""
 "For example, if a directory contains a QGIS project, which uses a Spatialite"
 " database placed in a **db** directory at the same level as the QGIS "
@@ -1281,11 +1195,11 @@ msgstr ""
 "de données Spatialite placée dans un répertoire **bdd** au même niveau que "
 "le projet QGIS :"
 
-#: ../../source/install/linux.rst:533
+#: ../../source/install/linux.rst:344
 msgid "So you have to give the rights in this way:"
 msgstr "Alors il faut donner les droits de cette manière :"
 
-#: ../../source/install/linux.rst:541
+#: ../../source/install/linux.rst:352
 msgid ""
 "So if you want to install Lizmap to provide access to multiple map "
 "publishers, you should tell them to always create a **db** directory at the "
@@ -1299,15 +1213,15 @@ msgstr ""
 "Lizmap. Cela facilitera le travail de l'administrateur, qui aura juste à "
 "changer les droits d'un seul répertoire."
 
-#: ../../source/install/linux.rst:548
+#: ../../source/install/linux.rst:359
 msgid "Configuring Lizmap and launching the installer"
 msgstr "Configurer Lizmap et lancer l'installateur"
 
-#: ../../source/install/linux.rst:551
+#: ../../source/install/linux.rst:362
 msgid "Give the appropriate rights to directories and files"
 msgstr "Donner les droits adéquats aux répertoires et fichiers"
 
-#: ../../source/install/linux.rst:553
+#: ../../source/install/linux.rst:364
 msgid ""
 "Set rights for Nginx/Apache, so PHP scripts could write some temporary files"
 " or do changes."
@@ -1315,11 +1229,11 @@ msgstr ""
 "Mettez les droits pour Nginx/Apache, ainsi les scripts PHP pourront écrire "
 "des fichiers temporaires ou modifier des fichiers."
 
-#: ../../source/install/linux.rst:564
+#: ../../source/install/linux.rst:373
 msgid "Setup configuration"
 msgstr "Modifier la configuration"
 
-#: ../../source/install/linux.rst:567
+#: ../../source/install/linux.rst:376
 msgid ""
 "Create :file:`lizmapConfig.ini.php`, :file:`localconfig.ini.php` and edit "
 "them to set parameters specific to your installation. You can modify "
@@ -1331,7 +1245,7 @@ msgstr ""
 " modifier :file:`lizmapConfig.ini.php` pour mettre l'url du serveur Qgis et "
 "d'autres choses."
 
-#: ../../source/install/linux.rst:578
+#: ../../source/install/linux.rst:387
 msgid ""
 "In case you want to enable the demo repositories, just add to "
 ":file:`localconfig.ini.php` the following:"
@@ -1339,15 +1253,15 @@ msgstr ""
 "Dans le cas où vous voulez activer les répertoires de démo, ajoutez juste "
 "dans le fichier :file:`localconfig.ini.php` :"
 
-#: ../../source/install/linux.rst:588
+#: ../../source/install/linux.rst:397
 msgid "Launching the installer"
 msgstr "Lancement de l'installateur"
 
-#: ../../source/install/linux.rst:590
+#: ../../source/install/linux.rst:399
 msgid "After creating configuration files, you can launch the installer"
 msgstr "Après avoir configuré les fichiers, vous pouvez lancer l'installateur"
 
-#: ../../source/install/linux.rst:596
+#: ../../source/install/linux.rst:405
 msgid ""
 "It will finished the installation, and will create all SQL tables needed by "
 "Lizmap."
@@ -1355,24 +1269,24 @@ msgstr ""
 "Cela finira l'installation, et créera toutes les tables SQL nécessaires à "
 "Lizmap."
 
-#: ../../source/install/linux.rst:600
+#: ../../source/install/linux.rst:409
 msgid "First test"
 msgstr "Premier test"
 
-#: ../../source/install/linux.rst:602
+#: ../../source/install/linux.rst:411
 msgid "For testing launch: ``http://localhost/lizmap`` in your browser."
 msgstr "Pour tester : ``http://localhost/lizmap`` dans votre navigateur."
 
-#: ../../source/install/linux.rst:604
+#: ../../source/install/linux.rst:413
 msgid "In case you get a ``500 - internal server error``, run again:"
 msgstr "Si vous avez un ``500 - internal server error``, lancez de nouveau :"
 
-#: ../../source/install/linux.rst:612
+#: ../../source/install/linux.rst:421
 msgid "Replace ``localhost`` with the address or IP number of your server."
 msgstr ""
 "Remplacer ``localhost`` par l'adresse ou l'adresse IP de votre serveur."
 
-#: ../../source/install/linux.rst:614
+#: ../../source/install/linux.rst:423
 msgid ""
 "In the administration panel, you should check the :guilabel:`QGIS server "
 "version` and the :guilabel:`WMS server URL` with the URL of QGIS Server."
@@ -1380,7 +1294,7 @@ msgstr ""
 "Dans le panneau d'administration, vous pouvez vérifier :guilabel:`QGIS "
 "server version` et :guilabel:`WMS server URL` avec l'URL du serveur Qgis."
 
-#: ../../source/install/linux.rst:617
+#: ../../source/install/linux.rst:426
 msgid ""
 "Before trying to have a QGIS project working in Lizmap, you **must** have "
 "the communication between QGIS Server and Lizmap Web Client working "
@@ -1393,7 +1307,7 @@ msgstr ""
 "être visible dans l'interface d'administration. Lisez  :ref:`lizmap-server-"
 "plugin`."
 
-#: ../../source/install/linux.rst:620
+#: ../../source/install/linux.rst:429
 msgid ""
 "If you didn't install the demo, you can check that you have well installed "
 "Lizmap and configured QGIS Server within Lizmap by checking the "
@@ -1405,7 +1319,7 @@ msgstr ""
 "section ``qgis_server`` à cette url : "
 "http://localhost/lizmap/index.php/view/app/metadata"
 
-#: ../../source/install/linux.rst:632
+#: ../../source/install/linux.rst:441
 msgid ""
 "Lizmap is accessible, without further configurations, also as WMS and WFS "
 "server from a browser:"
@@ -1413,35 +1327,35 @@ msgstr ""
 "Lizmap est aussi accessible, sans plus de configurations, comme serveur WMS "
 "et WFS depuis un navigateur:"
 
-#: ../../source/install/linux.rst:634
+#: ../../source/install/linux.rst:443
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities"
 msgstr ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities"
 
-#: ../../source/install/linux.rst:636
+#: ../../source/install/linux.rst:445
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities"
 msgstr ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities"
 
-#: ../../source/install/linux.rst:638
+#: ../../source/install/linux.rst:447
 msgid "and from QGIS:"
 msgstr "et depuis QGIS:"
 
-#: ../../source/install/linux.rst:640
+#: ../../source/install/linux.rst:449
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&"
 msgstr ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&"
 
-#: ../../source/install/linux.rst:642
+#: ../../source/install/linux.rst:451
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 msgstr ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 
-#: ../../source/install/linux.rst:645
+#: ../../source/install/linux.rst:454
 msgid ""
 "Access to the WMS and WFS servers can be limited by assigning privileges to "
 "specific repositories, see the administration section."
@@ -1449,11 +1363,11 @@ msgstr ""
 "Les accès aux serveurs WMS et WFS peuvent être restreints en assignant des "
 "droits à certains projets, pour cela consultez la partie administration."
 
-#: ../../source/install/linux.rst:649
+#: ../../source/install/linux.rst:458
 msgid "Lizmap modules"
 msgstr "Modules Lizmap"
 
-#: ../../source/install/linux.rst:651
+#: ../../source/install/linux.rst:460
 msgid ""
 "Previously, we explained how we could add QGIS Server plugins to add more "
 "features to QGIS Server. Now that we have Lizmap Web Client up and running, "
@@ -1464,7 +1378,7 @@ msgstr ""
 "nous avons Lizmap prêt et fonctionnel, nous pouvons ajouter des modules "
 "Lizmap pour ajouter des fonctionnalités."
 
-#: ../../source/install/linux.rst:654
+#: ../../source/install/linux.rst:463
 msgid ""
 "The list is available in the Lizmap "
 ":ref:`introduction<additional_lizmap_modules>`. On their GitHub repository, "
@@ -1476,11 +1390,11 @@ msgstr ""
 " a en en général les instructions pour les installer. Vous devriez les "
 "suivre. Cependant voici les instructions générales pour installer un module."
 
-#: ../../source/install/linux.rst:660
+#: ../../source/install/linux.rst:469
 msgid "Installing modules with Composer"
 msgstr "Installer les modules avec Composer"
 
-#: ../../source/install/linux.rst:662
+#: ../../source/install/linux.rst:471
 msgid ""
 "You can install modules with Composer, the package manager for PHP. Of "
 "course it is possible only if the author of the module has created a package"
@@ -1492,7 +1406,7 @@ msgstr ""
 "paquet pour son module. Un tel paquet a un nom, par exemple \"lizmap/lizmap-"
 "pgmetadata-module\". La documentation du module devrait l'indiquer."
 
-#: ../../source/install/linux.rst:667
+#: ../../source/install/linux.rst:476
 msgid ""
 "You must install Composer. See instructions on its web site "
 "http://getcomposer.org."
@@ -1500,7 +1414,7 @@ msgstr ""
 "Vous devez installer Composer. Voyez les instructions sur son site web "
 "http://getcomposer.org."
 
-#: ../../source/install/linux.rst:669
+#: ../../source/install/linux.rst:478
 msgid ""
 "You must create a :file:`composer.json` file into :file:`lizmap/my-"
 "packages/` by copying the :file:`composer.json.dist` from this directory. "
@@ -1510,15 +1424,15 @@ msgstr ""
 "packages/` en copiant le fichier :file:`composer.json.dist` qui s'y trouve. "
 "Et lancer une première fois Composer"
 
-#: ../../source/install/linux.rst:680
+#: ../../source/install/linux.rst:489
 msgid "Then you can install the package of the module"
 msgstr "Ensuite vous pouvez installer le paquet du module"
 
-#: ../../source/install/linux.rst:687
+#: ../../source/install/linux.rst:496
 msgid "If you want to install a new version of the module, execute:"
 msgstr "Si vous voulez installer une nouvelle version du module, lancez :"
 
-#: ../../source/install/linux.rst:693 ../../source/install/linux.rst:737
+#: ../../source/install/linux.rst:502 ../../source/install/linux.rst:547
 msgid ""
 "Read the documentation of the module to know if there are additional steps "
 "to configure it."
@@ -1526,23 +1440,31 @@ msgstr ""
 "Lisez la documentation du module pour savoir si il y a des étapes "
 "supplémentaires à faire pour le configurer."
 
-#: ../../source/install/linux.rst:696
+#: ../../source/install/linux.rst:505 ../../source/install/linux.rst:550
+msgid ""
+"You will have at least to launch the configurator of the module with this "
+"command:"
+msgstr ""
+"Vous aurez au moins à lancer le configurateur du module avec cette commande "
+":"
+
+#: ../../source/install/linux.rst:513
 msgid "To finish the installation, run again the installer of Lizmap:"
 msgstr ""
 "Pour finir l'installation, lancez une nouvelle fois l'installateur de Lizmap"
 " :"
 
-#: ../../source/install/linux.rst:706
+#: ../../source/install/linux.rst:523
 msgid "installing modules without Composer"
 msgstr "Installer des modules sans Composer"
 
-#: ../../source/install/linux.rst:708
+#: ../../source/install/linux.rst:525
 msgid ""
 "To install a module without Composer, retrieve the zip file of the module."
 msgstr ""
 "Pour installer le module sans Composer, récupérez le fichier zip du module."
 
-#: ../../source/install/linux.rst:710
+#: ../../source/install/linux.rst:527
 msgid ""
 "Extract the module into :file:`lizmap/lizmap-modules/`. For instance, for "
 "the module ``PgMetadata`` :"
@@ -1550,17 +1472,7 @@ msgstr ""
 "Extrayez le module dans :file:`lizmap/lizmap-modules/`. Par exemple, pour le"
 " module \"PgMetaData\" :"
 
-#: ../../source/install/linux.rst:729
-msgid ""
-"Edit the :file:`lizmap/var/config/localconfig.ini.php`, in the ``modules`` "
-"section, add a new line for the given module (check the documentation of the"
-" module to setup the correct values):"
-msgstr ""
-"Éditez le fichier :file:`lizmap/var/config/localconfig.ini.php`, dans la "
-"section ``modules``, ajoutez une nouvelle ligne pour le module donné "
-"(vérifiez la documentation du module pour mettre les bonnes valeurs) :"
-
-#: ../../source/install/linux.rst:740
+#: ../../source/install/linux.rst:559
 msgid "Run the installation :"
 msgstr "Lancez l'installation :"
 
@@ -1602,6 +1514,8 @@ msgid ""
 "Follow the `QGIS Server documentation on how to install QGIS Server "
 "<https://docs.qgis.org/latest/en/docs/server_manual/>`_."
 msgstr ""
+"Suivez la `documentation de QGIS pour installer QGIS Server "
+"<https://docs.qgis.org/latest/fr/docs/server_manual/index.html>`_ ."
 
 #: ../../source/install/pre_requirements.rst:23
 msgid ""
@@ -1680,14 +1594,20 @@ msgid ""
 "<https://docs.qgis.org/latest/en/docs/server_manual/plugins.html>`_ about "
 "plugins on the server side."
 msgstr ""
+"Des plugins peuvent être ajoutés à QGIS Server. Voyez la `documentation QGIS"
+" sur les plugins "
+"<https://docs.qgis.org/latest/fr/docs/server_manual/plugins.html>`_  coté "
+"serveur."
 
 #: ../../source/install/pre_requirements.rst:56
 msgid "The **Lizmap server** plugin is required."
-msgstr ""
+msgstr "Le plugin **Lizmap server** est requis."
 
 #: ../../source/install/pre_requirements.rst:58
 msgid "Plugins listed below will enable some features in Lizmap Web Client."
 msgstr ""
+"La liste des plugins ci-dessous activera des fonctionnalités dans Lizmap Web"
+" Client."
 
 #: ../../source/install/pre_requirements.rst:60
 msgid ""
@@ -1696,6 +1616,11 @@ msgid ""
 "<https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-"
 "variables>`_."
 msgstr ""
+"Soit vous configurez la variable d'environnement ``QGIS_PLUGIN_PATH`` "
+"pendant l'installation de QGIS serveur, soit utilisez `celle par défaut "
+"fournie par QGIS "
+"<https://docs.qgis.org/latest/fr/docs/server_manual/config.html#environment-"
+"variables>`_."
 
 #: ../../source/install/pre_requirements.rst:64
 msgid ""
@@ -1754,7 +1679,7 @@ msgstr "https://github.com/3liz/qgis-lizmap-server-plugin"
 
 #: ../../source/install/pre_requirements.rst:82
 msgid "The plugin is **required**."
-msgstr ""
+msgstr "Le plugin est **obligatoire**."
 
 #: ../../source/install/pre_requirements.rst:83
 msgid ""
@@ -1804,6 +1729,8 @@ msgid ""
 "The Lizmap QGIS Server plugin **is required** and will add some features on "
 "Lizmap Web Client :"
 msgstr ""
+"Le plugin Lizmap QGIS Server **est obligatoire** et ajoutera des "
+"fonctionnalités dans Lizmap Web Client :"
 
 #: ../../source/install/pre_requirements.rst:103
 msgid "retrieve information from QGIS Server."
@@ -1866,6 +1793,8 @@ msgid ""
 "The name of the plugin is ``Lizmap server``. Do not install the ``Lizmap`` "
 "plugin which is the **desktop** Python plugin."
 msgstr ""
+"Le nom du plugin est **Lizmap server**. N'installez pas le plugin "
+"**Lizmap**, qui est le plugin pour Qgis Desktop."
 
 #: ../../source/install/pre_requirements.rst:125
 msgid "Installation"
@@ -1881,18 +1810,26 @@ msgid ""
 "<https://docs.qgis.org/latest/en/docs/server_manual/plugins.html>`_ about "
 "plugins on the server side."
 msgstr ""
+"Voyez la `documentation QGIS sur les plugins "
+"<https://docs.qgis.org/latest/fr/docs/server_manual/plugins.html>`_ coté "
+"serveur."
 
 #: ../../source/install/pre_requirements.rst:133
 msgid ""
 "The Lizmap server plugin, called ``Lizmap server``, **is required** in the "
 "correct folder for QGIS Server."
 msgstr ""
+"Le plugin serveur Lizmap, appelé ``Lizmap server``, **est obligatoire** dans"
+" le bon dossier pour QGIS Server."
 
 #: ../../source/install/pre_requirements.rst:136
 msgid ""
 "You must install the ``Lizmap server`` plugin. The ``Lizmap`` plugin is "
 "designed only for QGIS desktop. Do not keep both on your server."
 msgstr ""
+"Vous devez installer le plugin \"**Lizmap server**\". Le plugin **Lizmap** "
+"est déstiné uniquement à Qgis Desktop. Ne gardez pas les deux sur le "
+"serveur."
 
 #: ../../source/install/pre_requirements.rst:140
 msgid ""
@@ -1900,6 +1837,9 @@ msgid ""
 " enable the environment variable ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS`` with"
 " the value set to ``True`` on QGIS server."
 msgstr ""
+"Pour des raisons de **sécurité**, pour activer toutes les fonctionnalités "
+"côté serveur QGIS, vous devez activer la variable d'environnement "
+"``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`` sur le QGIS server."
 
 #: ../../source/install/pre_requirements.rst:143
 msgid ""
@@ -2070,12 +2010,12 @@ msgstr ""
 "ces fichiers :"
 
 #: ../../source/install/upgrade.rst:33
-msgid "var/db/jauth.db"
-msgstr "var/db/jauth.db"
+msgid "var/db/jauth.db (if it exists)"
+msgstr "var/db/jauth.db (s'il existe)"
 
 #: ../../source/install/upgrade.rst:34
-msgid "var/db/logs.db"
-msgstr "var/db/logs.db"
+msgid "var/db/logs.db (if it exists)"
+msgstr "var/db/logs.db (s'il existe)"
 
 #: ../../source/install/upgrade.rst:35
 msgid "var/config/installer.ini.php"

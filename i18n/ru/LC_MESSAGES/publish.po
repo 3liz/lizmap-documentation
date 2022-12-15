@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-13 10:28+0000\n"
+"POT-Creation-Date: 2022-12-15 14:32+0100\n"
 "PO-Revision-Date: 2018-09-07 13:32+0000\n"
 "Last-Translator: Petr Tsymbarovich <petr@tsymbarovich.ru>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/3liz-1/teams/62012/ru/)\n"
@@ -20,6 +20,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../source/substitutions.rst:7
+msgid "add_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:8
+msgid "edit_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:9
+msgid "remove_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:10
+msgid "down_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:11
+msgid "up_layer_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:12
+msgid "refresh_svg"
+msgstr ""
+
+#: ../../source/substitutions.rst:13
+msgid "properties_svg"
+msgstr ""
 
 #: ../../source/publish/configuration/actions.rst:4
 msgid "Actions"
@@ -141,10 +169,6 @@ msgid ""
 "enabled for the layer. See :ref:`attribute_table`"
 msgstr ""
 
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
-#: ../../source/shared/wfs_layer.rst:1 ../../source/shared/wfs_layer.rst:1
 #: ../../source/shared/wfs_layer.rst:1
 msgid ""
 "The layer must be published as WFS (see :ref:`publish_layer_wfs`) and the "
@@ -1150,11 +1174,6 @@ msgstr ""
 
 #: ../../source/publish/configuration/media.rst:153
 #: ../../source/publish/configuration/popup.rst:67
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "id"
 msgstr ""
@@ -2300,7 +2319,7 @@ msgstr ""
 #: ../../source/publish/configuration/popup.rst:243
 msgid ""
 "To display some color with HTML according to the value of a field, you can "
-"use this QGIS expression :"
+"use this QGIS expression above :"
 msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:250
@@ -3127,7 +3146,7 @@ msgstr ""
 msgid "This section shows how to customize Lizmap with some lines of code."
 msgstr ""
 
-#: ../../source/publish/customization/javascript.rst:1
+#: ../../source/publish/customization/javascript.rst-1
 msgid "js,script,javascript,code"
 msgstr ""
 
@@ -3256,7 +3275,6 @@ msgid "Event name"
 msgstr ""
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "Description"
 msgstr ""
 
@@ -3377,10 +3395,6 @@ msgid "Fired when a layer style has been changed"
 msgstr ""
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType"
 msgstr ""
 
@@ -3454,7 +3468,6 @@ msgstr ""
 msgid "Fired when a layer feature has been created with the edition tool"
 msgstr ""
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "layerId"
 msgstr ""
@@ -3554,7 +3567,6 @@ msgid ""
 msgstr ""
 
 #: ../../source/publish/customization/javascript.rst:1
-#: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | featureIds | updateDrawing"
 msgstr ""
 
@@ -3604,7 +3616,6 @@ msgid ""
 "entering some characters in the search text input."
 msgstr ""
 
-#: ../../source/publish/customization/javascript.rst:1
 #: ../../source/publish/customization/javascript.rst:1
 msgid "featureType | updateDrawing"
 msgstr ""
@@ -3983,11 +3994,7 @@ msgstr ""
 msgid "For setting a atlas layer:"
 msgstr ""
 
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
-#: ../../source/shared/add_layer.rst:1 ../../source/shared/add_layer.rst:1
+#: ../../source/shared/add_layer.rst:1
 msgid "Click the |add_layer_svg| button."
 msgstr ""
 
@@ -4041,37 +4048,18 @@ msgstr ""
 msgid "you can select the duration between each step"
 msgstr ""
 
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
-#: ../../source/shared/edit_layer.rst:1 ../../source/shared/edit_layer.rst:1
+#: ../../source/shared/edit_layer.rst:1
 msgid ""
 "To edit a layer in the table, select it and click the |edit_layer_svg| "
 "button or double click on the row."
 msgstr ""
 
 #: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
-#: ../../source/shared/remove_layer.rst:1
 msgid ""
 "To remove a layer from the table, select it and click the |remove_layer_svg|"
 " button."
 msgstr ""
 
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
-#: ../../source/shared/move_up_down_layer.rst:1
 #: ../../source/shared/move_up_down_layer.rst:1
 msgid ""
 "To move a layer up or down, select it and click |down_layer_svg| or "
@@ -4190,8 +4178,7 @@ msgid ""
 "Let the :guilabel:`Hide layer in the list` unchecked. This is for relation."
 msgstr ""
 
-#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
-#: ../../source/shared/field_alias.rst:1 ../../source/shared/field_alias.rst:1
+#: ../../source/shared/field_alias.rst:1
 msgid ""
 "Fields will be displayed with their alias if it's defined. See "
 ":ref:`alias_on_fields`."
@@ -4631,6 +4618,12 @@ msgstr ""
 msgid "**Aggregation**"
 msgstr ""
 
+#: ../../source/publish/lizmap_plugin/dataviz.rst-1
+msgid ""
+"For a few types of charts like bar or pie, you can chose to aggregate the "
+"data in"
+msgstr ""
+
 #: ../../source/publish/lizmap_plugin/dataviz.rst:67
 msgid ""
 "the graph. There are a few aggregate functions available - average(avg), "
@@ -4651,7 +4644,7 @@ msgstr ""
 msgid ""
 "**Layout** : The layout can be customized. It must be a JSON dictionary. You"
 " can read the documentation of Plotly documentation about the layout "
-"configuration https://plotly.com/javascript/reference/layout/"
+"configuration https://plotly.com/javascript/reference/#layout"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:72
@@ -4710,7 +4703,7 @@ msgstr ""
 msgid ""
 "The layout option, allows you to configure many options by writing up a JSON"
 " object. See the full reference: "
-"https://plotly.com/javascript/reference/layout/"
+"https://plotly.com/javascript/reference/#layout"
 msgstr ""
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:126
