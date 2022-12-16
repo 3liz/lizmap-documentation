@@ -7,7 +7,7 @@ SPHINXBUILD?= .venv/bin/sphinx-build
 SPHINXINTL?= .venv/bin/sphinx-intl
 PAPER         =
 BUILDDIR      = build
-TRANSLATIONS  = es fi fr it ja pt ru
+TRANSLATIONS  = es fi fr it ja pt ru cs uk_UA
 LANGUAGES     = en $(TRANSLATIONS)
 
 # Internal variables.
