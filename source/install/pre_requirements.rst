@@ -156,7 +156,7 @@ This variable will **expose** server settings such as QGIS server version, which
     # Apache FCGI example 
     FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
     # nginx fastcgi 
-    fastcgi_param  QGIS_SERVER_LIZMAP_REVEAL_SETTINGS  1;
+    fastcgi_param  QGIS_SERVER_LIZMAP_REVEAL_SETTINGS  True;
 
 
 .. warning::
