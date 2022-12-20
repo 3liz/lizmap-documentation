@@ -132,6 +132,16 @@ on the server side.
 
 The Lizmap server plugin, called ``Lizmap server``, **is required** in the correct folder for QGIS Server.
 
+With `QGIS-Plugin-Manager <https://pypi.org/project/qgis-plugin-manager/>`_ :
+
+.. code-block:: bash
+
+    # Not correct, this plugin is only for QGIS desktop
+    # qgis-plugin-manager install Lizmap
+
+    # Correct, the plugin designed for QGIS server
+    qgis-plugin-manager install 'Lizmap server'
+
 .. warning::
     You must install the ``Lizmap server`` plugin. The ``Lizmap`` plugin is designed only for QGIS desktop. Do not
     keep both on your server.
