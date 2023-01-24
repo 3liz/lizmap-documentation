@@ -11,18 +11,18 @@ Upgrading from Lizmap lower than 3.5 versions
 =============================================
 
 You should first migrate to 3.5. See `documentation of Lizmap 3.5 <https://docs.lizmap.com/3.5/en/install/upgrade.html>`_.
-Then you could migrate to 3.6
+Then you could migrate to 3.7
 
-Upgrading from Lizmap 3.5 version
-=================================
+Upgrading from Lizmap 3.5 or 3.6 version
+========================================
 
-Here is how to upgrade from Lizmap 3.5.
+Here is how to upgrade from Lizmap 3.5 or 3.6
 
 Data backup
 --------------------------------------------------------------
 
 Backup your data and configuration files into a directory (ex: ``/tmp``) with the ``lizmap/install/backup.sh``
-script of Lizmap 3.5.
+script of Lizmap 3.5 or 3.6.
 
 .. code-block:: bash
 
