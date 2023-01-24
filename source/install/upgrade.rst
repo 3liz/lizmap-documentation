@@ -56,12 +56,13 @@ Note: there is not anymore a ``lib/`` directory.
 Launch the installer
 --------------------------------------------------------------
 
-You have to launch the installer, it will upgrade some stuff: database tables,
-configuration etc..
+You have to launch the configurator (it will upgrade some configuration files),
+and then the installer, which will upgrade some stuff: database tables, data etc..
 
 .. code-block:: bash
 
    sudo lizmap/install/clean_vartmp.sh
+   php lizmap/install/configurator.php
    php lizmap/install/installer.php
 
 
