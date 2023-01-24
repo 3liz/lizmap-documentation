@@ -11,7 +11,7 @@ Upgrading from Lizmap lower than 3.5 versions
 =============================================
 
 You should first migrate to 3.5. See `documentation of Lizmap 3.5 <https://docs.lizmap.com/3.5/en/install/upgrade.html>`_.
-Then you could migrate to 3.6
+Then you could migrate to 3.6.
 
 Upgrading from Lizmap 3.5 version
 =================================
@@ -168,3 +168,58 @@ into :file:`lizmap/var/config/profiles.ini.php` as before, like this :
     database="var:db/logs.db"
 
 And Lizmap should work well, but still with Sqlite.
+
+
+Upgrading to a minor version of Lizmap 3.6
+==========================================
+
+A new version of Lizmap 3.6 may be released (3.6.1, 3.6.2 etc.). You should
+upgrade your existing Lizmap 3.6 instance in order to make use of improvements
+and bug fixes.
+
+Backup
+--------------------------------------------------------------
+
+In case the upgrade fail, it is a good thing to backup the entire lizmap
+directory.
+
+.. code-block:: bash
+
+   cp -a lizmap lizmap.bak
+
+if the upgrade fail, delete the lizmap directory and launch:
+
+.. code-block:: bash
+
+   mv lizmap.bak lizmap
+
+Replace Lizmap files
+--------------------------------------------------------------
+
+Get the Lizmap archive by downloading an archive on the `release <https://github.com/3liz/lizmap-web-client/releases>`_ page.
+
+You can then extract the ``lizmap/`` directory from the archive, it will overwrite all files,
+except from `lizmap/var/`.
+
+Launch the installer
+--------------------------------------------------------------
+
+You have to launch the configurator (it will upgrade some configuration files if needed),
+and then the installer, which will upgrade some stuff: database tables, data etc..
+
+.. code-block:: bash
+
+   sudo lizmap/install/clean_vartmp.sh
+   php lizmap/install/configurator.php
+   php lizmap/install/installer.php
+
+Restore the rights on files, by indicating the web user and the web group used
+by the web server
+
+.. code-block:: bash
+
+   sudo lizmap/install/set_rights.sh www-data www-data
+
+Then load Lizmap into your browser, you should see your maps without errors.
+
+If this is the case, you can delete the old directory ``lizmap.bak/``.
