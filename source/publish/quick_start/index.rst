@@ -128,5 +128,4 @@ It remains to configure Lizmap Web Client to publish the maps.
   :maxdepth: 3
 
   project_for_web
-  lizmap_configuration
   publish
