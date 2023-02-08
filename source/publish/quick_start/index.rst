@@ -70,7 +70,7 @@ You should have this tree structure:
 Do the Lizmap config
 ----------------------------
 
-#. Open the Lizmap plugin window in QGIS Desktop (Lizmap green icon)
+#. Open the Lizmap plugin window in QGIS Desktop |lizmap_plugin_svg|
 #. Fill the lizmap server with the web credentials
 #. Click on the :guilabel:`Layers` tab, click on each layer and click on :guilabel:`checked`.
 #. Click on :guilabel:`Apply`
@@ -127,5 +127,4 @@ It remains to configure Lizmap Web Client to publish the maps.
 .. toctree::
   :maxdepth: 3
 
-  project_for_web
   publish
