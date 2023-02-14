@@ -28,8 +28,7 @@ Configuring the tool
 
     1. Click |add_layer_svg|
     2. Write the URL of the Lizmap Web Client server. The URL should be the main Lizmap landing page.
-    3. If possible, use a login and password of a Lizmap Web Client administrator. It will give you more information about the server.
-       This is optional.
+    3. Write the login and password of an **administrator** or a **publisher** used in the web interface to access the administration panel.
        QGIS might ask you to setup the **master password**. It's a password to protect the QGIS internal password manager. This password
        is used only on **your** computer. The Lizmap plugin is storing the login and password in the `QGIS password manager <https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-password>`_.
 
