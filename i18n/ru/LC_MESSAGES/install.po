@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2022, 3liz
+# Copyright (C) 2014-2023, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-14 14:03+0100\n"
+"POT-Creation-Date: 2023-02-28 17:59+0100\n"
 "PO-Revision-Date: 2022-08-02 09:23+0000\n"
 "Language-Team: Russian (https://www.transifex.com/3liz-1/teams/62012/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -789,7 +789,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/install/linux.rst:243
-#: ../../source/install/pre_requirements.rst:176
+#: ../../source/install/pre_requirements.rst:186
 msgid "PostgreSQL"
 msgstr ""
 
@@ -930,35 +930,35 @@ msgstr ""
 msgid "After creating configuration files, you can launch the installer"
 msgstr ""
 
-#: ../../source/install/linux.rst:405
+#: ../../source/install/linux.rst:406
 msgid ""
 "It will finished the installation, and will create all SQL tables needed by "
 "Lizmap."
 msgstr ""
 
-#: ../../source/install/linux.rst:409
+#: ../../source/install/linux.rst:410
 msgid "First test"
 msgstr ""
 
-#: ../../source/install/linux.rst:411
+#: ../../source/install/linux.rst:412
 msgid "For testing launch: ``http://localhost/lizmap`` in your browser."
 msgstr ""
 
-#: ../../source/install/linux.rst:413
+#: ../../source/install/linux.rst:414
 msgid "In case you get a ``500 - internal server error``, run again:"
 msgstr ""
 
-#: ../../source/install/linux.rst:421
+#: ../../source/install/linux.rst:422
 msgid "Replace ``localhost`` with the address or IP number of your server."
 msgstr ""
 
-#: ../../source/install/linux.rst:423
+#: ../../source/install/linux.rst:424
 msgid ""
 "In the administration panel, you should check the :guilabel:`QGIS server "
 "version` and the :guilabel:`WMS server URL` with the URL of QGIS Server."
 msgstr ""
 
-#: ../../source/install/linux.rst:426
+#: ../../source/install/linux.rst:427
 msgid ""
 "Before trying to have a QGIS project working in Lizmap, you **must** have "
 "the communication between QGIS Server and Lizmap Web Client working "
@@ -966,7 +966,7 @@ msgid ""
 "administration interface. Please read :ref:`lizmap-server-plugin`."
 msgstr ""
 
-#: ../../source/install/linux.rst:429
+#: ../../source/install/linux.rst:430
 msgid ""
 "If you didn't install the demo, you can check that you have well installed "
 "Lizmap and configured QGIS Server within Lizmap by checking the "
@@ -974,54 +974,54 @@ msgid ""
 "http://localhost/lizmap/index.php/view/app/metadata"
 msgstr ""
 
-#: ../../source/install/linux.rst:441
+#: ../../source/install/linux.rst:442
 msgid ""
 "Lizmap is accessible, without further configurations, also as WMS and WFS "
 "server from a browser:"
 msgstr ""
 
-#: ../../source/install/linux.rst:443
+#: ../../source/install/linux.rst:444
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities"
 msgstr ""
 
-#: ../../source/install/linux.rst:445
+#: ../../source/install/linux.rst:446
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&SERVICE=WFS&REQUEST=GetCapabilities"
 msgstr ""
 
-#: ../../source/install/linux.rst:447
+#: ../../source/install/linux.rst:448
 msgid "and from QGIS:"
 msgstr ""
 
-#: ../../source/install/linux.rst:449
+#: ../../source/install/linux.rst:450
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&VERSION=1.3.0&"
 msgstr ""
 
-#: ../../source/install/linux.rst:451
+#: ../../source/install/linux.rst:452
 msgid ""
 "http://localhost/lizmap/index.php/lizmap/service/?repository=montpellier&project=montpellier&"
 msgstr ""
 
-#: ../../source/install/linux.rst:454
+#: ../../source/install/linux.rst:455
 msgid ""
 "Access to the WMS and WFS servers can be limited by assigning privileges to "
 "specific repositories, see the administration section."
 msgstr ""
 
-#: ../../source/install/linux.rst:458
+#: ../../source/install/linux.rst:459
 msgid "Lizmap modules"
 msgstr ""
 
-#: ../../source/install/linux.rst:460
+#: ../../source/install/linux.rst:461
 msgid ""
 "Previously, we explained how we could add QGIS Server plugins to add more "
 "features to QGIS Server. Now that we have Lizmap Web Client up and running, "
 "we can add some Lizmap modules to add again some features."
 msgstr ""
 
-#: ../../source/install/linux.rst:463
+#: ../../source/install/linux.rst:464
 msgid ""
 "The list is available in the Lizmap "
 ":ref:`introduction<additional_lizmap_modules>`. On their GitHub repository, "
@@ -1029,11 +1029,11 @@ msgid ""
 " here are the main instructions to install a module."
 msgstr ""
 
-#: ../../source/install/linux.rst:469
+#: ../../source/install/linux.rst:470
 msgid "Installing modules with Composer"
 msgstr ""
 
-#: ../../source/install/linux.rst:471
+#: ../../source/install/linux.rst:472
 msgid ""
 "You can install modules with Composer, the package manager for PHP. Of "
 "course it is possible only if the author of the module has created a package"
@@ -1041,59 +1041,59 @@ msgid ""
 "pgmetadata-module``. The documentation of the module should indicate it."
 msgstr ""
 
-#: ../../source/install/linux.rst:476
+#: ../../source/install/linux.rst:477
 msgid ""
 "You must install Composer. See instructions on its web site "
 "http://getcomposer.org."
 msgstr ""
 
-#: ../../source/install/linux.rst:478
+#: ../../source/install/linux.rst:479
 msgid ""
 "You must create a :file:`composer.json` file into :file:`lizmap/my-"
 "packages/` by copying the :file:`composer.json.dist` from this directory. "
-"And launching a first time Compose"
+"And launching a first time Composer"
 msgstr ""
 
-#: ../../source/install/linux.rst:489
+#: ../../source/install/linux.rst:490
 msgid "Then you can install the package of the module"
 msgstr ""
 
-#: ../../source/install/linux.rst:496
+#: ../../source/install/linux.rst:497
 msgid "If you want to install a new version of the module, execute:"
 msgstr ""
 
-#: ../../source/install/linux.rst:502 ../../source/install/linux.rst:547
+#: ../../source/install/linux.rst:503 ../../source/install/linux.rst:548
 msgid ""
 "Read the documentation of the module to know if there are additional steps "
 "to configure it."
 msgstr ""
 
-#: ../../source/install/linux.rst:505 ../../source/install/linux.rst:550
+#: ../../source/install/linux.rst:506 ../../source/install/linux.rst:551
 msgid ""
 "You will have at least to launch the configurator of the module with this "
 "command:"
 msgstr ""
 
-#: ../../source/install/linux.rst:513
+#: ../../source/install/linux.rst:514
 msgid "To finish the installation, run again the installer of Lizmap:"
 msgstr ""
 
-#: ../../source/install/linux.rst:523
+#: ../../source/install/linux.rst:524
 msgid "installing modules without Composer"
 msgstr ""
 
-#: ../../source/install/linux.rst:525
+#: ../../source/install/linux.rst:526
 msgid ""
 "To install a module without Composer, retrieve the zip file of the module."
 msgstr ""
 
-#: ../../source/install/linux.rst:527
+#: ../../source/install/linux.rst:528
 msgid ""
 "Extract the module into :file:`lizmap/lizmap-modules/`. For instance, for "
 "the module ``PgMetadata`` :"
 msgstr ""
 
-#: ../../source/install/linux.rst:559
+#: ../../source/install/linux.rst:560
 msgid "Run the installation :"
 msgstr ""
 
@@ -1187,7 +1187,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/install/pre_requirements.rst:56
-msgid "The **Lizmap server** plugin is required."
+msgid "The **Lizmap server** plugin **is required**."
 msgstr ""
 
 #: ../../source/install/pre_requirements.rst:58
@@ -1376,20 +1376,26 @@ msgid ""
 "correct folder for QGIS Server."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:136
+#: ../../source/install/pre_requirements.rst:135
+msgid ""
+"With `QGIS-Plugin-Manager <https://pypi.org/project/qgis-plugin-manager/>`_ "
+":"
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:146
 msgid ""
 "You must install the ``Lizmap server`` plugin. The ``Lizmap`` plugin is "
 "designed only for QGIS desktop. Do not keep both on your server."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:140
+#: ../../source/install/pre_requirements.rst:150
 msgid ""
 "For **security** reason, to enable the API on the QGIS server side, you must"
 " enable the environment variable ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS`` with"
 " the value set to ``True`` on QGIS server."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:143
+#: ../../source/install/pre_requirements.rst:153
 msgid ""
 "You **must** be ensured that this API "
 "``http://your.qgis.server.url/lizmap/server.json`` is protected on your "
@@ -1402,23 +1408,23 @@ msgid ""
 "check user permissions."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:149
+#: ../../source/install/pre_requirements.rst:159
 msgid ""
 "This variable will **expose** server settings such as QGIS server version, "
 "which is used by Lizmap Web Client."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:152
+#: ../../source/install/pre_requirements.rst:162
 msgid "Administration panel"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:154
+#: ../../source/install/pre_requirements.rst:164
 msgid ""
 "If your are using QGIS Server with **FCGI**, the Lizmap API URL **must** be "
 "empty."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:156
+#: ../../source/install/pre_requirements.rst:166
 msgid ""
 "Otherwise, if you are using `Py-QGIS-Server <https://docs.3liz.org/py-qgis-"
 "server/>`_, the Lizmap API URL **must** be configured in the administration "
@@ -1426,7 +1432,7 @@ msgid ""
 "well."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:159
+#: ../../source/install/pre_requirements.rst:169
 msgid ""
 "Starting from Py-QGIS-Server version 1.8.4, it's possible to enable the "
 "Lizmap API endpoint with the environment variable "
@@ -1434,17 +1440,17 @@ msgid ""
 "your configuration file :"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:170
+#: ../../source/install/pre_requirements.rst:180
 msgid ""
 "Then, with Py-QGIS-Server, if your URL for OWS is `http://map:8080/ows/`, it"
 " means the URL for the Lizmap API endpoint is `http://map:8080/lizmap/`."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:178
+#: ../../source/install/pre_requirements.rst:188
 msgid "PostgreSQL can be used for **three** different purposes in Lizmap :"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:180
+#: ../../source/install/pre_requirements.rst:190
 msgid ""
 "To store GIS data. **No** configuration is needed on the Lizmap Web Client "
 "server side, **only** the PostgreSQL server must be accessible from the "
@@ -1453,13 +1459,13 @@ msgid ""
 "prerequisites`."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:183
+#: ../../source/install/pre_requirements.rst:193
 msgid ""
 "To store Lizmap Web Client users and user actions. Lizmap uses tables. This "
 "setting must be done when **installing** Lizmap."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:184
+#: ../../source/install/pre_requirements.rst:194
 msgid ""
 "To use `lizmap_search`, see :ref:`postgresql-lizmap-search`. This setting on"
 " the Lizmap server can be set when you need it."
@@ -1487,138 +1493,208 @@ msgstr ""
 msgid ""
 "You should first migrate to 3.5. See `documentation of Lizmap 3.5 "
 "<https://docs.lizmap.com/3.5/en/install/upgrade.html>`_. Then you could "
-"migrate to 3.6"
+"migrate to 3.6."
 msgstr ""
 
 #: ../../source/install/upgrade.rst:17
-msgid "Upgrading from Lizmap 3.5 version"
+msgid "Upgrading from Lizmap 3.5 with the migration script"
 msgstr ""
 
 #: ../../source/install/upgrade.rst:19
+msgid ""
+"Since Lizmap 3.6.2, there is a script ``lizmap/install/migrate_from_3_5.sh``"
+" that helps a lot to migrate from Lizmap 3.5. It manipulates lizmap files, "
+"and upgrade automatically some additional modules."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:23
+msgid ""
+"Get the Lizmap 3.6 archive by downloading an archive on the `release "
+"<https://github.com/3liz/lizmap-web-client/releases>`_ page."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:25
+msgid ""
+"You should then rename the ``lizmap/`` directory of Lizmap 3.5 to "
+"``lizmap35.bak/`` for example:"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:32
+msgid ""
+"Then extract the ``lizmap/`` directory from the archive, so it will be "
+"become the new ``lizmap/`` directory."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:34
+msgid ""
+"Then launch ``lizmap/install/migrate_from_3_5.sh`` by given the path to the "
+"previous lizmap directory. Example:"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:43
+msgid "Then, you can launch the installer"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:50
+msgid ""
+"If there is no error, you should see Lizmap 3.6 in action into your browser."
+" You can then delete ``lizmap35.bak`` and ``lib/`` (there is not anymore a "
+"``lib/`` directory into Lizmap 3.6)."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:53
+msgid ""
+"If there are some error during the upgrade, and you don't find a solution, "
+"just delete the new ``lizmap`` directory, and rename the old ``lizmap`` "
+"directory."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:61
+msgid ""
+"You can use Lizmap 3.5 again, or try the manual upgrade described below."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:64
+msgid "Upgrading manually from Lizmap 3.5"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:66
 msgid "Here is how to upgrade from Lizmap 3.5."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:22
+#: ../../source/install/upgrade.rst:69
 msgid "Data backup"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:24
+#: ../../source/install/upgrade.rst:71
 msgid ""
 "Backup your data and configuration files into a directory (ex: ``/tmp``) "
 "with the ``lizmap/install/backup.sh`` script of Lizmap 3.5."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:31
+#: ../../source/install/upgrade.rst:78
 msgid "If you want to backup by hand, you should backup at least these files:"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:33
+#: ../../source/install/upgrade.rst:80
 msgid "var/db/jauth.db (if it exists)"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:34
+#: ../../source/install/upgrade.rst:81
 msgid "var/db/logs.db (if it exists)"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:35
+#: ../../source/install/upgrade.rst:82
 msgid "var/config/installer.ini.php"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:36
+#: ../../source/install/upgrade.rst:83
 msgid "var/config/liveConfig.ini.php"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:37
+#: ../../source/install/upgrade.rst:84
 msgid "var/config/localframework.ini.php (if it exists)"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:38
+#: ../../source/install/upgrade.rst:85
 msgid "var/config/lizmapConfig.ini.php"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:39
+#: ../../source/install/upgrade.rst:86
 msgid "var/config/localconfig.ini.php"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:40
+#: ../../source/install/upgrade.rst:87
 msgid "var/config/profiles.ini.php"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:44
+#: ../../source/install/upgrade.rst:91 ../../source/install/upgrade.rst:252
 msgid "Replace Lizmap files"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:46
+#: ../../source/install/upgrade.rst:93 ../../source/install/upgrade.rst:254
 msgid ""
 "Get the Lizmap archive by downloading an archive on the `release "
 "<https://github.com/3liz/lizmap-web-client/releases>`_ page."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:48
+#: ../../source/install/upgrade.rst:95
 msgid "You should then :"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:50
+#: ../../source/install/upgrade.rst:97
 msgid "rename the ``lizmap/`` directory to ``lizmap.bak/`` for example"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:51
+#: ../../source/install/upgrade.rst:98
 msgid ""
 "extract the ``lizmap/`` directory from the archive, so it will be become the"
 " new ``lizmap/`` directory."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:52
+#: ../../source/install/upgrade.rst:99
 msgid ""
 "execute the script ``lizmap/install/restore.sh /tmp`` or reinstall by hand "
 "the files you backup."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:54
+#: ../../source/install/upgrade.rst:101
 msgid "Note: there is not anymore a ``lib/`` directory."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:57
+#: ../../source/install/upgrade.rst:105
+msgid "Updating additional modules"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:107
+msgid ""
+"If you installed some modules into ``lizmap/my-packages`` or into "
+"``lizmap/lizmap-modules``, you must update them. There are probably new "
+"versions for Lizmap 3.6. Read documentation of these modules."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:112 ../../source/install/upgrade.rst:260
 msgid "Launch the installer"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:59
+#: ../../source/install/upgrade.rst:114
 msgid ""
-"You have to launch the installer, it will upgrade some stuff: database "
-"tables, configuration etc.."
+"You have to launch the configurator (it will upgrade some configuration "
+"files), and then the installer, which will upgrade some stuff: database "
+"tables, data etc.."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:69
+#: ../../source/install/upgrade.rst:125
 msgid "Cleanup and test"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:71
+#: ../../source/install/upgrade.rst:127
 msgid "You should then delete all cache and temporary files:"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:77
+#: ../../source/install/upgrade.rst:133
 msgid ""
 "Then you should call the script that sets rights on files. Parameters are "
 "the web user and the web group used by the web server to execute Lizmap. On "
 "a Debian server, it is often www-data."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:86
+#: ../../source/install/upgrade.rst:142 ../../source/install/upgrade.rst:278
 msgid ""
 "Then load Lizmap into your browser, you should see your maps without errors."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:88
+#: ../../source/install/upgrade.rst:144
 msgid ""
 "If this is the case, you can delete the old directories ``lib/`` and "
 "``lizmap.bak/``."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:92
+#: ../../source/install/upgrade.rst:148
 msgid "Migrating from Sqlite to Postgresql"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:94
+#: ../../source/install/upgrade.rst:150
 msgid ""
 "You may have installed Lizmap with Sqlite. You should then have these files "
 ":file:`lizmap/var/db/jauth.db` and :file:`lizmap/var/db/logs.db`, where some"
@@ -1626,13 +1702,13 @@ msgid ""
 "configuration into :file:`lizmap/var/config/profiles.ini.php`:"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:110
+#: ../../source/install/upgrade.rst:166
 msgid ""
 "It you have a such configuration, you can migrate data to a Postgresql "
 "database."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:112
+#: ../../source/install/upgrade.rst:168
 msgid ""
 "First, create a Postgresql database, and then change the configuration into "
 ":file:`lizmap/var/config/profiles.ini.php`, by setting access parameters to "
@@ -1640,20 +1716,20 @@ msgid ""
 "database, for example ``lizmap`` , if it contains already some tables."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:118
+#: ../../source/install/upgrade.rst:174
 msgid "For example :"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:140
+#: ../../source/install/upgrade.rst:196
 msgid ""
 "See the chapter about installation to know more about these parameters."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:142
+#: ../../source/install/upgrade.rst:198
 msgid "Then you can launch these scripts which will migrate the data."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:150
+#: ../../source/install/upgrade.rst:206
 msgid ""
 "If there are no errors, you can then go onto lizmap with your browser, and "
 "check that you can authenticate yourself. You should see also the list of "
@@ -1661,15 +1737,63 @@ msgid ""
 "files jauth.db and logs.db and you can delete them."
 msgstr ""
 
-#: ../../source/install/upgrade.rst:155
+#: ../../source/install/upgrade.rst:211
 msgid ""
 "If something goes wrong and you cannot fix the issue, revert the database "
 "access into :file:`lizmap/var/config/profiles.ini.php` as before, like this "
 ":"
 msgstr ""
 
-#: ../../source/install/upgrade.rst:169
+#: ../../source/install/upgrade.rst:225
 msgid "And Lizmap should work well, but still with Sqlite."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:229
+msgid "Upgrading to a minor version of Lizmap 3.6"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:231
+msgid ""
+"A new version of Lizmap 3.6 may be released (3.6.1, 3.6.2 etc.). You should "
+"upgrade your existing Lizmap 3.6 instance in order to make use of "
+"improvements and bug fixes."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:236
+msgid "Backup"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:238
+msgid ""
+"In case the upgrade fail, it is a good thing to backup the entire lizmap "
+"directory before doing anything."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:245
+msgid "if the upgrade fail, delete the lizmap directory and launch:"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:256
+msgid ""
+"You can then extract the ``lizmap/`` directory from the archive, it will "
+"overwrite all files, except from `lizmap/var/`."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:262
+msgid ""
+"You have to launch the configurator (it will upgrade some configuration "
+"files if needed), and then the installer, which will upgrade some stuff: "
+"database tables, data etc.."
+msgstr ""
+
+#: ../../source/install/upgrade.rst:271
+msgid ""
+"Restore the rights on files, by indicating the web user and the web group "
+"used by the web server"
+msgstr ""
+
+#: ../../source/install/upgrade.rst:280
+msgid "If this is the case, you can delete the old directory ``lizmap.bak/``."
 msgstr ""
 
 #: ../../source/install/windows.rst:3

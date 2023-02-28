@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2022, 3liz
+# Copyright (C) 2014-2023, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-14 14:03+0100\n"
+"POT-Creation-Date: 2023-02-28 17:59+0100\n"
 "PO-Revision-Date: 2022-08-02 09:23+0000\n"
 "Last-Translator: Jiří Podhorecký, 2023\n"
 "Language-Team: Czech (https://www.transifex.com/3liz-1/teams/62012/cs/)\n"
@@ -3973,7 +3973,7 @@ msgid "This section shows how to customize Lizmap with some lines of code."
 msgstr ""
 "V této části si ukážeme, jak pomocí několika řádků kódu upravit Lizmap."
 
-#: ../../source/publish/customization/javascript.rst-1
+#: ../../source/publish/customization/javascript.rst:1
 msgid "js,script,javascript,code"
 msgstr "js,script,javascript,code"
 
@@ -5753,11 +5753,11 @@ msgstr "V závislosti na druhu grafu jsou nyní k dispozici různé možnosti."
 msgid ""
 "**Layout** : The layout can be customized. It must be a JSON dictionary. You"
 " can read the documentation of Plotly documentation about the layout "
-"configuration https://plotly.com/javascript/reference/#layout"
+"configuration https://plotly.com/javascript/reference/layout/"
 msgstr ""
 "**Rozložení** : Rozložení lze přizpůsobit. Musí to být slovník JSON. O "
 "konfiguraci rozvržení si můžete přečíst v dokumentaci Plotly "
-"https://plotly.com/javascript/reference/#layout."
+"https://plotly.com/javascript/reference/layout/."
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:72
 msgid ""
@@ -5832,10 +5832,10 @@ msgstr "Rozvržení JSON"
 msgid ""
 "The layout option, allows you to configure many options by writing up a JSON"
 " object. See the full reference: "
-"https://plotly.com/javascript/reference/#layout"
+"https://plotly.com/javascript/reference/layout/"
 msgstr ""
 "Možnost rozvržení umožňuje konfigurovat mnoho možností pomocí zápisu objektu"
-" JSON. Viz úplný odkaz: https://plotly.com/javascript/reference/#layout"
+" JSON. Viz úplný odkaz: https://plotly.com/javascript/reference/layout/"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:126
 msgid ""
@@ -7034,25 +7034,17 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/information.rst:31
 msgid ""
-"If possible, use a login and password of a Lizmap Web Client administrator. "
-"It will give you more information about the server. This is optional. QGIS "
-"might ask you to setup the **master password**. It's a password to protect "
-"the QGIS internal password manager. This password is used only on **your** "
-"computer. The Lizmap plugin is storing the login and password in the `QGIS "
-"password manager "
+"Write the login and password of an **administrator** or a **publisher** used"
+" in the web interface to access the administration panel. QGIS might ask you"
+" to setup the **master password**. It's a password to protect the QGIS "
+"internal password manager. This password is used only on **your** computer. "
+"The Lizmap plugin is storing the login and password in the `QGIS password "
+"manager "
 "<https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-"
 "password>`_."
 msgstr ""
-"Pokud je to možné, použijte přihlašovací jméno a heslo správce webového "
-"klienta Lizmap. Získáte tak více informací o serveru. To je nepovinné. QGIS "
-"vás může požádat o nastavení **hlavního hesla**. Jedná se o heslo, které "
-"chrání interního správce hesel QGIS. Toto heslo se používá pouze na "
-"**vašem** počítači. Zásuvný modul Lizmap ukládá přihlašovací jméno a heslo "
-"do `správce hesel QGIS "
-"<https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-"
-"password>`_."
 
-#: ../../source/publish/lizmap_plugin/information.rst:37
+#: ../../source/publish/lizmap_plugin/information.rst:36
 msgid ""
 "Do not use the any URL redirection. For instance, https://demo.lizmap.com/ "
 "is a redirection to https://demo.lizmap.com/lizmap/. Only the second one "
@@ -7062,11 +7054,11 @@ msgstr ""
 "přesměrování na https://demo.lizmap.com/lizmap/. Fungovat bude pouze druhé z"
 " nich."
 
-#: ../../source/publish/lizmap_plugin/information.rst:41
+#: ../../source/publish/lizmap_plugin/information.rst:40
 msgid "Request for support"
 msgstr "Žádost o podporu"
 
-#: ../../source/publish/lizmap_plugin/information.rst:43
+#: ../../source/publish/lizmap_plugin/information.rst:42
 msgid ""
 "When requesting support on a website, it might be required or highly "
 "recommended to copy/paste versions used on your server. This helps a lot to "
@@ -7080,7 +7072,7 @@ msgstr ""
 "opravenou chybu. Proto byste měli mít svůj server dostupný ve výše uvedené "
 "tabulce **s** přihlášením správce."
 
-#: ../../source/publish/lizmap_plugin/information.rst:47
+#: ../../source/publish/lizmap_plugin/information.rst:46
 msgid ""
 "Then, right-click on your server, then :menuselection:`Copy all versions in "
 "your clipboard for a support request…`. You can go back on your support "
@@ -7091,7 +7083,7 @@ msgstr ""
 "podporu...`. Můžete se vrátit zpět na žádost o podporu a provést kliknutí "
 "pravým tlačítkem myši a vložením."
 
-#: ../../source/publish/lizmap_plugin/information.rst:51
+#: ../../source/publish/lizmap_plugin/information.rst:50
 msgid ""
 "When clicking in the QGIS plugin, you might have some actions displayed **in"
 " a popup**. You **should** check these actions, like to be sure to provide "
