@@ -13,8 +13,55 @@ Upgrading from Lizmap lower than 3.5 versions
 You should first migrate to 3.5. See `documentation of Lizmap 3.5 <https://docs.lizmap.com/3.5/en/install/upgrade.html>`_.
 Then you could migrate to 3.6.
 
-Upgrading from Lizmap 3.5 version
-=================================
+Upgrading from Lizmap 3.5 with the migration script
+===================================================
+
+Since Lizmap 3.6.2, there is a script ``lizmap/install/migrate_from_3_5.sh``
+that helps a lot to migrate from Lizmap 3.5. It manipulates lizmap files, and
+upgrade automatically some additional modules.
+
+Get the Lizmap 3.6 archive by downloading an archive on the `release <https://github.com/3liz/lizmap-web-client/releases>`_ page.
+
+You should then rename the ``lizmap/`` directory of Lizmap 3.5 to ``lizmap35.bak/`` for example:
+
+.. code-block:: bash
+
+   mv lizmap lizmap35.bak
+
+
+Then extract the ``lizmap/`` directory from the archive, so it will be become the new ``lizmap/`` directory.
+
+Then launch ``lizmap/install/migrate_from_3_5.sh`` by given the path to the previous
+lizmap directory. Example:
+
+
+.. code-block:: bash
+
+    cd lizmap/install
+    ./migrate_from_3_5.sh ../../lizmap35.bak
+
+Then, you can launch the installer
+
+.. code-block:: bash
+
+    php installer.php -v
+    sudo clean_vartmp.sh
+
+If there is no error, you should see Lizmap 3.6 in action into your browser.
+You can then delete ``lizmap35.bak`` and ``lib/`` (there is not anymore a ``lib/`` directory into Lizmap 3.6).
+
+If there are some error during the upgrade, and you don't find a solution,
+just delete the new ``lizmap`` directory, and rename the old ``lizmap`` directory.
+
+.. code-block:: bash
+
+   mv lizmap lizmap36.bak
+   mv lizmap35.bak lizmap
+
+You can use Lizmap 3.5 again, or try the manual upgrade described below.
+
+Upgrading manually from Lizmap 3.5
+==================================
 
 Here is how to upgrade from Lizmap 3.5.
 
@@ -53,6 +100,14 @@ You should then :
 
 Note: there is not anymore a ``lib/`` directory.
 
+
+Updating additional modules
+----------------------------
+
+If you installed some modules into ``lizmap/my-packages`` or into ``lizmap/lizmap-modules``, you must
+update them. There are probably new versions for Lizmap 3.6. Read documentation of these modules.
+
+
 Launch the installer
 --------------------------------------------------------------
 
@@ -90,7 +145,7 @@ If this is the case, you can delete the old directories ``lib/`` and ``lizmap.ba
 
 
 Migrating from Sqlite to Postgresql
------------------------------------
+===================================
 
 You may have installed Lizmap with Sqlite. You should then have these files
 :file:`lizmap/var/db/jauth.db` and :file:`lizmap/var/db/logs.db`, where
@@ -178,10 +233,10 @@ upgrade your existing Lizmap 3.6 instance in order to make use of improvements
 and bug fixes.
 
 Backup
---------------------------------------------------------------
+---------
 
 In case the upgrade fail, it is a good thing to backup the entire lizmap
-directory.
+directory before doing anything.
 
 .. code-block:: bash
 

@@ -53,7 +53,7 @@ Some plugins can be added to QGIS Server. Please check the `QGIS Server document
 about plugins on the server side.
 
 .. warning::
-    The **Lizmap server** plugin is required.
+    The **Lizmap server** plugin **is required**.
 
 Plugins listed below will enable some features in Lizmap Web Client.
 

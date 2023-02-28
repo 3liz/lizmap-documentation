@@ -400,6 +400,7 @@ After creating configuration files, you can launch the installer
 
 .. code-block:: bash
 
+   php lizmap/install/configurator.php
    php lizmap/install/installer.php
 
 It will finished the installation, and will create all SQL tables needed by Lizmap.
@@ -477,7 +478,7 @@ You must install Composer. See instructions on its web site http://getcomposer.o
 
 You must create a :file:`composer.json` file into :file:`lizmap/my-packages/`
 by copying the :file:`composer.json.dist` from this directory. And launching
-a first time Compose
+a first time Composer
 
 
 .. code-block:: bash
