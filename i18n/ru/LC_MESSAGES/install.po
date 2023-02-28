@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-09 16:51+0000\n"
+"POT-Creation-Date: 2022-12-14 14:03+0100\n"
 "PO-Revision-Date: 2022-08-02 09:23+0000\n"
 "Language-Team: Russian (https://www.transifex.com/3liz-1/teams/62012/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -789,7 +789,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/install/linux.rst:243
-#: ../../source/install/pre_requirements.rst:174
+#: ../../source/install/pre_requirements.rst:176
 msgid "PostgreSQL"
 msgstr ""
 
@@ -1125,8 +1125,8 @@ msgstr ""
 
 #: ../../source/install/pre_requirements.rst:21
 msgid ""
-"Follow the QGIS Documentation how to install QGIS Server : "
-"https://docs.qgis.org/latest/en/docs/server_manual/"
+"Follow the `QGIS Server documentation on how to install QGIS Server "
+"<https://docs.qgis.org/latest/en/docs/server_manual/>`_."
 msgstr ""
 
 #: ../../source/install/pre_requirements.rst:23
@@ -1180,208 +1180,216 @@ msgstr ""
 
 #: ../../source/install/pre_requirements.rst:52
 msgid ""
-"Some plugins can be added to QGIS Server. This will enable some features in "
-"Lizmap. It's not compulsory but in some situations, it's better."
+"Some plugins can be added to QGIS Server. Please check the `QGIS Server "
+"documentation "
+"<https://docs.qgis.org/latest/en/docs/server_manual/plugins.html>`_ about "
+"plugins on the server side."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:55
-msgid ""
-"Either you should setup the ``QGIS_PLUGINPATH`` environment variable during "
-"the installation of QGIS Server or use the default one provided by QGIS. "
-"https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-"
-"variables"
+#: ../../source/install/pre_requirements.rst:56
+msgid "The **Lizmap server** plugin is required."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:58
+msgid "Plugins listed below will enable some features in Lizmap Web Client."
 msgstr ""
 
 #: ../../source/install/pre_requirements.rst:60
+msgid ""
+"Either you should setup the ``QGIS_PLUGINPATH`` environment variable during "
+"the installation of QGIS Server or use the `default one provided by QGIS "
+"<https://docs.qgis.org/latest/en/docs/server_manual/config.html#environment-"
+"variables>`_."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:64
 msgid ""
 "To manage QGIS Server plugins, we encourage you to use **qgis-plugin-"
 "manager**, a CLI tool to install and upgrade plugins. "
 "https://pypi.org/project/qgis-plugin-manager/"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:63
+#: ../../source/install/pre_requirements.rst:67
 msgid "AtlasPrint"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:65
+#: ../../source/install/pre_requirements.rst:69
 msgid "To enable the PDF based on a QGIS Layout Atlas"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:66
+#: ../../source/install/pre_requirements.rst:70
 msgid "https://github.com/3liz/qgis-atlasprint"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:68
+#: ../../source/install/pre_requirements.rst:72
 msgid "Cadastre"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:70
+#: ../../source/install/pre_requirements.rst:74
 msgid "French use-case only"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:71
+#: ../../source/install/pre_requirements.rst:75
 msgid "Needed for the Lizmap Cadastre module"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:72
+#: ../../source/install/pre_requirements.rst:76
 msgid "https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:74
+#: ../../source/install/pre_requirements.rst:78
 msgid "Lizmap server"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:76
+#: ../../source/install/pre_requirements.rst:80
 msgid ""
 "Lizmap **is not only** a PHP application, there is also Python plugin for "
 "**QGIS Server** called **Lizmap server**."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:77
-#: ../../source/install/pre_requirements.rst:117
+#: ../../source/install/pre_requirements.rst:81
+#: ../../source/install/pre_requirements.rst:121
 msgid "https://github.com/3liz/qgis-lizmap-server-plugin"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:78
-msgid ""
-"The plugin is **highly** recommended, a few features won't work as expected "
-"if the plugin is not installed or not upgraded."
+#: ../../source/install/pre_requirements.rst:82
+msgid "The plugin is **required**."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:79
+#: ../../source/install/pre_requirements.rst:83
 msgid ""
 "**Important**, read below for more information the Lizmap QGIS Server "
 "plugin. (:ref:`lizmap-server-plugin`)"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:81
+#: ../../source/install/pre_requirements.rst:85
 msgid "WfsOutputExtension"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:83
+#: ../../source/install/pre_requirements.rst:87
 msgid "To add new format when exporting vector data"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:84
+#: ../../source/install/pre_requirements.rst:88
 msgid "https://github.com/3liz/qgis-wfsOutputExtension"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:86
+#: ../../source/install/pre_requirements.rst:90
 msgid "Logging"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:88
+#: ../../source/install/pre_requirements.rst:92
 msgid "To log QGIS Servers log and to flush the cache on QGIS Server"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:89
+#: ../../source/install/pre_requirements.rst:93
 msgid "https://github.com/3liz/qgis-logging-plugin."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:90
+#: ../../source/install/pre_requirements.rst:94
 msgid "This plugin is deprecated."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:95
+#: ../../source/install/pre_requirements.rst:99
 msgid "Lizmap QGIS Server plugin"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:97
+#: ../../source/install/pre_requirements.rst:101
 msgid ""
-"Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web "
-"Client :"
+"The Lizmap QGIS Server plugin **is required** and will add some features on "
+"Lizmap Web Client :"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:99
+#: ../../source/install/pre_requirements.rst:103
 msgid "retrieve information from QGIS Server."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:101
+#: ../../source/install/pre_requirements.rst:105
 msgid ""
 "evaluate `QGIS Expressions "
 "<https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`_"
 " in forms about :"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:104
+#: ../../source/install/pre_requirements.rst:108
 msgid "constraints"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:105
+#: ../../source/install/pre_requirements.rst:109
 msgid "default value"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:106
+#: ../../source/install/pre_requirements.rst:110
 msgid "group visibility"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:107
+#: ../../source/install/pre_requirements.rst:111
 msgid "Read :ref:`edition-expressions`."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:109
+#: ../../source/install/pre_requirements.rst:113
 msgid "check User Access Rights (ACL) for features and layers :"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:111
+#: ../../source/install/pre_requirements.rst:115
 msgid "filter by polygon"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:112
+#: ../../source/install/pre_requirements.rst:116
 msgid "by attribute"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:114
+#: ../../source/install/pre_requirements.rst:118
 msgid "use the **Form** popup, read :ref:`form-popup`."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:115
+#: ../../source/install/pre_requirements.rst:119
 msgid ""
 "enable ``@lizmap_user`` and ``lizmap_user_groups`` variables in QGIS "
 "projects"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:118
+#: ../../source/install/pre_requirements.rst:122
 msgid ""
-"The plugin is not required, but a few features won't work as expected if the"
-" plugin is not installed or not upgraded"
-msgstr ""
-
-#: ../../source/install/pre_requirements.rst:119
-msgid ""
-"The name of the plugin is **Lizmap server**. Do not install the **Lizmap** "
+"The name of the plugin is ``Lizmap server``. Do not install the ``Lizmap`` "
 "plugin which is the **desktop** Python plugin."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:122
+#: ../../source/install/pre_requirements.rst:125
 msgid "Installation"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:125
+#: ../../source/install/pre_requirements.rst:128
 msgid "QGIS Server side"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:127
+#: ../../source/install/pre_requirements.rst:130
 msgid ""
-"The Lizmap server plugin must be installed in the correct folder for QGIS "
-"Server. The environment variable must be set in QGIS Server. The plugin name"
-" is **Lizmap server**."
+"Please check the `QGIS Server documentation "
+"<https://docs.qgis.org/latest/en/docs/server_manual/plugins.html>`_ about "
+"plugins on the server side."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:131
+#: ../../source/install/pre_requirements.rst:133
 msgid ""
-"You must install the \"**Lizmap server**\" plugin. The \"**Lizmap**\" plugin"
-" is designed only for QGIS desktop. Do not keep both on your server."
+"The Lizmap server plugin, called ``Lizmap server``, **is required** in the "
+"correct folder for QGIS Server."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:135
+#: ../../source/install/pre_requirements.rst:136
 msgid ""
-"For **security** reason, to enable all features on the QGIS server side, you"
-" must enable the environment variable "
-"``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`` on QGIS server."
+"You must install the ``Lizmap server`` plugin. The ``Lizmap`` plugin is "
+"designed only for QGIS desktop. Do not keep both on your server."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:138
+#: ../../source/install/pre_requirements.rst:140
+msgid ""
+"For **security** reason, to enable the API on the QGIS server side, you must"
+" enable the environment variable ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS`` with"
+" the value set to ``True`` on QGIS server."
+msgstr ""
+
+#: ../../source/install/pre_requirements.rst:143
 msgid ""
 "You **must** be ensured that this API "
 "``http://your.qgis.server.url/lizmap/server.json`` is protected on your "
@@ -1394,29 +1402,23 @@ msgid ""
 "check user permissions."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:144
+#: ../../source/install/pre_requirements.rst:149
 msgid ""
 "This variable will **expose** server settings such as QGIS server version, "
 "which is used by Lizmap Web Client."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:147
+#: ../../source/install/pre_requirements.rst:152
 msgid "Administration panel"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:149
-msgid ""
-"You **must** have the table called \"Server information\" working correctly "
-"in your administration panel before trying a QGIS project."
-msgstr ""
-
-#: ../../source/install/pre_requirements.rst:152
+#: ../../source/install/pre_requirements.rst:154
 msgid ""
 "If your are using QGIS Server with **FCGI**, the Lizmap API URL **must** be "
 "empty."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:154
+#: ../../source/install/pre_requirements.rst:156
 msgid ""
 "Otherwise, if you are using `Py-QGIS-Server <https://docs.3liz.org/py-qgis-"
 "server/>`_, the Lizmap API URL **must** be configured in the administration "
@@ -1424,7 +1426,7 @@ msgid ""
 "well."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:157
+#: ../../source/install/pre_requirements.rst:159
 msgid ""
 "Starting from Py-QGIS-Server version 1.8.4, it's possible to enable the "
 "Lizmap API endpoint with the environment variable "
@@ -1432,17 +1434,17 @@ msgid ""
 "your configuration file :"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:168
+#: ../../source/install/pre_requirements.rst:170
 msgid ""
 "Then, with Py-QGIS-Server, if your URL for OWS is `http://map:8080/ows/`, it"
 " means the URL for the Lizmap API endpoint is `http://map:8080/lizmap/`."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:176
+#: ../../source/install/pre_requirements.rst:178
 msgid "PostgreSQL can be used for **three** different purposes in Lizmap :"
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:178
+#: ../../source/install/pre_requirements.rst:180
 msgid ""
 "To store GIS data. **No** configuration is needed on the Lizmap Web Client "
 "server side, **only** the PostgreSQL server must be accessible from the "
@@ -1451,13 +1453,13 @@ msgid ""
 "prerequisites`."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:181
+#: ../../source/install/pre_requirements.rst:183
 msgid ""
 "To store Lizmap Web Client users and user actions. Lizmap uses tables. This "
 "setting must be done when **installing** Lizmap."
 msgstr ""
 
-#: ../../source/install/pre_requirements.rst:182
+#: ../../source/install/pre_requirements.rst:184
 msgid ""
 "To use `lizmap_search`, see :ref:`postgresql-lizmap-search`. This setting on"
 " the Lizmap server can be set when you need it."

@@ -8,9 +8,10 @@
 # Arnaud HANRY <arnaud.hanry@le64.fr>, 2022
 # rldhont <rldhont@gmail.com>, 2022
 # Marjorie FANGAIN, 2022
-# Nicolas Boisteault <nboisteault@gmail.com>, 2022
-# etrimaille <gustrimaille@yahoo.fr>, 2022
 # Laurent Jouanneau <dev@ljouanneau.com>, 2022
+# Nicolas Boisteault <nboisteault@gmail.com>, 2022
+# nworr, 2023
+# etrimaille <gustrimaille@yahoo.fr>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-14 14:03+0100\n"
 "PO-Revision-Date: 2022-08-02 09:23+0000\n"
-"Last-Translator: Laurent Jouanneau <dev@ljouanneau.com>, 2022\n"
+"Last-Translator: etrimaille <gustrimaille@yahoo.fr>, 2023\n"
 "Language-Team: French (https://www.transifex.com/3liz-1/teams/62012/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -634,7 +635,7 @@ msgid ""
 "are set in the QGIS project itself such as project properties, the legend, "
 "forms etc."
 msgstr ""
-"Les configurations Lizmap ne sont pas que dans le plugin QGIS Lizmap. "
+"Les configurations Lizmap ne sont pas que dans l'extension QGIS Lizmap. "
 "Quelques configurations se font aussi dans le projet QGIS, tel que les "
 "propriétés du projet, la légende, les formulaires etc."
 
@@ -677,8 +678,8 @@ msgid ""
 "this tab."
 msgstr ""
 "Si le lien est vide dans l'onglet :menuselection:`Lizmap --> Couches`, le "
-"lien dans Lizmap sera automatiquement renseigné par le plugin Lizmap défini "
-"dans cet onglet."
+"lien dans Lizmap sera automatiquement renseigné par l'extension Lizmap "
+"défini dans cet onglet."
 
 #: ../../source/publish/configuration/layer.rst:24
 msgid "You can use the |refresh_svg| button in Lizmap to pick this value."
@@ -1594,6 +1595,9 @@ msgid ""
 "have the full URL to the media, starting by ``http``. This needs to be "
 "encapsulated to some HTML, such as ``<img />`` or ``<a href></a>``."
 msgstr ""
+"Si vous utilisez une popup :guilabel:`HTML Lizmap`, ``${nom_du_champ}`` aura"
+" l'URL complète du média, en commençant par ``http``. Cela doit être "
+"encapsulé dans du HTML, tel que ``<img />`` ou <a href></a>``."
 
 #: ../../source/publish/configuration/media.rst:175
 msgid "Then if your are using a :guilabel:`qgis` popup:"
@@ -1620,6 +1624,8 @@ msgid ""
 "And for images, you need ``<img>`` (with an optional link to open it "
 "fullscreen) such as"
 msgstr ""
+"Et pour les images, vous avez besoin de ``<img>`` (avec un lien optionnel "
+"pour l'ouvrir en plein écran) tel que"
 
 #: ../../source/publish/configuration/media.rst:188
 msgid "Illustration"
@@ -1684,7 +1690,7 @@ msgid ""
 "each of them."
 msgstr ""
 "Par défaut, pour chaque couche QGIS que vous ajoutez à votre projet Lizmap, "
-"vous pouvez choisir depuis le plugin Lizmap si la visibilité de la couche "
+"vous pouvez choisir depuis l'extension Lizmap si la visibilité de la couche "
 "doit être activée (case à cocher :guilabel:`Cochée`) au démarrage de "
 "l'application. Vous devez faire attention à ne pas abuser de cette "
 "fonctionnalité, car si le projet contient par exemple 30 couches, Lizmap au "
@@ -1922,7 +1928,7 @@ msgid ""
 " downloaded. The legend of the group will be displayed."
 msgstr ""
 "Créez des groupes de couches et utilisez l'option :guilabel:`Groupe comme "
-"une couche` dans le plugin Lizmap. Généralement, une série de couches du "
+"une couche` dans l'extension Lizmap. Généralement, une série de couches du "
 "même thème général peuvent être affichée ensemble, avec un choix approprié "
 "de styles. Dans ce cas, Lizmap affichera seulement une case à cocher pour "
 "l'ensemble du groupe, et surtout il ne demandera qu'une seule série de "
@@ -2124,9 +2130,9 @@ msgid ""
 "In :menuselection:`Lizmap plugin --> Layers`, you can enable for each layer "
 "or group the cache (client and server side) for generated images."
 msgstr ""
-"Dans :menuselection:``Lizmap plugin --> Couches`, vous pouvez activer pour "
-"chaque couche ou groupe le cache (côté client et serveur) pour les images "
-"générées."
+"Dans :menuselection:``Extension Lizmap --> Couches`, vous pouvez activer "
+"pour chaque couche ou groupe le cache (côté client et serveur) pour les "
+"images générées."
 
 #: ../../source/publish/configuration/optimization.rst:83
 msgid "Server side"
@@ -2431,8 +2437,8 @@ msgid ""
 "With the plugin, you can activate popups for a **layer** or for a **group** "
 "configured with the :guilabel:`Group as layer` option."
 msgstr ""
-"Avec le plugin, vous pouvez activer des popups pour une **couche** ou pour "
-"un **groupe** configuré avec l'option :guilabel:`Group as layer`."
+"Avec l'extension, vous pouvez activer des popups pour une **couche** ou pour"
+" un **groupe** configuré avec l'option :guilabel:`Group as layer`."
 
 #: ../../source/publish/configuration/popup.rst:14
 msgid ""
@@ -2512,7 +2518,8 @@ msgid ""
 msgstr ""
 "Pour les couches ponctuelles, vous devez cliquer au milieu du point pour "
 "afficher la popup. La tolérance peut être paramétrée dans "
-":menuselection:`Plugin Lizmap --> Options de carte --> Outils de la carte`."
+":menuselection:`Extension Lizmap --> Options de carte --> Outils de la "
+"carte`."
 
 #: ../../source/publish/configuration/popup.rst:43
 msgid ""
@@ -2550,7 +2557,7 @@ msgstr "Média dans les popups"
 
 #: ../../source/publish/configuration/popup.rst:55
 msgid "See :ref:`use-in-popups` in the **media** chapter."
-msgstr ""
+msgstr "Voir :ref:`use-in-popups` dans le chapitre **média**."
 
 #: ../../source/publish/configuration/popup.rst:60
 msgid "Automatic popup"
@@ -2608,7 +2615,7 @@ msgid ""
 "modifying its content through the button *Configure* the default table is "
 "shown."
 msgstr ""
-"Via le plugin, si on clique seulement sur la case à cocher *Activer les "
+"Via l'extension, si on clique seulement sur la case à cocher *Activer les "
 "popups* sans modifier le contenu via le bouton *Contenu*, alors c'est "
 "l'affichage par défaut ou *mode simple* qui est utilisé."
 
@@ -2619,7 +2626,7 @@ msgid ""
 "and even **display images, photos, or links to internal or external "
 "documents**."
 msgstr ""
-"On peut néanmoins jouer sur plusieurs choses dans QGIS et via le plugin "
+"On peut néanmoins jouer sur plusieurs choses dans QGIS et via l'extension "
 "Lizmap pour **paramétrer les champs qu'on veut afficher**, **renommer les "
 "champs**, et même **afficher des images, des photos ou des liens vers des "
 "documents internes ou externes**."
@@ -2763,9 +2770,9 @@ msgid ""
 "You can edit the popup template with the button *Configure* in the Lizmap "
 "plugin. Clicking on it you'll get a window with two text areas:"
 msgstr ""
-"Via le **bouton Configurer** du plugin Lizmap, on peut modifier le modèle de"
-" la popup. En cliquant sur ce bouton, une fenêtre s'affiche avec 2 zones de "
-"texte :"
+"Via le **bouton Configurer** de l'extension Lizmap, on peut modifier le "
+"modèle de la popup. En cliquant sur ce bouton, une fenêtre s'affiche avec 2 "
+"zones de texte :"
 
 #: ../../source/publish/configuration/popup.rst:140
 msgid "an **area where you can type your text**"
@@ -2883,7 +2890,7 @@ msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:211
 msgid "QGIS Drag&Drop Form popup"
-msgstr ""
+msgstr "Popup formulaire glisser/déposer QGIS"
 
 #: ../../source/publish/configuration/popup.rst:213
 msgid ""
@@ -2928,7 +2935,7 @@ msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:227
 msgid "QGIS HTML Maptip popup"
-msgstr ""
+msgstr "Popup Maptip HTML QGIS"
 
 #: ../../source/publish/configuration/popup.rst:229
 msgid ""
@@ -2978,6 +2985,11 @@ msgid ""
 "button. This will **erase** any existing maptip set on the layer and will "
 "generate the QGIS Expression matching the form layout."
 msgstr ""
+"Similaire à :ref:`form-popup`, si vous avez un *Conception de formulaire par"
+" glisser-déposer* pour une couche, vous pouvez cliquer sur le bouton "
+":guilabel:`Copier la conception par glisser-déposer`. Cela **effacera** "
+"toute info-bulle existante définie sur la couche et générera l'expression "
+"QGIS correspondant à la mise en page du formulaire."
 
 #: ../../source/publish/configuration/popup.rst:241
 msgid ""
@@ -2985,7 +2997,8 @@ msgid ""
 " the Lizmap plugin :menuselection:`Generate the HTML table`."
 msgstr ""
 "Pour obtenir une fenêtre similaire à la fenêtre **auto**, vous devez cliquer"
-" sur le bouton du plugin Lizmap :menuselection:`Générer le tableau HTML`."
+" sur le bouton de l'extension Lizmap :menuselection:`Générer le tableau "
+"HTML`."
 
 #: ../../source/publish/configuration/popup.rst:243
 msgid ""
@@ -3010,6 +3023,15 @@ msgid ""
 "`AtlasPrint` QGIS Server plugin on GitHub : https://github.com/3liz/qgis-"
 "atlasprint"
 msgstr ""
+"Chaque élément d'une couche avec un atlas configuré aura un lien (1) à la "
+"fin de sa popup qui ouvre un PDF pour cet élément spécifique, en utilisant "
+"la mise en page de l'Atlas QGIS. Si la mise en page contient des champs de "
+"texte personnalisés, un bouton (2) sera affiché. En cliquant sur ce bouton, "
+"vous pouvez saisir des valeurs pour ces champs de texte personnalisés avant "
+"l'impression. Pour activer cette fonctionnalité, vous avez besoin d'une mise"
+" en page QGIS avec atlas activé sur cette couche **et** de télécharger "
+"l'extension QGIS Server `AtlasPrint` sur GitHub : "
+"https://github.com/3liz/qgis-atlasprint."
 
 #: ../../source/publish/configuration/popup.rst:260
 msgid "One to many relations"
@@ -3055,6 +3077,8 @@ msgid ""
 " the child layer `tree_pictures` in :menuselection:`Project properties -> "
 "Relations`."
 msgstr ""
+"Ajoutez la relation entre la couche parent `trees` et la couche enfant "
+"`tree_pictures` dans :menuselection:`Propriétés du projet -> Relations`."
 
 #: ../../source/publish/configuration/popup.rst:273
 msgid ""
@@ -3068,7 +3092,7 @@ msgstr ""
 
 #: ../../source/publish/configuration/popup.rst:276
 msgid "In Lizmap plugin:"
-msgstr "Dans le plugin Lizmap :"
+msgstr "Dans l'extension Lizmap :"
 
 #: ../../source/publish/configuration/popup.rst:278
 msgid ""
@@ -3091,6 +3115,8 @@ msgstr ""
 msgid ""
 "*Optionally*, add the two layers in the :guilabel:`Attribute table` tab"
 msgstr ""
+"*En option*, vous pouvez ajoutez les deux couches dans l'onglet "
+":guilabel:`Table attributaire`"
 
 #: ../../source/publish/configuration/popup.rst:281
 msgid ""
@@ -3140,6 +3166,8 @@ msgid ""
 "lizmapPopupHeader : If you want to have a better display of your headers, "
 "you will need to put this class in the '<tr>' who contains them"
 msgstr ""
+"lizmapPopupHeader : Si vous voulez avoir un meilleur affichage de vos en-"
+"têtes, vous devrez mettre cette classe dans le '<tr>' qui les contient"
 
 #: ../../source/publish/configuration/popup.rst:299
 msgid ""
@@ -3147,6 +3175,10 @@ msgid ""
 "children that you want to hide when there are used as a child but you still "
 "want to see them if you display their popup as a main Popup"
 msgstr ""
+"lizmapPopupHidden : cette classe vous permet d'indiquer les éléments de vos "
+"enfant que vous ne souhaitez pas voir apparaitre quand ils sont utilisés "
+"comme enfant mais que vous voulez voir quand ils sont affiché comme "
+"infobulle principale."
 
 #: ../../source/publish/configuration/popup.rst:301
 msgid "Here an example:"
@@ -3169,8 +3201,9 @@ msgid ""
 " without atlas enabled."
 msgstr ""
 "Pour proposer l’impression sur la carte en ligne, il faut avoir activer "
-"l'outil d'impression dans l'onglet *Carte* du plugin (:ref:`lizmap-config-"
-"map`) et que le projet QGIS possède au moins `un composeur d'impression "
+"l'outil d'impression dans l'onglet *Carte* de l'extension (:ref:`lizmap-"
+"config-map`) et que le projet QGIS possède au moins `un composeur "
+"d'impression "
 "<https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/index.html>`_"
 " sans \"atlas\" activé."
 
@@ -3313,8 +3346,6 @@ msgid ""
 "The print function will be based on the map scales that you set in the "
 "plugin *Map* (:ref:`lizmap-config-map`)."
 msgstr ""
-"The print function will be based on the map scales that you set in the "
-"plugin *Map* (:ref:`lizmap-config-map`)."
 
 #: ../../source/publish/configuration/print.rst:62
 msgid "Excluding a layout"
@@ -3639,8 +3670,8 @@ msgid ""
 "features."
 msgstr ""
 "Pour de nombreuses fonctionnalités de Lizmap, il est nécessaire de publier "
-"votre couche en WFS. Cela sera obligatoire quand vous utiliserez le plugin "
-"QGIS Lizmap afin d'activer certaines fonctionnalités."
+"votre couche en WFS. Cela sera obligatoire quand vous utiliserez l'extension"
+" QGIS Lizmap afin d'activer certaines fonctionnalités."
 
 #: ../../source/publish/configuration/project.rst:24
 msgid ""
@@ -3711,8 +3742,8 @@ msgid ""
 "For |qgis_2| only, you can use the plugin ``QuickFinder`` to configure a "
 "data search per QGIS project."
 msgstr ""
-"Pour |qgis_2| seulement, vous pouvez utiliser le plugin ``QuickFinder`` pour"
-" configurer les données de recherche par projet QGIS."
+"Pour |qgis_2| seulement, vous pouvez utiliser l'extension ``QuickFinder`` "
+"pour configurer les données de recherche par projet QGIS."
 
 #: ../../source/publish/configuration/spatial_search.rst:19
 msgid "PostgreSQL search"
@@ -3765,6 +3796,10 @@ msgid ""
 "postgresql-support-accent-insensitive-collations/11007216#11007216>`_ for "
 "explanation"
 msgstr ""
+"Une fonction personnalisée ``f_unaccent`` qui peut être utilisée dans un "
+"index. Voir cette `réponse Stack Overflow "
+"<https://stackoverflow.com/questions/11005036/does-postgresql-support-"
+"accent-insensitive-collations/11007216#11007216>`_ pour l'explication."
 
 #: ../../source/publish/configuration/spatial_search.rst:46
 msgid ""
@@ -3934,13 +3969,13 @@ msgstr ""
 
 #: ../../source/publish/configuration/spatial_search.rst:142
 msgid "QuickFinder Plugin"
-msgstr "Plugin QuickFinder"
+msgstr "Extension QuickFinder"
 
 #: ../../source/publish/configuration/spatial_search.rst:144
 msgid ""
 "This is for |qgis_2| only. This plugin has not been ported to |qgis_3|."
 msgstr ""
-"Ceci est pour |qgis_2| seulement. Ce plugin n'est pas disponible sur "
+"Ceci est pour |qgis_2| seulement. Cette extension n'est pas disponible sur "
 "|qgis_3|."
 
 #: ../../source/publish/configuration/spatial_search.rst:146
@@ -3948,9 +3983,9 @@ msgid ""
 "The purpose of this plugin is to provide fast searching among big datasets, "
 "searching in a qtfs file generated by QGIS Desktop."
 msgstr ""
-"Le but de ce plugin est de fournir une recherche rapide au sein d'un grand "
-"volumes de données, en réalisant des recherches dans un fichier qtfs généré "
-"par QGIS Desktop."
+"Le but de cette extension est de fournir une recherche rapide au sein d'un "
+"grand volumes de données, en réalisant des recherches dans un fichier qtfs "
+"généré par QGIS bureautique."
 
 #: ../../source/publish/configuration/spatial_search.rst:151
 msgid ""
@@ -3966,7 +4001,7 @@ msgstr "Depuis QGIS :"
 
 #: ../../source/publish/configuration/spatial_search.rst:158
 msgid "install QuickFinder Plugin, for |qgis_2| only"
-msgstr "installer le plugin ``QuickFinder``, pour |qgis_2| seulement"
+msgstr "installer l'extension ``QuickFinder``, pour |qgis_2| seulement"
 
 #: ../../source/publish/configuration/spatial_search.rst:159
 msgid ""
@@ -4760,12 +4795,22 @@ msgid ""
 "the templates inside the default theme's folder of Lizmap, which is in "
 ":file:`var/themes/default`."
 msgstr ""
+"Dans Lizmap, chaque module (i.e., view, admin, action, etc.) définit des "
+"modèles. Les modèles de chaque module sont situés dans le dossier "
+":file:`lizmap/modules`. Chaque module possède un ou plusieurs modèles (.tpl)"
+" dans le dossier templates :file:`lizmap/modules/moduleX/templates/`. Afin "
+"de personnaliser le modèle d'un module, il est conseillé de créer une copie "
+"des fichiers sans modifier les fichiers originaux. Pour cela, il est "
+"nécessaire de créer une copie des templates dans le dossier du thème par "
+"défaut de Lizmap, qui se trouve dans :file:`var/themes/default`."
 
 #: ../../source/publish/customization/template.rst:13
 msgid ""
 "A folder with the same name of the module to which the template to redefine "
 "belongs, in the :file:`var/themes/default` folder."
 msgstr ""
+"Un dossier portant le même nom que le module auquel appartient le modèle à "
+"redéfinir, dans le dossier :file:`var/themes/default`."
 
 #: ../../source/publish/customization/template.rst:18
 msgid ""
@@ -5201,9 +5246,10 @@ msgid ""
 "\"Attribute layers\" which shows a table and some form fields dedicated to "
 "add or remove vector layers."
 msgstr ""
-"Dans l'onglet **Outils** de la boîte de dialogue du plugin Lizmap, il y a un"
-" groupe nommé \"Table attributaire\" qui contient un tableau et des champs "
-"de formulaire permettant l'ajout et la suppression de couches vectorielles."
+"Dans l'onglet **Outils** de la boîte de dialogue de l'extension Lizmap, il y"
+" a un groupe nommé \"Table attributaire\" qui contient un tableau et des "
+"champs de formulaire permettant l'ajout et la suppression de couches "
+"vectorielles."
 
 #: ../../source/publish/lizmap_plugin/attribute_table.rst:32
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:42
@@ -5855,6 +5901,8 @@ msgid ""
 "For a few types of charts like bar or pie, you can chose to aggregate the "
 "data in"
 msgstr ""
+"Pour certains types de graphiques, comme bar ou circulaire, vous pouvez "
+"choisir d'agréger les données"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:67
 msgid ""
@@ -5990,16 +6038,22 @@ msgid ""
 "Remove the automatic `k`, `M` or `G` suffix (ex: `10 M`) for big number in "
 "the axis and in the hover tooltip:"
 msgstr ""
+"Suppression du suffixe automatique `k`, `M` ou `G` (ex : `10 M`) pour les "
+"grands nombres dans l'axe et dans l'info-bulle du survol :"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:150
 msgid "Order of the bars for a bar chart. Use ascending or descending values:"
 msgstr ""
+"Ordre des barres d'un graphique à barres. Utilisez des valeurs ascendantes "
+"ou descendantes :"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:161
 msgid ""
 "Set margins. Use `l` for left, `t` for top, `r` for right and `b` for "
 "bottom:"
 msgstr ""
+"Définissez les marges. Utilisez `l` pour la gauche, `t` pour le haut, `r` "
+"pour la droite et `b` pour le bas :"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:169
 msgid "Define font properties:"
@@ -6018,6 +6072,8 @@ msgid ""
 "The dataviz module will aggregate every **traces** for all unique **X** "
 "values."
 msgstr ""
+"Le module dataviz va agréger toutes les **traces** pour toutes les valeurs "
+"uniques **X**."
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:199
 msgid "HTML templates"
@@ -6039,12 +6095,16 @@ msgid ""
 "For **pie chart** : the items in the legend are ordered by X as a default "
 "behaviour."
 msgstr ""
+"Pour le graphique **pie** : les éléments de la légende sont classés par X "
+"par défaut."
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:236
 msgid ""
 "QGIS Field **aliases** are used in the tooltip when hovering the bar or pie "
 "slices."
 msgstr ""
+"Les **aliases** des champs QGIS sont utilisées dans l'info-bulle lors du "
+"survol de la barre ou des parties du camembert."
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:241
 msgid "You can visit the Cats project on https://demo.lizmap.com"
@@ -7103,6 +7163,12 @@ msgid ""
 "``environment`` with the splitter **`, `**. Selecting ``culture`` or "
 "``environment`` in the form input will show this feature."
 msgstr ""
+"Si vous avez spécifié un texte séparateur, par exemple **`, `**, Lizmap "
+"trouvera les valeurs uniques des valeurs séparées du texte. Par exemple, la "
+"valeur d'une entité \"culture, environnement\" sera divisée en \"culture\" "
+"et \"environnement\" avec le séparateur **`, `**. En sélectionnant "
+"\"culture\" ou \"environnement\" dans le formulaire de saisie, vous "
+"afficherez cette entité."
 
 #: ../../source/publish/lizmap_plugin/form_filtering.rst:109
 msgid "You can choose to show two different input types:"
@@ -7121,6 +7187,9 @@ msgid ""
 "for the field. The data will be filtered with a ``UNION`` between checked "
 "items."
 msgstr ""
+"**Checkboxes** : ce type affichera autant de comboboxes que de valeurs "
+"distinctes pour le champ. Les données seront filtrées avec un ``UNION`` "
+"entre les éléments cochés."
 
 #: ../../source/publish/lizmap_plugin/index.rst:3
 msgid "Lizmap QGIS plugin"
@@ -7515,6 +7584,14 @@ msgid ""
 "settings for instance if your layer is in meters. For better performance if "
 "your layer is stored in PostGIS, use :ref:`postgresql-lizmap-search`."
 msgstr ""
+"Cet outil n'est pas conçu pour les couches ayant beaucoup d'entités ou "
+"beaucoup de géométries complexes. Le navigateur web devra en effet "
+"télécharger **toutes** les entités avec des géométries vectorielles, ce qui "
+"rendra le chargement de l'application plus lent. Pour réduire le temps de "
+"chargement, vous pouvez réduire les décimales dans les paramètres WFS, par "
+"exemple si votre couche est en mètres. Pour de meilleures performances si "
+"votre couche est stockée dans PostGIS, utilisez :ref:`postgresql-lizmap-"
+"search`."
 
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:45
 msgid ""
@@ -7556,6 +7633,9 @@ msgid ""
 " characters while the user types. The classical combobox will be replaced by"
 " a editable text input."
 msgstr ""
+"Si vous définissez une valeur supérieure à 0, l'autocomplétion sera utilisée"
+" après ce nombre de caractères pendant que l'utilisateur tape. La combobox "
+"classique sera remplacée par une entrée de texte éditable."
 
 #: ../../source/publish/lizmap_plugin/locate_by_layer.rst:50
 msgid ""
@@ -7970,7 +8050,7 @@ msgstr "Rechercher ``Lizmap``"
 
 #: ../../source/publish/quick_start/lizmap_configuration.rst:18
 msgid "Install the plugin"
-msgstr "Installer le plugin"
+msgstr "Installer l'extension"
 
 #: ../../source/publish/quick_start/lizmap_configuration.rst:19
 msgid "It's available in the menu and toolbar :menuselection:`Web`"
@@ -7985,7 +8065,7 @@ msgid ""
 "Plugins --> Manage and Install Plugins --> Settings`, check that QGIS will "
 "check for updates on a regular basis automatically."
 msgstr ""
-"Le plugin QGIS Lizmap est régulièrement mise à jour. Pour profiter des "
+"L'extension QGIS Lizmap est régulièrement mise à jour. Pour profiter des "
 "nouvelles fonctionnalités ou avant de rapporter un bug, veuillez être sur de"
 " mettre à jour le plugin. Dans :menuselection:`Menu Extensions --> "
 "Installer/Gérer les extensions`, vérifiez que QGIS va vérifier les mises à "
