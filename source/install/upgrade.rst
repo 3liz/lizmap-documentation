@@ -200,8 +200,8 @@ Then you can launch these scripts which will migrate the data.
 
 .. code-block:: bash
 
-    php lizmap/scripts/script.php lizmap~database:migrateusers
-    php lizmap/scripts/script.php lizmap~database:migratelog
+    php lizmap/console.php database:migrateusers
+    php lizmap/console.php database:migratelog
 
 If there are no errors, you can then go onto lizmap with your browser, and
 check that you can authenticate yourself. You should see also the list of
