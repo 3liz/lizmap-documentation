@@ -146,9 +146,20 @@ With `QGIS-Plugin-Manager <https://pypi.org/project/qgis-plugin-manager/>`_ :
     You must install the ``Lizmap server`` plugin. The ``Lizmap`` plugin is designed only for QGIS desktop. Do not
     keep both on your server.
 
-.. warning::
-    For **security** reason, to enable the API on the QGIS server side, you must enable the environment variable
+For **security** reason, to enable the API on the QGIS server side, you must enable the environment variable
     ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS`` with the value set to ``True`` on QGIS server.
+    
+This variable will **expose** server settings such as QGIS server version, which is used by Lizmap Web Client.
+
+.. code-block:: ini
+
+    # Apache FCGI example 
+    FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
+    # nginx fastcgi 
+    fastcgi_param  QGIS_SERVER_LIZMAP_REVEAL_SETTINGS  True;
+
+
+.. warning::
 
     You **must** be ensured that this API ``http://your.qgis.server.url/lizmap/server.json`` is protected on
     your webserver. The **best** is to restrict the access to QGIS server ``http://your.qgis.server.url`` on a
@@ -156,8 +167,7 @@ With `QGIS-Plugin-Manager <https://pypi.org/project/qgis-plugin-manager/>`_ :
     QGIS server mustn't be accessible from outside. It was already **highly** recommended before to protect the QGIS Server
     from the internet. Users **must use** WFS/WMS links provided by Lizmap Web Client, so Lizmap can check user permissions.
 
-    This variable will **expose** server settings such as QGIS server version, which is used by Lizmap Web Client.
-
+    
 Administration panel
 ********************
 
