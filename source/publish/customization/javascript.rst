@@ -189,6 +189,16 @@ URL of a static file
 
 If you want to get the URL of a static file, located in the :ref:`media` folder:
 
+.. code-block::
+    var media = '/media/image/logo.jpg';
+    // It can also be a media located in the common media folder such as
+    // var media = '../media/logo.png';
+    var url = lizUrls.media + '?repository=' + lizUrls.params.repository + '&project=' + lizUrls.params.project + '&path=' + media;
+    // console.log(url);
+    var image  = '<img src="' + url + '" title="Logo" style="display:inline;height:80px;margin:20px 10px;" />';
+
+It's possible to use a function from the OpenLayers library to help building the URL :
+
 .. code-block:: javascript
 
    var mediaUrl = OpenLayers.Util.urlAppend(
@@ -199,10 +209,3 @@ If you want to get the URL of a static file, located in the :ref:`media` folder:
             "path": "picture.png"
         })
    );
-
-or
-
-.. code-block:: javascript
-
-    var domain = 'https://' + document.domain + lizUrls.basepath;
-    var image  = '<img src="' + domain + 'index.php/view/media/getMedia?repository=REPOSITORY&project=PROJECT&path=/media/logo.png" title="Logo" />';
