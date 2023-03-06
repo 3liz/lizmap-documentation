@@ -12,6 +12,8 @@ Extent defined by the user on the fly in Lizmap
 To add print capabilities in the online map, you have to enable the printing tool in the plugin :guilabel:`Map`
 tab (:ref:`lizmap-config-map`) and the QGIS project needs at least one `print layout <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/index.html>`_ without atlas enabled.
 
+.. note:: Printing will respect the feature filters and selections.
+
 Creating the layout
 ^^^^^^^^^^^^^^^^^^^
 
