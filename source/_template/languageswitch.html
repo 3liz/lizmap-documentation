@@ -1,11 +1,5 @@
 
 
-<select id="languages">
-  {% for lang in lizmap_locales %}
-  <option value="{{ lang }}" data-url="{{ lizmap_path_to_root }}../{{ lang }}/index.html" title="{{ lizmap_locales_name[lang] }}">{{ lizmap_locales_label[lang] }}</option>
-  {% endfor %}
-</select>
-
 <span id="versions-links">
   Versions:
   <span id="versions-links-list">
@@ -21,7 +15,13 @@
   {% endfor %}
   </span>
 </span>
-
+<div>
+  <select id="_languages">
+    {% for lang in lizmap_locales %}
+    <option value="{{ lang }}" data-url="{{ lizmap_path_to_root }}../{{ lang }}/index.html" title="{{ lizmap_locales_name[lang] }}">{{ lizmap_locales_label[lang] }}</option>
+    {% endfor %}
+  </select>
+</div>
 <script>
     var currentPage = '{{current_page_name}}.html'; // coming from sphinx, always without starting '/';
     var currentLang = '{{ language }}';
