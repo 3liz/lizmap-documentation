@@ -44,7 +44,7 @@ Configuring the tool
     You can start using the plugin ``DataPlotly`` to create your graph in QGIS itself.
     So you can have a preview about what is possible *more or less* about dataviz with your layers.
     But keep in mind that Lizmap and DataPlotLy, even if's using the same dataviz engine
-    (plotly https://github.com/plotly/plotly.py ), features are different between these two tools.
+    (`plotly <https://plotly.com/>`_), features are different between these two tools.
 
 You can easily configure it with the plugin Lizmap in QGIS in the :guilabel:`Dataviz` panel.
 
@@ -68,7 +68,7 @@ At the layer level
     8. **Traces** : Depending of the kind of chart, you can add one or many traces : the Y field of your graph.
     9. Depending of the kind of chart, there is now different options.
     10. **Layout** : The layout can be customized. It must be a JSON dictionary.
-        You can read the documentation of Plotly documentation about the layout configuration https://plotly.com/javascript/reference/layout/
+        You can read the `documentation of Plotly <https://plotly.com/javascript/reference/layout/>`_ about the layout configuration
     11. **Display filtered plot in popups of parent layer** : if you check this checkbox, the children of your
         layer will get the same graph as the parent plot but filtered only for them.
         It's useful if you want to see the statistics of one entity instead of all.
@@ -121,7 +121,7 @@ JSON layout
 ^^^^^^^^^^^
 
 The layout option, allows you to configure many options by writing up a JSON object.
-See the full reference: https://plotly.com/javascript/reference/layout/
+See the full reference on `Plotly <https://plotly.com/javascript/reference/layout/>`_.
 
 The following examples show how to use some properties depending of the layout property:
 
