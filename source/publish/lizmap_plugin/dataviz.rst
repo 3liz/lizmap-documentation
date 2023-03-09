@@ -190,6 +190,25 @@ The following examples show how to use some properties depending of the layout p
         }
     }
 
+Other customisation with JavaScript scripts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We can also modify charts with some JavaScript scripts.
+
+* You can decide to not have any number after the comma for the first chart (id: dataviz_plot_0), for example:
+
+.. code-block:: javascript
+
+    lizMap.events.on({
+        'datavizplotloaded': (evt) => {
+            if( evt.id === 'dataviz_plot_0'){
+                Plotly.restyle( evt.id, {
+                    texttemplate: "%{value:.0f}"
+                });
+            }
+        }
+    });
+
 Types of charts
 ^^^^^^^^^^^^^^^
 
@@ -198,7 +217,10 @@ The dataviz module will aggregate every **traces** for all unique **X** values.
 HTML templates
 """"""""""""""
 
-A trace must be referenced by ``{y1}`` where ``1`` is the trace number.
+A trace must be referenced by ``{$y1}`` where ``1`` is the trace number in the table.
+
+This example below will produce a single colored box, similar to the
+`COVID demo <https://demo.lizmap.com/lizmap/index.php/view/map?repository=features&project=covid_19_fr>`_.
 
 .. code-block:: html
 
@@ -228,6 +250,9 @@ A trace must be referenced by ``{y1}`` where ``1`` is the trace number.
         </tbody>
     </table>
 
+.. image:: /images/publish-03-dataviz-html-plot.jpg
+   :align: center
+   :scale: 80%
 
 Miscellaneous
 ^^^^^^^^^^^^^
@@ -238,4 +263,4 @@ Miscellaneous
 Examples
 --------
 
-You can visit the Cats project on https://demo.lizmap.com
+You can visit the `Cats project <https://demo.lizmap.com>`_.
