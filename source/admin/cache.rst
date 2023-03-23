@@ -12,7 +12,7 @@ To have better performance, Lizmap Web Client can also automatically generate th
 
 In some cases, it is desirable to remove the server cache, for example,
 when the style has changed and the tiles need to be updated.
-For this, two solutions are possible:
+For this, three solutions are possible:
 
 Remove all the cache by Lizmap repository
 =========================================
@@ -29,6 +29,24 @@ right of the name of each layer that is configured with server cache.
 Clicking on the cross allows, after confirmation, to delete the server cache only for this layer in the QGIS project.
 
 Only logged administrator sees these red crosses and has the right to delete the cache.
+
+Use the console command for a whole project or layer
+=========================================================
+
+.. code-block:: bash
+
+   # Go to the application folder
+   cd /var/www/lizmap-web-client/
+   
+   # Command help
+   # php lizmap/console.php wmts:cache:clean  repository project [layer] 
+
+   # Clean the cache for a given project 
+   php lizmap/console.php wmts:cache:clean montpellier montpellier
+
+   # Clean the cache for a given layer
+   php lizmap/console.php wmts:cache:clean montpellier montpellier bus
+
 
 
 Configuring the caching system
@@ -77,14 +95,14 @@ First you **must** get the cache capabilities of one project and some details on
 .. code-block:: bash
 
    # Command help
-   # php lizmap/scripts/script.php lizmap~wmts:capabilities [-v] repository project [layer] [TileMatrixSet]
+   # php lizmap/console.php wmts:capabilities [-v] repository project [layer] [TileMatrixSet]
 
    # Get the capabilities for a given project published with Lizmap
    # and generate the cache about these capabilities.
-   php lizmap/scripts/script.php lizmap~wmts:capabilities montpellier montpellier
+   php lizmap/console.php wmts:capabilities montpellier montpellier
 
    # Get precisions about a specific layer
-   php lizmap/scripts/script.php lizmap~wmts:capabilities -v montpellier montpellier bus EPSG:3857
+   php lizmap/console.php wmts:capabilities -v montpellier montpellier bus EPSG:3857
    # which will return
    For "bus" and "EPSG:4326" from TileMatrix 13 to 15
    For "bus" and "EPSG:900913" from TileMatrix 14 to 16
@@ -105,10 +123,10 @@ Once you have a good knowledge of a layer, you can generate the cache for it:
 .. code-block:: bash
 
    # Command help
-   # php lizmap/scripts/script.php lizmap~wmts:seeding [-v] [-f] repository project layer TileMatrixSet TileMatrixMin TileMatrixMax
+   # php lizmap/console.php wmts:cache:seed [-v] [-f] repository project layer TileMatrixSet TileMatrixMin TileMatrixMax
 
    # Example
-   php lizmap/scripts/script.php lizmap~wmts:seeding -v -f montpellier montpellier bus EPSG:3857 12 14
+   php lizmap/console.php wmts:cache:seed -v -f montpellier montpellier bus EPSG:3857 12 14
    # Which will return:
    81 tiles to generate for "bus" "EPSG:3857" "14"
    81 tiles to generate for "bus" "EPSG:3857" between "12" and "14"
