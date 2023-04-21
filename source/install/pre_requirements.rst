@@ -6,6 +6,23 @@ Requirements before installing Lizmap Web Client
     If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those
     `instructions <https://github.com/3liz/lizmap-docker-compose>`_ using Docker and Docker-Compose.
 
+GIS data and QGS files
+======================
+
+Lizmap Web Client does not enforce where to store data on the disk. You are free to store your files where you want on
+the server.
+
+For instance, you can use :file:`/srv/lizmap/data/`. Then, when configuring Lizmap, you can choose the
+``rootRepositories`` variable to define the root repositories for all your data. Lizmap Web Client will display a
+dropdown menu showing directories in the root folder.
+
+Otherwise, if you don't want to define a root repository for your GIS data, you will need to use absolute path when
+defining a new Lizmap repository. There won't be a dropdown menu but a text field instead.
+
+.. note::
+    Lizmap Web Client does not provide any file transfer from your QGIS desktop to your server. You **must** setup your
+    own way to transfer files between your computer and your server.
+
 QGIS Server
 ===========
 
@@ -148,14 +165,14 @@ With `QGIS-Plugin-Manager <https://pypi.org/project/qgis-plugin-manager/>`_ :
 
 For **security** reason, to enable the API on the QGIS server side, you must enable the environment variable
     ``QGIS_SERVER_LIZMAP_REVEAL_SETTINGS`` with the value set to ``True`` on QGIS server.
-    
+
 This variable will **expose** server settings such as QGIS server version, which is used by Lizmap Web Client.
 
 .. code-block:: ini
 
-    # Apache FCGI example 
+    # Apache FCGI example
     FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
-    # nginx fastcgi 
+    # nginx fastcgi
     fastcgi_param  QGIS_SERVER_LIZMAP_REVEAL_SETTINGS  True;
 
 
@@ -167,7 +184,7 @@ This variable will **expose** server settings such as QGIS server version, which
     QGIS server mustn't be accessible from outside. It was already **highly** recommended before to protect the QGIS Server
     from the internet. Users **must use** WFS/WMS links provided by Lizmap Web Client, so Lizmap can check user permissions.
 
-    
+
 Administration panel
 ********************
 
