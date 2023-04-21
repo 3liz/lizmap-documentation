@@ -126,10 +126,6 @@ QGIS files and other cache files will be stored into these directories.
 
    mkdir /home/data
    mkdir /home/data/cache/
-  # optional
-   mkdir /home/data/ftp
-   mkdir /home/data/ftp/template/
-   mkdir /home/data/ftp/template/qgis
 
 Spatial Database: PostgreSQL
 ============================
