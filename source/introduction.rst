@@ -44,7 +44,7 @@ QGIS and QGIS Server
   * *Web Coverage Service*, WCS: standard for publishing geographic raster data
 
 * QGIS Server allows you to easily publish 3 types of standardized Web Services Geographic:
- 
+
   * Install QGIS Server on a server
   * Configure properties of Geographic Web Services
   * Copy and paste the QGIS project and data files
@@ -188,7 +188,7 @@ The rest is done with the **Lizmap plugin**. This plugin allows to:
 .. image:: images/introduction-montpellier-map.jpg
    :align: center
    :scale: 80%
-   :target: https://demo.lizmap.com/lizmap_3_3/index.php/view/map?repository=montpellier&project=montpellier
+   :target: https://demo.lizmap.com/lizmap/
 
 Configuring with the Web back-office
 ------------------------------------

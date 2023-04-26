@@ -189,7 +189,8 @@ URL of a static file
 
 If you want to get the URL of a static file, located in the :ref:`media` folder:
 
-.. code-block::
+.. code-block:: javascript
+
     var media = '/media/image/logo.jpg';
     // It can also be a media located in the common media folder such as
     // var media = '../media/logo.png';
