@@ -43,7 +43,7 @@ help:
 
 clean:
 	-rm -rf $(BUILDDIR)/*
-	-rm i18n/*/LC_MESSAGES/*.mo
+	-rm -rf i18n/*/LC_MESSAGES/*.mo
 
 html:
 	$(SPHINXINTL) build -d i18n
