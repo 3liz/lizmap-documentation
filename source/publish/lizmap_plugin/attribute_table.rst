@@ -66,6 +66,8 @@ Lizmap is reusing the order of the fields defined in the attribute table.
 ..  image:: /images/interface-organize-attributes.jpg
    :align: center
 
+When defining a custom order, it should automatically alter the checkbox called :guilabel:`Custom configuration`.
+
 Download data
 -------------
 
