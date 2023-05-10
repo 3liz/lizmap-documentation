@@ -8,3 +8,4 @@ This is quick start guide to help you how to publish your first dataset on Lizma
 
   project_for_web
   lizmap_configuration
+  publish
