@@ -14,3 +14,4 @@ Installing and upgrading Lizmap
   ldap
   advanced_install
   upgrade
+  project_repository

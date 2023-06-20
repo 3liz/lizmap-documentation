@@ -2,6 +2,8 @@
 Introduction
 ============
 
+ .. _intro-lizmap-archi:
+
 Lizmap architecture
 ===================
 
