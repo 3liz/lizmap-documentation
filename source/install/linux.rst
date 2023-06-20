@@ -116,6 +116,7 @@ https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-p
 
 https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
 
+.. _install-data-folder:
 
 Create directories for data
 ===========================

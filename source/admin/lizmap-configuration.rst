@@ -87,6 +87,7 @@ You should check the checkbox "Use a proxy server" and fill these fields:
   to a local server that serves map backgrounds etc... You have at least to set
   it with "localhost,127.0.0.1".
 
+.. _declare-repositories:
 
 Repositories
 ============
