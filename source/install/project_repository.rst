@@ -1,13 +1,17 @@
+.. _install-transfer-tool:
 
-.. _install-sync-tool:
+============================
+Transfer files to the server
+============================
 
-==============================================
-Add an access for synchronizing projects files
-==============================================
+Once your Lizmap is working correctly, you need to setup some workflow to allow publishers to transfer their projects
+files (:file:`*.qgs`, :file:`*.qgs.cfg`…) on the server.
+Precisely, you need to grant an access to the folder you defined during the installation (:ref:`install-data-folder`)
+and defined in the administration panel (:ref:`declare-repositories`).
 
-.. note:: If you are working locally, as Lizmap Web Client is installed on the same machine you use for QGIS, you do not need to *synchronize* your files. This configuration should only exist for testing.
+You can use any tool you want (DAV, rsync, unison, etc). The folder must be accessible for Lizmap and QGIS processes
+(which read project files).
 
-Once your Lizmap is working correctly, you need to setup some workflow to allow publishers to synchronize their projects files (.qgs, .qgs.cfg) on the server.
-Precisly, you need to grant an acces to the folder you defined during installation (:ref:`install-data-folder`) and setup in administration (:ref:`declare-repositories`).
-
-You can use any tool and synchronization protocol (FTP, FTPS, SFTP, DAV, rsync, unison, etc). The folder must be accessible for lizmap and qgis process (which read the project files) and your synchronisation set-up (ftp user, rsync process, ...).
+.. note::
+    If you have installed Lizmap Web Client on your machine, where QGIS Desktop is running as well, you do not need to
+    *transfer* your files. This configuration should only exist for testing.
