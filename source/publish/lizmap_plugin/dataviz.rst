@@ -33,9 +33,11 @@ Prerequisites
 Video tutorial
 --------------
 
-This video is an quick start how to setup a filtered chart in a parent popup:
+This `video <https://www.youtube.com/embed/aGJnScdkEtE>`_ is an quick start how to setup a filtered chart in a parent popup.
 
-https://www.youtube.com/embed/aGJnScdkEtE
+.. raw:: html
+
+    <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/aGJnScdkEtE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 
 Configuring the tool
 --------------------
@@ -121,7 +123,7 @@ JSON layout
 ^^^^^^^^^^^
 
 The layout option, allows you to configure many options by writing up a JSON object.
-See the full reference on `Plotly <https://plotly.com/javascript/reference/layout/>`_.
+See the full reference on the `Plotly documentation <https://plotly.com/javascript/reference/layout/>`_.
 
 The following examples show how to use some properties depending of the layout property:
 
