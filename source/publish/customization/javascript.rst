@@ -43,9 +43,11 @@ Configuring the tool
 Video tutorial
 --------------
 
-This video is an quick start how to add a JavaScript to change the default panel in Lizmap.
+`This video <https://www.youtube.com/embed/xQQ34nvRZ-w>`_ is an quick start how to add a JavaScript to change the default panel in Lizmap.
 
-https://www.youtube.com/embed/xQQ34nvRZ-w
+.. raw:: html
+
+    <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/xQQ34nvRZ-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 
 Library of scripts
 ------------------
