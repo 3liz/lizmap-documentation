@@ -54,9 +54,20 @@
         {% endif %}
     {%- endfor %}
     <link href="https://docs.lizmap.com/current/{{ language }}/" rel="canonical"/>
+    {%- if outdated %}
+    <meta name="robots" content="noindex,follow">
+    {%- endif %}
 {% endblock %}
 
 {% block extrabody %}
+
+{%- if outdated %}
+<div class="row outdated">
+ {{ _('This documentation is for a Lizmap Web Client version that has reached its end of life. Instead, visit the ') }}
+ <a href="https://docs.lizmap.com/current/{{ language }}/{{ pagename }}.html">{{ _('latest version') }}</a>.
+</div>
+{%- endif %}
+
 <div class="globalnav globalhead">
     <a class="siteNav" href="{{ pathto(master_doc) }}" >
         <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" />
