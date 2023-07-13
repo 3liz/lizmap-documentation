@@ -132,6 +132,9 @@ except Error:
 
 html_context = {
         'theme_logo_only': True,
+        # When a LWC version reaches the end of life, set this to True to show an information
+        # message on the top of the page.
+        'outdated': False,
         'lizmap_versions': lizmap_versions
 }
 
