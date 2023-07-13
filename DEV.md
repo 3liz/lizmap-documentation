@@ -94,6 +94,7 @@ When the documentation is ready to release `X.Y`:
 1. In the server configuration, change the target of the symbolic link 'current'
 1. Copy the `source/lizmap_versions.json` into all other branches, it should be the
    same for all.
+1. For the version `X.Y-2`, change the `outdated` variable to `True`
 
 ## Archive an old version
 
