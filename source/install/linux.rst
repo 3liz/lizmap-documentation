@@ -381,15 +381,6 @@ to set the url of qgis map server and other things.
    cp localconfig.ini.php.dist localconfig.ini.php
    cd ../../..
 
-In case you want to enable the demo repositories, just add to :file:`localconfig.ini.php` the following:
-
-.. code-block:: ini
-
-   [modules]
-   lizmap.installparam=demo
-
-
-
 Launching the installer
 -----------------------
 
@@ -402,6 +393,14 @@ After creating configuration files, you can launch the installer
 
 It will finished the installation, and will create all SQL tables needed by Lizmap.
 
+Adding some demonstration projects
+----------------------------------
+
+If you want to test Lizmap with some demonstration projects, you must install ``unzip`` and either ``wget`` or ``curl.
+
+.. code-block:: bash
+
+    lizmap/install/reset.sh --keep-config --demo
 
 First test
 ----------
