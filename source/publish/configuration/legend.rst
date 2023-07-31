@@ -11,6 +11,8 @@ Groups
 
 You can create groups in your legend. Lizmap will use them too in the web interface.
 
+You can use the :guilabel:`Mutually exclusive group` checkbox when clicking on a group to have some radio buttons in Lizmap.
+
 If you want to collapse some groups by default, you need to use a JavaScript snippet, see :ref:`adding-javascript`.
 
 
@@ -18,8 +20,8 @@ Theme switcher
 --------------
 
 Lizmap allows you to display and switch between themes configured in QGIS.
-To create your themes, follow QGIS documentation https://docs.qgis.org/latest/en/docs/user_manual/introduction/general_tools.html#configuring-map-themes.
-
+To create your themes, follow the
+`QGIS documentation <https://docs.qgis.org/latest/en/docs/user_manual/introduction/general_tools.html#configuring-map-themes>`_
 
 .. _hide-layers:
 
