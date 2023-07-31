@@ -18,8 +18,8 @@ With the dataviz panel, you can create a few kinds of graph with only a few clic
 - bar
 - histogram2d
 - polar
-- sunburst |lizmap_3_4|
-- HTML |lizmap_3_4|
+- sunburst
+- HTML
 
 .. image:: /images/publish-01-dataviz-interface.jpg
    :align: center

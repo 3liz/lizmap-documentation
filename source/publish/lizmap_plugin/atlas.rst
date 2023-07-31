@@ -14,8 +14,6 @@ Principle
 
 This feature let you chose and configure a layer to make a sequence of entities in your Lizmap project.
 
-Since |lizmap_3_4| :
-
 Many layers can be configured in this tool. If the checkbox :guilabel:`Auto-play` is checked, the first layer in the list is used.
 
 
