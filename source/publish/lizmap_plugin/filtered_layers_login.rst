@@ -44,8 +44,6 @@ In this panel, we can:
 Prerequisites
 ^^^^^^^^^^^^^
 
-This is a feature in |lizmap_3_5|.
-
 The Lizmap plugin in QGIS Server **must** be installed with at least **Lizmap QGIS plugin 3.6**.
 Otherwise, the filter won't work and all data will be visible.
 See :ref:`lizmap-server-plugin`.

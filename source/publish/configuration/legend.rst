@@ -17,8 +17,6 @@ If you want to collapse some groups by default, you need to use a JavaScript sni
 Theme switcher
 --------------
 
-This is a feature in |lizmap_3_4|.
-
 Lizmap allows you to display and switch between themes configured in QGIS.
 To create your themes, follow QGIS documentation https://docs.qgis.org/latest/en/docs/user_manual/introduction/general_tools.html#configuring-map-themes.
 
