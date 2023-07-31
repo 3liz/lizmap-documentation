@@ -13,6 +13,9 @@ Installing and maintaining a Lizmap Web Client instance requires some knowledge 
 
 You will need to be familiar with:
 
+* installing a web server (Nginx, Apache...). Lizmap is written in PHP, so you should be familiar with a stack similar to
+  `LAMP <https://en.wikipedia.org/wiki/LAMP_(software_bundle)>`_.
+  This documentation will not cover the Apache section because it can be adapted
 * reading and setting an `environment variable <https://en.wikipedia.org/wiki/Environment_variable>`_
 * understanding how processes are launched on a server
 * reading logs from `stderr <https://en.wikipedia.org/wiki/Standard_streams#Standard_error_(stderr)>`_ for `QGIS Server <https://docs.qgis.org/latest/en/docs/server_manual/config.html#id1>`_
