@@ -98,7 +98,7 @@ Adding the Lizmap QGIS Server plugin will add some features on Lizmap Web Client
 
         * retrieve information from QGIS Server.
 
-        * evaluate `QGIS Expressions <https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`_
+        * evaluate `QGIS Expressions <https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/expression.html>`_
           in forms about :
 
            * constraints
