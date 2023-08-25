@@ -11,8 +11,6 @@ Groups
 
 You can create groups in your legend. Lizmap will use them too in the web interface.
 
-You can use the :guilabel:`Mutually exclusive group` checkbox when clicking on a group to have some radio buttons in Lizmap.
-
 If you want to collapse some groups by default, either use the :ref:`theme` or a JavaScript snippet,
 see :ref:`adding-javascript`.
 
