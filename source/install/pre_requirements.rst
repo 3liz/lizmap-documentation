@@ -100,34 +100,44 @@ or use the `default one provided by QGIS <https://docs.qgis.org/latest/en/docs/s
     To manage QGIS Server plugins, we encourage you to use **qgis-plugin-manager**, a CLI tool to install and
     upgrade plugins. https://pypi.org/project/qgis-plugin-manager/
 
+* Lizmap server
+
+    * **Required**
+    * Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server** called **Lizmap server**.
+    * https://github.com/3liz/qgis-lizmap-server-plugin
+    * **Important**, read below for more information the Lizmap QGIS Server plugin. (:ref:`lizmap-server-plugin`)
+
 * AtlasPrint
 
-    * To enable the PDF based on a QGIS Layout Atlas
+    * *Optional*
+    * To enable QGIS layouts based on an atlas
     * https://github.com/3liz/qgis-atlasprint
 
 * Cadastre
 
-    * French use-case only
+    * *Optional*
+    * French use-case only 🇫🇷
     * Needed for the Lizmap Cadastre module
     * https://docs.3liz.org/QgisCadastrePlugin/module-lizmap/
 
-* Lizmap server
+* DataPlotly
 
-    * Lizmap **is not only** a PHP application, there is also Python plugin for **QGIS Server** called **Lizmap server**.
-    * https://github.com/3liz/qgis-lizmap-server-plugin
-    * The plugin is **required**.
-    * **Important**, read below for more information the Lizmap QGIS Server plugin. (:ref:`lizmap-server-plugin`)
+    * *Optional*
+    * Enable the DataPlotly layout item for printing on the QGIS server side
+    * https://github.com/ghtmtt/DataPlotly
 
 * WfsOutputExtension
 
+    * *Optional*
     * To add new format when exporting vector data
     * https://github.com/3liz/qgis-wfsOutputExtension
 
-* Logging
+.. tip::
+    Look to other QGIS server plugins on the `official repository <https://plugins.qgis.org/plugins/server/>`_.
 
-    * To log QGIS Servers log and to flush the cache on QGIS Server
-    * https://github.com/3liz/qgis-logging-plugin.
-    * This plugin is deprecated.
+    But, install **only** plugins you need **you**. On QGIS server, plugins are like hooks into QGIS server, they can
+    alter input or output of QGIS server. They can produce unexpected result if you don't know how the plugin works.
+    Please refer to their respective documentation.
 
 .. _lizmap-server-plugin:
 
