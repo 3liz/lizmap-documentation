@@ -138,7 +138,7 @@ The Lizmap QGIS Server plugin **is required** and will add some features on Lizm
 
         * retrieve information from QGIS Server.
 
-        * evaluate `QGIS Expressions <https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>`_
+        * evaluate `QGIS Expressions <https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/expression.html>`_
           in forms about :
 
            * constraints
