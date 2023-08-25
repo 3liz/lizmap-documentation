@@ -47,7 +47,7 @@ To allow data editing in Lizmap Web Client, you must:
   * The credentials **must not** use the **Authentification system provided by QGIS** for a layer with edition capabilities.
     Credentials must be either in the **QGS** project file or in the PostgreSQL service file (recommended, more secure because credentials are not stored in the QGIS project) :
 
-    * `How to use service file on docs.qgis.org <https://docs.qgis.org/3.16/en/docs/user_manual/managing_data_source/opening_data.html#postgresql-service-connection-file>`_
+    * `How to use service file on docs.qgis.org <https://docs.qgis.org/latest/en/docs/user_manual/managing_data_source/opening_data.html#postgresql-service-connection-file>`_
     * `How to use service file on postgresql.org <https://www.postgresql.org/docs/current/libpq-pgservice.html>`_
 
 .. note:: Be careful if your layer contains some Z or M values, unfortunately Lizmap will set them to "0" which is the default value when saving to the database.
