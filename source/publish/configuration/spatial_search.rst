@@ -7,10 +7,13 @@ Spatial searching
 .. contents::
    :depth: 3
 
-In the map options, you can activate and configure the address search bar, based on external web services (nominatim, google or french IGN). See :ref:`lizmap-config-map` .
-Additionally, you can add spatial searching capability to Lizmap. This means you will allow the users to search within spatial data, such as countries, points of interests, etc. You have two ways to add searching capability in Lizmap:
+In the map options, you can activate and configure the address search bar, based on external web services (nominatim,
+google or french IGN). See :ref:`lizmap-config-map` .
+Additionally, you can add spatial searching capability to Lizmap. This means you will allow the users to search within
+spatial data, such as countries, points of interests, etc. You have two ways to add searching capability in Lizmap:
 
-* For |qgis_2| and |qgis_3|, you can create a table or view ``lizmap_search`` in your PostgreSQL database to store the search data for all your Lizmap projects.
+* For |qgis_2| and |qgis_3|, you can create a table or view ``lizmap_search`` in your PostgreSQL database to store the
+  search data for all your Lizmap projects.
 * For |qgis_2| only, you can use the plugin ``QuickFinder`` to configure a data search per QGIS project.
 
 .. _postgresql-lizmap-search:
@@ -18,14 +21,16 @@ Additionally, you can add spatial searching capability to Lizmap. This means you
 PostgreSQL search
 -----------------
 
-When you have many projects and data, the best solution to provide searching capabilities is to set up a dedicated relation (table or view) inside your database. It's possible to use a PostgreSQL database to store the search data.
+When you have many projects and data, the best solution to provide searching capabilities is to set up a dedicated
+relation (table or view) inside your database. It's possible to use a PostgreSQL database to store the search data.
 
 Prerequisites
 _____________
 
 * A PostgreSQL database, accessible from Lizmap Web Client.
 * PostgreSQL extensions activated in this database : ``unaccent`` and ``pg_trgm`` (for effective LIKE queries)
-* A custom function ``f_unaccent`` which can be used in an index. See this `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_ for explanation
+* A custom function ``f_unaccent`` which can be used in an index. See this
+  `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_ for explanation
 
 .. code-block:: postgresql
 
@@ -43,7 +48,14 @@ _____________
    $func$ LANGUAGE sql IMMUTABLE;
 
 
-.. note:: We choose to use the ``pg_trgm`` extension and this custom ``f_unaccent`` function instead of the Full Text Search (FTS) tool of PostgreSQL, to keep the tool as simple as possible and avoid the need to create FTS "vectors" in your search data.
+.. note::
+    We choose to use the ``pg_trgm`` extension and this custom ``f_unaccent`` function instead of the Full Text Search
+    (FTS) tool of PostgreSQL, to keep the tool as simple as possible and avoid the need to create FTS "vectors" in your
+    search data.
+
+.. tip::
+    If the instance is hosted on `lizmap.com <https://lizmap.com>`_, read the documentation about one step on
+    `lizmap_search <https://docs.lizmap.cloud/en/postgresql.html#about-lizmap-search>`_.
 
 Create the lizmap_search table or view
 ______________________________________
