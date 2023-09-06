@@ -199,12 +199,12 @@ Retrieve the latest available stable version from our `Github release page <http
     Do not use the automatic ZIP file created by GitHub on the website. Only use ZIP attached to a release.
 
 We first set some variable to ease instructions. Let's set the version and
-the location where Lizmap will be installed. Adjuste these values to your
+the location where Lizmap will be installed. Adjust these values to your
 requirements.
 
 .. code-block:: bash
 
-   VERSION=3.6.0
+   VERSION=3.6.5
    LOCATION=/var/www
 
 Then you can install the zip file:
