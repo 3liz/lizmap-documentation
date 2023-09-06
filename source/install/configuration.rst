@@ -72,3 +72,14 @@ In this example, only 3 languages are available and the default language is ital
     availableLocales = en_US,fr_FR,it_IT
 
 There is also a ``fallbackLocale`` option but it is not recommended to change it.
+
+Setting password for users
+==========================
+
+By default, in Lizmap, when a new user is created, the user will get an email for setting up his own password.
+If for some reasons, the administrator needs to setup the password, the :file:`localconfig.ini.php` needs to be edited:
+
+.. code-block:: bash
+
+   [jcommunity]
+   resetAdminPasswordEnabled = off

@@ -395,7 +395,7 @@ It will finished the installation, and will create all SQL tables needed by Lizm
 Adding some demonstration projects
 ----------------------------------
 
-If you want to test Lizmap with some demonstration projects, you must install ``unzip`` and either ``wget`` or ``curl.
+If you want to test Lizmap with some demonstration projects, you must install ``unzip`` and either ``wget`` or ``curl``.
 
 .. code-block:: bash
 

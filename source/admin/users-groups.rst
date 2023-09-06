@@ -28,12 +28,15 @@ In the page *Groups of users for rights*, it is also possible to *Change the nam
 .. image:: /images/administration-create-group.jpg
    :align: center
 
-.. note:: The **users** group is a group system to give the rights to authenticated users to edit their own user information including passwords. We excluded this group of Lizmap Web Client configuration because all identified users must be part of this group.
+.. note::
+    The **users** group is a group system to give the rights to authenticated users to edit their own user information
+    including passwords. We excluded this group of Lizmap Web Client configuration because all identified users must be
+    part of this group.
 
 Manage Users
 ============
 
-* *Create a user* : In the left menu click on *Users* and click on the button *Create a new user*: 
+* *Create a user* : In the left menu click on *Users* and click on the button *Create a new user*:
 
   - give a *Nickname* which will be used for the login
   - give an email
@@ -46,17 +49,6 @@ Manage Users
 
 .. image:: /images/administration-user-list.jpg
    :align: center
-
-Setting password for users
-==========================
-
-By default, in Lizmap, when a new user is created, the user will get an email for setting up his own password.
-If for some reasons, the administrator needs to setup the password, the :file:`localconfig.ini.php` needs to be edited:
-
-.. code-block:: bash
-
-   [jcommunity]
-   resetAdminPasswordEnabled = off
 
 Putting users in groups
 =======================
