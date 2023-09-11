@@ -126,8 +126,3 @@ It remains to configure Lizmap Web Client to publish the maps.
 
 #. Click on :guilabel:`Projects`, the repository label and the name of your map should appear in the list
 #. Click on :guilabel:`View map`, and your map will appear.
-
-.. toctree::
-  :maxdepth: 3
-
-  publish
