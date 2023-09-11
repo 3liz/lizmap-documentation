@@ -119,11 +119,11 @@ It remains to configure Lizmap Web Client to publish the maps.
 #. Fill in the form:
 
    * Choose the *my_lizmap_directory* from the :guilabel:`Local folder path` list
-   * Enter the :guilabel:`Label`: repository label, which will be displayed in the interface
-   * Enter the :guilabel:`Id`: Repository unique identifier, must only contain characters between a-z and 0-9 (no space, no special character). This identifier can not be edited later.
+   * Update the :guilabel:`Label` if the one offered does not suit you: repository label, which will be displayed in the interface
+   * Update the :guilabel:`Id` if the one offered does not suit you: repository unique identifier, must only contain characters between a-z and 0-9 (no space, no special character). This identifier can not be edited later.
+   * Click on all the permission boxes you want to change
    * Click on :guilabel:`Save`
 
-#. Click on all the permission boxes you want and then :guilabel:`Save`
 #. Click on :guilabel:`Projects`, the repository label and the name of your map should appear in the list
 #. Click on :guilabel:`View map`, and your map will appear.
 
