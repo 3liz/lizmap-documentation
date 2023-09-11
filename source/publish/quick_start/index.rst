@@ -23,7 +23,7 @@ Preparing your workstation (File organization)
 #. Create in the *lizmap* folder a *my_lizmap_repository* folder
 #. Create in the *lizmap/my_lizmap_repository* folder a *media* folder
 #. Create in the *lizmap/my_lizmap_repository* folder a *data* folder
-#. Copy in the folder *lizmap/my_lizmap_repository/data* the geographic data to publish (SHP, GeoJSON, others files)
+#. Copy in the folder *lizmap/my_lizmap_repository/data* the geographic data to publish (FlatGeoBuf, GeoJSON, SHP, others files)
 
 You should have this tree structure:
 
@@ -38,6 +38,7 @@ You should have this tree structure:
          +- your-geo-data.shx
          +- your-geo-data.dbf
          +- your-geo-data.prj
+         +- other-geo-data.fgb
 
 Except for the *media* directories, you can change the names of other directories.
 
@@ -63,6 +64,7 @@ You should have this tree structure:
          +- your-geo-data.shx
          +- your-geo-data.dbf
          +- your-geo-data.prj
+         +- other-geo-data.fgb
       +- my-first-lizmap.qgs
       +- my-first-lizmap.qgs.cfg
 
@@ -100,6 +102,7 @@ You should have this tree structure on the lizmap.com server:
          +- your-geo-data.shx
          +- your-geo-data.dbf
          +- your-geo-data.prj
+         +- other-geo-data.fgb
       +- my-first-lizmap.qgs
       +- my-first-lizmap.qgs.cfg
    web/
