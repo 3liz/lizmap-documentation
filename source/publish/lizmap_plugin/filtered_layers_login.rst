@@ -2,8 +2,8 @@
 
 .. _filtered-layer-by-user:
 
-Filtered layer by user
-======================
+Filtered layer by user — Set some features visible/editable or not for some users
+==================================================================================
 
 .. contents::
    :depth: 3
@@ -20,7 +20,7 @@ and thus concerns:
 * the vector layers images displayed on the map
 * the popups. See :ref:`popup`
 * the *Locate by layer* feature lists. See :ref:`locate-by-layer`
-* drop-down lists of *Editing forms* from *Value relation*. See :ref:`edition`
+* drop-down lists of *Editing forms* from *Value relation*. See :ref:`editing`
 * the attribute table display etc
 
 There are two kinds of filtering :
@@ -122,7 +122,7 @@ Here are the detailed steps to configure this feature:
 Edition
 ^^^^^^^
 
-If you have enabled the edition (see :ref:`edition`) on the filtered layer, the field containing the ID will be editable with:
+If you have enabled the edition (see :ref:`editing`) on the filtered layer, the field containing the ID will be editable with:
 
 * either a combobox for a non admin user with either his own login or ``all``
 * or a line edit to write a value for a admin user

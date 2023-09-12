@@ -1,7 +1,9 @@
 .. include:: ../../substitutions.rst
 
-Attribute table
-===============
+.. _attribute_table:
+
+Attribute table — Configure the attribute table and the vector selection
+========================================================================
 
 .. contents::
    :depth: 3

@@ -1,7 +1,7 @@
 .. _lizmap-config-baselayers:
 
-Base layers
-===========
+Base layers — Layers used for the background of the map
+=======================================================
 
 .. contents::
    :depth: 3

@@ -1,6 +1,6 @@
 .. include:: ../../substitutions.rst
 
-Time Manager - animation of temporal vector layers
+Time Manager — Animation of temporal vector layers
 ==================================================
 
 .. contents::
