@@ -1,6 +1,6 @@
 .. include:: ../../substitutions.rst
 
-Dataviz - display some graphs
+Dataviz — Display some charts
 =============================
 
 .. contents::

@@ -2,8 +2,8 @@
 
 .. _lizmap-config-map:
 
-Map options
-===========
+Map options — The general options of the map
+============================================
 
 .. contents::
    :depth: 3

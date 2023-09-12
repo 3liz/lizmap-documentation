@@ -2,8 +2,8 @@
 
 .. _attribute_table:
 
-Attribute table
-===============
+Attribute table — Configure the attribute table and the vector selection
+========================================================================
 
 .. contents::
    :depth: 3

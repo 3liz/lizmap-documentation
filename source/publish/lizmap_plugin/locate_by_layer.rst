@@ -1,8 +1,8 @@
 .. include:: ../../substitutions.rst
 .. _locate-by-layer:
 
-Locate by layer
-===============
+Locate by layer — The locating tool
+===================================
 
 .. contents::
    :depth: 3
