@@ -9,6 +9,9 @@
 Quick start
 ===========
 
+.. contents::
+   :depth: 3
+
 This is **quick** start guide to help you how to publish your first dataset on Lizmap with a few knowledge.
 
 Installing the Lizmap plugin on QGIS Desktop
@@ -33,7 +36,16 @@ Lizmap Web Client must have the same files and directories architecture on the s
     It's **important** to keep in mind that QGIS server will **open** your project with the **same file paths** as on
     your QGIS desktop. All your data must be within a folder which can be transferred.
 
-We are going to create a folder structure to make it easy to transfer on the server later:
+.. tip::
+    ``custom_repository`` is a folder representing a common theme. The folder will contain **one or many** QGIS projects,
+    belonging to this theme. The name of the theme displayed on the web interface will be configured **later**.
+    You should use a machine name.
+
+    You are **free** to rename this folder with a different name, representing your **own** theme.
+
+    In this folder, we will store all projects related to :guilabel:`Urbanisme and land-use` during this tutorial.
+
+We are going to create a folder structure on to make it easy to transfer **on the server later**:
 
 #. On your computer, create a local ``lizmap`` folder
 #. Create in the ``lizmap`` folder a ``media`` folder
@@ -42,7 +54,7 @@ We are going to create a folder structure to make it easy to transfer on the ser
 #. Create in the ``lizmap/custom_repository`` folder a ``data`` folder
 #. Copy in the folder ``lizmap/custom_repository/data`` the geographic data to publish (FlatGeoBuf, GeoJSON, SHP, others files)
 
-You should have this tree structure:
+You should have this tree structure on your computer:
 
 .. code-block:: text
 
@@ -57,16 +69,6 @@ You should have this tree structure:
          +- your-geo-data.dbf
          +- your-geo-data.prj
 
-..
-   _TODO include a screenshot
-
-.. tip::
-    ``custom_repository`` is a folder representing a theme. The folder will contain one or many QGIS projects,
-    belonging to this theme. The name of the theme displayed on the web interface will be configured **later**.
-    You should use a machine name.
-
-    In this folder, we will store all projects related to :guilabel:`Urbanisme and land-use` during this tutorial.
-
 .. tip::
     You can change names of these directories except for ``media``, which is a special keyword for Lizmap.
     Read **later** the chapter about :ref:`media`.
@@ -76,7 +78,7 @@ Preparing your QGIS project
 
 #. In QGIS desktop, load data from the folder ``lizmap/custom_repository/data``
 #. Save the QGIS project in ``lizmap/custom_repository`` with the :file:`.qgs` extension. For instance :file:`my-first-lizmap.qgs`.
-#. Prepare the data rendering :
+#. Prepare the data rendering:
 
     * layer order
     * groups in the legend
@@ -89,7 +91,7 @@ Preparing your QGIS project
     * :guilabel:`Abstract`, a fully written paragraph for the description. HTML is supported.
     * :guilabel:`Keywords`, some keywords separated by a comma. This will be used by the search bar.
 
-You should have this tree structure:
+You should have this tree structure on your computer:
 
 .. code-block:: text
 
@@ -106,12 +108,16 @@ You should have this tree structure:
       +- my-first-lizmap.qgs
       +- my-first-lizmap.qgs.cfg
 
+.. image:: /images/file-tree-tutorial.jpg
+   :align: center
+   :alt: The file tree with this tutorial
+
 Generate the Lizmap configuration file
 --------------------------------------
 
 #. Click the :guilabel:`Lizmap` |lizmap_plugin_svg| button
 #. Click on the :guilabel:`Layers` tab
-#. For each layer :
+#. For each layer:
 
     #. Set a custom human title for your layer, which will be display in the legend
     #. Be default, layers are published but not visible in Lizmap Web Client when we open the project online.
@@ -127,13 +133,13 @@ Upload your files to your Lizmap server
 When your map is ready, you need to upload all files and folder to the server.
 
 .. tip::
-    With the help of your system administrator or the Lizmap provider, you **must check** :
+    With the help of your system administrator or the Lizmap provider, you **must check**:
 
     * how to transfer files on the server
     * the folder on the server used for hosting **Lizmap repositories**
 
 Example of an instance hosted on |lizmap_cloud| |lizmap_cloud_svg|, you should have this tree structure on the server,
-into the  :file:`qgis` folder :
+into the  :file:`qgis` folder:
 
 .. code-block:: text
 
@@ -155,15 +161,20 @@ into the  :file:`qgis` folder :
 Enable your folder to be a published repository
 -----------------------------------------------
 
-Be default, the newly created folder :file:`custom_repository` in not publicly published on the Lizmap landing page.
+Be default, the newly created folder :file:`custom_repository` located **on the server** in not publicly published on
+the Lizmap landing page.
 
-You must **enable** the folder, to be recognised as a **Lizmap repository**.
+You must **enable** the remote folder, to be recognised as a **Lizmap repository**.
 
 #. Go the administration interface of Lizmap in your web browser
 #. Click on :guilabel:`Map Management` and then click on :guilabel:`Create repository`
 #. Fill in the form:
 
    #. Fill the :guilabel:`Local folder path` with the :file:`custom_repository` path.
+
+        * Either it can be a dropdown menu if a root repository is configured by the administrator (*recommended solution*)
+        * Or it can be a text input. You need to fill a absolute path to the folder
+
    #. Update the :guilabel:`Label` with the name to be displayed on the landing page, for instance ``Urbanisme and land-use``,
       accents and space recommended.
    #. Update the :guilabel:`ID`, it's an internal ID for Lizmap. It's mainly visible in the URL of the project.
@@ -179,19 +190,27 @@ Well done.
 
 .. tip::
     The folder :file:`custom_repository` can contain as many as you want QGIS project files with their corresponding
-    :file:`.qgs.cfg` file. All projects will be listed horizontally on the landing page.
+    :file:`.qgs.cfg` file. All projects will be listed **horizontally** on the landing page.
 
 .. tip::
     If you create another folder next to :file:`custom_repository`, like :file:`forestry` with a published name
-    ``Forestry``, your folder will be listed vertically.
+    ``Forestry``, your folder will be listed **vertically**.
 
 .. tip::
     In your administration page, visit the :guilabel:`QGIS projects` page to have an overview of all your Lizmap repositories
     and metadata about QGIS projects.
 
+Going further
+-------------
+
 This the end of the quick start guide, we encourage you reading deeper the documentation about other topics,
-such as :
+such as:
 
 * :ref:`thumbnail`
 * :ref:`editing`
 * :ref:`printing`
+
+Example of Lizmap repositories
+------------------------------
+
+.. include:: ../shared/lizmap_repository.rst
