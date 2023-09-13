@@ -1,7 +1,7 @@
 .. include:: ../../substitutions.rst
 
-Tooltip
-=======
+Tooltip — Configure the tooltip for some layers
+===============================================
 
 .. contents::
    :depth: 3

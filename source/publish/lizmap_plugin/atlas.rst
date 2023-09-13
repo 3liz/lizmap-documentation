@@ -1,6 +1,6 @@
 .. include:: ../../substitutions.rst
 
-Atlas - a sequence of entities
+Atlas — A sequence of entities
 ==============================
 
 .. contents::

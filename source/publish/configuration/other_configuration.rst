@@ -4,8 +4,11 @@ Other configuration
 .. contents::
    :depth: 3
 
-Changing the default image of a project
----------------------------------------
+.. _thumbnail:
+
+
+Changing the default image of a project on the landing page
+-----------------------------------------------------------
 
 By default the following image is displayed for a project:
 
