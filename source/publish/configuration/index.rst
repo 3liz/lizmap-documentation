@@ -8,6 +8,7 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
   :maxdepth: 3
 
   project_for_web
+  project_thumbnail
   project
   layer
   legend
@@ -17,5 +18,4 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
   expression
   print
   spatial_search
-  other_configuration
   optimization
