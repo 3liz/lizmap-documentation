@@ -7,6 +7,7 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
 .. toctree::
   :maxdepth: 3
 
+  project_thumbnail
   project
   layer
   legend
@@ -16,5 +17,4 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
   expression
   print
   spatial_search
-  other_configuration
   optimization
