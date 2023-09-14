@@ -22,6 +22,7 @@ Lizmap - Documentation
    publish/index
    admin/index
    install/index
+   lizmap_cloud/index
 
 Indices and tables
 ==================
