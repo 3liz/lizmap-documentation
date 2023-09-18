@@ -11,12 +11,12 @@ This section is listing panels available in the Lizmap QGIS plugin.
   map_options
   layers
   basemap
-  locate_by_layer
   attribute_table
   edition
-  tooltip
-  filtered_layers_login
+  form_filtering
   dataviz
+  filtered_layers_login
   time_manager
   atlas
-  form_filtering
+  locate_by_layer
+  tooltip
