@@ -1,5 +1,5 @@
-Project configuration
-=====================
+Project properties
+==================
 
 .. contents::
    :depth: 3

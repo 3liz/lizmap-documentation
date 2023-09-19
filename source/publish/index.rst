@@ -9,6 +9,7 @@ This guide is for the GIS technician who want to publish some data in Lizmap web
 
   quick_start/index
   lizmap_plugin/index
+  layer_properties/index
   configuration/index
   publish
   customization/index
