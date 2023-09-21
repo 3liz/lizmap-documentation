@@ -1,6 +1,6 @@
 .. include:: ../../substitutions.rst
 
-Layers - settings for each layer
+Layers — Settings for each layer
 ================================
 
 .. contents::

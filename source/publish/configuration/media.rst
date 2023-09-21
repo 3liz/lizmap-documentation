@@ -25,7 +25,7 @@ Lizmap is using the directory for other purposes:
 
 * Adding some javascript, :file:`media/js`, see :ref:`adding-javascript`.
 * Replacing the default theme, :file:`media/theme`, see :ref:`creating-simple-themes`.
-* In the :ref:`edition` in :file:`media/upload/layer_name` for pictures uploaded from users.
+* In the :ref:`editing` in :file:`media/upload/layer_name` for pictures uploaded from users.
 * Providing documents
 
 Then in Lizmap Web Client you can provide access to these documents for 2 things:

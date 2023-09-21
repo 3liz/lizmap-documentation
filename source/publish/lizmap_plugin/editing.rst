@@ -1,9 +1,9 @@
 .. include:: ../../substitutions.rst
 
-.. _edition:
+.. _editing:
 
-Edition
-=======
+Editing — Edit a layer from the web interface
+=============================================
 
 .. contents::
    :depth: 3
@@ -30,7 +30,7 @@ Examples
 
 * **An engineering office** wants to allow project partners to trace remarks on the project areas. It allows the addition of polygons in a dedicated layer.
 
-.. _edition-prerequisites:
+.. _editing-prerequisites:
 
 Prerequisites
 -------------

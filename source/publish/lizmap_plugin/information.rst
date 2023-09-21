@@ -1,6 +1,6 @@
 .. include:: ../../substitutions.rst
 
-Information - Get some news about the project and your server
+Information — Get some news about the project and your server
 =============================================================
 
 .. contents::
@@ -49,8 +49,8 @@ go back on your support request and do a right click and paste.
 .. warning::
     When clicking in the QGIS plugin, you might have some actions displayed **in a popup**. You **should** check these
     actions, like to be sure to provide an administrator login, have QGIS server installed correctly, running a
-    maintained version of Lizmap Web Client etc. Check your version against latest released on
-    https://github.com/3liz/lizmap-web-client/releases
+    maintained version of Lizmap Web Client etc. Check your version on the
+    `release page <https://github.com/3liz/lizmap-web-client/releases>`_.
 
 ..  image:: /images/information_tab_clipboard.jpg
    :align: center

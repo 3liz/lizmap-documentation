@@ -1,6 +1,6 @@
 .. include:: ../../substitutions.rst
 
-Form filtering - filter layer data based on field values
+Form filtering — Filter layer data based on field values
 ========================================================
 
 .. contents::
