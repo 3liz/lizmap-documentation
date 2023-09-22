@@ -16,17 +16,26 @@ As an administrator, you can:
 
 .. note:: Rights on Lizmap Web Client repositories are managed at group level, not at the user level.
 
+You may need to create group to allow specific lizmap rights :
+
+* access to some repositories, projects or even layers
+* using edition tools
+* access to OGC Web Services URL
+
+.. note:: more info about repositories rights : see :ref:`define-group-rights`
+
+TODO : example users alice, bob, dave : 2 repo, 3 groups users_that_can_see_all_repo_group, user_that_can_edit_repo1, user_that_can_edit_repo2
+but only alice in users_that_can_edit_repo 
+
 Manage Groups: create, rename, delete
 =====================================
 
-* *Create a group*: In the left menu click on *Groups of users for rights* and scroll down to *Create a group*.
-* Define the *label*: it is possible to use spaces and accents
-* Define the *ident*: one word without special characters
+* *Create a group*: In the left menu click on *rights* and use the button *Create a group*.
+* Define the *Group name*: it is possible to use spaces and accents
+* Define the *Group id*: one word without special characters, usually will be generated from group name, but can be modified
 
-In the page *Groups of users for rights*, it is also possible to *Change the name* and *Delete a group*.
+In this page, it is also possible to *Change the name* and *Delete a group*.
 
-.. image:: /images/administration-create-group.jpg
-   :align: center
 
 .. note::
     The **users** group is a group system to give the rights to authenticated users to edit their own user information
@@ -47,27 +56,23 @@ Manage Users
 
 .. warning:: Once users created, you must put them into groups to assign the associated rights.
 
-.. image:: /images/administration-user-list.jpg
-   :align: center
 
 Putting users in groups
 =======================
 
-* In the left menu click on *Rights of users*
-* it is possible to filter the visible users with the dropdown menu
-* to put a user in groups, click on the its button *rights*
+* In the left menu click on *Users*
+* it is possible to search for users using the input field
+* to put a user in groups, click on the its button *view*
 
-  - The page displays a table with *rights online and groups on column*
-  - The last column shows *the resulting rights*
-  - In the *head row*, the + and - buttons allow to set / remove the user from a group
+  - The page displays details of the user
+  - The footer shows *Groups the user belongs to*
+  - You can add user to existing group using the listbox and the *add button*
 
-.. warning:: Do not use the *Personal rights* column.
 
 Assigning groups for each user created
 --------------------------------------
 
-.. image:: /images/administration-users-rights-list.jpg
-   :align: center
+* In the left menu click on *Rights*
+* The page display all the existing groups, with a column *Default group*
+* Use the pencil ✏️ button to allow or deny the group as default for new users
 
-.. image:: /images/administration-users-groups.jpg
-   :align: center
