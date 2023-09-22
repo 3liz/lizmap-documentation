@@ -92,6 +92,11 @@ Please refer to the QGIS documentation to see how to create a spatial layer in a
 - .. include:: ../../shared/move_up_down_layer.rst
 - .. include:: ../../shared/field_alias.rst
 
+Configuring the form
+--------------------
+
+The form in Lizmap is inherited from the :guilabel:`Layer Properties`. Read the :ref:`form`.
+
 Reusing data of edition layers
 ------------------------------
 
