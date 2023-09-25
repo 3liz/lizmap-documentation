@@ -10,7 +10,6 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
   project_for_web
   project_thumbnail
   project
-  layer
   legend
   popup
   action_popup
