@@ -22,6 +22,18 @@ build_html:
   tags:
     - infrav2
 
+push_transifex:
+  only:
+    - master
+    - lizmap_3_5
+    - lizmap_3_6
+  stage: build_html
+  script:
+    - make gettext
+    - push_to_transifex.sh
+  tags:
+    - infrav2
+
 deploy_snap:
   only:
     - master
