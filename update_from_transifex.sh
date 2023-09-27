@@ -59,4 +59,4 @@ fi
 
 echo $ALL_LOCALES $LOCALES_BRANCH
 
-tx pull $FORCE --mode default -l "$ALL_LOCALES" --branch $LOCALES_BRANCH
+tx -H https://rest.api.transifex.com -t $TX_TOKEN pull $FORCE --mode default -l "$ALL_LOCALES" --branch $LOCALES_BRANCH

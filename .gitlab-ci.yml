@@ -11,9 +11,30 @@ before_script:
   - export TX_BRANCH="$CI_COMMIT_REF_NAME"
   - echo "VERSION=$VERSION TX_BRANCH=$TX_BRANCH"
 
-build_html:
+# Build without translations, for MR
+build_html_mr:
+  only:
+    - merge_requests
   stage: build_html
   script:
+    - make clean html SPHINXBUILD=sphinx-build SPHINXINTL=sphinx-intl
+  artifacts:
+    paths:
+      - build/html/
+    name: "lizmapdoc-$CI_COMMIT_REF_NAME"
+  tags:
+    - infrav2
+
+
+# Build with translations, for main branches
+build_html_i18n:
+  only:
+    - master
+    - lizmap_3_5
+    - lizmap_3_6
+  stage: build_html
+  script:
+    - ./update_from_transifex.sh
     - make clean html SPHINXBUILD=sphinx-build SPHINXINTL=sphinx-intl
   artifacts:
     paths:
@@ -29,8 +50,8 @@ push_transifex:
     - lizmap_3_6
   stage: build_html
   script:
-    - make gettext
-    - push_to_transifex.sh
+    - make gettext SPHINXBUILD=sphinx-build SPHINXINTL=sphinx-intl
+    - tx -H https://rest.api.transifex.com -t $TX_TOKEN push -s --branch $TX_BRANCH
   tags:
     - infrav2
 
@@ -41,7 +62,7 @@ deploy_snap:
     - lizmap_3_6
   stage: deploy
   dependencies:
-    - build_html
+    - build_html_i18n
   script:
     - rsync -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvvzc --delete build/html/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/$VERSION
   environment:
@@ -56,7 +77,7 @@ deploy_production:
     - lizmap_3_6
   stage: deploy_prod
   dependencies:
-    - build_html
+    - build_html_i18n
   script:
     - rsync -e "$DEPLOYDOC_PROD_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_PROD_HOST:$DEPLOYDOC_PROD_PATH/$VERSION
   environment:
