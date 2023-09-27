@@ -12,7 +12,7 @@ To have better performance, Lizmap Web Client can also automatically generate th
 
 In some cases, it is desirable to remove the server cache, for example,
 when the style has changed and the tiles need to be updated.
-For this, three solutions are possible:
+For this, some solutions are possible:
 
 Remove all the cache by Lizmap repository
 =========================================
