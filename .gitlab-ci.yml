@@ -34,7 +34,7 @@ build_html_i18n:
     - lizmap_3_6
   stage: build_html
   script:
-    - ./update_from_transifex.sh
+    - ./update_from_transifex.sh -f
     - make clean html SPHINXBUILD=sphinx-build SPHINXINTL=sphinx-intl
   artifacts:
     paths:
