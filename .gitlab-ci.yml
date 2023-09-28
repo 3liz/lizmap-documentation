@@ -51,7 +51,7 @@ push_transifex:
   stage: build_html
   script:
     - make gettext SPHINXBUILD=sphinx-build SPHINXINTL=sphinx-intl
-    - tx -H https://rest.api.transifex.com -t $TX_TOKEN push -s --branch $TX_BRANCH
+    - tx -H https://rest.api.transifex.com -t $TX_TOKEN push -s
   tags:
     - infrav2
 
