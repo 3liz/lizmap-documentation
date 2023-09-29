@@ -9,7 +9,9 @@ Form filtering — Filter layer data based on field values
 Principle
 ---------
 
-This tool displays a form in the left panel, based on some fields, and allow the users to search among the layer data with a variety of form inputs: combo boxes, checkboxes, text inputs with autocompletion, date selector with sliders between the min and max date, etc.
+This tool displays a form in the left panel, based on some fields, and allow the users to search among the layer data
+with a variety of form inputs: combo boxes, checkboxes, text inputs with autocompletion, date selector with sliders
+between the min and max date, etc.
 
 .. warning::
     It works only with **database** layers: PostgreSQL (recommended), Spatialite and GeoPackage.
@@ -20,6 +22,10 @@ Using SQL statements, Lizmap will query the data to retrieve:
 * the unique values of some fields (for the Unique Values type for example)
 * the minimum and maximum of the numeric fields or date fields
 * the extent of the data for the current filter
+
+.. note::
+    The :guilabel:`Export` button in the :guilabel:`Filter` panel is linked to the
+    `attribute table tool <attribute_table.html>`_.
 
 Example
 -------

@@ -18,7 +18,10 @@ Sometimes this is not enough, and as a map editor, you would like the user to se
 as you can do in QGIS by opening the attribute table.
 
 .. note::
-    When activating the attribute table on a layer, it also activates graphical **selection** tools.
+    When activating the attribute table on a layer, it also activates :
+
+    * graphical **selection** tools
+    * export of features as a file
 
 Prerequisites
 -------------
