@@ -24,8 +24,6 @@ You may need to create group to allow specific lizmap rights :
 
 .. note:: more info about repositories rights : see :ref:`define-group-rights`
 
-TODO : example users alice, bob, dave : 2 repo, 3 groups users_that_can_see_all_repo_group, user_that_can_edit_repo1, user_that_can_edit_repo2
-but only alice in users_that_can_edit_repo 
 
 Manage Groups: create, rename, delete
 =====================================
@@ -75,4 +73,22 @@ Assigning groups for each user created
 * In the left menu click on *Rights*
 * The page display all the existing groups, with a column *Default group*
 * Use the pencil ✏️ button to allow or deny the group as default for new users
+
+Example
+=======
+
+As an example, you have two projects (X, Y), that need to be viewable by logged users and you want to allow some users to edit only X, others to edit only Y.
+The view and edition rights are managed in the repository level, thus  :
+
+* You need to create 3 groups :
+
+  - users_that_can_see_repos
+  - users_that_can_edit_repo_x
+  - users_that_can_edit_repo_y
+
+* You need to create a repository for each project (repo_x, repo_y)
+* For repo_x, you allow *Use the Edition tool* for group 'users_that_can_edit_repo_x', and allow *View Repositories* for 'users_that_can_see_all_repos'.
+* For repo_y, you allow *Use the Edition tool* for group 'users_that_can_edit_repo_y', and allow *View Repositories* for 'users_that_can_see_all_repos'.
+
+When you create a new user, add it to group 'users_that_can_see_all_repos', it will be able to see both projets, and add to group 'users_that_can_edit_repo_x' if you want to allow the user to edit data.
 
