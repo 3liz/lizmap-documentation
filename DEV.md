@@ -94,9 +94,8 @@ When the documentation is ready to release `X.Y` from the master branch:
 7. On the master branch, set the next version into `source/conf.py` and `source/lizmap_versions.json`
 8. Push the new branch and the master branch
 9. In the server configuration, change the target of the symbolic link 'current'
-10. Copy the `source/lizmap_versions.json` into all other branches, it should be the
+10. Copy the `source/lizmap_versions.json` into all **maintained** branches, it should be the
     same for all.
-11. For the version `X.Y-2`, change the `outdated` variable to `True`
 
 ## Archive an old version
 
@@ -104,3 +103,8 @@ When the documentation is ready to release `X.Y` from the master branch:
 1. `./update_from_transifex.sh -f
 1. `git commit -am 'Archive LWC BRANCH translations, EOL'`
 1. Remove all ressources on Transifex for the BRANCH
+1. Update `source/lizmap_versions.json` to add a single link to the current branch, see a branch below,
+   like [3.4](https://github.com/3liz/lizmap-documentation/blob/lizmap_3_4/source/lizmap_versions.json)
+1. `git commit -am 'Add single link to the current maintained branch'`
+1. `sed -i 's/\'outdated\': False,/\'outdated\': True,/g' source/conf.py`
+1. `git commit -am 'The branch is now outdated'`
