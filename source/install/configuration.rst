@@ -73,6 +73,8 @@ In this example, only 3 languages are available and the default language is ital
 
 There is also a ``fallbackLocale`` option but it is not recommended to change it.
 
+.. _set-password:
+
 Setting password for users
 ==========================
 
