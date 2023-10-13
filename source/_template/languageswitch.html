@@ -26,7 +26,7 @@
     var currentPage = '{{current_page_name}}.html'; // coming from sphinx, always without starting '/';
     var currentLang = '{{ language }}';
     document.addEventListener("DOMContentLoaded", function(){
-        var selectLanguage = document.getElementById("languages");
+        var selectLanguage = document.getElementById("_languages");
         selectLanguage.value = currentLang;
         selectLanguage.addEventListener("change", function(event) {
             window.location.href = event.target.selectedOptions[0].getAttribute('data-url');
