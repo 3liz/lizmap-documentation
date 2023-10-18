@@ -6,22 +6,41 @@ Project properties
 
 These settings are in :menuselection:`Project --> Project properties` or :kbd:`CTRL+SHIFT+P`.
 
+QGIS Server
+^^^^^^^^^^^
+
+:menuselection:`Project --> Project properties --> QGIS Server`
+
+Services Capabilities
+---------------------
+
+In :menuselection:`Service capabilities`, you can setup some metadata about your
+project:
+
+* :guilabel:`Title`, the main title which will be displayed in the landing page. Use a human title with space and accents.
+* :guilabel:`Abstract`, a fully written paragraph for the description. HTML is supported.
+* :guilabel:`Keywords`, some keywords separated by a comma. This will be used by the search bar.
+* Etc
+
+WMS
+---
+
+* The extent will be used to set the maximum extent where the user can pan the map on Lizmap
+* :guilabel:`Add geometry to feature info response` to be able to show the geometry when display the popup or to use the
+  geometry in an expression in the QGIS maptip.
+
 .. _publish_layer_wfs:
 
-OGC Services Capabilities
--------------------------
+WFS/OAPI
+--------
 
-In :menuselection:`Project properties --> QGIS Server --> Service capabilities`, you can setup some metadata about your project:
+Lizmap Web Client uses the **Web Feature Service** (WFS) to get data from a QGIS vector layer and display it in the
+web interface. This is why the first thing to do whenever you want to show a layer data in the web client is to
+**publish the vector layer through the WFS**.
 
-- The title which will be used by Lizmap.
-- Other information such as organization, the owner of the publication, the abstract, etc
-
-Publish a layer as WFS
-----------------------
-
-For many feature of Lizmap, it's necessary to publish your layer as WFS. It will be require when you are using the Lizmap QGIS plugin to activate some features.
-
-Lizmap Web Client uses the **Web Feature Service** (WFS) to get data from a QGIS vector layer and display it in the web interface. This is why the first thing to do whenever you want to show a layer data in the web client is to **publish the vector layer through the WFS**.
-
-- To do so, open the :menuselection:`Project properties --> QGIS Server --> WFS capabilities` and add the layer as "published" by checking the corresponding checkbox and save the project.
-- You can also tune the number of decimals to decrease the size of data to be fetched from WFS (keep 8 only for a map published in degrees, and keep 1 for map projections in meters)
+#. Open the :menuselection:`Project properties --> QGIS Server --> WFS/OAPI`
+#. For a given layer:
+    #. Use the checkbox :guilabel:`Published`
+    #. If your layer is in meters, decrease the number of decimals, to reduce the size of data to be fetched from WFS.
+       Two decimals might be enough if your layer is in meters.
+#. Save the project
