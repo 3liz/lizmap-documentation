@@ -53,7 +53,7 @@ To add a layer to this tool:
 
         - In the *vector layer properties dialog* of the QGIS vector layer, in the *Fields* tab, you can uncheck the
           checkbox of the column **WFS** for the fields to unpublish. This means this fields will not be published via
-          the WFS protocol. This is the **simplest and safiest way** to restrict the publication to some fields
+          the WFS protocol. This is the **simplest and safest way** to restrict the publication to some fields
           (for example to get rid of sensitive fields)
         - You can use this **Fields to hide** option to **hide** the given fields in the attribute table display. The
           hidden fields won't be visible for the end user, but will still be available for Lizmap Web Client.
