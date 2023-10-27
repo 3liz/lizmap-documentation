@@ -318,3 +318,8 @@ Here an example:
 .. image:: /images/popup_display_children.jpg
    :align: center
    :width: 80%
+
+Permalink with a popup
+----------------------
+
+See the chapter `permalink <permalink.html>`_.

@@ -17,4 +17,5 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
   expression
   print
   spatial_search
+  permalink
   optimization
