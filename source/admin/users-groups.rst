@@ -101,6 +101,5 @@ The list of settings in the plugin where a list of users or groups can be set:
 * :menuselection:`Map options --> Generic options`, to make the project visible only to subset of groups
 * :menuselection:`Layers --> Group visibility`, to make the layer visible only to subset of groups
 * :menuselection:`Layer editing --> Layer`, to allow editing capabilities on a layer, see :ref:`editing`
-* :menuselection:`Layouts --> Layout`, to allow printing
 * :menuselection:`Filter by user`, both :guilabel:`Attribute filtering` or :guilabel:`Spatial filtering`,
   see :ref:`filtered-layer-by-user`
