@@ -5,69 +5,102 @@ Manage groups and users in Lizmap Web Client
 .. contents::
    :depth: 3
 
-The groups and users: principles
-================================
+Principles
+==========
 
 As an administrator, you can:
 
-* create, rename, delete user groups
-* create, modify, delete users
-* linking a user to one or more groups
-
-.. note:: Rights on Lizmap Web Client repositories are managed at group level, not at the user level.
-
-Manage Groups: create, rename, delete
-=====================================
-
-* *Create a group*: In the left menu click on *Groups of users for rights* and scroll down to *Create a group*.
-* Define the *label*: it is possible to use spaces and accents
-* Define the *ident*: one word without special characters
-
-In the page *Groups of users for rights*, it is also possible to *Change the name* and *Delete a group*.
-
-.. image:: /images/administration-create-group.jpg
-   :align: center
+* **create**, **rename** or **delete** user groups
+* **create**, **update** or **delete** users
+* **link** a user to one or more groups
 
 .. note::
-    The **users** group is a group system to give the rights to authenticated users to edit their own user information
-    including passwords. We excluded this group of Lizmap Web Client configuration because all identified users must be
-    part of this group.
+    We highly recommend managing rights at the **group level**, not at the **user level**.
 
-Manage Users
+You may need to create groups to allow specific Lizmap rights :
+
+* access to some Lizmap repositories, projects or even layers
+* using editing tools, see :ref:`editing`
+* access to OGC Web Services URL
+
+.. note::
+    More info about repositories rights : see :ref:`define-group-rights`
+
+Groups created by default
+=========================
+
+Existing groups are visible on :menuselection:`Lizmap --> Administration --> Rights`.
+
+* :guilabel:`admins` : to manage **all** settings on the Lizmap instance
+* :guilabel:`publishers` : designed for GIS technicians, to allow accessing server information needed from the QGIS plugin.
+  The right ``lizmap.admin.server.information.view`` must be enabled.
+* :guilabel:`users` : to recognise a connected user, to allow some basic rights like changing his own password
+* :guilabel:`__anonymous` : a "special" group for a non connected user, which allows to set rights for non connected users
+
+:guilabel:`Default group` are the groups in which any new user is automatically added.
+
+Manage users
 ============
 
-* *Create a user* : In the left menu click on *Users* and click on the button *Create a new user*:
+On :menuselection:`Lizmap --> Administration --> Users`, you can:
 
-  - give a *Nickname* which will be used for the login
-  - give an email
-  - set name and firstname
+* *create* a new user
+* *edit* a user
+* *add* a user to an existing group
+* *remove* a user from a group
+* *remove* a user from the instance
 
-* The user will have an email for setting up his password. If you want to set the password yourself, read the section below.
-* It is also possible to *view* and *edit* informations about users.
+.. tip::
+    Once users have been created, you must add them into groups to grant associated rights.
 
-.. warning:: Once users created, you must put them into groups to assign the associated rights.
+.. warning::
+    According to the server configuration, the user receives a link to set his own password.
+    If you want to change this behavior, read :ref:`set-password`, if you are the system administrator.
 
-.. image:: /images/administration-user-list.jpg
-   :align: center
+Rights
+======
 
-Putting users in groups
-=======================
+Groups
+^^^^^^
 
-* In the left menu click on *Rights of users*
-* it is possible to filter the visible users with the dropdown menu
-* to put a user in groups, click on the its button *rights*
+On :menuselection:`Lizmap --> Administration --> Rights`, you land by default on :guilabel:`User groups`.
 
-  - The page displays a table with *rights online and groups on column*
-  - The last column shows *the resulting rights*
-  - In the *head row*, the + and - buttons allow to set / remove the user from a group
+You can:
 
-.. warning:: Do not use the *Personal rights* column.
+* *create* a new group
+* *edit* the group name
+* *set* the rights for a group
+* *remove* a group
 
-Assigning groups for each user created
---------------------------------------
+Users
+^^^^^^
 
-.. image:: /images/administration-users-rights-list.jpg
-   :align: center
+On :menuselection:`Lizmap --> Administration --> Rights`, you have a another tab called :guilabel:`Users`.
 
-.. image:: /images/administration-users-groups.jpg
-   :align: center
+You can:
+
+* *see* the list of users and its groups
+* for a given *user*:
+
+    * *see* the list of groups
+    * *see* the **resulting rights**
+
+Assigning groups automatically for each new user created
+--------------------------------------------------------
+
+On :menuselection:`Lizmap --> Administration --> Rights`, in the :guilabel:`Default group` column, click the pencil ✏️
+button to allow or deny the group as default.
+
+The default is set to the :guilabel:`users` group.
+
+Lizmap plugin
+=============
+
+The list of settings in the plugin where a list of users or groups can be set:
+
+* :menuselection:`Map options --> Generic options`, to make the project visible only to subset of groups
+* :menuselection:`Layers --> Group visibility`, to make the layer visible only to subset of groups
+* :menuselection:`Layer editing --> Layer`, to allow editing capabilities on a layer, see :ref:`editing`
+* :menuselection:`Layouts --> Layout`, to allow printing
+* :menuselection:`Filter by user`, both :guilabel:`Attribute filtering` or :guilabel:`Spatial filtering`,
+  see :ref:`filtered-layer-by-user`
