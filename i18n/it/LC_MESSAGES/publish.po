@@ -9,8 +9,8 @@
 # Nicla Maria Notarangelo <nicla_n@yahoo.it>, 2021
 # marta puppo <marta.puppo@gmail.com>, 2021
 # Flavio, 2021
-# marcobra <marcobra.ubuntu@gmail.com>, 2022
 # Stefano Campus <skampus@gmail.com>, 2022
+# marcobra <marcobra.ubuntu@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -19,8 +19,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-14 15:14+0100\n"
 "PO-Revision-Date: 2021-12-19 13:43+0000\n"
-"Last-Translator: Stefano Campus <skampus@gmail.com>, 2022\n"
-"Language-Team: Italian (https://www.transifex.com/3liz-1/teams/62012/it/)\n"
+"Last-Translator: marcobra <marcobra.ubuntu@gmail.com>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/3liz-1/teams/62012/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,31 +29,31 @@ msgstr ""
 
 #: ../../source/substitutions.rst:7
 msgid "add_layer_svg"
-msgstr ""
+msgstr "add_layer_svg"
 
 #: ../../source/substitutions.rst:8
 msgid "edit_layer_svg"
-msgstr ""
+msgstr "edit_layer_svg"
 
 #: ../../source/substitutions.rst:9
 msgid "remove_layer_svg"
-msgstr ""
+msgstr "remove_layer_svg"
 
 #: ../../source/substitutions.rst:10
 msgid "down_layer_svg"
-msgstr ""
+msgstr "down_layer_svg"
 
 #: ../../source/substitutions.rst:11
 msgid "up_layer_svg"
-msgstr ""
+msgstr "up_layer_svg"
 
 #: ../../source/substitutions.rst:12
 msgid "refresh_svg"
-msgstr ""
+msgstr "refresh_svg"
 
 #: ../../source/substitutions.rst:13
 msgid "properties_svg"
-msgstr ""
+msgstr "properties_svg"
 
 #: ../../source/publish/configuration/action_popup.rst:4
 msgid "Action in a popup"
@@ -1124,16 +1124,20 @@ msgstr ""
 msgid ""
 "Create a directory called :file:`media` (in lower case and without accents)"
 msgstr ""
+"Crea una directory chiamata :file:`media` (in minuscolo e senza accenti)"
 
 #: ../../source/publish/configuration/media.rst:16
 msgid "either **at the same level as the QGIS project**"
-msgstr ""
+msgstr "o **allo stesso livello del progetto QGIS**"
 
 #: ../../source/publish/configuration/media.rst:17
 msgid ""
 "or for some specific use-cases, one level up related to the QGIS project, to"
 " make it available for **all** folders (:ref:`single-media-folder`)"
 msgstr ""
+"o per alcuni casi d'uso specifici, un livello superiore relativo al progetto"
+" QGIS, per renderlo disponibile per **tutte** le cartelle (:ref:`single-"
+"media-folder`)"
 
 #: ../../source/publish/configuration/media.rst:20
 msgid ""
@@ -1143,7 +1147,7 @@ msgstr ""
 
 #: ../../source/publish/configuration/media.rst:21
 msgid "Icons such as SVG for vector layers"
-msgstr ""
+msgstr "Icone come SVG per livelli vettoriali"
 
 #: ../../source/publish/configuration/media.rst:22
 msgid ""
@@ -1227,19 +1231,24 @@ msgstr "Punto e punto-punto"
 
 #: ../../source/publish/configuration/media.rst:44
 msgid "On Linux, when you see dot ``.``, it means \"this directory\"."
-msgstr ""
+msgstr "Su Linux, quando vedi il punto ``.``, significa \"questa directory\"."
 
 #: ../../source/publish/configuration/media.rst:46
 msgid ""
 "Two dots, ``..``, one after the other, means \"the directory immediately "
 "above the current one\"."
 msgstr ""
+"Due punti, ``..``, uno dopo l'altro, significano \"la directory "
+"immediatamente sopra quella corrente\"."
 
 #: ../../source/publish/configuration/media.rst:48
 msgid ""
 "The two dots notation is used in QGIS and Lizmap to go one level up in the "
 "tree related to the QGIS project, see :ref:`single-media-folder`."
 msgstr ""
+"La notazione dei due punti viene utilizzata in QGIS e Lizmap per salire di "
+"un livello nell'albero relativo al progetto QGIS, vedere :ref:`single-media-"
+"folder`."
 
 #: ../../source/publish/configuration/media.rst:52
 msgid "Use for links"
@@ -1323,11 +1332,13 @@ msgstr ""
 
 #: ../../source/publish/configuration/media.rst:81
 msgid "Use for SVG"
-msgstr ""
+msgstr "Utilizzo per SVG"
 
 #: ../../source/publish/configuration/media.rst:83
 msgid "In the QGIS, you can use custom SVG, in your layouts, symbology etc."
 msgstr ""
+"In QGIS, puoi utilizzare SVG personalizzati, nei tuoi layout, simbologia, "
+"ecc."
 
 #: ../../source/publish/configuration/media.rst:85
 msgid ""
@@ -1335,16 +1346,21 @@ msgid ""
 "saved. In the screenshot below, you can notice the absolute path whereas if "
 "you open the QGS file in a text editor, it's a relative path :"
 msgstr ""
+"QGIS mostrerà un percorso assoluto ma nel progetto verrà salvato un percorso"
+" relativo.  Nello screenshot qui sotto puoi notare il percorso assoluto "
+"mentre se apri il file QGS in un editor di testo, è un percorso relativo:"
 
 #: ../../source/publish/configuration/media.rst:88
 msgid "``<prop v=\"../media/custom_svg/croissant.svg\" k=\"name\"/>``"
-msgstr ""
+msgstr "``<prop v=\"../media/custom_svg/croissant.svg\" k=\"name\"/>``"
 
 #: ../../source/publish/configuration/media.rst:93
 msgid ""
 "The path is starting with ``../media``, it's using the media folder "
 "described below."
 msgstr ""
+"Il percorso inizia con ``../media`` e utilizza la cartella multimediale "
+"descritta di seguito."
 
 #: ../../source/publish/configuration/media.rst:98
 msgid "Use a single media folder for many Lizmap folders"
@@ -2505,11 +2521,11 @@ msgstr "``right-dock``"
 
 #: ../../source/publish/configuration/popup.rst:49
 msgid "Media in popup"
-msgstr ""
+msgstr "File multimediali in popup"
 
 #: ../../source/publish/configuration/popup.rst:51
 msgid "See :ref:`use-in-popups` in the **media** chapter."
-msgstr ""
+msgstr "Vedi :ref:`use-in-popups` nel capitolo **media**."
 
 #: ../../source/publish/configuration/popup.rst:56
 msgid "Auto popup"
@@ -2948,6 +2964,8 @@ msgid ""
 "To display some color with HTML according to the value of a field, you can "
 "use this QGIS expression above :"
 msgstr ""
+"Per visualizzare del colore con HTML in base al valore di un campo, puoi "
+"utilizzare questa espressione QGIS sopra:"
 
 #: ../../source/publish/configuration/popup.rst:238
 msgid "Link to a PDF QGIS layout"
@@ -3792,6 +3810,10 @@ msgid ""
 "set, the search will be done only for the specified Lizmap projects. The "
 "value can be ``NULL`` if you don't want to filter per project."
 msgstr ""
+"``item_project`` (text).  Elenco dei progetti Lizmap separati da virgole.  "
+"Se impostata, la ricerca verrà effettuata solo per i progetti Lizmap "
+"specificati.  Il valore può essere ``NULL`` se non vuoi filtrare per "
+"progetto."
 
 #: ../../source/publish/configuration/spatial_search.rst:60
 msgid ""
@@ -3799,6 +3821,10 @@ msgid ""
 " be filtered by authenticated user login and groups. For example, 'admins'. "
 "The value can be ``NULL`` if you don't want to filter per user."
 msgstr ""
+"``item_filter`` (text).  Nome utente o nome del gruppo.  Quando forniti, i "
+"risultati verranno filtrati per login e gruppi di utenti autenticati.  Ad "
+"esempio, \"admins\".  Il valore può essere ``NULL`` se non si desidera "
+"filtrare per utente."
 
 #: ../../source/publish/configuration/spatial_search.rst:61
 msgid ""
@@ -4972,7 +4998,7 @@ msgstr ""
 
 #: ../../source/publish/customization/themes.rst:115
 msgid "Additional CSS"
-msgstr ""
+msgstr "CSS aggiuntivi"
 
 #: ../../source/publish/customization/themes.rst:117
 msgid ""
@@ -4981,6 +5007,10 @@ msgid ""
 "quick tip to remove the title `Projects` from the header in the landing page"
 " :"
 msgstr ""
+"nel :menuselection:`Pannello di amministrazione del server -> Tema`, è "
+"possibile aggiungere alcuni CSS senza creare file come nel passaggio "
+"precedente.  Ad esempio, un suggerimento rapido per rimuovere il titolo "
+"\"Progetti\" dall'intestazione nella pagina di destinazione:"
 
 #: ../../source/publish/index.rst:3
 msgid "Publisher guide"
@@ -5537,21 +5567,23 @@ msgstr "OSM Mapnik: servizio disponibile su openstreetmap.org"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:37
 msgid "OSM stamen toner"
-msgstr ""
+msgstr "OSM stamen toner"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:38
 msgid "OpenTopoMap"
-msgstr ""
+msgstr "OpenTopoMap"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:40
 msgid ""
 "*ThunderForest*, **API key required**: * Open Cycle Map: OpenStreetMap "
 "cycling data including altitude information"
 msgstr ""
+"*ThunderForest*, **API key required**: * Open Cycle Map: OpenStreetMap dati "
+"ciclistici, comprese le informazioni sull'altitudine"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:43
 msgid "*Google*, **API key required**:"
-msgstr ""
+msgstr "*Google*, **API key required**:"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:45
 msgid "Streets: the default Google Maps background layer"
@@ -5575,7 +5607,7 @@ msgstr "Terreno"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:50
 msgid "*Bing Map*, **API key required**:"
-msgstr ""
+msgstr "*Bing Map*, **API key required**:"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:52
 msgid "Streets: the default Bing Map background layer"
@@ -5583,7 +5615,7 @@ msgstr "Streets: il livello di sfondo predefinito di Bing Map"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:56
 msgid "*IGN Géoportail*, **API key required** for one layer:"
-msgstr ""
+msgstr "*IGN Géoportail*, **API key required** per un livello:"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:58
 msgid "Plan: The IGN rendering for the Web"
@@ -5598,6 +5630,8 @@ msgstr ""
 #: ../../source/publish/lizmap_plugin/basemap.rst:60
 msgid "Scan: the background map mixing the various IGN scan, API key needed"
 msgstr ""
+"Scan: la mappa di sfondo che miscela svariati IGN scan, la chiave API è "
+"necessaria"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:61
 msgid "Cadastre"
@@ -5609,7 +5643,7 @@ msgstr "Le licenze sono disponibili ai seguenti URL:"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:65
 msgid "*OpenStreetMap*: https://operations.osmfoundation.org/policies/tiles/"
-msgstr ""
+msgstr "*OpenStreetMap*: https://operations.osmfoundation.org/policies/tiles/"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:66
 msgid "*Google*: https://cloud.google.com/maps-platform/terms/"
@@ -5621,7 +5655,7 @@ msgstr "*Bing*: https://www.microsoft.com/en-us/maps/product"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:68
 msgid "*IGN*: https://geoservices.ign.fr/catalogue"
-msgstr ""
+msgstr "*IGN*: https://geoservices.ign.fr/catalogue"
 
 #: ../../source/publish/lizmap_plugin/basemap.rst:71
 msgid "Scale with external base layer"
@@ -5838,6 +5872,8 @@ msgid ""
 "For a few types of charts like bar or pie, you can chose to aggregate the "
 "data in"
 msgstr ""
+"Per alcuni tipi di grafici come a barre o a torta, puoi scegliere di "
+"aggregare i dati"
 
 #: ../../source/publish/lizmap_plugin/dataviz.rst:67
 msgid ""
@@ -7178,6 +7214,14 @@ msgid ""
 "<https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-"
 "password>`_."
 msgstr ""
+"Se possibile, utilizzare il login e la password di un amministratore di "
+"Lizmap Web Client.  Ti darà maggiori informazioni sul server.  Questo è "
+"facoltativo.  QGIS potrebbe chiederti di impostare la **master password**.  "
+"È una password per proteggere il gestore password interno di QGIS.  Questa "
+"password viene utilizzata solo sul **tuo** computer.  Il plugin Lizmap "
+"memorizza login e password nel `gestore password QGIS "
+"<https://docs.qgis.org/latest/en/docs/user_manual/auth_system/auth_overview.html#master-"
+"password>`_."
 
 #: ../../source/publish/lizmap_plugin/information.rst:37
 msgid ""
@@ -7191,7 +7235,7 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/information.rst:41
 msgid "Request for support"
-msgstr ""
+msgstr "Richiesta di supporto"
 
 #: ../../source/publish/lizmap_plugin/information.rst:43
 msgid ""
@@ -7201,6 +7245,11 @@ msgid ""
 "So you should have your server available in the table mentioned above, "
 "**with** an administrator login."
 msgstr ""
+"Quando si richiede supporto su un sito Web, potrebbe essere necessario o "
+"altamente raccomandato copiare/incollare le versioni utilizzate sul server."
+"  Questo aiuta molto a conoscere il tuo ambiente e a sapere se il bug è "
+"nuovo o già risolto.  Quindi dovresti avere il tuo server disponibile nella "
+"tabella menzionata sopra, **con** un accesso da amministratore."
 
 #: ../../source/publish/lizmap_plugin/information.rst:47
 msgid ""
@@ -7208,6 +7257,10 @@ msgid ""
 "your clipboard for a support request…`. You can go back on your support "
 "request and do a right click and paste."
 msgstr ""
+"Quindi, fai clic con il pulsante destro del mouse sul tuo server, quindi "
+":menuselection:`Copia tutte le versioni negli appunti per una richiesta di "
+"supporto…`.  Puoi tornare alla tua richiesta di supporto e fare clic con il "
+"pulsante destro del mouse e incollare."
 
 #: ../../source/publish/lizmap_plugin/information.rst:51
 msgid ""
@@ -7217,6 +7270,12 @@ msgid ""
 "maintained version of Lizmap Web Client etc. Check your version against "
 "latest released on https://github.com/3liz/lizmap-web-client/releases"
 msgstr ""
+"Quando si fa clic sul plugin QGIS, alcune azioni potrebbero essere "
+"visualizzate **in un popup**.  Dovresti **controllare queste azioni, ad "
+"esempio essere sicuro di fornire un accesso da amministratore, avere il "
+"server QGIS installato correttamente, eseguire una versione mantenuta di "
+"Lizmap Web Client ecc. Controlla la tua versione rispetto all'ultima "
+"versione rilasciata su https://github.com /3liz/lizmap-web-client/releases"
 
 #: ../../source/publish/lizmap_plugin/layers.rst:4
 msgid "Layers - settings for each layer"
@@ -7621,7 +7680,7 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:18
 msgid "Generic options"
-msgstr ""
+msgstr "Opzioni generiche"
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:20
 msgid "hide the project in Lizmap Web Client:"
@@ -7656,11 +7715,11 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:28
 msgid "Map tools"
-msgstr ""
+msgstr "Strumenti mappa"
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:30
 msgid "*Draw*: enables some drawing tools."
-msgstr ""
+msgstr "*Draw*: abilita alcuni strumenti di disegno."
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:31
 msgid "*Print*: enables the use of QGIS compositions for PDF generation map"
@@ -7706,7 +7765,7 @@ msgstr "Nominatim (OpenStreetMap)"
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:38
 msgid "Google (API key required, see :ref:`lizmap-config-baselayers`)"
-msgstr ""
+msgstr "Google (API key richiesta, vedi :ref:`lizmap-config-baselayers`)"
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:39
 msgid "IGN France (Géoportail)"
@@ -7752,7 +7811,7 @@ msgstr ""
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:56
 msgid "Initial map extent"
-msgstr ""
+msgstr "Estensione iniziale della mappa"
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:58
 msgid ""
@@ -7768,6 +7827,9 @@ msgid ""
 "the maximal map extent is specified in the *QGIS server* tab of *Project "
 "Properties* window. The data will not be displayed if they are outside it"
 msgstr ""
+"l'estensione massima della mappa è specificata nella scheda *QGIS server* "
+"della finestra *Proprietà progetto*.  I dati non verranno visualizzati se si"
+" trovano al di fuori di essa"
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:60
 msgid "by default, the initial extent is the maximal one."
@@ -7775,11 +7837,13 @@ msgstr "in modo predefinito, l'estensione iniziale è quella massima."
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:63
 msgid "Map interface"
-msgstr ""
+msgstr "Interfaccia mappa"
 
 #: ../../source/publish/lizmap_plugin/map_options.rst:65
 msgid "To hide by default some components in the user interface."
 msgstr ""
+"Per nascondere per impostazione predefinita alcuni componenti "
+"nell'interfaccia utente."
 
 #: ../../source/publish/lizmap_plugin/time_manager.rst:4
 msgid "Time Manager - animation of temporal vector layers"

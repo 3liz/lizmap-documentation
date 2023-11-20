@@ -8,17 +8,17 @@
 # Flavio, 2021
 # Nicla Maria Notarangelo <nicla_n@yahoo.it>, 2021
 # Eugenio Fasser <qfasser@gmail.com>, 2022
-# marcobra <marcobra.ubuntu@gmail.com>, 2022
+# marcobra <marcobra.ubuntu@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-13 13:45+0000\n"
+"POT-Creation-Date: 2022-12-14 15:14+0100\n"
 "PO-Revision-Date: 2021-12-19 13:43+0000\n"
-"Last-Translator: marcobra <marcobra.ubuntu@gmail.com>, 2022\n"
-"Language-Team: Italian (https://www.transifex.com/3liz-1/teams/62012/it/)\n"
+"Last-Translator: marcobra <marcobra.ubuntu@gmail.com>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/3liz-1/teams/62012/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -171,6 +171,9 @@ msgid ""
 "In some server, additional settings should be done into Lizmap. Settings "
 "should be set into the ``lizmap/var/config/`` directory."
 msgstr ""
+"In alcuni server, è necessario eseguire impostazioni aggiuntive in Lizmap.  "
+"Le impostazioni dovrebbero essere impostate nella directory "
+"``lizmap/var/config/``."
 
 #: ../../source/install/configuration.rst:9
 msgid "Configuration files"
@@ -317,6 +320,14 @@ msgid ""
 "<https://github.com/3liz/lizmap-web-"
 "client/tree/release_3_6/lizmap/app/locales>`_."
 msgstr ""
+"Le lingue disponibili in Lizmap sono mostrate nel `repository GitHub "
+"<https://github.com/3liz/lizmap-web-"
+"client/tree/master/lizmap/app/locales>`_.  Fai attenzione a selezionare il "
+"ramo corretto su GitHub in base alla versione di Lizmap Web Client che stai "
+"installando.  Alcune lingue potrebbero non essere disponibili nelle versioni"
+" precedenti di Lizmap Web Client, ad esempio nel `ramo 3.6 "
+"<https://github.com/3liz/lizmap-web-"
+"client/tree/release_3_6/lizmap/app/locales>`_ ."
 
 #: ../../source/install/configuration.rst:62
 msgid ""
@@ -331,6 +342,8 @@ msgid ""
 "You can change the default language of Lizmap by setting the parameter "
 "``locale`` Into localconfig.ini.php, with your preferred language code."
 msgstr ""
+"Puoi cambiare la lingua predefinita di Lizmap impostando il parametro "
+"``locale`` in localconfig.ini.php, con il codice della lingua preferita."
 
 #: ../../source/install/configuration.rst:68
 msgid ""
@@ -1948,6 +1961,10 @@ msgid ""
 "interface. In **Py-QGIS-Server**, you must explicitly publish the API as "
 "well."
 msgstr ""
+"Altrimenti, se stai utilizzando `Py-QGIS-Server <https://docs.3liz.org/py-"
+"qgis-server/>`_, l'URL dell'API Lizmap **deve** essere configurato "
+"nell'interfaccia di amministrazione.  In **Py-QGIS-Server**, devi pubblicare"
+" esplicitamente anche l'API."
 
 #: ../../source/install/pre_requirements.rst:153
 msgid ""
@@ -1956,6 +1973,10 @@ msgid ""
 "`QGSRV_API_ENDPOINTS_LIZMAP=yes` otherwise, add the configuration below in "
 "your configuration file :"
 msgstr ""
+"A partire dalla versione Py-QGIS-Server 1.8.4, è possibile abilitare "
+"l'endpoint API Lizmap con la variabile d'ambiente "
+"`QGSRV_API_ENDPOINTS_LIZMAP=yes` altrimenti, aggiungere la configurazione "
+"seguente nel file di configurazione:"
 
 #: ../../source/install/pre_requirements.rst:164
 msgid ""
