@@ -30,6 +30,7 @@ build_html_mr:
 build_html_i18n:
   only:
     - master
+    - lizmap_3_7
     - lizmap_3_6
   stage: build_html
   script:
@@ -45,6 +46,7 @@ build_html_i18n:
 push_transifex:
   only:
     - master
+    - lizmap_3_7
     - lizmap_3_6
   stage: build_html
   script:
@@ -56,6 +58,7 @@ push_transifex:
 deploy_snap:
   only:
     - master
+    - lizmap_3_7
     - lizmap_3_6
   stage: deploy
   dependencies:
@@ -70,6 +73,7 @@ deploy_snap:
 deploy_production:
   only:
     - master
+    - lizmap_3_7
     - lizmap_3_6
   stage: deploy_prod
   dependencies:
