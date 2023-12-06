@@ -39,19 +39,21 @@ You can allow the user to modify the contents of certain labels (title, descript
 To do this, you need to add an identifier to your label in the composer.
 
 .. warning::
-    Each identifier must be unique for the whole composer. Identifiers must be strings **not** integers (e.g. 'my_title' **not** '1').
+    Each identifier must be unique for the whole composer. Identifiers must be strings, **without** integers or spaces
+    (e.g. it must be ``custom_title``, **nor** ``1`` neither ``custom title``).
 
 ..  image:: /images/interface-print-dynamic-label.jpg
    :align: center
 
-Lizmap will automatically ask the user in the webbrowser to fill each fields.
+Lizmap will automatically ask the user in the web-browser to fill each fields.
 
-More tips:
+.. tip::
+    * If your label is pre-populated in QGIS, the field will be pre-populated too in the web-browser.
+    * If you check 'Render as HTML' for your label in QGIS, you will have a multiline label in Lizmap accepting HTML code.
+      But you will need to ``<br>`` for line breaks.
 
-* If your label is pre-populated in QGIS, the field will be pre-populated too in the webbrowser.
-* If you check 'Render as HTML' for your label in QGIS, you will have a multiline label in Lizmap accepting HTML code. Use ``<br>`` for line breaks for example.
-
-The preview in Lizmap will be similar to this screenshot. The red rectangle is the area that the user can define in the webbrowser and the user can also set the map description and the map title.
+The preview in Lizmap will be similar to this screenshot. The red rectangle is the area that the user can define in
+the web-browser and the user can also set the map description and the map title.
 
 .. image:: /images/print_user_params.jpg
    :align: center
