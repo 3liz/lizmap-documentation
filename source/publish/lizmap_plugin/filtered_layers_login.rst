@@ -55,8 +55,9 @@ Configuring the tool
    :align: center
 
 1. Choose the polygon layer used for filtering
-2. Choose the field in this layer which has Lizmap groups, separated by a comma.
-3. Add a layer to filter to this tool:
+2. Choose the field in this layer which has Lizmap groups or users, separated by a comma.
+3. Choose between :guilabel:`Users` or :guilabel:`Groups` according to the content of your previous field.
+4. Add a layer to filter to this tool:
 
     1. .. include:: ../../shared/add_layer.rst
     2. Choose the layer to filter
@@ -76,7 +77,7 @@ Filtering by attribute
 Example
 ^^^^^^^
 
-A video tutorial is available at: https://vimeo.com/83966790
+A video tutorial is available on `Vimeo <https://vimeo.com/83966790>`_.
 
 Configuring the tool
 ^^^^^^^^^^^^^^^^^^^^
@@ -88,19 +89,24 @@ To use data filtering tool in Lizmap Web Client, you must:
 Here are the detailed steps to configure this feature:
 
 .. warning::
-    In Lizmap Web Client administration, in the repository properties, be sure that ``anonymous`` and other relevant groups are not checked
-    for :guilabel:`Always see complete layers data, even if filtered by login`. See :ref:`define-group-rights`.
+    In Lizmap Web Client administration, in the repository properties, be sure that ``anonymous`` and other relevant
+    groups are not checked for :guilabel:`Always see complete layers data, even if filtered by login`.
+    See :ref:`define-group-rights`.
 
 * Check group ID or user ID in the administration interface:
 
-    * To know group ID, you must go to the administration interface :menuselection:`SYSTEM --> Groups of users for rights`: ID appears in parentheses after the name of each group (under the title :guilabel:`Groups of new users`)
+    * To know group ID, you must go to the administration interface :menuselection:`SYSTEM --> Groups of users for rights`:
+      ID appears in parentheses after the name of each group (under the title :guilabel:`Groups of new users`)
     * Or to know the user ID, just use its login.
 
-* For all vector layers which is desired filter data, just add a text column that will hold the ID for each line who has the right to display this feature.
+* For all vector layers which is desired filter data, just add a text column that will hold the ID for each line who
+  has the right to display this feature.
 
     * *Fill this column* for each line of the attribute table with the ID (using the calculator, for example).
-    * It is possible to set ``all`` as the value in some lines to disable the filter: All users will see the data for these lines.
-    * If the value in this column for a row does not correspond to a user group, then the data will be displayed for no user.
+    * It is possible to set ``all`` as the value in some lines to disable the filter: All users will see the data for
+      these lines.
+    * If the value in this column for a row does not correspond to a user group, then the data will be displayed for no
+      user.
 
 ..  image:: /images/interface-add-filter-by-login.jpg
    :align: center
@@ -110,18 +116,20 @@ Here are the detailed steps to configure this feature:
     1. .. include:: ../../shared/add_layer.rst
     2. Select layer from the dropdown list
     3. Select the field with the ID
-    4. Check the box if the field contains user ID, instead of group ID
+    4. Choose between :guilabel:`Users` or :guilabel:`Groups` according to the content of your previous field.
 
 - .. include:: ../../shared/edit_layer.rst
 - .. include:: ../../shared/remove_layer.rst
 
 .. warning::
-    Disable the client cache and cache server for all filtered layers. Otherwise, the data displayed will not be updated between each connection or user logout!
+    Disable the client cache and cache server for all filtered layers. Otherwise, the data displayed will not be updated
+    between each connection or user logout!
 
 Edition
 ^^^^^^^
 
-If you have enabled the edition (see :ref:`editing`) on the filtered layer, the field containing the ID will be editable with:
+If you have enabled the edition (see :ref:`editing`) on the filtered layer, the field containing the ID will be editable
+with:
 
 * either a combobox for a non admin user with either his own login or ``all``
 * or a line edit to write a value for a admin user
