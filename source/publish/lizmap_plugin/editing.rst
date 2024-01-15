@@ -235,13 +235,12 @@ It is possible to store your files in a remote server that supports the `WebDAV 
 
   where:
 
-    * :code:`baseUri`  is the root folder of your WebDAV server. It must end with ``/`` and it must be the same as
+    * :code:`baseUri` is the root folder of your WebDAV server. It must end with ``/`` and it must be the same as
       indicated in the :guilabel:`Attachment widget`
-    * :code:`enabled`  set it to ``1`` switch on the WebDAV configuration, or to ``0`` to switch it off
-    * :code:`user`     WebDAV baseUri authentication user, same as same as configured in the Authentication section
-      of External storage configuration (Attachment widget)
-    * :code:`password` WebDAV baseUri authentication password, same as configured in the Authentication section of
-      External storage configuration (Attachment widget)
+    * :code:`enabled` set it to ``1`` switch on the WebDAV configuration, or to ``0`` to switch it off
+    * :code:`user`, WebDAV ``baseUri`` authentication user, same as same as configured in the :guilabel:`Authentication`
+      section of :guilabel:`External storage`
+    * :code:`password`, WebDAV ``baseUri`` authentication password, same as above
 
   .. note::
     :code:`user` and :code:`password` fields are not mandatory, depends on how you intend to manage the WebDAV
