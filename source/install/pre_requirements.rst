@@ -6,6 +6,9 @@ Requirements before installing Lizmap Web Client
     If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those
     `instructions <https://github.com/3liz/lizmap-docker-compose>`_ using Docker and Docker-Compose.
 
+.. contents::
+   :depth: 3
+
 Server administration knowledge
 ===============================
 
@@ -239,7 +242,7 @@ Then, with Py-QGIS-Server, if your URL for OWS is `http://map:8080/ows/`, it mea
 .. _prerequisites-postgresql:
 
 PostgreSQL
-----------
+==========
 
 PostgreSQL can be used for **three** different purposes in Lizmap :
 
