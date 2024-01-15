@@ -197,10 +197,10 @@ It is possible to store your files in a remote server that supports the `WebDAV 
 - Configure the :guilabel:`Attachments` edit widget for the chosen field as follow:
 
   1. In the :guilabel:`Storage type` field, select the :guilabel:`WebDAV Storage` option
-  2. In the :guilabel:`External Storage`` section, on the :guilabel:`Store URL` field, add an :code:`expression` 
-     indicates the full url of the remote path for the file. The expression string must:
+  2. In the :guilabel:`External Storage`` section, on the :guilabel:`Store URL` field, add an **expression** which
+     indicates the full URL of the remote path for the file. The expression string must:
 
-    * start with the remote storage url of the :code:`root` folder of the WebDAV server
+    * start with the remote storage URL of the **root** folder of the WebDAV server
     * include or not any destination subfolder 
     * end with the :code:`file_name(@selected_file_path)` expression
 
@@ -210,10 +210,10 @@ It is possible to store your files in a remote server that supports the `WebDAV 
   ..  image:: /images/webdav-configure-attachment-widget.jpg
     :align: center
 
-  For example, if you want to upload a file in your WebDav server :code:`https://webdav/dav` in the subfolder 
-  :code:`pictures/2023/` then the full expression will be:
+  For example, if you want to upload a file in your WebDAV server :code:`https://webdav/dav` in the subfolder
+  :code:`pictures/2024/` then the full expression will be:
   
-  :code:`'https://webdav/dav/pictures/2023/'||file_name(@selected_file_path)`
+  :code:`'https://webdav/dav/pictures/2024/'||file_name(@selected_file_path)`
 
   You can also upload a file directly in the root folder, simply change the expression above in 
   :code:`'https://webdav/dav/'||file_name(@selected_file_path)`
@@ -223,7 +223,7 @@ It is possible to store your files in a remote server that supports the `WebDAV 
     under different subfolders.
 
 - Configure your Lizmap installation to recognize your WebDAV storage. To do so in your 
-  :code:`var/config/profiles.ini.php` edit the :code:`[webdav:default]` section:
+  :file:`var/config/profiles.ini.php` edit the :code:`[webdav:default]` section:
 
   .. code-block:: ini
 
@@ -235,38 +235,38 @@ It is possible to store your files in a remote server that supports the `WebDAV 
 
   where:
 
-    * :code:`baseUri`  is the root folder of your webdav server. It must end with ``/`` and it must be the same as 
-      indicated in the Attachment widget
-    * :code:`enabled`  set it to ``1`` switch on the webdav configuration, or to ``0`` to switch it off
-    * :code:`user`     webdav baseUri authentication user, same as same as configured in the Authentication section 
+    * :code:`baseUri`  is the root folder of your WebDAV server. It must end with ``/`` and it must be the same as
+      indicated in the :guilabel:`Attachment widget`
+    * :code:`enabled`  set it to ``1`` switch on the WebDAV configuration, or to ``0`` to switch it off
+    * :code:`user`     WebDAV baseUri authentication user, same as same as configured in the Authentication section
       of External storage configuration (Attachment widget)
-    * :code:`password` webdav baseUri authentication password, same as configured in the Authentication section of 
+    * :code:`password` WebDAV baseUri authentication password, same as configured in the Authentication section of
       External storage configuration (Attachment widget)
 
   .. note::
-    :code:`user` and :code:`password` fields are not mandatory, depends on how you intend to manage the webdav
+    :code:`user` and :code:`password` fields are not mandatory, depends on how you intend to manage the WebDAV
     storage.
 
   .. note::
-    Configure multiple webdav servers on the same Lizmap installation is not supported, so you can configure
-    only one webdav endpoint per time.
+    Configure multiple WebDAV servers on the same Lizmap installation is not supported, so you can configure
+    only one WebDAV endpoint per installation.
 
   .. warning::
-    To get files from remote storage the :code:`baseUri` will be exposed on the web client.
+    To get files from remote storage the :code:`baseUri` will be **exposed** on the web client.
 
   .. warning::
     If an user upload two files with the same name the first file could be overwritten. This behaviour cannot
-    be controlled by Lizmap since concerns the configuration and the structure of the webdav server.
+    be controlled by Lizmap since it concerns the configuration and the structure of the WebDAV server.
 
   .. tip::
     To prevent files from being overwritten you can set the :guilabel:`Store URL` by placing a :code:`uuid` in
-    front of the file name.
-
-    For example: ``'https://webdav/dav/pictures/2023/'||uuid('WithoutBraces')||'_'||file_name(@selected_file_path)``
+    front of the file name,
+    for example: ``'https://webdav/dav/pictures/2024/'||uuid('WithoutBraces')||'_'||file_name(@selected_file_path)``
     
+
 After you had done the two configuration steps above you are able to:
 
   - **upload** a new file from the layer edition form
   - **delete** an existing file from the layer edition form
   - **access** the file via Attribute table (see :ref:`attribute_table`)
-  - **access** the file or get a :code:`preview` of the file content via Popup (see :ref:`use-in-popups`)
+  - **access** the file or get a **preview** of the file content via Popup (see :ref:`use-in-popups`)
