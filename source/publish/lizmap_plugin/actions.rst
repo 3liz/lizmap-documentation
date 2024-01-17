@@ -1,7 +1,7 @@
 .. include:: ../../substitutions.rst
 
-Action in a popup
-=================
+Actions — Add some custom buttons
+=================================
 
 .. contents::
    :depth: 3
