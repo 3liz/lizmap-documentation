@@ -1,7 +1,7 @@
 .. include:: ../../substitutions.rst
 
-Actions
-=======
+Actions — Add some custom buttons
+=================================
 
 .. contents::
    :depth: 3
