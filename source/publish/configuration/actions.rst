@@ -40,6 +40,15 @@ Prerequisites
 Configuring the tool
 --------------------
 
+.. warning::
+    In |lizmap_3_7|, the JSON syntax has changed. The documentation has not been yet fully updated to the new JSON syntax.
+
+    If you use the syntaxe **below**, you will have a warning in Lizmap, inviting you to migrate to a newer version of the syntax.
+    For now, the **new** syntax is only described on `GitHub <https://github.com/3liz/lizmap-web-client/pull/3339>`_.
+
+    Either you can follow the syntax **below** and update in a few weeks, or follow the **new** syntax on the link above.
+    Sorry for the inconvenience.
+
 * Each action is **characterized** by a ``layer id``, a ``name``, a ``title``, an ``icon``, some optional ``options``,
   ``style``, ``callbacks`` and ``confirm`` property can be used.
 * A layer can have **one or several actions**
