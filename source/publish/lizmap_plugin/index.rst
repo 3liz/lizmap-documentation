@@ -18,6 +18,7 @@ This section is listing panels available in the Lizmap QGIS plugin.
   form_filtering
   dataviz
   filtered_layers_login
+  actions
   time_manager
   atlas
   locate_by_layer

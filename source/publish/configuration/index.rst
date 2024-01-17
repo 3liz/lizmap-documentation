@@ -12,7 +12,6 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
   project
   legend
   popup
-  actions
   media
   expression
   print
