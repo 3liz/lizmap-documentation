@@ -251,7 +251,7 @@ _________________________
 
 Every feature of a layer with an atlas configured will have a link (1) at the end of its popup which open a PDF for this specific feature, using the QGIS Atlas layout.
 If the layout contains custom text fields, a button (2) will be displayed. Clicking this button, allows you to type values for those custom text fields before printing.
-To enable this feature, you need a QGIS Layout with atlas enabled on that layer **and** to download the `AtlasPrint` QGIS Server plugin on GitHub : https://github.com/3liz/qgis-atlasprint
+To enable this feature, you need a QGIS Layout with atlas enabled on that layer.
 
 .. image:: /images/feature-popup-atlas.jpg
    :align: center
