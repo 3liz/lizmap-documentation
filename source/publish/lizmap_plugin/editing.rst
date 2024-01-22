@@ -269,3 +269,6 @@ After you had done the two configuration steps above you are able to:
   - **delete** an existing file from the layer edition form
   - **access** the file via Attribute table (see :ref:`attribute_table`)
   - **access** the file or get a **preview** of the file content via Popup (see :ref:`use-in-popups`)
+
+  .. warning::
+    Unfortunately, this feature is not yet compatible with |lizmap_cloud|.
