@@ -49,6 +49,11 @@ You can choose between:
 * ``bottomdock``
 * ``right-dock``
 
+Geometry of the feature
+-----------------------
+
+See :ref:`project_wms` for adding the geometry.
+
 Media in popup
 --------------
 
