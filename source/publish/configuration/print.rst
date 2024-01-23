@@ -35,6 +35,8 @@ In your layout, you can add :
   according to visible layers following this example on the
   `QGIS documentation <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#id4>`_.
 
+.. _dynamic_content:
+
 Dynamic content
 ^^^^^^^^^^^^^^^
 
@@ -79,20 +81,11 @@ Only the published compositions will be presented in Lizmap.
    :align: center
    :width: 600
 
-.. _print-layout-atlas:
 
 Layout with an atlas when using a popup
 ---------------------------------------
 
-It's possible to automatically add a link to the PDF in a popup.
-
-* Enable an atlas layout on a layer
-* Enable :ref:`popup` on the same layer
-
-A link will be displayed automatically at the top of the popup.
-
-.. image:: /images/feature-popup-atlas.jpg
-   :align: center
+Read in the popup chapter, :ref:`print-layout-atlas`
 
 .. _print-external-baselayer:
 

@@ -251,15 +251,21 @@ To display some color with HTML according to the value of a field, you can use t
 
     <p style="color:[% if("POPULATION" > 5000, 'red', 'black') %]">[% POPULATION %]</p>
 
-Link to a PDF QGIS layout
-_________________________
+.. _print-layout-atlas:
 
-Every feature of a layer with an atlas configured will have a link (1) at the end of its popup which open a PDF for this specific feature, using the QGIS Atlas layout.
-If the layout contains custom text fields, a button (2) will be displayed. Clicking this button, allows you to type values for those custom text fields before printing.
-To enable this feature, you need a QGIS Layout with atlas enabled on that layer.
+Link to a PDF QGIS layout using the QGIS Atlas
+______________________________________________
 
-.. image:: /images/feature-popup-atlas.jpg
-   :align: center
+It's possible to automatically add a link to a PDF in a popup, based on a QGIS layout using the
+`QGIS atlas <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/create_output.html#generate-an-atlas>_`.
+
+#. Enable an atlas layout on a layer
+#. Enable :ref:`popup` on the same layer
+#. Open the plugin to configure the layout in the :guilabel:`Layouts` panel
+#. The layout will be accessible from the popup, not from the main :guilabel:`Print` button in the left menu.
+
+If the layout contains custom text fields (see :ref:`dynamic_content`), a button will be displayed to set the custom
+content.
 
 One to many relations
 ---------------------
