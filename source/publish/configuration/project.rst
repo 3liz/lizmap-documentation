@@ -22,12 +22,14 @@ project:
 * :guilabel:`Keywords`, some keywords separated by a comma. This will be used by the search bar.
 * Etc
 
+.. _project_wms:
+
 WMS
 ---
 
 * The extent will be used to set the maximum extent where the user can pan the map on Lizmap
-* :guilabel:`Add geometry to feature info response` to be able to show the geometry when display the popup or to use the
-  geometry in an expression in the QGIS maptip.
+* :guilabel:`Add geometry to feature info response` to be able to show the geometry when displaying the popup or
+  to use the geometry in an expression in the QGIS maptip.
 
 .. _publish_layer_wfs:
 
