@@ -253,10 +253,10 @@ To display some color with HTML according to the value of a field, you can use t
 
 .. _print-layout-atlas:
 
-Link to a PDF QGIS layout using the QGIS Atlas
-______________________________________________
+Link to a PDF layout using the QGIS Atlas
+_________________________________________
 
-It's possible to automatically add a link to a PDF in a popup, based on a QGIS layout using the
+It's possible to automatically add a link to a PDF in a popup, based on a layout using the
 `QGIS atlas <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/create_output.html#generate-an-atlas>_`.
 
 #. Enable an atlas layout on a layer
