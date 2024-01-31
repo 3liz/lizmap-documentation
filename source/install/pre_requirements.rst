@@ -110,6 +110,12 @@ or use the `default one provided by QGIS <https://docs.qgis.org/latest/en/docs/s
     * https://github.com/3liz/qgis-lizmap-server-plugin
     * **Important**, read below for more information the Lizmap QGIS Server plugin. (:ref:`lizmap-server-plugin`)
 
+* AtlasPrint
+
+    * *Optional*
+    * To enable QGIS layouts based on an atlas
+    * https://github.com/3liz/qgis-atlasprint
+
 * Cadastre
 
     * *Optional*
