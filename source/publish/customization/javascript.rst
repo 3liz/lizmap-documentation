@@ -114,17 +114,6 @@ There are also some variables which are available.
 Examples
 --------
 
-Collapse a group in the legend
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: javascript
-
-    lizMap.events.on({
-        uicreated: function(e) {
-            $('#group-groupname td a.expander').click();
-        }
-    });
-
 Disable right click
 ^^^^^^^^^^^^^^^^^^^
 
@@ -154,8 +143,7 @@ An example allowing you to send current login User-ID (and/or other user data) t
    var userFields = {
       login: 'your_lizmap_user_login_field',
       firstname: 'your_lizmap_user_firstname_field',
-      lastname: 'your_lizmap_user_lastname_field',
-      organization: 'your_lizmap_user_organization_field'
+      lastname: 'your_lizmap_user_lastname_field'
    };
 
 
