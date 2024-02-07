@@ -114,6 +114,23 @@ There are also some variables which are available.
 Examples
 --------
 
+JavaScript API
+^^^^^^^^^^^^^^
+
+For a given layer ``buildings`` :
+
+.. code-block:: javascript
+
+    var layer = lizMap.mainLizmap.state.rootMapGroup.getMapLayerByName('buildings');
+    // Name of the current loaded style
+    layer.wmsSelectedStyleName
+    // Toggle true or false the layer in the legend
+    layer.checked = true;
+
+
+Please have a look to existing online demo, like the
+`Paris by night <https://demo.lizmap.com/lizmap/index.php/view/map?repository=javascript&project=lampadaires>`_
+
 Disable right click
 ^^^^^^^^^^^^^^^^^^^
 
