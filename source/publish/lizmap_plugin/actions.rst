@@ -10,7 +10,9 @@ Principle
 ---------
 
 This module allows to add one or several **actions** in web interface. The concept
-has been inspired by **QGIS Python actions**, which can be used to run scripts inside QGIS.
+has been inspired by
+`QGIS actions <https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html#actions-menu>`_,
+which can be used to run scripts inside QGIS.
 
 Example of a feature action:
 
@@ -34,7 +36,7 @@ Lizmap Web Client will then run some **callbacks** from this response:
 * select features of another layer intersecting the returned geometry,
 * display a message, etc.
 
-Three action **scopes** are supported since Lizmap 3.7 :
+Three action **scopes** are supported :
 
 * **project** : an action menu item is added on the left menu bar
   when the map has at least one project action. The new panel shows
@@ -44,6 +46,9 @@ Three action **scopes** are supported since Lizmap 3.7 :
 * **feature**: action buttons are added in the popup toolbar for the layer features,
   allowing to trigger an action specific to each feature.
 
+.. tip::
+    For the **project** scope, the default database is used (file :file:`profiles.ini.php` in the
+    `configuration <../../install/configuration.html>`_ chapter.
 
 Example action selector:
 
@@ -54,7 +59,7 @@ Example action selector:
 Demonstration
 -------------
 
-You can check the demo about fire hydrants on https://demo.lizmap.com
+You can check the demo about `fire hydrants on the demo website <https://demo.lizmap.com>`_.
 
 Click on a fire hydrant and
 
@@ -78,7 +83,8 @@ in the same directory. This file lists the **PostgreSQL actions** to be added in
 .. warning::
     In |lizmap_3_7|, the JSON syntax has changed.
 
-    If you use the old JSON syntax, you will have a warning in Lizmap, inviting you to migrate to a newer version of the syntax.
+    If you use the old JSON syntax, you will have a warning in Lizmap, inviting you to migrate to a newer version of the
+    syntax.
 
 
 Each action is **characterized** by a ``name``, a ``title``, a ``scope``, ``layers``, an ``icon``, some optional ``options``,
@@ -87,9 +93,10 @@ Each action is **characterized** by a ``name``, a ``title``, a ``scope``, ``laye
 * An action can be proposed for a list of ``layers``: QGIS layer IDs should be used in the ``layers`` array
 * An action can have a list of ``callbacks``
 
-Example of a JSON configuration file, name :file:`fire_hydrant_actions.qgs.action` if the QGIS project file is named :file:`fire_hydrant_actions.qgs`.
-In this project, there is a vector layer called ``Fire hydrants`` with the internal layer ID ``emergency_fire_hydrant_04132268_86fb_4d5e_a426_ce3133494091``
-(you can get the QGIS layer internal ID with the QGIS expression ``@layer_id``)
+Example of a JSON configuration file, name :file:`fire_hydrant_actions.qgs.action` if the QGIS project file is named
+:file:`fire_hydrant_actions.qgs`. In this project, there is a vector layer called ``Fire hydrants`` with the internal
+layer ID ``emergency_fire_hydrant_04132268_86fb_4d5e_a426_ce3133494091``.
+You can get the QGIS layer internal ID with the QGIS expression ``@layer_id``.
 
 .. code-block:: json
 
@@ -151,14 +158,14 @@ In this project, there is a vector layer called ``Fire hydrants`` with the inter
        }
    ]
 
-The **JSON configuration** file lists the **declarered actions**.
+The **JSON configuration** file lists the **declared actions**.
 
 Each **action** is an object defined by:
 
 * a ``name`` which is the action identifier.
 * a ``title`` which is used as a label in Lizmap interface
 * a ``scope`` which can be: ``project``, ``layer`` or ``feature``
-* an ``icon`` which is displayed on the action button (See https://getbootstrap.com/2.3.2/base-css.html#icons )
+* an ``icon`` which is displayed on the action button (See `Bootstrap documentation <https://getbootstrap.com/2.3.2/base-css.html#icons>`_)
   A **SVG icon** can be used instead of a bootstrap icon as a background of the popup action buttons.
   Use a relative **media path**
 * an optional ``confirm`` property, containing some text. If set, a confirmation dialog will be shown to the user to ask
@@ -172,9 +179,10 @@ Each **action** is an object defined by:
     -  ``zoom``: zoom to the returned geometry
     -  ``select``: select the features from a given layer intersecting the returned geometry.
        The target layer **QGIS internal ID** must be added in the ``layerId`` property.
-       In the example, the features of the layer containing buildings, ID ``building_90f7692a_0ae2_4a7d_91de_b63cddb92963`` will be selected
-    -  ``redraw``: redraw (refresh) a given layer in the map. The target layer QGIS ID must be added in the ``layerId`` property.
-
+       In the example, the features of the layer containing buildings,
+       ID ``building_90f7692a_0ae2_4a7d_91de_b63cddb92963`` will be selected.
+    -  ``redraw``: redraw (refresh) a given layer in the map. The target layer QGIS ID must be added in the ``layerId``
+       property.
 
 How Lizmap uses this configuration file to launch actions
 ---------------------------------------------------------
@@ -240,8 +248,8 @@ Mandatory PostgreSQL functions
 
 You need to create this PostgreSQL functions:
 
-* ``query_to_geosjon(text)`` which returns a valid GeoJSON text from any SELECT query
-* ``lizmap_get_data(text)`` which is the "control tower" of Lizmap actions: it creates a specicic
+* ``query_to_geojson(text)`` which returns a valid GeoJSON text from any SELECT query
+* ``lizmap_get_data(text)`` which is the "control tower" of Lizmap actions: it creates a specific
   query for each action based on the parameters and then run the query and returns the GeoJSON
 
 The following SQL code is **an example** to help you create the needed functions.
@@ -284,7 +292,7 @@ Obviously, **you must adapt them to fit your needs**.
 
    COMMENT ON FUNCTION query_to_geojson(text) IS 'Generate a valid GEOJSON from a given SQL text query.';
 
-   -- Create a query depending on the action, layer and feature and returns a GeoJSON.-- Create a query depending on the action, layer and feature and returns a GeoJSON.
+   -- Create a query depending on the action, layer and feature and returns a GeoJSON.
    CREATE OR REPLACE FUNCTION public.lizmap_get_data(parameters json)
    RETURNS json AS
    $$
@@ -380,12 +388,16 @@ Obviously, **you must adapt them to fit your needs**.
   properties, and some properties of the QGIS layer:
 
   - Lizmap **repository** and **project** keys of the map: ``lizmap_repository`` & ``lizmap_project``
-  - the action **name** ``action_name``, for example ``buffer_150``. You should use a simple word with only letters, digits and ``_``,
+  - the action **name** ``action_name``, for example ``buffer_150``. You should use a simple word with only letters,
+    digits and ``_``,
   - the action **scope** ``action_scope``, for example ``feature``,
   - QGIS **layer name** (as in QGIS legend): ``layer_name``, for example ``Fire hydrant``, only for **feature** actions,
-  - the PostgreSQL table **schema** ``layer_schema`` and **table name** ``layer_table`` for the layer, only for **feature** and **layer** scoped actions
-  - the object **feature id** ``feature_id``, which corresponds to the value of the **primary key** field for the popup object, only for **feature** actions,
-  - the other **properties** given in the JSON configuration file, in the ``options`` property, such as ``buffer_size`` which is ``150`` in the example
+  - the PostgreSQL table **schema** ``layer_schema`` and **table name** ``layer_table`` for the layer, only for
+    **feature** and **layer** scoped actions
+  - the object **feature id** ``feature_id``, which corresponds to the value of the **primary key** field for the popup
+    object, only for **feature** actions,
+  - the other **properties** given in the JSON configuration file, in the ``options`` property, such as ``buffer_size``
+    which is ``150`` in the example
   - the **map center** ``map_center`` and **map extent** ``map_extent``
 
 * The ``IF ELSE`` is used to do a different query, built in the ``datasource`` variable, by checking the **action name**
