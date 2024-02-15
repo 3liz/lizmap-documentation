@@ -38,16 +38,16 @@ Lizmap Web Client will then run some **callbacks** from this response:
 
 Three action **scopes** are supported :
 
-* **project** : an action menu item is added on the left menu bar
+* ``project`` : an action menu item is added on the left menu bar
   when the map has at least one project action. The new panel shows
   an action selector and a button to trigger the selected action.
-* **layer**: the action selector is shown in the layer **Informations** panel
+* ``layer``: the action selector is shown in the layer **Informations** panel
   visible by clicking the (i) button right the the layer name.
-* **feature**: action buttons are added in the popup toolbar for the layer features,
+* ``feature``: action buttons are added in the popup toolbar for the layer features,
   allowing to trigger an action specific to each feature.
 
 .. tip::
-    For the **project** scope, the default database is used (file :file:`profiles.ini.php` in the
+    For the ``project`` scope, the default database is used (file :file:`profiles.ini.php` in the
     `configuration <../../install/configuration.html>`_ chapter.
 
 Example action selector:
