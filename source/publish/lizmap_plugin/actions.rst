@@ -165,9 +165,9 @@ Each **action** is an object defined by:
 * a ``name`` which is the action identifier.
 * a ``title`` which is used as a label in Lizmap interface
 * a ``scope`` which can be: ``project``, ``layer`` or ``feature``
-* an ``icon`` which is displayed on the action button (See `Bootstrap documentation <https://getbootstrap.com/2.3.2/base-css.html#icons>`_)
-  A **SVG icon** can be used instead of a bootstrap icon as a background of the popup action buttons.
-  Use a relative **media path**
+* an ``icon`` which is displayed on the action button (See the `Bootstrap documentation <https://getbootstrap.com/2.3.2/base-css.html#icons>`_).
+  An **SVG icon** can be used instead of a bootstrap icon as a background of the popup action buttons.
+  Use a relative **media path** (:ref:`media`).
 * an optional ``confirm`` property, containing some text. If set, a confirmation dialog will be shown to the user to ask
   if the action should really be launched or not. Use it if the action can modify some data in your database.
 * an ``options`` object, giving some additional parameters for this action. You can add any needed parameters.
@@ -391,11 +391,11 @@ Obviously, **you must adapt them to fit your needs**.
   - the action **name** ``action_name``, for example ``buffer_150``. You should use a simple word with only letters,
     digits and ``_``,
   - the action **scope** ``action_scope``, for example ``feature``,
-  - QGIS **layer name** (as in QGIS legend): ``layer_name``, for example ``Fire hydrant``, only for **feature** actions,
+  - QGIS **layer name** (as in QGIS legend): ``layer_name``, for example ``Fire hydrant``, only for ``feature`` actions,
   - the PostgreSQL table **schema** ``layer_schema`` and **table name** ``layer_table`` for the layer, only for
-    **feature** and **layer** scoped actions
+    ``feature`` and ``layer`` scoped actions
   - the object **feature id** ``feature_id``, which corresponds to the value of the **primary key** field for the popup
-    object, only for **feature** actions,
+    object, only for ``feature`` actions,
   - the other **properties** given in the JSON configuration file, in the ``options`` property, such as ``buffer_size``
     which is ``150`` in the example
   - the **map center** ``map_center`` and **map extent** ``map_extent``
