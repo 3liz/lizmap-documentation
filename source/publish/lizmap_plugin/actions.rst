@@ -189,7 +189,7 @@ How Lizmap uses this configuration file to launch actions
 
 Lizmap detects the presence of this **configuration file**, and adds the needed logic when the map loads.
 
-For example, for **feature** scoped actions, when the users clicks on an object
+For example, for ``feature`` scoped actions, when the users clicks on an object
 of one of the action layer in the map, the **popup panel** shows the feature data.
 At the top of each popup item, **a toolbar shows one button per each layer action**.
 The action ``title`` will be displayed on hovering the action button.
@@ -201,7 +201,7 @@ Each button **triggers the corresponding action**, if it is not yet **active**
 * creates the **PostgreSQL query** ``SELECT public.lizmap_get_data(json)`` with the parameters
   written in JSON, and executes it in the layer PostgreSQL database. (See example below)
 * This query returns a **GeoJSON** which is then displayed on the map.
-* If some **callbacks** have been configured, they are launched (selection, zoom, redraw)
+* If some ``callbacks`` have been configured, they are launched (``selection``, ``zoom``, ``redraw``)
 * A Lizmap **event** ``actionResultReceived`` is emitted with the returned data and action properties.
   This allow user-defined Javascript scripts to use the action results.
 
@@ -414,7 +414,7 @@ Actions and user-defined JavaScript scripts
 -------------------------------------------
 
 Since Lizmap Web Client **triggers an event** ``actionResultReceived`` any time the user clicks on an action button,
-and data is returned (in the same time as the result geometry is drawn on the map), you could use your own Javascript
+and data is returned (in the same time as the result geometry is drawn on the map), you could use your own JavaScript
 code to add some logic after the result is shown.
 
 .. seealso::
