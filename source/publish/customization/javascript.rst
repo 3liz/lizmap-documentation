@@ -36,14 +36,17 @@ Configuring the tool
       |-- myproject
       |-- default
 
-* All the JavaScript code you copy in the :file:`/home/data/rep1/media/js/myproject/` directory will be executed by Lizmap for this **specific** project only.
+* All the JavaScript code you copy in the :file:`/home/data/rep1/media/js/myproject/` directory will be executed by
+  Lizmap for this **specific** project only.
 * All the JavaScript code in ``default`` will be executed for **all** projects.
-* To allow the execution of JavaScript code, in the Lizmap admin interface, you **must** add the privilege :guilabel:`Allow themes for this repository`.
+* To allow the execution of JavaScript code, in the Lizmap admin interface, you **must** add the privilege
+  :guilabel:`Allow themes for this repository`.
 
 Video tutorial
 --------------
 
-`This video <https://www.youtube.com/embed/xQQ34nvRZ-w>`_ is an quick start how to add a JavaScript to change the default panel in Lizmap.
+`This video <https://www.youtube.com/embed/xQQ34nvRZ-w>`_ is an quick start how to add a JavaScript to change the
+default panel in Lizmap.
 
 .. raw:: html
 
@@ -52,16 +55,24 @@ Video tutorial
 Library of scripts
 ------------------
 
-You can find some examples in the repository https://github.com/3liz/lizmap-javascript-scripts.
+You can find some examples in the `JavaScript library <https://github.com/3liz/lizmap-javascript-scripts>`_ on GitHub.
 
-Also, in the directory :file:`lizmap-web-client/lizmap/install/qgis/media/js/` (or in GitHub https://github.com/3liz/lizmap-web-client/tree/master/extra-modules/lizmapdemo/qgis-projects/demoqgis/media/js/montpellier), you can find examples of suitable JavaScript code.
+Also, in the directory :file:`lizmap-web-client/lizmap/install/qgis/media/js/` (or in
+`GitHub <https://github.com/3liz/lizmap-web-client/tree/master/extra-modules/lizmapdemo/qgis-projects/demoqgis/media/js/montpellier>`_),
+you can find examples of suitable JavaScript code.
 
 Remove the extension ``.example`` and copy them to your :file:`media/js/default/` folder to activate them.
+
+API documentation
+-----------------
+
+An automated generated documentation of the JavaScript API is available on `docs.3liz.org <https://docs.3liz.org/lizmap-web-client/>`_.
 
 Available Javascript events
 ---------------------------
 
-The Javascript code can use many events fired by Lizmap Web Client. Here is a list of all the events available, with the returned properties.
+The Javascript code can use many events fired by Lizmap Web Client. Here is a list of all the events available, with the
+returned properties.
 
 .. csv-table:: Lizmap Web Client available events
    :header: "Event name", "Description", "Returned properties"
@@ -114,8 +125,8 @@ There are also some variables which are available.
 Examples
 --------
 
-JavaScript API
-^^^^^^^^^^^^^^
+Legend API
+^^^^^^^^^^
 
 For a given layer ``buildings`` :
 
@@ -144,12 +155,14 @@ Add a file named e.g. :file:`disableRightClick.js` with the following code:
       }
    });
 
-* If you want this code to be executed for all projects of your repository, you have to copy the file in the directory :file:`/home/data/rep1/media/js/default/` rather than in :file:`/home/data/rep1/media/js/myproject/`.
+* If you want this code to be executed for all projects of your repository, you have to copy the file in the directory
+  :file:`/home/data/rep1/media/js/default/` rather than in :file:`/home/data/rep1/media/js/myproject/`.
 
 Send current login user-ID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-An example allowing you to send current login User-ID (and/or other user data) to PostgreSQL table column, using edition tool:
+An example allowing you to send current login User-ID (and/or other user data) to PostgreSQL table column, using edition
+tool:
 
 .. code-block:: javascript
 
