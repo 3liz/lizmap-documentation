@@ -61,6 +61,9 @@
     {%- if outdated %}
     <meta name="robots" content="noindex,follow">
     {%- endif %}
+    {% if plausible_url and plausible_domain %}
+    <script defer data-domain="{{ plausible_domain }}" src="{{ plausible_url }}"></script>
+    {% endif %}
 {% endblock %}
 
 {% block extrabody %}
