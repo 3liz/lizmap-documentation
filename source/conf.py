@@ -135,7 +135,9 @@ html_context = {
         # When a LWC version reaches the end of life, set this to True to show an information
         # message on the top of the page.
         'outdated': True,
-        'lizmap_versions': lizmap_versions
+        'lizmap_versions': lizmap_versions,
+        'plausible_domain': 'docs.lizmap.com',
+        'plausible_url': 'https://analytics.3liz.com/js/script.tagged-events.js',
 }
 
 html_style = 'css/custom.css'
