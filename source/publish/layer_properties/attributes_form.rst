@@ -82,7 +82,7 @@ Lizmap can reproduce several behavior configured in QGIS :
         * :guilabel:`Expression` with ``"has_photo" = true OR "has_photo" = 't'``
 
 * **Constraints defined by expression**.
-    For example, you want to simply assert users correctly type a website URL beginning by `http` (of course, a
+    For example, you want to simply assert users correctly type a website URL beginning by ``http`` (of course, a
     `regular expression <https://regexr.com/>`_ would be better but we keep it simple).
 
       #. Create a field named ``website`` defined as a :guilabel:`Text Edit` widget
