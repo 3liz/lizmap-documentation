@@ -137,7 +137,7 @@ html_context = {
         'outdated': True,
         'lizmap_versions': lizmap_versions,
         'plausible_domain': 'docs.lizmap.com',
-        'plausible_url': 'https://analytics.3liz.com/js/script.tagged-events.js',
+        'plausible_url': 'https://bourbon.3liz.com/js/script.tagged-events.js',
 }
 
 html_style = 'css/custom.css'
