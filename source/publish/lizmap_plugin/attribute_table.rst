@@ -145,17 +145,16 @@ in a new browser tab.
 
 If the media points to an image (a JPG or PNG file), you could add new column showing
 a small image preview of the source image by adding a new **virtual field** in your vector layer,
-with this **expression**. In the example below, the field containing the media path is ``media_path``
+with this **expression** (which create an image with a data attribute containing the image path and a CSS class ``data-attr-thumbnail``). In the example below, the field containing the media path is ``media_path``
 and the virtual field is named ``vignette``:
 
 
 .. code-block::
 
     concat(
-       '<img data-src="',
+       '<img class="data-attr-thumbnail" data-src="',
        "media_path" ,
-       '" src="/themes/default/css/img/logo_footer.png" style="height:60px;"
-       onload="this.src = `${lizUrls.media}?repository=${lizUrls.params.repository}&project=${lizUrls.params.project}&path=${this.getAttribute(\'data-src\')}`;">'
+       '" src="/themes/default/css/img/logo_footer.png" style="height:60px;">'
     )
 
 The result will look like:
