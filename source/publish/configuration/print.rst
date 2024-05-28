@@ -11,9 +11,10 @@ Printing
 Extent defined by the user on the fly in Lizmap
 -----------------------------------------------
 
-To add print capabilities in the online map, you have to enable the printing tool in the plugin :guilabel:`Map`
-tab (:ref:`lizmap-config-map`) and the QGIS project needs at least one
+To add print capabilities in the online map, you have to create at least one
 `print layout <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/index.html>`_ without atlas enabled.
+Then you will find the list of your layouts in the :guilabel:`Layouts` plugin tab.
+They are enabled by default but you can disable it or set permissions for groups.
 
 .. note:: Printing will respect the feature filters and selections.
 
@@ -57,8 +58,8 @@ Lizmap will automatically ask the user in the web-browser to fill each fields.
     * If you check 'Render as HTML' for your label in QGIS, you will have a multiline label in Lizmap accepting HTML code.
       But you will need to ``<br>`` for line breaks.
 
-The preview in Lizmap will be similar to this screenshot. The red rectangle is the area that the user can define in
-the web-browser and the user can also set the map description and the map title.
+The preview in Lizmap will be similar to this screenshot. The light rectangle is the area the user can define in
+the web browser. The user can also set the map description and title.
 
 .. image:: /images/print_user_params.jpg
    :align: center
@@ -68,19 +69,6 @@ Scales
 ^^^^^^
 
 The print function will be based on the map scales that you set in the plugin *Map* (:ref:`lizmap-config-map`).
-
-Excluding a layout
-^^^^^^^^^^^^^^^^^^
-
-It is possible to exclude printing compositions for the web.
-For example, if the QGIS project contains 4 compositions, the project administrator can exclude 2 compositions in the
-:menuselection:`Project properties --> QGIS server`.
-Only the published compositions will be presented in Lizmap.
-
-.. image:: /images/exclude_layout.jpg
-   :align: center
-   :width: 600
-
 
 Layout with an atlas when using a popup
 ---------------------------------------
