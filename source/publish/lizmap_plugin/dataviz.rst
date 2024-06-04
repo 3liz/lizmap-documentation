@@ -211,6 +211,20 @@ We can also modify charts with some JavaScript scripts.
         }
     });
 
+* You can decide to display **lines and markers** (`documentation <https://plotly.com/javascript/reference/scatter/#scatter-mode>`_) for a scatter chart (id: dataviz_plot_1), for example:
+
+.. code-block:: javascript
+
+    lizMap.events.on({
+        'datavizplotloaded': (evt) => {
+            if( evt.id === 'dataviz_plot_1'){
+                Plotly.restyle( evt.id, {
+                    mode: "lines+markers"
+                });
+            }
+        }
+    });
+
 Types of charts
 ^^^^^^^^^^^^^^^
 
