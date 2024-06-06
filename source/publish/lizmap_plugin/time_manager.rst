@@ -14,7 +14,9 @@ You can create animations of your vectors, provided you have at least a layer wi
 Example
 -------
 
-A video tutorial is available here: https://vimeo.com/83845949. It shows all the steps to use the functionality.
+* On the `demo website <https://demo.lizmap.com/lizmap/index.php/view/map?repository=features&project=time_manager_earthquake>`_,
+  look at the **Earthquake** in Indonesia. You can download the QGIS project to see how it's done.
+* A `video tutorial <https://vimeo.com/83845949>`_ is available. It shows all the steps to use the functionality.
 
 
 Prerequisites
