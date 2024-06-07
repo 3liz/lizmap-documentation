@@ -27,9 +27,13 @@ Prerequisites
 Configuring the tool
 --------------------
 
-After the configuration, your web application will display the symbol of a watch; clicking on it will open a small panel that will allow you to move between steps, or paly the entire animation. At startup, the application will load the entire table, so if you have thousands of objects you may need to wait for several seconds before the application is available.
+After the configuration, your web application will display the symbol of a watch; clicking on it will open a small panel
+that will allow you to move between steps, or play the entire animation. At startup, the application will load the entire
+table, so if you have thousands of objects you may need to wait for several seconds before the application is available.
 
-.. note:: Several different formats for date/time are acceptable (those supported by the JavaScript library `DateJS`). You can check whether your format is supported by entering it in this page: https://github.com/datejs/Datejs
+.. note::
+    Several different formats for date/time are acceptable (those supported by the JavaScript library `DateJS`).
+    You can check whether your format is supported by entering it on `DateJS<https://github.com/datejs/Datejs>`_.
 
 At the layer level
 ^^^^^^^^^^^^^^^^^^
