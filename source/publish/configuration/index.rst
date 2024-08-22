@@ -11,6 +11,7 @@ Settings in Lizmap doesn't occur only in Lizmap QGIS plugin. Some settings are s
   project_thumbnail
   project
   legend
+  theme
   popup
   media
   expression
