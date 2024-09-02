@@ -108,3 +108,4 @@ When the documentation is ready to release `X.Y` from the master branch:
 1. `git commit -am 'Add single link to the current maintained branch'`
 1. `sed -i 's/\'outdated\': False,/\'outdated\': True,/g' source/conf.py`
 1. `git commit -am 'The branch is now outdated'`
+1. Adapte the CI on the `master` branch about branches
