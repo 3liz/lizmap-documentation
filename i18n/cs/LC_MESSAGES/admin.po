@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2022, 3liz
+# Copyright (C) 2014-2024, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Jiří Podhorecký, 2022
+# Jiří Podhorecký, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-14 14:03+0100\n"
+"POT-Creation-Date: 2024-08-08 20:03+0000\n"
 "PO-Revision-Date: 2022-08-02 09:23+0000\n"
-"Last-Translator: Jiří Podhorecký, 2022\n"
-"Language-Team: Czech (https://www.transifex.com/3liz-1/teams/62012/cs/)\n"
+"Last-Translator: Jiří Podhorecký, 2023\n"
+"Language-Team: Czech (https://app.transifex.com/3liz-1/teams/62012/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,12 +44,12 @@ msgstr ""
 #: ../../source/admin/cache.rst:13
 msgid ""
 "In some cases, it is desirable to remove the server cache, for example, when"
-" the style has changed and the tiles need to be updated. For this, two "
+" the style has changed and the tiles need to be updated. For this, some "
 "solutions are possible:"
 msgstr ""
 "V některých případech je žádoucí mezipaměť serveru odstranit, například když"
-" se změní styl a dlaždice je třeba aktualizovat. V tomto případě jsou možná "
-"dvě řešení:"
+" se změní styl a dlaždice je třeba aktualizovat. Pro tento případ je možné "
+"použít některá řešení:"
 
 #: ../../source/admin/cache.rst:18
 msgid "Remove all the cache by Lizmap repository"
@@ -91,11 +91,15 @@ msgstr ""
 "Tyto červené křížky vidí pouze zalogovaný správce, který má právo "
 "vyrovnávací paměť odstranit."
 
-#: ../../source/admin/cache.rst:35
+#: ../../source/admin/cache.rst:34
+msgid "Use the console command for a whole project or layer"
+msgstr "Použijte příkaz konzoly pro celý projekt nebo vrstvu."
+
+#: ../../source/admin/cache.rst:53
 msgid "Configuring the caching system"
 msgstr "Konfigurace systému ukládání do mezipaměti"
 
-#: ../../source/admin/cache.rst:37
+#: ../../source/admin/cache.rst:55
 msgid ""
 "In the :menuselection:`Administration -> Lizmap Configuration -> Cache`, you"
 " can configure the caching system which is used. You can choose between "
@@ -105,23 +109,23 @@ msgstr ""
 "můžete nastavit systém ukládání do mezipaměti, který se používá. Můžete si "
 "vybrat mezi různými druhy ukládání do mezipaměti :"
 
-#: ../../source/admin/cache.rst:41
+#: ../../source/admin/cache.rst:59
 msgid "Files"
 msgstr "Soubory"
 
-#: ../../source/admin/cache.rst:42
+#: ../../source/admin/cache.rst:60
 msgid "Sqlite"
 msgstr "Sqlite"
 
-#: ../../source/admin/cache.rst:43
+#: ../../source/admin/cache.rst:61
 msgid "Redis (You would need a Redis server)"
 msgstr "Redis (budete potřebovat server Redis)"
 
-#: ../../source/admin/cache.rst:46
+#: ../../source/admin/cache.rst:64
 msgid "Seeding"
 msgstr "Seeding"
 
-#: ../../source/admin/cache.rst:48
+#: ../../source/admin/cache.rst:66
 msgid ""
 "You can pre-generate the tiles for any layers of a QGIS project configured "
 "with server-side caching on. You need to have full access on the server "
@@ -135,7 +139,7 @@ msgstr ""
 " k němu pomocí terminálu. Potřebujete také znát id úložišť Lizmap a kódové "
 "jméno projektu (název souboru projektu QGIS bez přípony)."
 
-#: ../../source/admin/cache.rst:53
+#: ../../source/admin/cache.rst:71
 msgid ""
 "In this example, we will show commands to manage the tiles cache for the "
 "demo project ``Montpellier``, shipped with Lizmap Web Client. We also assume"
@@ -147,7 +151,7 @@ msgstr ""
 "Předpokládáme také, že aplikace Lizmap je nainstalována ve složce "
 ":file:`/var/www/lizmap-web-client/``."
 
-#: ../../source/admin/cache.rst:62
+#: ../../source/admin/cache.rst:80
 msgid ""
 "It is important to know that Lizmap publish the cached layers in WMTS (Web "
 "Map Tiled Service). The following concepts are used as options of Lizmap "
@@ -157,7 +161,7 @@ msgstr ""
 "(Web Map Tiled Service). Jako možnosti Lizmap tile cache seederu se "
 "používají následující koncepty:"
 
-#: ../../source/admin/cache.rst:64
+#: ../../source/admin/cache.rst:82
 msgid ""
 "**TileMatrixSet** - In Lizmap, this represents the projection code, for "
 "example `EPSG:3857` (Pseudo mercator)."
@@ -165,15 +169,15 @@ msgstr ""
 "**TileMatrixSet** - V Lizmap představuje kód projekce, například `EPSG:3857`"
 " (Pseudo mercator)."
 
-#: ../../source/admin/cache.rst:65
+#: ../../source/admin/cache.rst:83
 msgid "**TileMatrixMin** - This is the minimum zoom level."
 msgstr "**TileMatrixMin** - Jedná se o minimální úroveň přiblížení."
 
-#: ../../source/admin/cache.rst:66
+#: ../../source/admin/cache.rst:84
 msgid "**TileMatrixMax** - This is the maximum zoom level."
 msgstr "**TileMatrixMax** - Jedná se o maximální úroveň přiblížení."
 
-#: ../../source/admin/cache.rst:69
+#: ../../source/admin/cache.rst:87
 msgid ""
 "The zoom level is **not** a map scale, but the the zoom level. In Lizmap "
 "plugin, the project publisher can configure scales for the published "
@@ -189,7 +193,7 @@ msgstr ""
 "projekt Lizmap. ID měřítka můžete zjistit zadáním `lizMap.map.getZoom()` do "
 "Javascriptové konzoly webového prohlížeče při zvětšování mapy."
 
-#: ../../source/admin/cache.rst:75
+#: ../../source/admin/cache.rst:93
 msgid ""
 "First you **must** get the cache capabilities of one project and some "
 "details on a specific layer."
@@ -197,7 +201,7 @@ msgstr ""
 "Nejprve musíte **získat** možnosti mezipaměti jednoho projektu a některé "
 "podrobnosti o konkrétní vrstvě."
 
-#: ../../source/admin/cache.rst:94
+#: ../../source/admin/cache.rst:112
 msgid ""
 "In this example, you see that the bus layer has 3 different TileMatrixSet, "
 "corresponding to the 3 different spatial coordinate systems available for "
@@ -209,11 +213,11 @@ msgstr ""
 "projekt v Lizmap (nastaveno v :menuselection:`Project properties --> QGIS "
 "Server`)."
 
-#: ../../source/admin/cache.rst:98
+#: ../../source/admin/cache.rst:116
 msgid "If your layer name has some spaces, you need to use `\"\"`."
 msgstr "Pokud název vrstvy obsahuje mezery, musíte použít `\"\"`."
 
-#: ../../source/admin/cache.rst:100
+#: ../../source/admin/cache.rst:118
 msgid ""
 "It's important to generate the cache capabilities **before** generating the "
 "cache for a specific layer. The cache capabilities is used in the next "
@@ -225,7 +229,7 @@ msgstr ""
 " příkazu. Pokud není příkaz cache capabilities přítomen, může další příkaz "
 "selhat."
 
-#: ../../source/admin/cache.rst:103
+#: ../../source/admin/cache.rst:121
 msgid ""
 "Once you have a good knowledge of a layer, you can generate the cache for "
 "it:"
@@ -233,7 +237,7 @@ msgstr ""
 "Jakmile budete mít dobré znalosti o vrstvě, můžete pro ni vygenerovat "
 "vyrovnávací paměť:"
 
-#: ../../source/admin/cache.rst:136
+#: ../../source/admin/cache.rst:154
 msgid "After seeding, update rights on cache :"
 msgstr "Po nasazení aktualizujte práva v mezipaměti :"
 
@@ -484,41 +488,41 @@ msgstr ""
 "nebo požadavky na místní server, který slouží jako mapové podklady atd... Je"
 " třeba nastavit alespoň \"localhost,127.0.0.1\"."
 
-#: ../../source/admin/lizmap-configuration.rst:92
+#: ../../source/admin/lizmap-configuration.rst:93
 msgid "Repositories"
 msgstr "Úložiště"
 
-#: ../../source/admin/lizmap-configuration.rst:94
+#: ../../source/admin/lizmap-configuration.rst:95
 msgid "For each Lizmap repository, are listed:"
 msgstr "Pro každé úložiště Lizmap jsou uvedeny:"
 
-#: ../../source/admin/lizmap-configuration.rst:96
+#: ../../source/admin/lizmap-configuration.rst:97
 msgid "**The main informations**: label and path"
 msgstr "**Hlavní informace**: označení a cesta"
 
-#: ../../source/admin/lizmap-configuration.rst:97
+#: ../../source/admin/lizmap-configuration.rst:98
 msgid "**The list of rights** with the groups concerned"
 msgstr "**Seznam práv** s příslušnými skupinami"
 
-#: ../../source/admin/lizmap-configuration.rst:98
+#: ../../source/admin/lizmap-configuration.rst:99
 msgid "**Action buttons**:"
 msgstr "**Akční tlačítka**:"
 
-#: ../../source/admin/lizmap-configuration.rst:100
+#: ../../source/admin/lizmap-configuration.rst:101
 msgid "*View*: displays a page that lists the maps in this repository"
 msgstr "*Pohled*: zobrazí stránku se seznamem map v tomto úložišti."
 
-#: ../../source/admin/lizmap-configuration.rst:101
+#: ../../source/admin/lizmap-configuration.rst:102
 msgid "*Modify*: displays the repository modification form"
 msgstr "*Modify*: zobrazí formulář pro úpravu úložiště."
 
-#: ../../source/admin/lizmap-configuration.rst:102
+#: ../../source/admin/lizmap-configuration.rst:103
 msgid ""
 "*Remove*: delete the repository from the Lizmap Web Client configuration"
 msgstr ""
 "*Odstranit*: odstranění úložiště z konfigurace webového klienta Lizmap."
 
-#: ../../source/admin/lizmap-configuration.rst:103
+#: ../../source/admin/lizmap-configuration.rst:104
 msgid ""
 "*Empty cache*: deletes the entire cache of all layers of the repository "
 "projects"
@@ -526,7 +530,7 @@ msgstr ""
 "*Vyprázdnit mezipaměť*: odstraní celou mezipaměť všech vrstev projektů "
 "úložiště."
 
-#: ../../source/admin/lizmap-configuration.rst:108
+#: ../../source/admin/lizmap-configuration.rst:109
 msgid ""
 "You can create a new repository using the button **Create a repository** "
 "located at the top and bottom of the section *Repositories*."
@@ -534,19 +538,19 @@ msgstr ""
 "Nový repozitář můžete vytvořit pomocí tlačítka **Vytvořit repozitář**, které"
 " se nachází v horní a dolní části sekce *Repozitáře*."
 
-#: ../../source/admin/lizmap-configuration.rst:111
+#: ../../source/admin/lizmap-configuration.rst:112
 msgid "Add a repository"
 msgstr "Přidání úložiště"
 
-#: ../../source/admin/lizmap-configuration.rst:113
+#: ../../source/admin/lizmap-configuration.rst:114
 msgid "To create a repository, you must give:"
 msgstr "Chcete-li vytvořit úložiště, musíte zadat:"
 
-#: ../../source/admin/lizmap-configuration.rst:115
+#: ../../source/admin/lizmap-configuration.rst:116
 msgid "**an id**: a word without spaces, accents or special characters"
 msgstr "**an id**: slovo bez mezer, diakritiky nebo speciálních znaků."
 
-#: ../../source/admin/lizmap-configuration.rst:116
+#: ../../source/admin/lizmap-configuration.rst:117
 msgid ""
 "**a label**: the name that will be displayed for this repository, accents "
 "and spaces allowed"
@@ -554,7 +558,7 @@ msgstr ""
 "**a label**: název, který se bude zobrazovat pro toto úložiště, diakritické "
 "znaménka a mezery jsou povoleny."
 
-#: ../../source/admin/lizmap-configuration.rst:117
+#: ../../source/admin/lizmap-configuration.rst:118
 msgid ""
 "**a local folder path**: the full path on the server to the folder that "
 "contains the QGIS projects and data"
@@ -562,7 +566,7 @@ msgstr ""
 "**cesta k místní složce**: úplná cesta na serveru ke složce, která obsahuje "
 "projekty a data QGIS."
 
-#: ../../source/admin/lizmap-configuration.rst:118
+#: ../../source/admin/lizmap-configuration.rst:119
 msgid ""
 "**Allow repository themes**: This option enables the possibility for the "
 "publisher to set a theme for the repository and themes for each map. See "
@@ -571,11 +575,11 @@ msgstr ""
 "**Povolit témata úložiště**: Tato možnost umožňuje vydavateli nastavit téma "
 "úložiště a témata pro každou mapu. Viz :ref:`creating-simple-themes`."
 
-#: ../../source/admin/lizmap-configuration.rst:123
+#: ../../source/admin/lizmap-configuration.rst:124
 msgid "Define the rights for each group"
 msgstr "Definujte práva pro každou skupinu"
 
-#: ../../source/admin/lizmap-configuration.rst:125
+#: ../../source/admin/lizmap-configuration.rst:126
 msgid ""
 "After creating the directory, the repository modification form is displayed "
 "automatically and defines the following rights for each group:"
@@ -583,27 +587,27 @@ msgstr ""
 "Po vytvoření adresáře se automaticky zobrazí formulář pro úpravu úložiště, "
 "který definuje následující práva pro jednotlivé skupiny:"
 
-#: ../../source/admin/lizmap-configuration.rst:127
+#: ../../source/admin/lizmap-configuration.rst:128
 msgid "**View repository** :"
 msgstr "**Zobrazit úložiště** :"
 
-#: ../../source/admin/lizmap-configuration.rst:129
+#: ../../source/admin/lizmap-configuration.rst:130
 msgid "all users of checked groups can access maps of this repository"
 msgstr ""
 "všichni uživatelé zaškrtnutých skupin mají přístup k mapám tohoto úložiště."
 
-#: ../../source/admin/lizmap-configuration.rst:130
+#: ../../source/admin/lizmap-configuration.rst:131
 msgid ""
 "the group *anonymous* is unregistered users and allows to make public maps"
 msgstr ""
 "skupina *anonymní* je pro neregistrované uživatele a umožňuje vytvářet "
 "veřejné mapy."
 
-#: ../../source/admin/lizmap-configuration.rst:132
+#: ../../source/admin/lizmap-configuration.rst:133
 msgid "**Use the Edition tool**"
 msgstr "**Použití nástroje Edice**"
 
-#: ../../source/admin/lizmap-configuration.rst:134
+#: ../../source/admin/lizmap-configuration.rst:135
 msgid ""
 "When this option is checked, the group users have access to the editing tool"
 " for all of Lizmap repository maps for which the edition was configured."
@@ -611,13 +615,13 @@ msgstr ""
 "Pokud je tato možnost zaškrtnuta, mají uživatelé skupiny přístup k nástroji "
 "pro úpravy všech map úložiště Lizmap, pro které byla edice nakonfigurována."
 
-#: ../../source/admin/lizmap-configuration.rst:136
+#: ../../source/admin/lizmap-configuration.rst:137
 msgid "**Always see complete layers data, even if filtered by login**"
 msgstr ""
 "**Vždy vidět kompletní data vrstev, i když jsou filtrována podle "
 "přihlášení**"
 
-#: ../../source/admin/lizmap-configuration.rst:138
+#: ../../source/admin/lizmap-configuration.rst:139
 msgid ""
 "This option is in connection with the filtering feature data layers per "
 "group. See :ref:`filtered-layer-by-user`. Check the box for deciding which "
@@ -764,54 +768,26 @@ msgid "Overview of the administration interface"
 msgstr "Přehled rozhraní pro správu"
 
 #: ../../source/admin/presentation.rst:9
-msgid "Access the administration interface"
-msgstr "Přístup k rozhraní pro správu"
-
-#: ../../source/admin/presentation.rst:11
-msgid ""
-"For safety reasons, no link leads to the administration interface. The "
-"address is:"
-msgstr ""
-"Z bezpečnostních důvodů nevede žádný odkaz do administračního rozhraní. "
-"Adresa je:"
-
-#: ../../source/admin/presentation.rst:13
-msgid "http://mydomain.lizmap.3liz.com/admin.php"
-msgstr "http://mydomain.lizmap.3liz.com/admin.php"
-
-#: ../../source/admin/presentation.rst:15
-msgid "Temporary identifiers"
-msgstr "Dočasné identifikátory"
-
-#: ../../source/admin/presentation.rst:17
-msgid "login = admin"
-msgstr "login = admin"
-
-#: ../../source/admin/presentation.rst:18
-msgid "password = admin"
-msgstr "heslo = admin"
-
-#: ../../source/admin/presentation.rst:24
 msgid "Change password"
 msgstr "Změna hesla"
 
-#: ../../source/admin/presentation.rst:26
+#: ../../source/admin/presentation.rst:11
 msgid "Once connected, it is possible to change the password:"
 msgstr "Po připojení je možné změnit heslo:"
 
-#: ../../source/admin/presentation.rst:28
+#: ../../source/admin/presentation.rst:13
 msgid "Click on your login at the top right menu and then *Your account*"
 msgstr "Klikněte na své přihlášení v pravém horním menu a poté na *Váš účet*."
 
-#: ../../source/admin/presentation.rst:29
+#: ../../source/admin/presentation.rst:14
 msgid "Click on the button *Change your password*"
 msgstr "Klikněte na tlačítko *Změnit heslo*."
 
-#: ../../source/admin/presentation.rst:30
+#: ../../source/admin/presentation.rst:15
 msgid "Type the new password, confirme it and save"
 msgstr "Zadejte nové heslo, potvrďte ho a uložte"
 
-#: ../../source/admin/presentation.rst:32
+#: ../../source/admin/presentation.rst:18
 msgid ""
 "It is imperative to change your password. Use a complex password that mixes "
 "numbers, letters and punctuation."
@@ -819,11 +795,11 @@ msgstr ""
 "Heslo je nutné změnit. Používejte složité heslo, které kombinuje čísla, "
 "písmena a interpunkční znaménka."
 
-#: ../../source/admin/presentation.rst:36
+#: ../../source/admin/presentation.rst:22
 msgid "Reminder on Lizmap Web Client repositories"
 msgstr "Připomínka k úložištím Lizmap Web Client"
 
-#: ../../source/admin/presentation.rst:38
+#: ../../source/admin/presentation.rst:24
 msgid ""
 "Lizmap Web Client can use QGIS maps stored in different folders on the "
 "server."
@@ -831,7 +807,7 @@ msgstr ""
 "Webový klient Lizmap může používat mapy QGIS uložené v různých složkách na "
 "serveru."
 
-#: ../../source/admin/presentation.rst:40
+#: ../../source/admin/presentation.rst:26
 msgid ""
 "A *Lizmap Web CLient repository* is a folder on the server that stores one "
 "or more QGIS projects and their related data."
@@ -839,12 +815,12 @@ msgstr ""
 "Úložiště *Lizmap Web CLient* je složka na serveru, která uchovává jeden nebo"
 " více projektů QGIS a jejich související data."
 
-#: ../../source/admin/presentation.rst:41
+#: ../../source/admin/presentation.rst:27
 msgid "Repositories can be used to *group related projects by theme*."
 msgstr ""
 "Úložiště lze použít ke *skupování souvisejících projektů podle tématu*."
 
-#: ../../source/admin/presentation.rst:42
+#: ../../source/admin/presentation.rst:28
 msgid "Repositories can be used to *manage the access rights on maps*."
 msgstr "Úložiště lze použít ke *správě přístupových práv k mapám*."
 
@@ -853,171 +829,273 @@ msgid "Manage groups and users in Lizmap Web Client"
 msgstr "Správa skupin a uživatelů v aplikaci Lizmap Web Client"
 
 #: ../../source/admin/users-groups.rst:9
-msgid "The groups and users: principles"
-msgstr "Skupiny a uživatelé: zásady"
+msgid "Principles"
+msgstr "Zásady"
 
 #: ../../source/admin/users-groups.rst:11
 msgid "As an administrator, you can:"
 msgstr "Jako správce můžete:"
 
 #: ../../source/admin/users-groups.rst:13
-msgid "create, rename, delete user groups"
-msgstr "vytváření, přejmenování a mazání skupin uživatelů"
+msgid "**create**, **rename** or **delete** user groups"
+msgstr "**vytvořit**, **přejmenovat** nebo **odstranit** skupiny uživatelů."
 
 #: ../../source/admin/users-groups.rst:14
-msgid "create, modify, delete users"
-msgstr "vytvářet, upravovat a mazat uživatele"
+msgid "**create**, **update** or **delete** users"
+msgstr "**vytvořit**, **aktualizovat** nebo **odstranit** uživatele."
 
 #: ../../source/admin/users-groups.rst:15
-msgid "linking a user to one or more groups"
-msgstr "propojení uživatele s jednou nebo více skupinami"
+msgid "**link** a user to one or more groups"
+msgstr "**připojení** uživatele k jedné nebo více skupinám."
 
-#: ../../source/admin/users-groups.rst:17
+#: ../../source/admin/users-groups.rst:18
 msgid ""
-"Rights on Lizmap Web Client repositories are managed at group level, not at "
-"the user level."
+"We highly recommend managing rights at the **group level**, not at the "
+"**user level**."
 msgstr ""
-"Práva k úložištím Lizmap Web Client jsou spravována na úrovni skupin, nikoli"
-" na úrovni uživatelů."
+"Důrazně doporučujeme spravovat práva na úrovni **skupiny**, nikoli na úrovni"
+" **uživatele**."
 
 #: ../../source/admin/users-groups.rst:20
-msgid "Manage Groups: create, rename, delete"
-msgstr "Správa skupin: vytváření, přejmenování, mazání"
+msgid "You may need to create groups to allow specific Lizmap rights :"
+msgstr "Možná bude nutné vytvořit skupiny, které povolí určitá práva Lizmap :"
 
 #: ../../source/admin/users-groups.rst:22
-msgid ""
-"*Create a group*: In the left menu click on *Groups of users for rights* and"
-" scroll down to *Create a group*."
-msgstr ""
-"*Vytvořit skupinu*: V levém menu klikněte na *Skupiny uživatelů pro práva* a"
-" přejděte dolů na *Vytvořit skupinu*."
+msgid "access to some Lizmap repositories, projects or even layers"
+msgstr "přístup k některým úložištím Lizmap, projektům nebo dokonce vrstvám."
 
 #: ../../source/admin/users-groups.rst:23
-msgid "Define the *label*: it is possible to use spaces and accents"
-msgstr "Definice *nápisu*: je možné použít mezery a diakritiku."
+msgid "using editing tools, see :ref:`editing`"
+msgstr "použití editačních nástrojů, viz :ref:`editing`"
 
 #: ../../source/admin/users-groups.rst:24
-msgid "Define the *ident*: one word without special characters"
-msgstr "Definujte *ident*: jedno slovo bez speciálních znaků"
+msgid "access to OGC Web Services URL"
+msgstr "přístup k URL webových služeb OGC"
 
-#: ../../source/admin/users-groups.rst:26
-msgid ""
-"In the page *Groups of users for rights*, it is also possible to *Change the"
-" name* and *Delete a group*."
-msgstr ""
-"Na stránce *Skupiny uživatelů pro práva* je také možné *Změnit název* a "
-"*Smazat skupinu*."
+#: ../../source/admin/users-groups.rst:27
+msgid "More info about repositories rights : see :ref:`define-group-rights`"
+msgstr "Více informací o právech repozitářů : viz :ref:`define-group-rights`"
 
-#: ../../source/admin/users-groups.rst:31
+#: ../../source/admin/users-groups.rst:30
+msgid "Groups created by default"
+msgstr "Skupiny vytvořené ve výchozím stavu"
+
+#: ../../source/admin/users-groups.rst:32
 msgid ""
-"The **users** group is a group system to give the rights to authenticated "
-"users to edit their own user information including passwords. We excluded "
-"this group of Lizmap Web Client configuration because all identified users "
-"must be part of this group."
+"Existing groups are visible on :menuselection:`Lizmap --> Administration -->"
+" Rights`."
 msgstr ""
-"Skupina **users** je skupinový systém, který dává ověřeným uživatelům práva "
-"upravovat vlastní uživatelské informace včetně hesel. Tuto skupinu jsme z "
-"konfigurace Lizmap Web Client vyloučili, protože všichni identifikovaní "
-"uživatelé musí být součástí této skupiny."
+"Existující skupiny jsou viditelné na stránce :menuselection:`Lizmap --> "
+"Administration --> Rights`."
 
 #: ../../source/admin/users-groups.rst:34
-msgid "Manage Users"
-msgstr "Správa uživatelů"
+msgid ":guilabel:`admins` : to manage **all** settings on the Lizmap instance"
+msgstr ":guilabel:`admins` : pro správu **všech** nastavení instance Lizmap"
 
-#: ../../source/admin/users-groups.rst:36
+#: ../../source/admin/users-groups.rst:35
 msgid ""
-"*Create a user* : In the left menu click on *Users* and click on the button "
-"*Create a new user*:"
+":guilabel:`publishers` : designed for GIS technicians, to allow accessing "
+"server information needed from the QGIS plugin. The right "
+"``lizmap.admin.server.information.view`` must be enabled."
 msgstr ""
-"*Vytvoření uživatele* : V levém menu klikněte na *Uživatelé* a klikněte na "
-"tlačítko *Vytvořit nového uživatele*:"
+":guilabel:`publishers` : určeno pro techniky GIS, aby umožnilo přístup k "
+"informacím o serveru potřebným pro zásuvný modul QGIS. Musí být povoleno "
+"právo ``lizmap.admin.server.information.view``."
+
+#: ../../source/admin/users-groups.rst:37
+msgid ""
+":guilabel:`users` : to recognise a connected user, to allow some basic "
+"rights like changing his own password"
+msgstr ""
+":guilabel:`users` : rozpoznání připojeného uživatele, povolení některých "
+"základních práv, jako je změna vlastního hesla."
 
 #: ../../source/admin/users-groups.rst:38
-msgid "give a *Nickname* which will be used for the login"
-msgstr "zadejte *Nickname*, které bude použito pro přihlášení."
-
-#: ../../source/admin/users-groups.rst:39
-msgid "give an email"
-msgstr "zadat e-mail"
+msgid ""
+":guilabel:`__anonymous` : a \"special\" group for a non connected user, "
+"which allows to set rights for non connected users"
+msgstr ""
+":guilabel:`__anonymous` : \"speciální\" skupina pro nepřipojeného uživatele,"
+" která umožňuje nastavit práva pro nepřipojené uživatele."
 
 #: ../../source/admin/users-groups.rst:40
-msgid "set name and firstname"
-msgstr "nastavit název a jméno"
-
-#: ../../source/admin/users-groups.rst:42
 msgid ""
-"The user will have an email for setting up his password. If you want to set "
-"the password yourself, read the section below."
+":guilabel:`Default group` are the groups in which any new user is "
+"automatically added."
 msgstr ""
-"Uživatel obdrží e-mail pro nastavení hesla. Pokud si chcete heslo nastavit "
-"sami, přečtěte si následující část."
+":guilabel:`Default group` jsou skupiny, do kterých je automaticky přidán "
+"každý nový uživatel."
 
 #: ../../source/admin/users-groups.rst:43
-msgid "It is also possible to *view* and *edit* informations about users."
-msgstr "Je také možné *prohlížet* a *upravovat* informace o uživatelích."
+msgid "Manage users"
+msgstr "Správa uživatelů"
 
 #: ../../source/admin/users-groups.rst:45
-msgid ""
-"Once users created, you must put them into groups to assign the associated "
-"rights."
-msgstr ""
-"Po vytvoření uživatelů je třeba je zařadit do skupin a přiřadit jim "
-"příslušná práva."
+msgid "On :menuselection:`Lizmap --> Administration --> Users`, you can:"
+msgstr "Na :menuselection:`Lizmap --> Administration --> Users` můžete:"
+
+#: ../../source/admin/users-groups.rst:47
+msgid "*create* a new user"
+msgstr "*vytvořit* nového uživatele"
+
+#: ../../source/admin/users-groups.rst:48
+msgid "*edit* a user"
+msgstr "*upravit* uživatele"
+
+#: ../../source/admin/users-groups.rst:49
+msgid "*add* a user to an existing group"
+msgstr "*přidat* uživatele do existující skupiny"
+
+#: ../../source/admin/users-groups.rst:50
+msgid "*remove* a user from a group"
+msgstr "*odstranit* uživatele ze skupiny"
 
 #: ../../source/admin/users-groups.rst:51
-msgid "Setting password for users"
-msgstr "Nastavení hesla pro uživatele"
+msgid "*remove* a user from the instance"
+msgstr "*odstranit* uživatele z instance"
 
-#: ../../source/admin/users-groups.rst:53
+#: ../../source/admin/users-groups.rst:54
 msgid ""
-"By default, in Lizmap, when a new user is created, the user will get an "
-"email for setting up his own password. If for some reasons, the "
-"administrator needs to setup the password, the :file:`localconfig.ini.php` "
-"needs to be edited:"
+"Once users have been created, you must add them into groups to grant "
+"associated rights."
 msgstr ""
-"Ve výchozím nastavení systému Lizmap obdrží uživatel při vytvoření nového "
-"uživatele e-mail pro nastavení vlastního hesla. Pokud z nějakého důvodu "
-"potřebuje heslo nastavit správce, je třeba upravit "
-":soubor:`localconfig.ini.php`:"
+"Po vytvoření uživatelů je třeba je přidat do skupin a přidělit jim "
+"související práva."
 
-#: ../../source/admin/users-groups.rst:62
-msgid "Putting users in groups"
-msgstr "Zařazení uživatelů do skupin"
+#: ../../source/admin/users-groups.rst:57
+msgid ""
+"According to the server configuration, the user receives a link to set his "
+"own password. If you want to change this behavior, read :ref:`set-password`,"
+" if you are the system administrator."
+msgstr ""
+"Podle konfigurace serveru obdrží uživatel odkaz pro nastavení vlastního "
+"hesla. Pokud chcete toto chování změnit, přečtěte si :ref:`set-password`, "
+"pokud jste správcem systému."
+
+#: ../../source/admin/users-groups.rst:61
+msgid "Rights"
+msgstr "Práva"
 
 #: ../../source/admin/users-groups.rst:64
-msgid "In the left menu click on *Rights of users*"
-msgstr "V levém menu klikněte na *Práva uživatelů*."
-
-#: ../../source/admin/users-groups.rst:65
-msgid "it is possible to filter the visible users with the dropdown menu"
-msgstr "je možné filtrovat viditelné uživatele pomocí rozbalovací nabídky."
+msgid "Groups"
+msgstr "Skupiny"
 
 #: ../../source/admin/users-groups.rst:66
-msgid "to put a user in groups, click on the its button *rights*"
+msgid ""
+"On :menuselection:`Lizmap --> Administration --> Rights`, you land by "
+"default on :guilabel:`User groups`."
 msgstr ""
-"chcete-li uživatele zařadit do skupin, klikněte na jeho tlačítko *rights*."
+"Na :menuselection:`Lizmap --> Správa --> Práva` se výchozím nastavením "
+"dostanete na :guilabel:`Skupiny uživatelů`."
 
 #: ../../source/admin/users-groups.rst:68
-msgid "The page displays a table with *rights online and groups on column*"
-msgstr ""
-"Na stránce se zobrazí tabulka s *právy online a skupinami ve sloupci*."
-
-#: ../../source/admin/users-groups.rst:69
-msgid "The last column shows *the resulting rights*"
-msgstr "V posledním sloupci jsou uvedena *výsledná práva*"
+#: ../../source/admin/users-groups.rst:80
+msgid "You can:"
+msgstr "Můžete:"
 
 #: ../../source/admin/users-groups.rst:70
-msgid ""
-"In the *head row*, the + and - buttons allow to set / remove the user from a"
-" group"
-msgstr ""
-"Tlačítka + a - v *hlavním řádku* umožňují nastavit / odebrat uživatele ze "
-"skupiny."
+msgid "*create* a new group"
+msgstr "*vytvořit* novou skupinu"
+
+#: ../../source/admin/users-groups.rst:71
+msgid "*edit* the group name"
+msgstr "*upravit* název skupiny"
 
 #: ../../source/admin/users-groups.rst:72
-msgid "Do not use the *Personal rights* column."
-msgstr "Nepoužívejte sloupec *Osobní práva*."
+msgid "*set* the rights for a group"
+msgstr "*nastavit* práva pro skupinu"
 
-#: ../../source/admin/users-groups.rst:75
-msgid "Assigning groups for each user created"
-msgstr "Přiřazení skupin pro každého vytvořeného uživatele"
+#: ../../source/admin/users-groups.rst:73
+msgid "*remove* a group"
+msgstr "*odstranit* skupinu"
+
+#: ../../source/admin/users-groups.rst:76
+msgid "Users"
+msgstr "Uživatelé"
+
+#: ../../source/admin/users-groups.rst:78
+msgid ""
+"On :menuselection:`Lizmap --> Administration --> Rights`, you have a another"
+" tab called :guilabel:`Users`."
+msgstr ""
+"Na :menuselection:`Lizmap --> Správa --> Práva` máte další kartu nazvanou "
+":guilabel:`Uživatelé`."
+
+#: ../../source/admin/users-groups.rst:82
+msgid "*see* the list of users and its groups"
+msgstr "*zobrazit* seznam uživatelů a jejich skupin"
+
+#: ../../source/admin/users-groups.rst:83
+msgid "for a given *user*:"
+msgstr "pro daného *uživatele*:"
+
+#: ../../source/admin/users-groups.rst:85
+msgid "*see* the list of groups"
+msgstr "*zobrazit* seznam skupin"
+
+#: ../../source/admin/users-groups.rst:86
+msgid "*see* the **resulting rights**"
+msgstr "*zobrazit* **výsledná práva**"
+
+#: ../../source/admin/users-groups.rst:89
+msgid "Assigning groups automatically for each new user created"
+msgstr "Automatické přiřazení skupin pro každého nově vytvořeného uživatele"
+
+#: ../../source/admin/users-groups.rst:91
+msgid ""
+"On :menuselection:`Lizmap --> Administration --> Rights`, in the "
+":guilabel:`Default group` column, click the pencil ✏️ button to allow or "
+"deny the group as default."
+msgstr ""
+"V položce :menuselection:`Lizmap --> Administration --> Rights`, ve sloupci "
+":guilabel:`Default group` klikněte na tlačítko s tužkou ✏️ a povolte nebo "
+"zakažte skupinu jako výchozí."
+
+#: ../../source/admin/users-groups.rst:94
+msgid "The default is set to the :guilabel:`users` group."
+msgstr "Výchozí hodnota je nastavena na skupinu :guilabel:`users`."
+
+#: ../../source/admin/users-groups.rst:97
+msgid "Lizmap plugin"
+msgstr "Lizmap plugin"
+
+#: ../../source/admin/users-groups.rst:99
+msgid ""
+"The list of settings in the plugin where a list of users or groups can be "
+"set:"
+msgstr ""
+"Seznam nastavení v zásuvném modulu, kde lze nastavit seznam uživatelů nebo "
+"skupin:"
+
+#: ../../source/admin/users-groups.rst:101
+msgid ""
+":menuselection:`Map options --> Generic options`, to make the project "
+"visible only to subset of groups"
+msgstr ""
+":menuselection:`Možnosti Mapy --> Obecné možnosti`, aby byl projekt "
+"viditelný pouze pro podmnožinu skupin"
+
+#: ../../source/admin/users-groups.rst:102
+msgid ""
+":menuselection:`Layers --> Group visibility`, to make the layer visible only"
+" to subset of groups"
+msgstr ""
+":menuselection:`Layers --> Group visibility`, aby byla vrstva viditelná "
+"pouze pro podmnožinu skupin"
+
+#: ../../source/admin/users-groups.rst:103
+msgid ""
+":menuselection:`Layer editing --> Layer`, to allow editing capabilities on a"
+" layer, see :ref:`editing`"
+msgstr ""
+":menuselection:`Editace vrstvy --> Vrstva`, pro povolení možnosti úprav na "
+"vrstvě, viz :ref:`editing`"
+
+#: ../../source/admin/users-groups.rst:104
+msgid ""
+":menuselection:`Filter by user`, both :guilabel:`Attribute filtering` or "
+":guilabel:`Spatial filtering`, see :ref:`filtered-layer-by-user`"
+msgstr ""
+":menuselection:`Filtrovat podle uživatele`, jak :guilabel:`Filtrování "
+"atributů`, tak :guilabel:`Prostorové filtrování`, viz :ref:`filtrovaná-"
+"vrstva-podle-uživatele`"

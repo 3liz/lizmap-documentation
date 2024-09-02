@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014-2022, 3liz
+# Copyright (C) 2014-2024, 3liz
 # This file is distributed under the same license as the Lizmap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# yamamoto ryuzo <ryu@yamakun.net>, 2022
 # Jin Igarashi <wushilan0623@gmail.com>, 2022
+# yamamoto ryuzo <ryu@yamakun.net>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Lizmap 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-14 14:03+0100\n"
+"POT-Creation-Date: 2024-08-20 14:46+0000\n"
 "PO-Revision-Date: 2022-08-02 09:23+0000\n"
-"Last-Translator: Jin Igarashi <wushilan0623@gmail.com>, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/3liz-1/teams/62012/ja/)\n"
+"Last-Translator: yamamoto ryuzo <ryu@yamakun.net>, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/3liz-1/teams/62012/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,10 +44,9 @@ msgstr ""
 #: ../../source/admin/cache.rst:13
 msgid ""
 "In some cases, it is desirable to remove the server cache, for example, when"
-" the style has changed and the tiles need to be updated. For this, two "
+" the style has changed and the tiles need to be updated. For this, some "
 "solutions are possible:"
 msgstr ""
-"スタイルが変更され、タイルを更新する必要がある場合など、サーバーキャッシュを削除することが望ましい場合があります。この場合、2つの解決策が考えられます。"
 
 #: ../../source/admin/cache.rst:18
 msgid "Remove all the cache by Lizmap repository"
@@ -83,11 +82,15 @@ msgid ""
 " the cache."
 msgstr "ログインした管理者のみがこの赤い十字を見ることができ、キャッシュを削除する権限を持っています。"
 
-#: ../../source/admin/cache.rst:35
+#: ../../source/admin/cache.rst:34
+msgid "Use the console command for a whole project or layer"
+msgstr ""
+
+#: ../../source/admin/cache.rst:53
 msgid "Configuring the caching system"
 msgstr "キャッシュシステムの設定"
 
-#: ../../source/admin/cache.rst:37
+#: ../../source/admin/cache.rst:55
 msgid ""
 "In the :menuselection:`Administration -> Lizmap Configuration -> Cache`, you"
 " can configure the caching system which is used. You can choose between "
@@ -96,23 +99,23 @@ msgstr ""
 ":menuselection:`管理者 -> Lizmapの設定 -> "
 "キャッシュ`から、使用するキャッシュシステムを設定できます。異なる種類のキャッシュを選択できます。"
 
-#: ../../source/admin/cache.rst:41
+#: ../../source/admin/cache.rst:59
 msgid "Files"
 msgstr "ファイル"
 
-#: ../../source/admin/cache.rst:42
+#: ../../source/admin/cache.rst:60
 msgid "Sqlite"
 msgstr "Sqlite"
 
-#: ../../source/admin/cache.rst:43
+#: ../../source/admin/cache.rst:61
 msgid "Redis (You would need a Redis server)"
 msgstr "Redis (Redisサーバーが必要です)"
 
-#: ../../source/admin/cache.rst:46
+#: ../../source/admin/cache.rst:64
 msgid "Seeding"
 msgstr "事前にキャッシュを作成する"
 
-#: ../../source/admin/cache.rst:48
+#: ../../source/admin/cache.rst:66
 msgid ""
 "You can pre-generate the tiles for any layers of a QGIS project configured "
 "with server-side caching on. You need to have full access on the server "
@@ -122,7 +125,7 @@ msgid ""
 msgstr ""
 "サーバーサイドキャッシュがオンに設定されたQGISプロジェクトの任意のレイヤーのタイルを事前に生成することができます。そのためには、Lizmapがインストールされているサーバにフルアクセスし、ターミナルを使ってそこに接続する必要があります。また、LizmapリポジトリのIDと、プロジェクトのコード名（拡張子を除いたQGISプロジェクトのファイル名）を知っておく必要があります。"
 
-#: ../../source/admin/cache.rst:53
+#: ../../source/admin/cache.rst:71
 msgid ""
 "In this example, we will show commands to manage the tiles cache for the "
 "demo project ``Montpellier``, shipped with Lizmap Web Client. We also assume"
@@ -133,7 +136,7 @@ msgstr ""
 "のタイルキャッシュを管理するためのコマンドを紹介します。また、Lizmapアプリケーションは、 :file:`/var/www/lizmap-web-"
 "client/`のフォルダにインストールされているものとします。"
 
-#: ../../source/admin/cache.rst:62
+#: ../../source/admin/cache.rst:80
 msgid ""
 "It is important to know that Lizmap publish the cached layers in WMTS (Web "
 "Map Tiled Service). The following concepts are used as options of Lizmap "
@@ -142,7 +145,7 @@ msgstr ""
 "LizmapはキャッシュされたレイヤーをWMTS（Web Map Tiled "
 "Service）で公開していることを知っておかなければなりません。以下のコンセプトは、Lizmapタイルキャッシュ作成のオプションとして使用されます。"
 
-#: ../../source/admin/cache.rst:64
+#: ../../source/admin/cache.rst:82
 msgid ""
 "**TileMatrixSet** - In Lizmap, this represents the projection code, for "
 "example `EPSG:3857` (Pseudo mercator)."
@@ -150,15 +153,15 @@ msgstr ""
 "**TileMatrixSet** - Lizmapでは、これは投影コードを表し、例えば`EPSG:3857`（Pseudo "
 "mercator）のようになります。"
 
-#: ../../source/admin/cache.rst:65
+#: ../../source/admin/cache.rst:83
 msgid "**TileMatrixMin** - This is the minimum zoom level."
 msgstr "**TileMatrixMin** - これは最小のズームレベルです。"
 
-#: ../../source/admin/cache.rst:66
+#: ../../source/admin/cache.rst:84
 msgid "**TileMatrixMax** - This is the maximum zoom level."
 msgstr "**TileMatrixMax** - これは最大のズームレベルです。"
 
-#: ../../source/admin/cache.rst:69
+#: ../../source/admin/cache.rst:87
 msgid ""
 "The zoom level is **not** a map scale, but the the zoom level. In Lizmap "
 "plugin, the project publisher can configure scales for the published "
@@ -172,13 +175,13 @@ msgstr ""
 "10000`のような公開プロジェクトの縮尺を設定することができます。ズームレベルのIDは、いくつかのCRSとLizmapプロジェクトの設定方法に依存します。地図を拡大するときに、WebブラウザのJavascriptコンソールで"
 " `lizMap.map.getZoom()` と入力すると、スケールIDを知ることができます。"
 
-#: ../../source/admin/cache.rst:75
+#: ../../source/admin/cache.rst:93
 msgid ""
 "First you **must** get the cache capabilities of one project and some "
 "details on a specific layer."
 msgstr "まず最初に、あるプロジェクトのキャッシュ機能と、特定のレイヤーの詳細を知っている**必要**があります。"
 
-#: ../../source/admin/cache.rst:94
+#: ../../source/admin/cache.rst:112
 msgid ""
 "In this example, you see that the bus layer has 3 different TileMatrixSet, "
 "corresponding to the 3 different spatial coordinate systems available for "
@@ -188,11 +191,11 @@ msgstr ""
 "この例では、バスのレイヤーが3つの異なるTileMatrixSetを持っていることがわかります。これは、Lizmapのこのプロジェクトで利用可能な3つの異なる空間座標系に対応しています（"
 " :menuselection:`プロパティ --> QGIS Server`で設定`）。"
 
-#: ../../source/admin/cache.rst:98
+#: ../../source/admin/cache.rst:116
 msgid "If your layer name has some spaces, you need to use `\"\"`."
 msgstr "レイヤー名にスペースがある場合は、 `\"\"`を使用する必要があります。"
 
-#: ../../source/admin/cache.rst:100
+#: ../../source/admin/cache.rst:118
 msgid ""
 "It's important to generate the cache capabilities **before** generating the "
 "cache for a specific layer. The cache capabilities is used in the next "
@@ -201,13 +204,13 @@ msgid ""
 msgstr ""
 "特定のレイヤーのキャッシュを生成する**前**に、キャッシュの設定を生成することが重要です。キャッシュの設定は次のコマンドで使用されます。キャッシュの設定が存在しない場合、次のコマンドは失敗する可能性があります。"
 
-#: ../../source/admin/cache.rst:103
+#: ../../source/admin/cache.rst:121
 msgid ""
 "Once you have a good knowledge of a layer, you can generate the cache for "
 "it:"
 msgstr "レイヤーについての知識があれば、そのレイヤーのキャッシュを生成することができます。"
 
-#: ../../source/admin/cache.rst:136
+#: ../../source/admin/cache.rst:154
 msgid "After seeding, update rights on cache :"
 msgstr "キャッシュの生成後は、キャッシュの権限を更新します。"
 
@@ -430,76 +433,76 @@ msgstr ""
 "QGISサーバーへのリクエストや、ベースマップを提供するローカルサーバーへのリクエストなど、プロキシを介すべきでないリクエストもあります。最低限、\"localhost,127.0.0.1\""
 " は設定する必要があります。"
 
-#: ../../source/admin/lizmap-configuration.rst:92
+#: ../../source/admin/lizmap-configuration.rst:93
 msgid "Repositories"
 msgstr "リポジトリ"
 
-#: ../../source/admin/lizmap-configuration.rst:94
+#: ../../source/admin/lizmap-configuration.rst:95
 msgid "For each Lizmap repository, are listed:"
 msgstr "各Lizmapリポジトリが一覧表示されます。"
 
-#: ../../source/admin/lizmap-configuration.rst:96
+#: ../../source/admin/lizmap-configuration.rst:97
 msgid "**The main informations**: label and path"
 msgstr "**主な情報** : ラベルとパス"
 
-#: ../../source/admin/lizmap-configuration.rst:97
+#: ../../source/admin/lizmap-configuration.rst:98
 msgid "**The list of rights** with the groups concerned"
 msgstr "**権限リスト** 関係するグループと合わせて。"
 
-#: ../../source/admin/lizmap-configuration.rst:98
+#: ../../source/admin/lizmap-configuration.rst:99
 msgid "**Action buttons**:"
 msgstr "**アクションボタン**:"
 
-#: ../../source/admin/lizmap-configuration.rst:100
+#: ../../source/admin/lizmap-configuration.rst:101
 msgid "*View*: displays a page that lists the maps in this repository"
 msgstr "*表示*: このリポジトリのマップを一覧表示するページを表示する"
 
-#: ../../source/admin/lizmap-configuration.rst:101
+#: ../../source/admin/lizmap-configuration.rst:102
 msgid "*Modify*: displays the repository modification form"
 msgstr "*編集*: リポジトリ修正フォームを表示する"
 
-#: ../../source/admin/lizmap-configuration.rst:102
+#: ../../source/admin/lizmap-configuration.rst:103
 msgid ""
 "*Remove*: delete the repository from the Lizmap Web Client configuration"
 msgstr "*削除*: Lizmap Web Clientの設定からリポジトリを削除する"
 
-#: ../../source/admin/lizmap-configuration.rst:103
+#: ../../source/admin/lizmap-configuration.rst:104
 msgid ""
 "*Empty cache*: deletes the entire cache of all layers of the repository "
 "projects"
 msgstr "*キャッシュを空にする*: リポジトリのプロジェクトの全レイヤーのキャッシュを削除する"
 
-#: ../../source/admin/lizmap-configuration.rst:108
+#: ../../source/admin/lizmap-configuration.rst:109
 msgid ""
 "You can create a new repository using the button **Create a repository** "
 "located at the top and bottom of the section *Repositories*."
 msgstr "*リポジトリ* セクションの上部と下部にある *リポジトリを作成* ボタンを使って、新しいリポジトリを作成することができます。"
 
-#: ../../source/admin/lizmap-configuration.rst:111
+#: ../../source/admin/lizmap-configuration.rst:112
 msgid "Add a repository"
 msgstr "リポジトリを追加する"
 
-#: ../../source/admin/lizmap-configuration.rst:113
+#: ../../source/admin/lizmap-configuration.rst:114
 msgid "To create a repository, you must give:"
 msgstr "リポジトリを作成するには、以下の情報を入力する必要があります。"
 
-#: ../../source/admin/lizmap-configuration.rst:115
+#: ../../source/admin/lizmap-configuration.rst:116
 msgid "**an id**: a word without spaces, accents or special characters"
 msgstr "**ID**: スペース、アクセント、特殊文字を含まない単語"
 
-#: ../../source/admin/lizmap-configuration.rst:116
+#: ../../source/admin/lizmap-configuration.rst:117
 msgid ""
 "**a label**: the name that will be displayed for this repository, accents "
 "and spaces allowed"
 msgstr "**ラベル**: このリポジトリに表示される名前で、アクセントやスペースを使用できます。"
 
-#: ../../source/admin/lizmap-configuration.rst:117
+#: ../../source/admin/lizmap-configuration.rst:118
 msgid ""
 "**a local folder path**: the full path on the server to the folder that "
 "contains the QGIS projects and data"
 msgstr "**ローカルフォルダパス**: QGIS プロジェクトとデータを含むフォルダへのサーバー上のフルパス"
 
-#: ../../source/admin/lizmap-configuration.rst:118
+#: ../../source/admin/lizmap-configuration.rst:119
 msgid ""
 "**Allow repository themes**: This option enables the possibility for the "
 "publisher to set a theme for the repository and themes for each map. See "
@@ -508,44 +511,44 @@ msgstr ""
 "**リポジトリのテーマを許可する**: このオプションは公開者がリポジトリのテーマや各マップのテーマを設定できるようにするものです。詳しくは "
 ":ref:`creating-simple-themes` をご覧ください。"
 
-#: ../../source/admin/lizmap-configuration.rst:123
+#: ../../source/admin/lizmap-configuration.rst:124
 msgid "Define the rights for each group"
 msgstr "グループごとに権限を定義する"
 
-#: ../../source/admin/lizmap-configuration.rst:125
+#: ../../source/admin/lizmap-configuration.rst:126
 msgid ""
 "After creating the directory, the repository modification form is displayed "
 "automatically and defines the following rights for each group:"
 msgstr "ディレクトリを作成すると、自動的にリポジトリ変更フォームが表示され、グループごとに以下の権限が定義されます。"
 
-#: ../../source/admin/lizmap-configuration.rst:127
+#: ../../source/admin/lizmap-configuration.rst:128
 msgid "**View repository** :"
 msgstr "**リポジトリの表示** :"
 
-#: ../../source/admin/lizmap-configuration.rst:129
+#: ../../source/admin/lizmap-configuration.rst:130
 msgid "all users of checked groups can access maps of this repository"
 msgstr "チェックしたグループのすべてのユーザーが、このリポジトリのマップにアクセスできます。"
 
-#: ../../source/admin/lizmap-configuration.rst:130
+#: ../../source/admin/lizmap-configuration.rst:131
 msgid ""
 "the group *anonymous* is unregistered users and allows to make public maps"
 msgstr "グループ *anonymous* は未登録のユーザーのことで、誰にでもマップを公開することができます。"
 
-#: ../../source/admin/lizmap-configuration.rst:132
+#: ../../source/admin/lizmap-configuration.rst:133
 msgid "**Use the Edition tool**"
 msgstr "**編集ツールの使用**"
 
-#: ../../source/admin/lizmap-configuration.rst:134
+#: ../../source/admin/lizmap-configuration.rst:135
 msgid ""
 "When this option is checked, the group users have access to the editing tool"
 " for all of Lizmap repository maps for which the edition was configured."
 msgstr "このオプションをチェックすると、グループのユーザーは、編集が設定されたすべてのLizmapリポジトリマップの編集ツールにアクセスできます。"
 
-#: ../../source/admin/lizmap-configuration.rst:136
+#: ../../source/admin/lizmap-configuration.rst:137
 msgid "**Always see complete layers data, even if filtered by login**"
 msgstr "**ログイン時にフィルタリングされていたとしても、常に完全なレイヤーデータを閲覧可能**"
 
-#: ../../source/admin/lizmap-configuration.rst:138
+#: ../../source/admin/lizmap-configuration.rst:139
 msgid ""
 "This option is in connection with the filtering feature data layers per "
 "group. See :ref:`filtered-layer-by-user`. Check the box for deciding which "
@@ -683,79 +686,53 @@ msgid "Overview of the administration interface"
 msgstr "管理インターフェースの概要"
 
 #: ../../source/admin/presentation.rst:9
-msgid "Access the administration interface"
-msgstr "管理インターフェースへのアクセス"
-
-#: ../../source/admin/presentation.rst:11
-msgid ""
-"For safety reasons, no link leads to the administration interface. The "
-"address is:"
-msgstr "安全上の理由から、管理インターフェースにつながるリンクはありません。そのアドレスは以下のようになっています。"
-
-#: ../../source/admin/presentation.rst:13
-msgid "http://mydomain.lizmap.3liz.com/admin.php"
-msgstr "http://mydomain.lizmap.3liz.com/admin.php"
-
-#: ../../source/admin/presentation.rst:15
-msgid "Temporary identifiers"
-msgstr "一時的なログイン情報"
-
-#: ../../source/admin/presentation.rst:17
-msgid "login = admin"
-msgstr "ログイン = admin"
-
-#: ../../source/admin/presentation.rst:18
-msgid "password = admin"
-msgstr "パスワード = admin"
-
-#: ../../source/admin/presentation.rst:24
 msgid "Change password"
 msgstr "パスワードの変更"
 
-#: ../../source/admin/presentation.rst:26
+#: ../../source/admin/presentation.rst:11
 msgid "Once connected, it is possible to change the password:"
 msgstr "一度接続すると、パスワードの変更が可能になります。"
 
-#: ../../source/admin/presentation.rst:28
+#: ../../source/admin/presentation.rst:13
 msgid "Click on your login at the top right menu and then *Your account*"
 msgstr "右上のメニューにあるログインをクリックし、次に *アカウント* をクリックします。"
 
-#: ../../source/admin/presentation.rst:29
+#: ../../source/admin/presentation.rst:14
 msgid "Click on the button *Change your password*"
 msgstr "*パスワードを変更* ボタンをクリックします。"
 
-#: ../../source/admin/presentation.rst:30
+#: ../../source/admin/presentation.rst:15
 msgid "Type the new password, confirme it and save"
 msgstr "新しいパスワードを入力し、確認してから保存します"
 
-#: ../../source/admin/presentation.rst:32
+#: ../../source/admin/presentation.rst:18
 msgid ""
 "It is imperative to change your password. Use a complex password that mixes "
 "numbers, letters and punctuation."
 msgstr "パスワードの変更は必須です。数字、文字、句読点を混ぜた複雑なパスワードを使用するようにしてください。"
 
-#: ../../source/admin/presentation.rst:36
+#: ../../source/admin/presentation.rst:22
 msgid "Reminder on Lizmap Web Client repositories"
 msgstr "Lizmap Web Clientのリポジトリに関する注意事項"
 
-#: ../../source/admin/presentation.rst:38
+#: ../../source/admin/presentation.rst:24
 msgid ""
 "Lizmap Web Client can use QGIS maps stored in different folders on the "
 "server."
 msgstr "Lizmap Web Clientは、サーバー上の異なるフォルダに保存されたQGISマップを使用することができます。"
 
-#: ../../source/admin/presentation.rst:40
+#: ../../source/admin/presentation.rst:26
 msgid ""
 "A *Lizmap Web CLient repository* is a folder on the server that stores one "
 "or more QGIS projects and their related data."
 msgstr ""
 "*Lizmap Web Clientリポジトリ* は、1つまたは複数のQGISプロジェクトとその関連データを保存するサーバー上のフォルダです。"
 
-#: ../../source/admin/presentation.rst:41
+#: ../../source/admin/presentation.rst:27
 msgid "Repositories can be used to *group related projects by theme*."
 msgstr "リポジトリは、 *関連するプロジェクトをテーマごとにグループ化して* 使用できます。"
 
-#: ../../source/admin/presentation.rst:42
+#: ../../source/admin/presentation.rst:28
 msgid "Repositories can be used to *manage the access rights on maps*."
 msgstr "リポジトリは *地図のアクセス権を管理して* 利用することができます。"
 
@@ -764,152 +741,237 @@ msgid "Manage groups and users in Lizmap Web Client"
 msgstr "Lizmap Web Clientのグループとユーザーの管理"
 
 #: ../../source/admin/users-groups.rst:9
-msgid "The groups and users: principles"
-msgstr "グループとユーザー：原則"
+msgid "Principles"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:11
 msgid "As an administrator, you can:"
 msgstr "管理者として、以下のことができます。"
 
 #: ../../source/admin/users-groups.rst:13
-msgid "create, rename, delete user groups"
-msgstr "ユーザーグループの作成、名前の変更、削除"
+msgid "**create**, **rename** or **delete** user groups"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:14
-msgid "create, modify, delete users"
-msgstr "ユーザーの作成、変更、削除"
+msgid "**create**, **update** or **delete** users"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:15
-msgid "linking a user to one or more groups"
-msgstr "ユーザーを1つまたは複数のグループに所属させる"
+msgid "**link** a user to one or more groups"
+msgstr ""
 
-#: ../../source/admin/users-groups.rst:17
+#: ../../source/admin/users-groups.rst:18
 msgid ""
-"Rights on Lizmap Web Client repositories are managed at group level, not at "
-"the user level."
-msgstr "Lizmap Web Clientのリポジトリに対する権限は、ユーザーレベルではなく、グループレベルで管理されます。"
+"We highly recommend managing rights at the **group level**, not at the "
+"**user level**."
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:20
-msgid "Manage Groups: create, rename, delete"
-msgstr "グループの管理：作成、名前の変更、削除"
+msgid "You may need to create groups to allow specific Lizmap rights :"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:22
-msgid ""
-"*Create a group*: In the left menu click on *Groups of users for rights* and"
-" scroll down to *Create a group*."
-msgstr "*グループを作成*: 左側のメニューで *ユーザーグループの権限* をクリックし、 *グループの作成* までスクロールします。"
+msgid "access to some Lizmap repositories, projects or even layers"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:23
-msgid "Define the *label*: it is possible to use spaces and accents"
-msgstr "*ラベル* の定義: スペースとアクセントを使用可能です"
+msgid "using editing tools, see :ref:`editing`"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:24
-msgid "Define the *ident*: one word without special characters"
-msgstr "*ID* の定義: 特殊文字を含まない1つの単語"
-
-#: ../../source/admin/users-groups.rst:26
-msgid ""
-"In the page *Groups of users for rights*, it is also possible to *Change the"
-" name* and *Delete a group*."
-msgstr "また、 *ユーザーグループの権限* のページでは、 *名前の変更* や *グループの削除* も可能です。"
-
-#: ../../source/admin/users-groups.rst:31
-msgid ""
-"The **users** group is a group system to give the rights to authenticated "
-"users to edit their own user information including passwords. We excluded "
-"this group of Lizmap Web Client configuration because all identified users "
-"must be part of this group."
+msgid "access to OGC Web Services URL"
 msgstr ""
-"**ユーザー** "
-"グループは、認証されたユーザーに、パスワードを含む自分のユーザー情報を編集する権利を与えるためのグループシステムです。識別されたすべてのユーザーがこのグループに所属する必要があるため、Lizmap"
-" Web Clientの設定からこのグループを除外しました。"
+
+#: ../../source/admin/users-groups.rst:27
+msgid "More info about repositories rights : see :ref:`define-group-rights`"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:30
+msgid "Groups created by default"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:32
+msgid ""
+"Existing groups are visible on :menuselection:`Lizmap --> Administration -->"
+" Rights`."
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:34
-msgid "Manage Users"
-msgstr "ユーザーの管理"
+msgid ":guilabel:`admins` : to manage **all** settings on the Lizmap instance"
+msgstr ""
 
-#: ../../source/admin/users-groups.rst:36
+#: ../../source/admin/users-groups.rst:35
 msgid ""
-"*Create a user* : In the left menu click on *Users* and click on the button "
-"*Create a new user*:"
-msgstr "*ユーザーを作成する* : 左のメニューで *ユーザー* をクリックし、 *新しいユーザーを作成する* ボタンをクリックします。"
+":guilabel:`publishers` : designed for GIS technicians, to allow accessing "
+"server information needed from the QGIS plugin. The right "
+"``lizmap.admin.server.information.view`` must be enabled."
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:37
+msgid ""
+":guilabel:`users` : to recognise a connected user, to allow some basic "
+"rights like changing his own password"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:38
-msgid "give a *Nickname* which will be used for the login"
-msgstr "ログイン時に使用する *ニックネーム* を指定します。"
-
-#: ../../source/admin/users-groups.rst:39
-msgid "give an email"
-msgstr "emailを指定します"
+msgid ""
+":guilabel:`__anonymous` : a \"special\" group for a non connected user, "
+"which allows to set rights for non connected users"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:40
-msgid "set name and firstname"
-msgstr "名字と名前を設定します"
-
-#: ../../source/admin/users-groups.rst:42
 msgid ""
-"The user will have an email for setting up his password. If you want to set "
-"the password yourself, read the section below."
-msgstr "ユーザーには、パスワードを設定するためのメールが届きます。自分でパスワードを設定したい場合は、以下のセクションをお読みください。"
+":guilabel:`Default group` are the groups in which any new user is "
+"automatically added."
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:43
-msgid "It is also possible to *view* and *edit* informations about users."
-msgstr "また、ユーザーの情報を *閲覧* したり *編集* したりすることも可能です。"
+msgid "Manage users"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:45
-msgid ""
-"Once users created, you must put them into groups to assign the associated "
-"rights."
-msgstr "ユーザーを作成したら、グループに入れて関連する権利を割り当てる必要があります。"
+msgid "On :menuselection:`Lizmap --> Administration --> Users`, you can:"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:47
+msgid "*create* a new user"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:48
+msgid "*edit* a user"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:49
+msgid "*add* a user to an existing group"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:50
+msgid "*remove* a user from a group"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:51
-msgid "Setting password for users"
-msgstr "ユーザーのパスワードを設定する"
-
-#: ../../source/admin/users-groups.rst:53
-msgid ""
-"By default, in Lizmap, when a new user is created, the user will get an "
-"email for setting up his own password. If for some reasons, the "
-"administrator needs to setup the password, the :file:`localconfig.ini.php` "
-"needs to be edited:"
+msgid "*remove* a user from the instance"
 msgstr ""
-"デフォルトでは、Lizmapでは、新しいユーザーが作成されると、そのユーザーは自分のパスワードを設定するためのメールを受け取ります。何らかの理由で、管理者がパスワードを設定する必要がある場合は、"
-" :file:`localconfig.ini.php` を編集する必要があります。"
 
-#: ../../source/admin/users-groups.rst:62
-msgid "Putting users in groups"
-msgstr "ユーザーをグループに入れる"
+#: ../../source/admin/users-groups.rst:54
+msgid ""
+"Once users have been created, you must add them into groups to grant "
+"associated rights."
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:57
+msgid ""
+"According to the server configuration, the user receives a link to set his "
+"own password. If you want to change this behavior, read :ref:`set-password`,"
+" if you are the system administrator."
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:61
+msgid "Rights"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:64
-msgid "In the left menu click on *Rights of users*"
-msgstr "左メニューの *ユーザー権限* をクリックします"
-
-#: ../../source/admin/users-groups.rst:65
-msgid "it is possible to filter the visible users with the dropdown menu"
-msgstr "ドロップダウンメニューを使って、表示されているユーザーをフィルタリングすることができます。"
+msgid "Groups"
+msgstr "‎グループ‎"
 
 #: ../../source/admin/users-groups.rst:66
-msgid "to put a user in groups, click on the its button *rights*"
-msgstr "ユーザーをグループに入れるには、 *権限* ボタンをクリックします"
+msgid ""
+"On :menuselection:`Lizmap --> Administration --> Rights`, you land by "
+"default on :guilabel:`User groups`."
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:68
-msgid "The page displays a table with *rights online and groups on column*"
-msgstr "このページでは、 *オンラインでの権限とグループの列* のテーブルが表示されます"
-
-#: ../../source/admin/users-groups.rst:69
-msgid "The last column shows *the resulting rights*"
-msgstr "最後の列には *the resulting rights* が表示されています"
+#: ../../source/admin/users-groups.rst:80
+msgid "You can:"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:70
-msgid ""
-"In the *head row*, the + and - buttons allow to set / remove the user from a"
-" group"
-msgstr "*見出し部分* では、+と-のボタンで、ユーザーをグループに追加/削除することができます"
+msgid "*create* a new group"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:71
+msgid "*edit* the group name"
+msgstr ""
 
 #: ../../source/admin/users-groups.rst:72
-msgid "Do not use the *Personal rights* column."
-msgstr "*Personal rights* の列は使用しないでください。"
+msgid "*set* the rights for a group"
+msgstr ""
 
-#: ../../source/admin/users-groups.rst:75
-msgid "Assigning groups for each user created"
-msgstr "作成したユーザーごとにグループを割り当てる"
+#: ../../source/admin/users-groups.rst:73
+msgid "*remove* a group"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:76
+msgid "Users"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:78
+msgid ""
+"On :menuselection:`Lizmap --> Administration --> Rights`, you have a another"
+" tab called :guilabel:`Users`."
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:82
+msgid "*see* the list of users and its groups"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:83
+msgid "for a given *user*:"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:85
+msgid "*see* the list of groups"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:86
+msgid "*see* the **resulting rights**"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:89
+msgid "Assigning groups automatically for each new user created"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:91
+msgid ""
+"On :menuselection:`Lizmap --> Administration --> Rights`, in the "
+":guilabel:`Default group` column, click the pencil ✏️ button to allow or "
+"deny the group as default."
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:94
+msgid "The default is set to the :guilabel:`users` group."
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:97
+msgid "Lizmap plugin"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:99
+msgid ""
+"The list of settings in the plugin where a list of users or groups can be "
+"set:"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:101
+msgid ""
+":menuselection:`Map options --> Generic options`, to make the project "
+"visible only to subset of groups"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:102
+msgid ""
+":menuselection:`Layers --> Group visibility`, to make the layer visible only"
+" to subset of groups"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:103
+msgid ""
+":menuselection:`Layer editing --> Layer`, to allow editing capabilities on a"
+" layer, see :ref:`editing`"
+msgstr ""
+
+#: ../../source/admin/users-groups.rst:104
+msgid ""
+":menuselection:`Filter by user`, both :guilabel:`Attribute filtering` or "
+":guilabel:`Spatial filtering`, see :ref:`filtered-layer-by-user`"
+msgstr ""
