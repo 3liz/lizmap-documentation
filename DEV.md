@@ -100,7 +100,7 @@ When the documentation is ready to release `X.Y` from the master branch:
 ## Archive an old version
 
 1. Checkout the branch
-1. `./update_from_transifex.sh -f
+1. `./update_from_transifex.sh -f`
 1. `git commit -am 'Archive LWC BRANCH translations, EOL'`
 1. Remove all ressources on Transifex for the BRANCH
 1. Update `source/lizmap_versions.json` to add a single link to the current branch, see a branch below,
@@ -108,4 +108,4 @@ When the documentation is ready to release `X.Y` from the master branch:
 1. `git commit -am 'Add single link to the current maintained branch'`
 1. `sed -i 's/\'outdated\': False,/\'outdated\': True,/g' source/conf.py`
 1. `git commit -am 'The branch is now outdated'`
-1. Adapte the CI on the `master` branch about branches
+1. Adapt the CI on the `master` branch about branches
