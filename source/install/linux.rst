@@ -456,7 +456,7 @@ Lizmap modules
 Previously, we explained how we could add QGIS Server plugins to add more features to QGIS Server. Now that
 we have Lizmap Web Client up and running, we can add some Lizmap modules to add again some features.
 
-The list is available in the Lizmap :ref:`introduction<additional_lizmap_modules>`. On their GitHub repository,
+The list is available in the Lizmap :ref:`introduction <additional_lizmap_modules>`. On their GitHub repository,
 their is usually their install instructions. You should follow them. However
 here are the main instructions to install a module.
 
