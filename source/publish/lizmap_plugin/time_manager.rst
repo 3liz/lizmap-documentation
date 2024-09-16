@@ -32,8 +32,8 @@ that will allow you to move between steps, or play the entire animation. At star
 table, so if you have thousands of objects you may need to wait for several seconds before the application is available.
 
 .. note::
-    Several different formats for date/time are acceptable (those supported by the JavaScript library `DateJS`).
-    You can check whether your format is supported by entering it on `DateJS<https://github.com/datejs/Datejs>`_.
+    Several different formats for date/time are acceptable (those supported by the JavaScript library `Moment`).
+    You can check whether your format is supported by reading the documentation on `Moment <https://momentjs.com/>`_.
 
 At the layer level
 ^^^^^^^^^^^^^^^^^^
