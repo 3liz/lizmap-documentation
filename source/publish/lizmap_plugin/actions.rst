@@ -23,6 +23,9 @@ Example of a feature action:
 At present, the only engine for Lizmap actions is **PostgreSQL queries** (Python will not be
 supported). You can use PostgreSQL and PostGIS power to add specific logic in your web map.
 
+  .. warning::
+    **Lizmap actions** are therefore different than **QGIS native actions** and are not compatible each other.
+
 When the user clicks on an action button, a **query** is sent by Lizmap Web Client
 to the **PostgreSQL database**, with the current context data (map extent, feature ID, etc.).
 
