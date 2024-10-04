@@ -17,5 +17,5 @@ Example
 
 You can visit both links to see the difference :
 
-* https://demo.lizmap.com/lizmap/index.php/view/map/?repository=feat1&project=lampadaires
-* https://demo.lizmap.com/lizmap/index.php/view/embed/?repository=feat1&project=lampadaires
+* https://demo.lizmap.com/lizmap/index.php/view/map?repository=javascript&project=lampadaires
+* https://demo.lizmap.com/lizmap/index.php/view/embed/?repository=javascript&project=lampadaires
