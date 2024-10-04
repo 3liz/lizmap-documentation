@@ -3,7 +3,7 @@
 Install and upgrade the Lizmap plugin
 =====================================
 
-The Lizmap plugin is available through the official `QGIS repository <https://plugins.qgis.org/plugins/server/>`_.
+The Lizmap plugin is available through the official `QGIS repository <https://plugins.qgis.org/plugins/>`_.
 
 Install it with the QGIS plugin manager:
 
