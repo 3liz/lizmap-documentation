@@ -249,5 +249,5 @@ PostgreSQL can be used for **three** different purposes in Lizmap :
 * To store GIS data. **No** configuration is needed on the Lizmap Web Client server side, **only** the PostgreSQL server
   must be accessible from the Lizmap Web Client server and QGIS Server.
   It's possible to edit layers with Lizmap, but the layer **must** be stored in PostgreSQL. See :ref:`editing-prerequisites`.
-* To store Lizmap Web Client users and user actions. Lizmap uses tables. This setting must be done when **installing** Lizmap.
+* To store Lizmap Web Client users and user actions. This setting must be done when **installing** Lizmap.
 * To use `lizmap_search`, see :ref:`postgresql-lizmap-search`. This setting on the Lizmap server can be set when you need it.
