@@ -191,7 +191,7 @@ the same level than the Lizmap repositories folders:
 Use a WebDAV remote storage
 _________________________________
 
-  .. warning::
+.. warning::
     This storage is not compatible with |lizmap_cloud| |lizmap_cloud_svg|.
     You must keep the :guilabel:`Storage type` with ``Select an existing file``.
 

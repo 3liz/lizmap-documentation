@@ -1,3 +1,5 @@
+.. include:: ../substitutions.rst
+
 .. _seed-cache:
 
 =================================
@@ -29,6 +31,8 @@ right of the name of each layer that is configured with server cache.
 Clicking on the cross allows, after confirmation, to delete the server cache only for this layer in the QGIS project.
 
 Only logged administrator sees these red crosses and has the right to delete the cache.
+
+.. include:: ../shared/not_available_lizmap_cloud_below.rst
 
 Use the console command for a whole project or layer
 =========================================================
