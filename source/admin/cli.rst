@@ -1,3 +1,5 @@
+.. include:: ../substitutions.rst
+
 ======================
 Command-line interface
 ======================
@@ -7,6 +9,8 @@ Command-line interface
 
 Principles
 ==========
+
+.. include:: ../shared/not_available_lizmap_cloud.rst
 
 A command-line interface is available in Lizmap Web Client. It allows to manage :
 
