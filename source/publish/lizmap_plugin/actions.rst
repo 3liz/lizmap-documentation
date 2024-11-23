@@ -118,15 +118,13 @@ You can get the QGIS layer internal ID with the QGIS expression ``@layer_id``.
                "other_param": "yes"
            },
            "style": {
-               "graphicName": "circle",
-               "pointRadius": 6,
-               "fill": true,
-               "fillColor": "lightred",
-               "fillOpacity": 0.3,
-               "stroke": true,
-               "strokeWidth": 4,
-               "strokeColor": "red",
-               "strokeOpacity": 0.8
+               "fill-color": "rgba(255,255,255,0.4)",
+               "stroke-color": "#3399CC",
+               "stroke-width": 1.25,
+               "circle-radius": 5,
+               "circle-fill-color": "rgba(255,255,255,0.4)",
+               "circle-stroke-width": 1.25,
+               "circle-stroke-color": "#3399CC"
            },
            "callbacks": [
                 {"method": "zoom"},
