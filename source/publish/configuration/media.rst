@@ -24,7 +24,7 @@ It is possible to provide documents through Lizmap. To do this, you simply:
 Lizmap is using the directory for other purposes:
 
 * Adding some javascript, :file:`media/js`, see :ref:`adding-javascript`.
-* Replacing the default theme, :file:`media/theme`, see :ref:`creating-simple-themes`.
+* Replacing the default theme, :file:`media/themes`, see :ref:`creating-simple-themes`.
 * In the :ref:`editing` in :file:`media/upload/layer_name` for pictures uploaded from users.
 * Providing documents
 
@@ -110,6 +110,11 @@ This will make files inside this media folder available for **all** folders, for
     │   |    └── default
     │   |       ├── another_script.js
     │   |       └── one_script.js
+    │   └── themes
+    │   |    └── default
+    │   |       └── css
+    │   |          ├── main.css
+    │   |          └── map.css 
     │   └── photo_1.jpg
     ├── my_repository
     │   ├── project_a.qgs
