@@ -103,55 +103,65 @@ You can get the QGIS layer internal ID with the QGIS expression ``@layer_id``.
 
 .. code-block:: json
 
-   [
-       {
-           "name": "buffer_150",
-           "title": "Buildings in the fire hydrant area (150m)",
-           "scope": "feature",
-           "layers" : [
-               "emergency_fire_hydrant_04132268_86fb_4d5e_a426_ce3133494091"
-           ],
-           "confirm": "Do you want to select buildings within 150m from this fire hydrant ?",
-           "icon": "icon-home",
-           "options": {
-               "buffer_size": 150,
-               "other_param": "yes"
-           },
-           "style": {
-               "fill-color": "rgba(255,255,255,0.4)",
-               "stroke-color": "#3399CC",
-               "stroke-width": 1.25,
-               "circle-radius": 5,
-               "circle-fill-color": "rgba(255,255,255,0.4)",
-               "circle-stroke-width": 1.25,
-               "circle-stroke-color": "#3399CC"
-           },
-           "callbacks": [
-                {"method": "zoom"},
-                {"method": "select", "layerId": "building_90f7692a_0ae2_4a7d_91de_b63cddb92963"}
-           ]
-       },
-       {
-           "name": "closest_fire_station",
-           "title": "Find the closest fire station from this fire hydrant",
-           "scope": "feature",
-           "layers" : [
-               "emergency_fire_hydrant_04132268_86fb_4d5e_a426_ce3133494091"
-           ],
-           "confirm": "Do you want to select the closest fire station from this fire hydrant ?",
-           "icon": "icon-resize-small",
-           "options": {},
-           "style": {
-               "stroke-color": "red",
-               "stroke-opacity": 0.8,
-               "stroke-width": 4
-           },
-           "callbacks": [
-                {"method": "zoom"},
-                {"method": "select", "layerId": "stations_1a71d61f_cb99_4ac4_8bd4_86304af9be44"}
-           ]
-       }
-   ]
+    [
+        {
+            "name": "buffer_150",
+            "title": "Buildings in the fire hydrant area (150m)",
+            "scope": "feature",
+            "layers": [
+                "emergency_fire_hydrant_04132268_86fb_4d5e_a426_ce3133494091"
+            ],
+            "confirm": "Do you want to select buildings within 150m from this fire hydrant ?",
+            "icon": "icon-home",
+            "options": {
+                "buffer_size": 150,
+                "other_param": "yes"
+            },
+            "style": {
+                "fill-color": "rgba(255,255,255,0.4)",
+                "stroke-color": "#3399CC",
+                "stroke-width": 1.25,
+                "circle-radius": 5,
+                "circle-fill-color": "rgba(255,255,255,0.4)",
+                "circle-stroke-width": 1.25,
+                "circle-stroke-color": "#3399CC"
+            },
+            "callbacks": [
+                {
+                    "method": "zoom"
+                },
+                {
+                    "method": "select",
+                    "layerId": "building_90f7692a_0ae2_4a7d_91de_b63cddb92963"
+                }
+            ]
+        },
+        {
+            "name": "closest_fire_station",
+            "title": "Find the closest fire station from this fire hydrant",
+            "scope": "feature",
+            "layers": [
+                "emergency_fire_hydrant_04132268_86fb_4d5e_a426_ce3133494091"
+            ],
+            "confirm": "Do you want to select the closest fire station from this fire hydrant ?",
+            "icon": "icon-resize-small",
+            "options": {},
+            "style": {
+                "stroke-color": "red",
+                "stroke-opacity": 0.8,
+                "stroke-width": 4
+            },
+            "callbacks": [
+                {
+                    "method": "zoom"
+                },
+                {
+                    "method": "select",
+                    "layerId": "stations_1a71d61f_cb99_4ac4_8bd4_86304af9be44"
+                }
+            ]
+        }
+    ]
 
 The **JSON configuration** file lists the **declared actions**.
 
