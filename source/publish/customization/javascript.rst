@@ -42,6 +42,10 @@ Configuring the tool
 * To allow the execution of JavaScript code, in the Lizmap admin interface, you **must** add the privilege
   :guilabel:`Allow themes for this repository`.
 
+.. tip::
+    It's possible to temporary disable the loading of additional JavaScript by adding a parameter in the URL :
+    ``&no_user_defined_js=1``.
+
 Video tutorial
 --------------
 
