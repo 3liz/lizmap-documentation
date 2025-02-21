@@ -142,15 +142,9 @@ You can get the QGIS layer internal ID with the QGIS expression ``@layer_id``.
            "icon": "icon-resize-small",
            "options": {},
            "style": {
-               "graphicName": "circle",
-               "pointRadius": 6,
-               "fill": true,
-               "fillColor": "lightred",
-               "fillOpacity": 0.3,
-               "stroke": true,
-               "strokeWidth": 4,
-               "strokeColor": "red",
-               "strokeOpacity": 0.8
+               "stroke-color": "red",
+               "stroke-opacity": 0.8,
+               "stroke-width": 4
            },
            "callbacks": [
                 {"method": "zoom"},
