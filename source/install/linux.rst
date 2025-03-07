@@ -10,7 +10,7 @@ Installing Lizmap Web Client on Linux Debian or Ubuntu
 Generic Server Configuration with Nginx server
 ==============================================
 
-This documentation provides an example for configuring a server with the Debian 11 distribution. We assume you have base system installed and updated.
+This documentation provides an example for configuring a server with the Debian 12 distribution. We assume you have base system installed and updated.
 
 .. warning:: This page does not describe how to secure your Nginx server. It's just for a demonstration.
 
@@ -33,19 +33,19 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 Installing necessary packages
 -----------------------------
 
-.. warning:: Lizmap web client 3.6 is based on Jelix 1.8. You must install at least the **7.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 7/8 installation)
+.. warning:: You must install at least the **7.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 7/8 installation)
 
 .. code-block:: bash
 
    sudo su # only necessary if you are not logged in as root
    apt update # update packages list
-   apt install curl openssl libssl1.1 nginx-full nginx nginx-common
+   apt install curl openssl libssl3 nginx-full nginx nginx-common
 
-On Debian 11 or Ubuntu 20.04 LTS, install these packages:
+Install these PHP packages:
 
 .. code-block:: bash
 
-   apt install php7.4-fpm php7.4-cli php7.4-bz2 php7.4-curl php7.4-gd php7.4-intl php7.4-json php7.4-mbstring php7.4-pgsql php7.4-sqlite3 php7.4-xml php7.4-ldap php7.4-redis
+   apt install php8.2-fpm php8.2-cli php8.2-bz2 php8.2-curl php8.2-gd php8.2-intl php8.2-mbstring php8.2-pgsql php8.2-sqlite3 php8.2-xml php8.2-ldap php8.2-redis
 
 Web configuration
 -----------------
@@ -83,7 +83,7 @@ Create a new file /etc/nginx/sites-available/lizmap.conf:
            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
            fastcgi_param PATH_INFO $path_info;
            fastcgi_param PATH_TRANSLATED $document_root$path_info;
-           fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+           fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
            fastcgi_param SERVER_NAME $http_host;
         }
     }
@@ -139,7 +139,7 @@ Install
 -------
 
 
-On Debian 11, you'll find PostgreSQL 13.
+On Debian 12, you'll find PostgreSQL 15.
 
 First install packages:
 
@@ -155,40 +155,10 @@ databases. Careful: these instructions destroy any existing databases!
 .. code-block:: bash
 
    service postgresql stop
-   pg_dropcluster --stop 13 main
-   pg_createcluster 13 main --locale fr_FR.UTF8 -p 5432 --start
+   pg_dropcluster --stop 15 main
+   pg_createcluster 15 main --locale fr_FR.UTF8 -p 5432 --start
 
 Now You can create a user and a database for Lizmap, into Postgresql.
-
-
-Adapting the PostgreSQL configuration
--------------------------------------
-
-We will use ``pgtune``, an utility program that can automatically generate a PostgreSQL configuration file
-adapted to the properties of the server (memory, processors, etc.)
-
-https://pgtune.leopard.in.ua/
-
-.. code-block:: bash
-
-   # PostgreSQL Tuning with pgtune
-   pgtune -i /etc/postgresql/13/main/postgresql.conf -o /etc/postgresql/13/main/postgresql.conf.pgtune --type Web
-   cp /etc/postgresql/13/main/postgresql.conf /etc/postgresql/13/main/postgresql.conf.backup
-   cp /etc/postgresql/13/main/postgresql.conf.pgtune /etc/postgresql/13/main/postgresql.conf
-   nano /etc/postgresql/13/main/postgresql.conf
-   # Restart to check any problems
-   service postgresql restart
-   # If error messages, increase the linux kernel configuration variables
-   echo "kernel.shmall = 4294967296" >> /etc/sysctl.conf # to increase shred buffer param in kernel
-   echo "kernel.shmmax = 4294967296" >> /etc/sysctl.conf
-   echo 4294967296 > /proc/sys/kernel/shmall
-   echo 4294967296 > /proc/sys/kernel/shmmax
-   sysctl -a | sort | grep shm
-   # Restart PostgreSQL
-   service postgresql restart
-
-For installing Lizmap tables into the PostgreSQL database (instead of SqLite by default), you can continue until the next section
-below when you need to edit the file :file:`lizmap/var/config/profiles.ini.php`.
 
 Installing sources of Lizmap Web Client
 =======================================
@@ -204,7 +174,7 @@ requirements.
 
 .. code-block:: bash
 
-   VERSION=3.6.5
+   VERSION=3.9.0
    LOCATION=/var/www
 
 Then you can install the zip file:
@@ -245,8 +215,8 @@ to edit PostgreSQL layer. You must **only** check that the Lizmap server can acc
 
 .. code-block:: bash
 
-   apt install php7.4-pgsql
-   service php7.4-fpm restart
+   apt install php8.2-pgsql
+   service php8.2-fpm restart
 
 For Lizmap logs, users and groups, it can be either stored in SqLite or PostgreSQL. To store these information in
 PostgreSQL, follow these instructions.
