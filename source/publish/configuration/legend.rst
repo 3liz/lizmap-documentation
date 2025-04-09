@@ -65,7 +65,7 @@ This feature can be used for:
 
 * hide a layer used in the locate by layer (:ref:`locate-by-layer`)
 * hide a simple layer for adding data rendered with a view
-* hide a layer for printing (:ref:`print-external-baselayer`)
+* hide a layer for printing
 
 .. _overview-map:
 
