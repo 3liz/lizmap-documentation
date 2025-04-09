@@ -254,7 +254,7 @@ To display some color with HTML according to the value of a field, you can use t
 .. _print-layout-atlas:
 
 Link to a PDF layout using the QGIS Atlas
-_________________________________________
+-----------------------------------------
 
 .. note::
     The QGIS server `AtlasPrint <https://github.com/3liz/qgis-atlasprint>`_ plugin needs to be installed first.
