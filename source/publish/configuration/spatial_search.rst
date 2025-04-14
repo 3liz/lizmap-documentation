@@ -29,14 +29,16 @@ _____________
 * A PostgreSQL database, accessible from Lizmap Web Client.
 * PostgreSQL extensions activated in this database : ``unaccent`` and ``pg_trgm`` (for effective LIKE queries)
 * A custom function ``f_unaccent`` which can be used in an index. See this
-  `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_ for explanation
+  `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_
+  for explanation
 
 .. code-block:: postgresql
 
    -- Add the extension pg_trgm
    CREATE EXTENSION IF NOT EXISTS pg_trgm;
 
-   -- Add the extension unaccent, available with PostgreSQL contrib tools. This is needed to provide searches which are not sensitive to accentuated characters.
+   -- Add the extension unaccent, available with PostgreSQL contrib tools.
+   -- This is needed to provide searches which are not sensitive to accentuated characters.
    CREATE EXTENSION IF NOT EXISTS unaccent;
 
    -- Add the f_unaccent function to be used in the index
@@ -118,12 +120,16 @@ ____________
 Configure access
 ________________
 
-Once this table (or view, or materialized view) is created in your database, you need to check that Lizmap can have a read access on it.
+Once this table (or view, or materialized view) is created in your database, you need to check that Lizmap can have a
+read access on it.
 
-If your Lizmap instance uses PostgreSQL to store the users, groups and rights, a connection profile already exists for your database. Then you can just add the ``lizmap_search`` relation inside this database (in the ``public`` schema).
+If your Lizmap instance uses PostgreSQL to store the users, groups and rights, a connection profile already exists for
+your database. Then you can just add the ``lizmap_search`` relation inside this database (in the ``public`` schema).
 
-If not, or if you need to put the search data in another database (or connect with another PostgreSQL user), you need to add a new **database connection profile** in Lizmap configuration file :file:`lizmap/var/config/profiles.ini.php`.
-The new profile is a new jdb prefixed section, called **jdb:search**. For example, add the following section (please replace the ``DATABASE_`` variables by the correct values):
+If not, or if you need to put the search data in another database (or connect with another PostgreSQL user), you need
+to add a new **database connection profile** in Lizmap configuration file :file:`lizmap/var/config/profiles.ini.php`.
+The new profile is a new jdb prefixed section, called **jdb:search**. For example, add the following section
+(please replace the ``DATABASE_`` variables by the correct values):
 
 .. code-block:: ini
 
@@ -136,7 +142,8 @@ The new profile is a new jdb prefixed section, called **jdb:search**. For exampl
    ; search_path=DATABASE_SCHEMA_WITH_LIZMAP_SEARCH,public
 
 You don't need to configure the :guilabel:`locate by layer` tool.
-The link with Lizmap Web Client is done automatically if you can run the query below successfully in PgAdmin using the same credentials as the Lizmap application.
+The link with Lizmap Web Client is done automatically if you can run the query below successfully in PgAdmin using the
+same credentials as the Lizmap application.
 You **mustn't** specify the schema where the lizmap_search table is located. It **must** work without specifying the schema.
 
 .. code-block:: sql
@@ -148,3 +155,10 @@ You can now use the default search bar in Lizmap which is located on top right c
 .. image:: /images/interface-postgresql-search.jpg
    :align: center
    :width: 300
+
+Debug client side
+_________________
+
+By pressing :kbd:`F12` in your web-browser, you can see HTTP requests made in the :guilabel:`Network` tab. When pressing
+:kbd:`Enter`, there is a request targeting ``index.php/lizmap/searchFts/get?``. Right-click to resend it and add
+``&DEBUG=TRUE`` to see the SQL query generated in your :menuselection:`Server administration panel --> Logs --> Admin log`.
