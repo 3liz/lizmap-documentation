@@ -1,21 +1,29 @@
-=======================
-Install Py-QGIS-Server
-=======================
+==============
+Py-QGIS-Server
+==============
 
-Py-QGIS-Server has been build to manager QGIS Server map processes.
+`Py-QGIS-Server <https://docs.3liz.org/py-qgis-server/>`_ has been designed to manage QGIS Server map processes.
 
-Install in a venv
-==================
+Pre-requirements
+================
 
-We supposed, you already installed QGIS Server packages has explain in the QGIS Servr documentation.
+We supposed, you already have installed QGIS Server packages, as explain in the
+`QGIS Server documentation <https://docs.qgis.org/latest/en/docs/server_manual/>`_.
 
-We firstly add needed pacakges not provided with QGIS Server.
+.. note::
+    You do not need to read the web server configuration about Nginx/Apache in the documentation from QGIS.
+    Because Py-QGIS-Server has its **own** web server.
+
+Install in a Python venv
+========================
+
+We add needed packages not provided with QGIS Server :
 
 .. code-block:: bash
 
     apt install python3-venv python3-psutil
 
-Then, we create the py-qgis-server virtual environment and install py-qgis-server
+Then, we create the Py-QGIS-Server virtual environment and install ``py-qgis-server`` with pip :
 
 .. code-block:: bash
 
@@ -28,22 +36,28 @@ Py-QGIS-Server is installed.
 Configuration and associated files
 ===================================
 
-The file to watch for restarting workers (restartmon)
------------------------------------------------------
-
-We create an empty file that will be watch by py-qgis-server to check when restarting QGIS Server map workers.
+Folders used below
+------------------
 
 .. code-block:: bash
 
-    mkdir /var/lib/py-qgis-server
-    nano /var/lib/py-qgis-server/py-qgis-restartmon
+    mkdir -p /srv/qgis/plugins /srv/qgis/config /var/log/qgis /var/lib/py-qgis-server /var/data
+
+The file to watch for restarting workers
+----------------------------------------
+
+We create an empty file that will be watch by Py-QGIS-Server to check when to restart QGIS Server map workers.
+
+.. code-block:: bash
+
+    touch /var/lib/py-qgis-server/py-qgis-restartmon
     chmod 664 /var/lib/py-qgis-server/py-qgis-restartmon
 
 
-The bash file to restarting workers (qgis-reload)
---------------------------------------------------
+The bash file to restart workers
+--------------------------------
 
-We create the file ``/usr/bin/qgis-reload`` to launch restarting QGIS Server map workers. It will contain:
+We create the executable file :file:`/usr/bin/qgis-reload` to restart QGIS Server map workers. It will contain:
 
 .. code-block:: bash
 
@@ -59,14 +73,15 @@ Then when change its mod :
     chmod 750 /usr/bin/qgis-reload
 
 The configuration file
------------------------
+----------------------
 
-We create the Py-QGIS-Server configuration file ``/srv/qgis/server.conf``. It will contain:
+We create the Py-QGIS-Server configuration file :file:`/srv/qgis/server.conf`. It will contain:
 
 .. code-block:: bash
 
     #
-    # py-qgis-server configuration
+    # Py-QGIS-Server configuration
+    # https://docs.3liz.org/py-qgis-server/
     #
     
     [server]
@@ -97,18 +112,19 @@ We create the Py-QGIS-Server configuration file ``/srv/qgis/server.conf``. It wi
     [api.enabled]
     lizmap_api=yes
 
-In this exemple:
+In this example:
 
 * QGIS Server will be available at ``http://127.0.0.1:7200/ows/``
-* the plugins are installed in ``/srv/qgis/plugins`` (pluginpath).
+* the plugins are installed in ``/srv/qgis/plugins`` (pluginpath). See :ref:`qgis-server-plugins`.
 * the file to watch for restarting workers is ``/var/lib/py-qgis-server/py-qgis-restartmon`` (restartmon).
-* the directory containing the projects to be published ``/srv/data`` (rootdir). The projects can be in sub-folders, like root repositores in Lizmap Web Client.
+* the directory containing the projects to be published ``/srv/data`` (rootdir). The projects can be in sub-folders,
+  like root repositories in Lizmap Web Client.
 * Lizmap QGIS Server API is enabled
 
 Manage it with systemd
------------------------
+----------------------
 
-Fisrt of all, we create an environment file ``/srv/qgis/config/qgis-service.env`` with 
+First of all, we create an environment file :file:`/srv/qgis/config/qgis-service.env` with
 
 .. code-block:: bash
 
@@ -124,20 +140,20 @@ Fisrt of all, we create an environment file ``/srv/qgis/config/qgis-service.env`
     QGIS_SERVER_TRUST_LAYER_METADATA=TRUE
     QGIS_SERVER_APPLICATION_NAME=qgis-server
 
-In this file we defined:
+In this file, we defined:
 
-* The lang 
-* The Xvfb display port 
-* The QGIS options and authDB path (needed for https sources)
-* Lizmap environment varaible to reveal settings 
-* Other QGIS Server variables
+* The lang
+* The Xvfb display port, needed to print PDF
+* The QGIS options and authDB path (needed for HTTPS, when used in remote layers such as OSM tiles)
+* Lizmap environment variable to reveal settings
+* Other QGIS Server variables, from the `documentation <https://docs.3liz.org/py-qgis-server/configuration.html#common-configuration-options>`_.
 
-Then we can create the QGIS service file ``/etc/systemd/system/qgis.service`` with 
+Then we can create the QGIS `service systemd file <https://wiki.debian.org/systemd/Services>`_ :file:`/etc/systemd/system/qgis.service` with
 
 .. code-block:: bash
 
     [Unit]
-    Description=Qgis server
+    Description=QGIS server
     After=network.target
     
     [Service]
@@ -145,7 +161,7 @@ Then we can create the QGIS service file ``/etc/systemd/system/qgis.service`` wi
     
     ExecStart=/opt/local/py-qgis-server/bin/qgisserver -c /srv/qgis/server.conf
     
-    #FIXME il est recommandé d'avoir un script *synchrone*, ce qui n'est pas le cas ici
+    # FIXME it is recommended to have a script *synchronous*, which is not the case here
     ExecReload=/usr/bin/qgis-reload
 
     KillMode=control-group
@@ -166,20 +182,39 @@ Then we can create the QGIS service file ``/etc/systemd/system/qgis.service`` wi
     [Install]
     WantedBy=multi-user.target
 
-Finally, we enable the QGIS Server service to start it and to be sure it is started at system launch.
+Finally, we enable the QGIS Server service to start it and to be sure it is started at system launch :
 
-Adapt the Lizmap Web Client config
------------------------------------
+.. code-block:: bash
 
-If you use Py-QGIS-Server, you have to adapt the Lizmap Web CLient config. You have to update the ``lizmap/var/config/lizmapConfig.ini.php` and change these options:
+    systemctl enable qgis
+    service qgis start
+
+Debug and check
+---------------
+
+.. tip::
+
+    1. We can check that QGIS Server with Py-QGIS-Server is working with :
+    ``curl http://127.0.0.1:7200/ows/``
+
+    2. After the installation of **Lizmap Server** QGIS plugin, we can check with :
+    ``curl http://127.0.0.1:7200/lizmap/server.json | jq '.'``
+    Read :ref:`qgis-server-plugins` with the use of QGIS-Plugin-Manager.
+
+Adapt the Lizmap Web Client configuration
+-----------------------------------------
+
+Either by editing manually the file :file:`lizmap/var/config/lizmapConfig.ini.php` or by changing in Lizmap Web Client GUI :
 
 .. code-block:: bash
 
     [services]
-    ;Wms map server
+    ;URL to QGIS Server for OGC web services
     wmsServerURL="http://127.0.0.1:7200/ows/"
     ;URL to the API exposed by the Lizmap plugin for QGIS Server
     lizmapPluginAPIURL="http://127.0.0.1:7200/lizmap/"
 
     ; path to find repositories
     rootRepositories="/var/data"
+
+Your :guilabel:`Server information` panel must show you the QGIS Server version and installed plugins.
