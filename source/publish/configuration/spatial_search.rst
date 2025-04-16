@@ -159,6 +159,12 @@ You can now use the default search bar in Lizmap which is located on top right c
 Debug client side
 _________________
 
-By pressing :kbd:`F12` in your web-browser, you can see HTTP requests made in the :guilabel:`Network` tab. When pressing
-:kbd:`Enter`, there is a request targeting ``index.php/lizmap/searchFts/get?``. Right-click to resend it and add
-``&DEBUG=TRUE`` to see the SQL query generated in your :menuselection:`Server administration panel --> Logs --> Admin log`.
+1. Visit a map where you have enabled ``lizmap_search``.
+2. By pressing :kbd:`F12` in your web-browser, you can see HTTP requests made in the :guilabel:`Network` tab.
+3. Clear all HTTP requests, not required, but it will be easier.
+4. When pressing :kbd:`Enter` in the search box after you have written some text, there should be an HTTP request
+   targeting ``index.php/lizmap/searchFts/get?`` which get fired.
+5. Right-click to resend and edit the HTTP request by adding ``&debug=true`` at the end.
+6. You can see the SQL query generated in your :menuselection:`Server administration panel --> Logs --> Admin log`.
+
+In case of error, think to check your logs.
