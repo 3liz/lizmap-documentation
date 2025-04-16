@@ -164,7 +164,7 @@ _________________
 3. Clear all HTTP requests, not required, but it will be easier.
 4. When pressing :kbd:`Enter` in the search box after you have written some text, there should be an HTTP request
    targeting ``index.php/lizmap/searchFts/get?`` which get fired.
-5. Right-click to resend and edit the HTTP request by adding ``&debug=true`` at the end.
+5. Right-click to open it in a new tab and edit the HTTP request by adding ``&debug=true`` at the end.
 6. You can see the SQL query generated in your :menuselection:`Server administration panel --> Logs --> Admin log`.
 
 In case of error, think to check your logs.
