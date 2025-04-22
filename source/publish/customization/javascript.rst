@@ -23,7 +23,8 @@ For instance, you can:
 Prerequisites
 -------------
 
-* This function needs to be activated by the administrator of the Lizmap instance.
+* This function needs to be activated by the administrator of the Lizmap instance
+  on the :ref:`repository page <lizmap-repository>`.
 * The :file:`media` directory. Read how to use :ref:`media` folder in Lizmap.
 
 Configuring the tool
