@@ -87,8 +87,11 @@ Adding your own images in a layout
 If you add some custom images in a layout, such as custom North arrow or your organization logo, the server needs to
 access these images too.
 
+* First, try with an relative path to your QGIS project (QGIS Desktop shows an absolute path, but saves a relative path
+  if you check the QGS file manually). Do not forget to send your tree structure on the server. This works on most of
+  QGIS Server versions nowadays.
 * Either use an image with an URL ``http://`` so that your image is accessible on both your local computer and on the
-  server.
+  server. Be careful to network latency.
 * Or use QGIS expression to build a compatible path on both desktop and server
   (it should work out of the box, but in case it's not working, you can use an expression.) :
 
