@@ -10,6 +10,7 @@ Installing and upgrading Lizmap
   pre_requirements
   linux
   windows
+  py-qgis-server
   configuration
   ldap
   advanced_install
