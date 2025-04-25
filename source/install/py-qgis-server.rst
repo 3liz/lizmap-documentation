@@ -66,7 +66,7 @@ We create the executable file :file:`/usr/bin/qgis-reload` to restart QGIS Serve
     touch /var/lib/py-qgis-server/py-qgis-restartmon
 
 
-Then when change its mod :
+Then we when change its mod :
 
 .. code-block:: bash
 
@@ -115,10 +115,9 @@ We create the Py-QGIS-Server configuration file :file:`/srv/qgis/server.conf`. I
 In this example:
 
 * QGIS Server will be available at ``http://127.0.0.1:7200/ows/``
-* the plugins are installed in ``/srv/qgis/plugins`` (pluginpath). See :ref:`qgis-server-plugins`.
-* the file to watch for restarting workers is ``/var/lib/py-qgis-server/py-qgis-restartmon`` (restartmon).
-* the directory containing the projects to be published ``/srv/data`` (rootdir). The projects can be in sub-folders,
-  like root repositories in Lizmap Web Client.
+* the plugins are installed in :file`/srv/qgis/plugins` (``pluginpath``). See :ref:`qgis-server-plugins`.
+* the file to watch for restarting workers is :file:`/var/lib/py-qgis-server/py-qgis-restartmon` (``restartmon``).
+* the directory containing the projects to be published :file:`/srv/data` (``rootdir``). The projects must be in sub-folders.
 * Lizmap QGIS Server API is enabled
 
 Manage it with systemd
@@ -144,7 +143,7 @@ In this file, we defined:
 
 * The lang
 * The Xvfb display port, needed to print PDF
-* The QGIS options and authDB path (needed for HTTPS, when used in remote layers such as OSM tiles)
+* The QGIS options and ``authDB`` path (needed for HTTPS, when used in remote layers such as OSM tiles)
 * Lizmap environment variable to reveal settings
 * Other QGIS Server variables, from the `documentation <https://docs.3liz.org/py-qgis-server/configuration.html#common-configuration-options>`_.
 
