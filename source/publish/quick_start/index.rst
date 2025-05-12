@@ -158,6 +158,8 @@ into the  :file:`qgis` folder:
       +- my-first-lizmap.qgs.cfg
    web/
 
+.. _lizmap-repository:
+
 Enable your folder to be a published repository
 -----------------------------------------------
 

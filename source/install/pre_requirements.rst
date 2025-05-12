@@ -6,6 +6,9 @@ Requirements before installing Lizmap Web Client
     If you want to quickly install and test Lizmap Web Client in a few steps, you can follow those
     `instructions <https://github.com/3liz/lizmap-docker-compose>`_ using Docker and Docker-Compose.
 
+.. contents::
+   :depth: 3
+
 Server administration knowledge
 ===============================
 
@@ -56,6 +59,11 @@ QGIS Server
 
 Follow the `QGIS Server documentation on how to install QGIS Server <https://docs.qgis.org/latest/en/docs/server_manual/>`_.
 
+.. note::
+    We recommend installing `Py-QGIS-Server <py-qgis-server>_` to manage QGIS Server processes. If so, you do not need to
+    configure Apache/Nginx for QGIS Server. If if are not using Py-QGIS-Server, you must configure your webserver to
+    use FCGI to target QGIS Server. Read the dedicated chapter about `Py-QGIS-Server <py-qgis-server>_`.
+
 Using a webserver (Apache or Nginx), you must install QGIS Server. With Nginx, the preferred way is to use
 ``spawn-fcgi``. Do **not** use the ``fcgiwrap``, this solution is not efficient.
 
@@ -81,6 +89,8 @@ Keep this URL, we will use it later in the Lizmap admin panel.
 
     Otherwise, especially after the **Lizmap** plugin on QGIS Server is installed, your user might be able to
     access private data if they by-pass Lizmap, by using straight QGIS Server URL.
+
+.. _qgis-server-plugins:
 
 QGIS Server plugins
 -------------------
@@ -239,12 +249,12 @@ Then, with Py-QGIS-Server, if your URL for OWS is `http://map:8080/ows/`, it mea
 .. _prerequisites-postgresql:
 
 PostgreSQL
-----------
+==========
 
 PostgreSQL can be used for **three** different purposes in Lizmap :
 
 * To store GIS data. **No** configuration is needed on the Lizmap Web Client server side, **only** the PostgreSQL server
   must be accessible from the Lizmap Web Client server and QGIS Server.
   It's possible to edit layers with Lizmap, but the layer **must** be stored in PostgreSQL. See :ref:`editing-prerequisites`.
-* To store Lizmap Web Client users and user actions. Lizmap uses tables. This setting must be done when **installing** Lizmap.
+* To store Lizmap Web Client users and user actions. This setting must be done when **installing** Lizmap.
 * To use `lizmap_search`, see :ref:`postgresql-lizmap-search`. This setting on the Lizmap server can be set when you need it.

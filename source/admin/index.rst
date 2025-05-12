@@ -8,6 +8,7 @@ This guide is for the system administrator on the server.
   :maxdepth: 2
 	
   presentation
+  cli
   users-groups
   lizmap-configuration
   cache

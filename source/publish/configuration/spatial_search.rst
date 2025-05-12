@@ -12,9 +12,8 @@ google or french IGN). See :ref:`lizmap-config-map` .
 Additionally, you can add spatial searching capability to Lizmap. This means you will allow the users to search within
 spatial data, such as countries, points of interests, etc. You have two ways to add searching capability in Lizmap:
 
-* For |qgis_2| and |qgis_3|, you can create a table or view ``lizmap_search`` in your PostgreSQL database to store the
+* You can create a table or view ``lizmap_search`` in your PostgreSQL database to store the
   search data for all your Lizmap projects.
-* For |qgis_2| only, you can use the plugin ``QuickFinder`` to configure a data search per QGIS project.
 
 .. _postgresql-lizmap-search:
 
@@ -30,14 +29,16 @@ _____________
 * A PostgreSQL database, accessible from Lizmap Web Client.
 * PostgreSQL extensions activated in this database : ``unaccent`` and ``pg_trgm`` (for effective LIKE queries)
 * A custom function ``f_unaccent`` which can be used in an index. See this
-  `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_ for explanation
+  `Stack Overflow post <https://stackoverflow.com/questions/11005036/does-postgresql-support-accent-insensitive-collations/11007216#11007216>`_
+  for explanation
 
 .. code-block:: postgresql
 
    -- Add the extension pg_trgm
    CREATE EXTENSION IF NOT EXISTS pg_trgm;
 
-   -- Add the extension unaccent, available with PostgreSQL contrib tools. This is needed to provide searches which are not sensitive to accentuated characters.
+   -- Add the extension unaccent, available with PostgreSQL contrib tools.
+   -- This is needed to provide searches which are not sensitive to accentuated characters.
    CREATE EXTENSION IF NOT EXISTS unaccent;
 
    -- Add the f_unaccent function to be used in the index
@@ -54,7 +55,7 @@ _____________
     search data.
 
 .. tip::
-    If the instance is hosted on `lizmap.com <https://lizmap.com>`_, read the documentation about one step on
+    If the instance is hosted on |lizmap_cloud| |lizmap_cloud_svg|, read the documentation about one step on
     `lizmap_search <https://docs.lizmap.cloud/en/postgresql.html#about-lizmap-search>`_.
 
 Create the lizmap_search table or view
@@ -119,12 +120,16 @@ ____________
 Configure access
 ________________
 
-Once this table (or view, or materialized view) is created in your database, you need to check that Lizmap can have a read access on it.
+Once this table (or view, or materialized view) is created in your database, you need to check that Lizmap can have a
+read access on it.
 
-If your Lizmap instance uses PostgreSQL to store the users, groups and rights, a connection profile already exists for your database. Then you can just add the ``lizmap_search`` relation inside this database (in the ``public`` schema).
+If your Lizmap instance uses PostgreSQL to store the users, groups and rights, a connection profile already exists for
+your database. Then you can just add the ``lizmap_search`` relation inside this database (in the ``public`` schema).
 
-If not, or if you need to put the search data in another database (or connect with another PostgreSQL user), you need to add a new **database connection profile** in Lizmap configuration file :file:`lizmap/var/config/profiles.ini.php`.
-The new profile is a new jdb prefixed section, called **jdb:search**. For example, add the following section (please replace the ``DATABASE_`` variables by the correct values):
+If not, or if you need to put the search data in another database (or connect with another PostgreSQL user), you need
+to add a new **database connection profile** in Lizmap configuration file :file:`lizmap/var/config/profiles.ini.php`.
+The new profile is a new jdb prefixed section, called **jdb:search**. For example, add the following section
+(please replace the ``DATABASE_`` variables by the correct values):
 
 .. code-block:: ini
 
@@ -137,7 +142,8 @@ The new profile is a new jdb prefixed section, called **jdb:search**. For exampl
    ; search_path=DATABASE_SCHEMA_WITH_LIZMAP_SEARCH,public
 
 You don't need to configure the :guilabel:`locate by layer` tool.
-The link with Lizmap Web Client is done automatically if you can run the query below successfully in PgAdmin using the same credentials as the Lizmap application.
+The link with Lizmap Web Client is done automatically if you can run the query below successfully in PgAdmin using the
+same credentials as the Lizmap application.
 You **mustn't** specify the schema where the lizmap_search table is located. It **must** work without specifying the schema.
 
 .. code-block:: sql
@@ -150,28 +156,15 @@ You can now use the default search bar in Lizmap which is located on top right c
    :align: center
    :width: 300
 
-QuickFinder Plugin
-------------------
+Debug client side
+_________________
 
-.. warning:: This is for |qgis_2| only. This plugin has not been ported to |qgis_3|.
+1. Visit a map where you have enabled ``lizmap_search``.
+2. By pressing :kbd:`F12` in your web-browser, you can see HTTP requests made in the :guilabel:`Network` tab.
+3. Clear all HTTP requests, not required, but it will be easier.
+4. When pressing :kbd:`Enter` in the search box after you have written some text, there should be an HTTP request
+   targeting ``index.php/lizmap/searchFts/get?`` which get fired.
+5. Right-click to open it in a new tab and edit the HTTP request by adding ``&debug=true`` at the end.
+6. You can see the SQL query generated in your :menuselection:`Server administration panel --> Logs --> Admin log`.
 
-The purpose of this plugin is to provide fast searching among big datasets, searching in a qtfs file generated by QGIS Desktop.
-
-Prerequisites
-_____________
-
-* You must have install at least the **7.x** version of **PHP** in your Lizmap server.
-
-Configuration
-_____________
-
-Inside QGIS:
-
-* install QuickFinder Plugin, for |qgis_2| only
-* choose a layer(s), define the fields to search among, pick the geometry storage format (WKT or Extent) and store Full Text Searchs (FTS) vector into a file database (.qfts). The filename must be identical to the QGIS project filename. Ex: :file:`myproject.qfts` for a QGIS project stored as :file:`myproject.qgs`.
-
-.. warning:: Only **WKT** or **Extent** formats for geometry storage are working, since binary format (WKB) can not be decoded by LWC.
-
-Inside LWC:
-
-* put the database file beside the QGIS project, use the Search tool (input) and zoom to the chosen feature.
+In case of error, think to check your logs.

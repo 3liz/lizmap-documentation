@@ -11,9 +11,10 @@ Printing
 Extent defined by the user on the fly in Lizmap
 -----------------------------------------------
 
-To add print capabilities in the online map, you have to enable the printing tool in the plugin :guilabel:`Map`
-tab (:ref:`lizmap-config-map`) and the QGIS project needs at least one
+To add print capabilities in the online map, you have to create at least one
 `print layout <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/index.html>`_ without atlas enabled.
+Then you will find the list of your layouts in the :guilabel:`Layouts` plugin tab.
+They are enabled by default but you can disable it or set permissions for groups.
 
 .. note:: Printing will respect the feature filters and selections.
 
@@ -30,10 +31,12 @@ In your layout, you can add :
 * A scale
     - Either :guilabel:`Numeric`
     - Or set :guilabel:`Fit segment width` with a correct reference anchor point to adjust the position of the scale bar
-* A location map, a map for which you have enabled and configured the function of *Overview*, read :ref:`overview-map`
+* A location map, a map for which you have enabled and configured one *Overview*
 * Since |qgis_3|, you can use QGIS expressions, in your labels for instance. You can create automatic source label
   according to visible layers following this example on the
   `QGIS documentation <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#id4>`_.
+
+.. _dynamic_content:
 
 Dynamic content
 ^^^^^^^^^^^^^^^
@@ -55,8 +58,8 @@ Lizmap will automatically ask the user in the web-browser to fill each fields.
     * If you check 'Render as HTML' for your label in QGIS, you will have a multiline label in Lizmap accepting HTML code.
       But you will need to ``<br>`` for line breaks.
 
-The preview in Lizmap will be similar to this screenshot. The red rectangle is the area that the user can define in
-the web-browser and the user can also set the map description and the map title.
+The preview in Lizmap will be similar to this screenshot. The light rectangle is the area the user can define in
+the web browser. The user can also set the map description and title.
 
 .. image:: /images/print_user_params.jpg
    :align: center
@@ -67,90 +70,16 @@ Scales
 
 The print function will be based on the map scales that you set in the plugin *Map* (:ref:`lizmap-config-map`).
 
-Excluding a layout
-^^^^^^^^^^^^^^^^^^
+Overview
+^^^^^^^^
 
-It is possible to exclude printing compositions for the web.
-For example, if the QGIS project contains 4 compositions, the project administrator can exclude 2 compositions in the
-:menuselection:`Project properties --> QGIS server`.
-Only the published compositions will be presented in Lizmap.
-
-.. image:: /images/exclude_layout.jpg
-   :align: center
-   :width: 600
-
-.. _print-layout-atlas:
+You can create a location map by creating a ``second map`` for which you create an overview with the ``first map`` as the ``Map frame``.
+`QGIS documentation <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_map.html#overviews>`_
 
 Layout with an atlas when using a popup
 ---------------------------------------
 
-It's possible to automatically add a link to the PDF in a popup.
-
-* Enable an atlas layout on a layer
-* Enable :ref:`popup` on the same layer
-
-A link will be displayed automatically at the top of the popup.
-
-.. image:: /images/feature-popup-atlas.jpg
-   :align: center
-
-.. _print-external-baselayer:
-
-Allow printing of external baselayers
--------------------------------------
-
-.. warning::
-    This section is now deprecated. You should use the ``baselayers`` group provided by the plugin.
-
-The Lizmap plugin :guilabel:`Baselayers` tab allows you to select and add external baselayers (:ref:`lizmap-config-baselayers`).
-These external baselayers are not part of the QGIS project, default print function does not integrate them.
-
-To overcome this lack Lizmap offers an easy way to print a group or layer instead of the external baselayer.
-To be able to print a layer which is visible in Lizmap Web Client only:
-
-* You need to add the equivalent layer in the QGIS project.
-* You need to hide it from the Lizmap legend, see :ref:`hide-layers`.
-* Rename the layer to one of these names:
-
-    - ``osm-mapnik`` for OpenStreetMap
-    - ``osm-stamen-toner`` for OSM Stamen Toner
-    - ``osm-cyclemap`` for OSM CycleMap
-    - ``open-topo-map`` for OpenTopoMap
-    - ``google-satellite`` for Google Satellite
-    - ``google-hybrid`` for Google Hybrid
-    - ``google-terrain`` for Google Terrain
-    - ``google-street`` for Google Streets
-    - ``bing-road`` for Bing Road
-    - ``bing-aerial`` for Bing Aerial
-    - ``bing-hybrid`` for Bing Hybrid
-    - ``ign-scan`` for IGN Scan
-    - ``ign-plan`` for IGN Plan
-    - ``ign-photo`` for IGN Photos
-    - ``ign-cadastral`` for IGN Cadastre
-
-.. image:: /images/publish-print-basemap.jpg
-   :align: center
-
-*In the screenshot above, we can notice the `osm-mapnik` layer in the `hidden` group, which is a TMS layer using
-https://tiles.openstreetmap.org.*
-
-.. note::
-    The use of this method must be in compliance with the licensing of external baselayers used
-    (:ref:`lizmap-config-baselayers`).
-
-.. warning::
-    If it's not working, check that your server is able to access to the internet. These base layers are provided
-    online only.
-    Some proxy or firewalls might block some requests to the internet. If your server is behind a proxy, check that
-    QGIS Server is configured with the proxy settings (using the file :file:`QGIS3.ini` and the section ``[proxy]``).
-    Refer to the QGIS Server documentation for these settings.
-
-To add these layers, you can use existing WMS/WMTS services, XYZ providers (with QuickMapServices), local files...
-
-For IGN baselayers, you can use IGN's WMS or WMTS url. The key used for this url need to be protected by referer and IP.
-In referer, you have to indicate your projects page's URL like this : ``.*your-url.fr.*``. In IP, you have to indicate
-your Lizmap server's IP and your computer's IP (to open IGN's WMS url in QGIS on your computer). Both IP addresses must
-be separated by a comma. Beware, if you use IGN WMS or WMTS layers, QGIS project's EPSG code should be 3857.
+Read in the popup chapter, :ref:`print-layout-atlas`
 
 Adding your own images in a layout
 ----------------------------------
@@ -158,8 +87,11 @@ Adding your own images in a layout
 If you add some custom images in a layout, such as custom North arrow or your organization logo, the server needs to
 access these images too.
 
+* First, try with an relative path to your QGIS project (QGIS Desktop shows an absolute path, but saves a relative path
+  if you check the QGS file manually). Do not forget to send your tree structure on the server. This works on most of
+  QGIS Server versions nowadays.
 * Either use an image with an URL ``http://`` so that your image is accessible on both your local computer and on the
-  server.
+  server. Be careful to network latency.
 * Or use QGIS expression to build a compatible path on both desktop and server
   (it should work out of the box, but in case it's not working, you can use an expression.) :
 

@@ -14,7 +14,9 @@ You can create animations of your vectors, provided you have at least a layer wi
 Example
 -------
 
-A video tutorial is available here: https://vimeo.com/83845949. It shows all the steps to use the functionality.
+* On the `demo website <https://demo.lizmap.com/lizmap/index.php/view/map?repository=features&project=time_manager_earthquake>`_,
+  look at the **Earthquake** in Indonesia. You can download the QGIS project to see how it's done.
+* A `video tutorial <https://vimeo.com/83845949>`_ is available. It shows all the steps to use the functionality.
 
 
 Prerequisites
@@ -25,9 +27,13 @@ Prerequisites
 Configuring the tool
 --------------------
 
-After the configuration, your web application will display the symbol of a watch; clicking on it will open a small panel that will allow you to move between steps, or paly the entire animation. At startup, the application will load the entire table, so if you have thousands of objects you may need to wait for several seconds before the application is available.
+After the configuration, your web application will display the symbol of a watch; clicking on it will open a small panel
+that will allow you to move between steps, or play the entire animation. At startup, the application will load the entire
+table, so if you have thousands of objects you may need to wait for several seconds before the application is available.
 
-.. note:: Several different formats for date/time are acceptable (those supported by the JavaScript library `DateJS`). You can check whether your format is supported by entering it in this page: https://github.com/datejs/Datejs
+.. note::
+    Several different formats for date/time are acceptable (those supported by the JavaScript library `Moment`).
+    You can check whether your format is supported by reading the documentation on `Moment <https://momentjs.com/>`_.
 
 At the layer level
 ^^^^^^^^^^^^^^^^^^

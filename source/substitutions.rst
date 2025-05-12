@@ -1,8 +1,6 @@
-.. |qgis_2| replace:: **QGIS 2**
 .. |qgis_3| replace:: **QGIS 3**
 
-.. |lizmap_3_4| replace:: **Lizmap 3.4**
-.. |lizmap_3_5| replace:: **Lizmap 3.5**
+.. |lizmap_3_7| replace:: **Lizmap 3.7**
 
 .. |lizmap_cloud| replace:: `Lizmap Cloud <https://www.lizmap.com>`__
 

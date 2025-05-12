@@ -30,8 +30,8 @@ build_html_mr:
 build_html_i18n:
   only:
     - master
+    - lizmap_3_8
     - lizmap_3_7
-    - lizmap_3_6
   stage: build_html
   script:
     - ./update_from_transifex.sh -f
@@ -46,8 +46,8 @@ build_html_i18n:
 push_transifex:
   only:
     - master
+    - lizmap_3_8
     - lizmap_3_7
-    - lizmap_3_6
   stage: build_html
   script:
     - make gettext SPHINXBUILD=sphinx-build SPHINXINTL=sphinx-intl
@@ -58,13 +58,14 @@ push_transifex:
 deploy_snap:
   only:
     - master
+    - lizmap_3_8
     - lizmap_3_7
-    - lizmap_3_6
   stage: deploy
   dependencies:
     - build_html_i18n
   script:
     - rsync -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvvzc --delete build/html/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/$VERSION
+    - rsync -e "$DEPLOYDOC_SNAP_SSH_PARAM" -P -rvvzc static/ $DEPLOYDOC_SNAP_HOST:$DEPLOYDOC_SNAP_PATH/
   environment:
     name: snap
   tags:
@@ -73,13 +74,14 @@ deploy_snap:
 deploy_production:
   only:
     - master
+    - lizmap_3_8
     - lizmap_3_7
-    - lizmap_3_6
   stage: deploy_prod
   dependencies:
     - build_html_i18n
   script:
     - rsync -e "$DEPLOYDOC_PROD_SSH_PARAM" -P -rvzc --delete build/html/ $DEPLOYDOC_PROD_HOST:$DEPLOYDOC_PROD_PATH/$VERSION
+    - rsync -e "$DEPLOYDOC_PROD_SSH_PARAM" -P -rvzc static/ $DEPLOYDOC_PROD_HOST:$DEPLOYDOC_PROD_PATH/
   environment:
     name: production
   when: manual

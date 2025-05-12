@@ -197,7 +197,7 @@ Other customisation with JavaScript scripts
 
 We can also modify charts with some JavaScript scripts.
 
-* You can decide to not have any number after the comma for the first chart (id: dataviz_plot_0), for example:
+* You can decide to not have any number after the comma for the first chart (ID ``dataviz_plot_0``), for example:
 
 .. code-block:: javascript
 
@@ -206,6 +206,20 @@ We can also modify charts with some JavaScript scripts.
             if( evt.id === 'dataviz_plot_0'){
                 Plotly.restyle( evt.id, {
                     texttemplate: "%{value:.0f}"
+                });
+            }
+        }
+    });
+
+* You can decide to display **lines and markers** (`documentation <https://plotly.com/javascript/reference/scatter/#scatter-mode>`_) for a scatter chart (ID ``dataviz_plot_1``), for example:
+
+.. code-block:: javascript
+
+    lizMap.events.on({
+        'datavizplotloaded': (evt) => {
+            if( evt.id === 'dataviz_plot_1'){
+                Plotly.restyle( evt.id, {
+                    mode: "lines+markers"
                 });
             }
         }

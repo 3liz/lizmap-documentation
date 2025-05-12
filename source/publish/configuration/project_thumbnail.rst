@@ -24,7 +24,7 @@ Example, if the project is called :file:`montpellier.qgs` you must add, next to 
 
       * Create images with a width of **250 pixels maximum**.
       * Use ``.webp`` as it produces images that are much smaller than other formats and is very well supported
-        `by modern browsers <https://caniuse.com/webp>`_. For even smaller images you can use ``.avif`` but you should
+        by `modern browsers <https://caniuse.com/webp>`_. For even smaller images you can use ``.avif`` but you should
         take care of `browser compatibility <https://caniuse.com/avif>`_.
       * Use `Squoosh <https://squoosh.app/>`_ or any other tool to convert from one image format to another and reduce
         quality as much as it is possible without being visually perceptible.
@@ -32,6 +32,8 @@ Example, if the project is called :file:`montpellier.qgs` you must add, next to 
 .. warning::
     To see the thumbnail **immediately**, it might be needed to clear the cache in your web browser and force reload
     the page from the web browser.
+
+    It can be :kbd:`CTRL+R`, :kbd:`CTRL+F5` or similar.
 
     Otherwise, the thumbnail will be displayed **automatically in a few hours**, when the web browser will understand
     that the image has changed. Web browsers tries to save some network requests.
