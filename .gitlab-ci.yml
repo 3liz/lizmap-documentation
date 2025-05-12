@@ -13,27 +13,32 @@ before_script:
 
 # Build without translations, for MR
 build_html_mr:
+  image: ${REGISTRY_URL}/factory-ci-runner:build-doc
   only:
     - merge_requests
+    - manual
   stage: build_html
   script:
+    - pip list
     - make clean html SPHINXBUILD=sphinx-build SPHINXINTL=sphinx-intl
   artifacts:
     paths:
       - build/html/
     name: "lizmapdoc-$CI_COMMIT_REF_NAME"
   tags:
-    - infrav2
+    - factory-plain
 
 
 # Build with translations, for main branches
 build_html_i18n:
+  image: ${REGISTRY_URL}/factory-ci-runner:build-doc
   only:
     - master
     - lizmap_3_9
     - lizmap_3_8
   stage: build_html
   script:
+    - pip list
     - ./update_from_transifex.sh -f
     - make clean html SPHINXBUILD=sphinx-build SPHINXINTL=sphinx-intl
   artifacts:
@@ -41,9 +46,10 @@ build_html_i18n:
       - build/html/
     name: "lizmapdoc-$CI_COMMIT_REF_NAME"
   tags:
-    - infrav2
+    - factory-plain
 
 push_transifex:
+  image: ${REGISTRY_URL}/factory-ci-runner:build-doc
   only:
     - master
     - lizmap_3_9
@@ -53,9 +59,10 @@ push_transifex:
     - make gettext SPHINXBUILD=sphinx-build SPHINXINTL=sphinx-intl
     - tx -H $TX_API -t $TX_TOKEN push -s
   tags:
-    - infrav2
+    - factory-plain
 
 deploy_snap:
+  image: ${REGISTRY_URL}/factory-ci-runner:build-doc
   only:
     - master
     - lizmap_3_9
@@ -69,9 +76,10 @@ deploy_snap:
   environment:
     name: snap
   tags:
-    - infrav2
+    - factory-plain
 
 deploy_production:
+  image: ${REGISTRY_URL}/factory-ci-runner:build-doc
   only:
     - master
     - lizmap_3_9
@@ -86,4 +94,4 @@ deploy_production:
     name: production
   when: manual
   tags:
-    - infrav2
+    - factory-plain

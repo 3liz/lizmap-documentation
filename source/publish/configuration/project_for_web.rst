@@ -1,4 +1,3 @@
-.. include:: ../../substitutions.rst
 
 ==============================
 Prepare a QGIS project for Web

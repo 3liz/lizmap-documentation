@@ -22,6 +22,7 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
+	@echo "  html[lang] to make standalone HTML files for specific language"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
 	@echo "  pickle     to make pickle files"
@@ -40,10 +41,18 @@ help:
 	@echo "  changes    to make an overview of all changed/added/deprecated items"
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
+	@echo "  lang       display available languages"
 
 clean:
 	-rm -rf $(BUILDDIR)/*
 	-rm -rf i18n/*/LC_MESSAGES/*.mo
+
+lang:
+	@echo "Available languages:"
+	@for lang in $(LANGUAGES);\
+	do \
+		echo "* $$lang"; \
+	done
 
 html:
 	$(SPHINXINTL) build -d i18n
@@ -58,6 +67,13 @@ htmlen:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS)  -D language=en $(BUILDDIR)/html/en/
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/."
+
+html%:
+	$(SPHINXINTL) build -d i18n
+	mkdir -p $(BUILDDIR)/html/$* $(BUILDDIR)/doctrees/$*; \
+	echo "$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) -D language=$*  $(BUILDDIR)/html/$*";\
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) -D language=$* $(BUILDDIR)/html/$*;\
+
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
