@@ -1,4 +1,3 @@
-.. include:: ../../substitutions.rst
 
 Form filtering — Filter layer data based on field values
 ========================================================

@@ -1,4 +1,3 @@
-.. include:: ../../substitutions.rst
 
 Tooltip — Configure the tooltip for some layers
 ===============================================
