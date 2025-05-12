@@ -7,7 +7,7 @@ Py-QGIS-Server
 Pre-requirements
 ================
 
-We supposed, you already have installed QGIS Server packages, as explain in the
+We suppose that you already have installed QGIS Server packages, as explained in the
 `QGIS Server documentation <https://docs.qgis.org/latest/en/docs/server_manual/>`_.
 
 .. note::
@@ -41,12 +41,12 @@ Folders used below
 
 .. code-block:: bash
 
-    mkdir -p /srv/qgis/plugins /srv/qgis/config /var/log/qgis /var/lib/py-qgis-server /var/data
+    mkdir -p /srv/qgis/plugins /srv/qgis/config /srv/data /var/log/qgis /var/lib/py-qgis-server
 
 The file to watch for restarting workers
 ----------------------------------------
 
-We create an empty file that will be watch by Py-QGIS-Server to check when to restart QGIS Server map workers.
+We create an empty file that will be watched by Py-QGIS-Server to check when to restart QGIS Server map workers.
 
 .. code-block:: bash
 
@@ -66,7 +66,7 @@ We create the executable file :file:`/usr/bin/qgis-reload` to restart QGIS Serve
     touch /var/lib/py-qgis-server/py-qgis-restartmon
 
 
-Then we when change its mod :
+Then we change its mod :
 
 .. code-block:: bash
 
@@ -115,7 +115,7 @@ We create the Py-QGIS-Server configuration file :file:`/srv/qgis/server.conf`. I
 In this example:
 
 * QGIS Server will be available at ``http://127.0.0.1:7200/ows/``
-* the plugins are installed in :file`/srv/qgis/plugins` (``pluginpath``). See :ref:`qgis-server-plugins`.
+* the plugins are installed in :file:`/srv/qgis/plugins` (``pluginpath``). See :ref:`qgis-server-plugins`.
 * the file to watch for restarting workers is :file:`/var/lib/py-qgis-server/py-qgis-restartmon` (``restartmon``).
 * the directory containing the projects to be published :file:`/srv/data` (``rootdir``). The projects must be in sub-folders.
 * Lizmap QGIS Server API is enabled
@@ -141,7 +141,7 @@ First of all, we create an environment file :file:`/srv/qgis/config/qgis-service
 
 In this file, we defined:
 
-* The lang
+* The language
 * The Xvfb display port, needed to print PDF
 * The QGIS options and ``authDB`` path (needed for HTTPS, when used in remote layers such as OSM tiles)
 * Lizmap environment variable to reveal settings
@@ -181,7 +181,7 @@ Then we can create the QGIS `service systemd file <https://wiki.debian.org/syste
     [Install]
     WantedBy=multi-user.target
 
-Finally, we enable the QGIS Server service to start it and to be sure it is started at system launch :
+Finally, we enable the QGIS Server service to start at system launch and we also start the service right now :
 
 .. code-block:: bash
 
@@ -214,6 +214,6 @@ Either by editing manually the file :file:`lizmap/var/config/lizmapConfig.ini.ph
     lizmapPluginAPIURL="http://127.0.0.1:7200/lizmap/"
 
     ; path to find repositories
-    rootRepositories="/var/data"
+    rootRepositories="/srv/data"
 
 Your :guilabel:`Server information` panel must show you the QGIS Server version and installed plugins.
