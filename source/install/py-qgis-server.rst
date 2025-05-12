@@ -41,7 +41,7 @@ Folders used below
 
 .. code-block:: bash
 
-    mkdir -p /srv/qgis/plugins /srv/qgis/config /srv/data /var/log/qgis /var/lib/py-qgis-server /var/data
+    mkdir -p /srv/qgis/plugins /srv/qgis/config /srv/data /var/log/qgis /var/lib/py-qgis-server
 
 The file to watch for restarting workers
 ----------------------------------------
@@ -214,6 +214,6 @@ Either by editing manually the file :file:`lizmap/var/config/lizmapConfig.ini.ph
     lizmapPluginAPIURL="http://127.0.0.1:7200/lizmap/"
 
     ; path to find repositories
-    rootRepositories="/var/data"
+    rootRepositories="/srv/data"
 
 Your :guilabel:`Server information` panel must show you the QGIS Server version and installed plugins.
