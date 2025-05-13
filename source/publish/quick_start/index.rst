@@ -1,4 +1,3 @@
-.. include:: ../../substitutions.rst
 
 ..
    _The purpose of this quick start is to provide a page without too much anchor to other pages.

@@ -1,4 +1,3 @@
-.. include:: ../../substitutions.rst
 
 .. _layer_qgis_server:
 

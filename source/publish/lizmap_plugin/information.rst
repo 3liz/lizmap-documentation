@@ -1,4 +1,3 @@
-.. include:: ../../substitutions.rst
 
 Information — Get some news about the project and your server
 =============================================================
