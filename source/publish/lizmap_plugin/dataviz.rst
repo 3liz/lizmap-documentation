@@ -270,6 +270,12 @@ This example below will produce a single colored box, similar to the
    :align: center
    :scale: 80%
 
+Sunburst
+""""""""
+
+Have a look to Sunburst plot on the layer **Postes clés** in the
+`landuse demo <https://demo.lizmap.com/lizmap/index.php/view/map?repository=features&project=land_use>`_.
+
 Miscellaneous
 ^^^^^^^^^^^^^
 
