@@ -93,7 +93,7 @@ When the documentation is ready to release `X.Y` from the master branch:
 6. Configure a new schedule in the CI configuration for this new branch
 7. On the master branch, set the next version into `source/conf.py` and `source/lizmap_versions.json`
 8. Push the new branch and the master branch
-9. In the server configuration, change the target of the symbolic link 'current'
+9. In the server configuration, change the target of the symbolic link 'current' variable `webpublic_docslizmap_current_version` in "server-bootstrap"
 10. Copy the `source/lizmap_versions.json` into all **maintained** branches, it should be the
     same for all.
 
