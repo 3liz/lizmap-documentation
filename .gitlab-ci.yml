@@ -30,8 +30,8 @@ build_html_mr:
 build_html_i18n:
   only:
     - master
+    - lizmap_3_9
     - lizmap_3_8
-    - lizmap_3_7
   stage: build_html
   script:
     - ./update_from_transifex.sh -f
@@ -46,8 +46,8 @@ build_html_i18n:
 push_transifex:
   only:
     - master
+    - lizmap_3_9
     - lizmap_3_8
-    - lizmap_3_7
   stage: build_html
   script:
     - make gettext SPHINXBUILD=sphinx-build SPHINXINTL=sphinx-intl
@@ -58,8 +58,8 @@ push_transifex:
 deploy_snap:
   only:
     - master
+    - lizmap_3_9
     - lizmap_3_8
-    - lizmap_3_7
   stage: deploy
   dependencies:
     - build_html_i18n
@@ -74,8 +74,8 @@ deploy_snap:
 deploy_production:
   only:
     - master
+    - lizmap_3_9
     - lizmap_3_8
-    - lizmap_3_7
   stage: deploy_prod
   dependencies:
     - build_html_i18n
