@@ -217,3 +217,7 @@ Either by editing manually the file :file:`lizmap/var/config/lizmapConfig.ini.ph
     rootRepositories="/srv/data"
 
 Your :guilabel:`Server information` panel must show you the QGIS Server version and installed plugins.
+
+.. note::
+    If you want to know more about Py-QGIS-Server, read its dedicated
+    `Py-QGIS-Server documentation <https://docs.3liz.org/py-qgis-server/>`_, like preloaded projects, API management, etc.

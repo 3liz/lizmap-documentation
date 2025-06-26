@@ -60,9 +60,10 @@ QGIS Server
 Follow the `QGIS Server documentation on how to install QGIS Server <https://docs.qgis.org/latest/en/docs/server_manual/>`_.
 
 .. note::
-    We recommend installing `Py-QGIS-Server <py-qgis-server>_` to manage QGIS Server processes. If so, you do not need to
-    configure Apache/Nginx for QGIS Server. If if are not using Py-QGIS-Server, you must configure your webserver to
-    use FCGI to target QGIS Server. Read the dedicated chapter about `Py-QGIS-Server <py-qgis-server>_`.
+    With the default configuration, `Py-QGIS-Server <py-qgis-server>_` is required to manage QGIS Server processes.
+    You do not need to configure Apache/Nginx for QGIS Server. Read the dedicated chapter about
+    `Py-QGIS-Server <py-qgis-server>_`. Side note, it is possible to disable this requirement in :file:`localconfig.ini.php`
+    but not recommended.
 
 Using a webserver (Apache or Nginx), you must install QGIS Server. With Nginx, the preferred way is to use
 ``spawn-fcgi``. Do **not** use the ``fcgiwrap``, this solution is not efficient.
