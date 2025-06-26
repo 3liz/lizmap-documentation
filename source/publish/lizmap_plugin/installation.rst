@@ -1,4 +1,3 @@
-.. include:: ../../substitutions.rst
 
 Install and upgrade the Lizmap plugin
 =====================================
