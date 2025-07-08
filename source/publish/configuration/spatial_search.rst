@@ -54,6 +54,9 @@ _____________
     (FTS) tool of PostgreSQL, to keep the tool as simple as possible and avoid the need to create FTS "vectors" in your
     search data.
 
+|lizmap_cloud|
+_________________
+
 .. tip::
     If the instance is hosted on |lizmap_cloud| |lizmap_cloud_svg|, read the documentation about one step on
     `lizmap_search <https://docs.lizmap.cloud/en/postgresql.html#about-lizmap-search>`_.
