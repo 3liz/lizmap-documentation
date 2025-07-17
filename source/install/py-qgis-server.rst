@@ -138,6 +138,7 @@ First of all, we create an environment file :file:`/srv/qgis/config/qgis-service
     QGIS_SERVER_FORCE_READONLY_LAYERS=TRUE
     QGIS_SERVER_TRUST_LAYER_METADATA=TRUE
     QGIS_SERVER_APPLICATION_NAME=qgis-server
+QGIS_SERVER_PLUGINPATH=/srv/qgis/plugins
 
 In this file, we defined:
 
