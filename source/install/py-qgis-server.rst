@@ -135,10 +135,11 @@ First of all, we create an environment file :file:`/srv/qgis/config/qgis-service
     GDAL_CACHEMAX=2048
     QGIS_SERVER_CACHE_SIZE=2048
     QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=TRUE
+    QGIS_SERVER_PLUGINPATH=/srv/qgis/plugins
     QGIS_SERVER_FORCE_READONLY_LAYERS=TRUE
     QGIS_SERVER_TRUST_LAYER_METADATA=TRUE
     QGIS_SERVER_APPLICATION_NAME=qgis-server
-QGIS_SERVER_PLUGINPATH=/srv/qgis/plugins
+    
 
 In this file, we defined:
 
