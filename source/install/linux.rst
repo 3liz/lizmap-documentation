@@ -106,6 +106,25 @@ You must restart the Nginx server to validate the configuration.
 
    service nginx restart
 
+Optimize FastCGI Pool Manager (FPM)
+-----------------------------------
+For a high-capacity server handling multiple Lizmap instances under heavy load, more aggressive PHP-FPM settings might be needed. Edit /etc/php/8.2/fpm/pool.d/www.conf and change the following settings:
+
+.. code-block:: bash
+
+   pm = dynamic
+   pm.max_children = 200
+   pm.start_servers = 50
+   pm.min_spare_servers = 25
+   pm.max_spare_servers = 75
+   pm.max_requests = 1000
+
+Those values are examples and you will need to test how much RAM/CPU this is going to consume. Reload php-fpm to apply changed settings:
+
+.. code-block:: bash
+
+   sudo systemctl reload php8.2-fpm
+
 
 Enable geolocation
 ==================
