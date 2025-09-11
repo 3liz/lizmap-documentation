@@ -83,7 +83,7 @@ Create a new file /etc/nginx/sites-available/lizmap.conf:
            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
            fastcgi_param PATH_INFO $path_info;
            fastcgi_param PATH_TRANSLATED $document_root$path_info;
-           fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+           fastcgi_pass unix:/var/run/php/php8.3-fpm.sock;
            fastcgi_param SERVER_NAME $http_host;
         }
     }
@@ -108,7 +108,7 @@ You must restart the Nginx server to validate the configuration.
 
 Optimize FastCGI Pool Manager (FPM)
 -----------------------------------
-For a high-capacity server handling multiple Lizmap instances under heavy load, more aggressive PHP-FPM settings might be needed. Edit /etc/php/8.2/fpm/pool.d/www.conf and change the following settings:
+For a high-capacity server handling multiple Lizmap instances under heavy load, more aggressive PHP-FPM settings might be needed. Edit /etc/php/8.3/fpm/pool.d/www.conf and change the following settings:
 
 .. code-block:: bash
 
@@ -123,7 +123,7 @@ Those values are examples and you will need to test how much RAM/CPU this is goi
 
 .. code-block:: bash
 
-   sudo systemctl reload php8.2-fpm
+   sudo systemctl reload php8.3-fpm
 
 
 Enable geolocation
@@ -234,8 +234,8 @@ to edit PostgreSQL layer. You must **only** check that the Lizmap server can acc
 
 .. code-block:: bash
 
-   apt install php8.2-pgsql
-   service php8.2-fpm restart
+   apt install php8.3-pgsql
+   service php8.3-fpm restart
 
 For Lizmap logs, users and groups, it can be either stored in SqLite or PostgreSQL. To store these information in
 PostgreSQL, follow these instructions.
