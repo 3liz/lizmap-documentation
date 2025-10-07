@@ -176,6 +176,14 @@ The following examples show how to use some properties depending of the layout p
     {"xaxis": {"tickfont": {"size": 10}}}
 
 
+* Change the legend position
+
+.. code-block:: javascript
+
+    // Move the legend at the right outside the plot
+    {"legend": {"x": 1, "y": 0}}
+
+
 * You can combine any of the properties, for example:
 
 .. code-block:: javascript
