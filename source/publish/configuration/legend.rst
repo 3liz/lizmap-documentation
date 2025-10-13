@@ -36,7 +36,7 @@ Theme switcher
 
 Lizmap allows you to display and switch between themes configured in QGIS.
 To create your themes, follow the
-`QGIS documentation <https://docs.qgis.org/latest/en/docs/user_manual/introduction/general_tools.html#configuring-map-themes.>`_.
+`QGIS documentation <https://docs.qgis.org/latest/en/docs/user_manual/introduction/general_tools.html#configuring-map-themes>`_.
 
 In the :menuselection:`Layers` tab of the plugin, the checkbox :guilabel:`Activate first map theme on startup` enables
 the map theme by default when loading the map.
