@@ -1,5 +1,3 @@
-.. include:: ../../substitutions.rst
-
 .. _printing:
 
 Printing
@@ -33,8 +31,7 @@ In your layout, you can add :
     - Or set :guilabel:`Fit segment width` with a correct reference anchor point to adjust the position of the scale bar
 * A location map, a map for which you have enabled and configured one *Overview*
 * Since |qgis_3|, you can use QGIS expressions, in your labels for instance. You can create automatic source label
-  according to visible layers following this example on the
-  `QGIS documentation <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#id4>`_.
+  according to visible layers following `this example on the QGIS documentation <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#id4>`_.
 
 .. _dynamic_content:
 
