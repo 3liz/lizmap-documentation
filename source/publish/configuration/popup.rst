@@ -261,7 +261,7 @@ Link to a PDF layout using the QGIS Atlas
     In :menuselection:`Lizmap Web Client --> Administration --> QGIS Server`, you can check if the plugin is installed.
 
 It's possible to automatically add a link to a PDF in a popup, based on a layout using the
-`QGIS atlas <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/create_output.html#generate-an-atlas>_`.
+`QGIS atlas <https://docs.qgis.org/latest/en/docs/user_manual/print_composer/create_output.html#generate-an-atlas>`_.
 
 #. Enable an atlas layout on a layer
 #. Enable :ref:`popup` on the same layer
