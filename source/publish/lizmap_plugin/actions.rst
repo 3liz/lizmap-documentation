@@ -1,4 +1,3 @@
-.. include:: ../../substitutions.rst
 
 Actions — Add some custom buttons triggering PostgreSQL queries
 ===============================================================

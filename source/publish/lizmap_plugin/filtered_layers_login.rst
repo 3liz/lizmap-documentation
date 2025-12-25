@@ -1,4 +1,3 @@
-.. include:: ../../substitutions.rst
 .. _filtered-layer-by-user:
 
 Filtered layer by user — Set some features visible/editable or not for some users

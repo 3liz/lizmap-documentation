@@ -1,4 +1,3 @@
-.. include:: ../../substitutions.rst
 
 Atlas — A sequence of entities
 ==============================
