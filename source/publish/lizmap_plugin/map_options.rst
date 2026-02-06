@@ -59,6 +59,18 @@ Initial map extent
 * the maximal map extent is specified in the *QGIS server* tab of *Project Properties* window. The data will not be displayed if they are outside it
 * by default, the initial extent is the maximal one.
 
+Single WMS layer
+----------------
+
+* :guilabel:`Load layers as single WMS image`: when enabled, Lizmap combines all non-basemap layers into a single WMS
+  request to QGIS Server instead of requesting each layer individually. This can reduce the number of requests and
+  simplify rendering, but the resulting image is always in PNG format regardless of individual layer settings.
+
+* :guilabel:`Exclude basemaps from single WMS`: when :guilabel:`Load layers as single WMS image` is enabled, this
+  option excludes basemap layers from the combined request. Basemaps are then rendered separately in their native
+  image format (e.g. JPEG), which can greatly improve performance for local raster basemaps such as Cloud-Optimized
+  GeoTIFFs. See :ref:`basemap-exclude-single-wms` for more details.
+
 Map interface
 -------------
 
