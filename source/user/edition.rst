@@ -70,3 +70,20 @@ If you want to remove a point on a geometry, you must hover it and type *Del* on
 .. image:: /images/user-guide-27-edition-digitizing.jpg
    :align: center
    :scale: 80%
+
+Copy existing geometry
+----------------------
+
+When creating or editing a feature, you can copy the geometry of an existing feature from any visible layer that is published as WFS. This is useful when you need to create features with similar shapes to existing ones.
+
+#. Start editing a layer by clicking *Add* or selecting an existing feature to edit.
+#. Click the *Copy existing geometry* button in the digitizing toolbar. The draw tool is temporarily deactivated and the cursor changes to a crosshair.
+#. Click on the map at the location of the feature whose geometry you want to copy. Lizmap will query all visible WFS-enabled layers at that position.
+#. A popup appears listing the features found at the click location. Only features with a compatible geometry type are shown (e.g. when editing a polygon layer, only polygon features are listed).
+#. Hover over a row in the popup to highlight the corresponding feature on the map.
+#. Click on a row to copy that geometry into your current editing session.
+#. The copied geometry is applied and the draw tool is reactivated. You can continue to modify the geometry or save the feature directly.
+
+To cancel the copy operation, click the *Copy existing geometry* button again to deactivate it.
+
+.. tip:: Only layers that are both visible and published as WFS can be queried. If a visible layer does not appear in the feature list, contact your administrator to ensure the layer has WFS capabilities enabled.

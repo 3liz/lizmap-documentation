@@ -67,6 +67,24 @@ The licenses are available at the following URLs:
 * *Bing*: https://www.microsoft.com/en-us/maps/product
 * *IGN*: https://geoservices.ign.fr/catalogue
 
+.. _basemap-exclude-single-wms:
+
+Exclude basemaps from single WMS requests
+------------------------------------------
+
+When the option :guilabel:`Single tile` is enabled for layers, Lizmap groups them into a single WMS request to
+QGIS Server. If your basemap is a local raster layer (for example a Cloud-Optimized GeoTIFF), including it in this
+combined request can significantly degrade performance because the raster must be converted from its native format
+(e.g. JPEG) to PNG for the combined image.
+
+To avoid this, you can enable :guilabel:`Exclude basemaps from single WMS` in the Lizmap plugin. When enabled,
+basemap layers are always rendered as separate requests in their native image format, while other layers continue
+to be combined into a single WMS request. This can reduce rendering times dramatically (e.g. from 3 seconds to
+300 milliseconds for local raster basemaps).
+
+This option is available in the :guilabel:`Map options` panel and defaults to disabled (off) to maintain backward
+compatibility with existing projects.
+
 Scale with external base layer
 ------------------------------
 
