@@ -43,6 +43,13 @@ help:
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 	@echo "  lang       display available languages"
 
+requirements: 
+	uv export --format requirements.txt \
+		--no-annotate \
+		--no-editable \
+		--no-hashes \
+		-q -o requirements.txt
+
 clean:
 	-rm -rf $(BUILDDIR)/*
 	-rm -rf i18n/*/LC_MESSAGES/*.mo
