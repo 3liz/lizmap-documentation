@@ -62,7 +62,7 @@ Example action selector:
 Demonstration
 -------------
 
-You can check the demo about `fire hydrants on the demo website <https://demo.lizmap.com>`_.
+You can check the demo "Action and SQL" about `fire hydrants on the demo website <https://demo.lizmap.com>`_.
 
 Click on a fire hydrant and
 
@@ -175,8 +175,13 @@ Each **action** is an object defined by:
   Use a relative **media path** (:ref:`media`).
 * an optional ``confirm`` property, containing some text. If set, a confirmation dialog will be shown to the user to ask
   if the action should really be launched or not. Use it if the action can modify some data in your database.
+* an optional ``description`` property, providing a longer description of the action displayed in the selector panel
+  (for ``project`` and ``layer`` scopes). If not set, the ``title`` is displayed instead.
+* an optional ``geometry`` property, which activates a **drawing tool** in the interface when the action is selected
+  (for ``project`` and ``layer`` scopes). The user must draw a geometry before running the action; it is then
+  automatically sent as the ``wkt`` parameter to the PostgreSQL function ``lizmap_get_data``.
+  Only single-part geometries can be drawn.
 * an ``options`` object, giving some additional parameters for this action. You can add any needed parameters.
-  Note that this parameters are hard coded and cannot be changed by the user.
 * a ``style`` object allowing to configure the returned geometry style. It follows **OpenLayers** styling attributes.
 * a ``callbacks`` object allows to trigger some actions after the generated geometry is returned.
   They are defined by a ``method`` name, which can at present be:
@@ -203,6 +208,7 @@ Each button **triggers the corresponding action**, if it is not yet **active**
 (else it deactivates and erases the geometry in the map):
 
 * Lizmap backend checks if the action is well configured,
+* emits a Lizmap **events** ``actionStarted`` with the action properties,
 * creates the **PostgreSQL query** ``SELECT public.lizmap_get_data(json)`` with the parameters
   written in JSON, and executes it in the layer PostgreSQL database. (See example below)
 * This query returns a **GeoJSON** which is then displayed on the map.
@@ -229,7 +235,7 @@ Here is **an example** below of the query executed in the PostgreSQL database by
        "lizmap_repository": "features",
        "lizmap_project": "fire_hydrant_actions",
        "action_name": "buffer_150",
-       "action_scop": "feature",
+       "action_scope": "feature",
        "layer_name": "Fire hydrant",
        "layer_schema": "fire_hydrant_actions",
        "layer_table": "emergency_fire_hydrant",
@@ -243,7 +249,7 @@ Here is **an example** below of the query executed in the PostgreSQL database by
 
 
 You can see that Lizmap creates a JSON parameter with all needed information
-and run the PostgreSQL function ``lizmap_get_data(text)``.
+and run the PostgreSQL function ``lizmap_get_data(json)``.
 
 The current **map extent** and **map center** are also sent as parameters
 in **WKT format** (projection ``EPSG:4326``) and can be used in the PostgreSQL function.
@@ -254,7 +260,7 @@ Mandatory PostgreSQL functions
 You need to create this PostgreSQL functions:
 
 * ``query_to_geojson(text)`` which returns a valid GeoJSON text from any SELECT query
-* ``lizmap_get_data(text)`` which is the "control tower" of Lizmap actions: it creates a specific
+* ``lizmap_get_data(json)`` which is the "control tower" of Lizmap actions: it creates a specific
   query for each action based on the parameters and then run the query and returns the GeoJSON
 
 The following SQL code is **an example** to help you create the needed functions.
@@ -325,8 +331,8 @@ Obviously, **you must adapt them to fit your needs**.
                SELECT %1$s AS id,
                ''Buildings within 150m of the fire hydrant have been selected'' AS message,
                ST_Buffer(geom, 150) AS geom
-               FROM "%2$s"."%3$s"
-               WHERE osm_id = ''%1$s''
+               FROM %2$I.%3$I
+               WHERE osm_id = %1$L -- `osm_id` is the field holding the unique identifier of each feature in this example layer
            ',
            feature_id,
            layer_schema,
@@ -336,7 +342,7 @@ Obviously, **you must adapt them to fit your needs**.
            -- Draw a line to the closest fire station
            datasource:= format('
                WITH tmp_hydrant AS (
-                   SELECT geom FROM fire_hydrant_actions.emergency_fire_hydrant WHERE osm_id = ''%1$s''
+                   SELECT geom FROM fire_hydrant_actions.emergency_fire_hydrant WHERE osm_id = %1$L
                )
                SELECT
                    id, name, ST_Distance(hydrant.geom, stations.geom),
@@ -356,10 +362,10 @@ Obviously, **you must adapt them to fit your needs**.
            datasource:= format('
                SELECT
                %1$s AS id,
-               ''The geometry of the object have been displayed in the map'' AS message
+               ''The geometry of the object have been displayed in the map'' AS message,
                geom
-               FROM "%2$s"."%3$s"
-               WHERE id = %1$s
+               FROM %2$I.%3$I
+               WHERE osm_id = %1$L
            ',
            feature_id,
            layer_schema,
@@ -413,10 +419,51 @@ Obviously, **you must adapt them to fit your needs**.
 * The **geometry** returned by the function **will be displayed on the map**.
 
 * You could use your function to **edit some data** in your database, before returning a GeoJSON.
-  To do so, you need to replace the ``IMMUTABLE`` property par ``VOLATILE``. Please **USE IT WITH CARE** !
+  To do so, you need to replace the ``IMMUTABLE`` property with ``VOLATILE``. Please **USE IT WITH CARE** !
+
+.. warning::
+
+   Always use ``%L`` (literal) and ``%I`` (identifier) placeholders from PostgreSQL ``format()`` instead of
+   manual string quoting with ``%s``. When an argument must be embedded in a string expression, prefer
+   ``concat(text, argument, text)`` to ensure proper escaping. Apply explicit type casting (e.g. ``::integer``)
+   where appropriate. This prevents SQL injection when handling option values passed to the action.
 
 Actions and user-defined JavaScript scripts
 -------------------------------------------
+
+Actions can also be run from external JavaScript scripts:
+you can use the actions **public methods** to **run an action**, or **reset** the active action:
+
+.. code-block:: javascript
+
+   // Run an action
+   lizMap.mainLizmap.action.runLizmapAction(actionName, scope = 'feature', layerId = null, featureId = null, wkt = null);
+   // Reset the action
+   lizMap.mainLizmap.action.resetLizmapAction()
+
+A **WKT** geometry, in ``EPSG:4326``, can also be sent as an additional parameter.
+This is only possible when running the action with JavaScript.
+This allows to send a geometry to be used by the PostgreSQL action function ``lizmap_get_data``
+as a property of the ``parameters`` SQL variable.
+(for example to get data from another table with geometries intersecting this passed WKT geometry)
+
+Additional custom parameters can be passed from JavaScript via the ``options`` object.
+Each key must correspond to a parameter declared in the ``.action`` configuration file — 
+any unknown key will be silently ignored and never forwarded to the SQL function.
+
+If a key is present in the configuration but omitted from the ``options`` object, 
+the default value defined in the ``.action`` file is used as a fallback.
+
+.. code-block:: javascript
+
+    // Run an action with options
+   lizMap.mainLizmap.action.runLizmapAction(
+       actionName, scope = 'feature', layerId = null, featureId = null, wkt = null,
+       options = {
+           "my_param": someJsVariable,
+           "other_param": "static_value"
+       }
+   );
 
 Since Lizmap Web Client **triggers an event** ``actionResultReceived`` any time the user clicks on an action button,
 and data is returned (in the same time as the result geometry is drawn on the map), you could use your own JavaScript
@@ -450,20 +497,3 @@ For example, here we just write in the browser console the content received:
    });
 
 You could use these data as you like in your JS code.
-
-Actions can also be run from external JavaScript scripts:
-you can use the actions **public methods** to **run an action**, or **reset** the active action:
-
-.. code-block:: javascript
-
-
-   // Run an action
-   lizMap.mainLizmap.action.runLizmapAction(actionName, scope = 'feature', layerId = null, featureId = null, wkt = null);
-   // Reset the action
-   lizMap.mainLizmap.action.resetLizmapAction()
-
-A **WKT** geometry, in ``EPSG:4326``, can also be sent as an additional parameter.
-This is only possible when running the action with JavaScript.
-This allows to send a geometry to be used by the PostgreSQL action function ``lizmap_get_data``
-as a property of the ``parameters`` SQL variable.
-(for example to get data from another table with geometries intersecting this passed WKT geometry)
