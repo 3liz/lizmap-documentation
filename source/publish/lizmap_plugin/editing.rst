@@ -105,6 +105,21 @@ to see how to create a spatial layer in a PostgreSQL database.
 - .. include:: ../../shared/move_up_down_layer.rst
 - .. include:: ../../shared/field_alias.rst
 
+Geometry copy and paste
+-----------------------
+
+Users can copy the geometry of an existing feature while creating or editing a new feature. This allows them to reuse
+shapes from other layers without having to redraw them manually.
+
+For a layer to appear as a source when copying geometries, it must:
+
+* Be **visible** on the map
+* Have **WFS** capabilities enabled (see :ref:`publish OGC services <wfs-layer>`)
+* Have a **popup** enabled
+
+No additional configuration in the Lizmap plugin is needed. The copy geometry button is automatically available in the
+digitizing toolbar when an edition session is active.
+
 Configuring the form
 --------------------
 

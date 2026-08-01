@@ -16,3 +16,4 @@ This guide is for the end user, when using the web client.
   printing
   attribute_table
   edition
+  dxf_export

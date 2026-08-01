@@ -81,6 +81,28 @@ Layout with an atlas when using a popup
 
 Read in the popup chapter, :ref:`print-layout-atlas`
 
+Atlas printing from the attribute table
+---------------------------------------
+
+When a layer has atlas print layouts configured and the attribute table is enabled, users can select multiple features
+in the attribute table and print them together as a single atlas PDF.
+
+To enable this:
+
+1. Create a print layout with atlas enabled on the layer.
+2. Publish the layout in the :guilabel:`Layouts` panel of the Lizmap plugin.
+3. Enable the :guilabel:`Attribute table` for the same layer (see :ref:`attribute_table`).
+
+The *Atlas* button will then appear in the attribute table toolbar for that layer. If multiple atlas layouts are
+configured for the layer, the button shows as a dropdown menu.
+
+PDF filename
+^^^^^^^^^^^^
+
+The generated PDF filename is derived from the ``filenamePattern`` expression configured in the QGIS atlas settings.
+For a single feature, the expression is evaluated with that feature's attributes. For multiple features, a fallback
+name in the format ``ProjectName_LayoutName.pdf`` is used.
+
 Adding your own images in a layout
 ----------------------------------
 
