@@ -64,6 +64,13 @@ You can choose between different kind of caching :
 * Sqlite
 * Redis (You would need a Redis server)
 
+With the ``Files`` and ``Sqlite`` storages, the cache of a layer is stored in a directory, or a file, named with a hash
+of the layer name, inside a directory per repository and per project.
+
+.. note::
+    This storage format has changed with Lizmap 3.10. A cache generated with an older version is not used anymore
+    and must be generated again. Read :ref:`the upgrade instructions <upgrade-3-10>`.
+
 Seeding
 =======
 

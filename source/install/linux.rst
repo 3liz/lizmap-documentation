@@ -30,10 +30,12 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 
 .. note:: It is also necessary configure the other software so that they are using this default encoding if this is not the case.
 
+.. _linux-php-packages:
+
 Installing necessary packages
 -----------------------------
 
-.. warning:: You must install at least the **8.2** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 7/8 installation)
+.. warning:: You must install at least the **8.2** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 8 installation)
 
 .. code-block:: bash
 

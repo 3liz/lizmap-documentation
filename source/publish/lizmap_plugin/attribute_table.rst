@@ -74,6 +74,13 @@ At the project level
 ..  image:: /images/interface-attribute-table.jpg
    :align: center
 
+Large layers
+------------
+
+The data of the attribute table are loaded **page by page** from the server: only the displayed lines are requested
+to QGIS Server. Searching, sorting, zooming to the filtered features and selecting all filtered features are also done
+on the server. So the attribute table can be used with layers containing many features.
+
 Order of fields
 ---------------
 
@@ -110,9 +117,8 @@ the child tables content.
 For example, you could have a layer of cities, and a child layer of public building. Clicking on one city in the attribute
 table will make the public building child table refresh its content with only the public buildings of the clicked city.
 
-You can use "many-to-many" (N:M) relations in QGIS since version 2.14 but Lizmap doesn't use it automatically yet. You
-have to define the relations in the Lizmap plugin too. In many cases, N:M relations are very handy. For example, you
-can have the three following vector layers in your project:
+In many cases, "many-to-many" (N:M) relations are very handy. For example, you can have the three following vector
+layers in your project:
 
 * **Tramway lines**: this layers name "Lines" contains one feature per tram line, and has a unique ID field *tram_id*
 * **Tramway stops**: this layer named "Stops" contains one feature per tram stop, with a unique ID field called *stop_id*
@@ -123,11 +129,18 @@ can have the three following vector layers in your project:
 You can add 2 relations in QGIS project properties : one between Lines and Pivot using the tram_id field, and one
 between Stops and Pivot using the stop_id field.
 
-In Lizmap, we added a simple way to configure the N:M relation. You can simply
+To configure the N:M relation:
 
 * Create the two relations described above in QGIS project properties dialog, tab **Relations**
+* In the **Attributes Form** of the parent layer (for instance Lines), using the *Drag and drop designer*, add the
+  relation widget of the relation with the Pivot layer and set its :guilabel:`Cardinality` to the many-to-many
+  relation, for instance the relation with Stops.
 * Add the Lines and Stops layers in the attribute layers tool
 * Add the Pivot layer in the attribute layers tool with the option **Pivot table** checked
+
+.. note::
+    Since Lizmap 3.10, the :guilabel:`Cardinality` of the relation widget is **required**. Without it, the pivot layer
+    is displayed as a simple child layer (1:N relation).
 
 Lizmap Web Client will then handle the relation as a N:M relation:
 

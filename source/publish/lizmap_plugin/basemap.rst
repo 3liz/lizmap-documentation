@@ -72,8 +72,8 @@ The licenses are available at the following URLs:
 Exclude basemaps from single WMS requests
 ------------------------------------------
 
-When the option :guilabel:`Single tile` is enabled for layers, Lizmap groups them into a single WMS request to
-QGIS Server. If your basemap is a local raster layer (for example a Cloud-Optimized GeoTIFF), including it in this
+When the option :guilabel:`Load layers as single WMS layer` is enabled in the :guilabel:`Map options` panel,
+Lizmap groups the layers into a single WMS request to QGIS Server. If your basemap is a local raster layer (for example a Cloud-Optimized GeoTIFF), including it in this
 combined request can significantly degrade performance because the raster must be converted from its native format
 (e.g. JPEG) to PNG for the combined image.
 

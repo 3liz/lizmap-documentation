@@ -1,3 +1,5 @@
+.. _user-printing:
+
 Printing
 ========
 
@@ -14,6 +16,9 @@ Once the feature activated, a print area with the form of the composition is dis
    :scale: 80%
 
 On the left, above the panel layer management, you can select the scale of printing.
+
+The button next to the scale switches between the list of predefined scales and a field to type any **custom
+scale**.
 
 .. image:: /images/user-guide-16-print-scale.jpg
    :align: center
@@ -49,10 +54,17 @@ Atlas printing from the attribute table
 You can also print an atlas PDF for multiple features at once from the attribute table.
 
 #. Open the attribute table for a layer that has atlas layouts configured.
-#. Select one or more features using the selection tools (click the *Select* button on each row, or use the search and *Select searched lines* button).
+#. Select one or more features using the selection tools (click the *Select* button on each row, or use the search and *Select searched line* button).
 #. Click the *Atlas* button in the attribute table toolbar. If the layer has multiple atlas layouts configured, a dropdown menu lets you choose which layout to use.
 #. A PDF file is generated containing all selected features as an atlas. The file is downloaded automatically.
 
 The PDF filename is derived from the atlas filename expression configured in the QGIS print layout. For a single feature, the filename evaluates the expression with that feature's attributes (e.g. ``Commune_Paris.pdf``). When multiple features are selected, a fallback name in the format ``ProjectName_LayoutName.pdf`` is used.
 
 .. note:: The *Atlas* button is only visible in the attribute table toolbar for layers that have at least one atlas print layout configured by the map publisher.
+
+Portfolios
+----------
+
+If the map publisher has configured some portfolios, a :guilabel:`Portfolios` panel is available in the menu.
+Choose a portfolio, draw a point, a line or a polygon on the map and click :guilabel:`Run`: you get one PDF file for
+each layout of the portfolio. Read :ref:`portfolio`.

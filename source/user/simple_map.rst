@@ -30,6 +30,9 @@ You can using the *triangle*, left the layers title, bring up the legend of the 
 
 Selection boxes allow you to hide and display the proposed layers.
 
+For a layer with a symbology made of several classes (categories, rules…), you can check or uncheck each class.
+A **double click** on the checkbox of the layer checks or unchecks all its classes.
+
 .. image:: /images/user-guide-05-show-hide-layer.jpg
    :align: center
    :scale: 80%

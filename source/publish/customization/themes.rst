@@ -66,6 +66,11 @@ Once downloaded the zipfile, you can:
 
 .. warning:: The files and directories must be readable (755:644)
 
+.. note::
+    Since Lizmap 3.10, the interface uses **Bootstrap 5** instead of Bootstrap 2. A theme made for an older version
+    may need to be updated, because some HTML elements and CSS classes have changed. Download the default theme again
+    to compare.
+
 
 .. tip::
     To preview your results without deploying it in production, you can add your theme in the
