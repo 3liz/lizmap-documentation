@@ -79,15 +79,65 @@ Prerequisites
 Configuring the tool
 --------------------
 
-At present, the actions cannot be configured from Lizmap plugin in QGIS.
-A specific **JSON configuration file** must be written and placed **aside the QGIS project**
+The actions are stored in a specific **JSON configuration file**, placed **aside the QGIS project**
 in the same directory. This file lists the **PostgreSQL actions** to be added in the map.
+
+The file is named like the QGIS project, with the ``.action`` extension: :file:`fire_hydrant_actions.qgs.action`
+for the project :file:`fire_hydrant_actions.qgs`. It must be sent to the server with the QGIS project and
+its Lizmap configuration file.
 
 .. warning::
     In |lizmap_3_7|, the JSON syntax has changed.
 
     If you use the old JSON syntax, you will have a warning in Lizmap, inviting you to migrate to a newer version of the
-    syntax.
+    syntax. The Lizmap plugin cannot read the old syntax: the actions must be created again in the plugin.
+
+With the plugin
+^^^^^^^^^^^^^^^
+
+The actions are configured in the |lizmap_plugin_svg| :guilabel:`Actions` panel of the Lizmap plugin.
+The QGIS project must be saved first, so that the plugin knows where to write the action file.
+
+The panel lists the actions of the file, with their name, title, scope and layers:
+
+* |add_layer_svg| adds a new action, |edit_layer_svg| edits the selected one (a double-click on the row works too),
+* the selected action can also be duplicated, removed |remove_layer_svg|, or moved up |up_layer_svg|
+  and down |down_layer_svg|: the order is the one used in the web interface,
+* |refresh_svg| reads the action file again, for instance after editing it manually. Unsaved changes are lost.
+
+The action dialog has four tabs:
+
+* :guilabel:`General`: the name, title, description, scope, icon and confirmation message of the action.
+  Depending on the scope, choose the **PostgreSQL layers** where the action is available (``layer`` and ``feature``
+  scopes) and the optional **geometry to draw** (``project`` and ``layer`` scopes).
+* :guilabel:`Options`: the additional parameters sent to the PostgreSQL function, with their default value.
+  A number such as ``500`` is written as a number, other values as text.
+* :guilabel:`Style`: the colors, widths and point radius used to draw the geometries returned by the action.
+  A value which is not set is not written in the file.
+* :guilabel:`Callbacks`: the methods to run after the action, with the target layer for ``select`` and ``redraw``.
+
+The action file is written when the Lizmap configuration is saved, with the :guilabel:`Apply` or :guilabel:`OK`
+buttons, and only if the actions have been changed. If there is no action left, the action file is removed.
+
+The plugin checks the actions, the errors are displayed below the list of actions and in the :guilabel:`Checks`
+panel:
+
+* the name must be **unique** in the file, with only letters, digits, ``_`` or ``-``,
+* the title and the icon are mandatory,
+* the layers must be **PostgreSQL layers** of the project, and at least one layer is needed for the ``layer`` and
+  ``feature`` scopes,
+* an option cannot use the name of a parameter already sent by Lizmap Web Client, such as ``feature_id`` or ``wkt``.
+  The option names must start with a letter and only contain letters, digits or ``_``.
+
+An action with an error is a **blocking** check: the Lizmap configuration is not saved until the action is fixed.
+When a layer is removed from the QGIS project, it is also removed from the actions and their callbacks.
+
+The JSON file
+^^^^^^^^^^^^^
+
+The file can still be written manually, for instance to read it or to version it with your project.
+When the plugin saves the file, the properties it does not handle are removed, such as a style attribute not listed
+below or an unknown callback method.
 
 
 Each action is **characterized** by a ``name``, a ``title``, a ``scope``, ``layers``, an ``icon``, some optional ``options``,
@@ -147,8 +197,7 @@ You can get the QGIS layer internal ID with the QGIS expression ``@layer_id``.
             "icon": "icon-resize-small",
             "options": {},
             "style": {
-                "stroke-color": "red",
-                "stroke-opacity": 0.8,
+                "stroke-color": "rgba(255,0,0,0.8)",
                 "stroke-width": 4
             },
             "callbacks": [
@@ -167,7 +216,8 @@ The **JSON configuration** file lists the **declared actions**.
 
 Each **action** is an object defined by:
 
-* a ``name`` which is the action identifier.
+* a ``name`` which is the action identifier. It must be unique in the file, and only contain letters, digits,
+  ``_`` or ``-``.
 * a ``title`` which is used as a label in Lizmap interface
 * a ``scope`` which can be: ``project``, ``layer`` or ``feature``
 * an ``icon`` which is displayed on the action button (See the `Bootstrap documentation <https://getbootstrap.com/2.3.2/base-css.html#icons>`_).
@@ -181,8 +231,12 @@ Each **action** is an object defined by:
   (for ``project`` and ``layer`` scopes). The user must draw a geometry before running the action; it is then
   automatically sent as the ``wkt`` parameter to the PostgreSQL function ``lizmap_get_data``.
   Only single-part geometries can be drawn.
-* an ``options`` object, giving some additional parameters for this action. You can add any needed parameters.
+* an ``options`` object, giving some additional parameters for this action. You can add any needed parameters,
+  except the ones already sent by Lizmap Web Client, listed in the next chapter (``feature_id``, ``wkt``, etc.).
+  The values are the default ones, a JavaScript script can replace them (see below).
 * a ``style`` object allowing to configure the returned geometry style. It follows **OpenLayers** styling attributes.
+  The plugin handles ``fill-color``, ``stroke-color``, ``stroke-width``, ``circle-radius``, ``circle-fill-color``,
+  ``circle-stroke-color`` and ``circle-stroke-width``.
 * a ``callbacks`` object allows to trigger some actions after the generated geometry is returned.
   They are defined by a ``method`` name, which can at present be:
 
