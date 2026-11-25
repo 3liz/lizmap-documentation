@@ -121,6 +121,23 @@ Here are the detailed steps to configure this feature:
 - .. include:: ../../shared/edit_layer.rst
 - .. include:: ../../shared/remove_layer.rst
 
+Multiple values
+^^^^^^^^^^^^^^^
+
+For a PostgreSQL layer, the option :guilabel:`Allow multiple values` lets you write several IDs in the column,
+separated by a comma, for instance ``group_a,group_b``. A user sees the feature if one of these values is one of
+their groups, their login or ``all``. The values must match exactly.
+
+For a large table, an index on the values of the column makes the filter faster:
+
+.. code-block:: sql
+
+    CREATE INDEX ON my_schema.my_table USING GIN (string_to_array(my_column, ','));
+
+.. note::
+    The exact match of the multiple values needs the Lizmap server plugin **2.16.0** or newer.
+    See :ref:`lizmap-server-plugin`.
+
 .. warning::
     Disable the client cache and cache server for all filtered layers. Otherwise, the data displayed will not be updated
     between each connection or user logout!
