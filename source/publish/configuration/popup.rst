@@ -251,6 +251,10 @@ To display some color with HTML according to the value of a field, you can use t
 
     <p style="color:[% if("POPULATION" > 5000, 'red', 'black') %]">[% POPULATION %]</p>
 
+.. tip::
+    Some Lizmap :ref:`web components <web-components>` can be added in the HTML Maptip, for example to display
+    a compact table of related features, or a button to edit a feature.
+
 .. _print-layout-atlas:
 
 Link to a PDF layout using the QGIS Atlas
