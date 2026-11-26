@@ -11,59 +11,58 @@ Upgrading from Lizmap lower than 3.5 versions
 =============================================
 
 You should first migrate to 3.5. See `documentation of Lizmap 3.5 <https://docs.lizmap.com/3.5/en/install/upgrade.html>`_.
-Then you could migrate to 3.7
 
-Upgrading from Lizmap 3.5 or 3.6 version
-========================================
+Upgrading from Lizmap version between 3.5 and 3.9 version
+==========================================================
 
-Here is how to upgrade from Lizmap 3.5 or 3.6
+Here is how to upgrade.
 
-Data backup
---------------------------------------------------------------
+First, you must install PHP and Composer (`apt install composer` in Debian, or install by hand from https://getcomposer.org ).
+Then you can start the migration.
 
-Backup your data and configuration files into a directory (ex: ``/tmp``) with the ``lizmap/install/backup.sh``
-script of Lizmap 3.5 or 3.6.
-
-.. code-block:: bash
-
-   lizmap/install/backup.sh /tmp
-
-If you want to backup by hand, you should backup at least these files:
-
-- var/db/jauth.db (if it exists)
-- var/db/logs.db (if it exists)
-- var/config/installer.ini.php
-- var/config/liveConfig.ini.php
-- var/config/localframework.ini.php (if it exists)
-- var/config/lizmapConfig.ini.php
-- var/config/localconfig.ini.php
-- var/config/profiles.ini.php
-
-
-Replace Lizmap files
---------------------------------------------------------------
+Install new sources of Lizmap.
+------------------------------
 
 Get the Lizmap archive by downloading an archive on the `release <https://github.com/3liz/lizmap-web-client/releases>`_ page.
 
 You should then :
 
-- rename the ``lizmap/`` directory to ``lizmap.bak/`` for example
-- extract the ``lizmap/`` directory from the archive, so it will be become the new ``lizmap/`` directory.
-- execute the script ``lizmap/install/restore.sh /tmp`` or reinstall by hand the files you backup.
+- rename the ``lizmap-web-client/`` directory to ``lizmap-web-client.bak/`` for example
+- extract files from the archive and rename the ``lizmap-web-client-3.10.0`` directory to ``lizmap-web-client/``, so it
+  replaces the previous installation.
 
-Note: there is not anymore a ``lib/`` directory.
+.. code-block:: bash
+
+    mv lizmap-web-client lizmap-web-client.bak
+    zip -r lizmap-web-client-3.10.0.zip
+    mv lizmap-web-client-3.10.0 lizmap-web-client
+
+
+Migration
+----------
+
+Go into the ``lizmap-web-client/lizmap/install/`` directory and execute ``migrate_from_previous_version.sh``.
+You must give the path of the old lizmap directory.
+
+
+.. code-block:: bash
+
+    cd lizmap-web-client/lizmap/install/
+    migrate_from_previous_version.sh ../../../lizmap-web-client.bak/lizmap/
+
+It will copy all configuration files and additionnal modules from the old installation, and update these modules.
 
 Launch the installer
 --------------------------------------------------------------
 
-You have to launch the configurator (it will upgrade some configuration files),
-and then the installer, which will upgrade some stuff: database tables, data etc..
+You have to launch the installer, which will upgrade some stuff: database tables, data etc..
+You should stay in the ``lizmap-web-client/lizmap/install/`` directory.
 
 .. code-block:: bash
 
-   sudo lizmap/install/clean_vartmp.sh
-   php lizmap/install/configurator.php
-   php lizmap/install/installer.php
+   sudo clean_vartmp.sh
+   php configurator.php
+   php installer.php
 
 
 Cleanup and test
@@ -73,7 +72,7 @@ You should then delete all cache and temporary files:
 
 .. code-block:: bash
 
-   sudo lizmap/install/clean_vartmp.sh
+   sudo clean_vartmp.sh
 
 Then you should call the script that sets rights on files. Parameters are the
 web user and the web group used by the web server to execute Lizmap. On a
@@ -81,12 +80,20 @@ Debian server, it is often www-data.
 
 .. code-block:: bash
 
-    sudo lizmap/install/set_rights.sh www-data www-data
-
+    sudo set_rights.sh www-data www-data
 
 Then load Lizmap into your browser, you should see your maps without errors.
 
-If this is the case, you can delete the old directories ``lib/`` and ``lizmap.bak/``.
+Revert upgrade
+---------------------------------------------------------------
+
+If the new installation does not work, you can restore the old installation, by simply rename the
+ ``lizmap-web-client.bak/`` to ``lizmap-web-client/``
+
+.. code-block:: bash
+
+    mv lizmap-web-client lizmap-web-client.newbug
+    mv lizmap-web-client.bak lizmap-web-client
 
 
 Migrating from Sqlite to Postgresql
