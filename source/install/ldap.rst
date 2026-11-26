@@ -8,8 +8,7 @@ The first thing to do is to install the php ldap extension on your linux system:
 
 .. code-block:: bash
 
-   apt install php7.4-ldap
-
+   apt install php8.4-ldap
 
 Then, in order to enable the LDAP support Lizmap, you have to change the
 authentication method in the configuration as follows.

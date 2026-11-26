@@ -10,7 +10,7 @@ Installing Lizmap Web Client on Linux Debian or Ubuntu
 Generic Server Configuration with Nginx server
 ==============================================
 
-This documentation provides an example for configuring a server with the Debian 12 distribution. We assume you have base system installed and updated.
+This documentation provides an example for configuring a server with the Debian 13 distribution. We assume you have base system installed and updated.
 
 .. warning:: This page does not describe how to secure your Nginx server. It's just for a demonstration.
 
@@ -33,7 +33,7 @@ For simplicity, it is interesting to configure the server with UTF-8 default enc
 Installing necessary packages
 -----------------------------
 
-.. warning:: You must install at least the **7.4** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 7/8 installation)
+.. warning:: You must install at least the **8.2** version of PHP. The **dom**, **simplexml**, **pcre**, **session**, **tokenizer** and **spl** extensions are required (they are generally turned on in a standard PHP 7/8 installation)
 
 .. code-block:: bash
 
@@ -45,7 +45,7 @@ Install these PHP packages:
 
 .. code-block:: bash
 
-   apt install php8.3-fpm php8.3-cli php8.3-bz2 php8.3-curl php8.3-gd php8.3-intl php8.3-mbstring php8.3-pgsql php8.3-sqlite3 php8.3-xml php8.3-ldap php8.3-redis php8.3-cgi
+   apt install php8.4-fpm php8.4-cli php8.4-bz2 php8.4-curl php8.4-gd php8.4-intl php8.4-mbstring php8.4-pgsql php8.4-sqlite3 php8.4-xml php8.4-ldap php8.4-redis php8.4-cgi
 
 Web configuration
 -----------------
@@ -83,7 +83,7 @@ Create a new file /etc/nginx/sites-available/lizmap.conf:
            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
            fastcgi_param PATH_INFO $path_info;
            fastcgi_param PATH_TRANSLATED $document_root$path_info;
-           fastcgi_pass unix:/var/run/php/php8.3-fpm.sock;
+           fastcgi_pass unix:/var/run/php/php8.4-fpm.sock;
            fastcgi_param SERVER_NAME $http_host;
         }
     }
@@ -123,7 +123,7 @@ Those values are examples and you will need to test how much RAM/CPU this is goi
 
 .. code-block:: bash
 
-   sudo systemctl reload php8.3-fpm
+   sudo systemctl reload php8.4-fpm
 
 
 Enable geolocation
@@ -158,7 +158,7 @@ Install
 -------
 
 
-On Debian 12, you'll find PostgreSQL 15.
+On Debian 13, you'll find PostgreSQL 17.
 
 First install packages:
 
@@ -174,8 +174,8 @@ databases. Careful: these instructions destroy any existing databases!
 .. code-block:: bash
 
    service postgresql stop
-   pg_dropcluster --stop 15 main
-   pg_createcluster 15 main --locale fr_FR.UTF8 -p 5432 --start
+   pg_dropcluster --stop 17 main
+   pg_createcluster 17 main --locale fr_FR.UTF8 -p 5432 --start
 
 Now You can create a user and a database for Lizmap, into Postgresql.
 
@@ -193,7 +193,7 @@ requirements.
 
 .. code-block:: bash
 
-   VERSION=3.9.0
+   VERSION=3.10.0
    LOCATION=/var/www
 
 Then you can install the zip file:
@@ -234,8 +234,8 @@ to edit PostgreSQL layer. You must **only** check that the Lizmap server can acc
 
 .. code-block:: bash
 
-   apt install php8.3-pgsql
-   service php8.3-fpm restart
+   apt install php8.4-pgsql
+   service php8.4-fpm restart
 
 For Lizmap logs, users and groups, it can be either stored in SqLite or PostgreSQL. To store these information in
 PostgreSQL, follow these instructions.
