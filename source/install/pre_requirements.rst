@@ -28,6 +28,18 @@ You will need to be familiar with:
 These concepts are not explained in the Lizmap Web Client documentation. The documentation is focusing **only** on
 specific parts related to Lizmap Web Client.
 
+Minimum versions
+================
+
+Lizmap Web Client 3.10 requires at least:
+
+* **PHP 8.2**, PHP 8.3 is recommended
+* **QGIS Server 3.40**
+* the **Lizmap server** plugin for QGIS Server in version **2.13.0**, read :ref:`lizmap-server-plugin`
+* :doc:`Py-QGIS-Server <py-qgis-server>` to manage QGIS Server processes, with the default configuration
+
+.. include:: ../shared/about_versions.rst
+
 GIS data and QGS files
 ======================
 

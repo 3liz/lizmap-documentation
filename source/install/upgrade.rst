@@ -12,8 +12,41 @@ Upgrading from Lizmap lower than 3.5 versions
 
 You should first migrate to 3.5. See `documentation of Lizmap 3.5 <https://docs.lizmap.com/3.5/en/install/upgrade.html>`_.
 
-Upgrading from Lizmap version between 3.5 and 3.9 version
-==========================================================
+.. _upgrade-3-10:
+
+Upgrading to Lizmap 3.10
+========================
+
+Before upgrading to Lizmap 3.10, check these points:
+
+* **PHP 8.2** is now the minimum version. Upgrade PHP first if needed, read :ref:`Installing necessary packages <linux-php-packages>`.
+* **QGIS Server 3.40** is now the minimum version.
+* Lizmap configuration files with a target version lower than **3.7** are not displayed anymore on the landing page.
+  They are still listed in the administration panel with a warning. Open them with a recent version of the Lizmap
+  plugin in QGIS desktop and save them again.
+
+The upgrade itself is done with the usual steps described below (backup, replace files, launch the installer).
+
+After the upgrade:
+
+* The storage format of the **tile cache** has changed: the cache directory, or the Sqlite file, of a layer is now
+  named with a hash of the layer name. A cache generated before the upgrade is not used anymore. You must
+  **generate the cache again** (read :ref:`seed-cache`). The old cache is not deleted automatically: you can remove it
+  with the command ``php lizmap/console.php wmts:cache:clean repository project``, which removes the whole cache
+  of a project, or remove the old directories by hand.
+* Tiles in **WebP** format are now stored as WebP in the cache (they were stored as JPEG before). If some layers use
+  the WebP format with the server cache, clear their cache.
+* The installer creates a new ``permalink`` table, used to store short permalinks (read :ref:`short-permalink`),
+  and a new right :guilabel:`Manage server side permalinks` for administrators.
+* The user interface now uses **Bootstrap 5** instead of Bootstrap 2. If you have written your own JavaScript, CSS
+  themes or templates, check them, read :ref:`adding-javascript` and :ref:`creating-simple-themes`.
+* For developers of additional modules, some old PHP classes have been removed: ``lizmapRepository`` (use
+  ``\Lizmap\Project\Repository``), ``lizmapOGCRequest`` (use ``\Lizmap\Request\OGCRequest``), ``lizmapProxy``
+  (use ``\Lizmap\Request\Proxy``), ``qgisServer`` and ``qgisProject``. The classes ``lizmapProject`` (use
+  ``\Lizmap\Project\Project``) and ``lizmapWkt`` (use ``\Lizmap\App\WktTools``) are deprecated.
+
+Upgrading from Lizmap 3.5 or 3.6 version
+========================================
 
 Here is how to upgrade.
 

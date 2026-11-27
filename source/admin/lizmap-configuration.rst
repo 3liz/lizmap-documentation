@@ -54,6 +54,10 @@ To configure **Services**, click the *Modify* button under the summary.
 
 * **Debug mode**: saves some queries to a log file: *lizmap/var/log/messages.log*
 
+* **Log level**: the minimum level of severity of the messages written in the logs, from the most severe to the
+  least severe: *emergency*, *alert*, *critical*, *error* (default), *warning*, *notice*, *info* and *debug*.
+  With the Docker image, it can be set with the ``LIZMAP_LOGLEVEL`` environment variable.
+
 * **Allow visitors to request an account**: If this option is enabled, a new link 'Registration' will be added in the public menu. By clicking on this link, the visitor displays a form that allows it to request an account to administrator. He must complete some fields (name, email, due to demand) then validates the form to send the request.
 
 * **Administrator e-mail**: If a valid e-mail address is given, then the Lizmap

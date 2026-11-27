@@ -261,8 +261,8 @@ The action ``title`` will be displayed on hovering the action button.
 Each button **triggers the corresponding action**, if it is not yet **active**
 (else it deactivates and erases the geometry in the map):
 
+* Lizmap Web Client emits a Lizmap **events** ``actionStarted`` with the action properties,
 * Lizmap backend checks if the action is well configured,
-* emits a Lizmap **events** ``actionStarted`` with the action properties,
 * creates the **PostgreSQL query** ``SELECT public.lizmap_get_data(json)`` with the parameters
   written in JSON, and executes it in the layer PostgreSQL database. (See example below)
 * This query returns a **GeoJSON** which is then displayed on the map.
@@ -507,6 +507,9 @@ any unknown key will be silently ignored and never forwarded to the SQL function
 
 If a key is present in the configuration but omitted from the ``options`` object, 
 the default value defined in the ``.action`` file is used as a fallback.
+
+For security reasons, a value containing some SQL keywords (such as ``insert`` or ``drop``) is ignored: the default
+value is used instead, and a message is written in the Lizmap admin log.
 
 .. code-block:: javascript
 

@@ -99,11 +99,28 @@ to see how to create a spatial layer in a PostgreSQL database.
         + :guilabel:`Segments`
         + :guilabel:`Intersections`
     7. It's possible to set the tolerance for the snapping.
+    8. Check :guilabel:`Activate snapping when editing starts` to enable the snapping automatically when the form is
+       displayed, once the map layers are loaded. Otherwise, the user must enable it in the form.
 
 - .. include:: ../../shared/edit_layer.rst
 - .. include:: ../../shared/remove_layer.rst
 - .. include:: ../../shared/move_up_down_layer.rst
 - .. include:: ../../shared/field_alias.rst
+
+Geometry copy and paste
+-----------------------
+
+Users can copy the geometry of an existing feature while creating or editing a new feature. This allows them to reuse
+shapes from other layers without having to redraw them manually.
+
+For a layer to appear as a source when copying geometries, it must:
+
+* Be **visible** on the map
+* Have **WFS** capabilities enabled (see :ref:`publish_layer_wfs`)
+* Have a **popup** enabled
+
+No additional configuration in the Lizmap plugin is needed. The copy geometry button is automatically available in the
+digitizing toolbar when an edition session is active.
 
 Configuring the form
 --------------------
@@ -157,6 +174,20 @@ would be stored in the folder :file:`media/upload/PROJECT_NAME/LAYER_NAME/FIELD_
 
 Obviously you will be able to display this image (or any other file) in the popup, as it will be stored in the media folder.
 See :ref:`use-in-popups`
+
+Rename uploaded files
+_____________________
+
+By default, the uploaded file keeps its original name. If the field has a **default value** in
+:menuselection:`Layer Properties --> Attributes Form --> Defaults`, the file is renamed with the result of this
+value, for instance ``"id_parcel" || '_' || format_date(now(), 'yyyyMMdd')``. The extension of the uploaded file is kept;
+any folder or extension in the result of the expression is ignored.
+
+* The expression is evaluated when the form is saved, with the values of the form. The geometry is not available.
+* If the result is empty, the original name is kept.
+* An existing file with the same name is **overwritten**. Use a unique value in your expression to avoid it.
+
+This works for files stored in the :file:`media` folder and for files stored on a WebDAV server.
 
 Use a specific destination folder
 _________________________________

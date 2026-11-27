@@ -105,14 +105,18 @@ For instance, this bootstrap HTML code will produce the layout below:
 .. code-block:: html
 
     <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="span6">$0</div>
-            <div class="span6">$1</div>
+        <div class="row">
+            <div class="col-6">$0</div>
+            <div class="col-6">$1</div>
         </div>
-        <div class="row-fluid">
-            <div class="span12">$2</div>
+        <div class="row">
+            <div class="col-12">$2</div>
         </div>
     </div>
+
+.. note::
+    Since Lizmap 3.10, the interface uses Bootstrap 5. The Bootstrap 2 classes ``row-fluid`` and ``span*`` must be
+    replaced by ``row`` and ``col-*``.
 
 
 .. image:: /images/publish-03-dataviz-html-example.jpg

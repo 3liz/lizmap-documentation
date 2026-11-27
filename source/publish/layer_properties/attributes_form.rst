@@ -91,6 +91,22 @@ Lizmap can reproduce several behavior configured in QGIS :
         * :guilabel:`Expression` with ``left( "website", 4) = 'http'``
         * :guilabel:`Expression description` with ``Web site URL must start with 'http'``
 
+* **Default value defined by expression**.
+    In :menuselection:`Layer Properties --> Attributes Form --> Defaults`, the :guilabel:`Default value` of a field can
+    be any QGIS expression, using the geometry or other fields, for instance:
+
+      * ``round($area, 2)``, ``$x``, ``$y``, ``$length``…
+      * ``"firstname" || ' ' || "lastname"``
+
+    The value is computed when the form is opened, and computed again when the geometry is drawn or modified, and
+    when a field used in the expression is changed. Fields must be written with double quotes, like ``"firstname"``,
+    to be detected.
+
+    When modifying an existing feature, the value is only updated if :guilabel:`Apply default value on update` is
+    checked. The value is also saved for a read-only field.
+
+    For a new feature, the default value of the database has priority.
+
 * **Filter expression for a Value Relation field**.
     For example, you want a field to automatically get the related value from another layer's field when drawing a point
     on the map.
@@ -100,6 +116,9 @@ Lizmap can reproduce several behavior configured in QGIS :
        #. Set :guilabel:`Filter expression` with ``intersects($geometry, @current_geometry)``
        #. We can also check :guilabel:`Not null` and :guilabel:`Enforce not null contraint` to assert no NULL value can
           be set.
+
+* **Background color of tabs**.
+    The background color set on a tab in the *Drag and drop designer* is used for the tab in the Lizmap form.
 
 .. raw:: html
 
