@@ -49,6 +49,22 @@ You can choose between:
 * ``bottomdock``
 * ``right-dock``
 
+Group popup by layer
+--------------------
+
+When the user clicks on a location where several features are found, popups are displayed one after the other by
+default.
+
+With the checkbox :guilabel:`Group popup by layer` in :menuselection:`Lizmap plugin --> Map options --> Map interface`,
+the popup first lists the layers, with the number of features found for each one. Clicking on a layer displays its
+first feature, with:
+
+* a counter, for instance ``2/5``,
+* buttons to display the previous or the next feature of this layer,
+* a button to go back to the list of layers.
+
+This mode works with all the locations of the popup listed above.
+
 Geometry of the feature
 -----------------------
 
@@ -226,6 +242,11 @@ Tabs defined in the :guilabel:`Form Layout` in QGIS will also be displayed as HT
 
 If you want to alter the popup HTML, then you must use :guilabel:`QGIS Popup` instead of :guilabel:`Form Popup`.
 
+If the layer displays its children with the option :guilabel:`Display table of children (recommended)` (read
+:ref:`popup-one-to-many`) and its form contains **relation widgets**, each table of children is displayed at the
+location of its relation widget, in the right tab or group of the form. Otherwise, the tables are displayed at the
+end of the popup.
+
 .. _qgis-popup:
 
 QGIS HTML Maptip popup
@@ -251,6 +272,10 @@ To display some color with HTML according to the value of a field, you can use t
 
     <p style="color:[% if("POPULATION" > 5000, 'red', 'black') %]">[% POPULATION %]</p>
 
+.. tip::
+    Some Lizmap :ref:`web components <web-components>` can be added in the HTML Maptip, for example to display
+    a compact table of related features, or a button to edit a feature.
+
 .. _print-layout-atlas:
 
 Link to a PDF layout using the QGIS Atlas
@@ -270,6 +295,11 @@ It's possible to automatically add a link to a PDF in a popup, based on a layout
 
 If the layout contains custom text fields (see :ref:`dynamic_content`), a button will be displayed to set the custom
 content.
+
+To print the atlas for several features at once, or to customize the name of the PDF file, read
+:ref:`print-atlas-attribute-table`.
+
+.. _popup-one-to-many:
 
 One to many relations
 ---------------------
@@ -292,6 +322,10 @@ In Lizmap plugin:
 
 * In the :guilabel:`Layers` tab, activate popup for both layers. You can configure source of the popup if you need specific layouts
 * For the parent layer, activate the option :guilabel:`Display relative children under each object (use relations)`
+
+  * With :guilabel:`Display table of children (recommended)`, the children are displayed in a table, with search,
+    sort and paging capabilities.
+
 * *Optionally*, add the two layers in the :guilabel:`Attribute table` tab
 * *Optionally*, you can activate editing for the two layers, to allow the web users to create new features and upload pictures
 * Save and publish your project and Lizmap configuration

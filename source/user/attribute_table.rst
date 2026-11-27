@@ -46,7 +46,9 @@ Once the attribute table panel is displayed, you can open the attribute table of
 Description of the attribute table functionality
 ------------------------------------------------
 
-The layer data is shown in a **paginated table**. By default, the table shows 100 lines at a time. You can change this behaviour by using the list situated in the bottom left side of the tab content.
+The layer data is shown in a **paginated table**. By default, the table shows 50 lines at a time. You can change this behaviour by using the list situated in the bottom of the tab content.
+
+Only the displayed lines are loaded from the server, so the table opens quickly even for layers with many features.
 
 The table of data can be **ordered by a field** by clicking on the column corresponding to . If you click again on the column, the order will be reversed.
 
@@ -79,13 +81,16 @@ Each line of the table shows some buttons at the left side:
 More about selection tools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+With the **Selection** tool of the menu bar, you can select features by drawing a shape on the map. When the tool is
+opened, the rectangle selection is activated automatically: you can directly draw a rectangle on the map.
+
 You can also select a layer object by **displaying the popup** for this object (if the map publisher has enabled the popup for the layer, a click on the map will show a popup window containing detailed information on the clicked feature). Inside the popup, if you can see the select button, you can use it to select only this object. Previous selection will be replaced by only this object.
 
 .. image:: /images/user-guide-36-attribute-popup-selection.jpg
    :align: center
    :scale: 80%
 
-When one or more lines have been selected in the attribute table (they become yellow), you can use the black "arrow up" button situated above the table to **move the selected lines at the top of the table**.
+When one or more lines have been selected in the attribute table (they become yellow), you can use the :guilabel:`Display selection only` button situated above the table to **display only the selected lines** in the table. Click it again to display all the lines.
 
 You can **unselect all the selected objects** by clicking on the "white star" button situated above the table.
 
@@ -93,16 +98,27 @@ You can **unselect all the selected objects** by clicking on the "white star" bu
    :align: center
    :scale: 80%
 
-Quickly search through data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Search through data
+~~~~~~~~~~~~~~~~~~~
 
-You can **filter the lines displayed** in the table by entering some letters in the **Search field** situated at the top left side of the tab content. If you want to see all the features again, just erase the search field content manually or by clicking on the cross button situated inside the field.
+You can **filter the lines displayed** in the table with the :guilabel:`Search Builder` button situated above the table. It allows to build a query on one or several fields, for instance to find all the features whose category is *A* or *B* and whose creation date is later than January 1st, 2026:
 
-The text entered in the search field launches a search among the data for **all the fields of the table.**
+#. Click on :guilabel:`Search Builder`, then add a condition.
+#. Choose a field, a condition (equals, contains, starts with, greater than, between, empty…) and a value.
+   For fields configured with a :guilabel:`Value Map` or a :guilabel:`Value Relation` in QGIS, the values are chosen in a list of labels.
+#. Add other conditions if needed, combined with *And* or *Or*.
+#. Click on :guilabel:`Search` to apply the conditions.
 
-Note that only the content of the table will be restricted to the lines matching your textual search. **The objects on the map will not be filtered dynamically** (but you could use select and filter to do so, see below)
+The search is done on the server among **all the features of the layer**, not only the lines of the current page.
 
-Once you have filtered some data in the attribute table by entering some text in it, **you can easily select them all** by clicking on the "black star" button labelled "Select searched lines". This will select all the corresponding objects in the attribute table (display them in yellow) and also change their color in the map (usually in yellow too, depending on the configuration done by the map publisher)
+Note that only the content of the table will be restricted to the lines matching your search. **The objects on the map will not be filtered dynamically** (but you could use select and filter to do so, see below)
+
+Once you have searched some data, you can:
+
+* **zoom to all the matching features** with the :guilabel:`Zoom to filtered features extent` button,
+* **select them all** with the :guilabel:`Select searched line` button. All the matching features are selected, including the ones which are not displayed on the current page. They are displayed in yellow in the attribute table and in the map. If more than 1000 features are concerned, a confirmation is asked.
+
+The :guilabel:`Filter the table with the features in the current map extent` button restricts the table, and the export, to the features visible in the current map extent.
 
 .. image:: /images/user-guide-38-attribute-search.jpg
    :align: center
@@ -116,7 +132,7 @@ When you have selected one or more objects in the layer attribute table, you can
 Filtering will have the following consequences:
 
 * The attribute table will **show only the filtered data**
-* The Search input field will allow to **search only among filtered data**
+* The search will be done **only among filtered data**
 * The map will show **only the filtered objects**
 * The child layers linked with relations (and also published in the attribute table tool) will be filtered too. We call it "cascading filtering". For example, the bus stops could be filtered automatically if you have filtered one bus line, to show only the ones served by the filtered line.
 * The filtered layers will be marked in the left panel legend with an orange background, and a new orange "Funnel" button will be displayed above the legend.

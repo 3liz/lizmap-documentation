@@ -24,6 +24,9 @@ Generic options
   * the project will still be accessible for WMS or WFS clients based on directories rights
   * this feature is interesting  in the case of using this project as an external project for other ones.
 
+* *Enable short link permalink*: the permalink is a short code, instead of a long URL containing all the parameters
+  in plain text. Read :ref:`short-permalink`.
+
 Map tools
 ---------
 
@@ -31,7 +34,15 @@ Map tools
 * *Print*: enables the use of QGIS compositions for PDF generation map
 * *Measure tools*: enables the measurement tools in the map (length, area, perimeter)
 * *Zoom history*: enables the navigation buttons in the history of zoom and move in the map
-* *Automatic geolocation*: enables the functions to use the HTML5 geolocation based on Wifi and/or GPS
+* *Automatic geolocation*: enables the functions to use the HTML5 geolocation based on Wifi and/or GPS. It is only
+  available in HTTPS.
+
+  * *Precision*: displays a circle showing the accuracy of the position, checked by default.
+  * *Direction*: displays the position as an arrow showing the direction of travel. The direction is given by the
+    device (GPS), so it is usually only available while moving. In Lizmap Web Client, the :guilabel:`Geolocation`
+    panel then shows a :guilabel:`Rotate map` button to rotate the map according to the direction while the position
+    is tracked.
+
 * *Address search*: to add an address search engine that is based on one of these services:
 
   * Nominatim (OpenStreetMap)
@@ -62,11 +73,12 @@ Initial map extent
 Single WMS layer
 ----------------
 
-* :guilabel:`Load layers as single WMS image`: when enabled, Lizmap combines all non-basemap layers into a single WMS
+* :guilabel:`Load layers as single WMS layer`: when enabled, Lizmap combines all the layers into a single WMS
   request to QGIS Server instead of requesting each layer individually. This can reduce the number of requests and
   simplify rendering, but the resulting image is always in PNG format regardless of individual layer settings.
+  Layers with the server cache enabled are still loaded separately. The opacity of each layer is kept.
 
-* :guilabel:`Exclude basemaps from single WMS`: when :guilabel:`Load layers as single WMS image` is enabled, this
+* :guilabel:`Exclude basemaps from single WMS`: when :guilabel:`Load layers as single WMS layer` is enabled, this
   option excludes basemap layers from the combined request. Basemaps are then rendered separately in their native
   image format (e.g. JPEG), which can greatly improve performance for local raster basemaps such as Cloud-Optimized
   GeoTIFFs. See :ref:`basemap-exclude-single-wms` for more details.
@@ -75,3 +87,7 @@ Map interface
 -------------
 
 To hide by default some components in the user interface.
+
+* *Group popup by layer*: when the user clicks on the map, the popup first lists the layers with the number of
+  features found for each one. Clicking on a layer displays its features one by one, with buttons to go to the
+  previous or the next feature, and to go back to the list of layers. Read :ref:`popup`.

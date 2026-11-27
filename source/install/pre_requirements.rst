@@ -28,6 +28,18 @@ You will need to be familiar with:
 These concepts are not explained in the Lizmap Web Client documentation. The documentation is focusing **only** on
 specific parts related to Lizmap Web Client.
 
+Minimum versions
+================
+
+Lizmap Web Client 3.10 requires at least:
+
+* **PHP 8.2**, PHP 8.3 is recommended
+* **QGIS Server 3.40**
+* the **Lizmap server** plugin for QGIS Server in version **2.13.0**, read :ref:`lizmap-server-plugin`
+* :doc:`Py-QGIS-Server <py-qgis-server>` to manage QGIS Server processes, with the default configuration
+
+.. include:: ../shared/about_versions.rst
+
 GIS data and QGS files
 ======================
 
@@ -223,6 +235,11 @@ This variable will **expose** server settings such as QGIS server version, which
     virtual host, not accessible on the internet. All requests to QGIS server will be sent by Lizmap Web Client.
     QGIS server mustn't be accessible from outside. It was already **highly** recommended before to protect the QGIS Server
     from the internet. Users **must use** WFS/WMS links provided by Lizmap Web Client, so Lizmap can check user permissions.
+
+Since the Lizmap server plugin 2.16.0, an expression in error in a text widget of a form or in a tooltip is
+reported to Lizmap Web Client, which shows a message and writes the error in the admin log. To reject the whole request
+instead, for instance to find the errors while testing a project, set the environment variable
+``QGIS_SERVER_LIZMAP_STRICT_EXPRESSION`` to ``True`` on QGIS Server.
 
 
 Administration panel

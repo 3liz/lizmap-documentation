@@ -23,4 +23,6 @@ This section is listing panels available in the Lizmap QGIS plugin.
   atlas
   locate_by_layer
   tooltip
+  portfolio
   dxf_export
+  panoramax

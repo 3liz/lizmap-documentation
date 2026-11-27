@@ -155,6 +155,10 @@ You **mustn't** specify the schema where the lizmap_search table is located. It 
 
 You can now use the default search bar in Lizmap which is located on top right corner.
 
+Results are displayed while the user is typing, starting from 3 characters. They are grouped by layer and ordered by
+similarity with the searched text, then alphabetically. At most 50 results are displayed for each layer and 100
+results in total. When a layer has many results, they are displayed in two columns.
+
 .. image:: /images/interface-postgresql-search.jpg
    :align: center
    :width: 300
@@ -165,8 +169,8 @@ _________________
 1. Visit a map where you have enabled ``lizmap_search``.
 2. By pressing :kbd:`F12` in your web-browser, you can see HTTP requests made in the :guilabel:`Network` tab.
 3. Clear all HTTP requests, not required, but it will be easier.
-4. When pressing :kbd:`Enter` in the search box after you have written some text, there should be an HTTP request
-   targeting ``index.php/lizmap/searchFts/get?`` which get fired.
+4. When typing some text in the search box (at least 3 characters), or when pressing :kbd:`Enter`, there should be
+   an HTTP request targeting ``index.php/lizmap/searchFts/get?`` which get fired.
 5. Right-click to open it in a new tab and edit the HTTP request by adding ``&debug=true`` at the end.
 6. You can see the SQL query generated in your :menuselection:`Server administration panel --> Logs --> Admin log`.
 

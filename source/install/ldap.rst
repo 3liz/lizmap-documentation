@@ -8,25 +8,59 @@ The first thing to do is to install the php ldap extension on your linux system:
 
 .. code-block:: bash
 
-   apt install php7.4-ldap
+   apt install php8.4-ldap
+
+Then, in order to enable the LDAP support Lizmap, you have to install a module that allows to authenticate with Ldap.
+
+Note: in previous version (Lizmap 3.9 and lower), there was an embedded module named ldapdao. Since Lizmap 3.10, it does
+not exists anymore, and is replaced by a new module, multiauth, you have to install.
 
 
-Then, in order to enable the LDAP support Lizmap, you have to change the
-authentication method in the configuration as follows.
+Be sure PHP is installed, as weel as Composer (`apt install composer` in Debian, or install by hand from https://getcomposer.org ).
 
-Enabling LDAP
-=============
+Installing the module
+=====================
 
-You have to enable the module ldapdao with this command
+In ``lizmap/my-packages``, create the ``composer.json`` file if it does not exist yet (by copying ``composer.json.dist``).
 
-.. code-block:: ini
+Add the PHP package ``jelix/multiauth-module``:
 
-    php lizmap/install/configurator.php ldapdao
 
-Then you have to add a section `[ldap:lizmapldap]` into your profiles.ini.php,
+.. code-block:: bash
+
+    composer require jelix/multiauth-module
+
+
+If you want an interface to setup the ldap configuration (recommended), add the package ``jelix/ldapadmin-module``:
+
+.. code-block:: bash
+
+    composer require jelix/ldapadmin-module
+
+
+Then go into  the ``lizmap/install`` directory, and enable the modules into Lizmap:
+
+.. code-block:: bash
+
+    cd ../install/
+    php configurator.php multiauth
+    # and if you installed ldapadmin:
+    php configurator.php ldapadmin
+
+Finish the installation with:
+
+.. code-block:: bash
+
+    php installer.php
+
+
+Configuring LDAP
+================
+
+There is already a configuration set into lizmap. See the `[ldap:lizmapldap]` section into your profiles.ini.php,
 with some settings that allow to connect to your ldap server, and to search
-users into the ldap. The section may already exist if you copied profiles.ini.php
-from the profiles.ini.php.dist.
+users into the ldap. The default parameters are typical parameters to connect and search to an OpenLdap server.
+Of course, they are just an example, and you have to modify them, according your Ldap structure.
 
 .. code-block:: ini
 
@@ -37,20 +71,15 @@ from the profiles.ini.php.dist.
     adminPassword=""
     searchUserBaseDN="dc=XY,dc=fr"
     searchUserFilter="(&(objectClass=posixAccount)(uid=%%LOGIN%%))"
-    bindUserDN="uid=%?%,ou=users,dc=XY,dc=fr"
     searchAttributes="uid:login,givenName:firstname,sn:lastname,mail:email,organization:organization,street:street,postcode:postcode,city:city"
     searchGroupFilter=
     searchGroupProperty="cn"
     searchGroupBaseDN=""
 
+If you install ``ldapadmin``, you have a new menu entry in the administration page of Lizmap : "Ldap configuration".
+It allows to edit and tests all of these parameters.
+
 See details about how to set these parameters in a section below.
-
-To finish to enable the module, run *php lizmap/install/installer.php*
-
-
-ldap settings
-====================
-
 
 Configuration properties for user data
 --------------------------------------
@@ -104,52 +133,8 @@ complex ldap structure. Use ``[]`` to indicate an item list:
 
 
 To verify the password, the plugin needs the DN (Distinguished Name) corresponding
-to the user. It builds the DN from a "template" indicated into the `bindUserDN`
-property, and from various data. These data can be the given login or one of
-the ldap attributes of the user.
+to the user. The ldap property containing the DN should be indicated into the `bindAttribute`. Its default value is ``dn``.
 
-- *Building the DN from the login given by the user*: bindUserDN should contain
-  a DN, with a ``%%LOGIN%%`` placeholder that will be replaced by the login.
-
-  Example: ``bindUserDN="uid=%%LOGIN%%,ou=users,dc=XY,dc=fr"``. If the user
-  give `john.smith` as a login, the authentication will be made with the DN
-  ``bindUserDN="uid=john.smith,ou=users,dc=XY,dc=fr"``.
-
-  For some LDAP, the DN could be a simple string, for example an email.
-  You could then set ``bindUserDN="%%LOGIN%%@company.local"``. Or even
-  ``bindUserDN="%%LOGIN%%"`` if the login can type the full value of
-  the DN or an email or else.. (Probably it's not recommended to allow
-  a user to type himself its full DN, it can be a security issue)
-
-- *Building the DN from one of the ldap attributes of the user*.
-  In this case, the plugin will first query the ldap directory with the
-  `searchUserFilter` filter, to retrieve the user's ldap attributes.
-  Then, in bindUserDN, you can indicate a DN where some values will be replaced
-  by some attributes values, or you can indicate a single attribute name,
-  corresponding to an attribute that contain the full DN of the user.
-
-  For the first case, bindUserDn should contain a DN, with some ``%?%`` placeholders
-  that will be replaced by corresponding attributes value. Example:
-  ``bindUserDN="uid=%?%,ou=users,dc=XY,dc=fr"``. Here it replaces the ``%?%`` by the
-  value of the `uid` attribute readed from the user's attributes.
-  The attribute name should be present into the `searchAttributes`
-  configuration property, even with no field mapping. Ex: ``...,uid:,...``. See above.
-
-  For the second case, just indicate the attribute name, prefixed with a `$`.
-  Example: ``bindUserDN="$dn"``. Here it takes the `dn` attribute readed from
-  the search, and use its full value as the DN to login against the ldap server.
-  It is useful for some LDAP server like sometimes Active Directory that need a
-  full DN specific for each user.
-  The attribute name should be present into the `searchAttributes`
-  configuration property, even with no field mapping. Ex: ``...,dn:,...``. See above.
-
-Note that you can indicate several dn templates, if you have
-complex ldap structure. Use ``[]`` to indicate an item list:
-
-.. code-block:: ini
-
-    bindUserDN[]="uid=%?%,ou=users,dc=XY,dc=fr"
-    bindUserDN[]="cn=%?%,ou=users,dc=XY,dc=fr"
 
 Configuration properties for user rights
 ----------------------------------------
@@ -181,7 +166,7 @@ Debugging
 ----------
 
 If the authentication does not working, you can have more details on what is
-wrong. To see these details, you should activate the traces for ldapdao.
+wrong. To see these details, you should activate the traces for multiauth.
 
 In your var/config/localconfig.ini.php, set these parameters
 
